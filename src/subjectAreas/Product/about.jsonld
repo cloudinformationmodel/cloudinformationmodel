@@ -1,0 +1,22 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "ProductSubjectArea",
+  "@type": "SubjectArea",
+  "version": "0.1",
+  "name": "Product",
+  "description": "Anything you plan to sell or any part of a product that needs to be tracked for service purposes. For example, you are selling a green tractor.",
+  "entityGroups": [
+    {
+      "@id": "ProductEntityGroup",
+      "name": "Product"
+    },
+    {
+      "@id": "ProductAttributeEntityGroup",
+      "name": "Product Attribute"
+    },
+    {
+      "@id": "ProductCatalogEntityGroup",
+      "name": "Product Catalog"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "DeploymentPropertyGroup",
+  "name": "Deployment Property Group",
+  "@type": "PropertyGroup",
+  "version": "0.1",
+  "propertyConcepts": [
+    {
+      "@id": "isInstallable",
+      "@type": "Property",
+      "description": "Can the product be installed or not",
+      "name": "Is Installable",
+      "range": "DataType"
+    },
+    {
+      "@id": "isAutoProvisionable",
+      "@type": "Property",
+      "description": "Can the product be auto installed or not",
+      "name": "Is Auto Provisionable",
+      "range": "DataType"
+    },
+    {
+      "@id": "standardWarrantyLengthMonth",
+      "@type": "Property",
+      "description": "How long is warranty included from the seller (not manufacturer) e.g. 24 months",
+      "name": "Standard Warranty Length Month",
+      "range": "DataType"
+    }
+  ]
+}

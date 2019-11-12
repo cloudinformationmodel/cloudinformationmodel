@@ -1,0 +1,64 @@
+#%Vocabulary 1.0
+base: http://cloudinformationmodel.org/model/
+vocabulary: Billing Property Group
+propertyTerms:
+  ninetyDayBalanceAmount:
+    displayName: Ninety Day Balance Amount
+    description: Account Balance 90 days ago
+    range: any
+  balanceAmount:
+    displayName: Balance Amount
+    description: E.g. 100 points, 3 miles, 6 visits
+    range: any
+  billToPhoneNumber:
+    displayName: Bill To Phone Number
+    description: Customer phone number associated with the sales order
+    range: ContactPointPhone
+  sixtyDayBalanceAmount:
+    displayName: Sixty Day Balance Amount
+    description: Account Balance 60 days ago
+    range: any
+  billToAddress:
+    displayName: Bill To Address
+    description: Reference to billing address
+    range: ContactPointAddress
+  billingDayOfTheMonth:
+    displayName: Billing Day of the Month
+    description: The day of the month that the customer should be invoiced
+    range: any
+  billContactAddress:
+    displayName: Bill Contact Address
+    description: Reference to the contact point billing address, if applicable
+    range: ContactPointAddress
+  billToContact:
+    displayName: Bill To Contact
+    description: Reference to the contact that the order will be billed to.
+    range: AccountContact
+  balanceAmountLimit:
+    displayName: Balance Amount Limit
+    description: What is the max balance allowed before we may take action around usage. Sometimes referred to as credit limit
+    range: any
+  billDeliveryMethod:
+    displayName: Bill Delivery Method
+    description: Electronic or Physical Mail delivery
+    range: any
+  lastActivityDate:
+    displayName: Last Activity Date
+    description: Most recent of Due date of the most recent event logged or Due date of the most recently closed task
+    range: any
+  billFrequency:
+    displayName: Bill Frequency
+    description: How often to send Bill e.g. monthly
+    range: BillingFrequency
+  thirtyDayBalanceAmount:
+    displayName: Thirty Day Balance Amount
+    description: Account Balance 30 days ago
+    range: any
+  billToEmail:
+    displayName: Bill To Email
+    description: Customer email address associated to the sales order
+    range: ContactPointEmail
+  parentAccount:
+    displayName: Parent Account
+    description: Id of the parent customer account (business role), if applicable
+    range: Account

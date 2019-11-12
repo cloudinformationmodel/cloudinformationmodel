@@ -1,0 +1,16 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "SalesOrderPropertyGroup",
+  "name": "Sales Order Property Group",
+  "@type": "PropertyGroup",
+  "version": "0.1",
+  "propertyConcepts": [
+    {
+      "@id": "salesOrderProduct",
+      "@type": "Property",
+      "description": "A Sales Order Product that belongs to the Sales Order Product Group",
+      "name": "Sales Order Product",
+      "range": "SalesOrderProduct"
+    }
+  ]
+}

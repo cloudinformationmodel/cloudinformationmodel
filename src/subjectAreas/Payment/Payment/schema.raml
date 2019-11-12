@@ -1,0 +1,460 @@
+#%RAML 1.0 Library
+types:
+  PaymentGatewayResultCode:
+    properties:
+      id:
+        type: string
+      description:
+        type: string
+      name:
+        type: string
+  PaymentCreditMemoApplication:
+    type: PaymentApplication
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+  PaymentGatewayAuthReversalLog:
+    type: PaymentGatewayInteractionLog
+    properties:
+      id:
+        type: string
+      paymentAuthorizationReversal:
+        items: PaymentAuthorizationReversal
+      name:
+        type: string
+  PaymentAuthorizationReversal:
+    properties:
+      paymentGatewayReferenceNumber:
+        type: string
+      authorizationReversalAmount:
+        type: integer
+      capturePayment:
+        items: CapturePayment
+      customerAuthorizationReversalPhone:
+        type: string
+      iPAddress:
+        type: string
+      paymentAuthorizationReversalStatus:
+        type: string
+      paymentAuthorizationProcessingMode:
+        type: string
+      id:
+        type: string
+      paymentGatewayInternalReferenceNumber:
+        type: string
+      paymentAuthorizationReversalName:
+        type: string
+      paymentGatewayResult:
+        items: PaymentGatewayResultCode
+      paymentAuthorization:
+        items: PaymentAuthorization
+      externalCreatedDate:
+        type: date-only
+      requestDate:
+        type: time-only
+      paymentAuthorizationReversalCommentText:
+        type: string
+      macAddress:
+        type: string
+      customerAuthorizationReversalEmail:
+        type: string
+      paymentGatewayDate:
+        type: time-only
+  PaymentAllocation:
+    properties:
+      id:
+        type: string
+      externalCreatedDate:
+        type: date-only
+      relatedPaymentAllocation:
+        items: PaymentAllocation
+      paymentAllocationName:
+        type: string
+  PaymentApplication:
+    properties:
+      effectiveDate:
+        type: date-only
+      paymentApplicationType:
+        type: string
+      commentText:
+        type: string
+      hasBeenUnapplied:
+        type: boolean
+      id:
+        type: string
+      name:
+        type: string
+      payment:
+        items: Payment
+      appliedAmount:
+        type: integer
+      paymentBalanceAmount:
+        type: integer
+      appliedDate:
+        type: date-only
+      externalCreatedDate:
+        type: date-only
+      unappliedDate:
+        type: date-only
+  PaymentGatewayProvider:
+    properties:
+      apexAdapterClassName:
+        type: string
+      id:
+        type: string
+      paymentGatewayProviderCommentText:
+        type: string
+      paymentGatewayProviderName:
+        type: string
+      developerName:
+        type: string
+      namespacePrefixText:
+        type: string
+  PaymentPolicy:
+    properties:
+      description:
+        type: string
+      id:
+        type: string
+      name:
+        type: string
+      paymentPolicyTreatmentSelection:
+        type: string
+      paymentPolicyStatus:
+        type: string
+  PaymentTreatmentMethod:
+    properties:
+      id:
+        type: string
+      paymentTreatmentMethodName:
+        type: string
+      paymentTreatmentMethodCode:
+        type: string
+      paymentTreatmentMethodDescription:
+        type: string
+  PaymentInvoiceApplication:
+    type: PaymentApplication
+    properties:
+      id:
+        type: string
+      paymentInvoiceApplicationName:
+        type: string
+      invoiceBalanceAmount:
+        type: integer
+      paymentInvoiceApplicationType:
+        type: string
+  PaymentGatewayInteractionType:
+    properties:
+      id:
+        type: string
+      description:
+        type: string
+      name:
+        type: string
+  PaymentGroup:
+    properties:
+      totalReversalAmount:
+        type: integer
+      totalAuthorizationAmount:
+        type: integer
+      id:
+        type: string
+      totalPaymentAmount:
+        type: integer
+      paymentGroupNumber:
+        type: string
+  RefundCreditMemoAllocation:
+    type: RefundAllocation
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+  PaymentGatewayPaymentLog:
+    type: PaymentGatewayInteractionLog
+    properties:
+      id:
+        type: string
+      payment:
+        items: Payment
+      name:
+        type: string
+  RefundAllocation:
+    properties:
+      effectiveDate:
+        type: date-only
+      relatedRefundAllocation:
+        items: RefundAllocation
+      hasBeenUnapplied:
+        type: boolean
+      refundAllocationType:
+        type: string
+      id:
+        type: string
+      refundPayment:
+        items: RefundPayment
+      allocatedAmount:
+        type: integer
+      refundBalanceAmount:
+        type: integer
+      refundAllocationName:
+        type: string
+      appliedDate:
+        type: date-only
+      externalCreatedDate:
+        type: date-only
+      unappliedDate:
+        type: date-only
+  PaymentGatewayAuthorizationLog:
+    type: PaymentGatewayInteractionLog
+    properties:
+      id:
+        type: string
+      paymentAuthorization:
+        items: PaymentAuthorization
+      name:
+        type: string
+  PaymentInvoiceAllocation:
+    type: PaymentAllocation
+    properties:
+      paymentInvoiceAllocationName:
+        type: string
+      id:
+        type: string
+      appliedAmount:
+        type: integer
+      invoiceBalanceAmount:
+        type: integer
+      paymentInvoiceApplication:
+        items: PaymentInvoiceApplication
+  Payment:
+    properties:
+      paymentStatus:
+        type: string
+      authorizationProcessingMode:
+        type: string
+      account:
+        items: account_eg.Account
+      salesOrderPaymentSummary:
+        items: salesorder_eg.SalesOrderPaymentSummary
+      latestGatewayResultCode:
+        items: PaymentGatewayResultCode
+      iPAddress:
+        type: string
+      commentText:
+        type: string
+      paymentNumber:
+        type: string
+      paymentGroup:
+        items: PaymentGroup
+      paymentAmount:
+        type: integer
+      latestGatewayInternalResult:
+        type: string
+      id:
+        type: string
+      customerEmailAddress:
+        type: string
+      name:
+        type: string
+      latestGatewayReferenceNumber:
+        type: string
+      paymentMethod:
+        items: paymentmethod_eg.PaymentMethod
+      latestGatewayDate:
+        type: date-only
+      balanceAmount:
+        type: integer
+      paymentType:
+        type: string
+      paymentGateway:
+        items: PaymentGateway
+      customerPhoneNumber:
+        type: string
+      latestPaymentGatewayMessageText:
+        type: string
+      paymentEffectiveDate:
+        type: date-only
+      paymentTreatment:
+        items: PaymentTreatment
+      externalCreatedDate:
+        type: date-only
+      internalBusinessUnit:
+        items: party_eg.InternalBusinessUnit
+      paymentCancellationDate:
+        type: date-only
+      macAddress:
+        type: string
+      totalAppliedAmount:
+        type: integer
+      netAppliedAmount:
+        type: integer
+      totalUnappliedAmount:
+        type: integer
+      latestGatewayInternalReferenceNumber:
+        type: string
+  PaymentCreditMemoAllocation:
+    type: PaymentAllocation
+    properties:
+      appliedAmount:
+        type: integer
+      id:
+        type: string
+      name:
+        type: string
+  PaymentTreatment:
+    properties:
+      paymentTreatmentMethod:
+        items: PaymentTreatmentMethod
+      id:
+        type: string
+      paymentApplicationLevel:
+        type: string
+      shouldAutoInvoice:
+        type: boolean
+      paymentTreatmentStatus:
+        type: string
+      paymentPolicy:
+        items: PaymentPolicy
+      paymentTreatmentName:
+        type: string
+  PaymentAuthorization:
+    properties:
+      paymentGatewayReferenceNumber:
+        type: string
+      salesOrderPaymentSummary:
+        items: salesorder_eg.SalesOrderPaymentSummary
+      iPAddress:
+        type: string
+      totalPaymentCaptureAmount:
+        type: integer
+      paymentAuthorizationProcessingMode:
+        type: string
+      authorizationAmount:
+        type: integer
+      expirationDate:
+        type: date-only
+      paymentGroup:
+        items: PaymentGroup
+      id:
+        type: string
+      paymentGatewayInternalReferenceNumber:
+        type: string
+      gatewayReferenceDetailsText:
+        type: string
+      totalAuthorizationReversalAmount:
+        type: integer
+      paymentGateway:
+        items: PaymentGateway
+      paymentGatewayResult:
+        items: PaymentGatewayResultCode
+      paymentAuthorizationCommentText:
+        type: string
+      externalCreatedDate:
+        type: date-only
+      paymentAuthorizationNumber:
+        type: string
+      requestDate:
+        type: time-only
+      availableBalanceAmount:
+        type: integer
+      paymentMethodID:
+        items: paymentmethod_eg.PaymentMethod
+      gatewayResultCodeDescription:
+        type: string
+      macAddress:
+        type: string
+      gatewayAuthorizationCode:
+        type: string
+      paymentGatewayDate:
+        type: time-only
+      paymentAuthorizationStatus:
+        type: string
+  RefundPaymentAllocation:
+    type: RefundAllocation
+    properties:
+      capturePayment:
+        items: CapturePayment
+      refundAllocationCommentsDate:
+        type: date-only
+      id:
+        type: string
+      paymentBalanceAmount:
+        type: integer
+      refundAllocationCommentText:
+        type: string
+      creditMemoBalanceAmount:
+        type: integer
+      refundPaymentAllocationName:
+        type: string
+  RefundPayment:
+    type: Payment
+    properties:
+      id:
+        type: string
+      externalCreatedDate:
+        type: date-only
+      name:
+        type: string
+  PaymentGateway:
+    properties:
+      paymentGatewayStatus:
+        type: string
+      id:
+        type: string
+      name:
+        type: string
+      paymentGatewayCommentText:
+        type: string
+      paymentGatewayProvider:
+        items: PaymentGatewayProvider
+      systemCredential:
+        type: string
+  CapturePayment:
+    type: Payment
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      capturePaymentType:
+        type: string
+      handlingFeeAmount:
+        type: integer
+      paymentAuthorization:
+        items: PaymentAuthorization
+      isFinalCapture:
+        type: boolean
+  PaymentGatewayInteractionLog:
+    properties:
+      paymentGatewayInteractionType:
+        items: PaymentGatewayInteractionType
+      paymentGatewayReferenceNumber:
+        type: string
+      paymentGatewayMessageText:
+        type: string
+      paymentGatewayAuthorizationCode:
+        type: string
+      internalResultCode:
+        type: string
+      paymentGatewayAVSCode:
+        type: string
+      id:
+        type: string
+      internalReferenceNumber:
+        type: string
+      paymentGatewayResult:
+        items: PaymentGatewayResultCode
+      paymentGatewayInteractionLogName:
+        type: string
+      paymentGatewayInteractionStatus:
+        type: string
+      paymentGatewayDate:
+        type: date-only
+uses:
+  account_eg: ../../Party/Account/schema.yaml
+  party_eg: ../../Party/Party/schema.yaml
+  salesorder_eg: ../../SalesOrder/SalesOrder/schema.yaml
+  paymentmethod_eg: ../../PaymentMethod/PaymentMethod/schema.yaml

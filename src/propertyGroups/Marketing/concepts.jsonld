@@ -1,0 +1,51 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "MarketingPropertyGroup",
+  "name": "Marketing Property Group",
+  "@type": "PropertyGroup",
+  "version": "0.1",
+  "propertyConcepts": [
+    {
+      "@id": "originatingCustomerSource",
+      "@type": "Property",
+      "description": "The source channel type of the customer. For example, Ad or Trade Show",
+      "name": "Originating Customer Source",
+      "range": "DataType"
+    },
+    {
+      "@id": "marketingEmailResponseRate",
+      "@type": "Property",
+      "description": "How many percent of emails sent are replied to by customer",
+      "name": "Marketing Email Response Rate",
+      "range": "DataType"
+    },
+    {
+      "@id": "adReachRate",
+      "@type": "Property",
+      "description": "How many people estimated reached by competitor ads per day",
+      "name": "Ad Reach Rate",
+      "range": "DataType"
+    },
+    {
+      "@id": "socialMediaPostRate",
+      "@type": "Property",
+      "description": "How many posts are done by competitor per day",
+      "name": "Social Media Post Rate",
+      "range": "DataType"
+    },
+    {
+      "@id": "pressMentionsRate",
+      "@type": "Property",
+      "description": "How many press mentions have been done about the competitor per day",
+      "name": "Press Mentions Rate",
+      "range": "DataType"
+    },
+    {
+      "@id": "adKeywords",
+      "@type": "Property",
+      "description": "What words seems to be used so we know if we need to change ours",
+      "name": "Ad Keywords",
+      "range": "DataType"
+    }
+  ]
+}

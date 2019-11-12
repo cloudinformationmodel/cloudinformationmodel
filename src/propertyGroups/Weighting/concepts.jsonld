@@ -1,0 +1,44 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "WeightingPropertyGroup",
+  "name": "Weighting Property Group",
+  "@type": "PropertyGroup",
+  "version": "0.1",
+  "propertyConcepts": [
+    {
+      "@id": "grossWeight",
+      "@type": "Property",
+      "description": "What is the weight of the product in its original packaging",
+      "name": "Gross Weight",
+      "range": "DataType"
+    },
+    {
+      "@id": "netWeight",
+      "@type": "Property",
+      "description": "What is the weight of the product excluding packaging",
+      "name": "Net Weight",
+      "range": "DataType"
+    },
+    {
+      "@id": "drainedWeight",
+      "@type": "Property",
+      "description": "What is the weigth of the product excluding packaging after drainage",
+      "name": "Drained Weight",
+      "range": "DataType"
+    },
+    {
+      "@id": "tareWeight",
+      "@type": "Property",
+      "description": "What is the weigth of the product bundle packaging without product content",
+      "name": "Tare Weight",
+      "range": "DataType"
+    },
+    {
+      "@id": "weightUOM",
+      "@type": "Property",
+      "description": "What is the unit of measure for stating the weight of the bundle product",
+      "name": "Weight UOM",
+      "range": "DataType"
+    }
+  ]
+}

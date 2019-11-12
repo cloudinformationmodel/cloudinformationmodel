@@ -1,0 +1,316 @@
+#%Vocabulary 1.0
+base: http://cloudinformationmodel.org/model/
+vocabulary: Defining Property Group
+propertyTerms:
+  personalityTypeName:
+    displayName: Personality Type Name
+    description: Personality e.g. impulsive, compulsive, authoritative, ambitious, introverted
+    range: any
+  disabilityTypeName:
+    displayName: Disability Type Name
+    description: Disability or Impairment e.g. wheel chair bound
+    range: any
+  heightUOMName:
+    displayName: Height UOM Name
+    description: What unit of mesure is used for height e.g. inches, centimeter
+    range: any
+  sellerTypeName:
+    displayName: Seller Type Name
+    description: Is the seller e.g. reseller, distributor, wholesaler, sales partner
+    range: any
+  id:
+    displayName: Account Type Id
+    description: Primary Key
+    range: any
+  departmentName:
+    displayName: Department Name
+    description: The department the contact works in
+    range: any
+  shortCode:
+    displayName: Short Code
+    description: Short digit sequence used to address messages in the Multimedia Messaging System (MMS) and short message service (SMS) systems of mobile network operators
+    range: any
+  ethnicityName:
+    displayName: Ethnicity Name
+    description: Cultural background e.g. black, white, hispanic, asian, native american, mixed
+    range: any
+  residenceCaptureMethodName:
+    displayName: Name
+    description: How as data captured e.g. self provided or derived based on IP address
+    range: any
+  lifeAttitudeTypeName:
+    displayName: Life Attitude Type Name
+    description: Life attitude e.g. innovator, believer, achiever, experience, survivor
+    range: any
+  emailAddress:
+    displayName: Email Address
+    description: A complete email address e.g. JaneDoe@salesforce.com
+    range: any
+  accountBalanceUOMName:
+    displayName: Account Balance UOM Name
+    description: What is the unit of measure for current account balance e.g. money, points, miles, visits
+    range: any
+  occupationName:
+    displayName: Occupation Name
+    description: Professional, manager, tradesman, technical, military, unskilled, student, home maker, other
+    range: any
+  incomeRangeName:
+    displayName: Income Range Name
+    description: What is the income range the person is part of e.g. 100 to 200 000
+    range: any
+  countryName:
+    displayName: Country Name
+    description: Country where phone number logically stated to belong
+    range: any
+  doNotProcessReasonName:
+    displayName: Do Not Process Reason Name
+    description: Why no processing allowed e.g accuracy questioned, processing unlawful, legal prohibit delete, data subject objection
+    range: any
+  bankruptcyTypeName:
+    displayName: Bankruptcy Type Name
+    description: What type of bankruptcy the business went through e.g. chapter 7, chapter 11
+    range: any
+  areaCode:
+    displayName: Area Code
+    description: Entered area code
+    range: any
+  iSICCodeName:
+    displayName: ISIC Code Name
+    description: United Nations International Standard Industrial Classification of All Economic Activities
+    range: any
+  paymentTermName:
+    displayName: Payment Term Name
+    description: How fast must payment be made e.g. 5% discount in 10 days, full amount in 30 days (Net30), 45 days (Net 45)
+    range: any
+  assistantPhone:
+    displayName: Assistant Phone
+    description: The telephone number of the assistant.
+    range: any
+  name:
+    displayName: Name
+    description: Name of the Role e.g. decision maker, influencer
+    range: any
+  legalOrganizationTypeName:
+    displayName: Legal Organization Type Name
+    description: E.g. Sole proprietor, Partnership, Limited Partnership, S-Corporation
+    range: any
+  emailLatestBounceReasonText:
+    displayName: Email Latest Bounce Reason Text
+    description: Reason the email bounced
+    range: any
+  freightTermsName:
+    displayName: Freight Terms Name
+    description: Standard freight term e.g. Free On Board Shipping Point (FOB), CIF
+    range: any
+  contactNote:
+    displayName: Contact Note
+    description: A description of the contact
+    range: any
+  socialFanStatusName:
+    displayName: Social Fan Status Name
+    description: What is the standing for a social person amongst fans e.g. Newbie, Mega Star
+    range: any
+  applicationLogin:
+    displayName: Application Login Id
+    description: The unique id to login to the application
+    range: any
+  maritalStatusName:
+    displayName: Marital Status Name
+    description: E.g. single, married, divorced, widowed, partnership, other
+    range: any
+  isUsedForShipping:
+    displayName: Is Used For Shipping
+    description: True if the address is used for shipping purposes
+    range: any
+  socialNetworkProvider:
+    displayName: Social Network Provider
+    description: Who is it the provider of the handle e.g Facebook, Linkedin
+    range: any
+  businessActivityName:
+    displayName: Business Activity Name
+    description: Main type of business activity a party perform e.g. farmer, sales
+    range: any
+  telephoneNumber:
+    displayName: Telephone Number
+    description: Entered phone number
+    range: any
+  hobbyName:
+    displayName: Hobby Name
+    description: What is a hobby a person can have e.g. skiing, running, swimming
+    range: any
+  accountHoldStatusReasonName:
+    displayName: Account Hold Status Reason Name
+    description: Why the account is in hold status e.g misused, legal request
+    range: any
+  activeToDate:
+    displayName: Active To Date
+    description: From when is the Contact playing the Role on the Account ending
+    range: any
+  genderName:
+    displayName: Gender Name
+    description: Female, Male, Gender Neutral, Other
+    range: any
+  dietaryHabitTypeName:
+    displayName: Dietary Habit Type Name
+    description: Dietary habit e.g. kosher food eater
+    range: any
+  uncategorizedPartyCreationReasonName:
+    displayName: Uncategorized Party Creation Reason Name
+    description: Why can party not yet be categorized e.g. was cash buyer, got social handle only
+    range: any
+  extensionNumber:
+    displayName: Extension Number
+    description: Entered phone extension number
+    range: any
+  businessSizeTypeName:
+    displayName: Business Size Type Name
+    description: How big is the business e.g. small, medium, enterprise
+    range: any
+  educationLevelName:
+    displayName: Education Level Name
+    description: What is the level of education someone have e.g. PhD, College Degree
+    range: any
+  formattedE164PhoneNumber:
+    displayName: Formatted E164 Phone Number
+    description: Number formatted according to e164 e.g. +165012345678
+    range: any
+  emailMailBox:
+    displayName: Email Mail Box
+    description: Subset of an email address that represents the mail before the @ sign
+    range: any
+  emailLatestBounceDateTime:
+    displayName: Email Latest Bounce Date Time
+    description: Date the latest email sent bounced back
+    range: any
+  partyIdentificationTypeName:
+    displayName: Party Identification Type Name
+    description: The type of identification e.g driving license number, birth certificate, rewards membership
+    range: any
+  sLATypeName:
+    displayName: SLA Type Name
+    description: Types of Service Level Agreement e.g. 24x7, weekdays, work hours
+    range: any
+  nAICSCodeName:
+    displayName: NAICS Code Name
+    description: North American Industrial Classification Codes
+    range: any
+  isUsedForBilling:
+    displayName: Is Used For Billing
+    description: True if the address is used for billing purposes
+    range: any
+  formattedInternationalPhoneNumber:
+    displayName: Formatted International Phone Number
+    description: Number formatted according to International e.g. +16 501-234-5678
+    range: any
+  partyRelationshipRoleName:
+    displayName: Party Relationship Role Name
+    description: What is the role a party can play e.g. member of, head of (household)
+    range: any
+  leadStatusName:
+    displayName: Lead Status Name
+    description: Status code for this converted lead e.g. open, worked, closed
+    range: any
+  partyTypeName:
+    displayName: Party Type Name
+    description: What type of party is being defined in the system e.g. business, individual, household
+    range: any
+  prospectRatingName:
+    displayName: Prospect Rating Name
+    description: The customers prospect rating, for example Hot, Warm, or Cold.
+    range: any
+  lifeStyleTypeName:
+    displayName: Life Style Type Name
+    description: Life style e.g. modern, corporate, suburban, religious, workaholic, outdoors
+    range: any
+  accountTypeName:
+    displayName: Account Type Name
+    description: What type of trade account e.g. loyalty account, business credit account, layaway, short term rental
+    range: any
+  supplierTypeName:
+    displayName: Supplier Type Name
+    description: Types of suppliers e.g. retailer, distributor, service partner, manufacturer
+    range: any
+  assistantName:
+    displayName: Assistant Name
+    description: The name of the assistant.
+    range: any
+  militaryStatusName:
+    displayName: Military Status Name
+    description: Unknown, no military service, vietnam veteran, other veteran, active reserve, retired, active duty
+    range: any
+  personalValueTypeName:
+    displayName: Personal Value Type Name
+    description: Personal value e.g. family-oriented, materialistic, spiritual, idealistic, careerist
+    range: any
+  formattedNationalPhoneNumber:
+    displayName: Formatted National Phone Number
+    description: Number formatted according to e123 variable length national e.g. 650 123 45678
+    range: any
+  militaryServiceStatusName:
+    displayName: MilitaryServiceStatusName
+    description: E.g. Active or Retired military service status
+    range: any
+  weightUOMName:
+    displayName: Weight UOM Name
+    description: What unit of measure is used for weight e.g. pound, kilogram
+    range: any
+  billingFrequencyName:
+    displayName: Billing Frequency Name
+    description: How often to send a bill e.g. monthly, 30th of month, never
+    range: any
+  sICCodeName:
+    displayName: SIC Code Name
+    description: 4 digit Standard Industry Classification code
+    range: any
+  leadSourceName:
+    displayName: Lead Source Name
+    description: Source from which the lead was obtained e.g. sales partner Western Outfitters Inc
+    range: any
+  title:
+    displayName: Title
+    description: Title of the contact such as CEO or Vice President.
+    range: any
+  personLifeStageName:
+    displayName: Person Life Stage Name
+    description: E.g. newborn, infant, child, teen, adolescent, adult, mature, elderly
+    range: any
+  leadRatingName:
+    displayName: Lead Rating Name
+    description: Rating of the lead e.g. warm, cold
+    range: any
+  religionName:
+    displayName: Religion Name
+    description: Religion e.g. Islam, Samaritanism, Syncretic, Christian
+    range: any
+  accountContactRoleType:
+    displayName: Account Contact Role Type
+    description: Reference to the role played
+    range: any
+  emailDomain:
+    displayName: Email Domain
+    description: Subset of an email address that represents the domain after then @ sign
+    range: any
+  socialNetworkProviderName:
+    displayName: Prospect Rating Name
+    description: Who provides the service for a social persona e.g. Twitter, Facebook
+    range: any
+  billDeliveryMethodName:
+    displayName: Bill Delivery Method Name
+    description: How can a bill be delivered e.g. electronic, mail
+    range: any
+  generalLedgerAccountName:
+    displayName: General Ledger Account Name
+    description: What account is debt and credit stored against e.g. Liabilty101
+    range: any
+  customerTypeName:
+    displayName: Customer Type Name
+    description: What type of customer is this e.g. High Roller, Low Value
+    range: any
+  accountContact:
+    displayName: Account Contact
+    description: Reference to the contact playing the role
+    range: AccountContact
+  activeFromDate:
+    displayName: Active From Date
+    description: From when is the Contact playing the Role on the Account
+    range: any

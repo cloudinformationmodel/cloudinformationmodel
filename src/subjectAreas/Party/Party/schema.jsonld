@@ -1,0 +1,934 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "PartyEntityGroup",
+  "@type": "EntityGroup",
+  "version": "0.1",
+  "schemas": [
+    {
+      "@type": "Shape",
+      "@id": "Party",
+      "properties": [
+        {
+          "path": "noMergeReason",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "primaryAccount",
+          "node": "Account"
+        },
+        {
+          "path": "partyType",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "globalParty",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "Individual",
+      "and": [
+        {
+          "@id": "Party"
+        },
+        {
+          "properties": [
+            {
+              "path": "convictionsCount",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "isGoodStudent",
+              "datatype": "xsd:boolean",
+              "maxCount": "1"
+            },
+            {
+              "path": "isGoodDriver",
+              "datatype": "xsd:boolean",
+              "maxCount": "1"
+            },
+            {
+              "path": "highestEducationLevel",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "weddingAnniversaryDate",
+              "datatype": "xsd:date",
+              "maxCount": "1"
+            },
+            {
+              "path": "webSiteURL",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "isHighRiskHobby",
+              "datatype": "xsd:boolean",
+              "maxCount": "1"
+            },
+            {
+              "path": "primaryHobby",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "occupation",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "militaryStatus",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "militaryService",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "isHighRiskOccupation",
+              "datatype": "xsd:boolean",
+              "maxCount": "1"
+            },
+            {
+              "path": "occupationType",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "childrenCount",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "isHomeOwner",
+              "datatype": "xsd:boolean",
+              "maxCount": "1"
+            },
+            {
+              "path": "religion",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "gender",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "deathDate",
+              "datatype": "xsd:date",
+              "maxCount": "1"
+            },
+            {
+              "path": "primaryHousehold",
+              "node": "Household"
+            },
+            {
+              "path": "ethnicity",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "personLifeStage",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "maritalStatus",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "employedSinceDate",
+              "datatype": "xsd:date",
+              "maxCount": "1"
+            },
+            {
+              "path": "currentEmployerName",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "deathPlace",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "birthPlace",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "minorCitationCount",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "majorCitationCount",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "surgeriesLast5YearsCount",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "hospitalizationsLast5YearsCount",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "isTobaccoConsume",
+              "datatype": "xsd:boolean",
+              "maxCount": "1"
+            },
+            {
+              "path": "hasDrugAbuseHistory",
+              "datatype": "xsd:boolean",
+              "maxCount": "1"
+            },
+            {
+              "path": "isDrugConsumer",
+              "datatype": "xsd:boolean",
+              "maxCount": "1"
+            },
+            {
+              "path": "hasAlcoholAbuseHistory",
+              "datatype": "xsd:boolean",
+              "maxCount": "1"
+            },
+            {
+              "path": "isAlcoholConsumer",
+              "datatype": "xsd:boolean",
+              "maxCount": "1"
+            },
+            {
+              "path": "personWeightUnitOfMeasure",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "personWeight",
+              "datatype": "xsd:decimal",
+              "maxCount": "1"
+            },
+            {
+              "path": "personHeightUnitOfMeasure",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "personHeight",
+              "datatype": "xsd:decimal",
+              "maxCount": "1"
+            },
+            {
+              "path": "mainDisabilityType",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "mainDietaryHabitType",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "mainLifeAttitudeType",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "mainLifeStyleType",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "mainPersonalValueType",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "mainPersonalityType",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "taxBracketRange",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "dependentCount",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "consumerCreditScoreProviderName",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "consumerCreditScore",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "yearlyIncomeRange",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "yearlyIncome",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "netWorth",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "influencerRating",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "overAgeNumber",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "birthDate",
+              "datatype": "xsd:date",
+              "maxCount": "1"
+            },
+            {
+              "path": "doExtractMyDataUpdateDate",
+              "datatype": "xsd:date",
+              "maxCount": "1"
+            },
+            {
+              "path": "sendIndividualData",
+              "datatype": "xsd:boolean",
+              "maxCount": "1"
+            },
+            {
+              "path": "doForgetMeFromUpdateDate",
+              "datatype": "xsd:date",
+              "maxCount": "1"
+            },
+            {
+              "path": "shouldForget",
+              "datatype": "xsd:boolean",
+              "maxCount": "1"
+            },
+            {
+              "path": "doNotProcessReason",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "doNotProcessFromUpdateDate",
+              "datatype": "xsd:date",
+              "maxCount": "1"
+            },
+            {
+              "path": "doNotProfileFromUpdateDate",
+              "datatype": "xsd:date",
+              "maxCount": "1"
+            },
+            {
+              "path": "doNotMarketFromUpdateDate",
+              "datatype": "xsd:date",
+              "maxCount": "1"
+            },
+            {
+              "path": "doNotTrackLocationUpdateDate",
+              "datatype": "xsd:date",
+              "maxCount": "1"
+            },
+            {
+              "path": "doNotTrackUpdateDate",
+              "datatype": "xsd:date",
+              "maxCount": "1"
+            },
+            {
+              "path": "residenceCaptureMethod",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "residenceCountryName",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "mothersMaidenName",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "preferredName",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "orderingName",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "mailingName",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "officialName",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "nameSuffix",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "secondLastName",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "lastName",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "middleName",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "firstName",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "salutation",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "personName",
+              "datatype": "xsd:string",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "photoURL",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "id",
+              "datatype": "cim:id",
+              "maxCount": "1",
+              "minCount": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "Household",
+      "and": [
+        {
+          "@id": "Party"
+        },
+        {
+          "properties": [
+            {
+              "path": "householdDissolvedDate",
+              "datatype": "xsd:date",
+              "maxCount": "1"
+            },
+            {
+              "path": "householdFormedDate",
+              "datatype": "xsd:date",
+              "maxCount": "1"
+            },
+            {
+              "path": "householdMemberCount",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "name",
+              "datatype": "xsd:string",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "id",
+              "datatype": "cim:id",
+              "maxCount": "1",
+              "minCount": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "InternalBusinessUnit",
+      "and": [
+        {
+          "@id": "Party"
+        },
+        {
+          "properties": [
+            {
+              "path": "parentInternalBusinessUnit",
+              "node": "InternalBusinessUnit"
+            },
+            {
+              "path": "businessUnitType",
+              "datatype": "xsd:string",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "name",
+              "datatype": "xsd:string",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "id",
+              "datatype": "cim:id",
+              "maxCount": "1",
+              "minCount": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "UncategorizedParty",
+      "and": [
+        {
+          "@id": "Party"
+        },
+        {
+          "properties": [
+            {
+              "path": "creationReason",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "originalSourceRecord",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "originalSourceSystem",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "uncategorizedPartyLabel",
+              "datatype": "xsd:string",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "id",
+              "datatype": "cim:id",
+              "maxCount": "1",
+              "minCount": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "PartyAdditionalName",
+      "properties": [
+        {
+          "path": "additionalNameType",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "name",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "party",
+          "node": "Party",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "PersonLanguage",
+      "properties": [
+        {
+          "path": "writtenProficiencyLevel",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "spokenProficiencyLevel",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "individual",
+          "node": "Individual",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "PartyRelatedParty",
+      "properties": [
+        {
+          "path": "relatedToDate",
+          "datatype": "xsd:date",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "relatedFromDate",
+          "datatype": "xsd:date",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "partyRelationshipType",
+          "node": "PartyRelationshipType",
+          "minCount": "1"
+        },
+        {
+          "path": "relatedParty",
+          "node": "Party",
+          "minCount": "1"
+        },
+        {
+          "path": "party",
+          "node": "Party",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "PartyRelationshipType",
+      "properties": [
+        {
+          "path": "isBidirectional",
+          "datatype": "xsd:boolean",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "relatedPartyRole",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "partyRole",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "PartyIdentification",
+      "properties": [
+        {
+          "path": "partyRole",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "verifiedDate",
+          "datatype": "xsd:date",
+          "maxCount": "1"
+        },
+        {
+          "path": "expiryDate",
+          "datatype": "xsd:date",
+          "maxCount": "1"
+        },
+        {
+          "path": "issuedAtLocation",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "issuedByAuthority",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "issuedDate",
+          "datatype": "xsd:date",
+          "maxCount": "1"
+        },
+        {
+          "path": "identificationNumber",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "name",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "partyIdentificationType",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "party",
+          "node": "Party",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "PersonEmployment",
+      "properties": [
+        {
+          "path": "employerPostalCodeText",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "employerCityName",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "employerAddressLine4",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "employerAddressLine3",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "employerAddressLine2",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "employerAddressLine1",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "employerPhoneNumber",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "employerContactPointAddress",
+          "node": "ContactPointAddress"
+        },
+        {
+          "path": "occupationText",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "positionText",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "employmentStatus",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "annualIncome",
+          "datatype": "xsd:integer",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "employerName",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "endDate",
+          "datatype": "xsd:date",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "startDate",
+          "datatype": "xsd:date",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "individual",
+          "node": "Individual",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "PersonLifeEvent",
+      "properties": [
+        {
+          "path": "personLifeEventDateTime",
+          "datatype": "xsd:time",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "personLifeEventType",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "individual",
+          "node": "Individual",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "PersonEducation",
+      "properties": [
+        {
+          "path": "institutionName",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "graduationDate",
+          "datatype": "xsd:date",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "educationLevel",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "educationName",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "individual",
+          "node": "Individual",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    }
+  ]
+}

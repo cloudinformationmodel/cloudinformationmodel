@@ -1,0 +1,23 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "GeographicPropertyGroup",
+  "name": "Geographic Property Group",
+  "@type": "PropertyGroup",
+  "version": "0.1",
+  "propertyConcepts": [
+    {
+      "@id": "birthPlace",
+      "@type": "Property",
+      "description": "Place person is born e.g. a city name",
+      "name": "Birth Place",
+      "range": "DataType"
+    },
+    {
+      "@id": "deathPlace",
+      "@type": "Property",
+      "description": "Place person passed away at",
+      "name": "Death Place",
+      "range": "DataType"
+    }
+  ]
+}

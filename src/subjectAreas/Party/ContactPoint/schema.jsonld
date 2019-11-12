@@ -1,0 +1,462 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "ContactPointEntityGroup",
+  "@type": "EntityGroup",
+  "version": "0.1",
+  "schemas": [
+    {
+      "@type": "Shape",
+      "@id": "PartyWebAddress",
+      "and": [
+        {
+          "@id": "ContactPoint"
+        },
+        {
+          "properties": [
+            {
+              "path": "webSiteURL",
+              "datatype": "xsd:string",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "party",
+              "node": "Party",
+              "minCount": "1"
+            },
+            {
+              "path": "id",
+              "datatype": "cim:id",
+              "maxCount": "1",
+              "minCount": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "ContactPoint",
+      "properties": [
+        {
+          "path": "forBusinessUse",
+          "datatype": "xsd:boolean",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "forPersonalUse",
+          "datatype": "xsd:boolean",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "profileOccurrenceCount",
+          "datatype": "xsd:integer",
+          "maxCount": "1"
+        },
+        {
+          "path": "profileLastUpdatedDate",
+          "datatype": "xsd:time",
+          "maxCount": "1"
+        },
+        {
+          "path": "profileFirstCreatedDate",
+          "datatype": "xsd:time",
+          "maxCount": "1"
+        },
+        {
+          "path": "primaryFlag",
+          "datatype": "xsd:boolean",
+          "maxCount": "1"
+        },
+        {
+          "path": "bestTimeToContactEndTime",
+          "datatype": "xsd:time",
+          "maxCount": "1"
+        },
+        {
+          "path": "bestTimeToContactStartTime",
+          "datatype": "xsd:time",
+          "maxCount": "1"
+        },
+        {
+          "path": "activeToDate",
+          "datatype": "xsd:date",
+          "maxCount": "1"
+        },
+        {
+          "path": "activeFromDate",
+          "datatype": "xsd:date",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "contactPointType",
+          "node": "ContactPointType",
+          "minCount": "1"
+        },
+        {
+          "path": "partyRole",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "party",
+          "node": "Party",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "ContactPointType",
+      "properties": [
+        {
+          "path": "optInPriority",
+          "datatype": "xsd:integer",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "name",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "ContactPointPhone",
+      "and": [
+        {
+          "@id": "ContactPoint"
+        },
+        {
+          "properties": [
+            {
+              "path": "isFaxCapable",
+              "datatype": "xsd:boolean",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "isSMSCapable",
+              "datatype": "xsd:boolean",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "primaryPhoneType",
+              "datatype": "xsd:string",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "formattedNationalPhoneNumber",
+              "datatype": "xsd:string",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "formattedE164PhoneNumber",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "formattedInternationalPhoneNumber",
+              "datatype": "xsd:string",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "extensionNumber",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "telephoneNumber",
+              "datatype": "xsd:string",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "shortCode",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "areaCode",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "phoneCountryCode",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "countryName",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "id",
+              "datatype": "cim:id",
+              "maxCount": "1",
+              "minCount": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "ContactPointEmail",
+      "and": [
+        {
+          "@id": "ContactPoint"
+        },
+        {
+          "properties": [
+            {
+              "path": "emailLatestBounceReasonText",
+              "datatype": "xsd:string",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "emailLatestBounceDateTime",
+              "datatype": "xsd:date",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "emailDomain",
+              "datatype": "xsd:string",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "emailMailBox",
+              "datatype": "xsd:string",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "emailAddress",
+              "datatype": "xsd:string",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "id",
+              "datatype": "cim:id",
+              "maxCount": "1",
+              "minCount": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "ContactPointSocial",
+      "and": [
+        {
+          "@id": "ContactPoint"
+        },
+        {
+          "properties": [
+            {
+              "path": "socialNetworkProvider",
+              "datatype": "xsd:string",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "socialFanStatus",
+              "datatype": "xsd:string",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "followersCount",
+              "datatype": "xsd:integer",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "profilePictureURL",
+              "datatype": "xsd:string",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "socialHandleName",
+              "datatype": "xsd:string",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "socialHandle",
+              "datatype": "xsd:string",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "id",
+              "datatype": "cim:id",
+              "maxCount": "1",
+              "minCount": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "ContactPointAddress",
+      "and": [
+        {
+          "@id": "ContactPoint"
+        },
+        {
+          "properties": [
+            {
+              "path": "contactPhone",
+              "node": "ContactPointPhone"
+            },
+            {
+              "path": "countryName",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "stateProvinceName",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "postalCodeText",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "cityName",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "addressLine4",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "addressLine3",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "addressLine2",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "addressLine1",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "geoAccuracy",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "geoLatitude",
+              "datatype": "xsd:decimal",
+              "maxCount": "1"
+            },
+            {
+              "path": "geoLongitude",
+              "datatype": "xsd:decimal",
+              "maxCount": "1"
+            },
+            {
+              "path": "isUsedForBilling",
+              "datatype": "xsd:boolean",
+              "maxCount": "1"
+            },
+            {
+              "path": "isUsedForShipping",
+              "datatype": "xsd:boolean",
+              "maxCount": "1"
+            },
+            {
+              "path": "id",
+              "datatype": "cim:id",
+              "maxCount": "1",
+              "minCount": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "ContactPointLocation",
+      "and": [
+        {
+          "@id": "ContactPoint"
+        },
+        {
+          "properties": [
+            {
+              "path": "id",
+              "datatype": "cim:id",
+              "maxCount": "1",
+              "minCount": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "ContactPointApp",
+      "and": [
+        {
+          "@id": "ContactPoint"
+        },
+        {
+          "properties": [
+            {
+              "path": "applicationLogin",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "id",
+              "datatype": "cim:id",
+              "maxCount": "1",
+              "minCount": "1"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

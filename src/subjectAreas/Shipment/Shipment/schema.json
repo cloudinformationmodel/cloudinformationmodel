@@ -1,0 +1,284 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/Shipment"
+    },
+    {
+      "$ref": "#/definitions/ShipmentDocument"
+    },
+    {
+      "$ref": "#/definitions/ShipmentPackage"
+    },
+    {
+      "$ref": "#/definitions/ShipmentProduct"
+    },
+    {
+      "$ref": "#/definitions/ShipmentProductPriceAdjustment"
+    },
+    {
+      "$ref": "#/definitions/ShipmentProductPriceAdjustmentTax"
+    },
+    {
+      "$ref": "#/definitions/ShipmentStatus"
+    },
+    {
+      "$ref": "#/definitions/ShippingMethod"
+    }
+  ],
+  "definitions": {
+    "ShipmentProductPriceAdjustmentTax": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "shipmentProductPriceAdjustment"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "shipmentProductPriceAdjustment": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ShipmentProductPriceAdjustment"
+          }
+        }
+      }
+    },
+    "ShipmentStatus": {
+      "type": "object",
+      "required": [
+        "id",
+        "description",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "ShipmentProductPriceAdjustment": {
+      "type": "object",
+      "required": [
+        "adjustmentAmount",
+        "description",
+        "id",
+        "shipmentProduct"
+      ],
+      "properties": {
+        "adjustmentAmount": {
+          "type": "integer"
+        },
+        "shipmentProductPriceAdjustmentAmount": {
+          "type": "integer"
+        },
+        "description": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "shipmentProduct": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ShipmentProduct"
+          }
+        },
+        "adjustmentTaxAmount": {
+          "type": "integer"
+        }
+      }
+    },
+    "Shipment": {
+      "type": "object",
+      "required": [
+        "id",
+        "shipmentDate"
+      ],
+      "properties": {
+        "giftMessageText": {
+          "type": "string"
+        },
+        "shipmentNumber": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "shipmentStatus": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ShipmentStatus"
+          }
+        },
+        "salesOrder": {
+          "type": "array",
+          "items": {
+            "$ref": "../../SalesOrder/SalesOrder/schema.json#/definitions/SalesOrder"
+          }
+        },
+        "isGift": {
+          "type": "boolean"
+        },
+        "actualDeliveryDateTime": {
+          "type": "string",
+          "format": "time"
+        },
+        "specialInstructionsText": {
+          "type": "string"
+        },
+        "carrierTrackingNumber": {
+          "type": "string"
+        },
+        "shipToAddress": {
+          "type": "array",
+          "items": {
+            "$ref": "../../Party/ContactPoint/schema.json#/definitions/ContactPointAddress"
+          }
+        },
+        "estimatedDeliveryDateTime": {
+          "type": "string",
+          "format": "time"
+        },
+        "salesOrderDeliveryGroup": {
+          "type": "array",
+          "items": {
+            "$ref": "../../SalesOrder/SalesOrder/schema.json#/definitions/SalesOrderDeliveryGroup"
+          }
+        },
+        "scheduledDeliveryDateTime": {
+          "type": "string",
+          "format": "time"
+        },
+        "shipmentDate": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "ShipmentPackage": {
+      "type": "object",
+      "required": [
+        "shipment",
+        "id",
+        "shipmentProductCount",
+        "shipmentProductDescription"
+      ],
+      "properties": {
+        "shipment": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Shipment"
+          }
+        },
+        "id": {
+          "type": "string"
+        },
+        "shipmentProductCount": {
+          "type": "integer"
+        },
+        "shipmentProductDescription": {
+          "type": "string"
+        }
+      }
+    },
+    "ShipmentDocument": {
+      "type": "object",
+      "required": [
+        "shipment",
+        "id"
+      ],
+      "properties": {
+        "shipment": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Shipment"
+          }
+        },
+        "id": {
+          "type": "string"
+        }
+      }
+    },
+    "ShippingMethod": {
+      "type": "object",
+      "required": [
+        "product",
+        "id",
+        "description",
+        "name"
+      ],
+      "properties": {
+        "product": {
+          "type": "array",
+          "items": {
+            "$ref": "../../Product/Product/schema.json#/definitions/Product"
+          }
+        },
+        "id": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "ShipmentProduct": {
+      "type": "object",
+      "required": [
+        "product",
+        "shipment",
+        "shipmentPackage",
+        "id",
+        "salesOrderProduct",
+        "shipmentProductCount"
+      ],
+      "properties": {
+        "product": {
+          "type": "array",
+          "items": {
+            "$ref": "../../Product/Product/schema.json#/definitions/Product"
+          }
+        },
+        "shipment": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Shipment"
+          }
+        },
+        "shipmentPackage": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ShipmentPackage"
+          }
+        },
+        "id": {
+          "type": "string"
+        },
+        "salesOrderProduct": {
+          "type": "array",
+          "items": {
+            "$ref": "../../SalesOrder/SalesOrder/schema.json#/definitions/SalesOrderProduct"
+          }
+        },
+        "shipmentProductCount": {
+          "type": "integer"
+        }
+      }
+    }
+  }
+}

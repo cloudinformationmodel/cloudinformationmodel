@@ -1,0 +1,142 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "DemographicPropertyGroup",
+  "name": "Demographic Property Group",
+  "@type": "PropertyGroup",
+  "version": "0.1",
+  "propertyConcepts": [
+    {
+      "@id": "maritalStatus",
+      "@type": "Property",
+      "description": "E.g. single, married, divorced, widowed, partnership, other",
+      "name": "Marital Status",
+      "range": "DataType"
+    },
+    {
+      "@id": "personLifeStage",
+      "@type": "Property",
+      "description": "E.g. newborn, infant, child, teen, adolescent, adult, mature, elderly",
+      "name": "Secondary Citizenship Country",
+      "range": "DataType"
+    },
+    {
+      "@id": "ethnicity",
+      "@type": "Property",
+      "description": "Cultural background e.g. black, white, hispanic, asian, native american, mixed",
+      "name": "Ethnicity",
+      "range": "DataType"
+    },
+    {
+      "@id": "primaryHousehold",
+      "@type": "Property",
+      "description": "Which household is the person mainly part of (to avoid double counting in reports)",
+      "name": "Primary Household",
+      "range": "Household"
+    },
+    {
+      "@id": "deathDate",
+      "@type": "Property",
+      "description": "Date person passed away",
+      "name": "Death Date",
+      "range": "DataType"
+    },
+    {
+      "@id": "gender",
+      "@type": "Property",
+      "description": "Female, Male, Other",
+      "name": "Gender",
+      "range": "DataType"
+    },
+    {
+      "@id": "religion",
+      "@type": "Property",
+      "description": "Religion e.g. Islam, Samaritanism, Syncretic, Christian",
+      "name": "Religion",
+      "range": "DataType"
+    },
+    {
+      "@id": "isHomeOwner",
+      "@type": "Property",
+      "description": "Does the person own a home",
+      "name": "Is Home Owner",
+      "range": "DataType"
+    },
+    {
+      "@id": "childrenCount",
+      "@type": "Property",
+      "description": "How many children does the person have",
+      "name": "Children Count",
+      "range": "DataType"
+    },
+    {
+      "@id": "occupationType",
+      "@type": "Property",
+      "description": "Professional, manager, tradesman, technical, military, unskilled, student, home maker, other",
+      "name": "Occupation Type",
+      "range": "DataType"
+    },
+    {
+      "@id": "isHighRiskOccupation",
+      "@type": "Property",
+      "description": "Is the job incurring extra risk of harm e.g. yes for law enforcement",
+      "name": "Is High Risk Occupation",
+      "range": "DataType"
+    },
+    {
+      "@id": "militaryService",
+      "@type": "Property",
+      "description": "Has the person served in the military e.g. Unknown, Yes, No",
+      "name": "Military Service",
+      "range": "DataType"
+    },
+    {
+      "@id": "militaryStatus",
+      "@type": "Property",
+      "description": "Unknown, no military service, vietnam veteran, other veteran, active reserve, retired, active duty",
+      "name": "Military Status",
+      "range": "DataType"
+    },
+    {
+      "@id": "occupation",
+      "@type": "Property",
+      "description": "Self declared information what occupation the person has",
+      "name": "Occupation",
+      "range": "DataType"
+    },
+    {
+      "@id": "primaryHobby",
+      "@type": "Property",
+      "description": "What is the primary hobby of the person e.g. skiing, running, swimming",
+      "name": "Primary Hobby",
+      "range": "DataType"
+    },
+    {
+      "@id": "isHighRiskHobby",
+      "@type": "Property",
+      "description": "Is the hobby incurring extra risk of harm e.g. yes for shark swimming, mountaineering",
+      "name": "Is High Risk Hobby",
+      "range": "DataType"
+    },
+    {
+      "@id": "webSiteURL",
+      "@type": "Property",
+      "description": "Personal Web Site",
+      "name": "Web Site URL",
+      "range": "DataType"
+    },
+    {
+      "@id": "weddingAnniversaryDate",
+      "@type": "Property",
+      "description": "Month and date the person celebrate last weeding",
+      "name": "Wedding Anniversary Date",
+      "range": "DataType"
+    },
+    {
+      "@id": "highestEducationLevel",
+      "@type": "Property",
+      "description": "What is the highest completed education level e.g. High School, PhD",
+      "name": "Highest Education Level",
+      "range": "DataType"
+    }
+  ]
+}

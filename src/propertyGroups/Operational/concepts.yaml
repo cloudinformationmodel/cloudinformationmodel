@@ -1,0 +1,24 @@
+#%Vocabulary 1.0
+base: http://cloudinformationmodel.org/model/
+vocabulary: Operational Property Group
+propertyTerms:
+  creditRating:
+    displayName: Credit Rating
+    description: In how good standing is the seller so we know they should receive more goods from us
+    range: any
+  majorPostSaleSupportNeeded:
+    displayName: Major Post Sale Support Needed
+    description: Does the seller require significant resources from us post sale
+    range: any
+  productReturnRate:
+    displayName: Product Return Rate
+    description: How many products are returned as percentage of all products ordered
+    range: any
+  inventoryValueAmount:
+    displayName: Inventory Value Amount
+    description: The value of the inventory of our products the seller hold
+    range: any
+  marketingDevelopmentAmount:
+    displayName: Marketing Development Amount
+    description: How much money have we funded to seller for marketing development activities
+    range: any

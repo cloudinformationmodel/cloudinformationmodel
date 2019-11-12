@@ -1,0 +1,30 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "TranslatedPropertyGroup",
+  "name": "Translated Property Group",
+  "@type": "PropertyGroup",
+  "version": "0.1",
+  "propertyConcepts": [
+    {
+      "@id": "name",
+      "@type": "Property",
+      "description": "Translated product name",
+      "name": "Product Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "description",
+      "@type": "Property",
+      "description": "Translated product description",
+      "name": "Product Description",
+      "range": "DataType"
+    },
+    {
+      "@id": "longDescription",
+      "@type": "Property",
+      "description": "Translated long product description",
+      "name": "Product Long Description",
+      "range": "DataType"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "LegalPropertyGroup",
+  "name": "Legal Property Group",
+  "@type": "PropertyGroup",
+  "version": "0.1",
+  "propertyConcepts": [
+    {
+      "@id": "majorCitationCount",
+      "@type": "Property",
+      "description": "Major citations individual currently have on record e.g. reckless driving",
+      "name": "Major Citation Count",
+      "range": "DataType"
+    },
+    {
+      "@id": "minorCitationCount",
+      "@type": "Property",
+      "description": "Minor citations individual currently have on record e.g. driving with broken tail light or no number plate",
+      "name": "Minor Citation Count",
+      "range": "DataType"
+    }
+  ]
+}

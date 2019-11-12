@@ -1,0 +1,37 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "PointOfSalesPropertyGroup",
+  "name": "Point Of Sales Property Group",
+  "@type": "PropertyGroup",
+  "version": "0.1",
+  "propertyConcepts": [
+    {
+      "@id": "isManualPriceEntryRequired",
+      "@type": "Property",
+      "description": "Must price be manually entered for this item",
+      "name": "Is Manual Price Entry Required",
+      "range": "DataType"
+    },
+    {
+      "@id": "isWeightEntryRequired",
+      "@type": "Property",
+      "description": "Must weight be entered for this item",
+      "name": "Is Weight Entry Required",
+      "range": "DataType"
+    },
+    {
+      "@id": "isQuantityEntryRequired",
+      "@type": "Property",
+      "description": "Must quanitty be entered for this item at checkout",
+      "name": "Is Quantity Entry Required",
+      "range": "DataType"
+    },
+    {
+      "@id": "isQualityVerificationRequired",
+      "@type": "Property",
+      "description": "Must visually inspection of quality of this item be done",
+      "name": "Is Quality Verification Required",
+      "range": "DataType"
+    }
+  ]
+}

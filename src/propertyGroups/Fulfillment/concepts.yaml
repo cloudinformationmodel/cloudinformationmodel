@@ -1,0 +1,68 @@
+#%Vocabulary 1.0
+base: http://cloudinformationmodel.org/model/
+vocabulary: Fulfillment Property Group
+propertyTerms:
+  quantityOrderedUOM:
+    displayName: Quantity Ordered Unit Of Measure
+    description: The unit of measure for the quantity ordered. Item, box, palette could be examples.
+    range: any
+  allocationPartitionName:
+    displayName: Allocation Partition
+    description: ....not sure what this is so returned
+    range: any
+  fulfilledQuantity:
+    displayName: FulfilledQuantity
+    description: Quantity actually provided
+    range: any
+  handlingCostAmount:
+    displayName: Handling Cost Amount
+    description: Cost charged to customer for handling the order
+    range: any
+  promisedDate:
+    displayName: Promised Date
+    description: Start date for the order product
+    range: any
+  availableQuantity:
+    displayName: Available Quantity
+    description: Amount of an order product that is available to be reduced. Value must be greater than or equal to 0. An order product is reducible only if AvailableQuantity is greater than 0. Value is always 0 if the order product's parent order is a reduction order.
+    range: any
+  shippingTaxAmount:
+    displayName: Shipping Tax Amount
+    description: Shipping tax charged to customer
+    range: any
+  shippingEmail:
+    displayName: Shipping Email Id
+    description: Shipping email
+    range: ContactPointEmail
+  cancelledQuantity:
+    displayName: Cancelled Quantity
+    description: The quantity of items that have been canceled. Does not consider credited or returned items
+    range: any
+  allocatedQuantity:
+    displayName: Allocated Quantity
+    description: Quanity allocated for fulfillment
+    range: any
+  allocationGroupName:
+    displayName: Allocation Group Name
+    description: ....not sure what this is so returned
+    range: any
+  shippingPhone:
+    displayName: Shipping Phone Id
+    description: Shipping phone
+    range: ContactPointPhone
+  endDate:
+    displayName: EndDate
+    description: ...returned as we have no idea why this is here
+    range: any
+  shippingCostAmount:
+    displayName: Shipping Cost Amount
+    description: Shipping cost charged to customer
+    range: any
+  provisioningDate:
+    displayName: Provisioning Date
+    description: The date when the seller expects to provision the service or product.
+    range: any
+  shippingAddress:
+    displayName: Shipping Address Id
+    description: Shipping address
+    range: ContactPointAddress

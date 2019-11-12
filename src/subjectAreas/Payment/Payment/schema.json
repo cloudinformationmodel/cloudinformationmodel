@@ -1,0 +1,1205 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/CapturePayment"
+    },
+    {
+      "$ref": "#/definitions/Payment"
+    },
+    {
+      "$ref": "#/definitions/PaymentAllocation"
+    },
+    {
+      "$ref": "#/definitions/PaymentApplication"
+    },
+    {
+      "$ref": "#/definitions/PaymentAuthorization"
+    },
+    {
+      "$ref": "#/definitions/PaymentAuthorizationReversal"
+    },
+    {
+      "$ref": "#/definitions/PaymentCreditMemoAllocation"
+    },
+    {
+      "$ref": "#/definitions/PaymentCreditMemoApplication"
+    },
+    {
+      "$ref": "#/definitions/PaymentGateway"
+    },
+    {
+      "$ref": "#/definitions/PaymentGatewayAuthReversalLog"
+    },
+    {
+      "$ref": "#/definitions/PaymentGatewayAuthorizationLog"
+    },
+    {
+      "$ref": "#/definitions/PaymentGatewayInteractionLog"
+    },
+    {
+      "$ref": "#/definitions/PaymentGatewayInteractionType"
+    },
+    {
+      "$ref": "#/definitions/PaymentGatewayPaymentLog"
+    },
+    {
+      "$ref": "#/definitions/PaymentGatewayProvider"
+    },
+    {
+      "$ref": "#/definitions/PaymentGatewayResultCode"
+    },
+    {
+      "$ref": "#/definitions/PaymentGroup"
+    },
+    {
+      "$ref": "#/definitions/PaymentInvoiceAllocation"
+    },
+    {
+      "$ref": "#/definitions/PaymentInvoiceApplication"
+    },
+    {
+      "$ref": "#/definitions/PaymentPolicy"
+    },
+    {
+      "$ref": "#/definitions/PaymentTreatment"
+    },
+    {
+      "$ref": "#/definitions/PaymentTreatmentMethod"
+    },
+    {
+      "$ref": "#/definitions/RefundAllocation"
+    },
+    {
+      "$ref": "#/definitions/RefundCreditMemoAllocation"
+    },
+    {
+      "$ref": "#/definitions/RefundPayment"
+    },
+    {
+      "$ref": "#/definitions/RefundPaymentAllocation"
+    }
+  ],
+  "definitions": {
+    "PaymentGatewayResultCode": {
+      "type": "object",
+      "required": [
+        "id",
+        "description",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "PaymentCreditMemoApplication": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/PaymentApplication"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "PaymentGatewayAuthReversalLog": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/PaymentGatewayInteractionLog"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "paymentAuthorizationReversal": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/PaymentAuthorizationReversal"
+              }
+            },
+            "name": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "PaymentAuthorizationReversal": {
+      "type": "object",
+      "required": [
+        "paymentGatewayReferenceNumber",
+        "authorizationReversalAmount",
+        "paymentAuthorizationReversalStatus",
+        "paymentAuthorizationProcessingMode",
+        "id",
+        "paymentGatewayInternalReferenceNumber",
+        "paymentGatewayResult",
+        "paymentAuthorization",
+        "externalCreatedDate",
+        "requestDate",
+        "paymentGatewayDate"
+      ],
+      "properties": {
+        "paymentGatewayReferenceNumber": {
+          "type": "string"
+        },
+        "authorizationReversalAmount": {
+          "type": "integer"
+        },
+        "capturePayment": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CapturePayment"
+          }
+        },
+        "customerAuthorizationReversalPhone": {
+          "type": "string"
+        },
+        "iPAddress": {
+          "type": "string"
+        },
+        "paymentAuthorizationReversalStatus": {
+          "type": "string"
+        },
+        "paymentAuthorizationProcessingMode": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "paymentGatewayInternalReferenceNumber": {
+          "type": "string"
+        },
+        "paymentAuthorizationReversalName": {
+          "type": "string"
+        },
+        "paymentGatewayResult": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PaymentGatewayResultCode"
+          }
+        },
+        "paymentAuthorization": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PaymentAuthorization"
+          }
+        },
+        "externalCreatedDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "requestDate": {
+          "type": "string",
+          "format": "time"
+        },
+        "paymentAuthorizationReversalCommentText": {
+          "type": "string"
+        },
+        "macAddress": {
+          "type": "string"
+        },
+        "customerAuthorizationReversalEmail": {
+          "type": "string"
+        },
+        "paymentGatewayDate": {
+          "type": "string",
+          "format": "time"
+        }
+      }
+    },
+    "PaymentAllocation": {
+      "type": "object",
+      "required": [
+        "id",
+        "externalCreatedDate",
+        "relatedPaymentAllocation"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "externalCreatedDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "relatedPaymentAllocation": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PaymentAllocation"
+          }
+        },
+        "paymentAllocationName": {
+          "type": "string"
+        }
+      }
+    },
+    "PaymentApplication": {
+      "type": "object",
+      "required": [
+        "effectiveDate",
+        "paymentApplicationType",
+        "id",
+        "name",
+        "payment",
+        "appliedAmount",
+        "paymentBalanceAmount",
+        "appliedDate",
+        "externalCreatedDate",
+        "unappliedDate"
+      ],
+      "properties": {
+        "effectiveDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "paymentApplicationType": {
+          "type": "string"
+        },
+        "commentText": {
+          "type": "string"
+        },
+        "hasBeenUnapplied": {
+          "type": "boolean"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "payment": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Payment"
+          }
+        },
+        "appliedAmount": {
+          "type": "integer"
+        },
+        "paymentBalanceAmount": {
+          "type": "integer"
+        },
+        "appliedDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "externalCreatedDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "unappliedDate": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "PaymentGatewayProvider": {
+      "type": "object",
+      "required": [
+        "apexAdapterClassName",
+        "id",
+        "paymentGatewayProviderName",
+        "developerName",
+        "namespacePrefixText"
+      ],
+      "properties": {
+        "apexAdapterClassName": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "paymentGatewayProviderCommentText": {
+          "type": "string"
+        },
+        "paymentGatewayProviderName": {
+          "type": "string"
+        },
+        "developerName": {
+          "type": "string"
+        },
+        "namespacePrefixText": {
+          "type": "string"
+        }
+      }
+    },
+    "PaymentPolicy": {
+      "type": "object",
+      "required": [
+        "description",
+        "id",
+        "name",
+        "paymentPolicyTreatmentSelection",
+        "paymentPolicyStatus"
+      ],
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "paymentPolicyTreatmentSelection": {
+          "type": "string"
+        },
+        "paymentPolicyStatus": {
+          "type": "string"
+        }
+      }
+    },
+    "PaymentTreatmentMethod": {
+      "type": "object",
+      "required": [
+        "id",
+        "paymentTreatmentMethodName",
+        "paymentTreatmentMethodCode",
+        "paymentTreatmentMethodDescription"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "paymentTreatmentMethodName": {
+          "type": "string"
+        },
+        "paymentTreatmentMethodCode": {
+          "type": "string"
+        },
+        "paymentTreatmentMethodDescription": {
+          "type": "string"
+        }
+      }
+    },
+    "PaymentInvoiceApplication": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/PaymentApplication"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id",
+            "invoiceBalanceAmount"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "paymentInvoiceApplicationName": {
+              "type": "string"
+            },
+            "invoiceBalanceAmount": {
+              "type": "integer"
+            },
+            "paymentInvoiceApplicationType": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "PaymentGatewayInteractionType": {
+      "type": "object",
+      "required": [
+        "id",
+        "description",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "PaymentGroup": {
+      "type": "object",
+      "required": [
+        "totalReversalAmount",
+        "totalAuthorizationAmount",
+        "id",
+        "totalPaymentAmount",
+        "paymentGroupNumber"
+      ],
+      "properties": {
+        "totalReversalAmount": {
+          "type": "integer"
+        },
+        "totalAuthorizationAmount": {
+          "type": "integer"
+        },
+        "id": {
+          "type": "string"
+        },
+        "totalPaymentAmount": {
+          "type": "integer"
+        },
+        "paymentGroupNumber": {
+          "type": "string"
+        }
+      }
+    },
+    "RefundCreditMemoAllocation": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/RefundAllocation"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "PaymentGatewayPaymentLog": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/PaymentGatewayInteractionLog"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id",
+            "payment"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "payment": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Payment"
+              }
+            },
+            "name": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "RefundAllocation": {
+      "type": "object",
+      "required": [
+        "effectiveDate",
+        "relatedRefundAllocation",
+        "refundAllocationType",
+        "id",
+        "refundPayment",
+        "allocatedAmount",
+        "refundBalanceAmount",
+        "appliedDate",
+        "externalCreatedDate",
+        "unappliedDate"
+      ],
+      "properties": {
+        "effectiveDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "relatedRefundAllocation": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/RefundAllocation"
+          }
+        },
+        "hasBeenUnapplied": {
+          "type": "boolean"
+        },
+        "refundAllocationType": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "refundPayment": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/RefundPayment"
+          }
+        },
+        "allocatedAmount": {
+          "type": "integer"
+        },
+        "refundBalanceAmount": {
+          "type": "integer"
+        },
+        "refundAllocationName": {
+          "type": "string"
+        },
+        "appliedDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "externalCreatedDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "unappliedDate": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "PaymentGatewayAuthorizationLog": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/PaymentGatewayInteractionLog"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id",
+            "paymentAuthorization"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "paymentAuthorization": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/PaymentAuthorization"
+              }
+            },
+            "name": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "PaymentInvoiceAllocation": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/PaymentAllocation"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id",
+            "appliedAmount",
+            "invoiceBalanceAmount"
+          ],
+          "properties": {
+            "paymentInvoiceAllocationName": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "appliedAmount": {
+              "type": "integer"
+            },
+            "invoiceBalanceAmount": {
+              "type": "integer"
+            },
+            "paymentInvoiceApplication": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/PaymentInvoiceApplication"
+              }
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "Payment": {
+      "type": "object",
+      "required": [
+        "paymentStatus",
+        "authorizationProcessingMode",
+        "salesOrderPaymentSummary",
+        "latestGatewayResultCode",
+        "commentText",
+        "paymentNumber",
+        "paymentGroup",
+        "paymentAmount",
+        "latestGatewayInternalResult",
+        "id",
+        "name",
+        "latestGatewayReferenceNumber",
+        "paymentMethod",
+        "latestGatewayDate",
+        "balanceAmount",
+        "paymentType",
+        "paymentGateway",
+        "paymentEffectiveDate",
+        "paymentTreatment",
+        "externalCreatedDate",
+        "internalBusinessUnit",
+        "paymentCancellationDate",
+        "totalAppliedAmount",
+        "netAppliedAmount",
+        "totalUnappliedAmount",
+        "latestGatewayInternalReferenceNumber"
+      ],
+      "properties": {
+        "paymentStatus": {
+          "type": "string"
+        },
+        "authorizationProcessingMode": {
+          "type": "string"
+        },
+        "account": {
+          "type": "array",
+          "items": {
+            "$ref": "../../Party/Account/schema.json#/definitions/Account"
+          }
+        },
+        "salesOrderPaymentSummary": {
+          "type": "array",
+          "items": {
+            "$ref": "../../SalesOrder/SalesOrder/schema.json#/definitions/SalesOrderPaymentSummary"
+          }
+        },
+        "latestGatewayResultCode": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PaymentGatewayResultCode"
+          }
+        },
+        "iPAddress": {
+          "type": "string"
+        },
+        "commentText": {
+          "type": "string"
+        },
+        "paymentNumber": {
+          "type": "string"
+        },
+        "paymentGroup": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PaymentGroup"
+          }
+        },
+        "paymentAmount": {
+          "type": "integer"
+        },
+        "latestGatewayInternalResult": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "customerEmailAddress": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "latestGatewayReferenceNumber": {
+          "type": "string"
+        },
+        "paymentMethod": {
+          "type": "array",
+          "items": {
+            "$ref": "../../PaymentMethod/PaymentMethod/schema.json#/definitions/PaymentMethod"
+          }
+        },
+        "latestGatewayDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "balanceAmount": {
+          "type": "integer"
+        },
+        "paymentType": {
+          "type": "string"
+        },
+        "paymentGateway": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PaymentGateway"
+          }
+        },
+        "customerPhoneNumber": {
+          "type": "string"
+        },
+        "latestPaymentGatewayMessageText": {
+          "type": "string"
+        },
+        "paymentEffectiveDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "paymentTreatment": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PaymentTreatment"
+          }
+        },
+        "externalCreatedDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "internalBusinessUnit": {
+          "type": "array",
+          "items": {
+            "$ref": "../../Party/Party/schema.json#/definitions/InternalBusinessUnit"
+          }
+        },
+        "paymentCancellationDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "macAddress": {
+          "type": "string"
+        },
+        "totalAppliedAmount": {
+          "type": "integer"
+        },
+        "netAppliedAmount": {
+          "type": "integer"
+        },
+        "totalUnappliedAmount": {
+          "type": "integer"
+        },
+        "latestGatewayInternalReferenceNumber": {
+          "type": "string"
+        }
+      }
+    },
+    "PaymentCreditMemoAllocation": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/PaymentAllocation"
+        },
+        {
+          "type": "object",
+          "required": [
+            "appliedAmount",
+            "id"
+          ],
+          "properties": {
+            "appliedAmount": {
+              "type": "integer"
+            },
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "PaymentTreatment": {
+      "type": "object",
+      "required": [
+        "paymentTreatmentMethod",
+        "id",
+        "paymentTreatmentStatus",
+        "paymentPolicy"
+      ],
+      "properties": {
+        "paymentTreatmentMethod": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PaymentTreatmentMethod"
+          }
+        },
+        "id": {
+          "type": "string"
+        },
+        "paymentApplicationLevel": {
+          "type": "string"
+        },
+        "shouldAutoInvoice": {
+          "type": "boolean"
+        },
+        "paymentTreatmentStatus": {
+          "type": "string"
+        },
+        "paymentPolicy": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PaymentPolicy"
+          }
+        },
+        "paymentTreatmentName": {
+          "type": "string"
+        }
+      }
+    },
+    "PaymentAuthorization": {
+      "type": "object",
+      "required": [
+        "paymentGatewayReferenceNumber",
+        "salesOrderPaymentSummary",
+        "totalPaymentCaptureAmount",
+        "paymentAuthorizationProcessingMode",
+        "authorizationAmount",
+        "expirationDate",
+        "paymentGroup",
+        "id",
+        "paymentGatewayInternalReferenceNumber",
+        "gatewayReferenceDetailsText",
+        "totalAuthorizationReversalAmount",
+        "paymentGateway",
+        "paymentGatewayResult",
+        "externalCreatedDate",
+        "paymentAuthorizationNumber",
+        "requestDate",
+        "availableBalanceAmount",
+        "paymentMethodID",
+        "gatewayAuthorizationCode",
+        "paymentGatewayDate",
+        "paymentAuthorizationStatus"
+      ],
+      "properties": {
+        "paymentGatewayReferenceNumber": {
+          "type": "string"
+        },
+        "salesOrderPaymentSummary": {
+          "type": "array",
+          "items": {
+            "$ref": "../../SalesOrder/SalesOrder/schema.json#/definitions/SalesOrderPaymentSummary"
+          }
+        },
+        "iPAddress": {
+          "type": "string"
+        },
+        "totalPaymentCaptureAmount": {
+          "type": "integer"
+        },
+        "paymentAuthorizationProcessingMode": {
+          "type": "string"
+        },
+        "authorizationAmount": {
+          "type": "integer"
+        },
+        "expirationDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "paymentGroup": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PaymentGroup"
+          }
+        },
+        "id": {
+          "type": "string"
+        },
+        "paymentGatewayInternalReferenceNumber": {
+          "type": "string"
+        },
+        "gatewayReferenceDetailsText": {
+          "type": "string"
+        },
+        "totalAuthorizationReversalAmount": {
+          "type": "integer"
+        },
+        "paymentGateway": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PaymentGateway"
+          }
+        },
+        "paymentGatewayResult": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PaymentGatewayResultCode"
+          }
+        },
+        "paymentAuthorizationCommentText": {
+          "type": "string"
+        },
+        "externalCreatedDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "paymentAuthorizationNumber": {
+          "type": "string"
+        },
+        "requestDate": {
+          "type": "string",
+          "format": "time"
+        },
+        "availableBalanceAmount": {
+          "type": "integer"
+        },
+        "paymentMethodID": {
+          "type": "array",
+          "items": {
+            "$ref": "../../PaymentMethod/PaymentMethod/schema.json#/definitions/PaymentMethod"
+          }
+        },
+        "gatewayResultCodeDescription": {
+          "type": "string"
+        },
+        "macAddress": {
+          "type": "string"
+        },
+        "gatewayAuthorizationCode": {
+          "type": "string"
+        },
+        "paymentGatewayDate": {
+          "type": "string",
+          "format": "time"
+        },
+        "paymentAuthorizationStatus": {
+          "type": "string"
+        }
+      }
+    },
+    "RefundPaymentAllocation": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/RefundAllocation"
+        },
+        {
+          "type": "object",
+          "required": [
+            "capturePayment",
+            "refundAllocationCommentsDate",
+            "id",
+            "paymentBalanceAmount",
+            "creditMemoBalanceAmount"
+          ],
+          "properties": {
+            "capturePayment": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/CapturePayment"
+              }
+            },
+            "refundAllocationCommentsDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "id": {
+              "type": "string"
+            },
+            "paymentBalanceAmount": {
+              "type": "integer"
+            },
+            "refundAllocationCommentText": {
+              "type": "string"
+            },
+            "creditMemoBalanceAmount": {
+              "type": "integer"
+            },
+            "refundPaymentAllocationName": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "RefundPayment": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/Payment"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id",
+            "externalCreatedDate"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "externalCreatedDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "name": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "PaymentGateway": {
+      "type": "object",
+      "required": [
+        "paymentGatewayStatus",
+        "id",
+        "name",
+        "paymentGatewayProvider"
+      ],
+      "properties": {
+        "paymentGatewayStatus": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "paymentGatewayCommentText": {
+          "type": "string"
+        },
+        "paymentGatewayProvider": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PaymentGatewayProvider"
+          }
+        },
+        "systemCredential": {
+          "type": "string"
+        }
+      }
+    },
+    "CapturePayment": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/Payment"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id",
+            "capturePaymentType",
+            "paymentAuthorization"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "capturePaymentType": {
+              "type": "string"
+            },
+            "handlingFeeAmount": {
+              "type": "integer"
+            },
+            "paymentAuthorization": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/PaymentAuthorization"
+              }
+            },
+            "isFinalCapture": {
+              "type": "boolean"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "PaymentGatewayInteractionLog": {
+      "type": "object",
+      "required": [
+        "paymentGatewayInteractionType",
+        "paymentGatewayReferenceNumber",
+        "paymentGatewayAuthorizationCode",
+        "internalResultCode",
+        "paymentGatewayAVSCode",
+        "id",
+        "internalReferenceNumber",
+        "paymentGatewayResult",
+        "paymentGatewayInteractionLogName",
+        "paymentGatewayInteractionStatus",
+        "paymentGatewayDate"
+      ],
+      "properties": {
+        "paymentGatewayInteractionType": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PaymentGatewayInteractionType"
+          }
+        },
+        "paymentGatewayReferenceNumber": {
+          "type": "string"
+        },
+        "paymentGatewayMessageText": {
+          "type": "string"
+        },
+        "paymentGatewayAuthorizationCode": {
+          "type": "string"
+        },
+        "internalResultCode": {
+          "type": "string"
+        },
+        "paymentGatewayAVSCode": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "internalReferenceNumber": {
+          "type": "string"
+        },
+        "paymentGatewayResult": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PaymentGatewayResultCode"
+          }
+        },
+        "paymentGatewayInteractionLogName": {
+          "type": "string"
+        },
+        "paymentGatewayInteractionStatus": {
+          "type": "string"
+        },
+        "paymentGatewayDate": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    }
+  }
+}

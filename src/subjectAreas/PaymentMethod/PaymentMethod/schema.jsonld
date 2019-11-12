@@ -1,0 +1,303 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "PaymentMethodEntityGroup",
+  "@type": "EntityGroup",
+  "version": "0.1",
+  "schemas": [
+    {
+      "@type": "Shape",
+      "@id": "PaymentMethod",
+      "properties": [
+        {
+          "path": "paymentMethodType",
+          "node": "PaymentMethodType",
+          "minCount": "1"
+        },
+        {
+          "path": "paymentMethodStatus",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "PaymentMethodType",
+      "properties": [
+        {
+          "path": "maxTransactionAmount",
+          "datatype": "xsd:decimal",
+          "maxCount": "1"
+        },
+        {
+          "path": "maxPerPeriodAmount",
+          "datatype": "xsd:decimal",
+          "maxCount": "1"
+        },
+        {
+          "path": "useMinimumAgeYear",
+          "datatype": "xsd:integer",
+          "maxCount": "1"
+        },
+        {
+          "path": "maxPerPeriodTransactionCount",
+          "datatype": "xsd:integer",
+          "maxCount": "1"
+        },
+        {
+          "path": "typeRequiredIdentification",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "mediaType",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "typeDescription",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "name",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "PaymentCard",
+      "and": [
+        {
+          "@id": "PaymentMethod"
+        },
+        {
+          "properties": [
+            {
+              "path": "expirationMonth",
+              "datatype": "xsd:string",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "expirationYear",
+              "datatype": "xsd:string",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "cardHolderName",
+              "datatype": "xsd:string",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "maskedNumber",
+              "datatype": "xsd:string",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "numberLastDigits",
+              "datatype": "xsd:string",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "cardToken",
+              "datatype": "xsd:string",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "issueNumber",
+              "datatype": "xsd:string",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "billToCity",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "billToStreet2",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "billToStreet",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "billToLastName",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "billToFirstName",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "companyName",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "name",
+              "datatype": "xsd:string",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "derivedCardTypeCode",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "creditCardExpired",
+              "datatype": "xsd:boolean",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "paymentCardType",
+              "datatype": "xsd:string",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "id",
+              "datatype": "cim:id",
+              "maxCount": "1",
+              "minCount": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "Coupon",
+      "and": [
+        {
+          "@id": "PaymentMethod"
+        },
+        {
+          "properties": [
+            {
+              "path": "discountAmount",
+              "datatype": "xsd:decimal",
+              "maxCount": "1"
+            },
+            {
+              "path": "discountPercentage",
+              "datatype": "xsd:decimal",
+              "maxCount": "1"
+            },
+            {
+              "path": "scanCode",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "couponCode",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "primaryScanCodeLabel",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "secondaryScanCodeLabel",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "returnCouponReason",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "couponCount",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "isValid",
+              "datatype": "xsd:boolean",
+              "maxCount": "1"
+            },
+            {
+              "path": "isReturnCoupon",
+              "datatype": "xsd:boolean",
+              "maxCount": "1"
+            },
+            {
+              "path": "expirationDate",
+              "datatype": "xsd:date",
+              "maxCount": "1"
+            },
+            {
+              "path": "couponStatus",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "manufacturer",
+              "node": "Party"
+            },
+            {
+              "path": "id",
+              "datatype": "cim:id",
+              "maxCount": "1",
+              "minCount": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "CreditTender",
+      "and": [
+        {
+          "@id": "PaymentMethod"
+        },
+        {
+          "properties": [
+            {
+              "path": "account",
+              "node": "Account"
+            },
+            {
+              "path": "id",
+              "datatype": "cim:id",
+              "maxCount": "1",
+              "minCount": "1"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

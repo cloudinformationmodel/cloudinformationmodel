@@ -1,0 +1,4246 @@
+{
+  "@context" : {
+    "rr" : "http://www.w3.org/ns/r2rml#"
+  },
+  "@graph" : [
+    {
+      "@id" : "/product_entity_group/product_related_product",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ENTITY_GROUP.PRODUCT_RELATED_PRODUCT"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/ProductRelatedProduct"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/name"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isDefaultOption"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_DEFAULT_OPTION",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/fromDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "FROM_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/toDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "TO_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/product_entity_group/product_translation",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ENTITY_GROUP.PRODUCT_TRANSLATION"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/ProductTranslation"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/longDescription"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "LONG_DESCRIPTION",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/description"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "DESCRIPTION",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/name"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/product_entity_group/product_image",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ENTITY_GROUP.PRODUCT_IMAGE"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/ProductImage"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isDefaultImage"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_DEFAULT_IMAGE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/imageViewType"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IMAGE_VIEW_TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/product_entity_group/product_relationship_type",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ENTITY_GROUP.PRODUCT_RELATIONSHIP_TYPE"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/ProductRelationshipType"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/parentProductRole"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PARENT_PRODUCT_ROLE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/childProductRole"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "CHILD_PRODUCT_ROLE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/product_entity_group/product_image_translation",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ENTITY_GROUP.PRODUCT_IMAGE_TRANSLATION"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/ProductImageTranslation"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/translatedName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "TRANSLATED_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/product_entity_group/goods_product",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ENTITY_GROUP.GOODS_PRODUCT"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/GoodsProduct"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/productSecurityRequirement"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PRODUCT_SECURITY_REQUIREMENT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/season"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "SEASON",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/color"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "COLOR",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/style"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "STYLE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isMadeToOrder"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_MADE_TO_ORDER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/height"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "HEIGHT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/fabric"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "FABRIC",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/requiredTemperatureUOM"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REQUIRED_TEMPERATURE_UO_M",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/shelfFacingUnitCount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "SHELF_FACING_UNIT_COUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/requiredHumidityPercentage"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REQUIRED_HUMIDITY_PERCENTAGE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/grossWeight"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "GROSS_WEIGHT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/tareWeight"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "TARE_WEIGHT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/depth"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "DEPTH",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/requiredTemperatureLowestNumber"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REQUIRED_TEMPERATURE_LOWEST_NUMBER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/gender"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "GENDER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/maxHoldingDayCount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MAX_HOLDING_DAY_COUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/diameter"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "DIAMETER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isPerishable"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_PERISHABLE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/requiredCleanupProcess"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REQUIRED_CLEANUP_PROCESS",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/pattern"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PATTERN",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/requiredTemperatureHighestNumber"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REQUIRED_TEMPERATURE_HIGHEST_NUMBER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/netWeight"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "NET_WEIGHT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/environmentRequirement"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "ENVIRONMENT_REQUIREMENT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/drainedWeight"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "DRAINED_WEIGHT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/age"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "AGE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/width"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "WIDTH",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/requiresUnitPriceLabel"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REQUIRES_UNIT_PRICE_LABEL",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/weightUOM"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "WEIGHT_UO_M",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/productMayExpand"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PRODUCT_MAY_EXPAND",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/sizeUOM"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "SIZE_UO_M",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/quantityScheduleType"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "QUANTITY_SCHEDULE_TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/disposalType"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "DISPOSAL_TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/longDescription"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "LONG_DESCRIPTION",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/minimumAdvertisementAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MINIMUM_ADVERTISEMENT_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isBackOrdered"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_BACK_ORDERED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/validForPeriodCount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "VALID_FOR_PERIOD_COUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isWorkerDiscountAllowed"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_WORKER_DISCOUNT_ALLOWED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/allowPartialRefund"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "ALLOW_PARTIAL_REFUND",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isWeightEntryRequired"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_WEIGHT_ENTRY_REQUIRED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isQuantityEntryRequired"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_QUANTITY_ENTRY_REQUIRED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isSerialized"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_SERIALIZED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/rewardProgramPointsCount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REWARD_PROGRAM_POINTS_COUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/description"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "DESCRIPTION",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/revenueInstallmentPeriod"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REVENUE_INSTALLMENT_PERIOD",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/name"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isAutoProvisionable"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_AUTO_PROVISIONABLE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isCouponRedemptionAllowed"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_COUPON_REDEMPTION_ALLOWED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isSellableIndependently"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_SELLABLE_INDEPENDENTLY",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/canUseRevenueSchedule"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "CAN_USE_REVENUE_SCHEDULE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/manufacturerName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MANUFACTURER_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isIntellectualPropertyProtected"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_INTELLECTUAL_PROPERTY_PROTECTED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/modelYear"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MODEL_YEAR",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isCustomerDiscountAllowed"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_CUSTOMER_DISCOUNT_ALLOWED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/productStatus"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PRODUCT_STATUS",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/brandGrade"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "BRAND_GRADE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/quantityInstallmentCount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "QUANTITY_INSTALLMENT_COUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/requiredDepositAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REQUIRED_DEPOSIT_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/revenueScheduleType"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REVENUE_SCHEDULE_TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isPreOrderable"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_PRE_ORDERABLE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/requiresInvididualUnitPricing"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REQUIRES_INVIDIDUAL_UNIT_PRICING",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/standardWarrantyLengthMonth"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "STANDARD_WARRANTY_LENGTH_MONTH",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/canUseQuantitySchedule"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "CAN_USE_QUANTITY_SCHEDULE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isInstallable"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_INSTALLABLE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isRainCheckAllowed"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_RAIN_CHECK_ALLOWED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/minimumAdvertisementAmountStartDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MINIMUM_ADVERTISEMENT_AMOUNT_START_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/maximumOrderQuantityCount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MAXIMUM_ORDER_QUANTITY_COUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isMultipleCouponsAllowed"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_MULTIPLE_COUPONS_ALLOWED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/allowCustomerReturn"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "ALLOW_CUSTOMER_RETURN",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/modelNumber"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MODEL_NUMBER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/mSRPAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "M_SR_PAMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/externalSourceRecord"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "EXTERNAL_SOURCE_RECORD",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isSellable"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_SELLABLE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/validToDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "VALID_TO_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/priceChargeType"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PRICE_CHARGE_TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isPartnerDiscountAllowed"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_PARTNER_DISCOUNT_ALLOWED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/revenueInstallmentCount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REVENUE_INSTALLMENT_COUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/productSKU"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PRODUCT_SK_U",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/quantityInstallmentPeriod"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "QUANTITY_INSTALLMENT_PERIOD",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isManualPriceEntryRequired"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_MANUAL_PRICE_ENTRY_REQUIRED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/type"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isSellableWithoutPrice"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_SELLABLE_WITHOUT_PRICE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/glAccountCode"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "GL_ACCOUNT_CODE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isReturnable"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_RETURNABLE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/displayUrl"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "DISPLAY_URL",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/versionNumber"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "VERSION_NUMBER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/lotIdentifier"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "LOT_IDENTIFIER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/validFromDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "VALID_FROM_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/stockLedgerValuationAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "STOCK_LEDGER_VALUATION_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isDynamicBundle"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_DYNAMIC_BUNDLE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isQualityVerificationRequired"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_QUALITY_VERIFICATION_REQUIRED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/requiredDepositPercentage"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REQUIRED_DEPOSIT_PERCENTAGE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isFoodstampPaymentAllowed"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_FOODSTAMP_PAYMENT_ALLOWED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/minimumOrderQuantityCount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MINIMUM_ORDER_QUANTITY_COUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/product_entity_group/service_product",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ENTITY_GROUP.SERVICE_PRODUCT"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/ServiceProduct"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/rentalTermViolationPenaltyAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "RENTAL_TERM_VIOLATION_PENALTY_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/evergreenContractEstimatedMonthCount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "EVERGREEN_CONTRACT_ESTIMATED_MONTH_COUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/evergreenContractEstimatedChargeAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "EVERGREEN_CONTRACT_ESTIMATED_CHARGE_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/servicePeriodUOM"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "SERVICE_PERIOD_UO_M",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/servicePeriodCount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "SERVICE_PERIOD_COUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/rentalCleanupFeeAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "RENTAL_CLEANUP_FEE_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/serviceType"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "SERVICE_TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/quantityScheduleType"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "QUANTITY_SCHEDULE_TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/disposalType"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "DISPOSAL_TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/longDescription"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "LONG_DESCRIPTION",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/minimumAdvertisementAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MINIMUM_ADVERTISEMENT_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isBackOrdered"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_BACK_ORDERED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/validForPeriodCount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "VALID_FOR_PERIOD_COUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isWorkerDiscountAllowed"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_WORKER_DISCOUNT_ALLOWED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/allowPartialRefund"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "ALLOW_PARTIAL_REFUND",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isWeightEntryRequired"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_WEIGHT_ENTRY_REQUIRED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isQuantityEntryRequired"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_QUANTITY_ENTRY_REQUIRED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isSerialized"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_SERIALIZED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/rewardProgramPointsCount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REWARD_PROGRAM_POINTS_COUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/description"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "DESCRIPTION",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/revenueInstallmentPeriod"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REVENUE_INSTALLMENT_PERIOD",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/name"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isAutoProvisionable"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_AUTO_PROVISIONABLE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isCouponRedemptionAllowed"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_COUPON_REDEMPTION_ALLOWED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isSellableIndependently"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_SELLABLE_INDEPENDENTLY",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/canUseRevenueSchedule"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "CAN_USE_REVENUE_SCHEDULE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/manufacturerName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MANUFACTURER_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isIntellectualPropertyProtected"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_INTELLECTUAL_PROPERTY_PROTECTED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/modelYear"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MODEL_YEAR",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isCustomerDiscountAllowed"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_CUSTOMER_DISCOUNT_ALLOWED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/productStatus"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PRODUCT_STATUS",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/brandGrade"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "BRAND_GRADE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/quantityInstallmentCount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "QUANTITY_INSTALLMENT_COUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/requiredDepositAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REQUIRED_DEPOSIT_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/revenueScheduleType"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REVENUE_SCHEDULE_TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isPreOrderable"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_PRE_ORDERABLE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/requiresInvididualUnitPricing"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REQUIRES_INVIDIDUAL_UNIT_PRICING",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/standardWarrantyLengthMonth"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "STANDARD_WARRANTY_LENGTH_MONTH",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/canUseQuantitySchedule"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "CAN_USE_QUANTITY_SCHEDULE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isInstallable"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_INSTALLABLE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isRainCheckAllowed"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_RAIN_CHECK_ALLOWED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/minimumAdvertisementAmountStartDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MINIMUM_ADVERTISEMENT_AMOUNT_START_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/maximumOrderQuantityCount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MAXIMUM_ORDER_QUANTITY_COUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isMultipleCouponsAllowed"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_MULTIPLE_COUPONS_ALLOWED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/allowCustomerReturn"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "ALLOW_CUSTOMER_RETURN",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/modelNumber"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MODEL_NUMBER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/mSRPAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "M_SR_PAMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/externalSourceRecord"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "EXTERNAL_SOURCE_RECORD",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isSellable"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_SELLABLE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/validToDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "VALID_TO_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/priceChargeType"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PRICE_CHARGE_TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isPartnerDiscountAllowed"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_PARTNER_DISCOUNT_ALLOWED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/revenueInstallmentCount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REVENUE_INSTALLMENT_COUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/productSKU"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PRODUCT_SK_U",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/quantityInstallmentPeriod"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "QUANTITY_INSTALLMENT_PERIOD",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isManualPriceEntryRequired"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_MANUAL_PRICE_ENTRY_REQUIRED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/type"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isSellableWithoutPrice"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_SELLABLE_WITHOUT_PRICE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/glAccountCode"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "GL_ACCOUNT_CODE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isReturnable"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_RETURNABLE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/displayUrl"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "DISPLAY_URL",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/versionNumber"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "VERSION_NUMBER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/lotIdentifier"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "LOT_IDENTIFIER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/validFromDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "VALID_FROM_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/stockLedgerValuationAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "STOCK_LEDGER_VALUATION_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isDynamicBundle"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_DYNAMIC_BUNDLE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isQualityVerificationRequired"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_QUALITY_VERIFICATION_REQUIRED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/requiredDepositPercentage"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REQUIRED_DEPOSIT_PERCENTAGE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isFoodstampPaymentAllowed"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_FOODSTAMP_PAYMENT_ALLOWED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/minimumOrderQuantityCount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MINIMUM_ORDER_QUANTITY_COUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/product_entity_group/product",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ENTITY_GROUP.PRODUCT"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/Product"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/quantityScheduleType"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "QUANTITY_SCHEDULE_TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/disposalType"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "DISPOSAL_TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/longDescription"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "LONG_DESCRIPTION",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/minimumAdvertisementAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MINIMUM_ADVERTISEMENT_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isBackOrdered"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_BACK_ORDERED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/validForPeriodCount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "VALID_FOR_PERIOD_COUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isWorkerDiscountAllowed"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_WORKER_DISCOUNT_ALLOWED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/allowPartialRefund"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "ALLOW_PARTIAL_REFUND",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isWeightEntryRequired"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_WEIGHT_ENTRY_REQUIRED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isQuantityEntryRequired"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_QUANTITY_ENTRY_REQUIRED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isSerialized"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_SERIALIZED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/rewardProgramPointsCount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REWARD_PROGRAM_POINTS_COUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/description"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "DESCRIPTION",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/revenueInstallmentPeriod"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REVENUE_INSTALLMENT_PERIOD",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/name"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isAutoProvisionable"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_AUTO_PROVISIONABLE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isCouponRedemptionAllowed"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_COUPON_REDEMPTION_ALLOWED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isSellableIndependently"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_SELLABLE_INDEPENDENTLY",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/canUseRevenueSchedule"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "CAN_USE_REVENUE_SCHEDULE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/manufacturerName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MANUFACTURER_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isIntellectualPropertyProtected"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_INTELLECTUAL_PROPERTY_PROTECTED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/modelYear"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MODEL_YEAR",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isCustomerDiscountAllowed"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_CUSTOMER_DISCOUNT_ALLOWED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/productStatus"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PRODUCT_STATUS",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/brandGrade"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "BRAND_GRADE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/quantityInstallmentCount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "QUANTITY_INSTALLMENT_COUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/requiredDepositAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REQUIRED_DEPOSIT_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/revenueScheduleType"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REVENUE_SCHEDULE_TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isPreOrderable"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_PRE_ORDERABLE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/requiresInvididualUnitPricing"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REQUIRES_INVIDIDUAL_UNIT_PRICING",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/standardWarrantyLengthMonth"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "STANDARD_WARRANTY_LENGTH_MONTH",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/canUseQuantitySchedule"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "CAN_USE_QUANTITY_SCHEDULE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isInstallable"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_INSTALLABLE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isRainCheckAllowed"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_RAIN_CHECK_ALLOWED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/minimumAdvertisementAmountStartDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MINIMUM_ADVERTISEMENT_AMOUNT_START_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/maximumOrderQuantityCount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MAXIMUM_ORDER_QUANTITY_COUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isMultipleCouponsAllowed"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_MULTIPLE_COUPONS_ALLOWED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/allowCustomerReturn"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "ALLOW_CUSTOMER_RETURN",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/modelNumber"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MODEL_NUMBER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/mSRPAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "M_SR_PAMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/externalSourceRecord"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "EXTERNAL_SOURCE_RECORD",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isSellable"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_SELLABLE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/validToDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "VALID_TO_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/priceChargeType"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PRICE_CHARGE_TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isPartnerDiscountAllowed"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_PARTNER_DISCOUNT_ALLOWED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/revenueInstallmentCount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REVENUE_INSTALLMENT_COUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/productSKU"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PRODUCT_SK_U",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/quantityInstallmentPeriod"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "QUANTITY_INSTALLMENT_PERIOD",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isManualPriceEntryRequired"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_MANUAL_PRICE_ENTRY_REQUIRED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/type"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isSellableWithoutPrice"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_SELLABLE_WITHOUT_PRICE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/glAccountCode"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "GL_ACCOUNT_CODE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isReturnable"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_RETURNABLE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/displayUrl"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "DISPLAY_URL",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/versionNumber"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "VERSION_NUMBER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/lotIdentifier"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "LOT_IDENTIFIER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/validFromDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "VALID_FROM_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/stockLedgerValuationAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "STOCK_LEDGER_VALUATION_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isDynamicBundle"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_DYNAMIC_BUNDLE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isQualityVerificationRequired"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_QUALITY_VERIFICATION_REQUIRED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/requiredDepositPercentage"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REQUIRED_DEPOSIT_PERCENTAGE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isFoodstampPaymentAllowed"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_FOODSTAMP_PAYMENT_ALLOWED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/minimumOrderQuantityCount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MINIMUM_ORDER_QUANTITY_COUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/product_entity_group/brand",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ENTITY_GROUP.BRAND"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/Brand"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/brandGrade"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "BRAND_GRADE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/name"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/product_entity_group/bundle_product",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ENTITY_GROUP.BUNDLE_PRODUCT"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/BundleProduct"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/expectedWasteCount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "EXPECTED_WASTE_COUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/quantityCount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "QUANTITY_COUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/tareWeight"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "TARE_WEIGHT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/bundledProductsSubstitutional"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "BUNDLED_PRODUCTS_SUBSTITUTIONAL",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/bundledProductsDecidedAtUse"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "BUNDLED_PRODUCTS_DECIDED_AT_USE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/bundledProductsDecidesAvailability"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "BUNDLED_PRODUCTS_DECIDES_AVAILABILITY",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/bundledProductsSoldTogether"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "BUNDLED_PRODUCTS_SOLD_TOGETHER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/weightUOM"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "WEIGHT_UO_M",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/quantityUnitOfMeasure"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "QUANTITY_UNIT_OF_MEASURE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/quantityScheduleType"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "QUANTITY_SCHEDULE_TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/disposalType"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "DISPOSAL_TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/longDescription"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "LONG_DESCRIPTION",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/minimumAdvertisementAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MINIMUM_ADVERTISEMENT_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isBackOrdered"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_BACK_ORDERED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/validForPeriodCount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "VALID_FOR_PERIOD_COUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isWorkerDiscountAllowed"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_WORKER_DISCOUNT_ALLOWED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/allowPartialRefund"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "ALLOW_PARTIAL_REFUND",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isWeightEntryRequired"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_WEIGHT_ENTRY_REQUIRED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isQuantityEntryRequired"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_QUANTITY_ENTRY_REQUIRED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isSerialized"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_SERIALIZED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/rewardProgramPointsCount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REWARD_PROGRAM_POINTS_COUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/description"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "DESCRIPTION",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/revenueInstallmentPeriod"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REVENUE_INSTALLMENT_PERIOD",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/name"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isAutoProvisionable"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_AUTO_PROVISIONABLE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isCouponRedemptionAllowed"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_COUPON_REDEMPTION_ALLOWED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isSellableIndependently"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_SELLABLE_INDEPENDENTLY",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/canUseRevenueSchedule"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "CAN_USE_REVENUE_SCHEDULE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/manufacturerName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MANUFACTURER_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isIntellectualPropertyProtected"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_INTELLECTUAL_PROPERTY_PROTECTED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/modelYear"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MODEL_YEAR",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isCustomerDiscountAllowed"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_CUSTOMER_DISCOUNT_ALLOWED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/productStatus"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PRODUCT_STATUS",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/brandGrade"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "BRAND_GRADE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/quantityInstallmentCount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "QUANTITY_INSTALLMENT_COUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/requiredDepositAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REQUIRED_DEPOSIT_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/revenueScheduleType"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REVENUE_SCHEDULE_TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isPreOrderable"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_PRE_ORDERABLE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/requiresInvididualUnitPricing"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REQUIRES_INVIDIDUAL_UNIT_PRICING",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/standardWarrantyLengthMonth"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "STANDARD_WARRANTY_LENGTH_MONTH",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/canUseQuantitySchedule"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "CAN_USE_QUANTITY_SCHEDULE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isInstallable"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_INSTALLABLE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isRainCheckAllowed"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_RAIN_CHECK_ALLOWED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/minimumAdvertisementAmountStartDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MINIMUM_ADVERTISEMENT_AMOUNT_START_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/maximumOrderQuantityCount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MAXIMUM_ORDER_QUANTITY_COUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isMultipleCouponsAllowed"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_MULTIPLE_COUPONS_ALLOWED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/allowCustomerReturn"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "ALLOW_CUSTOMER_RETURN",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/modelNumber"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MODEL_NUMBER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/mSRPAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "M_SR_PAMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/externalSourceRecord"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "EXTERNAL_SOURCE_RECORD",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isSellable"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_SELLABLE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/validToDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "VALID_TO_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/priceChargeType"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PRICE_CHARGE_TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isPartnerDiscountAllowed"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_PARTNER_DISCOUNT_ALLOWED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/revenueInstallmentCount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REVENUE_INSTALLMENT_COUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/productSKU"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PRODUCT_SK_U",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/quantityInstallmentPeriod"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "QUANTITY_INSTALLMENT_PERIOD",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isManualPriceEntryRequired"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_MANUAL_PRICE_ENTRY_REQUIRED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/type"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isSellableWithoutPrice"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_SELLABLE_WITHOUT_PRICE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/glAccountCode"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "GL_ACCOUNT_CODE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isReturnable"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_RETURNABLE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/displayUrl"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "DISPLAY_URL",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/versionNumber"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "VERSION_NUMBER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/lotIdentifier"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "LOT_IDENTIFIER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/validFromDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "VALID_FROM_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/stockLedgerValuationAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "STOCK_LEDGER_VALUATION_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isDynamicBundle"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_DYNAMIC_BUNDLE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isQualityVerificationRequired"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_QUALITY_VERIFICATION_REQUIRED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/requiredDepositPercentage"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REQUIRED_DEPOSIT_PERCENTAGE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isFoodstampPaymentAllowed"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_FOODSTAMP_PAYMENT_ALLOWED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/minimumOrderQuantityCount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MINIMUM_ORDER_QUANTITY_COUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/product_entity_group/product_related_product_sales_order_product1_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ENTITY_GROUP.PRODUCT_RELATED_PRODUCT_SALES_ORDER_PRODUCT1_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PRODUCT_RELATED_PRODUCT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/salesOrderProduct1"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/sales_order_entity_group/sales_order_product"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "SALES_ORDER_PRODUCT_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/product_entity_group/product_related_product_parent_product_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ENTITY_GROUP.PRODUCT_RELATED_PRODUCT_PARENT_PRODUCT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PRODUCT_RELATED_PRODUCT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/parentProduct"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/product_entity_group/product"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PRODUCT_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/product_entity_group/product_related_product_child_product_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ENTITY_GROUP.PRODUCT_RELATED_PRODUCT_CHILD_PRODUCT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PRODUCT_RELATED_PRODUCT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/childProduct"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/product_entity_group/product"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PRODUCT_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/product_entity_group/product_related_product_product_relationship_type_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ENTITY_GROUP.PRODUCT_RELATED_PRODUCT_PRODUCT_RELATIONSHIP_TYPE_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PRODUCT_RELATED_PRODUCT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/productRelationshipType"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/product_entity_group/product_relationship_type"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PRODUCT_RELATIONSHIP_TYPE_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/product_entity_group/product_related_product_sales_order_product2_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ENTITY_GROUP.PRODUCT_RELATED_PRODUCT_SALES_ORDER_PRODUCT2_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PRODUCT_RELATED_PRODUCT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/salesOrderProduct2"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/sales_order_entity_group/sales_order_product"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "SALES_ORDER_PRODUCT_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/product_entity_group/product_translation_product_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ENTITY_GROUP.PRODUCT_TRANSLATION_PRODUCT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PRODUCT_TRANSLATION_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/product"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/product_entity_group/product"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PRODUCT_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/product_entity_group/product_image_product_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ENTITY_GROUP.PRODUCT_IMAGE_PRODUCT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PRODUCT_IMAGE_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/product"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/product_entity_group/product"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PRODUCT_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/product_entity_group/product_image_translation_product_image_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ENTITY_GROUP.PRODUCT_IMAGE_TRANSLATION_PRODUCT_IMAGE_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PRODUCT_IMAGE_TRANSLATION_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/productImage"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/product_entity_group/product_image"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PRODUCT_IMAGE_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/product_entity_group/goods_product_primary_product_category_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ENTITY_GROUP.GOODS_PRODUCT_PRIMARY_PRODUCT_CATEGORY_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{GOODS_PRODUCT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/primaryProductCategory"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/product_catalog_entity_group/product_category"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PRODUCT_CATEGORY_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/product_entity_group/goods_product_master_product_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ENTITY_GROUP.GOODS_PRODUCT_MASTER_PRODUCT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{GOODS_PRODUCT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/masterProduct"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/product_entity_group/product"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PRODUCT_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/product_entity_group/goods_product_primary_sales_channel_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ENTITY_GROUP.GOODS_PRODUCT_PRIMARY_SALES_CHANNEL_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{GOODS_PRODUCT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/primarySalesChannel"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/sales_order_entity_group/sales_channel"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "SALES_CHANNEL_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/product_entity_group/goods_product_valid_for_period_uo_m_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ENTITY_GROUP.GOODS_PRODUCT_VALID_FOR_PERIOD_UO_M_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{GOODS_PRODUCT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/validForPeriodUOM"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/product_attribute_entity_group/product_validity_time_period_uo_m"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PRODUCT_VALIDITY_TIME_PERIOD_UO_M_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/product_entity_group/goods_product_brand_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ENTITY_GROUP.GOODS_PRODUCT_BRAND_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{GOODS_PRODUCT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/brand"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/product_entity_group/brand"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "BRAND_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/product_entity_group/service_product_service_provider_account_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ENTITY_GROUP.SERVICE_PRODUCT_SERVICE_PROVIDER_ACCOUNT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{SERVICE_PRODUCT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/serviceProviderAccount"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/account_entity_group/account"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "ACCOUNT_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/product_entity_group/service_product_primary_product_category_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ENTITY_GROUP.SERVICE_PRODUCT_PRIMARY_PRODUCT_CATEGORY_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{SERVICE_PRODUCT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/primaryProductCategory"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/product_catalog_entity_group/product_category"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PRODUCT_CATEGORY_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/product_entity_group/service_product_master_product_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ENTITY_GROUP.SERVICE_PRODUCT_MASTER_PRODUCT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{SERVICE_PRODUCT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/masterProduct"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/product_entity_group/product"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PRODUCT_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/product_entity_group/service_product_primary_sales_channel_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ENTITY_GROUP.SERVICE_PRODUCT_PRIMARY_SALES_CHANNEL_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{SERVICE_PRODUCT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/primarySalesChannel"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/sales_order_entity_group/sales_channel"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "SALES_CHANNEL_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/product_entity_group/service_product_valid_for_period_uo_m_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ENTITY_GROUP.SERVICE_PRODUCT_VALID_FOR_PERIOD_UO_M_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{SERVICE_PRODUCT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/validForPeriodUOM"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/product_attribute_entity_group/product_validity_time_period_uo_m"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PRODUCT_VALIDITY_TIME_PERIOD_UO_M_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/product_entity_group/service_product_brand_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ENTITY_GROUP.SERVICE_PRODUCT_BRAND_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{SERVICE_PRODUCT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/brand"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/product_entity_group/brand"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "BRAND_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/product_entity_group/product_primary_product_category_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ENTITY_GROUP.PRODUCT_PRIMARY_PRODUCT_CATEGORY_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PRODUCT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/primaryProductCategory"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/product_catalog_entity_group/product_category"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PRODUCT_CATEGORY_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/product_entity_group/product_master_product_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ENTITY_GROUP.PRODUCT_MASTER_PRODUCT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PRODUCT_ID_LEFT}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/masterProduct"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/product_entity_group/product"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PRODUCT_ID_RIGHT",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/product_entity_group/product_primary_sales_channel_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ENTITY_GROUP.PRODUCT_PRIMARY_SALES_CHANNEL_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PRODUCT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/primarySalesChannel"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/sales_order_entity_group/sales_channel"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "SALES_CHANNEL_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/product_entity_group/product_valid_for_period_uo_m_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ENTITY_GROUP.PRODUCT_VALID_FOR_PERIOD_UO_M_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PRODUCT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/validForPeriodUOM"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/product_attribute_entity_group/product_validity_time_period_uo_m"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PRODUCT_VALIDITY_TIME_PERIOD_UO_M_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/product_entity_group/product_brand_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ENTITY_GROUP.PRODUCT_BRAND_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PRODUCT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/brand"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/product_entity_group/brand"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "BRAND_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/product_entity_group/bundle_product_primary_product_category_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ENTITY_GROUP.BUNDLE_PRODUCT_PRIMARY_PRODUCT_CATEGORY_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{BUNDLE_PRODUCT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/primaryProductCategory"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/product_catalog_entity_group/product_category"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PRODUCT_CATEGORY_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/product_entity_group/bundle_product_master_product_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ENTITY_GROUP.BUNDLE_PRODUCT_MASTER_PRODUCT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{BUNDLE_PRODUCT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/masterProduct"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/product_entity_group/product"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PRODUCT_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/product_entity_group/bundle_product_primary_sales_channel_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ENTITY_GROUP.BUNDLE_PRODUCT_PRIMARY_SALES_CHANNEL_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{BUNDLE_PRODUCT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/primarySalesChannel"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/sales_order_entity_group/sales_channel"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "SALES_CHANNEL_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/product_entity_group/bundle_product_valid_for_period_uo_m_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ENTITY_GROUP.BUNDLE_PRODUCT_VALID_FOR_PERIOD_UO_M_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{BUNDLE_PRODUCT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/validForPeriodUOM"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/product_attribute_entity_group/product_validity_time_period_uo_m"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PRODUCT_VALIDITY_TIME_PERIOD_UO_M_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/product_entity_group/bundle_product_brand_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ENTITY_GROUP.BUNDLE_PRODUCT_BRAND_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{BUNDLE_PRODUCT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/brand"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/product_entity_group/brand"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "BRAND_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    }
+  ]
+}

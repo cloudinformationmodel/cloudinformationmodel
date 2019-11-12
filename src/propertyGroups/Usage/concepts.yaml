@@ -1,0 +1,8 @@
+#%Vocabulary 1.0
+base: http://cloudinformationmodel.org/model/
+vocabulary: Usage Property Group
+propertyTerms:
+  isIntellectualPropertyProtected:
+    displayName: Is Intellectual Property Protected
+    description: Is knowledge about the products intellectual property sensitive or not
+    range: any

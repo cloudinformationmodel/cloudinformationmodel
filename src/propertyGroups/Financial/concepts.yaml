@@ -1,0 +1,72 @@
+#%Vocabulary 1.0
+base: http://cloudinformationmodel.org/model/
+vocabulary: Financial Property Group
+propertyTerms:
+  taxBracketRange:
+    displayName: Tax Bracket Range
+    description: In what income tax bracket does the person fall into e.g. 10000 to 20000, 20001-30000
+    range: any
+  employeeCount:
+    displayName: Employee Count
+    description: How many employees does the business have
+    range: any
+  bankruptcyDate:
+    displayName: Bankruptcy Date
+    description: When business went into bankruptcy
+    range: any
+  bankruptcyType:
+    displayName: Bankruptcy Type
+    description: What type of bankcruptcy the business ent through e.g. chapter 7, chapter 11
+    range: any
+  annualRevenueAmount:
+    displayName: Annual Revenue Amount
+    description: Estimated annual revenue of a global business
+    range: any
+  bankruptcyHistoryFlag:
+    displayName: Bankruptcy History Flag
+    description: Set to indicate if company has ever been in bankruptcy even if it is not currently
+    range: any
+  bankruptcyEmergenceDate:
+    displayName: Bankruptcy Emergence Date
+    description: When business emerged from bankruptcy
+    range: any
+  consumerCreditScore:
+    displayName: Consumer Credit Score
+    description: What is the credit score the person have e.g. 740
+    range: any
+  netWorth:
+    displayName: Net Worth
+    description: How much money does the person have in total if all assets counted
+    range: any
+  marketCapitalizationAmount:
+    displayName: Market Capitalization Amount
+    description: How big is the business market equity on primary stock exchange
+    range: any
+  fiscalYearEndMonthDate:
+    displayName: Fiscal Year End Month Date
+    description: The month and date the fiscal year ends for the business
+    range: any
+  dunnandBradstreetRating:
+    displayName: Dunn and Bradstreet Rating
+    description: Indication of a business size and creditworthiness as stated by Dunn and Bradstreet
+    range: any
+  dependentCount:
+    displayName: Dependent Count
+    description: How may dependents e.g. children or grown ups does the person claim to have
+    range: any
+  businessSizeType:
+    displayName: Business Size Type
+    description: How big is the business e.g. small, medium, enterprise
+    range: any
+  yearlyIncome:
+    displayName: Yearly Income
+    description: What is the more specific income the person have
+    range: any
+  yearlyIncomeRange:
+    displayName: Yearly Income Range
+    description: What is the income range the person is part of
+    range: any
+  consumerCreditScoreProviderName:
+    displayName: Consumer Credit Score Provider Name
+    description: Who provided the credit score e.g. Experian
+    range: any

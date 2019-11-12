@@ -1,0 +1,231 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "LeadEntityGroup",
+  "name": "Lead",
+  "@type": "EntityGroup",
+  "version": "0.1",
+  "subjectArea": {
+    "@id": "PartySubjectArea"
+  },
+  "description": "Example Entities included: Lead, Lead Status, Lead Source",
+  "classConcepts": [
+    {
+      "@id": "Lead",
+      "name": "Lead",
+      "@type": "Class",
+      "description": "A person or company that showed interest in the company's products"
+    }
+  ],
+  "propertyConcepts": [
+    {
+      "@id": "streetName",
+      "@type": "Property",
+      "domain": [
+        "Lead"
+      ]
+    },
+    {
+      "@id": "emailBouncedDate",
+      "@type": "Property",
+      "domain": [
+        "Lead"
+      ]
+    },
+    {
+      "@id": "geoCodeLatitude",
+      "@type": "Property",
+      "domain": [
+        "Lead"
+      ]
+    },
+    {
+      "@id": "description",
+      "@type": "Property",
+      "domain": [
+        "Lead"
+      ]
+    },
+    {
+      "@id": "convertedDate",
+      "@type": "Property",
+      "domain": [
+        "Lead"
+      ]
+    },
+    {
+      "@id": "countryName",
+      "@type": "Property",
+      "domain": [
+        "Lead"
+      ]
+    },
+    {
+      "@id": "stateProvinceName",
+      "@type": "Property",
+      "domain": [
+        "Lead"
+      ]
+    },
+    {
+      "@id": "mobileContactPhone",
+      "@type": "Property",
+      "domain": [
+        "Lead"
+      ]
+    },
+    {
+      "@id": "website",
+      "@type": "Property",
+      "domain": [
+        "Lead"
+      ]
+    },
+    {
+      "@id": "leadSource",
+      "@type": "Property",
+      "domain": [
+        "Lead"
+      ]
+    },
+    {
+      "@id": "partnerAccount",
+      "@type": "Property",
+      "domain": [
+        "Lead"
+      ]
+    },
+    {
+      "@id": "partyRole",
+      "@type": "Property",
+      "domain": [
+        "Lead"
+      ]
+    },
+    {
+      "@id": "contactPointEmail",
+      "@type": "Property",
+      "domain": [
+        "Lead"
+      ]
+    },
+    {
+      "@id": "companyName",
+      "@type": "Property",
+      "domain": [
+        "Lead"
+      ]
+    },
+    {
+      "@id": "contactAddress",
+      "@type": "Property",
+      "domain": [
+        "Lead"
+      ]
+    },
+    {
+      "@id": "geoCodeAccuracy",
+      "@type": "Property",
+      "domain": [
+        "Lead"
+      ]
+    },
+    {
+      "@id": "photoURL",
+      "@type": "Property",
+      "domain": [
+        "Lead"
+      ]
+    },
+    {
+      "@id": "phoneContactPoint",
+      "@type": "Property",
+      "domain": [
+        "Lead"
+      ]
+    },
+    {
+      "@id": "emailBouncedReason",
+      "@type": "Property",
+      "domain": [
+        "Lead"
+      ]
+    },
+    {
+      "@id": "geoCodeLongitude",
+      "@type": "Property",
+      "domain": [
+        "Lead"
+      ]
+    },
+    {
+      "@id": "isConverted",
+      "@type": "Property",
+      "domain": [
+        "Lead"
+      ]
+    },
+    {
+      "@id": "convertedToAccount",
+      "@type": "Property",
+      "domain": [
+        "Lead"
+      ]
+    },
+    {
+      "@id": "leadRating",
+      "@type": "Property",
+      "domain": [
+        "Lead"
+      ]
+    },
+    {
+      "@id": "leadStatus",
+      "@type": "Property",
+      "domain": [
+        "Lead"
+      ]
+    },
+    {
+      "@id": "faxContactPhone",
+      "@type": "Property",
+      "domain": [
+        "Lead"
+      ]
+    },
+    {
+      "@id": "convertedToAccountContact",
+      "@type": "Property",
+      "domain": [
+        "Lead"
+      ]
+    },
+    {
+      "@id": "lastActivityDate",
+      "@type": "Property",
+      "domain": [
+        "Lead"
+      ]
+    },
+    {
+      "@id": "id",
+      "@type": "Property",
+      "domain": [
+        "Lead"
+      ]
+    },
+    {
+      "@id": "annualRevenue",
+      "@type": "Property",
+      "domain": [
+        "Lead"
+      ]
+    },
+    {
+      "@id": "leadScore",
+      "@type": "Property",
+      "domain": [
+        "Lead"
+      ]
+    }
+  ]
+}

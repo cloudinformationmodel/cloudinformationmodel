@@ -1,0 +1,112 @@
+#%Vocabulary 1.0
+base: http://cloudinformationmodel.org/model/
+vocabulary: Contact Point
+usage: "Example Entities included: Contact Point, Contact Consent, Contact Channel"
+classTerms:
+  ContactPointEmail:
+    displayName: Contact Point Email
+    description: Email address for a party e.g. email info@northerntrailoutfitters.com
+    extends: ContactPoint
+    properties:
+      - id
+      - emailAddress
+      - emailLatestBounceReasonText
+      - emailMailBox
+      - emailLatestBounceDateTime
+      - emailDomain
+  ContactPointApp:
+    displayName: Contact Point App
+    description: Software Application for a party and optionally on a specific device e.g. John Doe have Strava App on device iPhone123
+    extends: ContactPoint
+    properties:
+      - id
+      - applicationLogin
+  PartyWebAddress:
+    displayName: Party Web Address
+    description: What is the Web URL for the Party
+    extends: ContactPoint
+    properties:
+      - id
+      - webSiteURL
+      - party
+  ContactPointPhone:
+    displayName: Contact Point Phone
+    description: Phone number for a party e.g. phone 123-4567
+    extends: ContactPoint
+    properties:
+      - id
+      - shortCode
+      - phoneCountryCode
+      - countryName
+      - areaCode
+      - telephoneNumber
+      - extensionNumber
+      - isFaxCapable
+      - formattedE164PhoneNumber
+      - formattedInternationalPhoneNumber
+      - primaryPhoneType
+      - formattedNationalPhoneNumber
+      - isSMSCapable
+  ContactPointLocation:
+    displayName: Contact Point Location
+    description: Physical location for a party e.g. party Northern Trail Outfitters at Standford Shopping Mall
+    extends: ContactPoint
+    properties:
+      - id
+  ContactPointSocial:
+    displayName: Contact Point Social
+    description: Social handle for a party e.g. trustednews at twitter
+    extends: ContactPoint
+    properties:
+      - id
+      - followersCount
+      - socialHandleName
+      - socialNetworkProvider
+      - profilePictureURL
+      - socialFanStatus
+      - socialHandle
+  ContactPointType:
+    displayName: Contact Point Type
+    description: Contain the fixed list of types a contact point can be of e.g. phone, email
+    properties:
+      - id
+      - name
+      - optInPriority
+  ContactPoint:
+    displayName: Contact Point
+    description: All contact points for a party e.g. phone 123-4567, email info@northerntrailoutfitters.com
+    properties:
+      - profileFirstCreatedDate
+      - id
+      - forPersonalUse
+      - primaryFlag
+      - partyRole
+      - contactPointType
+      - activeToDate
+      - profileOccurrenceCount
+      - profileLastUpdatedDate
+      - bestTimeToContactEndTime
+      - party
+      - forBusinessUse
+      - bestTimeToContactStartTime
+      - activeFromDate
+  ContactPointAddress:
+    displayName: Contact Point Address
+    description: Mailing address for a party e.g. 123 Main St, Big City, CA12345, USA
+    extends: ContactPoint
+    properties:
+      - addressLine1
+      - id
+      - stateProvinceName
+      - countryName
+      - isUsedForShipping
+      - addressLine2
+      - geoAccuracy
+      - isUsedForBilling
+      - cityName
+      - addressLine3
+      - postalCodeText
+      - geoLongitude
+      - addressLine4
+      - geoLatitude
+      - contactPhone

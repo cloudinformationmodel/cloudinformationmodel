@@ -1,0 +1,4524 @@
+{
+  "@context" : {
+    "rr" : "http://www.w3.org/ns/r2rml#"
+  },
+  "@graph" : [
+    {
+      "@id" : "/payment_entity_group/payment_gateway_result_code",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_GATEWAY_RESULT_CODE"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/PaymentGatewayResultCode"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/description"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "DESCRIPTION",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/name"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/payment_entity_group/payment_credit_memo_application",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_CREDIT_MEMO_APPLICATION"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/PaymentCreditMemoApplication"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/name"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/effectiveDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "EFFECTIVE_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentApplicationType"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_APPLICATION_TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/commentText"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "COMMENT_TEXT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/hasBeenUnapplied"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "HAS_BEEN_UNAPPLIED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/appliedAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "APPLIED_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentBalanceAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_BALANCE_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/appliedDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "APPLIED_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/externalCreatedDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "EXTERNAL_CREATED_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/unappliedDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "UNAPPLIED_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/payment_entity_group/payment_gateway_auth_reversal_log",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_GATEWAY_AUTH_REVERSAL_LOG"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/PaymentGatewayAuthReversalLog"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/name"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentGatewayReferenceNumber"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_GATEWAY_REFERENCE_NUMBER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentGatewayMessageText"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_GATEWAY_MESSAGE_TEXT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentGatewayAuthorizationCode"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_GATEWAY_AUTHORIZATION_CODE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/internalResultCode"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "INTERNAL_RESULT_CODE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentGatewayAVSCode"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_GATEWAY_AV_SCODE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/internalReferenceNumber"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "INTERNAL_REFERENCE_NUMBER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentGatewayInteractionLogName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_GATEWAY_INTERACTION_LOG_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentGatewayInteractionStatus"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_GATEWAY_INTERACTION_STATUS",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentGatewayDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_GATEWAY_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/payment_entity_group/payment_authorization_reversal",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_AUTHORIZATION_REVERSAL"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/PaymentAuthorizationReversal"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentGatewayReferenceNumber"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_GATEWAY_REFERENCE_NUMBER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/authorizationReversalAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "AUTHORIZATION_REVERSAL_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/customerAuthorizationReversalPhone"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "CUSTOMER_AUTHORIZATION_REVERSAL_PHONE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/iPAddress"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "I_PADDRESS",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentAuthorizationReversalStatus"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_AUTHORIZATION_REVERSAL_STATUS",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentAuthorizationProcessingMode"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_AUTHORIZATION_PROCESSING_MODE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentGatewayInternalReferenceNumber"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_GATEWAY_INTERNAL_REFERENCE_NUMBER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentAuthorizationReversalName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_AUTHORIZATION_REVERSAL_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/externalCreatedDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "EXTERNAL_CREATED_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/requestDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REQUEST_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#time"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentAuthorizationReversalCommentText"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_AUTHORIZATION_REVERSAL_COMMENT_TEXT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/macAddress"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MAC_ADDRESS",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/customerAuthorizationReversalEmail"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "CUSTOMER_AUTHORIZATION_REVERSAL_EMAIL",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentGatewayDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_GATEWAY_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#time"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/payment_entity_group/payment_allocation",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_ALLOCATION"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/PaymentAllocation"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/externalCreatedDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "EXTERNAL_CREATED_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentAllocationName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_ALLOCATION_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/payment_entity_group/payment_application",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_APPLICATION"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/PaymentApplication"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/effectiveDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "EFFECTIVE_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentApplicationType"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_APPLICATION_TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/commentText"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "COMMENT_TEXT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/hasBeenUnapplied"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "HAS_BEEN_UNAPPLIED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/name"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/appliedAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "APPLIED_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentBalanceAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_BALANCE_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/appliedDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "APPLIED_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/externalCreatedDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "EXTERNAL_CREATED_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/unappliedDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "UNAPPLIED_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/payment_entity_group/payment_gateway_provider",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_GATEWAY_PROVIDER"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/PaymentGatewayProvider"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/apexAdapterClassName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "APEX_ADAPTER_CLASS_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentGatewayProviderCommentText"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_GATEWAY_PROVIDER_COMMENT_TEXT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentGatewayProviderName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_GATEWAY_PROVIDER_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/developerName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "DEVELOPER_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/namespacePrefixText"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "NAMESPACE_PREFIX_TEXT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/payment_entity_group/payment_policy",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_POLICY"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/PaymentPolicy"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/description"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "DESCRIPTION",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/name"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentPolicyTreatmentSelection"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_POLICY_TREATMENT_SELECTION",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentPolicyStatus"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_POLICY_STATUS",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/payment_entity_group/payment_treatment_method",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_TREATMENT_METHOD"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/PaymentTreatmentMethod"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentTreatmentMethodName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_TREATMENT_METHOD_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentTreatmentMethodCode"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_TREATMENT_METHOD_CODE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentTreatmentMethodDescription"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_TREATMENT_METHOD_DESCRIPTION",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/payment_entity_group/payment_invoice_application",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_INVOICE_APPLICATION"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/PaymentInvoiceApplication"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentInvoiceApplicationName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_INVOICE_APPLICATION_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/invoiceBalanceAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "INVOICE_BALANCE_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentInvoiceApplicationType"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_INVOICE_APPLICATION_TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/effectiveDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "EFFECTIVE_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentApplicationType"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_APPLICATION_TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/commentText"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "COMMENT_TEXT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/hasBeenUnapplied"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "HAS_BEEN_UNAPPLIED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/name"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/appliedAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "APPLIED_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentBalanceAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_BALANCE_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/appliedDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "APPLIED_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/externalCreatedDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "EXTERNAL_CREATED_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/unappliedDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "UNAPPLIED_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/payment_entity_group/payment_gateway_interaction_type",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_GATEWAY_INTERACTION_TYPE"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/PaymentGatewayInteractionType"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/description"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "DESCRIPTION",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/name"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/payment_entity_group/payment_group",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_GROUP"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/PaymentGroup"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/totalReversalAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "TOTAL_REVERSAL_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/totalAuthorizationAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "TOTAL_AUTHORIZATION_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/totalPaymentAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "TOTAL_PAYMENT_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentGroupNumber"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_GROUP_NUMBER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/payment_entity_group/refund_credit_memo_allocation",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.REFUND_CREDIT_MEMO_ALLOCATION"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/RefundCreditMemoAllocation"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/name"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/effectiveDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "EFFECTIVE_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/hasBeenUnapplied"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "HAS_BEEN_UNAPPLIED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/refundAllocationType"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REFUND_ALLOCATION_TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/allocatedAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "ALLOCATED_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/refundBalanceAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REFUND_BALANCE_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/refundAllocationName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REFUND_ALLOCATION_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/appliedDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "APPLIED_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/externalCreatedDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "EXTERNAL_CREATED_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/unappliedDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "UNAPPLIED_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/payment_entity_group/payment_gateway_payment_log",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_GATEWAY_PAYMENT_LOG"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/PaymentGatewayPaymentLog"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/name"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentGatewayReferenceNumber"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_GATEWAY_REFERENCE_NUMBER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentGatewayMessageText"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_GATEWAY_MESSAGE_TEXT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentGatewayAuthorizationCode"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_GATEWAY_AUTHORIZATION_CODE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/internalResultCode"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "INTERNAL_RESULT_CODE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentGatewayAVSCode"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_GATEWAY_AV_SCODE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/internalReferenceNumber"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "INTERNAL_REFERENCE_NUMBER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentGatewayInteractionLogName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_GATEWAY_INTERACTION_LOG_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentGatewayInteractionStatus"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_GATEWAY_INTERACTION_STATUS",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentGatewayDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_GATEWAY_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/payment_entity_group/refund_allocation",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.REFUND_ALLOCATION"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/RefundAllocation"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/effectiveDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "EFFECTIVE_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/hasBeenUnapplied"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "HAS_BEEN_UNAPPLIED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/refundAllocationType"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REFUND_ALLOCATION_TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/allocatedAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "ALLOCATED_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/refundBalanceAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REFUND_BALANCE_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/refundAllocationName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REFUND_ALLOCATION_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/appliedDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "APPLIED_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/externalCreatedDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "EXTERNAL_CREATED_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/unappliedDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "UNAPPLIED_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/payment_entity_group/payment_gateway_authorization_log",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_GATEWAY_AUTHORIZATION_LOG"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/PaymentGatewayAuthorizationLog"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/name"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentGatewayReferenceNumber"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_GATEWAY_REFERENCE_NUMBER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentGatewayMessageText"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_GATEWAY_MESSAGE_TEXT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentGatewayAuthorizationCode"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_GATEWAY_AUTHORIZATION_CODE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/internalResultCode"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "INTERNAL_RESULT_CODE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentGatewayAVSCode"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_GATEWAY_AV_SCODE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/internalReferenceNumber"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "INTERNAL_REFERENCE_NUMBER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentGatewayInteractionLogName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_GATEWAY_INTERACTION_LOG_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentGatewayInteractionStatus"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_GATEWAY_INTERACTION_STATUS",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentGatewayDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_GATEWAY_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/payment_entity_group/payment_invoice_allocation",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_INVOICE_ALLOCATION"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/PaymentInvoiceAllocation"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentInvoiceAllocationName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_INVOICE_ALLOCATION_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/appliedAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "APPLIED_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/invoiceBalanceAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "INVOICE_BALANCE_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/externalCreatedDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "EXTERNAL_CREATED_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentAllocationName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_ALLOCATION_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/payment_entity_group/payment",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/Payment"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentStatus"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_STATUS",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/authorizationProcessingMode"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "AUTHORIZATION_PROCESSING_MODE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/iPAddress"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "I_PADDRESS",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/commentText"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "COMMENT_TEXT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentNumber"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_NUMBER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/latestGatewayInternalResult"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "LATEST_GATEWAY_INTERNAL_RESULT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/customerEmailAddress"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "CUSTOMER_EMAIL_ADDRESS",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/name"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/latestGatewayReferenceNumber"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "LATEST_GATEWAY_REFERENCE_NUMBER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/latestGatewayDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "LATEST_GATEWAY_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/balanceAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "BALANCE_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentType"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/customerPhoneNumber"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "CUSTOMER_PHONE_NUMBER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/latestPaymentGatewayMessageText"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "LATEST_PAYMENT_GATEWAY_MESSAGE_TEXT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentEffectiveDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_EFFECTIVE_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/externalCreatedDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "EXTERNAL_CREATED_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentCancellationDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_CANCELLATION_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/macAddress"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MAC_ADDRESS",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/totalAppliedAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "TOTAL_APPLIED_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/netAppliedAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "NET_APPLIED_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/totalUnappliedAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "TOTAL_UNAPPLIED_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/latestGatewayInternalReferenceNumber"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "LATEST_GATEWAY_INTERNAL_REFERENCE_NUMBER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/payment_entity_group/payment_credit_memo_allocation",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_CREDIT_MEMO_ALLOCATION"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/PaymentCreditMemoAllocation"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/appliedAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "APPLIED_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/name"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/externalCreatedDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "EXTERNAL_CREATED_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentAllocationName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_ALLOCATION_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/payment_entity_group/payment_treatment",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_TREATMENT"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/PaymentTreatment"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentApplicationLevel"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_APPLICATION_LEVEL",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/shouldAutoInvoice"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "SHOULD_AUTO_INVOICE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentTreatmentStatus"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_TREATMENT_STATUS",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentTreatmentName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_TREATMENT_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/payment_entity_group/payment_authorization",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_AUTHORIZATION"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/PaymentAuthorization"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentGatewayReferenceNumber"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_GATEWAY_REFERENCE_NUMBER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/iPAddress"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "I_PADDRESS",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/totalPaymentCaptureAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "TOTAL_PAYMENT_CAPTURE_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentAuthorizationProcessingMode"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_AUTHORIZATION_PROCESSING_MODE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/authorizationAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "AUTHORIZATION_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/expirationDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "EXPIRATION_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentGatewayInternalReferenceNumber"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_GATEWAY_INTERNAL_REFERENCE_NUMBER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/gatewayReferenceDetailsText"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "GATEWAY_REFERENCE_DETAILS_TEXT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/totalAuthorizationReversalAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "TOTAL_AUTHORIZATION_REVERSAL_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentAuthorizationCommentText"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_AUTHORIZATION_COMMENT_TEXT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/externalCreatedDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "EXTERNAL_CREATED_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentAuthorizationNumber"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_AUTHORIZATION_NUMBER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/requestDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REQUEST_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#time"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/availableBalanceAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "AVAILABLE_BALANCE_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/gatewayResultCodeDescription"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "GATEWAY_RESULT_CODE_DESCRIPTION",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/macAddress"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MAC_ADDRESS",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/gatewayAuthorizationCode"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "GATEWAY_AUTHORIZATION_CODE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentGatewayDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_GATEWAY_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#time"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentAuthorizationStatus"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_AUTHORIZATION_STATUS",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/payment_entity_group/refund_payment_allocation",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.REFUND_PAYMENT_ALLOCATION"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/RefundPaymentAllocation"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/refundAllocationCommentsDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REFUND_ALLOCATION_COMMENTS_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentBalanceAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_BALANCE_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/refundAllocationCommentText"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REFUND_ALLOCATION_COMMENT_TEXT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/creditMemoBalanceAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "CREDIT_MEMO_BALANCE_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/refundPaymentAllocationName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REFUND_PAYMENT_ALLOCATION_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/effectiveDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "EFFECTIVE_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/hasBeenUnapplied"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "HAS_BEEN_UNAPPLIED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/refundAllocationType"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REFUND_ALLOCATION_TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/allocatedAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "ALLOCATED_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/refundBalanceAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REFUND_BALANCE_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/refundAllocationName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "REFUND_ALLOCATION_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/appliedDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "APPLIED_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/externalCreatedDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "EXTERNAL_CREATED_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/unappliedDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "UNAPPLIED_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/payment_entity_group/refund_payment",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.REFUND_PAYMENT"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/RefundPayment"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/externalCreatedDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "EXTERNAL_CREATED_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/name"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentStatus"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_STATUS",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/authorizationProcessingMode"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "AUTHORIZATION_PROCESSING_MODE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/iPAddress"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "I_PADDRESS",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/commentText"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "COMMENT_TEXT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentNumber"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_NUMBER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/latestGatewayInternalResult"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "LATEST_GATEWAY_INTERNAL_RESULT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/customerEmailAddress"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "CUSTOMER_EMAIL_ADDRESS",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/latestGatewayReferenceNumber"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "LATEST_GATEWAY_REFERENCE_NUMBER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/latestGatewayDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "LATEST_GATEWAY_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/balanceAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "BALANCE_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentType"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/customerPhoneNumber"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "CUSTOMER_PHONE_NUMBER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/latestPaymentGatewayMessageText"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "LATEST_PAYMENT_GATEWAY_MESSAGE_TEXT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentEffectiveDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_EFFECTIVE_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentCancellationDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_CANCELLATION_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/macAddress"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MAC_ADDRESS",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/totalAppliedAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "TOTAL_APPLIED_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/netAppliedAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "NET_APPLIED_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/totalUnappliedAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "TOTAL_UNAPPLIED_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/latestGatewayInternalReferenceNumber"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "LATEST_GATEWAY_INTERNAL_REFERENCE_NUMBER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/payment_entity_group/payment_gateway",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_GATEWAY"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/PaymentGateway"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentGatewayStatus"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_GATEWAY_STATUS",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/name"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentGatewayCommentText"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_GATEWAY_COMMENT_TEXT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/systemCredential"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "SYSTEM_CREDENTIAL",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/payment_entity_group/capture_payment",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.CAPTURE_PAYMENT"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{CAPTURE_PAYMENT_ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/CapturePayment"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/id"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "ID",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/name"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/capturePaymentType"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "CAPTURE_PAYMENT_TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/handlingFeeAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "HANDLING_FEE_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isFinalCapture"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_FINAL_CAPTURE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentStatus"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_STATUS",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/authorizationProcessingMode"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "AUTHORIZATION_PROCESSING_MODE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/iPAddress"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "I_PADDRESS",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/commentText"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "COMMENT_TEXT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentNumber"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_NUMBER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/latestGatewayInternalResult"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "LATEST_GATEWAY_INTERNAL_RESULT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/customerEmailAddress"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "CUSTOMER_EMAIL_ADDRESS",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/latestGatewayReferenceNumber"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "LATEST_GATEWAY_REFERENCE_NUMBER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/latestGatewayDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "LATEST_GATEWAY_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/balanceAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "BALANCE_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentType"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/customerPhoneNumber"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "CUSTOMER_PHONE_NUMBER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/latestPaymentGatewayMessageText"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "LATEST_PAYMENT_GATEWAY_MESSAGE_TEXT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentEffectiveDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_EFFECTIVE_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/externalCreatedDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "EXTERNAL_CREATED_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentCancellationDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_CANCELLATION_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/macAddress"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MAC_ADDRESS",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/totalAppliedAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "TOTAL_APPLIED_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/netAppliedAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "NET_APPLIED_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/totalUnappliedAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "TOTAL_UNAPPLIED_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/latestGatewayInternalReferenceNumber"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "LATEST_GATEWAY_INTERNAL_REFERENCE_NUMBER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/payment_entity_group/payment_gateway_interaction_log",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_GATEWAY_INTERACTION_LOG"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/PaymentGatewayInteractionLog"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentGatewayReferenceNumber"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_GATEWAY_REFERENCE_NUMBER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentGatewayMessageText"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_GATEWAY_MESSAGE_TEXT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentGatewayAuthorizationCode"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_GATEWAY_AUTHORIZATION_CODE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/internalResultCode"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "INTERNAL_RESULT_CODE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentGatewayAVSCode"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_GATEWAY_AV_SCODE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/internalReferenceNumber"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "INTERNAL_REFERENCE_NUMBER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentGatewayInteractionLogName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_GATEWAY_INTERACTION_LOG_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentGatewayInteractionStatus"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_GATEWAY_INTERACTION_STATUS",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/paymentGatewayDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PAYMENT_GATEWAY_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/payment_entity_group/payment_credit_memo_application_payment_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_CREDIT_MEMO_APPLICATION_PAYMENT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PAYMENT_CREDIT_MEMO_APPLICATION_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/payment"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_entity_group/payment"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PAYMENT_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/pay_gat_aut_rev_log_pay_aut_rev_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAY_GAT_AUT_REV_LOG_PAY_AUT_REV_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PAYMENT_GATEWAY_AUTH_REVERSAL_LOG_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/paymentAuthorizationReversal"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_entity_group/payment_authorization_reversal"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PAYMENT_AUTHORIZATION_REVERSAL_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/pay_gat_aut_rev_log_pay_gat_int_typ_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAY_GAT_AUT_REV_LOG_PAY_GAT_INT_TYP_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PAYMENT_GATEWAY_AUTH_REVERSAL_LOG_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/paymentGatewayInteractionType"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_entity_group/payment_gateway_interaction_type"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PAYMENT_GATEWAY_INTERACTION_TYPE_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/payment_gateway_auth_reversal_log_payment_gateway_result_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_GATEWAY_AUTH_REVERSAL_LOG_PAYMENT_GATEWAY_RESULT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PAYMENT_GATEWAY_AUTH_REVERSAL_LOG_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/paymentGatewayResult"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_entity_group/payment_gateway_result_code"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PAYMENT_GATEWAY_RESULT_CODE_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/payment_authorization_reversal_capture_payment_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_AUTHORIZATION_REVERSAL_CAPTURE_PAYMENT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PAYMENT_AUTHORIZATION_REVERSAL_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/capturePayment"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_entity_group/capture_payment"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "CAPTURE_PAYMENT_CAPTURE_PAYMENT_ID",
+            "rr:parent" : "CAPTURE_PAYMENT_ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/payment_authorization_reversal_payment_gateway_result_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_AUTHORIZATION_REVERSAL_PAYMENT_GATEWAY_RESULT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PAYMENT_AUTHORIZATION_REVERSAL_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/paymentGatewayResult"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_entity_group/payment_gateway_result_code"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PAYMENT_GATEWAY_RESULT_CODE_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/payment_authorization_reversal_payment_authorization_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_AUTHORIZATION_REVERSAL_PAYMENT_AUTHORIZATION_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PAYMENT_AUTHORIZATION_REVERSAL_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/paymentAuthorization"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_entity_group/payment_authorization"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PAYMENT_AUTHORIZATION_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/payment_allocation_related_payment_allocation_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_ALLOCATION_RELATED_PAYMENT_ALLOCATION_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PAYMENT_ALLOCATION_ID_LEFT}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/relatedPaymentAllocation"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_entity_group/payment_allocation"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PAYMENT_ALLOCATION_ID_RIGHT",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/payment_application_payment_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_APPLICATION_PAYMENT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PAYMENT_APPLICATION_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/payment"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_entity_group/payment"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PAYMENT_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/payment_invoice_application_payment_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_INVOICE_APPLICATION_PAYMENT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PAYMENT_INVOICE_APPLICATION_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/payment"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_entity_group/payment"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PAYMENT_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/refund_credit_memo_allocation_related_refund_allocation_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.REFUND_CREDIT_MEMO_ALLOCATION_RELATED_REFUND_ALLOCATION_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{REFUND_CREDIT_MEMO_ALLOCATION_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/relatedRefundAllocation"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_entity_group/refund_allocation"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "REFUND_ALLOCATION_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/refund_credit_memo_allocation_refund_payment_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.REFUND_CREDIT_MEMO_ALLOCATION_REFUND_PAYMENT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{REFUND_CREDIT_MEMO_ALLOCATION_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/refundPayment"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_entity_group/refund_payment"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "REFUND_PAYMENT_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/payment_gateway_payment_log_payment_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_GATEWAY_PAYMENT_LOG_PAYMENT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PAYMENT_GATEWAY_PAYMENT_LOG_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/payment"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_entity_group/payment"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PAYMENT_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/pay_gat_pay_log_pay_gat_int_typ_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAY_GAT_PAY_LOG_PAY_GAT_INT_TYP_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PAYMENT_GATEWAY_PAYMENT_LOG_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/paymentGatewayInteractionType"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_entity_group/payment_gateway_interaction_type"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PAYMENT_GATEWAY_INTERACTION_TYPE_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/payment_gateway_payment_log_payment_gateway_result_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_GATEWAY_PAYMENT_LOG_PAYMENT_GATEWAY_RESULT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PAYMENT_GATEWAY_PAYMENT_LOG_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/paymentGatewayResult"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_entity_group/payment_gateway_result_code"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PAYMENT_GATEWAY_RESULT_CODE_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/refund_allocation_related_refund_allocation_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.REFUND_ALLOCATION_RELATED_REFUND_ALLOCATION_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{REFUND_ALLOCATION_ID_LEFT}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/relatedRefundAllocation"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_entity_group/refund_allocation"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "REFUND_ALLOCATION_ID_RIGHT",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/refund_allocation_refund_payment_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.REFUND_ALLOCATION_REFUND_PAYMENT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{REFUND_ALLOCATION_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/refundPayment"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_entity_group/refund_payment"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "REFUND_PAYMENT_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/payment_gateway_authorization_log_payment_authorization_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_GATEWAY_AUTHORIZATION_LOG_PAYMENT_AUTHORIZATION_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PAYMENT_GATEWAY_AUTHORIZATION_LOG_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/paymentAuthorization"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_entity_group/payment_authorization"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PAYMENT_AUTHORIZATION_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/pay_gat_aut_log_pay_gat_int_typ_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAY_GAT_AUT_LOG_PAY_GAT_INT_TYP_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PAYMENT_GATEWAY_AUTHORIZATION_LOG_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/paymentGatewayInteractionType"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_entity_group/payment_gateway_interaction_type"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PAYMENT_GATEWAY_INTERACTION_TYPE_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/payment_gateway_authorization_log_payment_gateway_result_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_GATEWAY_AUTHORIZATION_LOG_PAYMENT_GATEWAY_RESULT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PAYMENT_GATEWAY_AUTHORIZATION_LOG_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/paymentGatewayResult"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_entity_group/payment_gateway_result_code"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PAYMENT_GATEWAY_RESULT_CODE_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/payment_invoice_allocation_payment_invoice_application_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_INVOICE_ALLOCATION_PAYMENT_INVOICE_APPLICATION_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PAYMENT_INVOICE_ALLOCATION_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/paymentInvoiceApplication"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_entity_group/payment_invoice_application"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PAYMENT_INVOICE_APPLICATION_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/payment_invoice_allocation_related_payment_allocation_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_INVOICE_ALLOCATION_RELATED_PAYMENT_ALLOCATION_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PAYMENT_INVOICE_ALLOCATION_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/relatedPaymentAllocation"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_entity_group/payment_allocation"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PAYMENT_ALLOCATION_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/payment_account_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_ACCOUNT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PAYMENT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/account"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/account_entity_group/account"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "ACCOUNT_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/payment_sales_order_payment_summary_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_SALES_ORDER_PAYMENT_SUMMARY_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PAYMENT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/salesOrderPaymentSummary"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/sales_order_entity_group/sales_order_payment_summary"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "SALES_ORDER_PAYMENT_SUMMARY_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/payment_latest_gateway_result_code_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_LATEST_GATEWAY_RESULT_CODE_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PAYMENT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/latestGatewayResultCode"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_entity_group/payment_gateway_result_code"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PAYMENT_GATEWAY_RESULT_CODE_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/payment_payment_group_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_PAYMENT_GROUP_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PAYMENT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/paymentGroup"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_entity_group/payment_group"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PAYMENT_GROUP_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/payment_payment_method_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_PAYMENT_METHOD_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PAYMENT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/paymentMethod"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_method_entity_group/payment_method"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PAYMENT_METHOD_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/payment_payment_gateway_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_PAYMENT_GATEWAY_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PAYMENT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/paymentGateway"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_entity_group/payment_gateway"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PAYMENT_GATEWAY_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/payment_payment_treatment_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_PAYMENT_TREATMENT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PAYMENT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/paymentTreatment"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_entity_group/payment_treatment"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PAYMENT_TREATMENT_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/payment_internal_business_unit_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_INTERNAL_BUSINESS_UNIT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PAYMENT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/internalBusinessUnit"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/party_entity_group/internal_business_unit"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "INTERNAL_BUSINESS_UNIT_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/payment_credit_memo_allocation_related_payment_allocation_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_CREDIT_MEMO_ALLOCATION_RELATED_PAYMENT_ALLOCATION_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PAYMENT_CREDIT_MEMO_ALLOCATION_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/relatedPaymentAllocation"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_entity_group/payment_allocation"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PAYMENT_ALLOCATION_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/payment_treatment_payment_treatment_method_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_TREATMENT_PAYMENT_TREATMENT_METHOD_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PAYMENT_TREATMENT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/paymentTreatmentMethod"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_entity_group/payment_treatment_method"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PAYMENT_TREATMENT_METHOD_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/payment_treatment_payment_policy_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_TREATMENT_PAYMENT_POLICY_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PAYMENT_TREATMENT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/paymentPolicy"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_entity_group/payment_policy"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PAYMENT_POLICY_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/payment_authorization_sales_order_payment_summary_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_AUTHORIZATION_SALES_ORDER_PAYMENT_SUMMARY_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PAYMENT_AUTHORIZATION_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/salesOrderPaymentSummary"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/sales_order_entity_group/sales_order_payment_summary"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "SALES_ORDER_PAYMENT_SUMMARY_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/payment_authorization_payment_group_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_AUTHORIZATION_PAYMENT_GROUP_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PAYMENT_AUTHORIZATION_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/paymentGroup"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_entity_group/payment_group"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PAYMENT_GROUP_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/payment_authorization_payment_gateway_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_AUTHORIZATION_PAYMENT_GATEWAY_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PAYMENT_AUTHORIZATION_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/paymentGateway"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_entity_group/payment_gateway"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PAYMENT_GATEWAY_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/payment_authorization_payment_gateway_result_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_AUTHORIZATION_PAYMENT_GATEWAY_RESULT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PAYMENT_AUTHORIZATION_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/paymentGatewayResult"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_entity_group/payment_gateway_result_code"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PAYMENT_GATEWAY_RESULT_CODE_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/payment_authorization_payment_method_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_AUTHORIZATION_PAYMENT_METHOD_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PAYMENT_AUTHORIZATION_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/paymentMethodID"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_method_entity_group/payment_method"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PAYMENT_METHOD_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/refund_payment_allocation_capture_payment_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.REFUND_PAYMENT_ALLOCATION_CAPTURE_PAYMENT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{REFUND_PAYMENT_ALLOCATION_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/capturePayment"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_entity_group/capture_payment"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "CAPTURE_PAYMENT_CAPTURE_PAYMENT_ID",
+            "rr:parent" : "CAPTURE_PAYMENT_ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/refund_payment_allocation_related_refund_allocation_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.REFUND_PAYMENT_ALLOCATION_RELATED_REFUND_ALLOCATION_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{REFUND_PAYMENT_ALLOCATION_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/relatedRefundAllocation"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_entity_group/refund_allocation"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "REFUND_ALLOCATION_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/refund_payment_allocation_refund_payment_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.REFUND_PAYMENT_ALLOCATION_REFUND_PAYMENT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{REFUND_PAYMENT_ALLOCATION_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/refundPayment"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_entity_group/refund_payment"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "REFUND_PAYMENT_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/refund_payment_account_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.REFUND_PAYMENT_ACCOUNT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{REFUND_PAYMENT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/account"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/account_entity_group/account"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "ACCOUNT_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/refund_payment_sales_order_payment_summary_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.REFUND_PAYMENT_SALES_ORDER_PAYMENT_SUMMARY_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{REFUND_PAYMENT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/salesOrderPaymentSummary"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/sales_order_entity_group/sales_order_payment_summary"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "SALES_ORDER_PAYMENT_SUMMARY_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/refund_payment_latest_gateway_result_code_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.REFUND_PAYMENT_LATEST_GATEWAY_RESULT_CODE_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{REFUND_PAYMENT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/latestGatewayResultCode"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_entity_group/payment_gateway_result_code"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PAYMENT_GATEWAY_RESULT_CODE_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/refund_payment_payment_group_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.REFUND_PAYMENT_PAYMENT_GROUP_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{REFUND_PAYMENT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/paymentGroup"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_entity_group/payment_group"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PAYMENT_GROUP_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/refund_payment_payment_method_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.REFUND_PAYMENT_PAYMENT_METHOD_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{REFUND_PAYMENT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/paymentMethod"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_method_entity_group/payment_method"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PAYMENT_METHOD_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/refund_payment_payment_gateway_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.REFUND_PAYMENT_PAYMENT_GATEWAY_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{REFUND_PAYMENT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/paymentGateway"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_entity_group/payment_gateway"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PAYMENT_GATEWAY_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/refund_payment_payment_treatment_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.REFUND_PAYMENT_PAYMENT_TREATMENT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{REFUND_PAYMENT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/paymentTreatment"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_entity_group/payment_treatment"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PAYMENT_TREATMENT_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/refund_payment_internal_business_unit_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.REFUND_PAYMENT_INTERNAL_BUSINESS_UNIT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{REFUND_PAYMENT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/internalBusinessUnit"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/party_entity_group/internal_business_unit"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "INTERNAL_BUSINESS_UNIT_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/payment_gateway_payment_gateway_provider_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_GATEWAY_PAYMENT_GATEWAY_PROVIDER_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PAYMENT_GATEWAY_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/paymentGatewayProvider"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_entity_group/payment_gateway_provider"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PAYMENT_GATEWAY_PROVIDER_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/capture_payment_payment_authorization_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.CAPTURE_PAYMENT_PAYMENT_AUTHORIZATION_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{CAPTURE_PAYMENT_CAPTURE_PAYMENT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/paymentAuthorization"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_entity_group/payment_authorization"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PAYMENT_AUTHORIZATION_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/capture_payment_account_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.CAPTURE_PAYMENT_ACCOUNT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{CAPTURE_PAYMENT_CAPTURE_PAYMENT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/account"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/account_entity_group/account"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "ACCOUNT_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/capture_payment_sales_order_payment_summary_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.CAPTURE_PAYMENT_SALES_ORDER_PAYMENT_SUMMARY_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{CAPTURE_PAYMENT_CAPTURE_PAYMENT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/salesOrderPaymentSummary"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/sales_order_entity_group/sales_order_payment_summary"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "SALES_ORDER_PAYMENT_SUMMARY_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/capture_payment_latest_gateway_result_code_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.CAPTURE_PAYMENT_LATEST_GATEWAY_RESULT_CODE_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{CAPTURE_PAYMENT_CAPTURE_PAYMENT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/latestGatewayResultCode"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_entity_group/payment_gateway_result_code"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PAYMENT_GATEWAY_RESULT_CODE_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/capture_payment_payment_group_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.CAPTURE_PAYMENT_PAYMENT_GROUP_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{CAPTURE_PAYMENT_CAPTURE_PAYMENT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/paymentGroup"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_entity_group/payment_group"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PAYMENT_GROUP_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/capture_payment_payment_method_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.CAPTURE_PAYMENT_PAYMENT_METHOD_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{CAPTURE_PAYMENT_CAPTURE_PAYMENT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/paymentMethod"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_method_entity_group/payment_method"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PAYMENT_METHOD_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/capture_payment_payment_gateway_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.CAPTURE_PAYMENT_PAYMENT_GATEWAY_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{CAPTURE_PAYMENT_CAPTURE_PAYMENT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/paymentGateway"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_entity_group/payment_gateway"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PAYMENT_GATEWAY_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/capture_payment_payment_treatment_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.CAPTURE_PAYMENT_PAYMENT_TREATMENT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{CAPTURE_PAYMENT_CAPTURE_PAYMENT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/paymentTreatment"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_entity_group/payment_treatment"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PAYMENT_TREATMENT_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/capture_payment_internal_business_unit_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.CAPTURE_PAYMENT_INTERNAL_BUSINESS_UNIT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{CAPTURE_PAYMENT_CAPTURE_PAYMENT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/internalBusinessUnit"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/party_entity_group/internal_business_unit"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "INTERNAL_BUSINESS_UNIT_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/pay_gat_int_log_pay_gat_int_typ_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAY_GAT_INT_LOG_PAY_GAT_INT_TYP_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PAYMENT_GATEWAY_INTERACTION_LOG_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/paymentGatewayInteractionType"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_entity_group/payment_gateway_interaction_type"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PAYMENT_GATEWAY_INTERACTION_TYPE_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/payment_entity_group/payment_gateway_interaction_log_payment_gateway_result_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PAYMENT_ENTITY_GROUP.PAYMENT_GATEWAY_INTERACTION_LOG_PAYMENT_GATEWAY_RESULT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PAYMENT_GATEWAY_INTERACTION_LOG_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/paymentGatewayResult"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/payment_entity_group/payment_gateway_result_code"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PAYMENT_GATEWAY_RESULT_CODE_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    }
+  ]
+}

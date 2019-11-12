@@ -1,0 +1,32 @@
+#%Vocabulary 1.0
+base: http://cloudinformationmodel.org/model/
+vocabulary: Id Property Group
+propertyTerms:
+  contactPointType:
+    displayName: Contact Point Type
+    description: Type of contact point, specifically e.g. Contact Point Phone, Contact Point Email, Contact Point Address, Contact Point Location, Contact Point Social
+    range: ContactPointType
+  additionalNameType:
+    displayName: Additional Name Type
+    description: Reference to type of trade name e.g. also known as, doing business as
+    range: any
+  optInPriority:
+    displayName: Opt In Priority
+    description: In what order should channels for a data subjects opt in/out be evaluated
+    range: any
+  partyRole:
+    displayName: Party Role
+    description: Reference to Party Role, populated if contact point only applicable in context of a role
+    range: any
+  id:
+    displayName: Party Identification Id
+    description: Primary key
+    range: any
+  party:
+    displayName: Party
+    description: Reference to party
+    range: Party
+  name:
+    displayName: Primary Phone Type Name
+    description: Is it primarily a 'Home', 'Business', 'Fax', 'Mobile' or 'Other' phone
+    range: any

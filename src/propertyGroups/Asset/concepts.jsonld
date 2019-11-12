@@ -1,0 +1,16 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "AssetPropertyGroup",
+  "name": "Asset Property Group",
+  "@type": "PropertyGroup",
+  "version": "0.1",
+  "propertyConcepts": [
+    {
+      "@id": "userDeviceSession",
+      "@type": "Property",
+      "description": "unique ID for a user's use of a device for a periof of time",
+      "name": "User Device Session",
+      "range": "DeviceUserSession"
+    }
+  ]
+}

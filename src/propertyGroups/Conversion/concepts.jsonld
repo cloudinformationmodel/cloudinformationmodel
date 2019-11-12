@@ -1,0 +1,37 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "ConversionPropertyGroup",
+  "name": "Conversion Property Group",
+  "@type": "PropertyGroup",
+  "version": "0.1",
+  "propertyConcepts": [
+    {
+      "@id": "isConverted",
+      "@type": "Property",
+      "description": "Indicates whether the Lead has been converted (true) or not (false)",
+      "name": "Is Converted",
+      "range": "DataType"
+    },
+    {
+      "@id": "convertedDate",
+      "@type": "Property",
+      "description": "Date on which this Lead was converted.",
+      "name": "Converted Date",
+      "range": "DataType"
+    },
+    {
+      "@id": "convertedToAccount",
+      "@type": "Property",
+      "description": "Object reference ID that points to the Account into which the Lead has been converted.",
+      "name": "Converted To Account",
+      "range": "Account"
+    },
+    {
+      "@id": "convertedToAccountContact",
+      "@type": "Property",
+      "description": "Object reference ID that points to the AccountContact into which the Lead has been converted.",
+      "name": "Converted To AccountContact",
+      "range": "AccountContact"
+    }
+  ]
+}

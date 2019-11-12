@@ -1,0 +1,58 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "SystemPropertyGroup",
+  "name": "System Property Group",
+  "@type": "PropertyGroup",
+  "version": "0.1",
+  "propertyConcepts": [
+    {
+      "@id": "name",
+      "@type": "Property",
+      "description": "the name/label of a Sales Order System Status value",
+      "name": "Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "salesOrderProduct",
+      "@type": "Property",
+      "description": "User who created the record",
+      "name": "Sales Order Product",
+      "range": "SalesOrderProduct"
+    },
+    {
+      "@id": "createdDate",
+      "@type": "Property",
+      "description": "Date and time when this record was created",
+      "name": "Created Date",
+      "range": "DataType"
+    },
+    {
+      "@id": "lastModifiedDate",
+      "@type": "Property",
+      "description": "Date and time when a user last modified this record",
+      "name": "Last Modified Date",
+      "range": "DataType"
+    },
+    {
+      "@id": "systemModstamp",
+      "@type": "Property",
+      "description": "Date and time when this record was last modified by a user or by an automated process",
+      "name": "System Modified Stamp",
+      "range": "DataType"
+    },
+    {
+      "@id": "externalRecord",
+      "@type": "Property",
+      "description": "Corresponding record Id from external data source system",
+      "name": "External Record Id",
+      "range": "DataType"
+    },
+    {
+      "@id": "Id",
+      "@type": "Property",
+      "description": "Generic Primary Key",
+      "name": "Identifier",
+      "range": "DataType"
+    }
+  ]
+}

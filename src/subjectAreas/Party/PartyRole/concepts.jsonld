@@ -1,0 +1,678 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "PartyRoleEntityGroup",
+  "name": "Party Role",
+  "@type": "EntityGroup",
+  "version": "0.1",
+  "subjectArea": {
+    "@id": "PartySubjectArea"
+  },
+  "description": "Example Entities included: Party Role, Buyer Role, Actor Role, Customer Role",
+  "classConcepts": [
+    {
+      "@id": "Customer",
+      "name": "Customer",
+      "@type": "Class",
+      "subClassOf": "PartyRole",
+      "description": "Information about a party playing role of customer e.g. life time value, life cycle status"
+    },
+    {
+      "@id": "Seller",
+      "name": "Seller",
+      "@type": "Class",
+      "subClassOf": "PartyRole",
+      "description": "Information about a party playing role of seller e.g. customer satisfaction score"
+    },
+    {
+      "@id": "Supplier",
+      "name": "Supplier",
+      "@type": "Class",
+      "subClassOf": "PartyRole",
+      "description": "Information about a party playing role of supplier e.g. vendor ranking"
+    },
+    {
+      "@id": "Competitor",
+      "name": "Competitor",
+      "@type": "Class",
+      "subClassOf": "PartyRole",
+      "description": "Information about a party playing role of competitor e.g. strength (in products), weaknesses (in offerings), opportunities (to overtake), threats (to our business)"
+    },
+    {
+      "@id": "CustomerStatusHistory",
+      "name": "Customer Status History",
+      "@type": "Class",
+      "description": "History of when customer changed frome one status to another"
+    },
+    {
+      "@id": "PartyRole",
+      "@type": "Class",
+      "name": "Party Role",
+      "description": "Trading roles a party may play at the same time i.e. Customer, Supplier, Seller, Competitor, Worker"
+    }
+  ],
+  "propertyConcepts": [
+    {
+      "@id": "competitiveCostAvoidanceRank",
+      "@type": "Property",
+      "domain": [
+        "Supplier"
+      ]
+    },
+    {
+      "@id": "satisfactionCustomerServiceRank",
+      "@type": "Property",
+      "domain": [
+        "Supplier"
+      ]
+    },
+    {
+      "@id": "contractWeightScore",
+      "@type": "Property",
+      "domain": [
+        "Supplier"
+      ]
+    },
+    {
+      "@id": "customerStatus",
+      "@type": "Property",
+      "domain": [
+        "Customer"
+      ]
+    },
+    {
+      "@id": "totalLifeTimeValue",
+      "@type": "Property",
+      "domain": [
+        "Customer"
+      ]
+    },
+    {
+      "@id": "leadGenerationCount",
+      "@type": "Property",
+      "domain": [
+        "Seller"
+      ]
+    },
+    {
+      "@id": "competitiveMarketingRank",
+      "@type": "Property",
+      "domain": [
+        "Supplier"
+      ]
+    },
+    {
+      "@id": "communityParticipationCount",
+      "@type": "Property",
+      "domain": [
+        "Seller"
+      ]
+    },
+    {
+      "@id": "supplierType",
+      "@type": "Property",
+      "domain": [
+        "Supplier"
+      ]
+    },
+    {
+      "@id": "estimatedPartnerGrossMargin",
+      "@type": "Property",
+      "domain": [
+        "Seller"
+      ]
+    },
+    {
+      "@id": "creditRating",
+      "@type": "Property",
+      "domain": [
+        "Seller"
+      ]
+    },
+    {
+      "@id": "last24MonthsNewRevenueAmount",
+      "@type": "Property",
+      "domain": [
+        "Customer"
+      ]
+    },
+    {
+      "@id": "competitiveProductPriceRank",
+      "@type": "Property",
+      "domain": [
+        "Supplier"
+      ]
+    },
+    {
+      "@id": "contractDeliveryCorrectnessRate",
+      "@type": "Property",
+      "domain": [
+        "Supplier"
+      ]
+    },
+    {
+      "@id": "supplierScore",
+      "@type": "Property",
+      "domain": [
+        "Supplier"
+      ]
+    },
+    {
+      "@id": "competitorStrengths",
+      "@type": "Property",
+      "domain": [
+        "Competitor"
+      ]
+    },
+    {
+      "@id": "jointBusinessPlanExist",
+      "@type": "Property",
+      "domain": [
+        "Seller"
+      ]
+    },
+    {
+      "@id": "id",
+      "@type": "Property",
+      "domain": [
+        "Competitor",
+        "Customer",
+        "Supplier",
+        "Seller",
+        "CustomerStatusHistory"
+      ]
+    },
+    {
+      "@id": "systemLoginCount",
+      "@type": "Property",
+      "domain": [
+        "Seller"
+      ]
+    },
+    {
+      "@id": "competitorFromDate",
+      "@type": "Property",
+      "domain": [
+        "Competitor"
+      ]
+    },
+    {
+      "@id": "totalBookingsAmount",
+      "@type": "Property",
+      "domain": [
+        "Customer"
+      ]
+    },
+    {
+      "@id": "competitiveWarrantyRank",
+      "@type": "Property",
+      "domain": [
+        "Supplier"
+      ]
+    },
+    {
+      "@id": "opportunityInvolvementCount",
+      "@type": "Property",
+      "domain": [
+        "Seller"
+      ]
+    },
+    {
+      "@id": "sellerType",
+      "@type": "Property",
+      "domain": [
+        "Seller"
+      ]
+    },
+    {
+      "@id": "partyRole",
+      "@type": "Property",
+      "domain": [
+        "CustomerStatusHistory"
+      ]
+    },
+    {
+      "@id": "last12MonthsSupportCallCount",
+      "@type": "Property",
+      "domain": [
+        "Customer"
+      ]
+    },
+    {
+      "@id": "satisfactionScore",
+      "@type": "Property",
+      "domain": [
+        "Seller"
+      ]
+    },
+    {
+      "@id": "totalProfitContributionAmount",
+      "@type": "Property",
+      "domain": [
+        "Customer"
+      ]
+    },
+    {
+      "@id": "newCustomerAcquisitionCount",
+      "@type": "Property",
+      "domain": [
+        "Seller"
+      ]
+    },
+    {
+      "@id": "contractInvoiceAccuracyRate",
+      "@type": "Property",
+      "domain": [
+        "Supplier"
+      ]
+    },
+    {
+      "@id": "netPromoterScore",
+      "@type": "Property",
+      "domain": [
+        "Customer"
+      ]
+    },
+    {
+      "@id": "competitorThreats",
+      "@type": "Property",
+      "domain": [
+        "Competitor"
+      ]
+    },
+    {
+      "@id": "marketingEmailResponseRate",
+      "@type": "Property",
+      "domain": [
+        "Customer"
+      ]
+    },
+    {
+      "@id": "averageConvertedLeadAmount",
+      "@type": "Property",
+      "domain": [
+        "Seller"
+      ]
+    },
+    {
+      "@id": "salesAmount",
+      "@type": "Property",
+      "domain": [
+        "Seller"
+      ]
+    },
+    {
+      "@id": "contractProductReturnRate",
+      "@type": "Property",
+      "domain": [
+        "Supplier"
+      ]
+    },
+    {
+      "@id": "adReachRate",
+      "@type": "Property",
+      "domain": [
+        "Competitor"
+      ]
+    },
+    {
+      "@id": "trainingParticipationCount",
+      "@type": "Property",
+      "domain": [
+        "Seller"
+      ]
+    },
+    {
+      "@id": "satisfactionTechnicalSupportRank",
+      "@type": "Property",
+      "domain": [
+        "Supplier"
+      ]
+    },
+    {
+      "@id": "adKeywords",
+      "@type": "Property",
+      "domain": [
+        "Competitor"
+      ]
+    },
+    {
+      "@id": "activeFromDate",
+      "@type": "Property",
+      "domain": [
+        "Supplier",
+        "Seller"
+      ]
+    },
+    {
+      "@id": "contractOnTimeDeliveryRate",
+      "@type": "Property",
+      "domain": [
+        "Supplier"
+      ]
+    },
+    {
+      "@id": "socialMediaPostRate",
+      "@type": "Property",
+      "domain": [
+        "Competitor"
+      ]
+    },
+    {
+      "@id": "demonstrationsGivenCount",
+      "@type": "Property",
+      "domain": [
+        "Seller"
+      ]
+    },
+    {
+      "@id": "prospectRating",
+      "@type": "Property",
+      "domain": [
+        "Customer"
+      ]
+    },
+    {
+      "@id": "customerNumber",
+      "@type": "Property",
+      "domain": [
+        "Customer"
+      ]
+    },
+    {
+      "@id": "activeToDate",
+      "@type": "Property",
+      "domain": [
+        "Supplier",
+        "Seller"
+      ]
+    },
+    {
+      "@id": "marketingDevelopmentAmount",
+      "@type": "Property",
+      "domain": [
+        "Seller"
+      ]
+    },
+    {
+      "@id": "documentationDownloadCount",
+      "@type": "Property",
+      "domain": [
+        "Seller"
+      ]
+    },
+    {
+      "@id": "competitorWeaknesses",
+      "@type": "Property",
+      "domain": [
+        "Competitor"
+      ]
+    },
+    {
+      "@id": "competitiveWeightScore",
+      "@type": "Property",
+      "domain": [
+        "Supplier"
+      ]
+    },
+    {
+      "@id": "ptoENumber",
+      "@type": "Property",
+      "domain": [
+        "Competitor"
+      ]
+    },
+    {
+      "@id": "isCarrier",
+      "@type": "Property",
+      "domain": [
+        "Supplier"
+      ]
+    },
+    {
+      "@id": "competitorLeverageOpportunities",
+      "@type": "Property",
+      "domain": [
+        "Competitor"
+      ]
+    },
+    {
+      "@id": "trialParticipationCount",
+      "@type": "Property",
+      "domain": [
+        "Seller"
+      ]
+    },
+    {
+      "@id": "totalContractedAmount",
+      "@type": "Property",
+      "domain": [
+        "Customer"
+      ]
+    },
+    {
+      "@id": "contractSourcingCycleDays",
+      "@type": "Property",
+      "domain": [
+        "Supplier"
+      ]
+    },
+    {
+      "@id": "currentRatio",
+      "@type": "Property",
+      "domain": [
+        "Competitor"
+      ]
+    },
+    {
+      "@id": "successStoryCount",
+      "@type": "Property",
+      "domain": [
+        "Seller"
+      ]
+    },
+    {
+      "@id": "satisfactionWeightScore",
+      "@type": "Property",
+      "domain": [
+        "Supplier"
+      ]
+    },
+    {
+      "@id": "competitorObjectives",
+      "@type": "Property",
+      "domain": [
+        "Competitor"
+      ]
+    },
+    {
+      "@id": "customerSatisfactionScore",
+      "@type": "Property",
+      "domain": [
+        "Customer",
+        "Seller"
+      ]
+    },
+    {
+      "@id": "contractBudgetCostRate",
+      "@type": "Property",
+      "domain": [
+        "Supplier"
+      ]
+    },
+    {
+      "@id": "assetReturnRatio",
+      "@type": "Property",
+      "domain": [
+        "Competitor"
+      ]
+    },
+    {
+      "@id": "trainingCertificationCount",
+      "@type": "Property",
+      "domain": [
+        "Seller"
+      ]
+    },
+    {
+      "@id": "originatingCustomerSource",
+      "@type": "Property",
+      "domain": [
+        "Customer"
+      ]
+    },
+    {
+      "@id": "opportunityWinRate",
+      "@type": "Property",
+      "domain": [
+        "Seller"
+      ]
+    },
+    {
+      "@id": "pressMentionsRate",
+      "@type": "Property",
+      "domain": [
+        "Competitor"
+      ]
+    },
+    {
+      "@id": "assetTurnoverRatio",
+      "@type": "Property",
+      "domain": [
+        "Competitor"
+      ]
+    },
+    {
+      "@id": "churnScore",
+      "@type": "Property",
+      "domain": [
+        "Customer"
+      ]
+    },
+    {
+      "@id": "contractWeightPercent",
+      "@type": "Property",
+      "domain": [
+        "Supplier"
+      ]
+    },
+    {
+      "@id": "partyRoleStatus",
+      "@type": "Property",
+      "domain": [
+        "CustomerStatusHistory"
+      ]
+    },
+    {
+      "@id": "contractSLAIssueRate",
+      "@type": "Property",
+      "domain": [
+        "Supplier"
+      ]
+    },
+    {
+      "@id": "productReturnRate",
+      "@type": "Property",
+      "domain": [
+        "Seller"
+      ]
+    },
+    {
+      "@id": "competitiveWeightPercent",
+      "@type": "Property",
+      "domain": [
+        "Supplier"
+      ]
+    },
+    {
+      "@id": "inventoryValueAmount",
+      "@type": "Property",
+      "domain": [
+        "Seller"
+      ]
+    },
+    {
+      "@id": "majorPostSaleSupportNeeded",
+      "@type": "Property",
+      "domain": [
+        "Seller"
+      ]
+    },
+    {
+      "@id": "contractProductQualityRate",
+      "@type": "Property",
+      "domain": [
+        "Supplier"
+      ]
+    },
+    {
+      "@id": "satisfactionWeightPercent",
+      "@type": "Property",
+      "domain": [
+        "Supplier"
+      ]
+    },
+    {
+      "@id": "last12MonthsNewRevenueAmount",
+      "@type": "Property",
+      "domain": [
+        "Customer"
+      ]
+    },
+    {
+      "@id": "supplierSpend",
+      "@type": "Property",
+      "domain": [
+        "Supplier"
+      ]
+    },
+    {
+      "@id": "cashFlowGrowth",
+      "@type": "Property",
+      "domain": [
+        "Competitor"
+      ]
+    },
+    {
+      "@id": "competitorToDate",
+      "@type": "Property",
+      "domain": [
+        "Competitor"
+      ]
+    },
+    {
+      "@id": "startDateTime",
+      "@type": "Property",
+      "domain": [
+        "CustomerStatusHistory"
+      ]
+    },
+    {
+      "@id": "eventParticipationCount",
+      "@type": "Property",
+      "domain": [
+        "Seller"
+      ]
+    },
+    {
+      "@id": "endDateTIme",
+      "@type": "Property",
+      "domain": [
+        "CustomerStatusHistory"
+      ]
+    },
+    {
+      "@id": "netProfitMargin",
+      "@type": "Property",
+      "domain": [
+        "Competitor"
+      ]
+    },
+    {
+      "@id": "satisfactionEthicsRank",
+      "@type": "Property",
+      "domain": [
+        "Supplier"
+      ]
+    }
+  ]
+}

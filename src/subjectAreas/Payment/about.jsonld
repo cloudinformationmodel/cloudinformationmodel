@@ -1,0 +1,14 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "PaymentSubjectArea",
+  "@type": "SubjectArea",
+  "version": "0.1",
+  "name": "Payment",
+  "description": "A submitted payment. Includes information about whether a submitted payment was successfully processed or not.",
+  "entityGroups": [
+    {
+      "@id": "PaymentEntityGroup",
+      "name": "Payment"
+    }
+  ]
+}

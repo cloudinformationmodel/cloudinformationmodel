@@ -1,0 +1,473 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "AccountEntityGroup",
+  "name": "Account",
+  "@type": "EntityGroup",
+  "version": "0.1",
+  "subjectArea": {
+    "@id": "PartySubjectArea"
+  },
+  "description": "Example Entities included: Account, Account Contact, Bill Frequency",
+  "classConcepts": [
+    {
+      "@id": "Account",
+      "name": "Account",
+      "@type": "Class",
+      "description": "How the party want to interact with your enterprise e.g. have multiple billing accounts"
+    },
+    {
+      "@id": "AccountContact",
+      "name": "Account Contact",
+      "@type": "Class",
+      "description": "An individual who has a role specific to an Account."
+    },
+    {
+      "@id": "AccountContactRole",
+      "name": "Account Contact Role",
+      "@type": "Class",
+      "description": "What role does a contact play on an account e.g. decision maker, influencer"
+    },
+    {
+      "@id": "AccountPartner",
+      "name": "Account Partner",
+      "@type": "Class",
+      "description": "State what partner (account) is related to/have access to another account"
+    },
+    {
+      "@id": "BillingFrequency",
+      "name": "Billing Frequency",
+      "@type": "Class",
+      "description": "Describes a period of time used for recurring bills e.g. monthly or semi-monthly"
+    }
+  ],
+  "propertyConcepts": [
+    {
+      "@id": "salesPhone",
+      "@type": "Property",
+      "domain": [
+        "Account"
+      ]
+    },
+    {
+      "@id": "orderDeliveryMethod",
+      "@type": "Property",
+      "domain": [
+        "Account"
+      ]
+    },
+    {
+      "@id": "generalLedgerAccount",
+      "@type": "Property",
+      "domain": [
+        "Account"
+      ]
+    },
+    {
+      "@id": "account",
+      "@type": "Property",
+      "domain": [
+        "AccountPartner",
+        "AccountContact"
+      ]
+    },
+    {
+      "@id": "useAsSalesAccount",
+      "@type": "Property",
+      "domain": [
+        "Account"
+      ]
+    },
+    {
+      "@id": "balanceAmountLimit",
+      "@type": "Property",
+      "domain": [
+        "Account"
+      ]
+    },
+    {
+      "@id": "useAsShippingAccount",
+      "@type": "Property",
+      "domain": [
+        "Account"
+      ]
+    },
+    {
+      "@id": "mobilePhone",
+      "@type": "Property",
+      "domain": [
+        "AccountContact"
+      ]
+    },
+    {
+      "@id": "contactEmail",
+      "@type": "Property",
+      "domain": [
+        "AccountContact"
+      ]
+    },
+    {
+      "@id": "thirtyDayBalanceAmount",
+      "@type": "Property",
+      "domain": [
+        "Account"
+      ]
+    },
+    {
+      "@id": "name",
+      "@type": "Property",
+      "domain": [
+        "Account",
+        "BillingFrequency"
+      ]
+    },
+    {
+      "@id": "activeToDate",
+      "@type": "Property",
+      "domain": [
+        "AccountContactRole"
+      ]
+    },
+    {
+      "@id": "defaultFreightTerms",
+      "@type": "Property",
+      "domain": [
+        "Account"
+      ]
+    },
+    {
+      "@id": "individual",
+      "@type": "Property",
+      "domain": [
+        "AccountContact"
+      ]
+    },
+    {
+      "@id": "reportsToAccountContact",
+      "@type": "Property",
+      "domain": [
+        "AccountContact"
+      ]
+    },
+    {
+      "@id": "sLAExpirationDate",
+      "@type": "Property",
+      "domain": [
+        "Account"
+      ]
+    },
+    {
+      "@id": "faxPhone",
+      "@type": "Property",
+      "domain": [
+        "Account",
+        "AccountContact"
+      ]
+    },
+    {
+      "@id": "holdStatusReason",
+      "@type": "Property",
+      "domain": [
+        "Account"
+      ]
+    },
+    {
+      "@id": "accountContactRoleType",
+      "@type": "Property",
+      "domain": [
+        "AccountContactRole"
+      ]
+    },
+    {
+      "@id": "businessPhone",
+      "@type": "Property",
+      "domain": [
+        "AccountContact"
+      ]
+    },
+    {
+      "@id": "sLAType",
+      "@type": "Property",
+      "domain": [
+        "Account"
+      ]
+    },
+    {
+      "@id": "accountType",
+      "@type": "Property",
+      "domain": [
+        "Account"
+      ]
+    },
+    {
+      "@id": "assignTerritoryFlag",
+      "@type": "Property",
+      "domain": [
+        "Account"
+      ]
+    },
+    {
+      "@id": "useAsBillingAccount",
+      "@type": "Property",
+      "domain": [
+        "Account"
+      ]
+    },
+    {
+      "@id": "sixtyDayBalanceAmount",
+      "@type": "Property",
+      "domain": [
+        "Account"
+      ]
+    },
+    {
+      "@id": "departmentName",
+      "@type": "Property",
+      "domain": [
+        "AccountContact"
+      ]
+    },
+    {
+      "@id": "id",
+      "@type": "Property",
+      "domain": [
+        "AccountContactRole",
+        "Account",
+        "BillingFrequency",
+        "AccountPartner",
+        "AccountContact"
+      ]
+    },
+    {
+      "@id": "autoPaymentMethod",
+      "@type": "Property",
+      "domain": [
+        "Account"
+      ]
+    },
+    {
+      "@id": "billDeliveryMethod",
+      "@type": "Property",
+      "domain": [
+        "Account"
+      ]
+    },
+    {
+      "@id": "ninetyDayBalanceAmount",
+      "@type": "Property",
+      "domain": [
+        "Account"
+      ]
+    },
+    {
+      "@id": "assistantPhone",
+      "@type": "Property",
+      "domain": [
+        "AccountContact"
+      ]
+    },
+    {
+      "@id": "shippingPhoneid",
+      "@type": "Property",
+      "domain": [
+        "Account"
+      ]
+    },
+    {
+      "@id": "billFrequency",
+      "@type": "Property",
+      "domain": [
+        "Account"
+      ]
+    },
+    {
+      "@id": "description",
+      "@type": "Property",
+      "domain": [
+        "Account"
+      ]
+    },
+    {
+      "@id": "useAsServiceAccount",
+      "@type": "Property",
+      "domain": [
+        "Account"
+      ]
+    },
+    {
+      "@id": "contactNote",
+      "@type": "Property",
+      "domain": [
+        "AccountContact"
+      ]
+    },
+    {
+      "@id": "assistantName",
+      "@type": "Property",
+      "domain": [
+        "AccountContact"
+      ]
+    },
+    {
+      "@id": "mailingAddress",
+      "@type": "Property",
+      "domain": [
+        "AccountContact"
+      ]
+    },
+    {
+      "@id": "primarySalesContactPoint",
+      "@type": "Property",
+      "domain": [
+        "Account"
+      ]
+    },
+    {
+      "@id": "partnerAccount",
+      "@type": "Property",
+      "domain": [
+        "AccountPartner"
+      ]
+    },
+    {
+      "@id": "partyRole",
+      "@type": "Property",
+      "domain": [
+        "Account"
+      ]
+    },
+    {
+      "@id": "billContactAddress",
+      "@type": "Property",
+      "domain": [
+        "Account"
+      ]
+    },
+    {
+      "@id": "shippingEmail",
+      "@type": "Property",
+      "domain": [
+        "Account"
+      ]
+    },
+    {
+      "@id": "indirectRelationAccountContact",
+      "@type": "Property",
+      "domain": [
+        "AccountContact"
+      ]
+    },
+    {
+      "@id": "number",
+      "@type": "Property",
+      "domain": [
+        "Account"
+      ]
+    },
+    {
+      "@id": "autoPaymentAmount",
+      "@type": "Property",
+      "domain": [
+        "Account"
+      ]
+    },
+    {
+      "@id": "parentAccount",
+      "@type": "Property",
+      "domain": [
+        "Account"
+      ]
+    },
+    {
+      "@id": "shippingContact",
+      "@type": "Property",
+      "domain": [
+        "Account"
+      ]
+    },
+    {
+      "@id": "paymentTerm",
+      "@type": "Property",
+      "domain": [
+        "Account"
+      ]
+    },
+    {
+      "@id": "balanceAmount",
+      "@type": "Property",
+      "domain": [
+        "Account"
+      ]
+    },
+    {
+      "@id": "title",
+      "@type": "Property",
+      "domain": [
+        "AccountContact"
+      ]
+    },
+    {
+      "@id": "billingFrequencyName",
+      "@type": "Property",
+      "domain": [
+        "BillingFrequency"
+      ]
+    },
+    {
+      "@id": "accountContact",
+      "@type": "Property",
+      "domain": [
+        "AccountContactRole"
+      ]
+    },
+    {
+      "@id": "shippingAddress",
+      "@type": "Property",
+      "domain": [
+        "Account"
+      ]
+    },
+    {
+      "@id": "autoPayEnabledFlag",
+      "@type": "Property",
+      "domain": [
+        "Account"
+      ]
+    },
+    {
+      "@id": "homePhone",
+      "@type": "Property",
+      "domain": [
+        "AccountContact"
+      ]
+    },
+    {
+      "@id": "party",
+      "@type": "Property",
+      "domain": [
+        "Account"
+      ]
+    },
+    {
+      "@id": "otherContactAddress",
+      "@type": "Property",
+      "domain": [
+        "AccountContact"
+      ]
+    },
+    {
+      "@id": "lastActivityDate",
+      "@type": "Property",
+      "domain": [
+        "Account",
+        "AccountContact"
+      ]
+    },
+    {
+      "@id": "activeFromDate",
+      "@type": "Property",
+      "domain": [
+        "AccountContactRole"
+      ]
+    }
+  ]
+}

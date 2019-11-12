@@ -1,0 +1,67 @@
+#%RAML 1.0 Library
+types:
+  Lead:
+    properties:
+      faxContactPhone:
+        items: contactpoint_eg.ContactPointPhone
+      stateProvinceName:
+        type: string
+      leadStatus:
+        type: string
+      photoURL:
+        type: string
+      countryName:
+        type: string
+      partyRole:
+        type: string
+      convertedDate:
+        type: date-only
+      description:
+        type: string
+      id:
+        type: string
+      contactPointEmail:
+        items: contactpoint_eg.ContactPointEmail
+      companyName:
+        type: string
+      streetName:
+        type: string
+      leadScore:
+        type: integer
+      mobileContactPhone:
+        items: contactpoint_eg.ContactPointPhone
+      contactAddress:
+        items: contactpoint_eg.ContactPointAddress
+      geoCodeLatitude:
+        type: integer
+      leadRating:
+        type: string
+      geoCodeLongitude:
+        type: integer
+      emailBouncedDate:
+        type: time-only
+      geoCodeAccuracy:
+        type: integer
+      leadSource:
+        type: string
+      convertedToAccount:
+        items: account_eg.Account
+      convertedToAccountContact:
+        items: account_eg.AccountContact
+      phoneContactPoint:
+        items: contactpoint_eg.ContactPointPhone
+      lastActivityDate:
+        type: date-only
+      annualRevenue:
+        type: integer
+      emailBouncedReason:
+        type: string
+      website:
+        type: string
+      isConverted:
+        type: boolean
+      partnerAccount:
+        items: account_eg.Account
+uses:
+  account_eg: ../Account/schema.yaml
+  contactpoint_eg: ../ContactPoint/schema.yaml

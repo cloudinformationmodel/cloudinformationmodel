@@ -1,0 +1,93 @@
+#%Vocabulary 1.0
+base: http://cloudinformationmodel.org/model/
+vocabulary: Account
+usage: "Example Entities included: Account, Account Contact, Bill Frequency"
+classTerms:
+  Account:
+    displayName: Account
+    description: How the party want to interact with your enterprise e.g. have multiple billing accounts
+    properties:
+      - paymentTerm
+      - assignTerritoryFlag
+      - id
+      - useAsServiceAccount
+      - autoPaymentMethod
+      - billContactAddress
+      - lastActivityDate
+      - holdStatusReason
+      - billFrequency
+      - name
+      - thirtyDayBalanceAmount
+      - parentAccount
+      - shippingAddress
+      - sLAType
+      - partyRole
+      - sixtyDayBalanceAmount
+      - faxPhone
+      - defaultFreightTerms
+      - primarySalesContactPoint
+      - autoPayEnabledFlag
+      - balanceAmountLimit
+      - shippingContact
+      - accountType
+      - autoPaymentAmount
+      - useAsShippingAccount
+      - useAsSalesAccount
+      - generalLedgerAccount
+      - balanceAmount
+      - useAsBillingAccount
+      - party
+      - salesPhone
+      - ninetyDayBalanceAmount
+      - description
+      - shippingEmail
+      - sLAExpirationDate
+      - orderDeliveryMethod
+      - billDeliveryMethod
+      - shippingPhoneid
+      - number
+  AccountPartner:
+    displayName: Account Partner
+    description: State what partner (account) is related to/have access to another account
+    properties:
+      - id
+      - account
+      - partnerAccount
+  BillingFrequency:
+    displayName: Billing Frequency
+    description: Describes a period of time used for recurring bills e.g. monthly or semi-monthly
+    properties:
+      - id
+      - name
+      - billingFrequencyName
+  AccountContact:
+    displayName: Account Contact
+    description: An individual who has a role specific to an Account.
+    properties:
+      - reportsToAccountContact
+      - id
+      - contactEmail
+      - departmentName
+      - account
+      - lastActivityDate
+      - assistantPhone
+      - mobilePhone
+      - indirectRelationAccountContact
+      - contactNote
+      - faxPhone
+      - mailingAddress
+      - businessPhone
+      - assistantName
+      - individual
+      - title
+      - otherContactAddress
+      - homePhone
+  AccountContactRole:
+    displayName: Account Contact Role
+    description: What role does a contact play on an account e.g. decision maker, influencer
+    properties:
+      - id
+      - activeToDate
+      - accountContactRoleType
+      - accountContact
+      - activeFromDate

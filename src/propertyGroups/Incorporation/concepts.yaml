@@ -1,0 +1,44 @@
+#%Vocabulary 1.0
+base: http://cloudinformationmodel.org/model/
+vocabulary: Incorporation Property Group
+propertyTerms:
+  ownership:
+    displayName: Ownership
+    description: Is the company public or private
+    range: any
+  terminationDate:
+    displayName: Termination Date
+    description: The date the organization ceased to operate and was closed for business
+    range: any
+  incorporationDate:
+    displayName: Incorporation Date
+    description: Date the business was legally incorporated
+    range: any
+  closedForBusinessDate:
+    displayName: Closed For Business Date
+    description: What date others no longer can do regular business with the entity
+    range: any
+  openForBusinessDate:
+    displayName: Open For Business Date
+    description: What date others could start to business with the entity
+    range: any
+  description:
+    displayName: Description
+    description: Short unstructured narrative that describe the business
+    range: any
+  legalOrganizationType:
+    displayName: Legal Organization Type
+    description: E.g. Sole proprietor, Partnership, Limited Partnereshp, S-Corporation
+    range: any
+  yearStarted:
+    displayName: Year Started
+    description: What year the business started, normally derived from incorporation date
+    range: any
+  legalStatus:
+    displayName: Legal Status
+    description: Legal or tax standing e.g. commercial, non-profit, academic, government
+    range: any
+  legalIncorporationJurisdiction:
+    displayName: Legal Incorporation Jurisdiction
+    description: Name of the territory or other political subdivision that authoized the incorporation
+    range: any

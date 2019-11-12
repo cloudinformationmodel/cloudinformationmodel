@@ -1,0 +1,281 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "ShipmentEntityGroup",
+  "@type": "EntityGroup",
+  "version": "0.1",
+  "schemas": [
+    {
+      "@type": "Shape",
+      "@id": "Shipment",
+      "properties": [
+        {
+          "path": "giftMessageText",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "specialInstructionsText",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "isGift",
+          "datatype": "xsd:boolean",
+          "maxCount": "1"
+        },
+        {
+          "path": "estimatedDeliveryDateTime",
+          "datatype": "xsd:time",
+          "maxCount": "1"
+        },
+        {
+          "path": "scheduledDeliveryDateTime",
+          "datatype": "xsd:time",
+          "maxCount": "1"
+        },
+        {
+          "path": "actualDeliveryDateTime",
+          "datatype": "xsd:time",
+          "maxCount": "1"
+        },
+        {
+          "path": "shipmentDate",
+          "datatype": "xsd:date",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "shipToAddress",
+          "node": "ContactPointAddress"
+        },
+        {
+          "path": "shipmentStatus",
+          "node": "ShipmentStatus"
+        },
+        {
+          "path": "salesOrderDeliveryGroup",
+          "node": "SalesOrderDeliveryGroup"
+        },
+        {
+          "path": "salesOrder",
+          "node": "SalesOrder"
+        },
+        {
+          "path": "carrierTrackingNumber",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "shipmentNumber",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "ShipmentStatus",
+      "properties": [
+        {
+          "path": "description",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "name",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "ShippingMethod",
+      "properties": [
+        {
+          "path": "product",
+          "node": "Product",
+          "minCount": "1"
+        },
+        {
+          "path": "description",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "name",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "ShipmentProduct",
+      "properties": [
+        {
+          "path": "shipmentProductCount",
+          "datatype": "xsd:decimal",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "shipment",
+          "node": "Shipment",
+          "minCount": "1"
+        },
+        {
+          "path": "product",
+          "node": "Product",
+          "minCount": "1"
+        },
+        {
+          "path": "shipmentPackage",
+          "node": "ShipmentPackage",
+          "minCount": "1"
+        },
+        {
+          "path": "salesOrderProduct",
+          "node": "SalesOrderProduct",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "ShipmentDocument",
+      "properties": [
+        {
+          "path": "shipment",
+          "node": "Shipment",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "ShipmentPackage",
+      "properties": [
+        {
+          "path": "shipmentProductCount",
+          "datatype": "xsd:decimal",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "shipmentProductDescription",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "shipment",
+          "node": "Shipment",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "ShipmentProductPriceAdjustmentTax",
+      "properties": [
+        {
+          "path": "shipmentProductPriceAdjustment",
+          "node": "ShipmentProductPriceAdjustment",
+          "minCount": "1"
+        },
+        {
+          "path": "name",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "ShipmentProductPriceAdjustment",
+      "properties": [
+        {
+          "path": "adjustmentAmount",
+          "datatype": "xsd:decimal",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "adjustmentTaxAmount",
+          "datatype": "xsd:decimal",
+          "maxCount": "1"
+        },
+        {
+          "path": "shipmentProductPriceAdjustmentAmount",
+          "datatype": "xsd:decimal",
+          "maxCount": "1"
+        },
+        {
+          "path": "description",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "shipmentProduct",
+          "node": "ShipmentProduct",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    }
+  ]
+}

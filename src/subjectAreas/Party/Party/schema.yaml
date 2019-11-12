@@ -1,0 +1,630 @@
+#%Dialect 1.0
+uses:
+  account_eg: ../Account/schema.yaml
+  contactpoint_eg: ../ContactPoint/schema.yaml
+nodeMappings:
+  PartyRelationshipType:
+    classTerm: cim.PartyRelationshipType
+    mapping:
+      isBidirectional:
+        propertyTerm: cim.isBidirectional
+        range: boolean
+        mandatory: true
+      relatedPartyRole:
+        propertyTerm: cim.relatedPartyRole
+        range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      partyRole:
+        propertyTerm: cim.partyRole
+        range: string
+        mandatory: true
+  PersonEducation:
+    classTerm: cim.PersonEducation
+    mapping:
+      institutionName:
+        propertyTerm: cim.institutionName
+        range: string
+        mandatory: true
+      educationLevel:
+        propertyTerm: cim.educationLevel
+        range: string
+        mandatory: true
+      individual:
+        propertyTerm: cim.individual
+        range: Individual
+        mandatory: true
+        allowMultiple: true
+      educationName:
+        propertyTerm: cim.educationName
+        range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      graduationDate:
+        propertyTerm: cim.graduationDate
+        range: date
+        mandatory: true
+  PartyIdentification:
+    classTerm: cim.PartyIdentification
+    mapping:
+      issuedDate:
+        propertyTerm: cim.issuedDate
+        range: date
+      verifiedDate:
+        propertyTerm: cim.verifiedDate
+        range: date
+      party:
+        propertyTerm: cim.party
+        range: Party
+        mandatory: true
+        allowMultiple: true
+      identificationNumber:
+        propertyTerm: cim.identificationNumber
+        range: string
+        mandatory: true
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      partyIdentificationType:
+        propertyTerm: cim.partyIdentificationType
+        range: string
+        mandatory: true
+      partyRole:
+        propertyTerm: cim.partyRole
+        range: string
+      expiryDate:
+        propertyTerm: cim.expiryDate
+        range: date
+      issuedAtLocation:
+        propertyTerm: cim.issuedAtLocation
+        range: string
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      issuedByAuthority:
+        propertyTerm: cim.issuedByAuthority
+        range: string
+  PersonLanguage:
+    classTerm: cim.PersonLanguage
+    mapping:
+      spokenProficiencyLevel:
+        propertyTerm: cim.spokenProficiencyLevel
+        range: string
+      writtenProficiencyLevel:
+        propertyTerm: cim.writtenProficiencyLevel
+        range: string
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      individual:
+        propertyTerm: cim.individual
+        range: Individual
+        mandatory: true
+        allowMultiple: true
+  InternalBusinessUnit:
+    classTerm: cim.InternalBusinessUnit
+    mapping:
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      parentInternalBusinessUnit:
+        propertyTerm: cim.parentInternalBusinessUnit
+        range: InternalBusinessUnit
+        allowMultiple: true
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      businessUnitType:
+        propertyTerm: cim.businessUnitType
+        range: string
+        mandatory: true
+    extends: Party
+  PartyRelatedParty:
+    classTerm: cim.PartyRelatedParty
+    mapping:
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      relatedToDate:
+        propertyTerm: cim.relatedToDate
+        range: date
+        mandatory: true
+      relatedFromDate:
+        propertyTerm: cim.relatedFromDate
+        range: date
+        mandatory: true
+      relatedParty:
+        propertyTerm: cim.relatedParty
+        range: Party
+        mandatory: true
+        allowMultiple: true
+      partyRelationshipType:
+        propertyTerm: cim.partyRelationshipType
+        range: PartyRelationshipType
+        mandatory: true
+        allowMultiple: true
+      party:
+        propertyTerm: cim.party
+        range: Party
+        mandatory: true
+        allowMultiple: true
+  Party:
+    classTerm: cim.Party
+    mapping:
+      globalParty:
+        propertyTerm: cim.globalParty
+        range: string
+      partyType:
+        propertyTerm: cim.partyType
+        range: string
+        mandatory: true
+      primaryAccount:
+        propertyTerm: cim.primaryAccount
+        range: account_eg.Account
+        allowMultiple: true
+      noMergeReason:
+        propertyTerm: cim.noMergeReason
+        range: string
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+  Household:
+    classTerm: cim.Household
+    mapping:
+      householdDissolvedDate:
+        propertyTerm: cim.householdDissolvedDate
+        range: date
+      householdFormedDate:
+        propertyTerm: cim.householdFormedDate
+        range: date
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      householdMemberCount:
+        propertyTerm: cim.householdMemberCount
+        range: integer
+    extends: Party
+  UncategorizedParty:
+    classTerm: cim.UncategorizedParty
+    mapping:
+      creationReason:
+        propertyTerm: cim.creationReason
+        range: string
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      originalSourceSystem:
+        propertyTerm: cim.originalSourceSystem
+        range: string
+      uncategorizedPartyLabel:
+        propertyTerm: cim.uncategorizedPartyLabel
+        range: string
+        mandatory: true
+      originalSourceRecord:
+        propertyTerm: cim.originalSourceRecord
+        range: string
+    extends: Party
+  PersonEmployment:
+    classTerm: cim.PersonEmployment
+    mapping:
+      occupationText:
+        propertyTerm: cim.occupationText
+        range: string
+        mandatory: true
+      employerContactPointAddress:
+        propertyTerm: cim.employerContactPointAddress
+        range: contactpoint_eg.ContactPointAddress
+        allowMultiple: true
+      positionText:
+        propertyTerm: cim.positionText
+        range: string
+        mandatory: true
+      employerName:
+        propertyTerm: cim.employerName
+        range: string
+        mandatory: true
+      startDate:
+        propertyTerm: cim.startDate
+        range: date
+        mandatory: true
+      individual:
+        propertyTerm: cim.individual
+        range: Individual
+        mandatory: true
+        allowMultiple: true
+      endDate:
+        propertyTerm: cim.endDate
+        range: date
+        mandatory: true
+      employerAddressLine2:
+        propertyTerm: cim.employerAddressLine2
+        range: string
+      employerCityName:
+        propertyTerm: cim.employerCityName
+        range: string
+      employerPostalCodeText:
+        propertyTerm: cim.employerPostalCodeText
+        range: string
+      employerAddressLine3:
+        propertyTerm: cim.employerAddressLine3
+        range: string
+      employerPhoneNumber:
+        propertyTerm: cim.employerPhoneNumber
+        range: string
+        mandatory: true
+      employerAddressLine1:
+        propertyTerm: cim.employerAddressLine1
+        range: string
+        mandatory: true
+      annualIncome:
+        propertyTerm: cim.annualIncome
+        range: integer
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      employerAddressLine4:
+        propertyTerm: cim.employerAddressLine4
+        range: string
+      employmentStatus:
+        propertyTerm: cim.employmentStatus
+        range: string
+        mandatory: true
+  PartyAdditionalName:
+    classTerm: cim.PartyAdditionalName
+    mapping:
+      additionalNameType:
+        propertyTerm: cim.additionalNameType
+        range: string
+        mandatory: true
+      party:
+        propertyTerm: cim.party
+        range: Party
+        mandatory: true
+        allowMultiple: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+  Individual:
+    classTerm: cim.Individual
+    mapping:
+      mothersMaidenName:
+        propertyTerm: cim.mothersMaidenName
+        range: string
+      yearlyIncomeRange:
+        propertyTerm: cim.yearlyIncomeRange
+        range: string
+      occupation:
+        propertyTerm: cim.occupation
+        range: string
+      isHomeOwner:
+        propertyTerm: cim.isHomeOwner
+        range: boolean
+      preferredName:
+        propertyTerm: cim.preferredName
+        range: string
+      mainDisabilityType:
+        propertyTerm: cim.mainDisabilityType
+        range: string
+      birthDate:
+        propertyTerm: cim.birthDate
+        range: date
+      photoURL:
+        propertyTerm: cim.photoURL
+        range: string
+      hasDrugAbuseHistory:
+        propertyTerm: cim.hasDrugAbuseHistory
+        range: boolean
+      overAgeNumber:
+        propertyTerm: cim.overAgeNumber
+        range: integer
+      isDrugConsumer:
+        propertyTerm: cim.isDrugConsumer
+        range: boolean
+      secondLastName:
+        propertyTerm: cim.secondLastName
+        range: string
+      employedSinceDate:
+        propertyTerm: cim.employedSinceDate
+        range: date
+      doNotProfileFromUpdateDate:
+        propertyTerm: cim.doNotProfileFromUpdateDate
+        range: date
+      consumerCreditScoreProviderName:
+        propertyTerm: cim.consumerCreditScoreProviderName
+        range: string
+      isHighRiskOccupation:
+        propertyTerm: cim.isHighRiskOccupation
+        range: boolean
+      occupationType:
+        propertyTerm: cim.occupationType
+        range: string
+      mainPersonalValueType:
+        propertyTerm: cim.mainPersonalValueType
+        range: string
+      influencerRating:
+        propertyTerm: cim.influencerRating
+        range: integer
+      minorCitationCount:
+        propertyTerm: cim.minorCitationCount
+        range: integer
+      childrenCount:
+        propertyTerm: cim.childrenCount
+        range: integer
+      dependentCount:
+        propertyTerm: cim.dependentCount
+        range: integer
+      netWorth:
+        propertyTerm: cim.netWorth
+        range: integer
+      personHeightUnitOfMeasure:
+        propertyTerm: cim.personHeightUnitOfMeasure
+        range: string
+      weddingAnniversaryDate:
+        propertyTerm: cim.weddingAnniversaryDate
+        range: date
+      doNotProcessReason:
+        propertyTerm: cim.doNotProcessReason
+        range: string
+      nameSuffix:
+        propertyTerm: cim.nameSuffix
+        range: string
+      residenceCaptureMethod:
+        propertyTerm: cim.residenceCaptureMethod
+        range: string
+      middleName:
+        propertyTerm: cim.middleName
+        range: string
+      primaryHobby:
+        propertyTerm: cim.primaryHobby
+        range: string
+      religion:
+        propertyTerm: cim.religion
+        range: string
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      gender:
+        propertyTerm: cim.gender
+        range: string
+      consumerCreditScore:
+        propertyTerm: cim.consumerCreditScore
+        range: integer
+      hospitalizationsLast5YearsCount:
+        propertyTerm: cim.hospitalizationsLast5YearsCount
+        range: integer
+      isGoodStudent:
+        propertyTerm: cim.isGoodStudent
+        range: boolean
+      hasAlcoholAbuseHistory:
+        propertyTerm: cim.hasAlcoholAbuseHistory
+        range: boolean
+      ethnicity:
+        propertyTerm: cim.ethnicity
+        range: string
+      doExtractMyDataUpdateDate:
+        propertyTerm: cim.doExtractMyDataUpdateDate
+        range: date
+      isAlcoholConsumer:
+        propertyTerm: cim.isAlcoholConsumer
+        range: boolean
+      doNotMarketFromUpdateDate:
+        propertyTerm: cim.doNotMarketFromUpdateDate
+        range: date
+      mainLifeStyleType:
+        propertyTerm: cim.mainLifeStyleType
+        range: string
+      personWeightUnitOfMeasure:
+        propertyTerm: cim.personWeightUnitOfMeasure
+        range: string
+      shouldForget:
+        propertyTerm: cim.shouldForget
+        range: boolean
+      webSiteURL:
+        propertyTerm: cim.webSiteURL
+        range: string
+      sendIndividualData:
+        propertyTerm: cim.sendIndividualData
+        range: boolean
+      surgeriesLast5YearsCount:
+        propertyTerm: cim.surgeriesLast5YearsCount
+        range: integer
+      doForgetMeFromUpdateDate:
+        propertyTerm: cim.doForgetMeFromUpdateDate
+        range: date
+      yearlyIncome:
+        propertyTerm: cim.yearlyIncome
+        range: integer
+      majorCitationCount:
+        propertyTerm: cim.majorCitationCount
+        range: integer
+      deathDate:
+        propertyTerm: cim.deathDate
+        range: date
+      personWeight:
+        propertyTerm: cim.personWeight
+        range: integer
+      doNotTrackUpdateDate:
+        propertyTerm: cim.doNotTrackUpdateDate
+        range: date
+      mainDietaryHabitType:
+        propertyTerm: cim.mainDietaryHabitType
+        range: string
+      personName:
+        propertyTerm: cim.personName
+        range: string
+        mandatory: true
+      personLifeStage:
+        propertyTerm: cim.personLifeStage
+        range: string
+      isTobaccoConsume:
+        propertyTerm: cim.isTobaccoConsume
+        range: boolean
+      taxBracketRange:
+        propertyTerm: cim.taxBracketRange
+        range: string
+      mainPersonalityType:
+        propertyTerm: cim.mainPersonalityType
+        range: string
+      mailingName:
+        propertyTerm: cim.mailingName
+        range: string
+      currentEmployerName:
+        propertyTerm: cim.currentEmployerName
+        range: string
+      isHighRiskHobby:
+        propertyTerm: cim.isHighRiskHobby
+        range: boolean
+      militaryService:
+        propertyTerm: cim.militaryService
+        range: string
+      primaryHousehold:
+        propertyTerm: cim.primaryHousehold
+        range: Household
+        allowMultiple: true
+      isGoodDriver:
+        propertyTerm: cim.isGoodDriver
+        range: boolean
+      convictionsCount:
+        propertyTerm: cim.convictionsCount
+        range: integer
+      mainLifeAttitudeType:
+        propertyTerm: cim.mainLifeAttitudeType
+        range: string
+      doNotProcessFromUpdateDate:
+        propertyTerm: cim.doNotProcessFromUpdateDate
+        range: date
+      maritalStatus:
+        propertyTerm: cim.maritalStatus
+        range: string
+      orderingName:
+        propertyTerm: cim.orderingName
+        range: string
+      residenceCountryName:
+        propertyTerm: cim.residenceCountryName
+        range: string
+      militaryStatus:
+        propertyTerm: cim.militaryStatus
+        range: string
+      personHeight:
+        propertyTerm: cim.personHeight
+        range: integer
+      officialName:
+        propertyTerm: cim.officialName
+        range: string
+      firstName:
+        propertyTerm: cim.firstName
+        range: string
+      birthPlace:
+        propertyTerm: cim.birthPlace
+        range: string
+      deathPlace:
+        propertyTerm: cim.deathPlace
+        range: string
+      salutation:
+        propertyTerm: cim.salutation
+        range: string
+      doNotTrackLocationUpdateDate:
+        propertyTerm: cim.doNotTrackLocationUpdateDate
+        range: date
+      highestEducationLevel:
+        propertyTerm: cim.highestEducationLevel
+        range: string
+      lastName:
+        propertyTerm: cim.lastName
+        range: string
+    extends: Party
+  PersonLifeEvent:
+    classTerm: cim.PersonLifeEvent
+    mapping:
+      personLifeEventType:
+        propertyTerm: cim.personLifeEventType
+        range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      individual:
+        propertyTerm: cim.individual
+        range: Individual
+        mandatory: true
+        allowMultiple: true
+      personLifeEventDateTime:
+        propertyTerm: cim.personLifeEventDateTime
+        range: time
+        mandatory: true
+external:
+  cim: http://cloudinformationmodel.org/model/
+dialect: PartyEntityGroup
+version: "0.1"
+documents:
+  root:
+    declares:
+      PartyRelationshipTypeSchemas: PartyRelationshipType
+      PersonEducationSchemas: PersonEducation
+      PartyIdentificationSchemas: PartyIdentification
+      PersonLanguageSchemas: PersonLanguage
+      InternalBusinessUnitSchemas: InternalBusinessUnit
+      PartyRelatedPartySchemas: PartyRelatedParty
+      PartySchemas: Party
+      HouseholdSchemas: Household
+      UncategorizedPartySchemas: UncategorizedParty
+      PersonEmploymentSchemas: PersonEmployment
+      PartyAdditionalNameSchemas: PartyAdditionalName
+      IndividualSchemas: Individual
+      PersonLifeEventSchemas: PersonLifeEvent
+  fragments:
+    encodes:
+      PartyRelationshipType: PartyRelationshipType
+      PersonEducation: PersonEducation
+      PartyIdentification: PartyIdentification
+      PersonLanguage: PersonLanguage
+      InternalBusinessUnit: InternalBusinessUnit
+      PartyRelatedParty: PartyRelatedParty
+      Party: Party
+      Household: Household
+      UncategorizedParty: UncategorizedParty
+      PersonEmployment: PersonEmployment
+      PartyAdditionalName: PartyAdditionalName
+      Individual: Individual
+      PersonLifeEvent: PersonLifeEvent

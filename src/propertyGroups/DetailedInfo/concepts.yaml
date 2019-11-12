@@ -1,0 +1,32 @@
+#%Vocabulary 1.0
+base: http://cloudinformationmodel.org/model/
+vocabulary: Detailed Info Property Group
+propertyTerms:
+  leadScore:
+    displayName: Lead Score
+    description: Score value assigned by Einstein logic e.g 99 of 100
+    range: any
+  lastActivityDate:
+    displayName: Last Activity Date
+    description: Value either due date of most recent event logged or most recently closed task
+    range: any
+  countryName:
+    displayName: Country Name
+    description: Country for the address of the lead.
+    range: any
+  photoURL:
+    displayName: Photo URL
+    description: Profile image associated with the lead.
+    range: any
+  partnerAccount:
+    displayName: Partner Account
+    description: What partner did this lead come from (if applicable)
+    range: Account
+  website:
+    displayName: Website
+    description: Website for the lead.
+    range: any
+  leadRating:
+    displayName: Lead Rating
+    description: Rating of the lead e.g. warm, cold
+    range: any

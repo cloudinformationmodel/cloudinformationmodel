@@ -1,0 +1,16 @@
+#%Vocabulary 1.0
+base: http://cloudinformationmodel.org/model/
+vocabulary: SalesDisplay Property Group
+propertyTerms:
+  requiresUnitPriceLabel:
+    displayName: Requires Unit Price Label
+    description: Must a label of the price be visible for the product or not
+    range: any
+  maxHoldingDayCount:
+    displayName: Max Holding Day Count
+    description: How long e.g. drug or newspaper can be displayed before removal
+    range: any
+  shelfFacingUnitCount:
+    displayName: Shelf Facing Unit Count
+    description: How many units per facing (row) displayed of a product on a shelf
+    range: any

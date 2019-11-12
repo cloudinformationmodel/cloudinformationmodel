@@ -1,0 +1,340 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "PaymentMethodEntityGroup",
+  "name": "Payment Method",
+  "@type": "EntityGroup",
+  "version": "0.1",
+  "subjectArea": {
+    "@id": "PaymentMethodSubjectArea"
+  },
+  "description": "Example Entities included: Payment Method Type, Payment Card Tender, Digital Wallet Tender",
+  "classConcepts": [
+    {
+      "@id": "PaymentMethod",
+      "name": "Payment Method",
+      "@type": "Class",
+      "description": "A means by which a buyer compensates a seller for a purchased good or service."
+    },
+    {
+      "@id": "PaymentMethodType",
+      "name": "Payment Method Type",
+      "@type": "Class",
+      "description": "The category of payment method, such as payment card, check or digital wallet."
+    },
+    {
+      "@id": "PaymentCard",
+      "name": "Payment Card",
+      "@type": "Class",
+      "subClassOf": "PaymentMethod",
+      "description": "A payment system issued by a financial institution to a customer that allows its owner (the cardholder) to access funds in designated bank accounts"
+    },
+    {
+      "@id": "Coupon",
+      "name": "Coupon",
+      "@type": "Class",
+      "subClassOf": "PaymentMethod",
+      "description": "Payment in the form of a voucher entitling the holder to a discount for a particular product."
+    },
+    {
+      "@id": "CreditTender",
+      "name": "Credit Tender",
+      "@type": "Class",
+      "subClassOf": "PaymentMethod",
+      "description": "Payment to the seller that results in an agreement to pay at a later date, usually via a credit account."
+    }
+  ],
+  "propertyConcepts": [
+    {
+      "@id": "billToStreet",
+      "@type": "Property",
+      "domain": [
+        "PaymentCard"
+      ]
+    },
+    {
+      "@id": "couponCount",
+      "@type": "Property",
+      "domain": [
+        "Coupon"
+      ]
+    },
+    {
+      "@id": "account",
+      "@type": "Property",
+      "domain": [
+        "CreditTender"
+      ]
+    },
+    {
+      "@id": "useMinimumAgeYear",
+      "@type": "Property",
+      "domain": [
+        "PaymentMethodType"
+      ]
+    },
+    {
+      "@id": "isReturnCoupon",
+      "@type": "Property",
+      "domain": [
+        "Coupon"
+      ]
+    },
+    {
+      "@id": "typeRequiredIdentification",
+      "@type": "Property",
+      "domain": [
+        "PaymentMethodType"
+      ]
+    },
+    {
+      "@id": "manufacturer",
+      "@type": "Property",
+      "domain": [
+        "Coupon"
+      ]
+    },
+    {
+      "@id": "maxPerPeriodTransactionCount",
+      "@type": "Property",
+      "domain": [
+        "PaymentMethodType"
+      ]
+    },
+    {
+      "@id": "issueNumber",
+      "@type": "Property",
+      "domain": [
+        "PaymentCard"
+      ]
+    },
+    {
+      "@id": "cardHolderName",
+      "@type": "Property",
+      "domain": [
+        "PaymentCard"
+      ]
+    },
+    {
+      "@id": "secondaryScanCodeLabel",
+      "@type": "Property",
+      "domain": [
+        "Coupon"
+      ]
+    },
+    {
+      "@id": "name",
+      "@type": "Property",
+      "domain": [
+        "PaymentMethodType",
+        "PaymentCard"
+      ]
+    },
+    {
+      "@id": "paymentMethodStatus",
+      "@type": "Property",
+      "domain": [
+        "PaymentMethod"
+      ]
+    },
+    {
+      "@id": "cardToken",
+      "@type": "Property",
+      "domain": [
+        "PaymentCard"
+      ]
+    },
+    {
+      "@id": "numberLastDigits",
+      "@type": "Property",
+      "domain": [
+        "PaymentCard"
+      ]
+    },
+    {
+      "@id": "companyName",
+      "@type": "Property",
+      "domain": [
+        "PaymentCard"
+      ]
+    },
+    {
+      "@id": "billToStreet2",
+      "@type": "Property",
+      "domain": [
+        "PaymentCard"
+      ]
+    },
+    {
+      "@id": "scanCode",
+      "@type": "Property",
+      "domain": [
+        "Coupon"
+      ]
+    },
+    {
+      "@id": "maxTransactionAmount",
+      "@type": "Property",
+      "domain": [
+        "PaymentMethodType"
+      ]
+    },
+    {
+      "@id": "typeDescription",
+      "@type": "Property",
+      "domain": [
+        "PaymentMethodType"
+      ]
+    },
+    {
+      "@id": "mediaType",
+      "@type": "Property",
+      "domain": [
+        "PaymentMethodType"
+      ]
+    },
+    {
+      "@id": "billToLastName",
+      "@type": "Property",
+      "domain": [
+        "PaymentCard"
+      ]
+    },
+    {
+      "@id": "paymentCardType",
+      "@type": "Property",
+      "domain": [
+        "PaymentCard"
+      ]
+    },
+    {
+      "@id": "couponStatus",
+      "@type": "Property",
+      "domain": [
+        "Coupon"
+      ]
+    },
+    {
+      "@id": "expirationYear",
+      "@type": "Property",
+      "domain": [
+        "PaymentCard"
+      ]
+    },
+    {
+      "@id": "isValid",
+      "@type": "Property",
+      "domain": [
+        "Coupon"
+      ]
+    },
+    {
+      "@id": "paymentMethodType",
+      "@type": "Property",
+      "domain": [
+        "PaymentMethod"
+      ]
+    },
+    {
+      "@id": "maskedNumber",
+      "@type": "Property",
+      "domain": [
+        "PaymentCard"
+      ]
+    },
+    {
+      "@id": "derivedCardTypeCode",
+      "@type": "Property",
+      "domain": [
+        "PaymentCard"
+      ]
+    },
+    {
+      "@id": "returnCouponReason",
+      "@type": "Property",
+      "domain": [
+        "Coupon"
+      ]
+    },
+    {
+      "@id": "discountAmount",
+      "@type": "Property",
+      "domain": [
+        "Coupon"
+      ]
+    },
+    {
+      "@id": "maxPerPeriodAmount",
+      "@type": "Property",
+      "domain": [
+        "PaymentMethodType"
+      ]
+    },
+    {
+      "@id": "couponCode",
+      "@type": "Property",
+      "domain": [
+        "Coupon"
+      ]
+    },
+    {
+      "@id": "expirationDate",
+      "@type": "Property",
+      "domain": [
+        "Coupon"
+      ]
+    },
+    {
+      "@id": "discountPercentage",
+      "@type": "Property",
+      "domain": [
+        "Coupon"
+      ]
+    },
+    {
+      "@id": "primaryScanCodeLabel",
+      "@type": "Property",
+      "domain": [
+        "Coupon"
+      ]
+    },
+    {
+      "@id": "billToFirstName",
+      "@type": "Property",
+      "domain": [
+        "PaymentCard"
+      ]
+    },
+    {
+      "@id": "creditCardExpired",
+      "@type": "Property",
+      "domain": [
+        "PaymentCard"
+      ]
+    },
+    {
+      "@id": "id",
+      "@type": "Property",
+      "domain": [
+        "Coupon",
+        "PaymentMethodType",
+        "PaymentCard",
+        "PaymentMethod",
+        "CreditTender"
+      ]
+    },
+    {
+      "@id": "expirationMonth",
+      "@type": "Property",
+      "domain": [
+        "PaymentCard"
+      ]
+    },
+    {
+      "@id": "billToCity",
+      "@type": "Property",
+      "domain": [
+        "PaymentCard"
+      ]
+    }
+  ]
+}

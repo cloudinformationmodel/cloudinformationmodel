@@ -1,0 +1,401 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/Competitor"
+    },
+    {
+      "$ref": "#/definitions/Customer"
+    },
+    {
+      "$ref": "#/definitions/CustomerStatusHistory"
+    },
+    {
+      "$ref": "#/definitions/PartyRole"
+    },
+    {
+      "$ref": "#/definitions/Seller"
+    },
+    {
+      "$ref": "#/definitions/Supplier"
+    }
+  ],
+  "definitions": {
+    "Supplier": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/PartyRole"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id",
+            "activeFromDate"
+          ],
+          "properties": {
+            "satisfactionEthicsRank": {
+              "type": "integer"
+            },
+            "contractInvoiceAccuracyRate": {
+              "type": "integer"
+            },
+            "satisfactionWeightPercent": {
+              "type": "integer"
+            },
+            "contractOnTimeDeliveryRate": {
+              "type": "integer"
+            },
+            "id": {
+              "type": "string"
+            },
+            "activeFromDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "activeToDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "competitiveWarrantyRank": {
+              "type": "integer"
+            },
+            "competitiveMarketingRank": {
+              "type": "integer"
+            },
+            "contractDeliveryCorrectnessRate": {
+              "type": "integer"
+            },
+            "competitiveWeightScore": {
+              "type": "integer"
+            },
+            "contractSLAIssueRate": {
+              "type": "integer"
+            },
+            "competitiveWeightPercent": {
+              "type": "integer"
+            },
+            "supplierScore": {
+              "type": "integer"
+            },
+            "competitiveProductPriceRank": {
+              "type": "integer"
+            },
+            "contractWeightPercent": {
+              "type": "integer"
+            },
+            "supplierSpend": {
+              "type": "integer"
+            },
+            "satisfactionTechnicalSupportRank": {
+              "type": "integer"
+            },
+            "contractWeightScore": {
+              "type": "integer"
+            },
+            "satisfactionCustomerServiceRank": {
+              "type": "integer"
+            },
+            "satisfactionWeightScore": {
+              "type": "integer"
+            },
+            "contractSourcingCycleDays": {
+              "type": "integer"
+            },
+            "supplierType": {
+              "type": "string"
+            },
+            "isCarrier": {
+              "type": "boolean"
+            },
+            "contractProductReturnRate": {
+              "type": "integer"
+            },
+            "competitiveCostAvoidanceRank": {
+              "type": "integer"
+            },
+            "contractProductQualityRate": {
+              "type": "integer"
+            },
+            "contractBudgetCostRate": {
+              "type": "integer"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "CustomerStatusHistory": {
+      "type": "object",
+      "required": [
+        "startDateTime",
+        "partyRole",
+        "partyRoleStatus",
+        "id",
+        "endDateTIme"
+      ],
+      "properties": {
+        "startDateTime": {
+          "type": "string",
+          "format": "time"
+        },
+        "partyRole": {
+          "type": "string"
+        },
+        "partyRoleStatus": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "endDateTIme": {
+          "type": "string",
+          "format": "time"
+        }
+      }
+    },
+    "Competitor": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/PartyRole"
+        },
+        {
+          "type": "object",
+          "required": [
+            "competitorFromDate",
+            "id"
+          ],
+          "properties": {
+            "competitorStrengths": {
+              "type": "string"
+            },
+            "competitorFromDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "socialMediaPostRate": {
+              "type": "integer"
+            },
+            "competitorThreats": {
+              "type": "string"
+            },
+            "currentRatio": {
+              "type": "integer"
+            },
+            "cashFlowGrowth": {
+              "type": "integer"
+            },
+            "competitorObjectives": {
+              "type": "string"
+            },
+            "netProfitMargin": {
+              "type": "integer"
+            },
+            "id": {
+              "type": "string"
+            },
+            "competitorWeaknesses": {
+              "type": "string"
+            },
+            "pressMentionsRate": {
+              "type": "integer"
+            },
+            "assetTurnoverRatio": {
+              "type": "integer"
+            },
+            "competitorToDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "competitorLeverageOpportunities": {
+              "type": "string"
+            },
+            "assetReturnRatio": {
+              "type": "integer"
+            },
+            "ptoENumber": {
+              "type": "integer"
+            },
+            "adKeywords": {
+              "type": "string"
+            },
+            "adReachRate": {
+              "type": "integer"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "Seller": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/PartyRole"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id",
+            "activeFromDate"
+          ],
+          "properties": {
+            "communityParticipationCount": {
+              "type": "integer"
+            },
+            "demonstrationsGivenCount": {
+              "type": "integer"
+            },
+            "eventParticipationCount": {
+              "type": "integer"
+            },
+            "customerSatisfactionScore": {
+              "type": "integer"
+            },
+            "trainingCertificationCount": {
+              "type": "integer"
+            },
+            "opportunityInvolvementCount": {
+              "type": "integer"
+            },
+            "marketingDevelopmentAmount": {
+              "type": "integer"
+            },
+            "sellerType": {
+              "type": "string"
+            },
+            "documentationDownloadCount": {
+              "type": "integer"
+            },
+            "id": {
+              "type": "string"
+            },
+            "activeFromDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "activeToDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "trialParticipationCount": {
+              "type": "integer"
+            },
+            "creditRating": {
+              "type": "integer"
+            },
+            "satisfactionScore": {
+              "type": "integer"
+            },
+            "salesAmount": {
+              "type": "integer"
+            },
+            "opportunityWinRate": {
+              "type": "integer"
+            },
+            "productReturnRate": {
+              "type": "integer"
+            },
+            "leadGenerationCount": {
+              "type": "integer"
+            },
+            "inventoryValueAmount": {
+              "type": "integer"
+            },
+            "majorPostSaleSupportNeeded": {
+              "type": "boolean"
+            },
+            "trainingParticipationCount": {
+              "type": "integer"
+            },
+            "newCustomerAcquisitionCount": {
+              "type": "integer"
+            },
+            "successStoryCount": {
+              "type": "integer"
+            },
+            "systemLoginCount": {
+              "type": "integer"
+            },
+            "jointBusinessPlanExist": {
+              "type": "boolean"
+            },
+            "averageConvertedLeadAmount": {
+              "type": "integer"
+            },
+            "estimatedPartnerGrossMargin": {
+              "type": "integer"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "Customer": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/PartyRole"
+        },
+        {
+          "type": "object",
+          "required": [
+            "customerStatus",
+            "id"
+          ],
+          "properties": {
+            "customerStatus": {
+              "type": "string"
+            },
+            "prospectRating": {
+              "type": "string"
+            },
+            "netPromoterScore": {
+              "type": "integer"
+            },
+            "customerSatisfactionScore": {
+              "type": "integer"
+            },
+            "id": {
+              "type": "string"
+            },
+            "marketingEmailResponseRate": {
+              "type": "integer"
+            },
+            "totalContractedAmount": {
+              "type": "integer"
+            },
+            "totalProfitContributionAmount": {
+              "type": "integer"
+            },
+            "customerNumber": {
+              "type": "string"
+            },
+            "churnScore": {
+              "type": "integer"
+            },
+            "originatingCustomerSource": {
+              "type": "string"
+            },
+            "totalLifeTimeValue": {
+              "type": "integer"
+            },
+            "totalBookingsAmount": {
+              "type": "integer"
+            },
+            "last24MonthsNewRevenueAmount": {
+              "type": "integer"
+            },
+            "last12MonthsNewRevenueAmount": {
+              "type": "integer"
+            },
+            "last12MonthsSupportCallCount": {
+              "type": "integer"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "PartyRole": {
+      "type": "object"
+    }
+  }
+}

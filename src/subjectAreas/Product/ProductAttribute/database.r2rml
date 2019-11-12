@@ -1,0 +1,516 @@
+{
+  "@context" : {
+    "rr" : "http://www.w3.org/ns/r2rml#"
+  },
+  "@graph" : [
+    {
+      "@id" : "/product_attribute_entity_group/attribute_value",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ATTRIBUTE_ENTITY_GROUP.ATTRIBUTE_VALUE"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/AttributeValue"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/attributeValue"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "ATTRIBUTE_VALUE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/product_attribute_entity_group/device_user_session",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ATTRIBUTE_ENTITY_GROUP.DEVICE_USER_SESSION"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/DeviceUserSession"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/name"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/product_attribute_entity_group/product_collateral",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ATTRIBUTE_ENTITY_GROUP.PRODUCT_COLLATERAL"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/ProductCollateral"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/uRL"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "U_RL",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/product_attribute_entity_group/attribute_translation",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ATTRIBUTE_ENTITY_GROUP.ATTRIBUTE_TRANSLATION"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/AttributeTranslation"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/translatedName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "TRANSLATED_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/product_attribute_entity_group/product_validity_time_period_uo_m",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ATTRIBUTE_ENTITY_GROUP.PRODUCT_VALIDITY_TIME_PERIOD_UO_M"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/ProductValidityTimePeriodUOM"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/name"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/pluralName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PLURAL_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/product_attribute_entity_group/product_attribute_set",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ATTRIBUTE_ENTITY_GROUP.PRODUCT_ATTRIBUTE_SET"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/ProductAttributeSet"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/attributeSet"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "ATTRIBUTE_SET",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/product_attribute_entity_group/product_attribute_value",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ATTRIBUTE_ENTITY_GROUP.PRODUCT_ATTRIBUTE_VALUE"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/ProductAttributeValue"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/customAttributeValue"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "CUSTOM_ATTRIBUTE_VALUE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/name"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/attributeSet"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "ATTRIBUTE_SET",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/product_attribute_entity_group/attribute_set_translation",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ATTRIBUTE_ENTITY_GROUP.ATTRIBUTE_SET_TRANSLATION"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/AttributeSetTranslation"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/translatedName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "TRANSLATED_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/attributeSet"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "ATTRIBUTE_SET",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/product_attribute_entity_group/price_book_entry",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ATTRIBUTE_ENTITY_GROUP.PRICE_BOOK_ENTRY"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/PriceBookEntry"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/minRequiredQuantity"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MIN_REQUIRED_QUANTITY",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/unitListPrice"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "UNIT_LIST_PRICE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/minRequiredOrderValue"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MIN_REQUIRED_ORDER_VALUE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isActive"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_ACTIVE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/maxRequiredOrderValue"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MAX_REQUIRED_ORDER_VALUE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/useStandardPrice"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "USE_STANDARD_PRICE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/servicePeriodCount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "SERVICE_PERIOD_COUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/product_attribute_entity_group/attribute_value_translation",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ATTRIBUTE_ENTITY_GROUP.ATTRIBUTE_VALUE_TRANSLATION"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/AttributeValueTranslation"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/translatedAttributeValue"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "TRANSLATED_ATTRIBUTE_VALUE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/translatedAttributeValueDescription"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "TRANSLATED_ATTRIBUTE_VALUE_DESCRIPTION",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/product_attribute_entity_group/product_collateral_product_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ATTRIBUTE_ENTITY_GROUP.PRODUCT_COLLATERAL_PRODUCT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PRODUCT_COLLATERAL_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/product"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/product_entity_group/product"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PRODUCT_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/product_attribute_entity_group/product_attribute_set_product_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ATTRIBUTE_ENTITY_GROUP.PRODUCT_ATTRIBUTE_SET_PRODUCT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PRODUCT_ATTRIBUTE_SET_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/product"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/product_entity_group/product"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PRODUCT_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/product_attribute_entity_group/product_attribute_value_product_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ATTRIBUTE_ENTITY_GROUP.PRODUCT_ATTRIBUTE_VALUE_PRODUCT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PRODUCT_ATTRIBUTE_VALUE_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/product"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/product_entity_group/product"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PRODUCT_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/product_attribute_entity_group/product_attribute_value_attribute_value_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ATTRIBUTE_ENTITY_GROUP.PRODUCT_ATTRIBUTE_VALUE_ATTRIBUTE_VALUE_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PRODUCT_ATTRIBUTE_VALUE_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/attributeValue"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/product_attribute_entity_group/attribute_value"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "ATTRIBUTE_VALUE_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/product_attribute_entity_group/price_book_entry_product_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ATTRIBUTE_ENTITY_GROUP.PRICE_BOOK_ENTRY_PRODUCT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PRICE_BOOK_ENTRY_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/product"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/product_entity_group/product"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PRODUCT_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/product_attribute_entity_group/attribute_value_translation_attribute_value_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_ATTRIBUTE_ENTITY_GROUP.ATTRIBUTE_VALUE_TRANSLATION_ATTRIBUTE_VALUE_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ATTRIBUTE_VALUE_TRANSLATION_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/attributeValue"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/product_attribute_entity_group/attribute_value"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "ATTRIBUTE_VALUE_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    }
+  ]
+}

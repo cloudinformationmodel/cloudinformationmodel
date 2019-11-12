@@ -1,0 +1,114 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "BillingPropertyGroup",
+  "name": "Billing Property Group",
+  "@type": "PropertyGroup",
+  "version": "0.1",
+  "propertyConcepts": [
+    {
+      "@id": "balanceAmount",
+      "@type": "Property",
+      "description": "E.g. 100 points, 3 miles, 6 visits",
+      "name": "Balance Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "thirtyDayBalanceAmount",
+      "@type": "Property",
+      "description": "Account Balance 30 days ago",
+      "name": "Thirty Day Balance Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "sixtyDayBalanceAmount",
+      "@type": "Property",
+      "description": "Account Balance 60 days ago",
+      "name": "Sixty Day Balance Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "ninetyDayBalanceAmount",
+      "@type": "Property",
+      "description": "Account Balance 90 days ago",
+      "name": "Ninety Day Balance Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "balanceAmountLimit",
+      "@type": "Property",
+      "description": "What is the max balance allowed before we may take action around usage. Sometimes referred to as credit limit",
+      "name": "Balance Amount Limit",
+      "range": "DataType"
+    },
+    {
+      "@id": "lastActivityDate",
+      "@type": "Property",
+      "description": "Most recent of Due date of the most recent event logged or Due date of the most recently closed task",
+      "name": "Last Activity Date",
+      "range": "DataType"
+    },
+    {
+      "@id": "parentAccount",
+      "@type": "Property",
+      "description": "Id of the parent customer account (business role), if applicable",
+      "name": "Parent Account",
+      "range": "Account"
+    },
+    {
+      "@id": "billContactAddress",
+      "@type": "Property",
+      "description": "Reference to the contact point billing address, if applicable",
+      "name": "Bill Contact Address",
+      "range": "ContactPointAddress"
+    },
+    {
+      "@id": "billDeliveryMethod",
+      "@type": "Property",
+      "description": "Electronic or Physical Mail delivery",
+      "name": "Bill Delivery Method",
+      "range": "DataType"
+    },
+    {
+      "@id": "billFrequency",
+      "@type": "Property",
+      "description": "How often to send Bill e.g. monthly",
+      "name": "Bill Frequency",
+      "range": "BillingFrequency"
+    },
+    {
+      "@id": "billToAddress",
+      "@type": "Property",
+      "description": "Reference to billing address",
+      "name": "Bill To Address",
+      "range": "ContactPointAddress"
+    },
+    {
+      "@id": "billToContact",
+      "@type": "Property",
+      "description": "Reference to the contact that the order will be billed to.",
+      "name": "Bill To Contact",
+      "range": "AccountContact"
+    },
+    {
+      "@id": "billToEmail",
+      "@type": "Property",
+      "description": "Customer email address associated to the sales order",
+      "name": "Bill To Email",
+      "range": "ContactPointEmail"
+    },
+    {
+      "@id": "billToPhoneNumber",
+      "@type": "Property",
+      "description": "Customer phone number associated with the sales order",
+      "name": "Bill To Phone Number",
+      "range": "ContactPointPhone"
+    },
+    {
+      "@id": "billingDayOfTheMonth",
+      "@type": "Property",
+      "description": "The day of the month that the customer should be invoiced",
+      "name": "Billing Day of the Month",
+      "range": "DataType"
+    }
+  ]
+}

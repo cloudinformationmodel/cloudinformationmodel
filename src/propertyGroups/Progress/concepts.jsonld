@@ -1,0 +1,163 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "ProgressPropertyGroup",
+  "name": "Progress Property Group",
+  "@type": "PropertyGroup",
+  "version": "0.1",
+  "propertyConcepts": [
+    {
+      "@id": "originalOrder",
+      "@type": "Property",
+      "description": "Reference to the a parent order. Needed for reship, excahnge and even swap orders",
+      "name": "Original Order",
+      "range": "SalesOrder"
+    },
+    {
+      "@id": "salesOrderStatus",
+      "@type": "Property",
+      "description": "Current order status e.g. Draft, Ready for Review, Placed, Ready for Activation, Activated",
+      "name": "Sales Order Status",
+      "range": "DataType"
+    },
+    {
+      "@id": "salesOrderSystemStatus",
+      "@type": "Property",
+      "description": "A status that describes the system state of an order, which is changes independently of the Sales Order Status, which is displayed to the end user.",
+      "name": "Sales Order System Status",
+      "range": "DataType"
+    },
+    {
+      "@id": "filedDate",
+      "@type": "Property",
+      "description": "Date the order was filed",
+      "name": "Filed Date",
+      "range": "DataType"
+    },
+    {
+      "@id": "orderEndDate",
+      "@type": "Property",
+      "description": "Date at which the order ends. For subscription-type orders, this would be the date when the subscription ends.",
+      "name": "Order End Date",
+      "range": "DataType"
+    },
+    {
+      "@id": "orderStartDate",
+      "@type": "Property",
+      "description": "Date at which the order becomes effective. For subscription-type orders, this would be the date when the subscription begins.",
+      "name": "Order Start Date",
+      "range": "DataType"
+    },
+    {
+      "@id": "promiseDate",
+      "@type": "Property",
+      "description": "Date the promise the order would be fulfilled",
+      "name": "Promise Date",
+      "range": "DataType"
+    },
+    {
+      "@id": "requestedStartDate",
+      "@type": "Property",
+      "description": "The customer's preferred date for order fulfillment",
+      "name": "Requested Start Date",
+      "range": "DataType"
+    },
+    {
+      "@id": "isAlerted",
+      "@type": "Property",
+      "description": "Is the order alerted. Used to notify the user that something went wrong during a workflow.",
+      "name": "Is Alerted",
+      "range": "DataType"
+    },
+    {
+      "@id": "isClosed",
+      "@type": "Property",
+      "description": "Is the order closed or not. Used to drive and halt workflows",
+      "name": "Is Closed",
+      "range": "DataType"
+    },
+    {
+      "@id": "isSuspended",
+      "@type": "Property",
+      "description": "Is the order suspended or not. Used to drive and halt workflows",
+      "name": "Is Suspended",
+      "range": "DataType"
+    },
+    {
+      "@id": "activatedDate",
+      "@type": "Property",
+      "description": "Date and time when the order was activated for fulfillment or shipping.",
+      "name": "Activated Date",
+      "range": "DataType"
+    },
+    {
+      "@id": "cancelDate",
+      "@type": "Property",
+      "description": "Date when the order was cancelled",
+      "name": "Cancel Date",
+      "range": "DataType"
+    },
+    {
+      "@id": "checkoutDate",
+      "@type": "Property",
+      "description": "What date this the customer checkout the shopping cart related to this order",
+      "name": "Checkout Date",
+      "range": "DataType"
+    },
+    {
+      "@id": "companyAuthorizedDate",
+      "@type": "Property",
+      "description": "Date on which the order was authorized by your organization.",
+      "name": "Company Authorized Date",
+      "range": "DataType"
+    },
+    {
+      "@id": "customerAuthorizedDate",
+      "@type": "Property",
+      "description": "Date on which the contact authorized the order.",
+      "name": "Customer Authorized Date",
+      "range": "DataType"
+    },
+    {
+      "@id": "fulfilledDate",
+      "@type": "Property",
+      "description": "What date was the order content completely provided to customer",
+      "name": "Fulfilled Date",
+      "range": "DataType"
+    },
+    {
+      "@id": "packedDate",
+      "@type": "Property",
+      "description": "Date the order was completely packed",
+      "name": "Packed Date",
+      "range": "DataType"
+    },
+    {
+      "@id": "paidDate",
+      "@type": "Property",
+      "description": "What date was this order paid in full",
+      "name": "Paid Date",
+      "range": "DataType"
+    },
+    {
+      "@id": "promiseFulfillmentDate",
+      "@type": "Property",
+      "description": "Date the order was promised to be fulfilled",
+      "name": "Promise Fulfillment Date",
+      "range": "DataType"
+    },
+    {
+      "@id": "cancelDateType",
+      "@type": "Property",
+      "description": "....returned as we do not know what a date type is....",
+      "name": "Cancel Date Type",
+      "range": "DataType"
+    },
+    {
+      "@id": "developerStatusCode",
+      "@type": "Property",
+      "description": "Developer status for the order. An order can be either Draft or Activated",
+      "name": "Developer Status Code",
+      "range": "DataType"
+    }
+  ]
+}

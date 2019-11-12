@@ -1,0 +1,56 @@
+#%Vocabulary 1.0
+base: http://cloudinformationmodel.org/model/
+vocabulary: Pricing Property Group
+propertyTerms:
+  priceBookEntry:
+    displayName: Price Book Entry
+    description: Reference to the associated PriceBookEntry. This field must be specified when creating OrderItem records. It can't be changed in an update.
+    range: PriceBookEntry
+  shipmentProduct:
+    displayName: Shipment Product
+    description: A product item in a shipment. A Shipment Product Price Adjustment will be related to a Shipment Product when a shipping fee has been adjusted after the Sales Order was created.
+    range: ShipmentProduct
+  orderedQuantity:
+    displayName: Ordered Quantity
+    description: Number of units of this order product.
+    range: any
+  taxRate:
+    displayName: Tax Rate
+    description: What tax rate is applied for the sales order
+    range: any
+  paymentMethod:
+    displayName: Payment Method
+    description: How is the order paid for e.g. credit card
+    range: PaymentMethod
+  subscriptionRenewalMonthQuantity:
+    displayName: Subscription Renewal Month Quantity
+    description: Determines how often a new order is placed, in months, if this Order Item is a subscription.
+    range: any
+  orderInsuranceAmount:
+    displayName: Order Insurance Amount
+    description: What is the insurance cost for the overall order
+    range: any
+  discountAmount:
+    displayName: Discount Amount
+    description: Discount amount applied to order line item
+    range: any
+  orderDiscount:
+    displayName: Order Discount Amount
+    description: What discount is given on the overall order
+    range: any
+  listPriceTermUOM:
+    displayName: List Price Term Unit of Measure
+    description: The unit of measure for the list price when the product is a subscription with a term. Yearly, quarterly, monthly, etc... are some examples
+    range: ProductValidityTimePeriodUOM
+  listPriceQuantityUOM:
+    displayName: List Price Quantity Unit of Measure
+    description: The unit of measure for the list price when the product is a physical product. Box, case and palette could be examples... are some examples
+    range: any
+  discountPercent:
+    displayName: Discount Percent
+    description: Discount percentage applied to this order line item
+    range: any
+  unitTaxAmount:
+    displayName: Unit Tax Amount
+    description: Unit tax amount for this order product
+    range: any

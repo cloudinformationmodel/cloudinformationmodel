@@ -1,0 +1,2142 @@
+{
+  "@context" : {
+    "rr" : "http://www.w3.org/ns/r2rml#"
+  },
+  "@graph" : [
+    {
+      "@id" : "/party_entity_group/uncategorized_party",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PARTY_ENTITY_GROUP.UNCATEGORIZED_PARTY"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/UncategorizedParty"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/creationReason"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "CREATION_REASON",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/uncategorizedPartyLabel"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "UNCATEGORIZED_PARTY_LABEL",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/originalSourceRecord"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "ORIGINAL_SOURCE_RECORD",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/originalSourceSystem"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "ORIGINAL_SOURCE_SYSTEM",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/partyType"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PARTY_TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/globalParty"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "GLOBAL_PARTY",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/noMergeReason"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "NO_MERGE_REASON",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/party_entity_group/person_language",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PARTY_ENTITY_GROUP.PERSON_LANGUAGE"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/PersonLanguage"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/spokenProficiencyLevel"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "SPOKEN_PROFICIENCY_LEVEL",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/writtenProficiencyLevel"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "WRITTEN_PROFICIENCY_LEVEL",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/party_entity_group/person_education",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PARTY_ENTITY_GROUP.PERSON_EDUCATION"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/PersonEducation"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/educationLevel"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "EDUCATION_LEVEL",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/educationName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "EDUCATION_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/graduationDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "GRADUATION_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/institutionName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "INSTITUTION_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/party_entity_group/individual",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PARTY_ENTITY_GROUP.INDIVIDUAL"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/Individual"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/hasAlcoholAbuseHistory"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "HAS_ALCOHOL_ABUSE_HISTORY",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/highestEducationLevel"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "HIGHEST_EDUCATION_LEVEL",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/personHeight"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PERSON_HEIGHT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/mailingName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MAILING_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/surgeriesLast5YearsCount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "SURGERIES_LAST5_YEARS_COUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/doNotTrackUpdateDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "DO_NOT_TRACK_UPDATE_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/weddingAnniversaryDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "WEDDING_ANNIVERSARY_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/minorCitationCount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MINOR_CITATION_COUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/mainDietaryHabitType"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MAIN_DIETARY_HABIT_TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/personHeightUnitOfMeasure"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PERSON_HEIGHT_UNIT_OF_MEASURE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/firstName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "FIRST_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/personName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PERSON_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/photoURL"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PHOTO_UR_L",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isHighRiskHobby"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_HIGH_RISK_HOBBY",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/doNotProcessFromUpdateDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "DO_NOT_PROCESS_FROM_UPDATE_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/militaryService"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MILITARY_SERVICE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/maritalStatus"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MARITAL_STATUS",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/doNotMarketFromUpdateDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "DO_NOT_MARKET_FROM_UPDATE_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/shouldForget"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "SHOULD_FORGET",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/mainDisabilityType"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MAIN_DISABILITY_TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/consumerCreditScoreProviderName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "CONSUMER_CREDIT_SCORE_PROVIDER_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isTobaccoConsume"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_TOBACCO_CONSUME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/webSiteURL"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "WEB_SITE_UR_L",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/secondLastName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "SECOND_LAST_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/orderingName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "ORDERING_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/hospitalizationsLast5YearsCount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "HOSPITALIZATIONS_LAST5_YEARS_COUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/dependentCount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "DEPENDENT_COUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/convictionsCount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "CONVICTIONS_COUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isGoodDriver"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_GOOD_DRIVER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/primaryHobby"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PRIMARY_HOBBY",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/mainPersonalValueType"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MAIN_PERSONAL_VALUE_TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isAlcoholConsumer"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_ALCOHOL_CONSUMER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/taxBracketRange"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "TAX_BRACKET_RANGE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/childrenCount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "CHILDREN_COUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isGoodStudent"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_GOOD_STUDENT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/mainLifeAttitudeType"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MAIN_LIFE_ATTITUDE_TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/netWorth"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "NET_WORTH",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/personWeight"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PERSON_WEIGHT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/birthDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "BIRTH_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/religion"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "RELIGION",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/sendIndividualData"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "SEND_INDIVIDUAL_DATA",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/deathDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "DEATH_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/doExtractMyDataUpdateDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "DO_EXTRACT_MY_DATA_UPDATE_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/birthPlace"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "BIRTH_PLACE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/overAgeNumber"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "OVER_AGE_NUMBER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/doForgetMeFromUpdateDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "DO_FORGET_ME_FROM_UPDATE_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/personWeightUnitOfMeasure"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PERSON_WEIGHT_UNIT_OF_MEASURE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/mainLifeStyleType"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MAIN_LIFE_STYLE_TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/gender"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "GENDER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/hasDrugAbuseHistory"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "HAS_DRUG_ABUSE_HISTORY",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/salutation"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "SALUTATION",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/mothersMaidenName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MOTHERS_MAIDEN_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/doNotTrackLocationUpdateDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "DO_NOT_TRACK_LOCATION_UPDATE_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/ethnicity"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "ETHNICITY",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/mainPersonalityType"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MAIN_PERSONALITY_TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/employedSinceDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "EMPLOYED_SINCE_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/officialName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "OFFICIAL_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isHighRiskOccupation"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_HIGH_RISK_OCCUPATION",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/residenceCaptureMethod"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "RESIDENCE_CAPTURE_METHOD",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/doNotProfileFromUpdateDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "DO_NOT_PROFILE_FROM_UPDATE_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/nameSuffix"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "NAME_SUFFIX",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isDrugConsumer"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_DRUG_CONSUMER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isHomeOwner"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_HOME_OWNER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/doNotProcessReason"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "DO_NOT_PROCESS_REASON",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/occupationType"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "OCCUPATION_TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/deathPlace"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "DEATH_PLACE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/influencerRating"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "INFLUENCER_RATING",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/militaryStatus"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MILITARY_STATUS",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/consumerCreditScore"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "CONSUMER_CREDIT_SCORE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/yearlyIncome"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "YEARLY_INCOME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/preferredName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PREFERRED_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/personLifeStage"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PERSON_LIFE_STAGE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/yearlyIncomeRange"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "YEARLY_INCOME_RANGE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/majorCitationCount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MAJOR_CITATION_COUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/middleName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "MIDDLE_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/residenceCountryName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "RESIDENCE_COUNTRY_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/lastName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "LAST_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/occupation"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "OCCUPATION",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/currentEmployerName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "CURRENT_EMPLOYER_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/partyType"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PARTY_TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/globalParty"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "GLOBAL_PARTY",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/noMergeReason"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "NO_MERGE_REASON",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/party_entity_group/person_employment",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PARTY_ENTITY_GROUP.PERSON_EMPLOYMENT"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/PersonEmployment"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/employmentStatus"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "EMPLOYMENT_STATUS",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/positionText"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "POSITION_TEXT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/employerAddressLine3"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "EMPLOYER_ADDRESS_LINE3",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/endDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "END_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/startDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "START_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/occupationText"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "OCCUPATION_TEXT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/employerName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "EMPLOYER_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/employerAddressLine4"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "EMPLOYER_ADDRESS_LINE4",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/employerAddressLine1"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "EMPLOYER_ADDRESS_LINE1",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/annualIncome"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "ANNUAL_INCOME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/employerCityName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "EMPLOYER_CITY_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/employerAddressLine2"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "EMPLOYER_ADDRESS_LINE2",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/employerPostalCodeText"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "EMPLOYER_POSTAL_CODE_TEXT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/employerPhoneNumber"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "EMPLOYER_PHONE_NUMBER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/party_entity_group/party_identification",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PARTY_ENTITY_GROUP.PARTY_IDENTIFICATION"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/PartyIdentification"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/expiryDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "EXPIRY_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/partyIdentificationType"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PARTY_IDENTIFICATION_TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/verifiedDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "VERIFIED_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/issuedByAuthority"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "ISSUED_BY_AUTHORITY",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/issuedAtLocation"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "ISSUED_AT_LOCATION",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/issuedDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "ISSUED_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/partyRole"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PARTY_ROLE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/name"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/identificationNumber"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IDENTIFICATION_NUMBER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/party_entity_group/party_related_party",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PARTY_ENTITY_GROUP.PARTY_RELATED_PARTY"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/PartyRelatedParty"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/relatedFromDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "RELATED_FROM_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/relatedToDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "RELATED_TO_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/party_entity_group/party_additional_name",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PARTY_ENTITY_GROUP.PARTY_ADDITIONAL_NAME"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/PartyAdditionalName"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/additionalNameType"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "ADDITIONAL_NAME_TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/name"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/party_entity_group/party_relationship_type",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PARTY_ENTITY_GROUP.PARTY_RELATIONSHIP_TYPE"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/PartyRelationshipType"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isBidirectional"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_BIDIRECTIONAL",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/partyRole"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PARTY_ROLE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/relatedPartyRole"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "RELATED_PARTY_ROLE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/party_entity_group/household",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PARTY_ENTITY_GROUP.HOUSEHOLD"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/Household"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/householdMemberCount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "HOUSEHOLD_MEMBER_COUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/householdFormedDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "HOUSEHOLD_FORMED_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/name"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/householdDissolvedDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "HOUSEHOLD_DISSOLVED_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/partyType"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PARTY_TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/globalParty"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "GLOBAL_PARTY",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/noMergeReason"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "NO_MERGE_REASON",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/party_entity_group/person_life_event",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PARTY_ENTITY_GROUP.PERSON_LIFE_EVENT"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/PersonLifeEvent"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/personLifeEventDateTime"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PERSON_LIFE_EVENT_DATE_TIME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#time"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/personLifeEventType"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PERSON_LIFE_EVENT_TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/party_entity_group/party",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PARTY_ENTITY_GROUP.PARTY"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/Party"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/partyType"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PARTY_TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/globalParty"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "GLOBAL_PARTY",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/noMergeReason"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "NO_MERGE_REASON",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/party_entity_group/internal_business_unit",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PARTY_ENTITY_GROUP.INTERNAL_BUSINESS_UNIT"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/InternalBusinessUnit"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/businessUnitType"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "BUSINESS_UNIT_TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/name"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/partyType"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PARTY_TYPE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/globalParty"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "GLOBAL_PARTY",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/noMergeReason"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "NO_MERGE_REASON",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/party_entity_group/uncategorized_party_primary_account_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PARTY_ENTITY_GROUP.UNCATEGORIZED_PARTY_PRIMARY_ACCOUNT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{UNCATEGORIZED_PARTY_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/primaryAccount"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/account_entity_group/account"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "ACCOUNT_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/party_entity_group/person_language_individual_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PARTY_ENTITY_GROUP.PERSON_LANGUAGE_INDIVIDUAL_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PERSON_LANGUAGE_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/individual"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/party_entity_group/individual"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "INDIVIDUAL_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/party_entity_group/person_education_individual_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PARTY_ENTITY_GROUP.PERSON_EDUCATION_INDIVIDUAL_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PERSON_EDUCATION_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/individual"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/party_entity_group/individual"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "INDIVIDUAL_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/party_entity_group/individual_primary_household_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PARTY_ENTITY_GROUP.INDIVIDUAL_PRIMARY_HOUSEHOLD_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{INDIVIDUAL_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/primaryHousehold"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/party_entity_group/household"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "HOUSEHOLD_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/party_entity_group/individual_primary_account_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PARTY_ENTITY_GROUP.INDIVIDUAL_PRIMARY_ACCOUNT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{INDIVIDUAL_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/primaryAccount"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/account_entity_group/account"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "ACCOUNT_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/party_entity_group/person_employment_employer_contact_point_address_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PARTY_ENTITY_GROUP.PERSON_EMPLOYMENT_EMPLOYER_CONTACT_POINT_ADDRESS_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PERSON_EMPLOYMENT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/employerContactPointAddress"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/contact_point_entity_group/contact_point_address"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "CONTACT_POINT_ADDRESS_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/party_entity_group/person_employment_individual_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PARTY_ENTITY_GROUP.PERSON_EMPLOYMENT_INDIVIDUAL_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PERSON_EMPLOYMENT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/individual"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/party_entity_group/individual"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "INDIVIDUAL_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/party_entity_group/party_identification_party_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PARTY_ENTITY_GROUP.PARTY_IDENTIFICATION_PARTY_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PARTY_IDENTIFICATION_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/party"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/party_entity_group/party"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PARTY_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/party_entity_group/party_related_party_party_relationship_type_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PARTY_ENTITY_GROUP.PARTY_RELATED_PARTY_PARTY_RELATIONSHIP_TYPE_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PARTY_RELATED_PARTY_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/partyRelationshipType"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/party_entity_group/party_relationship_type"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PARTY_RELATIONSHIP_TYPE_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/party_entity_group/party_related_party_related_party_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PARTY_ENTITY_GROUP.PARTY_RELATED_PARTY_RELATED_PARTY_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PARTY_RELATED_PARTY_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/relatedParty"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/party_entity_group/party"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PARTY_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/party_entity_group/party_related_party_party_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PARTY_ENTITY_GROUP.PARTY_RELATED_PARTY_PARTY_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PARTY_RELATED_PARTY_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/party"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/party_entity_group/party"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PARTY_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/party_entity_group/party_additional_name_party_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PARTY_ENTITY_GROUP.PARTY_ADDITIONAL_NAME_PARTY_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PARTY_ADDITIONAL_NAME_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/party"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/party_entity_group/party"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PARTY_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/party_entity_group/household_primary_account_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PARTY_ENTITY_GROUP.HOUSEHOLD_PRIMARY_ACCOUNT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{HOUSEHOLD_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/primaryAccount"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/account_entity_group/account"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "ACCOUNT_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/party_entity_group/person_life_event_individual_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PARTY_ENTITY_GROUP.PERSON_LIFE_EVENT_INDIVIDUAL_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PERSON_LIFE_EVENT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/individual"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/party_entity_group/individual"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "INDIVIDUAL_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/party_entity_group/party_primary_account_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PARTY_ENTITY_GROUP.PARTY_PRIMARY_ACCOUNT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PARTY_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/primaryAccount"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/account_entity_group/account"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "ACCOUNT_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/party_entity_group/internal_business_unit_parent_internal_business_unit_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PARTY_ENTITY_GROUP.INTERNAL_BUSINESS_UNIT_PARENT_INTERNAL_BUSINESS_UNIT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{INTERNAL_BUSINESS_UNIT_ID_LEFT}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/parentInternalBusinessUnit"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/party_entity_group/internal_business_unit"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "INTERNAL_BUSINESS_UNIT_ID_RIGHT",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/party_entity_group/internal_business_unit_primary_account_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PARTY_ENTITY_GROUP.INTERNAL_BUSINESS_UNIT_PRIMARY_ACCOUNT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{INTERNAL_BUSINESS_UNIT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/primaryAccount"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/account_entity_group/account"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "ACCOUNT_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    }
+  ]
+}

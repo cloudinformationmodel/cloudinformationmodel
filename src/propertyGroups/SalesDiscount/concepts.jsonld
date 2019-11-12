@@ -1,0 +1,58 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "SalesDiscountPropertyGroup",
+  "name": "SalesDiscount Property Group",
+  "@type": "PropertyGroup",
+  "version": "0.1",
+  "propertyConcepts": [
+    {
+      "@id": "isCouponRedemptionAllowed",
+      "@type": "Property",
+      "description": "Can a coupon be used to redeem this item",
+      "name": "Is Coupon Redemption Allowed",
+      "range": "DataType"
+    },
+    {
+      "@id": "isMultipleCouponsAllowed",
+      "@type": "Property",
+      "description": "Can multiple coupons be applied to the same item",
+      "name": "Is Multiple Coupons Allowed",
+      "range": "DataType"
+    },
+    {
+      "@id": "isCustomerDiscountAllowed",
+      "@type": "Property",
+      "description": "Can customers be offered product at a discounted price",
+      "name": "Is Customer Discount Allowed",
+      "range": "DataType"
+    },
+    {
+      "@id": "isWorkerDiscountAllowed",
+      "@type": "Property",
+      "description": "Can employees and contractor get a discount on this product",
+      "name": "Is Worker Discount Allowed",
+      "range": "DataType"
+    },
+    {
+      "@id": "isPartnerDiscountAllowed",
+      "@type": "Property",
+      "description": "Can seller and supplier partners get a discount on this product",
+      "name": "Is Partner Discount Allowed",
+      "range": "DataType"
+    },
+    {
+      "@id": "isFoodstampPaymentAllowed",
+      "@type": "Property",
+      "description": "Can this product be paid with food stamps",
+      "name": "Is Foodstamp Payment Allowed",
+      "range": "DataType"
+    },
+    {
+      "@id": "rewardProgramPointsCount",
+      "@type": "Property",
+      "description": "How many points given for the purchase of this item",
+      "name": "Reward Program Points Count",
+      "range": "DataType"
+    }
+  ]
+}

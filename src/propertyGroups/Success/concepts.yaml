@@ -1,0 +1,24 @@
+#%Vocabulary 1.0
+base: http://cloudinformationmodel.org/model/
+vocabulary: Success Property Group
+propertyTerms:
+  netPromoterScore:
+    displayName: Net Promoter Score
+    description: Level of willingness by customer to promote our product and is between -100 to 100
+    range: any
+  customerSatisfactionScore:
+    displayName: Customer Satisfaction Score
+    description: How happy our customers are with the seller
+    range: any
+  satisfactionScore:
+    displayName: Satisfaction Score
+    description: How happy is our seller with us
+    range: any
+  churnScore:
+    displayName: Churn Score
+    description: How big is the chance this customer will defect from being our customer
+    range: any
+  successStoryCount:
+    displayName: Success Story Count
+    description: How many known success stories related to us have seller been involved in
+    range: any

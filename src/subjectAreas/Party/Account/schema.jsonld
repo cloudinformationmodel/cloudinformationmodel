@@ -1,0 +1,369 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "AccountEntityGroup",
+  "@type": "EntityGroup",
+  "version": "0.1",
+  "schemas": [
+    {
+      "@type": "Shape",
+      "@id": "Account",
+      "properties": [
+        {
+          "path": "generalLedgerAccount",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "autoPaymentMethod",
+          "node": "PaymentMethod"
+        },
+        {
+          "path": "autoPaymentAmount",
+          "datatype": "xsd:integer",
+          "maxCount": "1"
+        },
+        {
+          "path": "autoPayEnabledFlag",
+          "datatype": "xsd:boolean",
+          "maxCount": "1"
+        },
+        {
+          "path": "paymentTerm",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "billFrequency",
+          "node": "BillingFrequency"
+        },
+        {
+          "path": "billDeliveryMethod",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "billContactAddress",
+          "node": "ContactPointAddress"
+        },
+        {
+          "path": "parentAccount",
+          "node": "Account"
+        },
+        {
+          "path": "lastActivityDate",
+          "datatype": "xsd:date",
+          "maxCount": "1"
+        },
+        {
+          "path": "balanceAmountLimit",
+          "datatype": "xsd:integer",
+          "maxCount": "1"
+        },
+        {
+          "path": "ninetyDayBalanceAmount",
+          "datatype": "xsd:decimal",
+          "maxCount": "1"
+        },
+        {
+          "path": "sixtyDayBalanceAmount",
+          "datatype": "xsd:decimal",
+          "maxCount": "1"
+        },
+        {
+          "path": "thirtyDayBalanceAmount",
+          "datatype": "xsd:decimal",
+          "maxCount": "1"
+        },
+        {
+          "path": "balanceAmount",
+          "datatype": "xsd:decimal",
+          "maxCount": "1"
+        },
+        {
+          "path": "defaultFreightTerms",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "sLAExpirationDate",
+          "datatype": "xsd:date",
+          "maxCount": "1"
+        },
+        {
+          "path": "sLAType",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "orderDeliveryMethod",
+          "node": "OrderDeliveryMethod"
+        },
+        {
+          "path": "shippingAddress",
+          "node": "ContactPointAddress"
+        },
+        {
+          "path": "shippingEmail",
+          "node": "ContactPointEmail"
+        },
+        {
+          "path": "shippingPhoneid",
+          "node": "ContactPointPhone"
+        },
+        {
+          "path": "shippingContact",
+          "node": "AccountContact"
+        },
+        {
+          "path": "faxPhone",
+          "node": "ContactPointPhone"
+        },
+        {
+          "path": "salesPhone",
+          "node": "ContactPointPhone"
+        },
+        {
+          "path": "primarySalesContactPoint",
+          "node": "ContactPoint"
+        },
+        {
+          "path": "assignTerritoryFlag",
+          "datatype": "xsd:boolean",
+          "maxCount": "1"
+        },
+        {
+          "path": "useAsServiceAccount",
+          "datatype": "xsd:boolean",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "useAsShippingAccount",
+          "datatype": "xsd:boolean",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "useAsBillingAccount",
+          "datatype": "xsd:boolean",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "useAsSalesAccount",
+          "datatype": "xsd:boolean",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "holdStatusReason",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "accountType",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "description",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "name",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "number",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "partyRole",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "party",
+          "node": "Party"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "AccountContact",
+      "properties": [
+        {
+          "path": "indirectRelationAccountContact",
+          "node": "AccountContact"
+        },
+        {
+          "path": "lastActivityDate",
+          "datatype": "xsd:date",
+          "maxCount": "1"
+        },
+        {
+          "path": "reportsToAccountContact",
+          "node": "AccountContact"
+        },
+        {
+          "path": "otherContactAddress",
+          "node": "ContactPointAddress"
+        },
+        {
+          "path": "mailingAddress",
+          "node": "ContactPointAddress"
+        },
+        {
+          "path": "mobilePhone",
+          "node": "ContactPointPhone"
+        },
+        {
+          "path": "faxPhone",
+          "node": "ContactPointPhone"
+        },
+        {
+          "path": "businessPhone",
+          "node": "ContactPointPhone"
+        },
+        {
+          "path": "homePhone",
+          "node": "ContactPointPhone"
+        },
+        {
+          "path": "contactEmail",
+          "node": "ContactPointEmail"
+        },
+        {
+          "path": "contactNote",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "assistantPhone",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "assistantName",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "title",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "departmentName",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "individual",
+          "node": "Individual",
+          "minCount": "1"
+        },
+        {
+          "path": "account",
+          "node": "Account",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "AccountContactRole",
+      "properties": [
+        {
+          "path": "activeToDate",
+          "datatype": "xsd:date",
+          "maxCount": "1"
+        },
+        {
+          "path": "activeFromDate",
+          "datatype": "xsd:date",
+          "maxCount": "1"
+        },
+        {
+          "path": "accountContactRoleType",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "accountContact",
+          "node": "AccountContact"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "AccountPartner",
+      "properties": [
+        {
+          "path": "account",
+          "node": "Account",
+          "minCount": "1"
+        },
+        {
+          "path": "partnerAccount",
+          "node": "Account",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "BillingFrequency",
+      "properties": [
+        {
+          "path": "billingFrequencyName",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "name",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    }
+  ]
+}

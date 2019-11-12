@@ -1,0 +1,44 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "SuccessPropertyGroup",
+  "name": "Success Property Group",
+  "@type": "PropertyGroup",
+  "version": "0.1",
+  "propertyConcepts": [
+    {
+      "@id": "netPromoterScore",
+      "@type": "Property",
+      "description": "Level of willingness by customer to promote our product and is between -100 to 100",
+      "name": "Net Promoter Score",
+      "range": "DataType"
+    },
+    {
+      "@id": "churnScore",
+      "@type": "Property",
+      "description": "How big is the chance this customer will defect from being our customer",
+      "name": "Churn Score",
+      "range": "DataType"
+    },
+    {
+      "@id": "satisfactionScore",
+      "@type": "Property",
+      "description": "How happy is our seller with us",
+      "name": "Satisfaction Score",
+      "range": "DataType"
+    },
+    {
+      "@id": "customerSatisfactionScore",
+      "@type": "Property",
+      "description": "How happy our customers are with the seller",
+      "name": "Customer Satisfaction Score",
+      "range": "DataType"
+    },
+    {
+      "@id": "successStoryCount",
+      "@type": "Property",
+      "description": "How many known success stories related to us have seller been involved in",
+      "name": "Success Story Count",
+      "range": "DataType"
+    }
+  ]
+}

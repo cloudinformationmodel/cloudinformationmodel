@@ -1,0 +1,100 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "ShipmentPropertyGroup",
+  "name": "Shipment Property Group",
+  "@type": "PropertyGroup",
+  "version": "0.1",
+  "propertyConcepts": [
+    {
+      "@id": "shipmentNumber",
+      "@type": "Property",
+      "description": "automatically-generated number that identifies the Shipment",
+      "name": "Shipment Number",
+      "range": "DataType"
+    },
+    {
+      "@id": "carrierTrackingNumber",
+      "@type": "Property",
+      "description": "An identifier issued by a shipping carrier that is unique within that carrier, and can be used to determine where a package is in the delivery process.",
+      "name": "Carrier Tracking Number",
+      "range": "DataType"
+    },
+    {
+      "@id": "salesOrder",
+      "@type": "Property",
+      "description": "The parent Sales Order. This is provided for implementations that do not utilize Fulfillment Order. When Fulfillment Orders do exist, the correct way to relate a shipment to a sales order is via the fulfillment order.",
+      "name": "Sales Order",
+      "range": "SalesOrder"
+    },
+    {
+      "@id": "salesOrderDeliveryGroup",
+      "@type": "Property",
+      "description": "One or more Sales Order Products that share a common Sales Order Delivery Method, and Shipping Address",
+      "name": "Sales Order Delivery Group",
+      "range": "SalesOrderDeliveryGroup"
+    },
+    {
+      "@id": "shipmentStatus",
+      "@type": "Property",
+      "description": "The current stage of shipping, e.g. In Transit or Delivered",
+      "name": "Shipment Status",
+      "range": "ShipmentStatus"
+    },
+    {
+      "@id": "shipToAddress",
+      "@type": "Property",
+      "description": "An address defined for either the Bill-to customer or shipping contact on the Sales Order",
+      "name": "Ship To Address",
+      "range": "ContactPointAddress"
+    },
+    {
+      "@id": "shippingMethod",
+      "@type": "Property",
+      "description": "The shipping transport method, e.g. UPS 3-day, FedEx overnight, etc.",
+      "name": "Shipping Method",
+      "range": "ShippingMethod"
+    },
+    {
+      "@id": "actualDeliveryDateTime",
+      "@type": "Property",
+      "description": "The date/time when the delivery was completed.",
+      "name": "Actual Delivery DateTime",
+      "range": "DataType"
+    },
+    {
+      "@id": "scheduledDeliveryDateTime",
+      "@type": "Property",
+      "description": "The date when the delivery has been scheduled to occur.",
+      "name": "Scheduled Delivery DateTime",
+      "range": "DataType"
+    },
+    {
+      "@id": "estimatedDeliveryDateTime",
+      "@type": "Property",
+      "description": "The expected date when the shipment will arrive. This will be the scheduled date unless there are delays.",
+      "name": "Estimated Delivery DateTime",
+      "range": "DataType"
+    },
+    {
+      "@id": "isGift",
+      "@type": "Property",
+      "description": "True if the delivery is a gift",
+      "name": "Is Gift",
+      "range": "DataType"
+    },
+    {
+      "@id": "specialInstructionsText",
+      "@type": "Property",
+      "description": "Instructions to the delivery service, e.g., leave with neighbors",
+      "name": "Special Instructions Text",
+      "range": "DataType"
+    },
+    {
+      "@id": "giftMessageText",
+      "@type": "Property",
+      "description": "Text message to be delivered with the shipment",
+      "name": "Gift Message Text",
+      "range": "DataType"
+    }
+  ]
+}

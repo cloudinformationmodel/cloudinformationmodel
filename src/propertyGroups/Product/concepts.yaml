@@ -1,0 +1,24 @@
+#%Vocabulary 1.0
+base: http://cloudinformationmodel.org/model/
+vocabulary: Product Property Group
+propertyTerms:
+  subscriptionTermUnit:
+    displayName: Subscription Term Unit of Measure
+    description: The unit of Measure for the Subscription Term
+    range: ProductValidityTimePeriodUOM
+  product:
+    displayName: Product
+    description: The service, product or charge associated with this SalesOrderProduct.
+    range: Product
+  subscriptionTermQuantity:
+    displayName: Subscription Term Quantity
+    description: Quantity of the Subscription Unit Term Unit of Measure
+    range: any
+  isBundleRoot:
+    displayName: Is Bundle Root
+    description: Is the product the root-level of a bundled product?
+    range: any
+  segmentIndexNumber:
+    displayName: Segment Index Number
+    description: Used for pricing subscriptions, where sub-periods of the overall subscription are priced differently, and the pricing changes in a structured way over a series of segments, which are identified by numerically increasing Segment Numbers
+    range: any

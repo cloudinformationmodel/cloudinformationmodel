@@ -1,0 +1,58 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "IdPropertyGroup",
+  "name": "Id Property Group",
+  "@type": "PropertyGroup",
+  "version": "0.1",
+  "propertyConcepts": [
+    {
+      "@id": "additionalNameType",
+      "@type": "Property",
+      "description": "Reference to type of trade name e.g. also known as, doing business as",
+      "name": "Additional Name Type",
+      "range": "DataType"
+    },
+    {
+      "@id": "optInPriority",
+      "@type": "Property",
+      "description": "In what order should channels for a data subjects opt in/out be evaluated",
+      "name": "Opt In Priority",
+      "range": "DataType"
+    },
+    {
+      "@id": "party",
+      "@type": "Property",
+      "description": "Reference to party",
+      "name": "Party",
+      "range": "Party"
+    },
+    {
+      "@id": "partyRole",
+      "@type": "Property",
+      "description": "Reference to Party Role, populated if contact point only applicable in context of a role",
+      "name": "Party Role",
+      "range": "DataType"
+    },
+    {
+      "@id": "contactPointType",
+      "@type": "Property",
+      "description": "Type of contact point, specifically e.g. Contact Point Phone, Contact Point Email, Contact Point Address, Contact Point Location, Contact Point Social",
+      "name": "Contact Point Type",
+      "range": "ContactPointType"
+    },
+    {
+      "@id": "name",
+      "@type": "Property",
+      "description": "Is it primarily a 'Home', 'Business', 'Fax', 'Mobile' or 'Other' phone",
+      "name": "Primary Phone Type Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "id",
+      "@type": "Property",
+      "description": "Primary key",
+      "name": "Party Identification Id",
+      "range": "DataType"
+    }
+  ]
+}

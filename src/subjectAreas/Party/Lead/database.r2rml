@@ -1,0 +1,436 @@
+{
+  "@context" : {
+    "rr" : "http://www.w3.org/ns/r2rml#"
+  },
+  "@graph" : [
+    {
+      "@id" : "/lead_entity_group/lead",
+      "rr:logicalTable" : {
+        "rr:tableName" : "LEAD_ENTITY_GROUP.LEAD"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/Lead"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/stateProvinceName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "STATE_PROVINCE_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/leadStatus"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "LEAD_STATUS",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/photoURL"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PHOTO_UR_L",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/countryName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "COUNTRY_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/partyRole"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "PARTY_ROLE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/convertedDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "CONVERTED_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/description"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "DESCRIPTION",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/companyName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "COMPANY_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/streetName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "STREET_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/leadScore"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "LEAD_SCORE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/geoCodeLatitude"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "GEO_CODE_LATITUDE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/leadRating"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "LEAD_RATING",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/geoCodeLongitude"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "GEO_CODE_LONGITUDE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/emailBouncedDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "EMAIL_BOUNCED_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#time"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/geoCodeAccuracy"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "GEO_CODE_ACCURACY",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/leadSource"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "LEAD_SOURCE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/lastActivityDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "LAST_ACTIVITY_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/annualRevenue"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "ANNUAL_REVENUE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/emailBouncedReason"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "EMAIL_BOUNCED_REASON",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/website"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "WEBSITE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isConverted"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_CONVERTED",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/lead_entity_group/lead_fax_contact_phone_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "LEAD_ENTITY_GROUP.LEAD_FAX_CONTACT_PHONE_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{LEAD_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/faxContactPhone"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/contact_point_entity_group/contact_point_phone"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "CONTACT_POINT_PHONE_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/lead_entity_group/lead_contact_point_email_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "LEAD_ENTITY_GROUP.LEAD_CONTACT_POINT_EMAIL_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{LEAD_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/contactPointEmail"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/contact_point_entity_group/contact_point_email"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "CONTACT_POINT_EMAIL_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/lead_entity_group/lead_mobile_contact_phone_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "LEAD_ENTITY_GROUP.LEAD_MOBILE_CONTACT_PHONE_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{LEAD_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/mobileContactPhone"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/contact_point_entity_group/contact_point_phone"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "CONTACT_POINT_PHONE_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/lead_entity_group/lead_contact_address_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "LEAD_ENTITY_GROUP.LEAD_CONTACT_ADDRESS_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{LEAD_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/contactAddress"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/contact_point_entity_group/contact_point_address"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "CONTACT_POINT_ADDRESS_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/lead_entity_group/lead_converted_to_account_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "LEAD_ENTITY_GROUP.LEAD_CONVERTED_TO_ACCOUNT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{LEAD_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/convertedToAccount"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/account_entity_group/account"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "ACCOUNT_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/lead_entity_group/lead_converted_to_account_contact_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "LEAD_ENTITY_GROUP.LEAD_CONVERTED_TO_ACCOUNT_CONTACT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{LEAD_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/convertedToAccountContact"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/account_entity_group/account_contact"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "ACCOUNT_CONTACT_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/lead_entity_group/lead_phone_contact_point_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "LEAD_ENTITY_GROUP.LEAD_PHONE_CONTACT_POINT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{LEAD_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/phoneContactPoint"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/contact_point_entity_group/contact_point_phone"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "CONTACT_POINT_PHONE_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/lead_entity_group/lead_partner_account_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "LEAD_ENTITY_GROUP.LEAD_PARTNER_ACCOUNT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{LEAD_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/partnerAccount"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/account_entity_group/account"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "ACCOUNT_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    }
+  ]
+}

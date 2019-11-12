@@ -1,0 +1,56 @@
+#%Vocabulary 1.0
+base: http://cloudinformationmodel.org/model/
+vocabulary: Health Property Group
+propertyTerms:
+  personHeight:
+    displayName: Person Height
+    description: How tall is the person
+    range: any
+  hasDrugAbuseHistory:
+    displayName: Has Drug Abuse History
+    description: Indicator whether individual had a history of drug abuse
+    range: any
+  personHeightUnitOfMeasure:
+    displayName: Person Height Unit Of Measure
+    description: What unit of measure is used for height
+    range: any
+  surgeriesLast5YearsCount:
+    displayName: Surgeries Last 5 Years Count
+    description: How many times the individual had any type of surgery in last 5 years
+    range: any
+  hasAlcoholAbuseHistory:
+    displayName: Has Alcohol Abuse History
+    description: Indicator whether individual have a history of Alchol abuse
+    range: any
+  mainDietaryHabitType:
+    displayName: Main Dietary Habit Type
+    description: Dietary habit e.g. kosher food eater
+    range: any
+  isDrugConsumer:
+    displayName: Is Drug Consumer
+    description: Indicator whether individual currently consume any drug other than alcohol
+    range: any
+  isAlcoholConsumer:
+    displayName: Is Alcohol Consumer
+    description: Indicator whether individual currently consume alcohol
+    range: any
+  isTobaccoConsume:
+    displayName: Is Tobacco Consumer
+    description: Indicator whether individual had a history of drug abuse
+    range: any
+  personWeightUnitOfMeasure:
+    displayName: Person Weight Unit Of Measure
+    description: What unit of measure is used for weight
+    range: any
+  personWeight:
+    displayName: Person Weight
+    description: How heavy is the person
+    range: any
+  hospitalizationsLast5YearsCount:
+    displayName: Hospitalizations Last 5 Years Count
+    description: How many times the individual been hospitalized last 5 years
+    range: any
+  mainDisabilityType:
+    displayName: Main Disability Type
+    description: Disability or Impairment e.g. wheel chair bound
+    range: any

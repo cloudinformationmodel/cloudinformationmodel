@@ -1,0 +1,110 @@
+#%RAML 1.0 Library
+types:
+  CreditTender:
+    type: PaymentMethod
+    properties:
+      account:
+        items: account_eg.Account
+      id:
+        type: string
+  PaymentCard:
+    type: PaymentMethod
+    properties:
+      creditCardExpired:
+        type: boolean
+      cardToken:
+        type: string
+      issueNumber:
+        type: string
+      billToCity:
+        type: string
+      id:
+        type: string
+      maskedNumber:
+        type: string
+      name:
+        type: string
+      companyName:
+        type: string
+      cardHolderName:
+        type: string
+      numberLastDigits:
+        type: string
+      paymentCardType:
+        type: string
+      derivedCardTypeCode:
+        type: string
+      billToFirstName:
+        type: string
+      billToStreet:
+        type: string
+      expirationYear:
+        type: string
+      billToStreet2:
+        type: string
+      expirationMonth:
+        type: string
+      billToLastName:
+        type: string
+  PaymentMethodType:
+    properties:
+      typeDescription:
+        type: string
+      mediaType:
+        type: string
+      maxPerPeriodAmount:
+        type: integer
+      typeRequiredIdentification:
+        type: string
+      id:
+        type: string
+      name:
+        type: string
+      useMinimumAgeYear:
+        type: integer
+      maxTransactionAmount:
+        type: integer
+      maxPerPeriodTransactionCount:
+        type: integer
+  Coupon:
+    type: PaymentMethod
+    properties:
+      manufacturer:
+        items: party_eg.Party
+      primaryScanCodeLabel:
+        type: string
+      isReturnCoupon:
+        type: boolean
+      expirationDate:
+        type: date-only
+      id:
+        type: string
+      secondaryScanCodeLabel:
+        type: string
+      scanCode:
+        type: string
+      couponCode:
+        type: string
+      returnCouponReason:
+        type: string
+      discountAmount:
+        type: integer
+      isValid:
+        type: boolean
+      couponStatus:
+        type: string
+      discountPercentage:
+        type: integer
+      couponCount:
+        type: integer
+  PaymentMethod:
+    properties:
+      paymentMethodType:
+        items: PaymentMethodType
+      paymentMethodStatus:
+        type: string
+      id:
+        type: string
+uses:
+  account_eg: ../../Party/Account/schema.yaml
+  party_eg: ../../Party/Party/schema.yaml

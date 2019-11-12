@@ -1,0 +1,1334 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "PaymentEntityGroup",
+  "@type": "EntityGroup",
+  "version": "0.1",
+  "schemas": [
+    {
+      "@type": "Shape",
+      "@id": "Payment",
+      "properties": [
+        {
+          "path": "salesOrderPaymentSummary",
+          "node": "SalesOrderPaymentSummary",
+          "minCount": "1"
+        },
+        {
+          "path": "paymentGroup",
+          "node": "PaymentGroup",
+          "minCount": "1"
+        },
+        {
+          "path": "paymentGateway",
+          "node": "PaymentGateway",
+          "minCount": "1"
+        },
+        {
+          "path": "paymentType",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "paymentTreatment",
+          "node": "PaymentTreatment",
+          "minCount": "1"
+        },
+        {
+          "path": "internalBusinessUnit",
+          "node": "InternalBusinessUnit",
+          "minCount": "1"
+        },
+        {
+          "path": "account",
+          "node": "Account"
+        },
+        {
+          "path": "paymentMethod",
+          "node": "PaymentMethod",
+          "minCount": "1"
+        },
+        {
+          "path": "authorizationProcessingMode",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "latestGatewayResultCode",
+          "node": "PaymentGatewayResultCode",
+          "minCount": "1"
+        },
+        {
+          "path": "latestGatewayInternalResult",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "paymentStatus",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "customerPhoneNumber",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "customerEmailAddress",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "name",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "latestGatewayReferenceNumber",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "latestGatewayInternalReferenceNumber",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "latestPaymentGatewayMessageText",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "macAddress",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "iPAddress",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "paymentNumber",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "commentText",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "paymentAmount",
+          "datatype": "xsd:decimal",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "netAppliedAmount",
+          "datatype": "xsd:decimal",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "totalAppliedAmount",
+          "datatype": "xsd:decimal",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "totalUnappliedAmount",
+          "datatype": "xsd:decimal",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "balanceAmount",
+          "datatype": "xsd:decimal",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "latestGatewayDate",
+          "datatype": "xsd:date",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "externalCreatedDate",
+          "datatype": "xsd:date",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "paymentEffectiveDate",
+          "datatype": "xsd:date",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "paymentCancellationDate",
+          "datatype": "xsd:date",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "CapturePayment",
+      "and": [
+        {
+          "@id": "Payment"
+        },
+        {
+          "properties": [
+            {
+              "path": "paymentAuthorization",
+              "node": "PaymentAuthorization",
+              "minCount": "1"
+            },
+            {
+              "path": "capturePaymentType",
+              "datatype": "xsd:string",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "id",
+              "datatype": "xsd:string",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "name",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "handlingFeeAmount",
+              "datatype": "xsd:decimal",
+              "maxCount": "1"
+            },
+            {
+              "path": "isFinalCapture",
+              "datatype": "xsd:boolean",
+              "maxCount": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "RefundPayment",
+      "and": [
+        {
+          "@id": "Payment"
+        },
+        {
+          "properties": [
+            {
+              "path": "id",
+              "datatype": "cim:id",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "name",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "externalCreatedDate",
+              "datatype": "xsd:date",
+              "maxCount": "1",
+              "minCount": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "PaymentPolicy",
+      "properties": [
+        {
+          "path": "paymentPolicyStatus",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "paymentPolicyTreatmentSelection",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "name",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "description",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "RefundCreditMemoAllocation",
+      "and": [
+        {
+          "@id": "RefundAllocation"
+        },
+        {
+          "properties": [
+            {
+              "path": "id",
+              "datatype": "cim:id",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "name",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "PaymentGroup",
+      "properties": [
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "paymentGroupNumber",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "totalPaymentAmount",
+          "datatype": "xsd:decimal",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "totalAuthorizationAmount",
+          "datatype": "xsd:decimal",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "totalReversalAmount",
+          "datatype": "xsd:decimal",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "PaymentTreatmentMethod",
+      "properties": [
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "paymentTreatmentMethodName",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "paymentTreatmentMethodDescription",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "paymentTreatmentMethodCode",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "PaymentTreatment",
+      "properties": [
+        {
+          "path": "paymentPolicy",
+          "node": "PaymentPolicy",
+          "minCount": "1"
+        },
+        {
+          "path": "paymentTreatmentMethod",
+          "node": "PaymentTreatmentMethod",
+          "minCount": "1"
+        },
+        {
+          "path": "paymentTreatmentStatus",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "paymentApplicationLevel",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "paymentTreatmentName",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "shouldAutoInvoice",
+          "datatype": "xsd:boolean",
+          "maxCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "PaymentAuthorization",
+      "properties": [
+        {
+          "path": "paymentGroup",
+          "node": "PaymentGroup",
+          "minCount": "1"
+        },
+        {
+          "path": "salesOrderPaymentSummary",
+          "node": "SalesOrderPaymentSummary",
+          "minCount": "1"
+        },
+        {
+          "path": "paymentGateway",
+          "node": "PaymentGateway",
+          "minCount": "1"
+        },
+        {
+          "path": "paymentAuthorizationStatus",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "paymentMethodID",
+          "node": "PaymentMethod",
+          "minCount": "1"
+        },
+        {
+          "path": "paymentGatewayResult",
+          "node": "PaymentGatewayResultCode",
+          "minCount": "1"
+        },
+        {
+          "path": "paymentAuthorizationProcessingMode",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "paymentAuthorizationNumber",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "paymentAuthorizationCommentText",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "gatewayAuthorizationCode",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "iPAddress",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "macAddress",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "paymentGatewayReferenceNumber",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "paymentGatewayInternalReferenceNumber",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "gatewayReferenceDetailsText",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "gatewayResultCodeDescription",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "availableBalanceAmount",
+          "datatype": "xsd:decimal",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "authorizationAmount",
+          "datatype": "xsd:decimal",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "totalPaymentCaptureAmount",
+          "datatype": "xsd:decimal",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "totalAuthorizationReversalAmount",
+          "datatype": "xsd:decimal",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "paymentGatewayDate",
+          "datatype": "xsd:time",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "requestDate",
+          "datatype": "xsd:time",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "expirationDate",
+          "datatype": "xsd:date",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "externalCreatedDate",
+          "datatype": "xsd:date",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "PaymentGatewayAuthReversalLog",
+      "and": [
+        {
+          "@id": "PaymentGatewayInteractionLog"
+        },
+        {
+          "properties": [
+            {
+              "path": "paymentAuthorizationReversal",
+              "node": "PaymentAuthorizationReversal"
+            },
+            {
+              "path": "id",
+              "datatype": "cim:id",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "name",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "PaymentGatewayPaymentLog",
+      "and": [
+        {
+          "@id": "PaymentGatewayInteractionLog"
+        },
+        {
+          "properties": [
+            {
+              "path": "payment",
+              "node": "Payment",
+              "minCount": "1"
+            },
+            {
+              "path": "id",
+              "datatype": "cim:id",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "name",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "PaymentGatewayAuthorizationLog",
+      "and": [
+        {
+          "@id": "PaymentGatewayInteractionLog"
+        },
+        {
+          "properties": [
+            {
+              "path": "paymentAuthorization",
+              "node": "PaymentAuthorization",
+              "minCount": "1"
+            },
+            {
+              "path": "id",
+              "datatype": "cim:id",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "name",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "PaymentGatewayInteractionType",
+      "properties": [
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "name",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "description",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "PaymentGateway",
+      "properties": [
+        {
+          "path": "paymentGatewayStatus",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "paymentGatewayProvider",
+          "node": "PaymentGatewayProvider",
+          "minCount": "1"
+        },
+        {
+          "path": "systemCredential",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "name",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "paymentGatewayCommentText",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "PaymentGatewayProvider",
+      "properties": [
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "paymentGatewayProviderName",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "apexAdapterClassName",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "paymentGatewayProviderCommentText",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "developerName",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "namespacePrefixText",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "PaymentGatewayInteractionLog",
+      "properties": [
+        {
+          "path": "paymentGatewayResult",
+          "node": "PaymentGatewayResultCode",
+          "minCount": "1"
+        },
+        {
+          "path": "paymentGatewayInteractionType",
+          "node": "PaymentGatewayInteractionType",
+          "minCount": "1"
+        },
+        {
+          "path": "internalResultCode",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "paymentGatewayInteractionStatus",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "paymentGatewayInteractionLogName",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "paymentGatewayAuthorizationCode",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "paymentGatewayAVSCode",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "paymentGatewayMessageText",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "paymentGatewayReferenceNumber",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "internalReferenceNumber",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "paymentGatewayDate",
+          "datatype": "xsd:date",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "PaymentGatewayResultCode",
+      "properties": [
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "name",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "description",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "PaymentApplication",
+      "properties": [
+        {
+          "path": "payment",
+          "node": "Payment",
+          "minCount": "1"
+        },
+        {
+          "path": "paymentApplicationType",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "commentText",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "name",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "appliedAmount",
+          "datatype": "xsd:decimal",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "paymentBalanceAmount",
+          "datatype": "xsd:decimal",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "appliedDate",
+          "datatype": "xsd:date",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "effectiveDate",
+          "datatype": "xsd:date",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "unappliedDate",
+          "datatype": "xsd:date",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "externalCreatedDate",
+          "datatype": "xsd:date",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "hasBeenUnapplied",
+          "datatype": "xsd:boolean",
+          "maxCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "PaymentInvoiceApplication",
+      "and": [
+        {
+          "@id": "PaymentApplication"
+        },
+        {
+          "properties": [
+            {
+              "path": "paymentInvoiceApplicationType",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "id",
+              "datatype": "cim:id",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "paymentInvoiceApplicationName",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "invoiceBalanceAmount",
+              "datatype": "xsd:decimal",
+              "maxCount": "1",
+              "minCount": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "PaymentAllocation",
+      "properties": [
+        {
+          "path": "relatedPaymentAllocation",
+          "node": "PaymentAllocation",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "paymentAllocationName",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "externalCreatedDate",
+          "datatype": "xsd:date",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "PaymentCreditMemoApplication",
+      "and": [
+        {
+          "@id": "PaymentApplication"
+        },
+        {
+          "properties": [
+            {
+              "path": "id",
+              "datatype": "cim:id",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "name",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "PaymentCreditMemoAllocation",
+      "and": [
+        {
+          "@id": "PaymentAllocation"
+        },
+        {
+          "properties": [
+            {
+              "path": "id",
+              "datatype": "cim:id",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "name",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "appliedAmount",
+              "datatype": "xsd:decimal",
+              "maxCount": "1",
+              "minCount": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "PaymentInvoiceAllocation",
+      "and": [
+        {
+          "@id": "PaymentAllocation"
+        },
+        {
+          "properties": [
+            {
+              "path": "paymentInvoiceApplication",
+              "node": "PaymentInvoiceApplication"
+            },
+            {
+              "path": "id",
+              "datatype": "cim:id",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "paymentInvoiceAllocationName",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "appliedAmount",
+              "datatype": "xsd:decimal",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "invoiceBalanceAmount",
+              "datatype": "xsd:decimal",
+              "maxCount": "1",
+              "minCount": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "RefundPaymentAllocation",
+      "and": [
+        {
+          "@id": "RefundAllocation"
+        },
+        {
+          "properties": [
+            {
+              "path": "capturePayment",
+              "node": "CapturePayment",
+              "minCount": "1"
+            },
+            {
+              "path": "id",
+              "datatype": "cim:id",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "refundPaymentAllocationName",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "refundAllocationCommentText",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "paymentBalanceAmount",
+              "datatype": "xsd:decimal",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "creditMemoBalanceAmount",
+              "datatype": "xsd:decimal",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "refundAllocationCommentsDate",
+              "datatype": "xsd:date",
+              "maxCount": "1",
+              "minCount": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "RefundAllocation",
+      "properties": [
+        {
+          "path": "refundPayment",
+          "node": "RefundPayment",
+          "minCount": "1"
+        },
+        {
+          "path": "refundAllocationType",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "relatedRefundAllocation",
+          "node": "RefundAllocation",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "refundAllocationName",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "refundBalanceAmount",
+          "datatype": "xsd:decimal",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "allocatedAmount",
+          "datatype": "xsd:decimal",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "appliedDate",
+          "datatype": "xsd:date",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "effectiveDate",
+          "datatype": "xsd:date",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "unappliedDate",
+          "datatype": "xsd:date",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "externalCreatedDate",
+          "datatype": "xsd:date",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "hasBeenUnapplied",
+          "datatype": "xsd:boolean",
+          "maxCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "PaymentAuthorizationReversal",
+      "properties": [
+        {
+          "path": "paymentAuthorization",
+          "node": "PaymentAuthorization",
+          "minCount": "1"
+        },
+        {
+          "path": "capturePayment",
+          "node": "CapturePayment"
+        },
+        {
+          "path": "paymentGatewayResult",
+          "node": "PaymentGatewayResultCode",
+          "minCount": "1"
+        },
+        {
+          "path": "paymentAuthorizationReversalStatus",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "paymentAuthorizationProcessingMode",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "customerAuthorizationReversalPhone",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "customerAuthorizationReversalEmail",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "paymentAuthorizationReversalName",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "paymentAuthorizationReversalCommentText",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "iPAddress",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "macAddress",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "paymentGatewayInternalReferenceNumber",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "paymentGatewayReferenceNumber",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "authorizationReversalAmount",
+          "datatype": "xsd:decimal",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "requestDate",
+          "datatype": "xsd:time",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "paymentGatewayDate",
+          "datatype": "xsd:time",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "externalCreatedDate",
+          "datatype": "xsd:date",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    }
+  ]
+}

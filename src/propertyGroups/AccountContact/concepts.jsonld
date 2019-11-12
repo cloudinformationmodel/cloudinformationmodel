@@ -1,0 +1,16 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "AccountContactPropertyGroup",
+  "name": "AccountContact Property Group",
+  "@type": "PropertyGroup",
+  "version": "0.1",
+  "propertyConcepts": [
+    {
+      "@id": "contactAddress",
+      "@type": "Property",
+      "description": "Reference to an address for the Lead",
+      "name": "Contact Address",
+      "range": "ContactPointAddress"
+    }
+  ]
+}

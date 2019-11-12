@@ -1,0 +1,216 @@
+#%Dialect 1.0
+uses:
+  product_eg: ../Product/schema.yaml
+nodeMappings:
+  ProductCollateral:
+    classTerm: cim.ProductCollateral
+    mapping:
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      uRL:
+        propertyTerm: cim.uRL
+        range: string
+        mandatory: true
+      product:
+        propertyTerm: cim.product
+        range: product_eg.Product
+        mandatory: true
+        allowMultiple: true
+  PriceBookEntry:
+    classTerm: cim.PriceBookEntry
+    mapping:
+      useStandardPrice:
+        propertyTerm: cim.useStandardPrice
+        range: boolean
+      unitListPrice:
+        propertyTerm: cim.unitListPrice
+        range: integer
+      servicePeriodCount:
+        propertyTerm: cim.servicePeriodCount
+        range: integer
+      isActive:
+        propertyTerm: cim.isActive
+        range: boolean
+      product:
+        propertyTerm: cim.product
+        range: product_eg.Product
+        allowMultiple: true
+      minRequiredOrderValue:
+        propertyTerm: cim.minRequiredOrderValue
+        range: integer
+      minRequiredQuantity:
+        propertyTerm: cim.minRequiredQuantity
+        range: integer
+      maxRequiredOrderValue:
+        propertyTerm: cim.maxRequiredOrderValue
+        range: integer
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+  DeviceUserSession:
+    classTerm: cim.DeviceUserSession
+    mapping:
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+  ProductValidityTimePeriodUOM:
+    classTerm: cim.ProductValidityTimePeriodUOM
+    mapping:
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      pluralName:
+        propertyTerm: cim.pluralName
+        range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+  AttributeValueTranslation:
+    classTerm: cim.AttributeValueTranslation
+    mapping:
+      translatedAttributeValue:
+        propertyTerm: cim.translatedAttributeValue
+        range: string
+        mandatory: true
+      attributeValue:
+        propertyTerm: cim.attributeValue
+        range: AttributeValue
+        mandatory: true
+        allowMultiple: true
+      translatedAttributeValueDescription:
+        propertyTerm: cim.translatedAttributeValueDescription
+        range: string
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+  ProductAttributeValue:
+    classTerm: cim.ProductAttributeValue
+    mapping:
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      customAttributeValue:
+        propertyTerm: cim.customAttributeValue
+        range: string
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      attributeSet:
+        propertyTerm: cim.attributeSet
+        range: string
+        mandatory: true
+      attributeValue:
+        propertyTerm: cim.attributeValue
+        range: AttributeValue
+        allowMultiple: true
+      product:
+        propertyTerm: cim.product
+        range: product_eg.Product
+        mandatory: true
+        allowMultiple: true
+  AttributeTranslation:
+    classTerm: cim.AttributeTranslation
+    mapping:
+      translatedName:
+        propertyTerm: cim.translatedName
+        range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+  AttributeSetTranslation:
+    classTerm: cim.AttributeSetTranslation
+    mapping:
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      attributeSet:
+        propertyTerm: cim.attributeSet
+        range: string
+        mandatory: true
+      translatedName:
+        propertyTerm: cim.translatedName
+        range: string
+        mandatory: true
+  ProductAttributeSet:
+    classTerm: cim.ProductAttributeSet
+    mapping:
+      attributeSet:
+        propertyTerm: cim.attributeSet
+        range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      product:
+        propertyTerm: cim.product
+        range: product_eg.Product
+        mandatory: true
+        allowMultiple: true
+  AttributeValue:
+    classTerm: cim.AttributeValue
+    mapping:
+      attributeValue:
+        propertyTerm: cim.attributeValue
+        range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+external:
+  cim: http://cloudinformationmodel.org/model/
+dialect: ProductAttributeEntityGroup
+version: "0.1"
+documents:
+  root:
+    declares:
+      ProductCollateralSchemas: ProductCollateral
+      PriceBookEntrySchemas: PriceBookEntry
+      DeviceUserSessionSchemas: DeviceUserSession
+      ProductValidityTimePeriodUOMSchemas: ProductValidityTimePeriodUOM
+      AttributeValueTranslationSchemas: AttributeValueTranslation
+      ProductAttributeValueSchemas: ProductAttributeValue
+      AttributeTranslationSchemas: AttributeTranslation
+      AttributeSetTranslationSchemas: AttributeSetTranslation
+      ProductAttributeSetSchemas: ProductAttributeSet
+      AttributeValueSchemas: AttributeValue
+  fragments:
+    encodes:
+      ProductCollateral: ProductCollateral
+      PriceBookEntry: PriceBookEntry
+      DeviceUserSession: DeviceUserSession
+      ProductValidityTimePeriodUOM: ProductValidityTimePeriodUOM
+      AttributeValueTranslation: AttributeValueTranslation
+      ProductAttributeValue: ProductAttributeValue
+      AttributeTranslation: AttributeTranslation
+      AttributeSetTranslation: AttributeSetTranslation
+      ProductAttributeSet: ProductAttributeSet
+      AttributeValue: AttributeValue

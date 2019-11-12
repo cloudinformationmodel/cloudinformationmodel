@@ -1,0 +1,82 @@
+#%Vocabulary 1.0
+base: http://cloudinformationmodel.org/model/
+vocabulary: Product Attribute
+usage: "Example Entities included: Attribute Set, Attribute Set Attribute"
+classTerms:
+  ProductCollateral:
+    displayName: Product Collateral
+    description: Collateral for a product e.g. link to brochure one
+    properties:
+      - id
+      - product
+      - uRL
+  PriceBookEntry:
+    displayName: Price Book Entry
+    description: A list of products and their prices.
+    properties:
+      - maxRequiredOrderValue
+      - id
+      - minRequiredQuantity
+      - minRequiredOrderValue
+      - unitListPrice
+      - isActive
+      - product
+      - useStandardPrice
+      - servicePeriodCount
+  DeviceUserSession:
+    displayName: Device User Session
+    description: A time-bound period when a person used a website or other service, also known as a Visit
+    properties:
+      - id
+      - name
+  ProductValidityTimePeriodUOM:
+    displayName: Product Validity Time Period UOM
+    description: Standard units of measure for time, for example minute, second, hour and day
+    properties:
+      - id
+      - name
+      - pluralName
+  AttributeValueTranslation:
+    displayName: Attribute Value Translation
+    description: Translated attributes for an attribute value
+    properties:
+      - attributeValue
+      - id
+      - translatedAttributeValue
+      - translatedAttributeValueDescription
+  ProductAttributeValue:
+    displayName: Product Attribute Value
+    description: Assignment of an attribute value to a product e.g. shoe lace
+    properties:
+      - attributeValue
+      - id
+      - customAttributeValue
+      - product
+      - attributeSet
+      - name
+  AttributeTranslation:
+    displayName: Attribute Translation
+    description: Translated attributes for an attribute
+    properties:
+      - id
+      - translatedName
+  AttributeSetTranslation:
+    displayName: Attribute Set Translation
+    description: Translated attributes for an attribute set
+    properties:
+      - id
+      - translatedName
+      - attributeSet
+  AttributeValue:
+    displayName: Attribute Value
+    description: A predefine set of values for a product attribute e.g. shoe lace length 10, 12, 14 centimeter
+    properties:
+      - attributeValue
+      - id
+  ProductAttributeSet:
+    displayName: Product Attribute Set
+    description: A set of attributes e.g. shoe attributes that are assigned to a particular instance of Product
+    properties:
+      - id
+      - product
+      - attributeSet

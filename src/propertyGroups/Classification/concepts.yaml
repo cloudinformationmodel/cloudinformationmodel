@@ -1,0 +1,24 @@
+#%Vocabulary 1.0
+base: http://cloudinformationmodel.org/model/
+vocabulary: Classification Property Group
+propertyTerms:
+  salesChannelType:
+    displayName: Sales Channel Type
+    description: The category of the Sales Channel, for example retail store, web store, partner, or direct marketing
+    range: any
+  nAICS:
+    displayName: NAICS
+    description: Internal Id that references a 6 digit North American Industry Identifier
+    range: any
+  primaryIndustryName:
+    displayName: Primary Industry Name
+    description: An industry associated with this business and is free text (non validated)
+    range: any
+  iSIC:
+    displayName: ISIC
+    description: Internal Id that references a code from the United Nations International Standard Industrial Classification
+    range: any
+  sIC:
+    displayName: SIC
+    description: Internal Id that references a 4 digit Standard Industry Classification code
+    range: any

@@ -1,0 +1,64 @@
+#%RAML 1.0 Library
+types:
+  ProductCategoryAttributeSet:
+    properties:
+      id:
+        type: string
+      attributeSet:
+        type: string
+      productCategory:
+        items: ProductCategory
+  ProductCatalog:
+    properties:
+      activeToDate:
+        type: date-only
+      activeFromDate:
+        type: date-only
+      id:
+        type: string
+      name:
+        type: string
+  ProductCategoryTranslation:
+    properties:
+      id:
+        type: string
+      translatedName:
+        type: string
+      productCategory:
+        items: ProductCategory
+  ProductCategory:
+    properties:
+      productCatalog:
+        items: ProductCatalog
+      id:
+        type: string
+      activeFromDate:
+        type: date-only
+      activeToDate:
+        type: date-only
+      name:
+        type: string
+      parentCategory:
+        items: ProductCategory
+  ProductCatalogTranslation:
+    properties:
+      productCatalog:
+        items: ProductCatalog
+      id:
+        type: string
+      translatedName:
+        type: string
+  ProductCategoryProduct:
+    properties:
+      product:
+        items: product_eg.Product
+      id:
+        type: string
+      activeFromDateTime:
+        type: time-only
+      activeToDateTime:
+        type: time-only
+      productCategory:
+        items: ProductCategory
+uses:
+  product_eg: ../Product/schema.yaml

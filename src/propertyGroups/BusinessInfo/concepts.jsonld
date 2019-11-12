@@ -1,0 +1,23 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "BusinessInfoPropertyGroup",
+  "name": "BusinessInfo Property Group",
+  "@type": "PropertyGroup",
+  "version": "0.1",
+  "propertyConcepts": [
+    {
+      "@id": "annualRevenue",
+      "@type": "Property",
+      "description": "Annual revenue for the company of the lead.",
+      "name": "Annual Revenue",
+      "range": "DataType"
+    },
+    {
+      "@id": "companyName",
+      "@type": "Property",
+      "description": "If no company stated the lead is regarded a consumer lead.",
+      "name": "Company Name",
+      "range": "DataType"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+#%Vocabulary 1.0
+base: http://cloudinformationmodel.org/model/
+vocabulary: SalesDiscount Property Group
+propertyTerms:
+  isCouponRedemptionAllowed:
+    displayName: Is Coupon Redemption Allowed
+    description: Can a coupon be used to redeem this item
+    range: any
+  isMultipleCouponsAllowed:
+    displayName: Is Multiple Coupons Allowed
+    description: Can multiple coupons be applied to the same item
+    range: any
+  isWorkerDiscountAllowed:
+    displayName: Is Worker Discount Allowed
+    description: Can employees and contractor get a discount on this product
+    range: any
+  isPartnerDiscountAllowed:
+    displayName: Is Partner Discount Allowed
+    description: Can seller and supplier partners get a discount on this product
+    range: any
+  isFoodstampPaymentAllowed:
+    displayName: Is Foodstamp Payment Allowed
+    description: Can this product be paid with food stamps
+    range: any
+  isCustomerDiscountAllowed:
+    displayName: Is Customer Discount Allowed
+    description: Can customers be offered product at a discounted price
+    range: any
+  rewardProgramPointsCount:
+    displayName: Reward Program Points Count
+    description: How many points given for the purchase of this item
+    range: any

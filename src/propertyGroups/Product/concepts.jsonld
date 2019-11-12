@@ -1,0 +1,44 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "ProductPropertyGroup",
+  "name": "Product Property Group",
+  "@type": "PropertyGroup",
+  "version": "0.1",
+  "propertyConcepts": [
+    {
+      "@id": "product",
+      "@type": "Property",
+      "description": "The service, product or charge associated with this SalesOrderProduct.",
+      "name": "Product",
+      "range": "Product"
+    },
+    {
+      "@id": "subscriptionTermUnit",
+      "@type": "Property",
+      "description": "The unit of Measure for the Subscription Term",
+      "name": "Subscription Term Unit of Measure",
+      "range": "ProductValidityTimePeriodUOM"
+    },
+    {
+      "@id": "isBundleRoot",
+      "@type": "Property",
+      "description": "Is the product the root-level of a bundled product?",
+      "name": "Is Bundle Root",
+      "range": "DataType"
+    },
+    {
+      "@id": "segmentIndexNumber",
+      "@type": "Property",
+      "description": "Used for pricing subscriptions, where sub-periods of the overall subscription are priced differently, and the pricing changes in a structured way over a series of segments, which are identified by numerically increasing Segment Numbers",
+      "name": "Segment Index Number",
+      "range": "DataType"
+    },
+    {
+      "@id": "subscriptionTermQuantity",
+      "@type": "Property",
+      "description": "Quantity of the Subscription Unit Term Unit of Measure",
+      "name": "Subscription Term Quantity",
+      "range": "DataType"
+    }
+  ]
+}

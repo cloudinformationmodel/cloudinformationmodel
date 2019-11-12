@@ -1,0 +1,20 @@
+#%Vocabulary 1.0
+base: http://cloudinformationmodel.org/model/
+vocabulary: Setup Property Group
+propertyTerms:
+  useAsServiceAccount:
+    displayName: Use As Service Account
+    description: Should this account be used for service purposes
+    range: any
+  useAsShippingAccount:
+    displayName: Use As Shipping Account
+    description: Should this account be used for shipping purposes
+    range: any
+  useAsSalesAccount:
+    displayName: Use As Sales Account
+    description: Should this account be used for sales purposes
+    range: any
+  useAsBillingAccount:
+    displayName: Use As Billing Account
+    description: Should this account be used for billing purposes
+    range: any

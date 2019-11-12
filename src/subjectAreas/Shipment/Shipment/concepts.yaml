@@ -1,0 +1,79 @@
+#%Vocabulary 1.0
+base: http://cloudinformationmodel.org/model/
+vocabulary: Shipment
+usage: "Example Entities included: Shipment, Shipment Package, Shipment Document, Shipment Product"
+classTerms:
+  ShipmentDocument:
+    displayName: Shipment Document
+    description: A receipt, bill of lading or other document that is delivered with the shipment to explain the purchase or shipment contents.
+    properties:
+      - id
+      - shipment
+  ShipmentPackage:
+    displayName: Shipment Package
+    description: A parcel of one or more items bundled together, so that they arrive at the customer's address as a single unit.
+    properties:
+      - id
+      - shipmentProductDescription
+      - shipment
+      - shipmentProductCount
+  ShippingMethod:
+    displayName: Shipping Method
+    description: A parcel of one or more items bundled together, so that they arrive at the customer's address as a single unit.
+    properties:
+      - id
+      - name
+      - description
+      - product
+  ShipmentProduct:
+    displayName: Shipment Product
+    description: An item on a list of one or more that comprises a shipment.
+    properties:
+      - id
+      - shipmentPackage
+      - shipment
+      - salesOrderProduct
+      - product
+      - shipmentProductCount
+  Shipment:
+    displayName: Shipment
+    description: A quantity of goods sent together to a place, or the act of sending them
+    properties:
+      - id
+      - scheduledDeliveryDateTime
+      - estimatedDeliveryDateTime
+      - giftMessageText
+      - shipToAddress
+      - carrierTrackingNumber
+      - shipmentNumber
+      - salesOrderDeliveryGroup
+      - actualDeliveryDateTime
+      - isGift
+      - salesOrder
+      - shipmentStatus
+      - specialInstructionsText
+      - shipmentDate
+  ShipmentProductPriceAdjustment:
+    displayName: Shipment Product Price Adjustment
+    description: A change to the price of an ordered product or service that is made after Fulfillment.
+    properties:
+      - shipmentProduct
+      - id
+      - description
+      - shipmentProductPriceAdjustmentAmount
+      - adjustmentAmount
+      - adjustmentTaxAmount
+  ShipmentStatus:
+    displayName: Shipment Status
+    description: The stage of a shipment. Possible values could be pre-transit, in transit, delayed, delivered
+    properties:
+      - id
+      - name
+      - description
+  ShipmentProductPriceAdjustmentTax:
+    displayName: Shipment Product Price Adjustment Tax
+    description: A tax on the price of a Sales Order Product.
+    properties:
+      - id
+      - shipmentProductPriceAdjustment
+      - name

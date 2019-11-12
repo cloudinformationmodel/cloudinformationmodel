@@ -1,0 +1,44 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "LifeCyclePropertyGroup",
+  "name": "Life Cycle Property Group",
+  "@type": "PropertyGroup",
+  "version": "0.1",
+  "propertyConcepts": [
+    {
+      "@id": "holdStatusReason",
+      "@type": "Property",
+      "description": "Reference to the reason why the account is on hold status",
+      "name": "Hold Status Reason",
+      "range": "DataType"
+    },
+    {
+      "@id": "customerStatus",
+      "@type": "Property",
+      "description": "What status customer is in e.g. prospect, active, inactive, nonrecoverable, hold, expired",
+      "name": "Customer Status",
+      "range": "DataType"
+    },
+    {
+      "@id": "prospectRating",
+      "@type": "Property",
+      "description": "The customers prospect rating, for example Hot, Warm, or Cold.",
+      "name": "Prospect Rating",
+      "range": "DataType"
+    },
+    {
+      "@id": "leadSource",
+      "@type": "Property",
+      "description": "Source from which the lead was obtained.",
+      "name": "Lead Source",
+      "range": "DataType"
+    },
+    {
+      "@id": "leadStatus",
+      "@type": "Property",
+      "description": "Status for this converted lead e.g. open, worked, closed",
+      "name": "Lead Status",
+      "range": "DataType"
+    }
+  ]
+}

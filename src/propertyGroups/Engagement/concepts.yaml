@@ -1,0 +1,36 @@
+#%Vocabulary 1.0
+base: http://cloudinformationmodel.org/model/
+vocabulary: Engagement Property Group
+propertyTerms:
+  documentationDownloadCount:
+    displayName: Documentation Download Count
+    description: How many e.g. white papers have the seller accessed
+    range: any
+  trialParticipationCount:
+    displayName: Trial Participation Count
+    description: Total number of software trials the seller been part of
+    range: any
+  eventParticipationCount:
+    displayName: Event Participation Count
+    description: How many sales or marketing events the seller attended
+    range: any
+  trainingCertificationCount:
+    displayName: Training Certification Count
+    description: How many people from seller have been certified on our products
+    range: any
+  jointBusinessPlanExist:
+    displayName: Joint Business Plan Exist
+    description: Have we established a business plan or not with the seller
+    range: any
+  communityParticipationCount:
+    displayName: Community Participation Count
+    description: How active is the seller in our ecosystem online by answering questions
+    range: any
+  systemLoginCount:
+    displayName: System Login Count
+    description: How many times the seller accessed our online information which indicate dedication
+    range: any
+  trainingParticipationCount:
+    displayName: Training Participation Count
+    description: How many people from seller have been trained
+    range: any

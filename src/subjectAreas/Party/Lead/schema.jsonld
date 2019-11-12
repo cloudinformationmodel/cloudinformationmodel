@@ -1,0 +1,159 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "LeadEntityGroup",
+  "@type": "EntityGroup",
+  "version": "0.1",
+  "schemas": [
+    {
+      "@type": "Shape",
+      "@id": "Lead",
+      "properties": [
+        {
+          "path": "geoCodeAccuracy",
+          "datatype": "xsd:decimal",
+          "maxCount": "1"
+        },
+        {
+          "path": "geoCodeLongitude",
+          "datatype": "xsd:decimal",
+          "maxCount": "1"
+        },
+        {
+          "path": "partnerAccount",
+          "node": "Account"
+        },
+        {
+          "path": "geoCodeLatitude",
+          "datatype": "xsd:decimal",
+          "maxCount": "1"
+        },
+        {
+          "path": "website",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "leadScore",
+          "datatype": "xsd:integer",
+          "maxCount": "1"
+        },
+        {
+          "path": "leadRating",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "photoURL",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "lastActivityDate",
+          "datatype": "xsd:date",
+          "maxCount": "1"
+        },
+        {
+          "path": "companyName",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "annualRevenue",
+          "datatype": "xsd:integer",
+          "maxCount": "1"
+        },
+        {
+          "path": "faxContactPhone",
+          "node": "ContactPointPhone"
+        },
+        {
+          "path": "mobileContactPhone",
+          "node": "ContactPointPhone"
+        },
+        {
+          "path": "phoneContactPoint",
+          "node": "ContactPointPhone"
+        },
+        {
+          "path": "contactPointEmail",
+          "node": "ContactPointEmail"
+        },
+        {
+          "path": "countryName",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "stateProvinceName",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "streetName",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "emailBouncedReason",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "emailBouncedDate",
+          "datatype": "xsd:time",
+          "maxCount": "1"
+        },
+        {
+          "path": "contactAddress",
+          "node": "ContactPointAddress"
+        },
+        {
+          "path": "convertedToAccountContact",
+          "node": "AccountContact"
+        },
+        {
+          "path": "convertedToAccount",
+          "node": "Account"
+        },
+        {
+          "path": "convertedDate",
+          "datatype": "xsd:date",
+          "maxCount": "1"
+        },
+        {
+          "path": "isConverted",
+          "datatype": "xsd:boolean",
+          "maxCount": "1"
+        },
+        {
+          "path": "description",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "leadStatus",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "leadSource",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "partyRole",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    }
+  ]
+}

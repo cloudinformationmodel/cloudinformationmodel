@@ -1,0 +1,28 @@
+#%Vocabulary 1.0
+base: http://cloudinformationmodel.org/model/
+vocabulary: Result Property Group
+propertyTerms:
+  assetReturnRatio:
+    displayName: Asset Return Ratio
+    description: How efficient the competitor is in using assets to produce profit
+    range: any
+  currentRatio:
+    displayName: Current Ratio
+    description: Competitors ability to pay outstanding short or long term obligations
+    range: any
+  ptoENumber:
+    displayName: P/E Number
+    description: Price to Earnings
+    range: any
+  assetTurnoverRatio:
+    displayName: Asset Turnover Ratio
+    description: How many times inventory turned into cash in given period
+    range: any
+  cashFlowGrowth:
+    displayName: Cash Flow Growth
+    description: Current year - last year cash flow / last year cash flow
+    range: any
+  netProfitMargin:
+    displayName: Net Profit Margin
+    description: How much profit the competitor makes per dollar in revenue
+    range: any

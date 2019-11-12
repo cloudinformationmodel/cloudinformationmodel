@@ -1,0 +1,72 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "StoragePropertyGroup",
+  "name": "Storage Property Group",
+  "@type": "PropertyGroup",
+  "version": "0.1",
+  "propertyConcepts": [
+    {
+      "@id": "productSecurityRequirement",
+      "@type": "Property",
+      "description": "Any special security required for handling or selling e.g. need security guards",
+      "name": "Product Security Requirement",
+      "range": "DataType"
+    },
+    {
+      "@id": "environmentRequirement",
+      "@type": "Property",
+      "description": "Does the product need e.g. special UV light, be in freezer, hot water",
+      "name": "Environment Requirement",
+      "range": "DataType"
+    },
+    {
+      "@id": "requiredTemperatureLowestNumber",
+      "@type": "Property",
+      "description": "Lowest temperature allowed for product e.g. -1",
+      "name": "Required Temperature Lowest Number",
+      "range": "DataType"
+    },
+    {
+      "@id": "requiredTemperatureHighestNumber",
+      "@type": "Property",
+      "description": "Highest temperature allowed for product e.g. +20",
+      "name": "Required Temperature Highest Number",
+      "range": "DataType"
+    },
+    {
+      "@id": "requiredTemperatureUOM",
+      "@type": "Property",
+      "description": "Unit of Measure for a product storage e.g. Celcius",
+      "name": "Required Temperature UOM",
+      "range": "DataType"
+    },
+    {
+      "@id": "requiredHumidityPercentage",
+      "@type": "Property",
+      "description": "Humidity required for product e.g. 50%",
+      "name": "Required Humidity Percentage",
+      "range": "DataType"
+    },
+    {
+      "@id": "requiredCleanupProcess",
+      "@type": "Property",
+      "description": "If product is spilled or leaking what is the cleanup process needed",
+      "name": "Required Cleanup Process",
+      "range": "DataType"
+    },
+    {
+      "@id": "isMadeToOrder",
+      "@type": "Property",
+      "description": "Does product only exist once it has been ordered e.g. monogrammed birth day cake",
+      "name": "Is Made To Order",
+      "range": "DataType"
+    },
+    {
+      "@id": "isPerishable",
+      "@type": "Property",
+      "description": "Is this a stable or perishable item",
+      "name": "Is Perishable",
+      "range": "DataType"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+#%Vocabulary 1.0
+base: http://cloudinformationmodel.org/model/
+vocabulary: Styling Property Group
+propertyTerms:
+  color:
+    displayName: Color
+    description: What is the primary color of the product
+    range: any
+  pattern:
+    displayName: Pattern
+    description: Is product in a certain pattern e.g. checkered, striped
+    range: any
+  age:
+    displayName: Age
+    description: Is product intended for e.g. newborns, teenagers
+    range: any
+  style:
+    displayName: Style
+    description: Is product generally deemed e.g. slim, regular
+    range: any
+  season:
+    displayName: Season
+    description: Is product intended for e.g. winter, summer
+    range: any
+  fabric:
+    displayName: Fabric
+    description: Is product mainly in one fabric e.g. cotton, leather
+    range: any
+  gender:
+    displayName: Gender
+    description: Is product intended for e.g. females, unisex
+    range: any

@@ -1,0 +1,1017 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "SalesPropertyGroup",
+  "name": "Sales Property Group",
+  "@type": "PropertyGroup",
+  "version": "0.1",
+  "propertyConcepts": [
+    {
+      "@id": "shipmentProductPriceAdjustmentAmount",
+      "@type": "Property",
+      "description": "AdjustmentAmount + AdjustmentTaxAmount",
+      "name": "Shipment Product Price Adjustment Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "assignTerritoryFlag",
+      "@type": "Property",
+      "description": "The account reached a state it should be assigned a territory",
+      "name": "Assign Territory Flag",
+      "range": "DataType"
+    },
+    {
+      "@id": "primarySalesContactPoint",
+      "@type": "Property",
+      "description": "What is the best way to communicate with the customer for Sales purpose",
+      "name": "Primary Sales Contact Point",
+      "range": "ContactPoint"
+    },
+    {
+      "@id": "salesPhone",
+      "@type": "Property",
+      "description": "Phone number for this account.",
+      "name": "Sales Phone",
+      "range": "ContactPointPhone"
+    },
+    {
+      "@id": "faxPhone",
+      "@type": "Property",
+      "description": "Fax number for the account.",
+      "name": "Fax Phone",
+      "range": "ContactPointPhone"
+    },
+    {
+      "@id": "totalLifeTimeValue",
+      "@type": "Property",
+      "description": "How much has customer bought from us since beginning of time",
+      "name": "Total Life Time Value",
+      "range": "DataType"
+    },
+    {
+      "@id": "totalBookingsAmount",
+      "@type": "Property",
+      "description": "Total revenue booked for this customer",
+      "name": "Total Bookings Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "totalContractedAmount",
+      "@type": "Property",
+      "description": "How much future revenue this customer may contribute with and that is not yet booked",
+      "name": "Total Contracted Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "totalProfitContributionAmount",
+      "@type": "Property",
+      "description": "How much money customer contributed to our profit",
+      "name": "Total Profit Contribution Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "last12MonthsNewRevenueAmount",
+      "@type": "Property",
+      "description": "How much new revenue customer contributed with in last 12 months",
+      "name": "Last 12 Months New Revenue Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "last24MonthsNewRevenueAmount",
+      "@type": "Property",
+      "description": "How much new revenue customer contributed with in last 24 months",
+      "name": "Last 24 Months New Revenue Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "leadGenerationCount",
+      "@type": "Property",
+      "description": "How many leads have the seller generated for us",
+      "name": "Lead Generation Count",
+      "range": "DataType"
+    },
+    {
+      "@id": "averageConvertedLeadAmount",
+      "@type": "Property",
+      "description": "How much is the value amount on average that the seller helped us with",
+      "name": "Average Converted Lead Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "demonstrationsGivenCount",
+      "@type": "Property",
+      "description": "How many demonstrations of our products have the seller given",
+      "name": "Demonstrations Given Count",
+      "range": "DataType"
+    },
+    {
+      "@id": "opportunityInvolvementCount",
+      "@type": "Property",
+      "description": "How many opportunities have the seller been involved in",
+      "name": "Opportunity Involvement Count",
+      "range": "DataType"
+    },
+    {
+      "@id": "opportunityWinRate",
+      "@type": "Property",
+      "description": "How many opportunities was actually won that involved the seller",
+      "name": "Opportunity Win Rate",
+      "range": "DataType"
+    },
+    {
+      "@id": "estimatedPartnerGrossMargin",
+      "@type": "Property",
+      "description": "How profitable are our seller with our products",
+      "name": "Estimated Partner Gross Margin",
+      "range": "DataType"
+    },
+    {
+      "@id": "newCustomerAcquisitionCount",
+      "@type": "Property",
+      "description": "How many new customers did seller provide us with in last 12 months",
+      "name": "New Customer Acquisition Count",
+      "range": "DataType"
+    },
+    {
+      "@id": "productStatus",
+      "@type": "Property",
+      "description": "Is the product In Design, In Test, Active or Inactive",
+      "name": "Product Status",
+      "range": "DataType"
+    },
+    {
+      "@id": "isPreOrderable",
+      "@type": "Property",
+      "description": "If the product is not yet for sale can product be pre ordered",
+      "name": "Is Pre Orderable",
+      "range": "DataType"
+    },
+    {
+      "@id": "isSellable",
+      "@type": "Property",
+      "description": "Is this product intended to be sold or not (which may not be true if tracking external products or parts that make up the sellable product but need to be tracked for e.g. service purpose)",
+      "name": "Is Sellable",
+      "range": "DataType"
+    },
+    {
+      "@id": "isSellableIndependently",
+      "@type": "Property",
+      "description": "Can product be sold by itself or only by being part of a bundle e.g. monogramming can ony be part of a bundle",
+      "name": "Is Sellable Independently",
+      "range": "DataType"
+    },
+    {
+      "@id": "isSellableWithoutPrice",
+      "@type": "Property",
+      "description": "Can product be 'sold' without a price e.g. monogram added to a shirt for free",
+      "name": "Is Sellable Without Price",
+      "range": "DataType"
+    },
+    {
+      "@id": "isReturnable",
+      "@type": "Property",
+      "description": "Can the product be returned or not",
+      "name": "Is Returnable",
+      "range": "DataType"
+    },
+    {
+      "@id": "isBackOrdered",
+      "@type": "Property",
+      "description": "If product is not in stock has it been backordered (planned to be in stock and cross all inventory locations)",
+      "name": "Is Back Ordered",
+      "range": "DataType"
+    },
+    {
+      "@id": "mSRPAmount",
+      "@type": "Property",
+      "description": "The default price for the product i.e.Manufacturer Suggested Retail Price",
+      "name": "MSRP Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "minimumAdvertisementAmount",
+      "@type": "Property",
+      "description": "What is the lowest price allowed (normally by manufacturer) to use in an ad",
+      "name": "Minimum Advertisement Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "minimumAdvertisementAmountStartDate",
+      "@type": "Property",
+      "description": "What is the earliest date the lowest manufactureres prices can be stated in an ad",
+      "name": "Minimum Advertisement Amount Start Date",
+      "range": "DataType"
+    },
+    {
+      "@id": "priceChargeType",
+      "@type": "Property",
+      "description": "Is the item to be sold based on weight, by units or by usage",
+      "name": "Price Charge Type Id",
+      "range": "DataType"
+    },
+    {
+      "@id": "requiresInvididualUnitPricing",
+      "@type": "Property",
+      "description": "Indicates high priced items or variable weight items need individual price",
+      "name": "Requires Individual Unit Pricing",
+      "range": "DataType"
+    },
+    {
+      "@id": "minimumOrderQuantityCount",
+      "@type": "Property",
+      "description": "Minimum quantity allowed for purchase e.g 1",
+      "name": "Minimum Order Quantity Count",
+      "range": "DataType"
+    },
+    {
+      "@id": "primarySalesChannel",
+      "@type": "Property",
+      "description": "The primary sales channel used to sell this product",
+      "name": "Primary Sales Channel",
+      "range": "SalesChannel"
+    },
+    {
+      "@id": "maximumOrderQuantityCount",
+      "@type": "Property",
+      "description": "Maximum quantity allowed for purchase e.g 5",
+      "name": "Maximum Order Quantity Count",
+      "range": "DataType"
+    },
+    {
+      "@id": "isRainCheckAllowed",
+      "@type": "Property",
+      "description": "If product is not in stock can customer be promised get it later at todays price",
+      "name": "Is Rain Check Allowed",
+      "range": "DataType"
+    },
+    {
+      "@id": "requiredDepositAmount",
+      "@type": "Property",
+      "description": "Amount that must be paid as deposit to be able to pickup or use the product",
+      "name": "Required Deposit Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "requiredDepositPercentage",
+      "@type": "Property",
+      "description": "Percentage that must be paid up front as deposit to be able to pickup or use the product",
+      "name": "Required Deposit Percentage",
+      "range": "DataType"
+    },
+    {
+      "@id": "orderNumber",
+      "@type": "Property",
+      "description": "Unique number assigned to this order and displayed to end users.",
+      "name": "Order Number",
+      "range": "DataType"
+    },
+    {
+      "@id": "billToAccount",
+      "@type": "Property",
+      "description": "The Account that will be billed for the Sales Order. Can only be updated when the orders StatusCode value is Draft.",
+      "name": "Bill To Account",
+      "range": "Account"
+    },
+    {
+      "@id": "internalBusinessUnit",
+      "@type": "Property",
+      "description": "Within the seller organization, the business unit that is responsible for the Sales Order",
+      "name": "Internal Business Unit",
+      "range": "InternalBusinessUnit"
+    },
+    {
+      "@id": "renewalTerm",
+      "@type": "Property",
+      "description": "For renewal orders, the length of the renewal term",
+      "name": "Renewal Term",
+      "range": "DataType"
+    },
+    {
+      "@id": "salesOrderConfirmationStatus",
+      "@type": "Property",
+      "description": "What stage of customer approval and finalization has been achieved.",
+      "name": "Sales Order Confirmation Status",
+      "range": "DataType"
+    },
+    {
+      "@id": "seller",
+      "@type": "Property",
+      "description": "The party that plays the role of seller on the Service Order",
+      "name": "Seller",
+      "range": "Seller"
+    },
+    {
+      "@id": "canBillNow",
+      "@type": "Property",
+      "description": "The customer is eligible to bill now if True",
+      "name": "Can Bill Now",
+      "range": "DataType"
+    },
+    {
+      "@id": "isAnonymous",
+      "@type": "Property",
+      "description": "True if the sales order was placed by an unregistered guest user",
+      "name": "Is Anonymous",
+      "range": "DataType"
+    },
+    {
+      "@id": "isContracted",
+      "@type": "Property",
+      "description": "True if the sales order was placed under the terms of a contract",
+      "name": "Is Contracted",
+      "range": "DataType"
+    },
+    {
+      "@id": "isHistoricalOnly",
+      "@type": "Property",
+      "description": "Flag the indicates whether or not the order is historical. If the order is Historical it a cannot be changed. Cancellations, invoices, shipping, refunds and other post sale activities cannot be driven from this order. This allows past orders to be imported",
+      "name": "Is Historical Only",
+      "range": "DataType"
+    },
+    {
+      "@id": "isTaxExempt",
+      "@type": "Property",
+      "description": "True if taxes do not apply to this Sales Order",
+      "name": "Is Tax Exempt",
+      "range": "DataType"
+    },
+    {
+      "@id": "confirmationRecipientEmailText",
+      "@type": "Property",
+      "description": "A list of email addresses to be messages for order confirmation. Not for large volume implementations",
+      "name": "Confirmation Recipient Email",
+      "range": "DataType"
+    },
+    {
+      "@id": "priceCalculationStatusMessageText",
+      "@type": "Property",
+      "description": "Text that describes the state of the price calculation process for the order",
+      "name": "Price Calculation Status Message",
+      "range": "DataType"
+    },
+    {
+      "@id": "renewalUpliftRate",
+      "@type": "Property",
+      "description": "For renewal orders, the percentage of increase or decrease in order quantity",
+      "name": "Renewal Uplift Rate",
+      "range": "DataType"
+    },
+    {
+      "@id": "totalAdjustedDeliveryTaxAmount",
+      "@type": "Property",
+      "description": "Σ SalesOrderDeliveryGroup: TotalDeliveryTaxAmount",
+      "name": "Total Adjusted Delivery Tax Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "totalBookingAmount",
+      "@type": "Property",
+      "description": "Total amount of Sales Order Product Booking amounts.",
+      "name": "Total Booking Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "totalCancelledBillingAmount",
+      "@type": "Property",
+      "description": "Total of all canceled order products",
+      "name": "Total Cancelled Billing Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "totalDeliveryAmount",
+      "@type": "Property",
+      "description": "A total of Product, Adjustment and Delivery fee amounts, but excluding Taxes.",
+      "name": "Total Delivery Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "totalDeliveryFeeAmount",
+      "@type": "Property",
+      "description": "Σ SalesOrderDeliveryGroup: TotalDeliveryChargeAmount",
+      "name": "Total Delivery Fee Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "totalPendingBillingAmount",
+      "@type": "Property",
+      "description": "Total pending for all order products.",
+      "name": "Total Pending Billing Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "totalProductAmount",
+      "@type": "Property",
+      "description": "Roll up of all SalesOrderProduct.UnitPriceAmount instance amounts. Excludes order price adjustments (separate objects) and delivery costs.",
+      "name": "Total Product Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "adjustedProductTaxAmount",
+      "@type": "Property",
+      "description": "Total Product Tax + Total Adjustment Tax Amount",
+      "name": "Adjusted Product Tax Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "adjustedTotalProductAmount",
+      "@type": "Property",
+      "description": "Total Product Amount + Total Adjustment Amount",
+      "name": "Adjusted Total Product Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "grandTotalAmount",
+      "@type": "Property",
+      "description": "TotalProductAmount + TotalAdjustmentAmount + TotalTaxAmount",
+      "name": "Grand Total Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "isReductionOrder",
+      "@type": "Property",
+      "description": "...returned; we will support reduction order on line item OR separate order",
+      "name": "Is Reduction Order",
+      "range": "DataType"
+    },
+    {
+      "@id": "orderProductNumber",
+      "@type": "Property",
+      "description": "Automatically-generated number that identifies the order product.",
+      "name": "Order Product Number",
+      "range": "DataType"
+    },
+    {
+      "@id": "originalOrderProduct",
+      "@type": "Property",
+      "description": "Required if is Reduction Order on the parent order is true. ID of the original order product being reduced.",
+      "name": "Original Order Product",
+      "range": "SalesOrderProduct"
+    },
+    {
+      "@id": "salesOrderDeliveryGroup",
+      "@type": "Property",
+      "description": "Sales Order Delivery Group",
+      "name": "Sales Order Delivery Group",
+      "range": "SalesOrderDeliveryGroup"
+    },
+    {
+      "@id": "salesOrderProductReason",
+      "@type": "Property",
+      "description": "The reason code for the Sales Order Product. For CPQ, would only be used to describe a cancellation reason",
+      "name": "Sales Order Product Reason",
+      "range": "SalesOrderProductReason"
+    },
+    {
+      "@id": "salesOrderProductStatus",
+      "@type": "Property",
+      "description": "Status of the product within the order. Values may include Placed and Activated",
+      "name": "Sales Order Product Status",
+      "range": "DataType"
+    },
+    {
+      "@id": "sellerAccount",
+      "@type": "Property",
+      "description": "Lookup to the Seller Account assignee to this order product. This will normally be used only in marketplace configurations, where a site provides a customer with access to products that are sold by multiple other entities.",
+      "name": "Seller Account",
+      "range": "Account"
+    },
+    {
+      "@id": "requestedEndDate",
+      "@type": "Property",
+      "description": "When the product or service provisioning will end, from an order perspective",
+      "name": "Requested End Date",
+      "range": "DataType"
+    },
+    {
+      "@id": "requestedStartDate",
+      "@type": "Property",
+      "description": "When the product or service provisioning will begin, from an order perspective",
+      "name": "Requested Start Date",
+      "range": "DataType"
+    },
+    {
+      "@id": "isAutomaticallyRenewed",
+      "@type": "Property",
+      "description": "For a subscription-type product that can be automatically renewed, this setting indicates the order selection was for auto-renewal",
+      "name": "Is Automatically Renewed",
+      "range": "DataType"
+    },
+    {
+      "@id": "isBonusProduct",
+      "@type": "Property",
+      "description": "Defines if the the sales order item a bonus product. Bonus products are usually free products add to an order. Being bonus has implications on returns and adjustments.",
+      "name": "Is Bonus Product",
+      "range": "DataType"
+    },
+    {
+      "@id": "commentText",
+      "@type": "Property",
+      "description": "A message displayed to the customer during order creation.",
+      "name": "Comments",
+      "range": "DataType"
+    },
+    {
+      "@id": "giftOrderMessageText",
+      "@type": "Property",
+      "description": "The message on the gift",
+      "name": "Gift Order Message",
+      "range": "DataType"
+    },
+    {
+      "@id": "giftRecipientTelephoneNumber",
+      "@type": "Property",
+      "description": "Telephone number of the gift recipient",
+      "name": "Gift Recipient Telephone Number",
+      "range": "DataType"
+    },
+    {
+      "@id": "segmentIndex",
+      "@type": "Property",
+      "description": "Used with Segment Indexes for pricing subscriptions. A Segment Index is unique to a customer's purchase of a product that uses segment pricing, and is used to group the segments together.",
+      "name": "Segment Index",
+      "range": "DataType"
+    },
+    {
+      "@id": "adjustedDeliveryTaxAmount",
+      "@type": "Property",
+      "description": "Rollup of Sales Order Product Tax rows, where the product is delivery fee, after any adjustments on delivery fees.",
+      "name": "Adjusted Delivery Tax Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "deliveryTaxAmount",
+      "@type": "Property",
+      "description": "Rollup of Sales Order Product Tax rows, where the product is delivery fee, before any adjustments on delivery fees.",
+      "name": "Delivery Tax Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "lineAdjustmentSubTotalAmount",
+      "@type": "Property",
+      "description": "Calculated as: UnitPriceTotalAmount - TotalLineAdjustmentAmount.  TotalDistributedAdjustmentAmount is not included.",
+      "name": "Line Adjustment SubTotal Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "listPriceAmount",
+      "@type": "Property",
+      "description": "List price for one unit of the order product. Value is inherited from the associated PriceBookEntry upon order product creation.",
+      "name": "List Price Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "orderAdjustmentSubTotalAmount",
+      "@type": "Property",
+      "description": "Calculated as: TotalUnitPriceAmount - TotalDistributedAdjustmentAmount.  TotalLineAdjustmentAmount is not included.",
+      "name": "Order Adjustment SubTotal Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "orderManualAdjustmentSubTotalAmount",
+      "@type": "Property",
+      "description": "Calculated as: TotalUnitPriceAmount - TotalDistributedAdjustmentAmount. TotalLineAdjustmentAmount is not included.",
+      "name": "Order Manual Adjustment SubTotal Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "recurringPriceAmount",
+      "@type": "Property",
+      "description": "A charge that will be incurred by the buyer on a repeating basis.",
+      "name": "Recurring Price Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "salesOrderProductAdjustedTaxAmount",
+      "@type": "Property",
+      "description": "TotalPriceAmount + TotalTaxAmount.  The adjusted product amount, with taxes and adjustment taxes applied.",
+      "name": "Sales Order Product Adjusted Tax Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "totalAdjustmentAmount",
+      "@type": "Property",
+      "description": "TotalLineAdjustmentAmount + TotalDistributedAdjustmentAmount + Total Manual Adjustment Amount. A positive value which when subtracted from (quantity*ListPriceAmount) determines TotalPriceAmount",
+      "name": "Total Adjustment Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "totalDistributedAdjustmentAmount",
+      "@type": "Property",
+      "description": "Σ SalesOrderProductPriceAdjustment(SalesOrderProductPriceAdjustmentType == Distributed): AdjustmentAmount. Excludes SalesOrderProduct and Manual adjustments.",
+      "name": "Total Distributed Adjustment Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "totalDistributedAdjustmentTaxAmount",
+      "@type": "Property",
+      "description": "The sum of all taxes computed on order-level adjustments that are prorated to SalesOrderProduct (excludes taxes on SalesOrderProduct-level adjustments).  Σ SalesOrderProductPriceAdjustment: AdjustmentTax, where PriceAdjustmentGroup.PriceAdjustmentTypeID =",
+      "name": "Total Distributed Adjustment Tax Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "totalDistributedTaxAmount",
+      "@type": "Property",
+      "description": "Total line level taxes on distributed adjustments",
+      "name": "Total Distributed Tax Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "totalLineAdjustmentAmount",
+      "@type": "Property",
+      "description": "Σ SalesOrderProductPriceAdjustment(SalesOrderProductPriceAdjustmentType == SalesOrderProduct): AdjustmentAmount. Excludes Distributed and Manual adjustments.",
+      "name": "Total Line Adjustment Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "totalLineAmount",
+      "@type": "Property",
+      "description": "Provides a way to override the standard calculation of the SalesOrderProduct's TotalPriceAmount.",
+      "name": "Total Line Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "totalListPriceAmount",
+      "@type": "Property",
+      "description": "Quantity * ListPriceAmount",
+      "name": "Total List Price Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "totalManualAdjustmentAmount",
+      "@type": "Property",
+      "description": "Σ SalesOrderProductPriceAdjustment(SalesOrderProductPriceAdjustmentType == Manual): AdjustmentAmount. Excludes SalesOrderProduct and Distributed adjustments.",
+      "name": "Total Manual Adjustment Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "totalRecurringPriceAmount",
+      "@type": "Property",
+      "description": "For subscription products that have recurring charges, this total stores the total of recurring charges, when these are distinct from Product charges",
+      "name": "Total Recurring Price Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "unitPriceAmount",
+      "@type": "Property",
+      "description": "What the customer is paying for one unit of the product. This provides a way to override the standard List price.",
+      "name": "Unit Price Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "priceAdjustmentMethod",
+      "@type": "Property",
+      "description": "Defines how the adjustment will be calculated. Valid values used in Commerce Cloud are: percentage, fixed_price, amount, free, price_book_price, bonus, total_fixed_price, bonus_choice, percentage_off_options",
+      "name": "Price Adjustment Method",
+      "range": "DataType"
+    },
+    {
+      "@id": "salesOrderPriceAdjustmentTypeID",
+      "@type": "Property",
+      "description": "Defines which subtype an instance of the Price Adjustment Group is for: Sales Order, Sales Order Product, Fulfillment Product or Shipment Product.",
+      "name": "Sales Order Price Adjustment Type Id",
+      "range": "DataType"
+    },
+    {
+      "@id": "isManuallyApplied",
+      "@type": "Property",
+      "description": "Was this Price Adjustment applied manually? An agent giving an adjustment that is not part of coupon, campaign, or promotion. False by default",
+      "name": "Is Manually Applied",
+      "range": "DataType"
+    },
+    {
+      "@id": "reasonText",
+      "@type": "Property",
+      "description": "The reason description as to why the adjustment was given.",
+      "name": "Reason",
+      "range": "DataType"
+    },
+    {
+      "@id": "salesOrder",
+      "@type": "Property",
+      "description": "The Sales Order to which the Price Adjustment Group belongs",
+      "name": "Sales Order Id",
+      "range": "SalesOrder"
+    },
+    {
+      "@id": "totalAdjustmentTaxAmount",
+      "@type": "Property",
+      "description": "If the order-level adjustment has been distributed to each Sales Order Product, then this contains a rollup of the tax allied to each of those Sales Order Product distributed amounts.",
+      "name": "Total Adjustment Tax Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "adjustmentAmount",
+      "@type": "Property",
+      "description": "The amount of an adjustment at the SalesOrderProduct level.",
+      "name": "Adjustment Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "adjustmentTaxAmount",
+      "@type": "Property",
+      "description": "Σ SalesOrderProductTax: Tax.TaxAmount. Filter by SalesOrderTaxType (SalesOrderProduct, Distributed, Manual)",
+      "name": "Adjustment Tax Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "salesOrderProductPriceAdjustmentAmount",
+      "@type": "Property",
+      "description": "AdjustmentAmount + AdjustmentTaxAmount",
+      "name": "Sales Order Product Price Adjustment Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "taxEffectiveDate",
+      "@type": "Property",
+      "description": "The date used to calculate the effective tax rate.",
+      "name": "Tax Effective Date",
+      "range": "DataType"
+    },
+    {
+      "@id": "taxAmount",
+      "@type": "Property",
+      "description": "The tax amount",
+      "name": "Tax Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "salesOrderProductPriceAdjustmentTaxAmount",
+      "@type": "Property",
+      "description": "Tax amount",
+      "name": "Sales Order Product Price Adjustment Tax Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "salesOrderDeliveryGroupNumber",
+      "@type": "Property",
+      "description": "automatically-generated number that identifies the Sales Order Delivery Group",
+      "name": "Sales Order Delivery Group Number",
+      "range": "DataType"
+    },
+    {
+      "@id": "accountContact",
+      "@type": "Property",
+      "description": "The name of the person on the account who is the recipient of or contact for, the delivery",
+      "name": "Delivery Contact",
+      "range": "AccountContact"
+    },
+    {
+      "@id": "contactPointAddress",
+      "@type": "Property",
+      "description": "The ContactPointAddress for the shipping location. This entity stores contact info for the delivery contact, as well as the address.",
+      "name": "Deliver to Address",
+      "range": "ContactPointAddress"
+    },
+    {
+      "@id": "taxErrorMessageText",
+      "@type": "Property",
+      "description": "An error generated by the tax calculation algorithm.",
+      "name": "Tax Error Message",
+      "range": "DataType"
+    },
+    {
+      "@id": "desiredDeliveryDate",
+      "@type": "Property",
+      "description": "The date the customer asked the delivery to occur",
+      "name": "Desired Delivery Date",
+      "range": "DataType"
+    },
+    {
+      "@id": "promisedDate",
+      "@type": "Property",
+      "description": "The date the seller promises to deliver the group of items",
+      "name": "Promised Date",
+      "range": "DataType"
+    },
+    {
+      "@id": "salesOrderTaxAmount",
+      "@type": "Property",
+      "description": "The amount of the tax, e.g. $1.13 if the currency is USD",
+      "name": "Sales Order Tax Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "isGift",
+      "@type": "Property",
+      "description": "True if the delivery is a gift",
+      "name": "Is Gift",
+      "range": "DataType"
+    },
+    {
+      "@id": "deliveryInstructionsText",
+      "@type": "Property",
+      "description": "Instructions for the delivery",
+      "name": "Delivery Instructions",
+      "range": "DataType"
+    },
+    {
+      "@id": "grandTotalDeliveryAmount",
+      "@type": "Property",
+      "description": "TotalDeliveryAmount + TotalDeliveryTaxAmount -- equivalent to Σ SalesOrderProduct(ProductId.ProductType == DeliveryCharge): TotalAmount",
+      "name": "Grand Total Delivery Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "giftMessageText",
+      "@type": "Property",
+      "description": "A message for the gift recipient",
+      "name": "Gift Message",
+      "range": "DataType"
+    },
+    {
+      "@id": "totalDeliveryAdjustmentAmount",
+      "@type": "Property",
+      "description": "Σ OrderItem(Type == DeliveryCharge): TotalAdjustmentAmount",
+      "name": "Total Delivery Adjustment Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "totalDeliveryAdjustmentTaxAmount",
+      "@type": "Property",
+      "description": "Σ OrderItem(Type == DeliveryCharge): TotalAdjustmentTaxAmount",
+      "name": "Total Delivery Adjustment Tax Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "totalDeliveryChargeAmount",
+      "@type": "Property",
+      "description": "Σ OrderItem(Type == DeliveryCharge): IF (TotalLineAmount != NULL, TotalLineAmount, UnitPrice * Quantity)",
+      "name": "Total Delivery Charge Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "totalDeliveryChargeTaxAmount",
+      "@type": "Property",
+      "description": "Σ OrderItem(Type == DeliveryCharge): TotalProductTaxAmount",
+      "name": "Total Delivery Charge Tax Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "totalDeliveryTaxAmount",
+      "@type": "Property",
+      "description": "TotalDeliveryLineTaxAmount + TotalDeliveryAdjustmentTaxAmount -- equivalent to Σ OrderItem(Type == DeliveryCharge): TotalTaxAmount",
+      "name": "Total Delivery Tax Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "totalPriceAmount",
+      "@type": "Property",
+      "description": "Σ SalesOrderProduct.TotalPriceAmount. Includes adjustments",
+      "name": "Total Price Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "totalProductTaxAmount",
+      "@type": "Property",
+      "description": "Σ SalesOrderProduct.TotalProductTaxAmount",
+      "name": "Total Product Tax Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "totalTaxAmount",
+      "@type": "Property",
+      "description": "Σ SalesOrderProduct.TotalTaxAmount",
+      "name": "Total Tax Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "totalUnitPriceAmount",
+      "@type": "Property",
+      "description": "Σ SalesOrderProduct.TotalUnitPriceAmount. Excludes adjustments",
+      "name": "Total Unit Price Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "externalRecord",
+      "@type": "Property",
+      "description": "An ID used in an external system to uniquely identify a Delivery Method",
+      "name": "External Record Id",
+      "range": "DataType"
+    },
+    {
+      "@id": "salesOrderProductGroupType",
+      "@type": "Property",
+      "description": "Description/name of the Product Group Type, e.g. PriceBreakdown, ShipTogether",
+      "name": "Sales Order Product Group Type",
+      "range": "DataType"
+    },
+    {
+      "@id": "salesOrderProductGroup",
+      "@type": "Property",
+      "description": "The Sales Order Product Group to which the Sales Order Product belongs",
+      "name": "Sales Order Product Group",
+      "range": "SalesOrderProductGroup"
+    },
+    {
+      "@id": "description",
+      "@type": "Property",
+      "description": "the text of the Note",
+      "name": "Description",
+      "range": "DataType"
+    },
+    {
+      "@id": "noteText",
+      "@type": "Property",
+      "description": "A user-defined text note about a SalesOrderProduct.",
+      "name": "Note Text",
+      "range": "DataType"
+    },
+    {
+      "@id": "appliedAmount",
+      "@type": "Property",
+      "description": "Total amount that has been applied.",
+      "name": "Applied Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "authorizationAmount",
+      "@type": "Property",
+      "description": "Total amount that has been authorized.",
+      "name": "Authorization Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "authorizationReversalAmount",
+      "@type": "Property",
+      "description": "Total amount that has been reversed from the authorized amount.",
+      "name": "Authorization Reversal Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "availableToApplyBalanceAmount",
+      "@type": "Property",
+      "description": "Balance available for application of funds.",
+      "name": "Available To Apply Balance Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "capturedAmount",
+      "@type": "Property",
+      "description": "Total amount that has been captured.",
+      "name": "Captured Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "paymentAmount",
+      "@type": "Property",
+      "description": "The amount from the related Payment, which has been applied to the related Sales Order",
+      "name": "Payment Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "unappliedAmount",
+      "@type": "Property",
+      "description": "Total amount that has been unapplied.",
+      "name": "Unapplied Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "name",
+      "@type": "Property",
+      "description": "Short description of the log entry",
+      "name": "Sales Order Change Log Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "changeSalesOrderProduct",
+      "@type": "Property",
+      "description": "Id of the Change Order Product that revised an earlier Sales Order (the Original Sales Order).",
+      "name": "Change Sales Order Product Id",
+      "range": "SalesOrderProduct"
+    },
+    {
+      "@id": "relatedSalesOrderProduct",
+      "@type": "Property",
+      "description": "Id of a Sales Order Product that was later revised via the related Change order",
+      "name": "Related Sales Order Product Id",
+      "range": "SalesOrderProduct"
+    },
+    {
+      "@id": "relatedSalesOrder",
+      "@type": "Property",
+      "description": "Id of the Sales Order that was later revised via the related Change order",
+      "name": "Related Sales Order Id",
+      "range": "SalesOrder"
+    },
+    {
+      "@id": "changeSalesOrder",
+      "@type": "Property",
+      "description": "Id of the Change Order that revised an earlier Sales Order (the Original Sales Order).",
+      "name": "Change Sales Order Id",
+      "range": "SalesOrder"
+    },
+    {
+      "@id": "id",
+      "@type": "Property",
+      "description": "Primary Key",
+      "name": "Sales Order Change Type Id",
+      "range": "DataType"
+    },
+    {
+      "@id": "salesOrderChangeTypeName",
+      "@type": "Property",
+      "description": "Codes that define reasons for changing a Sales Order, e.g. quantity change, new distributed adjustment, new line adjustment, etc.",
+      "name": "Sales Order Change Type Name",
+      "range": "DataType"
+    }
+  ]
+}

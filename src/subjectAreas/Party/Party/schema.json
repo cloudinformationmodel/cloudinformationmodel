@@ -1,0 +1,751 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/Household"
+    },
+    {
+      "$ref": "#/definitions/Individual"
+    },
+    {
+      "$ref": "#/definitions/InternalBusinessUnit"
+    },
+    {
+      "$ref": "#/definitions/Party"
+    },
+    {
+      "$ref": "#/definitions/PartyAdditionalName"
+    },
+    {
+      "$ref": "#/definitions/PartyIdentification"
+    },
+    {
+      "$ref": "#/definitions/PartyRelatedParty"
+    },
+    {
+      "$ref": "#/definitions/PartyRelationshipType"
+    },
+    {
+      "$ref": "#/definitions/PersonEducation"
+    },
+    {
+      "$ref": "#/definitions/PersonEmployment"
+    },
+    {
+      "$ref": "#/definitions/PersonLanguage"
+    },
+    {
+      "$ref": "#/definitions/PersonLifeEvent"
+    },
+    {
+      "$ref": "#/definitions/UncategorizedParty"
+    }
+  ],
+  "definitions": {
+    "UncategorizedParty": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/Party"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id",
+            "uncategorizedPartyLabel"
+          ],
+          "properties": {
+            "creationReason": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "uncategorizedPartyLabel": {
+              "type": "string"
+            },
+            "originalSourceRecord": {
+              "type": "string"
+            },
+            "originalSourceSystem": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "PersonLanguage": {
+      "type": "object",
+      "required": [
+        "individual",
+        "id"
+      ],
+      "properties": {
+        "individual": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Individual"
+          }
+        },
+        "id": {
+          "type": "string"
+        },
+        "spokenProficiencyLevel": {
+          "type": "string"
+        },
+        "writtenProficiencyLevel": {
+          "type": "string"
+        }
+      }
+    },
+    "PersonEducation": {
+      "type": "object",
+      "required": [
+        "id",
+        "educationLevel",
+        "educationName",
+        "graduationDate",
+        "individual",
+        "institutionName"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "educationLevel": {
+          "type": "string"
+        },
+        "educationName": {
+          "type": "string"
+        },
+        "graduationDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "individual": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Individual"
+          }
+        },
+        "institutionName": {
+          "type": "string"
+        }
+      }
+    },
+    "Individual": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/Party"
+        },
+        {
+          "type": "object",
+          "required": [
+            "personName",
+            "id"
+          ],
+          "properties": {
+            "hasAlcoholAbuseHistory": {
+              "type": "boolean"
+            },
+            "highestEducationLevel": {
+              "type": "string"
+            },
+            "personHeight": {
+              "type": "integer"
+            },
+            "mailingName": {
+              "type": "string"
+            },
+            "surgeriesLast5YearsCount": {
+              "type": "integer"
+            },
+            "doNotTrackUpdateDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "weddingAnniversaryDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "minorCitationCount": {
+              "type": "integer"
+            },
+            "mainDietaryHabitType": {
+              "type": "string"
+            },
+            "personHeightUnitOfMeasure": {
+              "type": "string"
+            },
+            "firstName": {
+              "type": "string"
+            },
+            "personName": {
+              "type": "string"
+            },
+            "photoURL": {
+              "type": "string"
+            },
+            "isHighRiskHobby": {
+              "type": "boolean"
+            },
+            "doNotProcessFromUpdateDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "militaryService": {
+              "type": "string"
+            },
+            "maritalStatus": {
+              "type": "string"
+            },
+            "doNotMarketFromUpdateDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "shouldForget": {
+              "type": "boolean"
+            },
+            "id": {
+              "type": "string"
+            },
+            "mainDisabilityType": {
+              "type": "string"
+            },
+            "consumerCreditScoreProviderName": {
+              "type": "string"
+            },
+            "isTobaccoConsume": {
+              "type": "boolean"
+            },
+            "webSiteURL": {
+              "type": "string"
+            },
+            "secondLastName": {
+              "type": "string"
+            },
+            "primaryHousehold": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Household"
+              }
+            },
+            "orderingName": {
+              "type": "string"
+            },
+            "hospitalizationsLast5YearsCount": {
+              "type": "integer"
+            },
+            "dependentCount": {
+              "type": "integer"
+            },
+            "convictionsCount": {
+              "type": "integer"
+            },
+            "isGoodDriver": {
+              "type": "boolean"
+            },
+            "primaryHobby": {
+              "type": "string"
+            },
+            "mainPersonalValueType": {
+              "type": "string"
+            },
+            "isAlcoholConsumer": {
+              "type": "boolean"
+            },
+            "taxBracketRange": {
+              "type": "string"
+            },
+            "childrenCount": {
+              "type": "integer"
+            },
+            "isGoodStudent": {
+              "type": "boolean"
+            },
+            "mainLifeAttitudeType": {
+              "type": "string"
+            },
+            "netWorth": {
+              "type": "integer"
+            },
+            "personWeight": {
+              "type": "integer"
+            },
+            "birthDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "religion": {
+              "type": "string"
+            },
+            "sendIndividualData": {
+              "type": "boolean"
+            },
+            "deathDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "doExtractMyDataUpdateDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "birthPlace": {
+              "type": "string"
+            },
+            "overAgeNumber": {
+              "type": "integer"
+            },
+            "doForgetMeFromUpdateDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "personWeightUnitOfMeasure": {
+              "type": "string"
+            },
+            "mainLifeStyleType": {
+              "type": "string"
+            },
+            "gender": {
+              "type": "string"
+            },
+            "hasDrugAbuseHistory": {
+              "type": "boolean"
+            },
+            "salutation": {
+              "type": "string"
+            },
+            "mothersMaidenName": {
+              "type": "string"
+            },
+            "doNotTrackLocationUpdateDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "ethnicity": {
+              "type": "string"
+            },
+            "mainPersonalityType": {
+              "type": "string"
+            },
+            "employedSinceDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "officialName": {
+              "type": "string"
+            },
+            "isHighRiskOccupation": {
+              "type": "boolean"
+            },
+            "residenceCaptureMethod": {
+              "type": "string"
+            },
+            "doNotProfileFromUpdateDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "nameSuffix": {
+              "type": "string"
+            },
+            "isDrugConsumer": {
+              "type": "boolean"
+            },
+            "isHomeOwner": {
+              "type": "boolean"
+            },
+            "doNotProcessReason": {
+              "type": "string"
+            },
+            "occupationType": {
+              "type": "string"
+            },
+            "deathPlace": {
+              "type": "string"
+            },
+            "influencerRating": {
+              "type": "integer"
+            },
+            "militaryStatus": {
+              "type": "string"
+            },
+            "consumerCreditScore": {
+              "type": "integer"
+            },
+            "yearlyIncome": {
+              "type": "integer"
+            },
+            "preferredName": {
+              "type": "string"
+            },
+            "personLifeStage": {
+              "type": "string"
+            },
+            "yearlyIncomeRange": {
+              "type": "string"
+            },
+            "majorCitationCount": {
+              "type": "integer"
+            },
+            "middleName": {
+              "type": "string"
+            },
+            "residenceCountryName": {
+              "type": "string"
+            },
+            "lastName": {
+              "type": "string"
+            },
+            "occupation": {
+              "type": "string"
+            },
+            "currentEmployerName": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "PersonEmployment": {
+      "type": "object",
+      "required": [
+        "employmentStatus",
+        "positionText",
+        "endDate",
+        "startDate",
+        "occupationText",
+        "id",
+        "employerName",
+        "employerAddressLine1",
+        "annualIncome",
+        "individual",
+        "employerPhoneNumber"
+      ],
+      "properties": {
+        "employmentStatus": {
+          "type": "string"
+        },
+        "positionText": {
+          "type": "string"
+        },
+        "employerContactPointAddress": {
+          "type": "array",
+          "items": {
+            "$ref": "../ContactPoint/schema.json#/definitions/ContactPointAddress"
+          }
+        },
+        "employerAddressLine3": {
+          "type": "string"
+        },
+        "endDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "startDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "occupationText": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "employerName": {
+          "type": "string"
+        },
+        "employerAddressLine4": {
+          "type": "string"
+        },
+        "employerAddressLine1": {
+          "type": "string"
+        },
+        "annualIncome": {
+          "type": "integer"
+        },
+        "employerCityName": {
+          "type": "string"
+        },
+        "individual": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Individual"
+          }
+        },
+        "employerAddressLine2": {
+          "type": "string"
+        },
+        "employerPostalCodeText": {
+          "type": "string"
+        },
+        "employerPhoneNumber": {
+          "type": "string"
+        }
+      }
+    },
+    "PartyIdentification": {
+      "type": "object",
+      "required": [
+        "partyIdentificationType",
+        "id",
+        "name",
+        "identificationNumber",
+        "party"
+      ],
+      "properties": {
+        "expiryDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "partyIdentificationType": {
+          "type": "string"
+        },
+        "verifiedDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "issuedByAuthority": {
+          "type": "string"
+        },
+        "issuedAtLocation": {
+          "type": "string"
+        },
+        "issuedDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "partyRole": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "identificationNumber": {
+          "type": "string"
+        },
+        "party": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Party"
+          }
+        }
+      }
+    },
+    "PartyRelatedParty": {
+      "type": "object",
+      "required": [
+        "relatedFromDate",
+        "id",
+        "partyRelationshipType",
+        "relatedParty",
+        "relatedToDate",
+        "party"
+      ],
+      "properties": {
+        "relatedFromDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "id": {
+          "type": "string"
+        },
+        "partyRelationshipType": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PartyRelationshipType"
+          }
+        },
+        "relatedParty": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Party"
+          }
+        },
+        "relatedToDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "party": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Party"
+          }
+        }
+      }
+    },
+    "PartyAdditionalName": {
+      "type": "object",
+      "required": [
+        "id",
+        "additionalNameType",
+        "name",
+        "party"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "additionalNameType": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "party": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Party"
+          }
+        }
+      }
+    },
+    "PartyRelationshipType": {
+      "type": "object",
+      "required": [
+        "isBidirectional",
+        "id",
+        "partyRole",
+        "relatedPartyRole"
+      ],
+      "properties": {
+        "isBidirectional": {
+          "type": "boolean"
+        },
+        "id": {
+          "type": "string"
+        },
+        "partyRole": {
+          "type": "string"
+        },
+        "relatedPartyRole": {
+          "type": "string"
+        }
+      }
+    },
+    "Household": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/Party"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id",
+            "name"
+          ],
+          "properties": {
+            "householdMemberCount": {
+              "type": "integer"
+            },
+            "householdFormedDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "householdDissolvedDate": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "PersonLifeEvent": {
+      "type": "object",
+      "required": [
+        "individual",
+        "id",
+        "personLifeEventDateTime",
+        "personLifeEventType"
+      ],
+      "properties": {
+        "individual": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Individual"
+          }
+        },
+        "id": {
+          "type": "string"
+        },
+        "personLifeEventDateTime": {
+          "type": "string",
+          "format": "time"
+        },
+        "personLifeEventType": {
+          "type": "string"
+        }
+      }
+    },
+    "Party": {
+      "type": "object",
+      "required": [
+        "partyType",
+        "id"
+      ],
+      "properties": {
+        "partyType": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "globalParty": {
+          "type": "string"
+        },
+        "noMergeReason": {
+          "type": "string"
+        },
+        "primaryAccount": {
+          "type": "array",
+          "items": {
+            "$ref": "../Account/schema.json#/definitions/Account"
+          }
+        }
+      }
+    },
+    "InternalBusinessUnit": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/Party"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id",
+            "businessUnitType",
+            "name"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "businessUnitType": {
+              "type": "string"
+            },
+            "parentInternalBusinessUnit": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/InternalBusinessUnit"
+              }
+            },
+            "name": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    }
+  }
+}

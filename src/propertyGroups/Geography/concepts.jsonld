@@ -1,0 +1,30 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "GeographyPropertyGroup",
+  "name": "Geography Property Group",
+  "@type": "PropertyGroup",
+  "version": "0.1",
+  "propertyConcepts": [
+    {
+      "@id": "geoCodeLatitude",
+      "@type": "Property",
+      "description": "Latitude to the center of address",
+      "name": "Geo Code Latitude",
+      "range": "DataType"
+    },
+    {
+      "@id": "geoCodeLongitude",
+      "@type": "Property",
+      "description": "Longitude to the center of the address",
+      "name": "Geo Code Longitude",
+      "range": "DataType"
+    },
+    {
+      "@id": "geoCodeAccuracy",
+      "@type": "Property",
+      "description": "How accurate the lat/long information is",
+      "name": "Geo Code Accuracy",
+      "range": "DataType"
+    }
+  ]
+}

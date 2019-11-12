@@ -1,0 +1,12 @@
+#%Vocabulary 1.0
+base: http://cloudinformationmodel.org/model/
+vocabulary: Geographic Property Group
+propertyTerms:
+  birthPlace:
+    displayName: Birth Place
+    description: Place person is born e.g. a city name
+    range: any
+  deathPlace:
+    displayName: Death Place
+    description: Place person passed away at
+    range: any

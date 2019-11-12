@@ -1,0 +1,157 @@
+#%RAML 1.0 Library
+types:
+  ContactPointType:
+    properties:
+      optInPriority:
+        type: integer
+      id:
+        type: string
+      name:
+        type: string
+  ContactPointLocation:
+    type: ContactPoint
+    properties:
+      id:
+        type: string
+  ContactPointApp:
+    type: ContactPoint
+    properties:
+      applicationLogin:
+        type: string
+      id:
+        type: string
+  ContactPointAddress:
+    type: ContactPoint
+    properties:
+      isUsedForShipping:
+        type: boolean
+      stateProvinceName:
+        type: string
+      addressLine3:
+        type: string
+      countryName:
+        type: string
+      postalCodeText:
+        type: string
+      id:
+        type: string
+      geoLatitude:
+        type: integer
+      addressLine2:
+        type: string
+      addressLine4:
+        type: string
+      geoAccuracy:
+        type: integer
+      contactPhone:
+        items: ContactPointPhone
+      geoLongitude:
+        type: integer
+      addressLine1:
+        type: string
+      cityName:
+        type: string
+      isUsedForBilling:
+        type: boolean
+  PartyWebAddress:
+    type: ContactPoint
+    properties:
+      id:
+        type: string
+      webSiteURL:
+        type: string
+      party:
+        items: party_eg.Party
+  ContactPointEmail:
+    type: ContactPoint
+    properties:
+      emailLatestBounceReasonText:
+        type: string
+      id:
+        type: string
+      emailMailBox:
+        type: string
+      emailDomain:
+        type: string
+      emailAddress:
+        type: string
+      emailLatestBounceDateTime:
+        type: date-only
+  ContactPointSocial:
+    type: ContactPoint
+    properties:
+      id:
+        type: string
+      profilePictureURL:
+        type: string
+      followersCount:
+        type: integer
+      socialHandleName:
+        type: string
+      socialFanStatus:
+        type: string
+      socialHandle:
+        type: string
+      socialNetworkProvider:
+        type: string
+  ContactPointPhone:
+    type: ContactPoint
+    properties:
+      extensionNumber:
+        type: string
+      phoneCountryCode:
+        type: string
+      countryName:
+        type: string
+      id:
+        type: string
+      areaCode:
+        type: string
+      isSMSCapable:
+        type: boolean
+      shortCode:
+        type: integer
+      formattedInternationalPhoneNumber:
+        type: string
+      primaryPhoneType:
+        type: string
+      isFaxCapable:
+        type: boolean
+      formattedE164PhoneNumber:
+        type: string
+      formattedNationalPhoneNumber:
+        type: string
+      telephoneNumber:
+        type: string
+  ContactPoint:
+    properties:
+      primaryFlag:
+        type: boolean
+      bestTimeToContactStartTime:
+        type: time-only
+      profileLastUpdatedDate:
+        type: time-only
+      partyRole:
+        type: string
+      id:
+        type: string
+      activeFromDate:
+        type: date-only
+      activeToDate:
+        type: date-only
+      profileOccurrenceCount:
+        type: integer
+      profileFirstCreatedDate:
+        type: time-only
+      bestTimeToContactEndTime:
+        type: time-only
+      party:
+        items: party_eg.Party
+      contactPointType:
+        items: ContactPointType
+      forBusinessUse:
+        type: boolean
+      forPersonalUse:
+        type: boolean
+uses:
+  party_eg: ../Party/schema.yaml

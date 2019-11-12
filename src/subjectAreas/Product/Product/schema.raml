@@ -1,0 +1,324 @@
+#%RAML 1.0 Library
+types:
+  ProductRelatedProduct:
+    properties:
+      salesOrderProduct1:
+        items: salesorder_eg.SalesOrderProduct
+      id:
+        type: string
+      name:
+        type: string
+      parentProduct:
+        items: Product
+      isDefaultOption:
+        type: boolean
+      fromDate:
+        type: date-only
+      childProduct:
+        items: Product
+      productRelationshipType:
+        items: salesorder_eg.ProductRelationshipType
+      toDate:
+        type: date-only
+      salesOrderProduct2:
+        items: salesorder_eg.SalesOrderProduct
+  ProductTranslation:
+    properties:
+      longDescription:
+        type: string
+      product:
+        items: Product
+      description:
+        type: string
+      id:
+        type: string
+      name:
+        type: string
+  ProductImage:
+    properties:
+      product:
+        items: Product
+      id:
+        type: string
+      isDefaultImage:
+        type: boolean
+      imageViewType:
+        type: string
+  ProductRelationshipType:
+    properties:
+      id:
+        type: string
+      parentProductRole:
+        type: string
+      childProductRole:
+        type: string
+  ProductImageTranslation:
+    properties:
+      productImage:
+        items: ProductImage
+      id:
+        type: string
+      translatedName:
+        type: string
+  GoodsProduct:
+    type: Product
+    properties:
+      productSecurityRequirement:
+        type: string
+      season:
+        type: string
+      color:
+        type: string
+      style:
+        type: string
+      isMadeToOrder:
+        type: boolean
+      height:
+        type: integer
+      fabric:
+        type: string
+      requiredTemperatureUOM:
+        type: string
+      shelfFacingUnitCount:
+        type: integer
+      requiredHumidityPercentage:
+        type: integer
+      id:
+        type: string
+      grossWeight:
+        type: integer
+      tareWeight:
+        type: integer
+      depth:
+        type: integer
+      requiredTemperatureLowestNumber:
+        type: integer
+      gender:
+        type: string
+      maxHoldingDayCount:
+        type: integer
+      diameter:
+        type: integer
+      isPerishable:
+        type: boolean
+      requiredCleanupProcess:
+        type: string
+      pattern:
+        type: string
+      requiredTemperatureHighestNumber:
+        type: integer
+      netWeight:
+        type: integer
+      environmentRequirement:
+        type: string
+      drainedWeight:
+        type: integer
+      age:
+        type: string
+      width:
+        type: integer
+      requiresUnitPriceLabel:
+        type: boolean
+      weightUOM:
+        type: string
+      productMayExpand:
+        type: boolean
+      sizeUOM:
+        type: string
+  ServiceProduct:
+    type: Product
+    properties:
+      rentalTermViolationPenaltyAmount:
+        type: integer
+      evergreenContractEstimatedMonthCount:
+        type: integer
+      id:
+        type: string
+      evergreenContractEstimatedChargeAmount:
+        type: integer
+      servicePeriodUOM:
+        type: string
+      servicePeriodCount:
+        type: integer
+      serviceProviderAccount:
+        items: account_eg.Account
+      rentalCleanupFeeAmount:
+        type: integer
+      serviceType:
+        type: string
+  Product:
+    properties:
+      quantityScheduleType:
+        type: string
+      disposalType:
+        type: string
+      longDescription:
+        type: string
+      primaryProductCategory:
+        items: productcatalog_eg.ProductCategory
+      minimumAdvertisementAmount:
+        type: integer
+      isBackOrdered:
+        type: boolean
+      validForPeriodCount:
+        type: integer
+      isWorkerDiscountAllowed:
+        type: boolean
+      allowPartialRefund:
+        type: boolean
+      isWeightEntryRequired:
+        type: boolean
+      isQuantityEntryRequired:
+        type: boolean
+      isSerialized:
+        type: boolean
+      rewardProgramPointsCount:
+        type: integer
+      description:
+        type: string
+      revenueInstallmentPeriod:
+        type: string
+      id:
+        type: string
+      name:
+        type: string
+      isAutoProvisionable:
+        type: boolean
+      isCouponRedemptionAllowed:
+        type: boolean
+      isSellableIndependently:
+        type: boolean
+      canUseRevenueSchedule:
+        type: boolean
+      manufacturerName:
+        type: string
+      isIntellectualPropertyProtected:
+        type: boolean
+      modelYear:
+        type: integer
+      isCustomerDiscountAllowed:
+        type: boolean
+      productStatus:
+        type: string
+      brandGrade:
+        type: string
+      quantityInstallmentCount:
+        type: integer
+      requiredDepositAmount:
+        type: integer
+      revenueScheduleType:
+        type: string
+      isPreOrderable:
+        type: boolean
+      requiresInvididualUnitPricing:
+        type: boolean
+      standardWarrantyLengthMonth:
+        type: integer
+      canUseQuantitySchedule:
+        type: boolean
+      isInstallable:
+        type: boolean
+      isRainCheckAllowed:
+        type: boolean
+      minimumAdvertisementAmountStartDate:
+        type: integer
+      maximumOrderQuantityCount:
+        type: integer
+      isMultipleCouponsAllowed:
+        type: boolean
+      allowCustomerReturn:
+        type: boolean
+      modelNumber:
+        type: string
+      mSRPAmount:
+        type: integer
+      externalSourceRecord:
+        type: string
+      masterProduct:
+        items: Product
+      isSellable:
+        type: boolean
+      validToDate:
+        type: date-only
+      priceChargeType:
+        type: string
+      primarySalesChannel:
+        items: salesorder_eg.SalesChannel
+      isPartnerDiscountAllowed:
+        type: boolean
+      revenueInstallmentCount:
+        type: integer
+      productSKU:
+        type: string
+      quantityInstallmentPeriod:
+        type: string
+      isManualPriceEntryRequired:
+        type: boolean
+      type:
+        type: string
+      isSellableWithoutPrice:
+        type: boolean
+      glAccountCode:
+        type: string
+      isReturnable:
+        type: boolean
+      displayUrl:
+        type: string
+      validForPeriodUOM:
+        items: productattribute_eg.ProductValidityTimePeriodUOM
+      versionNumber:
+        type: string
+      brand:
+        items: Brand
+      lotIdentifier:
+        type: string
+      validFromDate:
+        type: date-only
+      stockLedgerValuationAmount:
+        type: integer
+      isDynamicBundle:
+        type: boolean
+      isQualityVerificationRequired:
+        type: boolean
+      requiredDepositPercentage:
+        type: integer
+      isFoodstampPaymentAllowed:
+        type: boolean
+      minimumOrderQuantityCount:
+        type: integer
+  Brand:
+    properties:
+      id:
+        type: string
+      brandGrade:
+        type: string
+      name:
+        type: string
+  BundleProduct:
+    type: Product
+    properties:
+      expectedWasteCount:
+        type: integer
+      quantityCount:
+        type: integer
+      id:
+        type: string
+      tareWeight:
+        type: integer
+      bundledProductsSubstitutional:
+        type: boolean
+      bundledProductsDecidedAtUse:
+        type: boolean
+      bundledProductsDecidesAvailability:
+        type: boolean
+      bundledProductsSoldTogether:
+        type: boolean
+      weightUOM:
+        type: string
+      quantityUnitOfMeasure:
+        type: string
+uses:
+  productattribute_eg: ../ProductAttribute/schema.yaml
+  account_eg: ../../Party/Account/schema.yaml
+  productcatalog_eg: ../ProductCatalog/schema.yaml
+  salesorder_eg: ../../SalesOrder/SalesOrder/schema.yaml

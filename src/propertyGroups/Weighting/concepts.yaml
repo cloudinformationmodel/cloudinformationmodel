@@ -1,0 +1,24 @@
+#%Vocabulary 1.0
+base: http://cloudinformationmodel.org/model/
+vocabulary: Weighting Property Group
+propertyTerms:
+  drainedWeight:
+    displayName: Drained Weight
+    description: What is the weigth of the product excluding packaging after drainage
+    range: any
+  tareWeight:
+    displayName: Tare Weight
+    description: What is the weigth of the product bundle packaging without product content
+    range: any
+  netWeight:
+    displayName: Net Weight
+    description: What is the weight of the product excluding packaging
+    range: any
+  weightUOM:
+    displayName: Weight UOM
+    description: What is the unit of measure for stating the weight of the bundle product
+    range: any
+  grossWeight:
+    displayName: Gross Weight
+    description: What is the weight of the product in its original packaging
+    range: any

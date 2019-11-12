@@ -1,0 +1,32 @@
+[
+  {
+    "text": "AML (vocabulary)",
+    "href": "../dist/concepts.yaml",
+    "position": "global"
+  },
+  {
+    "text": "JSON-LD (vocabulary & schema)",
+    "href": "../dist/model.jsonld",
+    "position": "global"
+  },
+  {
+    "text": "R2RML",
+    "href": "../dist/schema.r2rml",
+    "position": "global"
+  },
+  {
+    "text": "RAML Types",
+    "href": "../dist/schema.raml",
+    "position": "global"
+  },
+  {
+    "text": "SQL DDL",
+    "href": "../dist/schema.sql",
+    "position": "global"
+  },
+  {
+    "text": "AML (dialect)",
+    "href": "../dist/schema.yaml",
+    "position": "global"
+  }
+]

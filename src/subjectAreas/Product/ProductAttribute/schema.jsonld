@@ -1,0 +1,273 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "ProductAttributeEntityGroup",
+  "@type": "EntityGroup",
+  "version": "0.1",
+  "schemas": [
+    {
+      "@type": "Shape",
+      "@id": "ProductValidityTimePeriodUOM",
+      "properties": [
+        {
+          "path": "pluralName",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "name",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "ProductCollateral",
+      "properties": [
+        {
+          "path": "uRL",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "product",
+          "node": "Product",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "AttributeSetTranslation",
+      "properties": [
+        {
+          "path": "translatedName",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "attributeSet",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "AttributeTranslation",
+      "properties": [
+        {
+          "path": "translatedName",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "AttributeValue",
+      "properties": [
+        {
+          "path": "attributeValue",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "AttributeValueTranslation",
+      "properties": [
+        {
+          "path": "translatedAttributeValue",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "translatedAttributeValueDescription",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "attributeValue",
+          "node": "AttributeValue",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "ProductAttributeValue",
+      "properties": [
+        {
+          "path": "customAttributeValue",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "attributeValue",
+          "node": "AttributeValue"
+        },
+        {
+          "path": "product",
+          "node": "Product",
+          "minCount": "1"
+        },
+        {
+          "path": "attributeSet",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "name",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "ProductAttributeSet",
+      "properties": [
+        {
+          "path": "product",
+          "node": "Product",
+          "minCount": "1"
+        },
+        {
+          "path": "attributeSet",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "PriceBookEntry",
+      "properties": [
+        {
+          "path": "maxRequiredOrderValue",
+          "datatype": "xsd:integer",
+          "maxCount": "1"
+        },
+        {
+          "path": "minRequiredOrderValue",
+          "datatype": "xsd:integer",
+          "maxCount": "1"
+        },
+        {
+          "path": "servicePeriodCount",
+          "datatype": "xsd:integer",
+          "maxCount": "1"
+        },
+        {
+          "path": "minRequiredQuantity",
+          "datatype": "xsd:integer",
+          "maxCount": "1"
+        },
+        {
+          "path": "useStandardPrice",
+          "datatype": "xsd:boolean",
+          "maxCount": "1"
+        },
+        {
+          "path": "isActive",
+          "datatype": "xsd:boolean",
+          "maxCount": "1"
+        },
+        {
+          "path": "unitListPrice",
+          "datatype": "xsd:decimal",
+          "maxCount": "1"
+        },
+        {
+          "path": "product",
+          "node": "Product"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "DeviceUserSession",
+      "properties": [
+        {
+          "path": "name",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    }
+  ]
+}

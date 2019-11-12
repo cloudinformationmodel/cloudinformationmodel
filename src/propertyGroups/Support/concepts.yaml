@@ -1,0 +1,8 @@
+#%Vocabulary 1.0
+base: http://cloudinformationmodel.org/model/
+vocabulary: Support Property Group
+propertyTerms:
+  last12MonthsSupportCallCount:
+    displayName: Last 12 Months Support Call Count
+    description: How many support calls been made between customer and us in last 12 months
+    range: any

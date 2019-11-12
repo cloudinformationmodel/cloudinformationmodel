@@ -1,0 +1,59 @@
+{
+    "@base": "http://cloudinformationmodel.org/model/",
+
+    "cim": "http://cloudinformationmodel.org/model/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "sh": "http://www.w3.org/ns/shacl#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+
+    "version": "cim:version",
+    "classConcepts": "cim:classes",
+    "propertyConcepts": "cim:properties",
+    "schemas": "cim:schemas",
+
+    "name": "rdfs:label",
+    "description": "rdfs:comment",
+    "Class": "rdfs:Class",
+    "Property": "rdf:Property",
+    "Literal": "rdfs:Literal",
+    "domain": {
+      "@id": "rdfs:domain",
+      "@type": "@id"
+    },
+    "range": {
+      "@id": "rdfs:range",
+      "@type": "@id"
+    },
+    "subClassOf": {
+      "@id": "rdfs:subClassOf",
+      "@type": "@id"
+    },
+    "subPropertyOf": {
+      "@id": "rdfs:subPropertyOf",
+      "@type": "@id"
+    },
+
+    "properties": "sh:property",
+    "path": {
+      "@id": "sh:path",
+      "@type": "@id"
+    },
+    "node": {
+      "@id": "sh:node",
+      "@type": "@id"
+    },
+    "and": {
+      "@id": "sh:and",
+      "@container": "@list"
+    },
+    "in": "sh:in",
+    "minCount": "sh:minCount",
+    "maxCount": "sh:maxCount",
+    "datatype": {
+      "@id": "sh:datatype",
+      "@type": "@id"
+    },
+    "Shape": "sh:Shape"
+}
+

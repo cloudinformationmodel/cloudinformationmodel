@@ -1,0 +1,28 @@
+#%Vocabulary 1.0
+base: http://cloudinformationmodel.org/model/
+vocabulary: Sizing Property Group
+propertyTerms:
+  productMayExpand:
+    displayName: Product May Expand
+    description: Indicates product may become bigger under certain circumstances e.g. heat
+    range: any
+  height:
+    displayName: Height
+    description: What is the height size of the product
+    range: any
+  diameter:
+    displayName: Diameter
+    description: What is the diameter size of the cylindracal product
+    range: any
+  depth:
+    displayName: Depth
+    description: What is the depth size of the product
+    range: any
+  sizeUOM:
+    displayName: Size UOM
+    description: What is the unit of measure for stating the size of the product
+    range: any
+  width:
+    displayName: Width
+    description: What is the wdth(length) size of the product
+    range: any

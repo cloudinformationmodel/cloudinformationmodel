@@ -1,0 +1,16 @@
+#%Vocabulary 1.0
+base: http://cloudinformationmodel.org/model/
+vocabulary: Address Property Group
+propertyTerms:
+  taxAddressStreet2Text:
+    displayName: Tax Address Street2
+    description: The second line of an address used for tax assessment
+    range: any
+  taxAddressStreet1Text:
+    displayName: Tax Address Street1
+    description: The first line of an address used for tax assessment
+    range: any
+  taxAddressCityName:
+    displayName: Tax Address City Name
+    description: The city of an address used for tax assessment
+    range: any

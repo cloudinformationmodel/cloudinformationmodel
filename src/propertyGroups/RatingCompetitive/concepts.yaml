@@ -1,0 +1,20 @@
+#%Vocabulary 1.0
+base: http://cloudinformationmodel.org/model/
+vocabulary: Rating - Competitive Property Group
+propertyTerms:
+  competitiveProductPriceRank:
+    displayName: Competitive Product Price Rank
+    description: Degree of chance received first prices or can receive/better prices over lifetime
+    range: any
+  competitiveCostAvoidanceRank:
+    displayName: Competitive Cost Avoidance Rank
+    description: Free training, delivery etc. possible
+    range: any
+  competitiveWarrantyRank:
+    displayName: Competitive Warranty Rank
+    description: Degree of warranty provided relative to other suppliers
+    range: any
+  competitiveMarketingRank:
+    displayName: Competitive Marketing Rank
+    description: Degree of goodwill associated with the supplier
+    range: any

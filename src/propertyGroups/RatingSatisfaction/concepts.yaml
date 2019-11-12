@@ -1,0 +1,16 @@
+#%Vocabulary 1.0
+base: http://cloudinformationmodel.org/model/
+vocabulary: Rating - Satisfaction Property Group
+propertyTerms:
+  satisfactionCustomerServiceRank:
+    displayName: Satisfaction Customer Service Rank
+    description: How routing and resolution of issues around account management is handled
+    range: any
+  satisfactionTechnicalSupportRank:
+    displayName: Satisfaction Technical Support Rank
+    description: How training and documentation is rated
+    range: any
+  satisfactionEthicsRank:
+    displayName: Satisfaction Ethics Rank
+    description: How non-involuntary labor used, made in safe working conditions, retailers can distribute etc.
+    range: any

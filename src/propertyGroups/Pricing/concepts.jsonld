@@ -1,0 +1,100 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "PricingPropertyGroup",
+  "name": "Pricing Property Group",
+  "@type": "PropertyGroup",
+  "version": "0.1",
+  "propertyConcepts": [
+    {
+      "@id": "shipmentProduct",
+      "@type": "Property",
+      "description": "A product item in a shipment. A Shipment Product Price Adjustment will be related to a Shipment Product when a shipping fee has been adjusted after the Sales Order was created.",
+      "name": "Shipment Product",
+      "range": "ShipmentProduct"
+    },
+    {
+      "@id": "paymentMethod",
+      "@type": "Property",
+      "description": "How is the order paid for e.g. credit card",
+      "name": "Payment Method",
+      "range": "PaymentMethod"
+    },
+    {
+      "@id": "taxRate",
+      "@type": "Property",
+      "description": "What tax rate is applied for the sales order",
+      "name": "Tax Rate",
+      "range": "DataType"
+    },
+    {
+      "@id": "orderInsuranceAmount",
+      "@type": "Property",
+      "description": "What is the insurance cost for the overall order",
+      "name": "Order Insurance Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "orderDiscount",
+      "@type": "Property",
+      "description": "What discount is given on the overall order",
+      "name": "Order Discount Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "priceBookEntry",
+      "@type": "Property",
+      "description": "Reference to the associated PriceBookEntry. This field must be specified when creating OrderItem records. It can't be changed in an update.",
+      "name": "Price Book Entry",
+      "range": "PriceBookEntry"
+    },
+    {
+      "@id": "listPriceQuantityUOM",
+      "@type": "Property",
+      "description": "The unit of measure for the list price when the product is a physical product. Box, case and palette could be examples... are some examples",
+      "name": "List Price Quantity Unit of Measure",
+      "range": "DataType"
+    },
+    {
+      "@id": "listPriceTermUOM",
+      "@type": "Property",
+      "description": "The unit of measure for the list price when the product is a subscription with a term. Yearly, quarterly, monthly, etc... are some examples",
+      "name": "List Price Term Unit of Measure",
+      "range": "ProductValidityTimePeriodUOM"
+    },
+    {
+      "@id": "orderedQuantity",
+      "@type": "Property",
+      "description": "Number of units of this order product.",
+      "name": "Ordered Quantity",
+      "range": "DataType"
+    },
+    {
+      "@id": "subscriptionRenewalMonthQuantity",
+      "@type": "Property",
+      "description": "Determines how often a new order is placed, in months, if this Order Item is a subscription.",
+      "name": "Subscription Renewal Month Quantity",
+      "range": "DataType"
+    },
+    {
+      "@id": "unitTaxAmount",
+      "@type": "Property",
+      "description": "Unit tax amount for this order product",
+      "name": "Unit Tax Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "discountPercent",
+      "@type": "Property",
+      "description": "Discount percentage applied to this order line item",
+      "name": "Discount Percent",
+      "range": "DataType"
+    },
+    {
+      "@id": "discountAmount",
+      "@type": "Property",
+      "description": "Discount amount applied to order line item",
+      "name": "Discount Amount",
+      "range": "DataType"
+    }
+  ]
+}

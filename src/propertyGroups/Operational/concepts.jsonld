@@ -1,0 +1,44 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "OperationalPropertyGroup",
+  "name": "Operational Property Group",
+  "@type": "PropertyGroup",
+  "version": "0.1",
+  "propertyConcepts": [
+    {
+      "@id": "marketingDevelopmentAmount",
+      "@type": "Property",
+      "description": "How much money have we funded to seller for marketing development activities",
+      "name": "Marketing Development Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "inventoryValueAmount",
+      "@type": "Property",
+      "description": "The value of the inventory of our products the seller hold",
+      "name": "Inventory Value Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "productReturnRate",
+      "@type": "Property",
+      "description": "How many products are returned as percentage of all products ordered",
+      "name": "Product Return Rate",
+      "range": "DataType"
+    },
+    {
+      "@id": "majorPostSaleSupportNeeded",
+      "@type": "Property",
+      "description": "Does the seller require significant resources from us post sale",
+      "name": "Major Post Sale Support Needed",
+      "range": "DataType"
+    },
+    {
+      "@id": "creditRating",
+      "@type": "Property",
+      "description": "In how good standing is the seller so we know they should receive more goods from us",
+      "name": "Credit Rating",
+      "range": "DataType"
+    }
+  ]
+}

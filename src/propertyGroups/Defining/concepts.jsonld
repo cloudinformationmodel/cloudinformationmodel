@@ -1,0 +1,555 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "DefiningPropertyGroup",
+  "name": "Defining Property Group",
+  "@type": "PropertyGroup",
+  "version": "0.1",
+  "propertyConcepts": [
+    {
+      "@id": "partyTypeName",
+      "@type": "Property",
+      "description": "What type of party is being defined in the system e.g. business, individual, household",
+      "name": "Party Type Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "residenceCaptureMethodName",
+      "@type": "Property",
+      "description": "How as data captured e.g. self provided or derived based on IP address",
+      "name": "Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "countryName",
+      "@type": "Property",
+      "description": "Country where phone number logically stated to belong",
+      "name": "Country Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "areaCode",
+      "@type": "Property",
+      "description": "Entered area code",
+      "name": "Area Code",
+      "range": "DataType"
+    },
+    {
+      "@id": "shortCode",
+      "@type": "Property",
+      "description": "Short digit sequence used to address messages in the Multimedia Messaging System (MMS) and short message service (SMS) systems of mobile network operators",
+      "name": "Short Code",
+      "range": "DataType"
+    },
+    {
+      "@id": "telephoneNumber",
+      "@type": "Property",
+      "description": "Entered phone number",
+      "name": "Telephone Number",
+      "range": "DataType"
+    },
+    {
+      "@id": "extensionNumber",
+      "@type": "Property",
+      "description": "Entered phone extension number",
+      "name": "Extension Number",
+      "range": "DataType"
+    },
+    {
+      "@id": "formattedInternationalPhoneNumber",
+      "@type": "Property",
+      "description": "Number formatted according to International e.g. +16 501-234-5678",
+      "name": "Formatted International Phone Number",
+      "range": "DataType"
+    },
+    {
+      "@id": "formattedE164PhoneNumber",
+      "@type": "Property",
+      "description": "Number formatted according to e164 e.g. +165012345678",
+      "name": "Formatted E164 Phone Number",
+      "range": "DataType"
+    },
+    {
+      "@id": "formattedNationalPhoneNumber",
+      "@type": "Property",
+      "description": "Number formatted according to e123 variable length national e.g. 650 123 45678",
+      "name": "Formatted National Phone Number",
+      "range": "DataType"
+    },
+    {
+      "@id": "socialNetworkProvider",
+      "@type": "Property",
+      "description": "Who is it the provider of the handle e.g Facebook, Linkedin",
+      "name": "Social Network Provider",
+      "range": "DataType"
+    },
+    {
+      "@id": "emailAddress",
+      "@type": "Property",
+      "description": "A complete email address e.g. JaneDoe@salesforce.com",
+      "name": "Email Address",
+      "range": "DataType"
+    },
+    {
+      "@id": "emailMailBox",
+      "@type": "Property",
+      "description": "Subset of an email address that represents the mail before the @ sign",
+      "name": "Email Mail Box",
+      "range": "DataType"
+    },
+    {
+      "@id": "emailDomain",
+      "@type": "Property",
+      "description": "Subset of an email address that represents the domain after then @ sign",
+      "name": "Email Domain",
+      "range": "DataType"
+    },
+    {
+      "@id": "emailLatestBounceDateTime",
+      "@type": "Property",
+      "description": "Date the latest email sent bounced back",
+      "name": "Email Latest Bounce Date Time",
+      "range": "DataType"
+    },
+    {
+      "@id": "emailLatestBounceReasonText",
+      "@type": "Property",
+      "description": "Reason the email bounced",
+      "name": "Email Latest Bounce Reason Text",
+      "range": "DataType"
+    },
+    {
+      "@id": "isUsedForShipping",
+      "@type": "Property",
+      "description": "True if the address is used for shipping purposes",
+      "name": "Is Used For Shipping",
+      "range": "DataType"
+    },
+    {
+      "@id": "isUsedForBilling",
+      "@type": "Property",
+      "description": "True if the address is used for billing purposes",
+      "name": "Is Used For Billing",
+      "range": "DataType"
+    },
+    {
+      "@id": "applicationLogin",
+      "@type": "Property",
+      "description": "The unique id to login to the application",
+      "name": "Application Login Id",
+      "range": "DataType"
+    },
+    {
+      "@id": "partyRelationshipRoleName",
+      "@type": "Property",
+      "description": "What is the role a party can play e.g. member of, head of (household)",
+      "name": "Party Relationship Role Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "departmentName",
+      "@type": "Property",
+      "description": "The department the contact works in",
+      "name": "Department Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "title",
+      "@type": "Property",
+      "description": "Title of the contact such as CEO or Vice President.",
+      "name": "Title",
+      "range": "DataType"
+    },
+    {
+      "@id": "assistantName",
+      "@type": "Property",
+      "description": "The name of the assistant.",
+      "name": "Assistant Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "assistantPhone",
+      "@type": "Property",
+      "description": "The telephone number of the assistant.",
+      "name": "Assistant Phone",
+      "range": "DataType"
+    },
+    {
+      "@id": "contactNote",
+      "@type": "Property",
+      "description": "A description of the contact",
+      "name": "Contact Note",
+      "range": "DataType"
+    },
+    {
+      "@id": "name",
+      "@type": "Property",
+      "description": "Name of the Role e.g. decision maker, influencer",
+      "name": "Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "accountContact",
+      "@type": "Property",
+      "description": "Reference to the contact playing the role",
+      "name": "Account Contact",
+      "range": "AccountContact"
+    },
+    {
+      "@id": "accountContactRoleType",
+      "@type": "Property",
+      "description": "Reference to the role played",
+      "name": "Account Contact Role Type",
+      "range": "DataType"
+    },
+    {
+      "@id": "activeFromDate",
+      "@type": "Property",
+      "description": "From when is the Contact playing the Role on the Account",
+      "name": "Active From Date",
+      "range": "DataType"
+    },
+    {
+      "@id": "activeToDate",
+      "@type": "Property",
+      "description": "From when is the Contact playing the Role on the Account ending",
+      "name": "Active To Date",
+      "range": "DataType"
+    },
+    {
+      "@id": "educationLevelName",
+      "@type": "Property",
+      "description": "What is the level of education someone have e.g. PhD, College Degree",
+      "name": "Education Level Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "customerTypeName",
+      "@type": "Property",
+      "description": "What type of customer is this e.g. High Roller, Low Value",
+      "name": "Customer Type Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "generalLedgerAccountName",
+      "@type": "Property",
+      "description": "What account is debt and credit stored against e.g. Liabilty101",
+      "name": "General Ledger Account Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "doNotProcessReasonName",
+      "@type": "Property",
+      "description": "Why no processing allowed e.g accuracy questioned, processing unlawful, legal prohibit delete, data subject objection",
+      "name": "Do Not Process Reason Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "prospectRatingName",
+      "@type": "Property",
+      "description": "The customers prospect rating, for example Hot, Warm, or Cold.",
+      "name": "Prospect Rating Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "socialNetworkProviderName",
+      "@type": "Property",
+      "description": "Who provides the service for a social persona e.g. Twitter, Facebook",
+      "name": "Prospect Rating Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "socialFanStatusName",
+      "@type": "Property",
+      "description": "What is the standing for a social person amongst fans e.g. Newbie, Mega Star",
+      "name": "Social Fan Status Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "accountBalanceUOMName",
+      "@type": "Property",
+      "description": "What is the unit of measure for current account balance e.g. money, points, miles, visits",
+      "name": "Account Balance UOM Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "billDeliveryMethodName",
+      "@type": "Property",
+      "description": "How can a bill be delivered e.g. electronic, mail",
+      "name": "Bill Delivery Method Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "freightTermsName",
+      "@type": "Property",
+      "description": "Standard freight term e.g. Free On Board Shipping Point (FOB), CIF",
+      "name": "Freight Terms Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "billingFrequencyName",
+      "@type": "Property",
+      "description": "How often to send a bill e.g. monthly, 30th of month, never",
+      "name": "Billing Frequency Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "accountHoldStatusReasonName",
+      "@type": "Property",
+      "description": "Why the account is in hold status e.g misused, legal request",
+      "name": "Account Hold Status Reason Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "sLATypeName",
+      "@type": "Property",
+      "description": "Types of Service Level Agreement e.g. 24x7, weekdays, work hours",
+      "name": "SLA Type Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "sellerTypeName",
+      "@type": "Property",
+      "description": "Is the seller e.g. reseller, distributor, wholesaler, sales partner",
+      "name": "Seller Type Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "leadRatingName",
+      "@type": "Property",
+      "description": "Rating of the lead e.g. warm, cold",
+      "name": "Lead Rating Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "leadSourceName",
+      "@type": "Property",
+      "description": "Source from which the lead was obtained e.g. sales partner Western Outfitters Inc",
+      "name": "Lead Source Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "leadStatusName",
+      "@type": "Property",
+      "description": "Status code for this converted lead e.g. open, worked, closed",
+      "name": "Lead Status Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "legalOrganizationTypeName",
+      "@type": "Property",
+      "description": "E.g. Sole proprietor, Partnership, Limited Partnership, S-Corporation",
+      "name": "Legal Organization Type Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "businessSizeTypeName",
+      "@type": "Property",
+      "description": "How big is the business e.g. small, medium, enterprise",
+      "name": "Business Size Type Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "bankruptcyTypeName",
+      "@type": "Property",
+      "description": "What type of bankruptcy the business went through e.g. chapter 7, chapter 11",
+      "name": "Bankruptcy Type Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "nAICSCodeName",
+      "@type": "Property",
+      "description": "North American Industrial Classification Codes",
+      "name": "NAICS Code Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "sICCodeName",
+      "@type": "Property",
+      "description": "4 digit Standard Industry Classification code",
+      "name": "SIC Code Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "iSICCodeName",
+      "@type": "Property",
+      "description": "United Nations International Standard Industrial Classification of All Economic Activities",
+      "name": "ISIC Code Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "businessActivityName",
+      "@type": "Property",
+      "description": "Main type of business activity a party perform e.g. farmer, sales",
+      "name": "Business Activity Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "incomeRangeName",
+      "@type": "Property",
+      "description": "What is the income range the person is part of e.g. 100 to 200 000",
+      "name": "Income Range Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "personalityTypeName",
+      "@type": "Property",
+      "description": "Personality e.g. impulsive, compulsive, authoritative, ambitious, introverted",
+      "name": "Personality Type Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "personalValueTypeName",
+      "@type": "Property",
+      "description": "Personal value e.g. family-oriented, materialistic, spiritual, idealistic, careerist",
+      "name": "Personal Value Type Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "lifeStyleTypeName",
+      "@type": "Property",
+      "description": "Life style e.g. modern, corporate, suburban, religious, workaholic, outdoors",
+      "name": "Life Style Type Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "personLifeStageName",
+      "@type": "Property",
+      "description": "E.g. newborn, infant, child, teen, adolescent, adult, mature, elderly",
+      "name": "Person Life Stage Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "lifeAttitudeTypeName",
+      "@type": "Property",
+      "description": "Life attitude e.g. innovator, believer, achiever, experience, survivor",
+      "name": "Life Attitude Type Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "dietaryHabitTypeName",
+      "@type": "Property",
+      "description": "Dietary habit e.g. kosher food eater",
+      "name": "Dietary Habit Type Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "disabilityTypeName",
+      "@type": "Property",
+      "description": "Disability or Impairment e.g. wheel chair bound",
+      "name": "Disability Type Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "heightUOMName",
+      "@type": "Property",
+      "description": "What unit of mesure is used for height e.g. inches, centimeter",
+      "name": "Height UOM Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "weightUOMName",
+      "@type": "Property",
+      "description": "What unit of measure is used for weight e.g. pound, kilogram",
+      "name": "Weight UOM Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "maritalStatusName",
+      "@type": "Property",
+      "description": "E.g. single, married, divorced, widowed, partnership, other",
+      "name": "Marital Status Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "genderName",
+      "@type": "Property",
+      "description": "Female, Male, Gender Neutral, Other",
+      "name": "Gender Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "religionName",
+      "@type": "Property",
+      "description": "Religion e.g. Islam, Samaritanism, Syncretic, Christian",
+      "name": "Religion Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "ethnicityName",
+      "@type": "Property",
+      "description": "Cultural background e.g. black, white, hispanic, asian, native american, mixed",
+      "name": "Ethnicity Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "partyIdentificationTypeName",
+      "@type": "Property",
+      "description": "The type of identification e.g driving license number, birth certificate, rewards membership",
+      "name": "Party Identification Type Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "occupationName",
+      "@type": "Property",
+      "description": "Professional, manager, tradesman, technical, military, unskilled, student, home maker, other",
+      "name": "Occupation Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "militaryStatusName",
+      "@type": "Property",
+      "description": "Unknown, no military service, vietnam veteran, other veteran, active reserve, retired, active duty",
+      "name": "Military Status Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "militaryServiceStatusName",
+      "@type": "Property",
+      "description": "E.g. Active or Retired military service status",
+      "name": "MilitaryServiceStatusName",
+      "range": "DataType"
+    },
+    {
+      "@id": "hobbyName",
+      "@type": "Property",
+      "description": "What is a hobby a person can have e.g. skiing, running, swimming",
+      "name": "Hobby Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "uncategorizedPartyCreationReasonName",
+      "@type": "Property",
+      "description": "Why can party not yet be categorized e.g. was cash buyer, got social handle only",
+      "name": "Uncategorized Party Creation Reason Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "supplierTypeName",
+      "@type": "Property",
+      "description": "Types of suppliers e.g. retailer, distributor, service partner, manufacturer",
+      "name": "Supplier Type Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "paymentTermName",
+      "@type": "Property",
+      "description": "How fast must payment be made e.g. 5% discount in 10 days, full amount in 30 days (Net30), 45 days (Net 45)",
+      "name": "Payment Term Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "id",
+      "@type": "Property",
+      "description": "Primary Key",
+      "name": "Account Type Id",
+      "range": "DataType"
+    },
+    {
+      "@id": "accountTypeName",
+      "@type": "Property",
+      "description": "What type of trade account e.g. loyalty account, business credit account, layaway, short term rental",
+      "name": "Account Type Name",
+      "range": "DataType"
+    }
+  ]
+}

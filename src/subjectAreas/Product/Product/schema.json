@@ -1,0 +1,682 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/Brand"
+    },
+    {
+      "$ref": "#/definitions/BundleProduct"
+    },
+    {
+      "$ref": "#/definitions/GoodsProduct"
+    },
+    {
+      "$ref": "#/definitions/Product"
+    },
+    {
+      "$ref": "#/definitions/ProductImage"
+    },
+    {
+      "$ref": "#/definitions/ProductImageTranslation"
+    },
+    {
+      "$ref": "#/definitions/ProductRelatedProduct"
+    },
+    {
+      "$ref": "#/definitions/ProductRelationshipType"
+    },
+    {
+      "$ref": "#/definitions/ProductTranslation"
+    },
+    {
+      "$ref": "#/definitions/ServiceProduct"
+    }
+  ],
+  "definitions": {
+    "ProductRelatedProduct": {
+      "type": "object",
+      "required": [
+        "salesOrderProduct1",
+        "id",
+        "name",
+        "parentProduct",
+        "isDefaultOption",
+        "fromDate",
+        "childProduct",
+        "productRelationshipType",
+        "salesOrderProduct2"
+      ],
+      "properties": {
+        "salesOrderProduct1": {
+          "type": "array",
+          "items": {
+            "$ref": "../../SalesOrder/SalesOrder/schema.json#/definitions/SalesOrderProduct"
+          }
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "parentProduct": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Product"
+          }
+        },
+        "isDefaultOption": {
+          "type": "boolean"
+        },
+        "fromDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "childProduct": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Product"
+          }
+        },
+        "productRelationshipType": {
+          "type": "array",
+          "items": {
+            "$ref": "../../SalesOrder/SalesOrder/schema.json#/definitions/ProductRelationshipType"
+          }
+        },
+        "toDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "salesOrderProduct2": {
+          "type": "array",
+          "items": {
+            "$ref": "../../SalesOrder/SalesOrder/schema.json#/definitions/SalesOrderProduct"
+          }
+        }
+      }
+    },
+    "ProductTranslation": {
+      "type": "object",
+      "required": [
+        "product",
+        "id",
+        "name"
+      ],
+      "properties": {
+        "longDescription": {
+          "type": "string"
+        },
+        "product": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Product"
+          }
+        },
+        "description": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "ProductImage": {
+      "type": "object",
+      "required": [
+        "product",
+        "id",
+        "isDefaultImage"
+      ],
+      "properties": {
+        "product": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Product"
+          }
+        },
+        "id": {
+          "type": "string"
+        },
+        "isDefaultImage": {
+          "type": "boolean"
+        },
+        "imageViewType": {
+          "type": "string"
+        }
+      }
+    },
+    "ProductRelationshipType": {
+      "type": "object",
+      "required": [
+        "id",
+        "parentProductRole",
+        "childProductRole"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "parentProductRole": {
+          "type": "string"
+        },
+        "childProductRole": {
+          "type": "string"
+        }
+      }
+    },
+    "ProductImageTranslation": {
+      "type": "object",
+      "required": [
+        "productImage",
+        "id",
+        "translatedName"
+      ],
+      "properties": {
+        "productImage": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ProductImage"
+          }
+        },
+        "id": {
+          "type": "string"
+        },
+        "translatedName": {
+          "type": "string"
+        }
+      }
+    },
+    "GoodsProduct": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/Product"
+        },
+        {
+          "type": "object",
+          "required": [
+            "isMadeToOrder",
+            "id",
+            "isPerishable",
+            "requiresUnitPriceLabel",
+            "productMayExpand"
+          ],
+          "properties": {
+            "productSecurityRequirement": {
+              "type": "string"
+            },
+            "season": {
+              "type": "string"
+            },
+            "color": {
+              "type": "string"
+            },
+            "style": {
+              "type": "string"
+            },
+            "isMadeToOrder": {
+              "type": "boolean"
+            },
+            "height": {
+              "type": "integer"
+            },
+            "fabric": {
+              "type": "string"
+            },
+            "requiredTemperatureUOM": {
+              "type": "string"
+            },
+            "shelfFacingUnitCount": {
+              "type": "integer"
+            },
+            "requiredHumidityPercentage": {
+              "type": "integer"
+            },
+            "id": {
+              "type": "string"
+            },
+            "grossWeight": {
+              "type": "integer"
+            },
+            "tareWeight": {
+              "type": "integer"
+            },
+            "depth": {
+              "type": "integer"
+            },
+            "requiredTemperatureLowestNumber": {
+              "type": "integer"
+            },
+            "gender": {
+              "type": "string"
+            },
+            "maxHoldingDayCount": {
+              "type": "integer"
+            },
+            "diameter": {
+              "type": "integer"
+            },
+            "isPerishable": {
+              "type": "boolean"
+            },
+            "requiredCleanupProcess": {
+              "type": "string"
+            },
+            "pattern": {
+              "type": "string"
+            },
+            "requiredTemperatureHighestNumber": {
+              "type": "integer"
+            },
+            "netWeight": {
+              "type": "integer"
+            },
+            "environmentRequirement": {
+              "type": "string"
+            },
+            "drainedWeight": {
+              "type": "integer"
+            },
+            "age": {
+              "type": "string"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "requiresUnitPriceLabel": {
+              "type": "boolean"
+            },
+            "weightUOM": {
+              "type": "string"
+            },
+            "productMayExpand": {
+              "type": "boolean"
+            },
+            "sizeUOM": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "ServiceProduct": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/Product"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id",
+            "serviceType"
+          ],
+          "properties": {
+            "rentalTermViolationPenaltyAmount": {
+              "type": "integer"
+            },
+            "evergreenContractEstimatedMonthCount": {
+              "type": "integer"
+            },
+            "id": {
+              "type": "string"
+            },
+            "evergreenContractEstimatedChargeAmount": {
+              "type": "integer"
+            },
+            "servicePeriodUOM": {
+              "type": "string"
+            },
+            "servicePeriodCount": {
+              "type": "integer"
+            },
+            "serviceProviderAccount": {
+              "type": "array",
+              "items": {
+                "$ref": "../../Party/Account/schema.json#/definitions/Account"
+              }
+            },
+            "rentalCleanupFeeAmount": {
+              "type": "integer"
+            },
+            "serviceType": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "Product": {
+      "type": "object",
+      "required": [
+        "longDescription",
+        "isBackOrdered",
+        "isWorkerDiscountAllowed",
+        "isWeightEntryRequired",
+        "isQuantityEntryRequired",
+        "isSerialized",
+        "description",
+        "id",
+        "name",
+        "isAutoProvisionable",
+        "isCouponRedemptionAllowed",
+        "isSellableIndependently",
+        "canUseRevenueSchedule",
+        "isCustomerDiscountAllowed",
+        "productStatus",
+        "isPreOrderable",
+        "requiresInvididualUnitPricing",
+        "canUseQuantitySchedule",
+        "isInstallable",
+        "isRainCheckAllowed",
+        "isMultipleCouponsAllowed",
+        "priceChargeType",
+        "isPartnerDiscountAllowed",
+        "productSKU",
+        "isManualPriceEntryRequired",
+        "isSellableWithoutPrice",
+        "isReturnable",
+        "isDynamicBundle",
+        "isQualityVerificationRequired",
+        "isFoodstampPaymentAllowed"
+      ],
+      "properties": {
+        "quantityScheduleType": {
+          "type": "string"
+        },
+        "disposalType": {
+          "type": "string"
+        },
+        "longDescription": {
+          "type": "string"
+        },
+        "primaryProductCategory": {
+          "type": "array",
+          "items": {
+            "$ref": "../ProductCatalog/schema.json#/definitions/ProductCategory"
+          }
+        },
+        "minimumAdvertisementAmount": {
+          "type": "integer"
+        },
+        "isBackOrdered": {
+          "type": "boolean"
+        },
+        "validForPeriodCount": {
+          "type": "integer"
+        },
+        "isWorkerDiscountAllowed": {
+          "type": "boolean"
+        },
+        "allowPartialRefund": {
+          "type": "boolean"
+        },
+        "isWeightEntryRequired": {
+          "type": "boolean"
+        },
+        "isQuantityEntryRequired": {
+          "type": "boolean"
+        },
+        "isSerialized": {
+          "type": "boolean"
+        },
+        "rewardProgramPointsCount": {
+          "type": "integer"
+        },
+        "description": {
+          "type": "string"
+        },
+        "revenueInstallmentPeriod": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "isAutoProvisionable": {
+          "type": "boolean"
+        },
+        "isCouponRedemptionAllowed": {
+          "type": "boolean"
+        },
+        "isSellableIndependently": {
+          "type": "boolean"
+        },
+        "canUseRevenueSchedule": {
+          "type": "boolean"
+        },
+        "manufacturerName": {
+          "type": "string"
+        },
+        "isIntellectualPropertyProtected": {
+          "type": "boolean"
+        },
+        "modelYear": {
+          "type": "integer"
+        },
+        "isCustomerDiscountAllowed": {
+          "type": "boolean"
+        },
+        "productStatus": {
+          "type": "string"
+        },
+        "brandGrade": {
+          "type": "string"
+        },
+        "quantityInstallmentCount": {
+          "type": "integer"
+        },
+        "requiredDepositAmount": {
+          "type": "integer"
+        },
+        "revenueScheduleType": {
+          "type": "string"
+        },
+        "isPreOrderable": {
+          "type": "boolean"
+        },
+        "requiresInvididualUnitPricing": {
+          "type": "boolean"
+        },
+        "standardWarrantyLengthMonth": {
+          "type": "integer"
+        },
+        "canUseQuantitySchedule": {
+          "type": "boolean"
+        },
+        "isInstallable": {
+          "type": "boolean"
+        },
+        "isRainCheckAllowed": {
+          "type": "boolean"
+        },
+        "minimumAdvertisementAmountStartDate": {
+          "type": "integer"
+        },
+        "maximumOrderQuantityCount": {
+          "type": "integer"
+        },
+        "isMultipleCouponsAllowed": {
+          "type": "boolean"
+        },
+        "allowCustomerReturn": {
+          "type": "boolean"
+        },
+        "modelNumber": {
+          "type": "string"
+        },
+        "mSRPAmount": {
+          "type": "integer"
+        },
+        "externalSourceRecord": {
+          "type": "string"
+        },
+        "masterProduct": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Product"
+          }
+        },
+        "isSellable": {
+          "type": "boolean"
+        },
+        "validToDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "priceChargeType": {
+          "type": "string"
+        },
+        "primarySalesChannel": {
+          "type": "array",
+          "items": {
+            "$ref": "../../SalesOrder/SalesOrder/schema.json#/definitions/SalesChannel"
+          }
+        },
+        "isPartnerDiscountAllowed": {
+          "type": "boolean"
+        },
+        "revenueInstallmentCount": {
+          "type": "integer"
+        },
+        "productSKU": {
+          "type": "string"
+        },
+        "quantityInstallmentPeriod": {
+          "type": "string"
+        },
+        "isManualPriceEntryRequired": {
+          "type": "boolean"
+        },
+        "type": {
+          "type": "string"
+        },
+        "isSellableWithoutPrice": {
+          "type": "boolean"
+        },
+        "glAccountCode": {
+          "type": "string"
+        },
+        "isReturnable": {
+          "type": "boolean"
+        },
+        "displayUrl": {
+          "type": "string"
+        },
+        "validForPeriodUOM": {
+          "type": "array",
+          "items": {
+            "$ref": "../ProductAttribute/schema.json#/definitions/ProductValidityTimePeriodUOM"
+          }
+        },
+        "versionNumber": {
+          "type": "string"
+        },
+        "brand": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Brand"
+          }
+        },
+        "lotIdentifier": {
+          "type": "string"
+        },
+        "validFromDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "stockLedgerValuationAmount": {
+          "type": "integer"
+        },
+        "isDynamicBundle": {
+          "type": "boolean"
+        },
+        "isQualityVerificationRequired": {
+          "type": "boolean"
+        },
+        "requiredDepositPercentage": {
+          "type": "integer"
+        },
+        "isFoodstampPaymentAllowed": {
+          "type": "boolean"
+        },
+        "minimumOrderQuantityCount": {
+          "type": "integer"
+        }
+      }
+    },
+    "Brand": {
+      "type": "object",
+      "required": [
+        "id",
+        "brandGrade",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "brandGrade": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "BundleProduct": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/Product"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id",
+            "bundledProductsSubstitutional",
+            "bundledProductsSoldTogether"
+          ],
+          "properties": {
+            "expectedWasteCount": {
+              "type": "integer"
+            },
+            "quantityCount": {
+              "type": "integer"
+            },
+            "id": {
+              "type": "string"
+            },
+            "tareWeight": {
+              "type": "integer"
+            },
+            "bundledProductsSubstitutional": {
+              "type": "boolean"
+            },
+            "bundledProductsDecidedAtUse": {
+              "type": "boolean"
+            },
+            "bundledProductsDecidesAvailability": {
+              "type": "boolean"
+            },
+            "bundledProductsSoldTogether": {
+              "type": "boolean"
+            },
+            "weightUOM": {
+              "type": "string"
+            },
+            "quantityUnitOfMeasure": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    }
+  }
+}

@@ -1,0 +1,4784 @@
+#%Dialect 1.0
+external:
+  cim: http://cloudinformationmodel.org/model/
+dialect: Cloud Information Model
+version: "0.1"
+nodeMappings:
+  SalesOrderProductNote:
+    classTerm: cim.SalesOrderProductNote
+    mapping:
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      description:
+        propertyTerm: cim.description
+        range: string
+      noteText:
+        propertyTerm: cim.noteText
+        range: string
+        mandatory: true
+  PriceAdjustmentGroup:
+    classTerm: cim.PriceAdjustmentGroup
+  PaymentTreatment:
+    classTerm: cim.PaymentTreatment
+    mapping:
+      paymentTreatmentMethod:
+        propertyTerm: cim.paymentTreatmentMethod
+        range: PaymentTreatmentMethod
+        mandatory: true
+        allowMultiple: true
+      paymentPolicy:
+        propertyTerm: cim.paymentPolicy
+        range: PaymentPolicy
+        mandatory: true
+        allowMultiple: true
+      paymentTreatmentStatus:
+        propertyTerm: cim.paymentTreatmentStatus
+        range: string
+        mandatory: true
+      paymentApplicationLevel:
+        propertyTerm: cim.paymentApplicationLevel
+        range: string
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      shouldAutoInvoice:
+        propertyTerm: cim.shouldAutoInvoice
+        range: boolean
+      paymentTreatmentName:
+        propertyTerm: cim.paymentTreatmentName
+        range: string
+  Account:
+    classTerm: cim.Account
+    mapping:
+      orderDeliveryMethod:
+        propertyTerm: cim.orderDeliveryMethod
+        range: OrderDeliveryMethod
+        allowMultiple: true
+      number:
+        propertyTerm: cim.number
+        range: string
+        mandatory: true
+      primarySalesContactPoint:
+        propertyTerm: cim.primarySalesContactPoint
+        range: ContactPoint
+        allowMultiple: true
+      generalLedgerAccount:
+        propertyTerm: cim.generalLedgerAccount
+        range: string
+      ninetyDayBalanceAmount:
+        propertyTerm: cim.ninetyDayBalanceAmount
+        range: integer
+      thirtyDayBalanceAmount:
+        propertyTerm: cim.thirtyDayBalanceAmount
+        range: integer
+      partyRole:
+        propertyTerm: cim.partyRole
+        range: string
+      billFrequency:
+        propertyTerm: cim.billFrequency
+        range: BillingFrequency
+        allowMultiple: true
+      description:
+        propertyTerm: cim.description
+        range: string
+      shippingEmail:
+        propertyTerm: cim.shippingEmail
+        range: ContactPointEmail
+        allowMultiple: true
+      sLAExpirationDate:
+        propertyTerm: cim.sLAExpirationDate
+        range: date
+      sLAType:
+        propertyTerm: cim.sLAType
+        range: string
+      shippingPhoneid:
+        propertyTerm: cim.shippingPhoneid
+        range: ContactPointPhone
+        allowMultiple: true
+      sixtyDayBalanceAmount:
+        propertyTerm: cim.sixtyDayBalanceAmount
+        range: integer
+      billDeliveryMethod:
+        propertyTerm: cim.billDeliveryMethod
+        range: string
+      useAsServiceAccount:
+        propertyTerm: cim.useAsServiceAccount
+        range: boolean
+        mandatory: true
+      useAsShippingAccount:
+        propertyTerm: cim.useAsShippingAccount
+        range: boolean
+        mandatory: true
+      faxPhone:
+        propertyTerm: cim.faxPhone
+        range: ContactPointPhone
+        allowMultiple: true
+      holdStatusReason:
+        propertyTerm: cim.holdStatusReason
+        range: string
+      balanceAmount:
+        propertyTerm: cim.balanceAmount
+        range: integer
+      shippingAddress:
+        propertyTerm: cim.shippingAddress
+        range: ContactPointAddress
+        allowMultiple: true
+      parentAccount:
+        propertyTerm: cim.parentAccount
+        range: Account
+        allowMultiple: true
+      lastActivityDate:
+        propertyTerm: cim.lastActivityDate
+        range: date
+      accountType:
+        propertyTerm: cim.accountType
+        range: string
+      billContactAddress:
+        propertyTerm: cim.billContactAddress
+        range: ContactPointAddress
+        allowMultiple: true
+      useAsSalesAccount:
+        propertyTerm: cim.useAsSalesAccount
+        range: boolean
+        mandatory: true
+      useAsBillingAccount:
+        propertyTerm: cim.useAsBillingAccount
+        range: boolean
+        mandatory: true
+      autoPaymentMethod:
+        propertyTerm: cim.autoPaymentMethod
+        range: PaymentMethod
+        allowMultiple: true
+      salesPhone:
+        propertyTerm: cim.salesPhone
+        range: ContactPointPhone
+        allowMultiple: true
+      balanceAmountLimit:
+        propertyTerm: cim.balanceAmountLimit
+        range: integer
+      autoPayEnabledFlag:
+        propertyTerm: cim.autoPayEnabledFlag
+        range: boolean
+      paymentTerm:
+        propertyTerm: cim.paymentTerm
+        range: string
+        mandatory: true
+      shippingContact:
+        propertyTerm: cim.shippingContact
+        range: AccountContact
+        allowMultiple: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      party:
+        propertyTerm: cim.party
+        range: Party
+        allowMultiple: true
+      assignTerritoryFlag:
+        propertyTerm: cim.assignTerritoryFlag
+        range: boolean
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      defaultFreightTerms:
+        propertyTerm: cim.defaultFreightTerms
+        range: string
+      autoPaymentAmount:
+        propertyTerm: cim.autoPaymentAmount
+        range: integer
+  PaymentGatewayInteractionType:
+    classTerm: cim.PaymentGatewayInteractionType
+    mapping:
+      description:
+        propertyTerm: cim.description
+        range: string
+        mandatory: true
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+  PersonLifeEvent:
+    classTerm: cim.PersonLifeEvent
+    mapping:
+      personLifeEventType:
+        propertyTerm: cim.personLifeEventType
+        range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      individual:
+        propertyTerm: cim.individual
+        range: Individual
+        mandatory: true
+        allowMultiple: true
+      personLifeEventDateTime:
+        propertyTerm: cim.personLifeEventDateTime
+        range: time
+        mandatory: true
+  PersonEmployment:
+    classTerm: cim.PersonEmployment
+    mapping:
+      occupationText:
+        propertyTerm: cim.occupationText
+        range: string
+        mandatory: true
+      employerContactPointAddress:
+        propertyTerm: cim.employerContactPointAddress
+        range: ContactPointAddress
+        allowMultiple: true
+      positionText:
+        propertyTerm: cim.positionText
+        range: string
+        mandatory: true
+      employerName:
+        propertyTerm: cim.employerName
+        range: string
+        mandatory: true
+      startDate:
+        propertyTerm: cim.startDate
+        range: date
+        mandatory: true
+      individual:
+        propertyTerm: cim.individual
+        range: Individual
+        mandatory: true
+        allowMultiple: true
+      endDate:
+        propertyTerm: cim.endDate
+        range: date
+        mandatory: true
+      employerAddressLine2:
+        propertyTerm: cim.employerAddressLine2
+        range: string
+      employerCityName:
+        propertyTerm: cim.employerCityName
+        range: string
+      employerPostalCodeText:
+        propertyTerm: cim.employerPostalCodeText
+        range: string
+      employerAddressLine3:
+        propertyTerm: cim.employerAddressLine3
+        range: string
+      employerPhoneNumber:
+        propertyTerm: cim.employerPhoneNumber
+        range: string
+        mandatory: true
+      employerAddressLine1:
+        propertyTerm: cim.employerAddressLine1
+        range: string
+        mandatory: true
+      annualIncome:
+        propertyTerm: cim.annualIncome
+        range: integer
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      employerAddressLine4:
+        propertyTerm: cim.employerAddressLine4
+        range: string
+      employmentStatus:
+        propertyTerm: cim.employmentStatus
+        range: string
+        mandatory: true
+  ProductRelationshipType:
+    classTerm: cim.ProductRelationshipType
+    mapping:
+      parentProductRole:
+        propertyTerm: cim.parentProductRole
+        range: string
+        mandatory: true
+      childProductRole:
+        propertyTerm: cim.childProductRole
+        range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      parentProductRole:
+        propertyTerm: cim.parentProductRole
+        range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      childProductRole:
+        propertyTerm: cim.childProductRole
+        range: string
+        mandatory: true
+  PaymentMethod:
+    classTerm: cim.PaymentMethod
+    mapping:
+      paymentMethodType:
+        propertyTerm: cim.paymentMethodType
+        range: PaymentMethodType
+        mandatory: true
+        allowMultiple: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      paymentMethodStatus:
+        propertyTerm: cim.paymentMethodStatus
+        range: string
+        mandatory: true
+  ShipmentStatus:
+    classTerm: cim.ShipmentStatus
+    mapping:
+      description:
+        propertyTerm: cim.description
+        range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+  AccountContact:
+    classTerm: cim.AccountContact
+    mapping:
+      mobilePhone:
+        propertyTerm: cim.mobilePhone
+        range: ContactPointPhone
+        allowMultiple: true
+      otherContactAddress:
+        propertyTerm: cim.otherContactAddress
+        range: ContactPointAddress
+        allowMultiple: true
+      homePhone:
+        propertyTerm: cim.homePhone
+        range: ContactPointPhone
+        allowMultiple: true
+      faxPhone:
+        propertyTerm: cim.faxPhone
+        range: ContactPointPhone
+        allowMultiple: true
+      mailingAddress:
+        propertyTerm: cim.mailingAddress
+        range: ContactPointAddress
+        allowMultiple: true
+      lastActivityDate:
+        propertyTerm: cim.lastActivityDate
+        range: date
+      assistantPhone:
+        propertyTerm: cim.assistantPhone
+        range: string
+      departmentName:
+        propertyTerm: cim.departmentName
+        range: string
+      indirectRelationAccountContact:
+        propertyTerm: cim.indirectRelationAccountContact
+        range: AccountContact
+        allowMultiple: true
+      individual:
+        propertyTerm: cim.individual
+        range: Individual
+        mandatory: true
+        allowMultiple: true
+      contactEmail:
+        propertyTerm: cim.contactEmail
+        range: ContactPointEmail
+        allowMultiple: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      contactNote:
+        propertyTerm: cim.contactNote
+        range: string
+      reportsToAccountContact:
+        propertyTerm: cim.reportsToAccountContact
+        range: AccountContact
+        allowMultiple: true
+      businessPhone:
+        propertyTerm: cim.businessPhone
+        range: ContactPointPhone
+        allowMultiple: true
+      account:
+        propertyTerm: cim.account
+        range: Account
+        mandatory: true
+        allowMultiple: true
+      assistantName:
+        propertyTerm: cim.assistantName
+        range: string
+      title:
+        propertyTerm: cim.title
+        range: string
+  AttributeValueTranslation:
+    classTerm: cim.AttributeValueTranslation
+    mapping:
+      translatedAttributeValue:
+        propertyTerm: cim.translatedAttributeValue
+        range: string
+        mandatory: true
+      attributeValue:
+        propertyTerm: cim.attributeValue
+        range: AttributeValue
+        mandatory: true
+        allowMultiple: true
+      translatedAttributeValueDescription:
+        propertyTerm: cim.translatedAttributeValueDescription
+        range: string
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+  CustomerStatusHistory:
+    classTerm: cim.CustomerStatusHistory
+    mapping:
+      startDateTime:
+        propertyTerm: cim.startDateTime
+        range: time
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      partyRoleStatus:
+        propertyTerm: cim.partyRoleStatus
+        range: string
+        mandatory: true
+      endDateTIme:
+        propertyTerm: cim.endDateTIme
+        range: time
+        mandatory: true
+      partyRole:
+        propertyTerm: cim.partyRole
+        range: string
+        mandatory: true
+  PaymentGatewayAuthorizationLog:
+    classTerm: cim.PaymentGatewayAuthorizationLog
+    mapping:
+      paymentAuthorization:
+        propertyTerm: cim.paymentAuthorization
+        range: PaymentAuthorization
+        mandatory: true
+        allowMultiple: true
+      name:
+        propertyTerm: cim.name
+        range: string
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+    extends: PaymentGatewayInteractionLog
+  Competitor:
+    classTerm: cim.Competitor
+    mapping:
+      competitorToDate:
+        propertyTerm: cim.competitorToDate
+        range: date
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      cashFlowGrowth:
+        propertyTerm: cim.cashFlowGrowth
+        range: integer
+      pressMentionsRate:
+        propertyTerm: cim.pressMentionsRate
+        range: integer
+      assetTurnoverRatio:
+        propertyTerm: cim.assetTurnoverRatio
+        range: integer
+      currentRatio:
+        propertyTerm: cim.currentRatio
+        range: integer
+      competitorFromDate:
+        propertyTerm: cim.competitorFromDate
+        range: date
+        mandatory: true
+      ptoENumber:
+        propertyTerm: cim.ptoENumber
+        range: integer
+      assetReturnRatio:
+        propertyTerm: cim.assetReturnRatio
+        range: integer
+      adKeywords:
+        propertyTerm: cim.adKeywords
+        range: string
+      competitorThreats:
+        propertyTerm: cim.competitorThreats
+        range: string
+      competitorObjectives:
+        propertyTerm: cim.competitorObjectives
+        range: string
+      competitorWeaknesses:
+        propertyTerm: cim.competitorWeaknesses
+        range: string
+      competitorStrengths:
+        propertyTerm: cim.competitorStrengths
+        range: string
+      adReachRate:
+        propertyTerm: cim.adReachRate
+        range: integer
+      socialMediaPostRate:
+        propertyTerm: cim.socialMediaPostRate
+        range: integer
+      competitorLeverageOpportunities:
+        propertyTerm: cim.competitorLeverageOpportunities
+        range: string
+      netProfitMargin:
+        propertyTerm: cim.netProfitMargin
+        range: integer
+    extends: PartyRole
+  CapturePayment:
+    classTerm: cim.CapturePayment
+    mapping:
+      isFinalCapture:
+        propertyTerm: cim.isFinalCapture
+        range: boolean
+      handlingFeeAmount:
+        propertyTerm: cim.handlingFeeAmount
+        range: integer
+      name:
+        propertyTerm: cim.name
+        range: string
+      capturePaymentType:
+        propertyTerm: cim.capturePaymentType
+        range: string
+        mandatory: true
+      paymentAuthorization:
+        propertyTerm: cim.paymentAuthorization
+        range: PaymentAuthorization
+        mandatory: true
+        allowMultiple: true
+      id:
+        propertyTerm: cim.id
+        range: string
+        mandatory: true
+    extends: Payment
+  ContactPointApp:
+    classTerm: cim.ContactPointApp
+    mapping:
+      applicationLogin:
+        propertyTerm: cim.applicationLogin
+        range: string
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+    extends: ContactPoint
+  PriceBookEntry:
+    classTerm: cim.PriceBookEntry
+    mapping:
+      useStandardPrice:
+        propertyTerm: cim.useStandardPrice
+        range: boolean
+      unitListPrice:
+        propertyTerm: cim.unitListPrice
+        range: integer
+      servicePeriodCount:
+        propertyTerm: cim.servicePeriodCount
+        range: integer
+      isActive:
+        propertyTerm: cim.isActive
+        range: boolean
+      product:
+        propertyTerm: cim.product
+        range: Product
+        allowMultiple: true
+      minRequiredOrderValue:
+        propertyTerm: cim.minRequiredOrderValue
+        range: integer
+      minRequiredQuantity:
+        propertyTerm: cim.minRequiredQuantity
+        range: integer
+      maxRequiredOrderValue:
+        propertyTerm: cim.maxRequiredOrderValue
+        range: integer
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+  UncategorizedParty:
+    classTerm: cim.UncategorizedParty
+    mapping:
+      creationReason:
+        propertyTerm: cim.creationReason
+        range: string
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      originalSourceSystem:
+        propertyTerm: cim.originalSourceSystem
+        range: string
+      uncategorizedPartyLabel:
+        propertyTerm: cim.uncategorizedPartyLabel
+        range: string
+        mandatory: true
+      originalSourceRecord:
+        propertyTerm: cim.originalSourceRecord
+        range: string
+    extends: Party
+  GoodsProduct:
+    classTerm: cim.GoodsProduct
+    mapping:
+      gender:
+        propertyTerm: cim.gender
+        range: string
+      requiredTemperatureLowestNumber:
+        propertyTerm: cim.requiredTemperatureLowestNumber
+        range: integer
+      requiredHumidityPercentage:
+        propertyTerm: cim.requiredHumidityPercentage
+        range: integer
+      diameter:
+        propertyTerm: cim.diameter
+        range: integer
+      productMayExpand:
+        propertyTerm: cim.productMayExpand
+        range: boolean
+        mandatory: true
+      requiredCleanupProcess:
+        propertyTerm: cim.requiredCleanupProcess
+        range: string
+      tareWeight:
+        propertyTerm: cim.tareWeight
+        range: integer
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      color:
+        propertyTerm: cim.color
+        range: string
+      width:
+        propertyTerm: cim.width
+        range: integer
+      requiredTemperatureUOM:
+        propertyTerm: cim.requiredTemperatureUOM
+        range: string
+      sizeUOM:
+        propertyTerm: cim.sizeUOM
+        range: string
+      netWeight:
+        propertyTerm: cim.netWeight
+        range: integer
+      fabric:
+        propertyTerm: cim.fabric
+        range: string
+      season:
+        propertyTerm: cim.season
+        range: string
+      shelfFacingUnitCount:
+        propertyTerm: cim.shelfFacingUnitCount
+        range: integer
+      weightUOM:
+        propertyTerm: cim.weightUOM
+        range: string
+      isMadeToOrder:
+        propertyTerm: cim.isMadeToOrder
+        range: boolean
+        mandatory: true
+      productSecurityRequirement:
+        propertyTerm: cim.productSecurityRequirement
+        range: string
+      requiresUnitPriceLabel:
+        propertyTerm: cim.requiresUnitPriceLabel
+        range: boolean
+        mandatory: true
+      requiredTemperatureHighestNumber:
+        propertyTerm: cim.requiredTemperatureHighestNumber
+        range: integer
+      maxHoldingDayCount:
+        propertyTerm: cim.maxHoldingDayCount
+        range: integer
+      pattern:
+        propertyTerm: cim.pattern
+        range: string
+      age:
+        propertyTerm: cim.age
+        range: string
+      style:
+        propertyTerm: cim.style
+        range: string
+      drainedWeight:
+        propertyTerm: cim.drainedWeight
+        range: integer
+      height:
+        propertyTerm: cim.height
+        range: integer
+      grossWeight:
+        propertyTerm: cim.grossWeight
+        range: integer
+      isPerishable:
+        propertyTerm: cim.isPerishable
+        range: boolean
+        mandatory: true
+      depth:
+        propertyTerm: cim.depth
+        range: integer
+      environmentRequirement:
+        propertyTerm: cim.environmentRequirement
+        range: string
+    extends: Product
+  ShippingMethod:
+    classTerm: cim.ShippingMethod
+    mapping:
+      description:
+        propertyTerm: cim.description
+        range: string
+        mandatory: true
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      product:
+        propertyTerm: cim.product
+        range: Product
+        mandatory: true
+        allowMultiple: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+  PaymentGroup:
+    classTerm: cim.PaymentGroup
+    mapping:
+      totalReversalAmount:
+        propertyTerm: cim.totalReversalAmount
+        range: integer
+        mandatory: true
+      totalPaymentAmount:
+        propertyTerm: cim.totalPaymentAmount
+        range: integer
+        mandatory: true
+      paymentGroupNumber:
+        propertyTerm: cim.paymentGroupNumber
+        range: string
+        mandatory: true
+      totalAuthorizationAmount:
+        propertyTerm: cim.totalAuthorizationAmount
+        range: integer
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+  RefundPayment:
+    classTerm: cim.RefundPayment
+    mapping:
+      externalCreatedDate:
+        propertyTerm: cim.externalCreatedDate
+        range: date
+        mandatory: true
+      name:
+        propertyTerm: cim.name
+        range: string
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+    extends: Payment
+  SalesOrderPriceAdjustment:
+    classTerm: cim.SalesOrderPriceAdjustment
+    mapping:
+      totalAdjustmentTaxAmount:
+        propertyTerm: cim.totalAdjustmentTaxAmount
+        range: integer
+      salesOrder:
+        propertyTerm: cim.salesOrder
+        range: SalesOrder
+        mandatory: true
+        allowMultiple: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+    extends: PriceAdjustmentGroup
+  ServiceProduct:
+    classTerm: cim.ServiceProduct
+    mapping:
+      serviceProviderAccount:
+        propertyTerm: cim.serviceProviderAccount
+        range: Account
+        allowMultiple: true
+      servicePeriodCount:
+        propertyTerm: cim.servicePeriodCount
+        range: integer
+      serviceType:
+        propertyTerm: cim.serviceType
+        range: string
+        mandatory: true
+      evergreenContractEstimatedChargeAmount:
+        propertyTerm: cim.evergreenContractEstimatedChargeAmount
+        range: integer
+      evergreenContractEstimatedMonthCount:
+        propertyTerm: cim.evergreenContractEstimatedMonthCount
+        range: integer
+      rentalCleanupFeeAmount:
+        propertyTerm: cim.rentalCleanupFeeAmount
+        range: integer
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      rentalTermViolationPenaltyAmount:
+        propertyTerm: cim.rentalTermViolationPenaltyAmount
+        range: integer
+      servicePeriodUOM:
+        propertyTerm: cim.servicePeriodUOM
+        range: string
+    extends: Product
+  Household:
+    classTerm: cim.Household
+    mapping:
+      householdDissolvedDate:
+        propertyTerm: cim.householdDissolvedDate
+        range: date
+      householdFormedDate:
+        propertyTerm: cim.householdFormedDate
+        range: date
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      householdMemberCount:
+        propertyTerm: cim.householdMemberCount
+        range: integer
+    extends: Party
+  PaymentCreditMemoAllocation:
+    classTerm: cim.PaymentCreditMemoAllocation
+    mapping:
+      name:
+        propertyTerm: cim.name
+        range: string
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      appliedAmount:
+        propertyTerm: cim.appliedAmount
+        range: integer
+        mandatory: true
+    extends: PaymentAllocation
+  Supplier:
+    classTerm: cim.Supplier
+    mapping:
+      supplierSpend:
+        propertyTerm: cim.supplierSpend
+        range: integer
+      contractDeliveryCorrectnessRate:
+        propertyTerm: cim.contractDeliveryCorrectnessRate
+        range: integer
+      satisfactionEthicsRank:
+        propertyTerm: cim.satisfactionEthicsRank
+        range: integer
+      activeToDate:
+        propertyTerm: cim.activeToDate
+        range: date
+      competitiveProductPriceRank:
+        propertyTerm: cim.competitiveProductPriceRank
+        range: integer
+      contractWeightScore:
+        propertyTerm: cim.contractWeightScore
+        range: integer
+      contractProductReturnRate:
+        propertyTerm: cim.contractProductReturnRate
+        range: integer
+      satisfactionWeightPercent:
+        propertyTerm: cim.satisfactionWeightPercent
+        range: integer
+      competitiveMarketingRank:
+        propertyTerm: cim.competitiveMarketingRank
+        range: integer
+      contractProductQualityRate:
+        propertyTerm: cim.contractProductQualityRate
+        range: integer
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      contractSLAIssueRate:
+        propertyTerm: cim.contractSLAIssueRate
+        range: integer
+      contractInvoiceAccuracyRate:
+        propertyTerm: cim.contractInvoiceAccuracyRate
+        range: integer
+      supplierScore:
+        propertyTerm: cim.supplierScore
+        range: integer
+      satisfactionCustomerServiceRank:
+        propertyTerm: cim.satisfactionCustomerServiceRank
+        range: integer
+      contractSourcingCycleDays:
+        propertyTerm: cim.contractSourcingCycleDays
+        range: integer
+      contractBudgetCostRate:
+        propertyTerm: cim.contractBudgetCostRate
+        range: integer
+      competitiveWarrantyRank:
+        propertyTerm: cim.competitiveWarrantyRank
+        range: integer
+      satisfactionWeightScore:
+        propertyTerm: cim.satisfactionWeightScore
+        range: integer
+      competitiveWeightScore:
+        propertyTerm: cim.competitiveWeightScore
+        range: integer
+      satisfactionTechnicalSupportRank:
+        propertyTerm: cim.satisfactionTechnicalSupportRank
+        range: integer
+      activeFromDate:
+        propertyTerm: cim.activeFromDate
+        range: date
+        mandatory: true
+      isCarrier:
+        propertyTerm: cim.isCarrier
+        range: boolean
+      competitiveWeightPercent:
+        propertyTerm: cim.competitiveWeightPercent
+        range: integer
+      contractWeightPercent:
+        propertyTerm: cim.contractWeightPercent
+        range: integer
+      contractOnTimeDeliveryRate:
+        propertyTerm: cim.contractOnTimeDeliveryRate
+        range: integer
+      supplierType:
+        propertyTerm: cim.supplierType
+        range: string
+      competitiveCostAvoidanceRank:
+        propertyTerm: cim.competitiveCostAvoidanceRank
+        range: integer
+    extends: PartyRole
+  CreditTender:
+    classTerm: cim.CreditTender
+    mapping:
+      account:
+        propertyTerm: cim.account
+        range: Account
+        allowMultiple: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+    extends: PaymentMethod
+  PaymentGateway:
+    classTerm: cim.PaymentGateway
+    mapping:
+      paymentGatewayProvider:
+        propertyTerm: cim.paymentGatewayProvider
+        range: PaymentGatewayProvider
+        mandatory: true
+        allowMultiple: true
+      paymentGatewayStatus:
+        propertyTerm: cim.paymentGatewayStatus
+        range: string
+        mandatory: true
+      paymentGatewayCommentText:
+        propertyTerm: cim.paymentGatewayCommentText
+        range: string
+      systemCredential:
+        propertyTerm: cim.systemCredential
+        range: string
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+  DeviceUserSession:
+    classTerm: cim.DeviceUserSession
+    mapping:
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+  RefundAllocation:
+    classTerm: cim.RefundAllocation
+    mapping:
+      refundBalanceAmount:
+        propertyTerm: cim.refundBalanceAmount
+        range: integer
+        mandatory: true
+      refundAllocationType:
+        propertyTerm: cim.refundAllocationType
+        range: string
+        mandatory: true
+      hasBeenUnapplied:
+        propertyTerm: cim.hasBeenUnapplied
+        range: boolean
+      unappliedDate:
+        propertyTerm: cim.unappliedDate
+        range: date
+        mandatory: true
+      effectiveDate:
+        propertyTerm: cim.effectiveDate
+        range: date
+        mandatory: true
+      refundAllocationName:
+        propertyTerm: cim.refundAllocationName
+        range: string
+      externalCreatedDate:
+        propertyTerm: cim.externalCreatedDate
+        range: date
+        mandatory: true
+      refundPayment:
+        propertyTerm: cim.refundPayment
+        range: RefundPayment
+        mandatory: true
+        allowMultiple: true
+      relatedRefundAllocation:
+        propertyTerm: cim.relatedRefundAllocation
+        range: RefundAllocation
+        mandatory: true
+        allowMultiple: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      allocatedAmount:
+        propertyTerm: cim.allocatedAmount
+        range: integer
+        mandatory: true
+      appliedDate:
+        propertyTerm: cim.appliedDate
+        range: date
+        mandatory: true
+  SalesOrderProductGroup:
+    classTerm: cim.SalesOrderProductGroup
+    mapping:
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      description:
+        propertyTerm: cim.description
+        range: string
+        mandatory: true
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      salesOrderProductGroupType:
+        propertyTerm: cim.salesOrderProductGroupType
+        range: string
+        mandatory: true
+  Product:
+    classTerm: cim.Product
+    mapping:
+      isQuantityEntryRequired:
+        propertyTerm: cim.isQuantityEntryRequired
+        range: boolean
+        mandatory: true
+      primarySalesChannel:
+        propertyTerm: cim.primarySalesChannel
+        range: SalesChannel
+        allowMultiple: true
+      primaryProductCategory:
+        propertyTerm: cim.primaryProductCategory
+        range: ProductCategory
+        allowMultiple: true
+      requiresInvididualUnitPricing:
+        propertyTerm: cim.requiresInvididualUnitPricing
+        range: boolean
+        mandatory: true
+      quantityScheduleType:
+        propertyTerm: cim.quantityScheduleType
+        range: string
+      isWeightEntryRequired:
+        propertyTerm: cim.isWeightEntryRequired
+        range: boolean
+        mandatory: true
+      isMultipleCouponsAllowed:
+        propertyTerm: cim.isMultipleCouponsAllowed
+        range: boolean
+        mandatory: true
+      quantityInstallmentCount:
+        propertyTerm: cim.quantityInstallmentCount
+        range: integer
+      isManualPriceEntryRequired:
+        propertyTerm: cim.isManualPriceEntryRequired
+        range: boolean
+        mandatory: true
+      isIntellectualPropertyProtected:
+        propertyTerm: cim.isIntellectualPropertyProtected
+        range: boolean
+      brandGrade:
+        propertyTerm: cim.brandGrade
+        range: string
+      standardWarrantyLengthMonth:
+        propertyTerm: cim.standardWarrantyLengthMonth
+        range: integer
+      validForPeriodUOM:
+        propertyTerm: cim.validForPeriodUOM
+        range: ProductValidityTimePeriodUOM
+        allowMultiple: true
+      isRainCheckAllowed:
+        propertyTerm: cim.isRainCheckAllowed
+        range: boolean
+        mandatory: true
+      priceChargeType:
+        propertyTerm: cim.priceChargeType
+        range: string
+        mandatory: true
+      revenueInstallmentCount:
+        propertyTerm: cim.revenueInstallmentCount
+        range: integer
+      mSRPAmount:
+        propertyTerm: cim.mSRPAmount
+        range: integer
+      allowPartialRefund:
+        propertyTerm: cim.allowPartialRefund
+        range: boolean
+      requiredDepositAmount:
+        propertyTerm: cim.requiredDepositAmount
+        range: integer
+      type:
+        propertyTerm: cim.type
+        range: string
+      modelYear:
+        propertyTerm: cim.modelYear
+        range: integer
+      modelNumber:
+        propertyTerm: cim.modelNumber
+        range: string
+      isPartnerDiscountAllowed:
+        propertyTerm: cim.isPartnerDiscountAllowed
+        range: boolean
+        mandatory: true
+      glAccountCode:
+        propertyTerm: cim.glAccountCode
+        range: string
+      isInstallable:
+        propertyTerm: cim.isInstallable
+        range: boolean
+        mandatory: true
+      externalSourceRecord:
+        propertyTerm: cim.externalSourceRecord
+        range: string
+      maximumOrderQuantityCount:
+        propertyTerm: cim.maximumOrderQuantityCount
+        range: integer
+      minimumAdvertisementAmountStartDate:
+        propertyTerm: cim.minimumAdvertisementAmountStartDate
+        range: integer
+      description:
+        propertyTerm: cim.description
+        range: string
+        mandatory: true
+      productStatus:
+        propertyTerm: cim.productStatus
+        range: string
+        mandatory: true
+      canUseRevenueSchedule:
+        propertyTerm: cim.canUseRevenueSchedule
+        range: boolean
+        mandatory: true
+      isReturnable:
+        propertyTerm: cim.isReturnable
+        range: boolean
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      revenueScheduleType:
+        propertyTerm: cim.revenueScheduleType
+        range: string
+      lotIdentifier:
+        propertyTerm: cim.lotIdentifier
+        range: string
+      brand:
+        propertyTerm: cim.brand
+        range: Brand
+        allowMultiple: true
+      displayUrl:
+        propertyTerm: cim.displayUrl
+        range: string
+      manufacturerName:
+        propertyTerm: cim.manufacturerName
+        range: string
+      revenueInstallmentPeriod:
+        propertyTerm: cim.revenueInstallmentPeriod
+        range: string
+      rewardProgramPointsCount:
+        propertyTerm: cim.rewardProgramPointsCount
+        range: integer
+      isAutoProvisionable:
+        propertyTerm: cim.isAutoProvisionable
+        range: boolean
+        mandatory: true
+      validToDate:
+        propertyTerm: cim.validToDate
+        range: date
+      isPreOrderable:
+        propertyTerm: cim.isPreOrderable
+        range: boolean
+        mandatory: true
+      validForPeriodCount:
+        propertyTerm: cim.validForPeriodCount
+        range: integer
+      productSKU:
+        propertyTerm: cim.productSKU
+        range: string
+        mandatory: true
+      isDynamicBundle:
+        propertyTerm: cim.isDynamicBundle
+        range: boolean
+        mandatory: true
+      isQualityVerificationRequired:
+        propertyTerm: cim.isQualityVerificationRequired
+        range: boolean
+        mandatory: true
+      isSellableWithoutPrice:
+        propertyTerm: cim.isSellableWithoutPrice
+        range: boolean
+        mandatory: true
+      minimumAdvertisementAmount:
+        propertyTerm: cim.minimumAdvertisementAmount
+        range: integer
+      isSellableIndependently:
+        propertyTerm: cim.isSellableIndependently
+        range: boolean
+        mandatory: true
+      allowCustomerReturn:
+        propertyTerm: cim.allowCustomerReturn
+        range: boolean
+      isBackOrdered:
+        propertyTerm: cim.isBackOrdered
+        range: boolean
+        mandatory: true
+      isCouponRedemptionAllowed:
+        propertyTerm: cim.isCouponRedemptionAllowed
+        range: boolean
+        mandatory: true
+      isWorkerDiscountAllowed:
+        propertyTerm: cim.isWorkerDiscountAllowed
+        range: boolean
+        mandatory: true
+      canUseQuantitySchedule:
+        propertyTerm: cim.canUseQuantitySchedule
+        range: boolean
+        mandatory: true
+      isSellable:
+        propertyTerm: cim.isSellable
+        range: boolean
+      stockLedgerValuationAmount:
+        propertyTerm: cim.stockLedgerValuationAmount
+        range: integer
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      validFromDate:
+        propertyTerm: cim.validFromDate
+        range: date
+      isFoodstampPaymentAllowed:
+        propertyTerm: cim.isFoodstampPaymentAllowed
+        range: boolean
+        mandatory: true
+      quantityInstallmentPeriod:
+        propertyTerm: cim.quantityInstallmentPeriod
+        range: string
+      isCustomerDiscountAllowed:
+        propertyTerm: cim.isCustomerDiscountAllowed
+        range: boolean
+        mandatory: true
+      isSerialized:
+        propertyTerm: cim.isSerialized
+        range: boolean
+        mandatory: true
+      longDescription:
+        propertyTerm: cim.longDescription
+        range: string
+        mandatory: true
+      versionNumber:
+        propertyTerm: cim.versionNumber
+        range: string
+      minimumOrderQuantityCount:
+        propertyTerm: cim.minimumOrderQuantityCount
+        range: integer
+      masterProduct:
+        propertyTerm: cim.masterProduct
+        range: Product
+        allowMultiple: true
+      requiredDepositPercentage:
+        propertyTerm: cim.requiredDepositPercentage
+        range: integer
+      disposalType:
+        propertyTerm: cim.disposalType
+        range: string
+  ProductImageTranslation:
+    classTerm: cim.ProductImageTranslation
+    mapping:
+      productImage:
+        propertyTerm: cim.productImage
+        range: ProductImage
+        mandatory: true
+        allowMultiple: true
+      translatedName:
+        propertyTerm: cim.translatedName
+        range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+  PartyAdditionalName:
+    classTerm: cim.PartyAdditionalName
+    mapping:
+      additionalNameType:
+        propertyTerm: cim.additionalNameType
+        range: string
+        mandatory: true
+      party:
+        propertyTerm: cim.party
+        range: Party
+        mandatory: true
+        allowMultiple: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+  PersonLanguage:
+    classTerm: cim.PersonLanguage
+    mapping:
+      spokenProficiencyLevel:
+        propertyTerm: cim.spokenProficiencyLevel
+        range: string
+      writtenProficiencyLevel:
+        propertyTerm: cim.writtenProficiencyLevel
+        range: string
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      individual:
+        propertyTerm: cim.individual
+        range: Individual
+        mandatory: true
+        allowMultiple: true
+  Customer:
+    classTerm: cim.Customer
+    mapping:
+      churnScore:
+        propertyTerm: cim.churnScore
+        range: integer
+      customerSatisfactionScore:
+        propertyTerm: cim.customerSatisfactionScore
+        range: integer
+      totalProfitContributionAmount:
+        propertyTerm: cim.totalProfitContributionAmount
+        range: integer
+      totalBookingsAmount:
+        propertyTerm: cim.totalBookingsAmount
+        range: integer
+      last12MonthsSupportCallCount:
+        propertyTerm: cim.last12MonthsSupportCallCount
+        range: integer
+      customerStatus:
+        propertyTerm: cim.customerStatus
+        range: string
+        mandatory: true
+      totalLifeTimeValue:
+        propertyTerm: cim.totalLifeTimeValue
+        range: integer
+      marketingEmailResponseRate:
+        propertyTerm: cim.marketingEmailResponseRate
+        range: integer
+      prospectRating:
+        propertyTerm: cim.prospectRating
+        range: string
+      totalContractedAmount:
+        propertyTerm: cim.totalContractedAmount
+        range: integer
+      customerNumber:
+        propertyTerm: cim.customerNumber
+        range: string
+      netPromoterScore:
+        propertyTerm: cim.netPromoterScore
+        range: integer
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      last24MonthsNewRevenueAmount:
+        propertyTerm: cim.last24MonthsNewRevenueAmount
+        range: integer
+      originatingCustomerSource:
+        propertyTerm: cim.originatingCustomerSource
+        range: string
+      last12MonthsNewRevenueAmount:
+        propertyTerm: cim.last12MonthsNewRevenueAmount
+        range: integer
+    extends: PartyRole
+  AccountContactRole:
+    classTerm: cim.AccountContactRole
+    mapping:
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      accountContact:
+        propertyTerm: cim.accountContact
+        range: AccountContact
+        allowMultiple: true
+      activeToDate:
+        propertyTerm: cim.activeToDate
+        range: date
+      accountContactRoleType:
+        propertyTerm: cim.accountContactRoleType
+        range: string
+      activeFromDate:
+        propertyTerm: cim.activeFromDate
+        range: date
+  PersonEducation:
+    classTerm: cim.PersonEducation
+    mapping:
+      institutionName:
+        propertyTerm: cim.institutionName
+        range: string
+        mandatory: true
+      educationLevel:
+        propertyTerm: cim.educationLevel
+        range: string
+        mandatory: true
+      individual:
+        propertyTerm: cim.individual
+        range: Individual
+        mandatory: true
+        allowMultiple: true
+      educationName:
+        propertyTerm: cim.educationName
+        range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      graduationDate:
+        propertyTerm: cim.graduationDate
+        range: date
+        mandatory: true
+  AttributeTranslation:
+    classTerm: cim.AttributeTranslation
+    mapping:
+      translatedName:
+        propertyTerm: cim.translatedName
+        range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+  PartyIdentification:
+    classTerm: cim.PartyIdentification
+    mapping:
+      issuedDate:
+        propertyTerm: cim.issuedDate
+        range: date
+      verifiedDate:
+        propertyTerm: cim.verifiedDate
+        range: date
+      party:
+        propertyTerm: cim.party
+        range: Party
+        mandatory: true
+        allowMultiple: true
+      identificationNumber:
+        propertyTerm: cim.identificationNumber
+        range: string
+        mandatory: true
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      partyIdentificationType:
+        propertyTerm: cim.partyIdentificationType
+        range: string
+        mandatory: true
+      partyRole:
+        propertyTerm: cim.partyRole
+        range: string
+      expiryDate:
+        propertyTerm: cim.expiryDate
+        range: date
+      issuedAtLocation:
+        propertyTerm: cim.issuedAtLocation
+        range: string
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      issuedByAuthority:
+        propertyTerm: cim.issuedByAuthority
+        range: string
+  ProductValidityTimePeriodUOM:
+    classTerm: cim.ProductValidityTimePeriodUOM
+    mapping:
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      pluralName:
+        propertyTerm: cim.pluralName
+        range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+  PartyRelationshipType:
+    classTerm: cim.PartyRelationshipType
+    mapping:
+      isBidirectional:
+        propertyTerm: cim.isBidirectional
+        range: boolean
+        mandatory: true
+      relatedPartyRole:
+        propertyTerm: cim.relatedPartyRole
+        range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      partyRole:
+        propertyTerm: cim.partyRole
+        range: string
+        mandatory: true
+  ShipmentPackage:
+    classTerm: cim.ShipmentPackage
+    mapping:
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      shipmentProductDescription:
+        propertyTerm: cim.shipmentProductDescription
+        range: string
+        mandatory: true
+      shipmentProductCount:
+        propertyTerm: cim.shipmentProductCount
+        range: integer
+        mandatory: true
+      shipment:
+        propertyTerm: cim.shipment
+        range: Shipment
+        mandatory: true
+        allowMultiple: true
+  ProductImage:
+    classTerm: cim.ProductImage
+    mapping:
+      product:
+        propertyTerm: cim.product
+        range: Product
+        mandatory: true
+        allowMultiple: true
+      imageViewType:
+        propertyTerm: cim.imageViewType
+        range: string
+      isDefaultImage:
+        propertyTerm: cim.isDefaultImage
+        range: boolean
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+  ContactPointLocation:
+    classTerm: cim.ContactPointLocation
+    mapping:
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+    extends: ContactPoint
+  ProductCatalog:
+    classTerm: cim.ProductCatalog
+    mapping:
+      activeFromDate:
+        propertyTerm: cim.activeFromDate
+        range: date
+        mandatory: true
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      activeToDate:
+        propertyTerm: cim.activeToDate
+        range: date
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+  PaymentAuthorization:
+    classTerm: cim.PaymentAuthorization
+    mapping:
+      gatewayReferenceDetailsText:
+        propertyTerm: cim.gatewayReferenceDetailsText
+        range: string
+        mandatory: true
+      expirationDate:
+        propertyTerm: cim.expirationDate
+        range: date
+        mandatory: true
+      paymentGroup:
+        propertyTerm: cim.paymentGroup
+        range: PaymentGroup
+        mandatory: true
+        allowMultiple: true
+      totalAuthorizationReversalAmount:
+        propertyTerm: cim.totalAuthorizationReversalAmount
+        range: integer
+        mandatory: true
+      paymentAuthorizationProcessingMode:
+        propertyTerm: cim.paymentAuthorizationProcessingMode
+        range: string
+        mandatory: true
+      iPAddress:
+        propertyTerm: cim.iPAddress
+        range: string
+      availableBalanceAmount:
+        propertyTerm: cim.availableBalanceAmount
+        range: integer
+        mandatory: true
+      paymentGatewayDate:
+        propertyTerm: cim.paymentGatewayDate
+        range: time
+        mandatory: true
+      gatewayResultCodeDescription:
+        propertyTerm: cim.gatewayResultCodeDescription
+        range: string
+      paymentMethodID:
+        propertyTerm: cim.paymentMethodID
+        range: PaymentMethod
+        mandatory: true
+        allowMultiple: true
+      paymentAuthorizationStatus:
+        propertyTerm: cim.paymentAuthorizationStatus
+        range: string
+        mandatory: true
+      macAddress:
+        propertyTerm: cim.macAddress
+        range: string
+      paymentGatewayInternalReferenceNumber:
+        propertyTerm: cim.paymentGatewayInternalReferenceNumber
+        range: string
+        mandatory: true
+      paymentGatewayResult:
+        propertyTerm: cim.paymentGatewayResult
+        range: PaymentGatewayResultCode
+        mandatory: true
+        allowMultiple: true
+      paymentGateway:
+        propertyTerm: cim.paymentGateway
+        range: PaymentGateway
+        mandatory: true
+        allowMultiple: true
+      paymentAuthorizationNumber:
+        propertyTerm: cim.paymentAuthorizationNumber
+        range: string
+        mandatory: true
+      paymentAuthorizationCommentText:
+        propertyTerm: cim.paymentAuthorizationCommentText
+        range: string
+      gatewayAuthorizationCode:
+        propertyTerm: cim.gatewayAuthorizationCode
+        range: string
+        mandatory: true
+      totalPaymentCaptureAmount:
+        propertyTerm: cim.totalPaymentCaptureAmount
+        range: integer
+        mandatory: true
+      authorizationAmount:
+        propertyTerm: cim.authorizationAmount
+        range: integer
+        mandatory: true
+      externalCreatedDate:
+        propertyTerm: cim.externalCreatedDate
+        range: date
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      requestDate:
+        propertyTerm: cim.requestDate
+        range: time
+        mandatory: true
+      paymentGatewayReferenceNumber:
+        propertyTerm: cim.paymentGatewayReferenceNumber
+        range: string
+        mandatory: true
+      salesOrderPaymentSummary:
+        propertyTerm: cim.salesOrderPaymentSummary
+        range: SalesOrderPaymentSummary
+        mandatory: true
+        allowMultiple: true
+  ProductAttributeValue:
+    classTerm: cim.ProductAttributeValue
+    mapping:
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      customAttributeValue:
+        propertyTerm: cim.customAttributeValue
+        range: string
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      attributeSet:
+        propertyTerm: cim.attributeSet
+        range: string
+        mandatory: true
+      attributeValue:
+        propertyTerm: cim.attributeValue
+        range: AttributeValue
+        allowMultiple: true
+      product:
+        propertyTerm: cim.product
+        range: Product
+        mandatory: true
+        allowMultiple: true
+  ContactPointSocial:
+    classTerm: cim.ContactPointSocial
+    mapping:
+      socialNetworkProvider:
+        propertyTerm: cim.socialNetworkProvider
+        range: string
+        mandatory: true
+      followersCount:
+        propertyTerm: cim.followersCount
+        range: integer
+        mandatory: true
+      socialHandleName:
+        propertyTerm: cim.socialHandleName
+        range: string
+        mandatory: true
+      socialFanStatus:
+        propertyTerm: cim.socialFanStatus
+        range: string
+        mandatory: true
+      profilePictureURL:
+        propertyTerm: cim.profilePictureURL
+        range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      socialHandle:
+        propertyTerm: cim.socialHandle
+        range: string
+        mandatory: true
+    extends: ContactPoint
+  PaymentTreatmentMethod:
+    classTerm: cim.PaymentTreatmentMethod
+    mapping:
+      paymentTreatmentMethodCode:
+        propertyTerm: cim.paymentTreatmentMethodCode
+        range: string
+        mandatory: true
+      paymentTreatmentMethodName:
+        propertyTerm: cim.paymentTreatmentMethodName
+        range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      paymentTreatmentMethodDescription:
+        propertyTerm: cim.paymentTreatmentMethodDescription
+        range: string
+        mandatory: true
+  PaymentCreditMemoApplication:
+    classTerm: cim.PaymentCreditMemoApplication
+    mapping:
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      name:
+        propertyTerm: cim.name
+        range: string
+    extends: PaymentApplication
+  BillingFrequency:
+    classTerm: cim.BillingFrequency
+    mapping:
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      billingFrequencyName:
+        propertyTerm: cim.billingFrequencyName
+        range: string
+        mandatory: true
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+  Individual:
+    classTerm: cim.Individual
+    mapping:
+      mothersMaidenName:
+        propertyTerm: cim.mothersMaidenName
+        range: string
+      yearlyIncomeRange:
+        propertyTerm: cim.yearlyIncomeRange
+        range: string
+      occupation:
+        propertyTerm: cim.occupation
+        range: string
+      isHomeOwner:
+        propertyTerm: cim.isHomeOwner
+        range: boolean
+      preferredName:
+        propertyTerm: cim.preferredName
+        range: string
+      mainDisabilityType:
+        propertyTerm: cim.mainDisabilityType
+        range: string
+      birthDate:
+        propertyTerm: cim.birthDate
+        range: date
+      photoURL:
+        propertyTerm: cim.photoURL
+        range: string
+      hasDrugAbuseHistory:
+        propertyTerm: cim.hasDrugAbuseHistory
+        range: boolean
+      overAgeNumber:
+        propertyTerm: cim.overAgeNumber
+        range: integer
+      isDrugConsumer:
+        propertyTerm: cim.isDrugConsumer
+        range: boolean
+      secondLastName:
+        propertyTerm: cim.secondLastName
+        range: string
+      employedSinceDate:
+        propertyTerm: cim.employedSinceDate
+        range: date
+      doNotProfileFromUpdateDate:
+        propertyTerm: cim.doNotProfileFromUpdateDate
+        range: date
+      consumerCreditScoreProviderName:
+        propertyTerm: cim.consumerCreditScoreProviderName
+        range: string
+      isHighRiskOccupation:
+        propertyTerm: cim.isHighRiskOccupation
+        range: boolean
+      occupationType:
+        propertyTerm: cim.occupationType
+        range: string
+      mainPersonalValueType:
+        propertyTerm: cim.mainPersonalValueType
+        range: string
+      influencerRating:
+        propertyTerm: cim.influencerRating
+        range: integer
+      minorCitationCount:
+        propertyTerm: cim.minorCitationCount
+        range: integer
+      childrenCount:
+        propertyTerm: cim.childrenCount
+        range: integer
+      dependentCount:
+        propertyTerm: cim.dependentCount
+        range: integer
+      netWorth:
+        propertyTerm: cim.netWorth
+        range: integer
+      personHeightUnitOfMeasure:
+        propertyTerm: cim.personHeightUnitOfMeasure
+        range: string
+      weddingAnniversaryDate:
+        propertyTerm: cim.weddingAnniversaryDate
+        range: date
+      doNotProcessReason:
+        propertyTerm: cim.doNotProcessReason
+        range: string
+      nameSuffix:
+        propertyTerm: cim.nameSuffix
+        range: string
+      residenceCaptureMethod:
+        propertyTerm: cim.residenceCaptureMethod
+        range: string
+      middleName:
+        propertyTerm: cim.middleName
+        range: string
+      primaryHobby:
+        propertyTerm: cim.primaryHobby
+        range: string
+      religion:
+        propertyTerm: cim.religion
+        range: string
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      gender:
+        propertyTerm: cim.gender
+        range: string
+      consumerCreditScore:
+        propertyTerm: cim.consumerCreditScore
+        range: integer
+      hospitalizationsLast5YearsCount:
+        propertyTerm: cim.hospitalizationsLast5YearsCount
+        range: integer
+      isGoodStudent:
+        propertyTerm: cim.isGoodStudent
+        range: boolean
+      hasAlcoholAbuseHistory:
+        propertyTerm: cim.hasAlcoholAbuseHistory
+        range: boolean
+      ethnicity:
+        propertyTerm: cim.ethnicity
+        range: string
+      doExtractMyDataUpdateDate:
+        propertyTerm: cim.doExtractMyDataUpdateDate
+        range: date
+      isAlcoholConsumer:
+        propertyTerm: cim.isAlcoholConsumer
+        range: boolean
+      doNotMarketFromUpdateDate:
+        propertyTerm: cim.doNotMarketFromUpdateDate
+        range: date
+      mainLifeStyleType:
+        propertyTerm: cim.mainLifeStyleType
+        range: string
+      personWeightUnitOfMeasure:
+        propertyTerm: cim.personWeightUnitOfMeasure
+        range: string
+      shouldForget:
+        propertyTerm: cim.shouldForget
+        range: boolean
+      webSiteURL:
+        propertyTerm: cim.webSiteURL
+        range: string
+      sendIndividualData:
+        propertyTerm: cim.sendIndividualData
+        range: boolean
+      surgeriesLast5YearsCount:
+        propertyTerm: cim.surgeriesLast5YearsCount
+        range: integer
+      doForgetMeFromUpdateDate:
+        propertyTerm: cim.doForgetMeFromUpdateDate
+        range: date
+      yearlyIncome:
+        propertyTerm: cim.yearlyIncome
+        range: integer
+      majorCitationCount:
+        propertyTerm: cim.majorCitationCount
+        range: integer
+      deathDate:
+        propertyTerm: cim.deathDate
+        range: date
+      personWeight:
+        propertyTerm: cim.personWeight
+        range: integer
+      doNotTrackUpdateDate:
+        propertyTerm: cim.doNotTrackUpdateDate
+        range: date
+      mainDietaryHabitType:
+        propertyTerm: cim.mainDietaryHabitType
+        range: string
+      personName:
+        propertyTerm: cim.personName
+        range: string
+        mandatory: true
+      personLifeStage:
+        propertyTerm: cim.personLifeStage
+        range: string
+      isTobaccoConsume:
+        propertyTerm: cim.isTobaccoConsume
+        range: boolean
+      taxBracketRange:
+        propertyTerm: cim.taxBracketRange
+        range: string
+      mainPersonalityType:
+        propertyTerm: cim.mainPersonalityType
+        range: string
+      mailingName:
+        propertyTerm: cim.mailingName
+        range: string
+      currentEmployerName:
+        propertyTerm: cim.currentEmployerName
+        range: string
+      isHighRiskHobby:
+        propertyTerm: cim.isHighRiskHobby
+        range: boolean
+      militaryService:
+        propertyTerm: cim.militaryService
+        range: string
+      primaryHousehold:
+        propertyTerm: cim.primaryHousehold
+        range: Household
+        allowMultiple: true
+      isGoodDriver:
+        propertyTerm: cim.isGoodDriver
+        range: boolean
+      convictionsCount:
+        propertyTerm: cim.convictionsCount
+        range: integer
+      mainLifeAttitudeType:
+        propertyTerm: cim.mainLifeAttitudeType
+        range: string
+      doNotProcessFromUpdateDate:
+        propertyTerm: cim.doNotProcessFromUpdateDate
+        range: date
+      maritalStatus:
+        propertyTerm: cim.maritalStatus
+        range: string
+      orderingName:
+        propertyTerm: cim.orderingName
+        range: string
+      residenceCountryName:
+        propertyTerm: cim.residenceCountryName
+        range: string
+      militaryStatus:
+        propertyTerm: cim.militaryStatus
+        range: string
+      personHeight:
+        propertyTerm: cim.personHeight
+        range: integer
+      officialName:
+        propertyTerm: cim.officialName
+        range: string
+      firstName:
+        propertyTerm: cim.firstName
+        range: string
+      birthPlace:
+        propertyTerm: cim.birthPlace
+        range: string
+      deathPlace:
+        propertyTerm: cim.deathPlace
+        range: string
+      salutation:
+        propertyTerm: cim.salutation
+        range: string
+      doNotTrackLocationUpdateDate:
+        propertyTerm: cim.doNotTrackLocationUpdateDate
+        range: date
+      highestEducationLevel:
+        propertyTerm: cim.highestEducationLevel
+        range: string
+      lastName:
+        propertyTerm: cim.lastName
+        range: string
+    extends: Party
+  SalesOrderPaymentSummary:
+    classTerm: cim.SalesOrderPaymentSummary
+    mapping:
+      authorizationReversalAmount:
+        propertyTerm: cim.authorizationReversalAmount
+        range: integer
+      unappliedAmount:
+        propertyTerm: cim.unappliedAmount
+        range: integer
+      paymentAmount:
+        propertyTerm: cim.paymentAmount
+        range: integer
+      appliedAmount:
+        propertyTerm: cim.appliedAmount
+        range: integer
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      authorizationAmount:
+        propertyTerm: cim.authorizationAmount
+        range: integer
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      salesOrder:
+        propertyTerm: cim.salesOrder
+        range: SalesOrder
+        mandatory: true
+        allowMultiple: true
+      paymentMethod:
+        propertyTerm: cim.paymentMethod
+        range: PaymentMethod
+        mandatory: true
+        allowMultiple: true
+      capturedAmount:
+        propertyTerm: cim.capturedAmount
+        range: integer
+      availableToApplyBalanceAmount:
+        propertyTerm: cim.availableToApplyBalanceAmount
+        range: integer
+  Party:
+    classTerm: cim.Party
+    mapping:
+      globalParty:
+        propertyTerm: cim.globalParty
+        range: string
+      partyType:
+        propertyTerm: cim.partyType
+        range: string
+        mandatory: true
+      primaryAccount:
+        propertyTerm: cim.primaryAccount
+        range: Account
+        allowMultiple: true
+      noMergeReason:
+        propertyTerm: cim.noMergeReason
+        range: string
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+  ContactPointEmail:
+    classTerm: cim.ContactPointEmail
+    mapping:
+      emailDomain:
+        propertyTerm: cim.emailDomain
+        range: string
+        mandatory: true
+      emailLatestBounceReasonText:
+        propertyTerm: cim.emailLatestBounceReasonText
+        range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      emailMailBox:
+        propertyTerm: cim.emailMailBox
+        range: string
+        mandatory: true
+      emailAddress:
+        propertyTerm: cim.emailAddress
+        range: string
+        mandatory: true
+      emailLatestBounceDateTime:
+        propertyTerm: cim.emailLatestBounceDateTime
+        range: date
+        mandatory: true
+    extends: ContactPoint
+  PaymentGatewayAuthReversalLog:
+    classTerm: cim.PaymentGatewayAuthReversalLog
+    mapping:
+      paymentAuthorizationReversal:
+        propertyTerm: cim.paymentAuthorizationReversal
+        range: PaymentAuthorizationReversal
+        allowMultiple: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      name:
+        propertyTerm: cim.name
+        range: string
+    extends: PaymentGatewayInteractionLog
+  ProductCatalogTranslation:
+    classTerm: cim.ProductCatalogTranslation
+    mapping:
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      translatedName:
+        propertyTerm: cim.translatedName
+        range: string
+        mandatory: true
+      productCatalog:
+        propertyTerm: cim.productCatalog
+        range: ProductCatalog
+        mandatory: true
+        allowMultiple: true
+  Shipment:
+    classTerm: cim.Shipment
+    mapping:
+      salesOrder:
+        propertyTerm: cim.salesOrder
+        range: SalesOrder
+        allowMultiple: true
+      shipmentDate:
+        propertyTerm: cim.shipmentDate
+        range: date
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      shipmentNumber:
+        propertyTerm: cim.shipmentNumber
+        range: string
+      salesOrderDeliveryGroup:
+        propertyTerm: cim.salesOrderDeliveryGroup
+        range: SalesOrderDeliveryGroup
+        allowMultiple: true
+      giftMessageText:
+        propertyTerm: cim.giftMessageText
+        range: string
+      specialInstructionsText:
+        propertyTerm: cim.specialInstructionsText
+        range: string
+      actualDeliveryDateTime:
+        propertyTerm: cim.actualDeliveryDateTime
+        range: time
+      scheduledDeliveryDateTime:
+        propertyTerm: cim.scheduledDeliveryDateTime
+        range: time
+      estimatedDeliveryDateTime:
+        propertyTerm: cim.estimatedDeliveryDateTime
+        range: time
+      shipToAddress:
+        propertyTerm: cim.shipToAddress
+        range: ContactPointAddress
+        allowMultiple: true
+      carrierTrackingNumber:
+        propertyTerm: cim.carrierTrackingNumber
+        range: string
+      isGift:
+        propertyTerm: cim.isGift
+        range: boolean
+      shipmentStatus:
+        propertyTerm: cim.shipmentStatus
+        range: ShipmentStatus
+        allowMultiple: true
+  PartyRelatedParty:
+    classTerm: cim.PartyRelatedParty
+    mapping:
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      relatedToDate:
+        propertyTerm: cim.relatedToDate
+        range: date
+        mandatory: true
+      relatedFromDate:
+        propertyTerm: cim.relatedFromDate
+        range: date
+        mandatory: true
+      relatedParty:
+        propertyTerm: cim.relatedParty
+        range: Party
+        mandatory: true
+        allowMultiple: true
+      partyRelationshipType:
+        propertyTerm: cim.partyRelationshipType
+        range: PartyRelationshipType
+        mandatory: true
+        allowMultiple: true
+      party:
+        propertyTerm: cim.party
+        range: Party
+        mandatory: true
+        allowMultiple: true
+  ProductCategory:
+    classTerm: cim.ProductCategory
+    mapping:
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      activeFromDate:
+        propertyTerm: cim.activeFromDate
+        range: date
+        mandatory: true
+      parentCategory:
+        propertyTerm: cim.parentCategory
+        range: ProductCategory
+        allowMultiple: true
+      productCatalog:
+        propertyTerm: cim.productCatalog
+        range: ProductCatalog
+        mandatory: true
+        allowMultiple: true
+      activeToDate:
+        propertyTerm: cim.activeToDate
+        range: date
+  SalesOrderProductReason:
+    classTerm: cim.SalesOrderProductReason
+    mapping:
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      salesOrderProductReasonCategory:
+        propertyTerm: cim.salesOrderProductReasonCategory
+        range: string
+        mandatory: true
+  ProductAttributeSet:
+    classTerm: cim.ProductAttributeSet
+    mapping:
+      attributeSet:
+        propertyTerm: cim.attributeSet
+        range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      product:
+        propertyTerm: cim.product
+        range: Product
+        mandatory: true
+        allowMultiple: true
+  SalesOrderChangeLog:
+    classTerm: cim.SalesOrderChangeLog
+    mapping:
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      changeSalesOrder:
+        propertyTerm: cim.changeSalesOrder
+        range: SalesOrder
+        mandatory: true
+        allowMultiple: true
+      changeSalesOrderProduct:
+        propertyTerm: cim.changeSalesOrderProduct
+        range: SalesOrderProduct
+        mandatory: true
+        allowMultiple: true
+      relatedSalesOrder:
+        propertyTerm: cim.relatedSalesOrder
+        range: SalesOrder
+        mandatory: true
+        allowMultiple: true
+      relatedSalesOrderProduct:
+        propertyTerm: cim.relatedSalesOrderProduct
+        range: SalesOrderProduct
+        mandatory: true
+        allowMultiple: true
+  PaymentInvoiceAllocation:
+    classTerm: cim.PaymentInvoiceAllocation
+    mapping:
+      paymentInvoiceApplication:
+        propertyTerm: cim.paymentInvoiceApplication
+        range: PaymentInvoiceApplication
+        allowMultiple: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      appliedAmount:
+        propertyTerm: cim.appliedAmount
+        range: integer
+        mandatory: true
+      paymentInvoiceAllocationName:
+        propertyTerm: cim.paymentInvoiceAllocationName
+        range: string
+      invoiceBalanceAmount:
+        propertyTerm: cim.invoiceBalanceAmount
+        range: integer
+        mandatory: true
+    extends: PaymentAllocation
+  ProductTranslation:
+    classTerm: cim.ProductTranslation
+    mapping:
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      product:
+        propertyTerm: cim.product
+        range: Product
+        mandatory: true
+        allowMultiple: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      longDescription:
+        propertyTerm: cim.longDescription
+        range: string
+      description:
+        propertyTerm: cim.description
+        range: string
+  SalesOrderProductTax:
+    classTerm: cim.SalesOrderProductTax
+    mapping:
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      taxAmount:
+        propertyTerm: cim.taxAmount
+        range: integer
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      taxEffectiveDate:
+        propertyTerm: cim.taxEffectiveDate
+        range: date
+      originalSalesOrderProductTax:
+        propertyTerm: cim.originalSalesOrderProductTax
+        range: SalesOrderProductTax
+        allowMultiple: true
+      salesOrderProduct:
+        propertyTerm: cim.salesOrderProduct
+        range: SalesOrderProduct
+        mandatory: true
+        allowMultiple: true
+      description:
+        propertyTerm: cim.description
+        range: string
+        mandatory: true
+    extends: SalesOrderTax
+  Payment:
+    classTerm: cim.Payment
+    mapping:
+      netAppliedAmount:
+        propertyTerm: cim.netAppliedAmount
+        range: integer
+        mandatory: true
+      internalBusinessUnit:
+        propertyTerm: cim.internalBusinessUnit
+        range: InternalBusinessUnit
+        mandatory: true
+        allowMultiple: true
+      paymentAmount:
+        propertyTerm: cim.paymentAmount
+        range: integer
+        mandatory: true
+      latestGatewayReferenceNumber:
+        propertyTerm: cim.latestGatewayReferenceNumber
+        range: string
+        mandatory: true
+      customerPhoneNumber:
+        propertyTerm: cim.customerPhoneNumber
+        range: string
+      macAddress:
+        propertyTerm: cim.macAddress
+        range: string
+      authorizationProcessingMode:
+        propertyTerm: cim.authorizationProcessingMode
+        range: string
+        mandatory: true
+      iPAddress:
+        propertyTerm: cim.iPAddress
+        range: string
+      paymentCancellationDate:
+        propertyTerm: cim.paymentCancellationDate
+        range: date
+        mandatory: true
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      salesOrderPaymentSummary:
+        propertyTerm: cim.salesOrderPaymentSummary
+        range: SalesOrderPaymentSummary
+        mandatory: true
+        allowMultiple: true
+      paymentGroup:
+        propertyTerm: cim.paymentGroup
+        range: PaymentGroup
+        mandatory: true
+        allowMultiple: true
+      paymentStatus:
+        propertyTerm: cim.paymentStatus
+        range: string
+        mandatory: true
+      paymentMethod:
+        propertyTerm: cim.paymentMethod
+        range: PaymentMethod
+        mandatory: true
+        allowMultiple: true
+      totalUnappliedAmount:
+        propertyTerm: cim.totalUnappliedAmount
+        range: integer
+        mandatory: true
+      paymentTreatment:
+        propertyTerm: cim.paymentTreatment
+        range: PaymentTreatment
+        mandatory: true
+        allowMultiple: true
+      latestPaymentGatewayMessageText:
+        propertyTerm: cim.latestPaymentGatewayMessageText
+        range: string
+      latestGatewayDate:
+        propertyTerm: cim.latestGatewayDate
+        range: date
+        mandatory: true
+      paymentGateway:
+        propertyTerm: cim.paymentGateway
+        range: PaymentGateway
+        mandatory: true
+        allowMultiple: true
+      latestGatewayResultCode:
+        propertyTerm: cim.latestGatewayResultCode
+        range: PaymentGatewayResultCode
+        mandatory: true
+        allowMultiple: true
+      customerEmailAddress:
+        propertyTerm: cim.customerEmailAddress
+        range: string
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      paymentEffectiveDate:
+        propertyTerm: cim.paymentEffectiveDate
+        range: date
+        mandatory: true
+      totalAppliedAmount:
+        propertyTerm: cim.totalAppliedAmount
+        range: integer
+        mandatory: true
+      latestGatewayInternalReferenceNumber:
+        propertyTerm: cim.latestGatewayInternalReferenceNumber
+        range: string
+        mandatory: true
+      latestGatewayInternalResult:
+        propertyTerm: cim.latestGatewayInternalResult
+        range: string
+        mandatory: true
+      commentText:
+        propertyTerm: cim.commentText
+        range: string
+        mandatory: true
+      account:
+        propertyTerm: cim.account
+        range: Account
+        allowMultiple: true
+      paymentNumber:
+        propertyTerm: cim.paymentNumber
+        range: string
+        mandatory: true
+      balanceAmount:
+        propertyTerm: cim.balanceAmount
+        range: integer
+        mandatory: true
+      externalCreatedDate:
+        propertyTerm: cim.externalCreatedDate
+        range: date
+        mandatory: true
+      paymentType:
+        propertyTerm: cim.paymentType
+        range: string
+        mandatory: true
+  ContactPointPhone:
+    classTerm: cim.ContactPointPhone
+    mapping:
+      primaryPhoneType:
+        propertyTerm: cim.primaryPhoneType
+        range: string
+        mandatory: true
+      isFaxCapable:
+        propertyTerm: cim.isFaxCapable
+        range: boolean
+        mandatory: true
+      phoneCountryCode:
+        propertyTerm: cim.phoneCountryCode
+        range: string
+      isSMSCapable:
+        propertyTerm: cim.isSMSCapable
+        range: boolean
+        mandatory: true
+      shortCode:
+        propertyTerm: cim.shortCode
+        range: integer
+      areaCode:
+        propertyTerm: cim.areaCode
+        range: string
+      formattedE164PhoneNumber:
+        propertyTerm: cim.formattedE164PhoneNumber
+        range: string
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      telephoneNumber:
+        propertyTerm: cim.telephoneNumber
+        range: string
+        mandatory: true
+      formattedInternationalPhoneNumber:
+        propertyTerm: cim.formattedInternationalPhoneNumber
+        range: string
+        mandatory: true
+      formattedNationalPhoneNumber:
+        propertyTerm: cim.formattedNationalPhoneNumber
+        range: string
+        mandatory: true
+      extensionNumber:
+        propertyTerm: cim.extensionNumber
+        range: string
+      countryName:
+        propertyTerm: cim.countryName
+        range: string
+    extends: ContactPoint
+  SalesChannel:
+    classTerm: cim.SalesChannel
+    mapping:
+      externalRecord:
+        propertyTerm: cim.externalRecord
+        range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      salesChannelType:
+        propertyTerm: cim.salesChannelType
+        range: string
+        mandatory: true
+      description:
+        propertyTerm: cim.description
+        range: string
+        mandatory: true
+      salesChannelNumber:
+        propertyTerm: cim.salesChannelNumber
+        range: string
+        mandatory: true
+  ContactPoint:
+    classTerm: cim.ContactPoint
+    mapping:
+      profileOccurrenceCount:
+        propertyTerm: cim.profileOccurrenceCount
+        range: integer
+      party:
+        propertyTerm: cim.party
+        range: Party
+        mandatory: true
+        allowMultiple: true
+      forPersonalUse:
+        propertyTerm: cim.forPersonalUse
+        range: boolean
+        mandatory: true
+      profileLastUpdatedDate:
+        propertyTerm: cim.profileLastUpdatedDate
+        range: time
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      primaryFlag:
+        propertyTerm: cim.primaryFlag
+        range: boolean
+      forBusinessUse:
+        propertyTerm: cim.forBusinessUse
+        range: boolean
+        mandatory: true
+      bestTimeToContactEndTime:
+        propertyTerm: cim.bestTimeToContactEndTime
+        range: time
+      partyRole:
+        propertyTerm: cim.partyRole
+        range: string
+      bestTimeToContactStartTime:
+        propertyTerm: cim.bestTimeToContactStartTime
+        range: time
+      activeToDate:
+        propertyTerm: cim.activeToDate
+        range: date
+      profileFirstCreatedDate:
+        propertyTerm: cim.profileFirstCreatedDate
+        range: time
+      activeFromDate:
+        propertyTerm: cim.activeFromDate
+        range: date
+        mandatory: true
+      contactPointType:
+        propertyTerm: cim.contactPointType
+        range: ContactPointType
+        mandatory: true
+        allowMultiple: true
+  PaymentInvoiceApplication:
+    classTerm: cim.PaymentInvoiceApplication
+    mapping:
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      invoiceBalanceAmount:
+        propertyTerm: cim.invoiceBalanceAmount
+        range: integer
+        mandatory: true
+      paymentInvoiceApplicationType:
+        propertyTerm: cim.paymentInvoiceApplicationType
+        range: string
+      paymentInvoiceApplicationName:
+        propertyTerm: cim.paymentInvoiceApplicationName
+        range: string
+    extends: PaymentApplication
+  ShipmentProduct:
+    classTerm: cim.ShipmentProduct
+    mapping:
+      shipment:
+        propertyTerm: cim.shipment
+        range: Shipment
+        mandatory: true
+        allowMultiple: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      shipmentProductCount:
+        propertyTerm: cim.shipmentProductCount
+        range: integer
+        mandatory: true
+      product:
+        propertyTerm: cim.product
+        range: Product
+        mandatory: true
+        allowMultiple: true
+      salesOrderProduct:
+        propertyTerm: cim.salesOrderProduct
+        range: SalesOrderProduct
+        mandatory: true
+        allowMultiple: true
+      shipmentPackage:
+        propertyTerm: cim.shipmentPackage
+        range: ShipmentPackage
+        mandatory: true
+        allowMultiple: true
+  ProductCategoryProduct:
+    classTerm: cim.ProductCategoryProduct
+    mapping:
+      activeFromDateTime:
+        propertyTerm: cim.activeFromDateTime
+        range: time
+        mandatory: true
+      productCategory:
+        propertyTerm: cim.productCategory
+        range: ProductCategory
+        mandatory: true
+        allowMultiple: true
+      activeToDateTime:
+        propertyTerm: cim.activeToDateTime
+        range: time
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      product:
+        propertyTerm: cim.product
+        range: Product
+        mandatory: true
+        allowMultiple: true
+  SalesOrderProduct:
+    classTerm: cim.SalesOrderProduct
+    mapping:
+      totalAdjustmentAmount:
+        propertyTerm: cim.totalAdjustmentAmount
+        range: integer
+      totalTaxAmount:
+        propertyTerm: cim.totalTaxAmount
+        range: integer
+      unitPriceAmount:
+        propertyTerm: cim.unitPriceAmount
+        range: integer
+      originalOrderProduct:
+        propertyTerm: cim.originalOrderProduct
+        range: SalesOrderProduct
+        allowMultiple: true
+      salesOrderDeliveryGroup:
+        propertyTerm: cim.salesOrderDeliveryGroup
+        range: SalesOrderDeliveryGroup
+        allowMultiple: true
+      totalRecurringPriceAmount:
+        propertyTerm: cim.totalRecurringPriceAmount
+        range: integer
+      priceBookEntry:
+        propertyTerm: cim.priceBookEntry
+        range: PriceBookEntry
+        mandatory: true
+        allowMultiple: true
+      segmentIndexNumber:
+        propertyTerm: cim.segmentIndexNumber
+        range: integer
+      salesOrder:
+        propertyTerm: cim.salesOrder
+        range: SalesOrder
+        mandatory: true
+        allowMultiple: true
+      salesOrderProductStatus:
+        propertyTerm: cim.salesOrderProductStatus
+        range: string
+        mandatory: true
+      orderProductNumber:
+        propertyTerm: cim.orderProductNumber
+        range: string
+        mandatory: true
+      product:
+        propertyTerm: cim.product
+        range: Product
+        mandatory: true
+        allowMultiple: true
+      endDate:
+        propertyTerm: cim.endDate
+        range: date
+      totalLineAdjustmentAmount:
+        propertyTerm: cim.totalLineAdjustmentAmount
+        range: integer
+      orderAdjustmentSubTotalAmount:
+        propertyTerm: cim.orderAdjustmentSubTotalAmount
+        range: integer
+      totalDistributedAdjustmentTaxAmount:
+        propertyTerm: cim.totalDistributedAdjustmentTaxAmount
+        range: integer
+      listPriceQuantityUOM:
+        propertyTerm: cim.listPriceQuantityUOM
+        range: string
+        mandatory: true
+      recurringPriceAmount:
+        propertyTerm: cim.recurringPriceAmount
+        range: integer
+      requestedStartDate:
+        propertyTerm: cim.requestedStartDate
+        range: date
+      orderManualAdjustmentSubTotalAmount:
+        propertyTerm: cim.orderManualAdjustmentSubTotalAmount
+        range: integer
+      totalListPriceAmount:
+        propertyTerm: cim.totalListPriceAmount
+        range: integer
+      fulfilledQuantity:
+        propertyTerm: cim.fulfilledQuantity
+        range: integer
+      isAutomaticallyRenewed:
+        propertyTerm: cim.isAutomaticallyRenewed
+        range: boolean
+      requestedEndDate:
+        propertyTerm: cim.requestedEndDate
+        range: date
+      totalDistributedTaxAmount:
+        propertyTerm: cim.totalDistributedTaxAmount
+        range: integer
+      provisioningDate:
+        propertyTerm: cim.provisioningDate
+        range: date
+      sellerAccount:
+        propertyTerm: cim.sellerAccount
+        range: Account
+        allowMultiple: true
+      totalProductTaxAmount:
+        propertyTerm: cim.totalProductTaxAmount
+        range: integer
+      cancelledQuantity:
+        propertyTerm: cim.cancelledQuantity
+        range: integer
+      discountPercent:
+        propertyTerm: cim.discountPercent
+        range: integer
+      commentText:
+        propertyTerm: cim.commentText
+        range: string
+      subscriptionRenewalMonthQuantity:
+        propertyTerm: cim.subscriptionRenewalMonthQuantity
+        range: integer
+      shippingAddress:
+        propertyTerm: cim.shippingAddress
+        range: ContactPointAddress
+        allowMultiple: true
+      lineAdjustmentSubTotalAmount:
+        propertyTerm: cim.lineAdjustmentSubTotalAmount
+        range: integer
+      totalLineAmount:
+        propertyTerm: cim.totalLineAmount
+        range: integer
+      shippingCostAmount:
+        propertyTerm: cim.shippingCostAmount
+        range: integer
+      subscriptionTermUnit:
+        propertyTerm: cim.subscriptionTermUnit
+        range: ProductValidityTimePeriodUOM
+        allowMultiple: true
+      quantityOrderedUOM:
+        propertyTerm: cim.quantityOrderedUOM
+        range: string
+        mandatory: true
+      totalUnitPriceAmount:
+        propertyTerm: cim.totalUnitPriceAmount
+        range: integer
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      isGift:
+        propertyTerm: cim.isGift
+        range: boolean
+      deliveryTaxAmount:
+        propertyTerm: cim.deliveryTaxAmount
+        range: integer
+      description:
+        propertyTerm: cim.description
+        range: string
+        mandatory: true
+      handlingCostAmount:
+        propertyTerm: cim.handlingCostAmount
+        range: integer
+      salesOrderProductAdjustedTaxAmount:
+        propertyTerm: cim.salesOrderProductAdjustedTaxAmount
+        range: integer
+      salesOrderProductReason:
+        propertyTerm: cim.salesOrderProductReason
+        range: SalesOrderProductReason
+        allowMultiple: true
+      allocationPartitionName:
+        propertyTerm: cim.allocationPartitionName
+        range: string
+      giftOrderMessageText:
+        propertyTerm: cim.giftOrderMessageText
+        range: string
+      discountAmount:
+        propertyTerm: cim.discountAmount
+        range: integer
+      segmentIndex:
+        propertyTerm: cim.segmentIndex
+        range: integer
+      totalPriceAmount:
+        propertyTerm: cim.totalPriceAmount
+        range: integer
+        mandatory: true
+      isBonusProduct:
+        propertyTerm: cim.isBonusProduct
+        range: boolean
+      shippingTaxAmount:
+        propertyTerm: cim.shippingTaxAmount
+        range: integer
+      shippingPhone:
+        propertyTerm: cim.shippingPhone
+        range: ContactPointPhone
+        allowMultiple: true
+      subscriptionTermQuantity:
+        propertyTerm: cim.subscriptionTermQuantity
+        range: integer
+      giftRecipientTelephoneNumber:
+        propertyTerm: cim.giftRecipientTelephoneNumber
+        range: string
+      shippingEmail:
+        propertyTerm: cim.shippingEmail
+        range: ContactPointEmail
+        allowMultiple: true
+      isBundleRoot:
+        propertyTerm: cim.isBundleRoot
+        range: boolean
+      promisedDate:
+        propertyTerm: cim.promisedDate
+        range: date
+      totalAdjustmentTaxAmount:
+        propertyTerm: cim.totalAdjustmentTaxAmount
+        range: integer
+      unitTaxAmount:
+        propertyTerm: cim.unitTaxAmount
+        range: integer
+      adjustedDeliveryTaxAmount:
+        propertyTerm: cim.adjustedDeliveryTaxAmount
+        range: integer
+      listPriceAmount:
+        propertyTerm: cim.listPriceAmount
+        range: integer
+      allocatedQuantity:
+        propertyTerm: cim.allocatedQuantity
+        range: integer
+      listPriceTermUOM:
+        propertyTerm: cim.listPriceTermUOM
+        range: ProductValidityTimePeriodUOM
+        allowMultiple: true
+      allocationGroupName:
+        propertyTerm: cim.allocationGroupName
+        range: string
+      availableQuantity:
+        propertyTerm: cim.availableQuantity
+        range: integer
+      orderedQuantity:
+        propertyTerm: cim.orderedQuantity
+        range: integer
+        mandatory: true
+      totalDistributedAdjustmentAmount:
+        propertyTerm: cim.totalDistributedAdjustmentAmount
+        range: integer
+      totalManualAdjustmentAmount:
+        propertyTerm: cim.totalManualAdjustmentAmount
+        range: integer
+  SalesOrder:
+    classTerm: cim.SalesOrder
+    mapping:
+      orderInsuranceAmount:
+        propertyTerm: cim.orderInsuranceAmount
+        range: integer
+      billToEmail:
+        propertyTerm: cim.billToEmail
+        range: ContactPointEmail
+        allowMultiple: true
+      totalPendingBillingAmount:
+        propertyTerm: cim.totalPendingBillingAmount
+        range: integer
+      originalOrder:
+        propertyTerm: cim.originalOrder
+        range: SalesOrder
+        allowMultiple: true
+      purchaseOrderNumber:
+        propertyTerm: cim.purchaseOrderNumber
+        range: string
+      adjustedProductTaxAmount:
+        propertyTerm: cim.adjustedProductTaxAmount
+        range: integer
+      paidDate:
+        propertyTerm: cim.paidDate
+        range: date
+      companyAuthorizedDate:
+        propertyTerm: cim.companyAuthorizedDate
+        range: date
+      totalProductTaxAmount:
+        propertyTerm: cim.totalProductTaxAmount
+        range: integer
+      adjustedTotalProductAmount:
+        propertyTerm: cim.adjustedTotalProductAmount
+        range: integer
+      promiseDate:
+        propertyTerm: cim.promiseDate
+        range: date
+      isGiftOrder:
+        propertyTerm: cim.isGiftOrder
+        range: boolean
+      iSOCulture:
+        propertyTerm: cim.iSOCulture
+        range: string
+      salesChannel:
+        propertyTerm: cim.salesChannel
+        range: SalesChannel
+        mandatory: true
+        allowMultiple: true
+      isContracted:
+        propertyTerm: cim.isContracted
+        range: boolean
+      fulfilledDate:
+        propertyTerm: cim.fulfilledDate
+        range: date
+      description:
+        propertyTerm: cim.description
+        range: string
+        mandatory: true
+      billToAddress:
+        propertyTerm: cim.billToAddress
+        range: ContactPointAddress
+        mandatory: true
+        allowMultiple: true
+      packedDate:
+        propertyTerm: cim.packedDate
+        range: date
+      totalTaxAmount:
+        propertyTerm: cim.totalTaxAmount
+        range: integer
+      shipToContact:
+        propertyTerm: cim.shipToContact
+        range: AccountContact
+        allowMultiple: true
+      promiseFulfillmentDate:
+        propertyTerm: cim.promiseFulfillmentDate
+        range: date
+      grandTotalAmount:
+        propertyTerm: cim.grandTotalAmount
+        range: integer
+      totalDeliveryTaxAmount:
+        propertyTerm: cim.totalDeliveryTaxAmount
+        range: integer
+      internalBusinessUnit:
+        propertyTerm: cim.internalBusinessUnit
+        range: InternalBusinessUnit
+        allowMultiple: true
+      paymentMethod:
+        propertyTerm: cim.paymentMethod
+        range: PaymentMethod
+        mandatory: true
+        allowMultiple: true
+      cancelDate:
+        propertyTerm: cim.cancelDate
+        range: date
+      orderEndDate:
+        propertyTerm: cim.orderEndDate
+        range: date
+      billToContact:
+        propertyTerm: cim.billToContact
+        range: AccountContact
+        mandatory: true
+        allowMultiple: true
+      checkoutDate:
+        propertyTerm: cim.checkoutDate
+        range: date
+      totalBookingAmount:
+        propertyTerm: cim.totalBookingAmount
+        range: integer
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      requestedStartDate:
+        propertyTerm: cim.requestedStartDate
+        range: date
+        mandatory: true
+      customerAuthorizedDate:
+        propertyTerm: cim.customerAuthorizedDate
+        range: date
+      salesOrderStatus:
+        propertyTerm: cim.salesOrderStatus
+        range: string
+        mandatory: true
+      totalAdjustedDeliveryTaxAmount:
+        propertyTerm: cim.totalAdjustedDeliveryTaxAmount
+        range: integer
+      isAnonymous:
+        propertyTerm: cim.isAnonymous
+        range: boolean
+      billToAccount:
+        propertyTerm: cim.billToAccount
+        range: Account
+        mandatory: true
+        allowMultiple: true
+      shipToAddress:
+        propertyTerm: cim.shipToAddress
+        range: ContactPointAddress
+        allowMultiple: true
+      taxRate:
+        propertyTerm: cim.taxRate
+        range: integer
+      orderNumber:
+        propertyTerm: cim.orderNumber
+        range: string
+        mandatory: true
+      priceCalculationStatusMessageText:
+        propertyTerm: cim.priceCalculationStatusMessageText
+        range: string
+      isReductionOrder:
+        propertyTerm: cim.isReductionOrder
+        range: boolean
+      totalDeliveryAmount:
+        propertyTerm: cim.totalDeliveryAmount
+        range: integer
+      soldToCustomer:
+        propertyTerm: cim.soldToCustomer
+        range: Customer
+        allowMultiple: true
+      totalProductAmount:
+        propertyTerm: cim.totalProductAmount
+        range: integer
+      shipToEmail:
+        propertyTerm: cim.shipToEmail
+        range: ContactPointEmail
+        allowMultiple: true
+      orderStartDate:
+        propertyTerm: cim.orderStartDate
+        range: date
+      filedDate:
+        propertyTerm: cim.filedDate
+        range: date
+      isAlerted:
+        propertyTerm: cim.isAlerted
+        range: boolean
+      purchaseOrderDate:
+        propertyTerm: cim.purchaseOrderDate
+        range: date
+      developerStatusCode:
+        propertyTerm: cim.developerStatusCode
+        range: string
+        mandatory: true
+      renewalTerm:
+        propertyTerm: cim.renewalTerm
+        range: string
+      salesOrderSystemStatus:
+        propertyTerm: cim.salesOrderSystemStatus
+        range: string
+      seller:
+        propertyTerm: cim.seller
+        range: Seller
+        allowMultiple: true
+      totalAdjustmentAmount:
+        propertyTerm: cim.totalAdjustmentAmount
+        range: integer
+      userDeviceSession:
+        propertyTerm: cim.userDeviceSession
+        range: DeviceUserSession
+        allowMultiple: true
+      billingDayOfTheMonth:
+        propertyTerm: cim.billingDayOfTheMonth
+        range: integer
+      renewalUpliftRate:
+        propertyTerm: cim.renewalUpliftRate
+        range: integer
+      totalAdjustmentTaxAmount:
+        propertyTerm: cim.totalAdjustmentTaxAmount
+        range: integer
+      isClosed:
+        propertyTerm: cim.isClosed
+        range: boolean
+      orderDiscount:
+        propertyTerm: cim.orderDiscount
+        range: integer
+      confirmationRecipientEmailText:
+        propertyTerm: cim.confirmationRecipientEmailText
+        range: string
+        mandatory: true
+      billToPhoneNumber:
+        propertyTerm: cim.billToPhoneNumber
+        range: ContactPointPhone
+        allowMultiple: true
+      cancelDateType:
+        propertyTerm: cim.cancelDateType
+        range: string
+      activatedDate:
+        propertyTerm: cim.activatedDate
+        range: date
+      isSuspended:
+        propertyTerm: cim.isSuspended
+        range: boolean
+      isHistoricalOnly:
+        propertyTerm: cim.isHistoricalOnly
+        range: boolean
+      isTaxExempt:
+        propertyTerm: cim.isTaxExempt
+        range: boolean
+      totalDeliveryFeeAmount:
+        propertyTerm: cim.totalDeliveryFeeAmount
+        range: integer
+      salesOrderConfirmationStatus:
+        propertyTerm: cim.salesOrderConfirmationStatus
+        range: string
+        mandatory: true
+      canBillNow:
+        propertyTerm: cim.canBillNow
+        range: boolean
+      totalCancelledBillingAmount:
+        propertyTerm: cim.totalCancelledBillingAmount
+        range: integer
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+  Brand:
+    classTerm: cim.Brand
+    mapping:
+      brandGrade:
+        propertyTerm: cim.brandGrade
+        range: string
+        mandatory: true
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+  RefundPaymentAllocation:
+    classTerm: cim.RefundPaymentAllocation
+    mapping:
+      refundAllocationCommentText:
+        propertyTerm: cim.refundAllocationCommentText
+        range: string
+      creditMemoBalanceAmount:
+        propertyTerm: cim.creditMemoBalanceAmount
+        range: integer
+        mandatory: true
+      capturePayment:
+        propertyTerm: cim.capturePayment
+        range: CapturePayment
+        mandatory: true
+        allowMultiple: true
+      refundPaymentAllocationName:
+        propertyTerm: cim.refundPaymentAllocationName
+        range: string
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      paymentBalanceAmount:
+        propertyTerm: cim.paymentBalanceAmount
+        range: integer
+        mandatory: true
+      refundAllocationCommentsDate:
+        propertyTerm: cim.refundAllocationCommentsDate
+        range: date
+        mandatory: true
+    extends: RefundAllocation
+  PaymentPolicy:
+    classTerm: cim.PaymentPolicy
+    mapping:
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      paymentPolicyStatus:
+        propertyTerm: cim.paymentPolicyStatus
+        range: string
+        mandatory: true
+      description:
+        propertyTerm: cim.description
+        range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      paymentPolicyTreatmentSelection:
+        propertyTerm: cim.paymentPolicyTreatmentSelection
+        range: string
+        mandatory: true
+  ContactPointAddress:
+    classTerm: cim.ContactPointAddress
+    mapping:
+      addressLine4:
+        propertyTerm: cim.addressLine4
+        range: string
+      isUsedForBilling:
+        propertyTerm: cim.isUsedForBilling
+        range: boolean
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      countryName:
+        propertyTerm: cim.countryName
+        range: string
+      geoLongitude:
+        propertyTerm: cim.geoLongitude
+        range: integer
+      stateProvinceName:
+        propertyTerm: cim.stateProvinceName
+        range: string
+      addressLine1:
+        propertyTerm: cim.addressLine1
+        range: string
+      addressLine3:
+        propertyTerm: cim.addressLine3
+        range: string
+      geoLatitude:
+        propertyTerm: cim.geoLatitude
+        range: integer
+      isUsedForShipping:
+        propertyTerm: cim.isUsedForShipping
+        range: boolean
+      geoAccuracy:
+        propertyTerm: cim.geoAccuracy
+        range: integer
+      cityName:
+        propertyTerm: cim.cityName
+        range: string
+      postalCodeText:
+        propertyTerm: cim.postalCodeText
+        range: string
+      addressLine2:
+        propertyTerm: cim.addressLine2
+        range: string
+      contactPhone:
+        propertyTerm: cim.contactPhone
+        range: ContactPointPhone
+        allowMultiple: true
+    extends: ContactPoint
+  AccountPartner:
+    classTerm: cim.AccountPartner
+    mapping:
+      account:
+        propertyTerm: cim.account
+        range: Account
+        mandatory: true
+        allowMultiple: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      partnerAccount:
+        propertyTerm: cim.partnerAccount
+        range: Account
+        mandatory: true
+        allowMultiple: true
+  PaymentGatewayInteractionLog:
+    classTerm: cim.PaymentGatewayInteractionLog
+    mapping:
+      paymentGatewayInteractionStatus:
+        propertyTerm: cim.paymentGatewayInteractionStatus
+        range: string
+        mandatory: true
+      internalReferenceNumber:
+        propertyTerm: cim.internalReferenceNumber
+        range: string
+        mandatory: true
+      paymentGatewayInteractionLogName:
+        propertyTerm: cim.paymentGatewayInteractionLogName
+        range: string
+        mandatory: true
+      paymentGatewayInteractionType:
+        propertyTerm: cim.paymentGatewayInteractionType
+        range: PaymentGatewayInteractionType
+        mandatory: true
+        allowMultiple: true
+      paymentGatewayAuthorizationCode:
+        propertyTerm: cim.paymentGatewayAuthorizationCode
+        range: string
+        mandatory: true
+      paymentGatewayAVSCode:
+        propertyTerm: cim.paymentGatewayAVSCode
+        range: string
+        mandatory: true
+      paymentGatewayMessageText:
+        propertyTerm: cim.paymentGatewayMessageText
+        range: string
+      internalResultCode:
+        propertyTerm: cim.internalResultCode
+        range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      paymentGatewayDate:
+        propertyTerm: cim.paymentGatewayDate
+        range: date
+        mandatory: true
+      paymentGatewayReferenceNumber:
+        propertyTerm: cim.paymentGatewayReferenceNumber
+        range: string
+        mandatory: true
+      paymentGatewayResult:
+        propertyTerm: cim.paymentGatewayResult
+        range: PaymentGatewayResultCode
+        mandatory: true
+        allowMultiple: true
+  ContactPointType:
+    classTerm: cim.ContactPointType
+    mapping:
+      optInPriority:
+        propertyTerm: cim.optInPriority
+        range: integer
+        mandatory: true
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+  PaymentApplication:
+    classTerm: cim.PaymentApplication
+    mapping:
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      hasBeenUnapplied:
+        propertyTerm: cim.hasBeenUnapplied
+        range: boolean
+      unappliedDate:
+        propertyTerm: cim.unappliedDate
+        range: date
+        mandatory: true
+      payment:
+        propertyTerm: cim.payment
+        range: Payment
+        mandatory: true
+        allowMultiple: true
+      effectiveDate:
+        propertyTerm: cim.effectiveDate
+        range: date
+        mandatory: true
+      paymentApplicationType:
+        propertyTerm: cim.paymentApplicationType
+        range: string
+        mandatory: true
+      paymentBalanceAmount:
+        propertyTerm: cim.paymentBalanceAmount
+        range: integer
+        mandatory: true
+      appliedDate:
+        propertyTerm: cim.appliedDate
+        range: date
+        mandatory: true
+      externalCreatedDate:
+        propertyTerm: cim.externalCreatedDate
+        range: date
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      commentText:
+        propertyTerm: cim.commentText
+        range: string
+      appliedAmount:
+        propertyTerm: cim.appliedAmount
+        range: integer
+        mandatory: true
+  PartyWebAddress:
+    classTerm: cim.PartyWebAddress
+    mapping:
+      webSiteURL:
+        propertyTerm: cim.webSiteURL
+        range: string
+        mandatory: true
+      party:
+        propertyTerm: cim.party
+        range: Party
+        mandatory: true
+        allowMultiple: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+    extends: ContactPoint
+  AttributeValue:
+    classTerm: cim.AttributeValue
+    mapping:
+      attributeValue:
+        propertyTerm: cim.attributeValue
+        range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+  ProductCategoryTranslation:
+    classTerm: cim.ProductCategoryTranslation
+    mapping:
+      productCategory:
+        propertyTerm: cim.productCategory
+        range: ProductCategory
+        mandatory: true
+        allowMultiple: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      translatedName:
+        propertyTerm: cim.translatedName
+        range: string
+        mandatory: true
+  OrderDeliveryMethod:
+    classTerm: cim.OrderDeliveryMethod
+    mapping:
+      externalRecord:
+        propertyTerm: cim.externalRecord
+        range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      product:
+        propertyTerm: cim.product
+        range: Product
+        mandatory: true
+        allowMultiple: true
+  Lead:
+    classTerm: cim.Lead
+    mapping:
+      contactAddress:
+        propertyTerm: cim.contactAddress
+        range: ContactPointAddress
+        allowMultiple: true
+      mobileContactPhone:
+        propertyTerm: cim.mobileContactPhone
+        range: ContactPointPhone
+        allowMultiple: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      annualRevenue:
+        propertyTerm: cim.annualRevenue
+        range: integer
+      leadRating:
+        propertyTerm: cim.leadRating
+        range: string
+      convertedDate:
+        propertyTerm: cim.convertedDate
+        range: date
+      leadScore:
+        propertyTerm: cim.leadScore
+        range: integer
+      faxContactPhone:
+        propertyTerm: cim.faxContactPhone
+        range: ContactPointPhone
+        allowMultiple: true
+      convertedToAccountContact:
+        propertyTerm: cim.convertedToAccountContact
+        range: AccountContact
+        allowMultiple: true
+      geoCodeLatitude:
+        propertyTerm: cim.geoCodeLatitude
+        range: integer
+      description:
+        propertyTerm: cim.description
+        range: string
+      companyName:
+        propertyTerm: cim.companyName
+        range: string
+      phoneContactPoint:
+        propertyTerm: cim.phoneContactPoint
+        range: ContactPointPhone
+        allowMultiple: true
+      emailBouncedReason:
+        propertyTerm: cim.emailBouncedReason
+        range: string
+      stateProvinceName:
+        propertyTerm: cim.stateProvinceName
+        range: string
+      countryName:
+        propertyTerm: cim.countryName
+        range: string
+      leadStatus:
+        propertyTerm: cim.leadStatus
+        range: string
+      isConverted:
+        propertyTerm: cim.isConverted
+        range: boolean
+      emailBouncedDate:
+        propertyTerm: cim.emailBouncedDate
+        range: time
+      geoCodeLongitude:
+        propertyTerm: cim.geoCodeLongitude
+        range: integer
+      partnerAccount:
+        propertyTerm: cim.partnerAccount
+        range: Account
+        allowMultiple: true
+      streetName:
+        propertyTerm: cim.streetName
+        range: string
+      website:
+        propertyTerm: cim.website
+        range: string
+      convertedToAccount:
+        propertyTerm: cim.convertedToAccount
+        range: Account
+        allowMultiple: true
+      partyRole:
+        propertyTerm: cim.partyRole
+        range: string
+        mandatory: true
+      lastActivityDate:
+        propertyTerm: cim.lastActivityDate
+        range: date
+      contactPointEmail:
+        propertyTerm: cim.contactPointEmail
+        range: ContactPointEmail
+        allowMultiple: true
+      geoCodeAccuracy:
+        propertyTerm: cim.geoCodeAccuracy
+        range: integer
+      photoURL:
+        propertyTerm: cim.photoURL
+        range: string
+      leadSource:
+        propertyTerm: cim.leadSource
+        range: string
+        mandatory: true
+  InternalBusinessUnit:
+    classTerm: cim.InternalBusinessUnit
+    mapping:
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      parentInternalBusinessUnit:
+        propertyTerm: cim.parentInternalBusinessUnit
+        range: InternalBusinessUnit
+        allowMultiple: true
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      businessUnitType:
+        propertyTerm: cim.businessUnitType
+        range: string
+        mandatory: true
+    extends: Party
+  ProductRelatedProduct:
+    classTerm: cim.ProductRelatedProduct
+    mapping:
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      salesOrderProduct1:
+        propertyTerm: cim.salesOrderProduct1
+        range: SalesOrderProduct
+        mandatory: true
+        allowMultiple: true
+      isDefaultOption:
+        propertyTerm: cim.isDefaultOption
+        range: boolean
+        mandatory: true
+      toDate:
+        propertyTerm: cim.toDate
+        range: date
+      fromDate:
+        propertyTerm: cim.fromDate
+        range: date
+        mandatory: true
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      childProduct:
+        propertyTerm: cim.childProduct
+        range: Product
+        mandatory: true
+        allowMultiple: true
+      parentProduct:
+        propertyTerm: cim.parentProduct
+        range: Product
+        mandatory: true
+        allowMultiple: true
+      salesOrderProduct2:
+        propertyTerm: cim.salesOrderProduct2
+        range: SalesOrderProduct
+        mandatory: true
+        allowMultiple: true
+      productRelationshipType:
+        propertyTerm: cim.productRelationshipType
+        range: ProductRelationshipType
+        mandatory: true
+        allowMultiple: true
+  ShipmentProductPriceAdjustment:
+    classTerm: cim.ShipmentProductPriceAdjustment
+    mapping:
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      adjustmentTaxAmount:
+        propertyTerm: cim.adjustmentTaxAmount
+        range: integer
+      adjustmentAmount:
+        propertyTerm: cim.adjustmentAmount
+        range: integer
+        mandatory: true
+      shipmentProductPriceAdjustmentAmount:
+        propertyTerm: cim.shipmentProductPriceAdjustmentAmount
+        range: integer
+      shipmentProduct:
+        propertyTerm: cim.shipmentProduct
+        range: ShipmentProduct
+        mandatory: true
+        allowMultiple: true
+      description:
+        propertyTerm: cim.description
+        range: string
+        mandatory: true
+  SalesOrderTax:
+    classTerm: cim.SalesOrderTax
+    mapping:
+      salesOrderTaxAmount:
+        propertyTerm: cim.salesOrderTaxAmount
+        range: integer
+      taxRatePercent:
+        propertyTerm: cim.taxRatePercent
+        range: integer
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      taxAddressStreet2Text:
+        propertyTerm: cim.taxAddressStreet2Text
+        range: string
+      taxAddressStreet1Text:
+        propertyTerm: cim.taxAddressStreet1Text
+        range: string
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      taxAddressCityName:
+        propertyTerm: cim.taxAddressCityName
+        range: string
+      taxErrorMessageText:
+        propertyTerm: cim.taxErrorMessageText
+        range: string
+  RefundCreditMemoAllocation:
+    classTerm: cim.RefundCreditMemoAllocation
+    mapping:
+      name:
+        propertyTerm: cim.name
+        range: string
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+    extends: RefundAllocation
+  BundleProduct:
+    classTerm: cim.BundleProduct
+    mapping:
+      quantityUnitOfMeasure:
+        propertyTerm: cim.quantityUnitOfMeasure
+        range: string
+      bundledProductsSubstitutional:
+        propertyTerm: cim.bundledProductsSubstitutional
+        range: boolean
+        mandatory: true
+      tareWeight:
+        propertyTerm: cim.tareWeight
+        range: integer
+      bundledProductsSoldTogether:
+        propertyTerm: cim.bundledProductsSoldTogether
+        range: boolean
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      expectedWasteCount:
+        propertyTerm: cim.expectedWasteCount
+        range: integer
+      bundledProductsDecidedAtUse:
+        propertyTerm: cim.bundledProductsDecidedAtUse
+        range: boolean
+      quantityCount:
+        propertyTerm: cim.quantityCount
+        range: integer
+      weightUOM:
+        propertyTerm: cim.weightUOM
+        range: string
+      bundledProductsDecidesAvailability:
+        propertyTerm: cim.bundledProductsDecidesAvailability
+        range: boolean
+    extends: Product
+  PartyRole:
+    classTerm: cim.PartyRole
+  Seller:
+    classTerm: cim.Seller
+    mapping:
+      satisfactionScore:
+        propertyTerm: cim.satisfactionScore
+        range: integer
+      communityParticipationCount:
+        propertyTerm: cim.communityParticipationCount
+        range: integer
+      activeFromDate:
+        propertyTerm: cim.activeFromDate
+        range: date
+        mandatory: true
+      creditRating:
+        propertyTerm: cim.creditRating
+        range: integer
+      jointBusinessPlanExist:
+        propertyTerm: cim.jointBusinessPlanExist
+        range: boolean
+      demonstrationsGivenCount:
+        propertyTerm: cim.demonstrationsGivenCount
+        range: integer
+      inventoryValueAmount:
+        propertyTerm: cim.inventoryValueAmount
+        range: integer
+      successStoryCount:
+        propertyTerm: cim.successStoryCount
+        range: integer
+      opportunityInvolvementCount:
+        propertyTerm: cim.opportunityInvolvementCount
+        range: integer
+      customerSatisfactionScore:
+        propertyTerm: cim.customerSatisfactionScore
+        range: integer
+      salesAmount:
+        propertyTerm: cim.salesAmount
+        range: integer
+      leadGenerationCount:
+        propertyTerm: cim.leadGenerationCount
+        range: integer
+      marketingDevelopmentAmount:
+        propertyTerm: cim.marketingDevelopmentAmount
+        range: integer
+      estimatedPartnerGrossMargin:
+        propertyTerm: cim.estimatedPartnerGrossMargin
+        range: integer
+      trialParticipationCount:
+        propertyTerm: cim.trialParticipationCount
+        range: integer
+      documentationDownloadCount:
+        propertyTerm: cim.documentationDownloadCount
+        range: integer
+      productReturnRate:
+        propertyTerm: cim.productReturnRate
+        range: integer
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      activeToDate:
+        propertyTerm: cim.activeToDate
+        range: date
+      eventParticipationCount:
+        propertyTerm: cim.eventParticipationCount
+        range: integer
+      newCustomerAcquisitionCount:
+        propertyTerm: cim.newCustomerAcquisitionCount
+        range: integer
+      averageConvertedLeadAmount:
+        propertyTerm: cim.averageConvertedLeadAmount
+        range: integer
+      sellerType:
+        propertyTerm: cim.sellerType
+        range: string
+      trainingParticipationCount:
+        propertyTerm: cim.trainingParticipationCount
+        range: integer
+      systemLoginCount:
+        propertyTerm: cim.systemLoginCount
+        range: integer
+      opportunityWinRate:
+        propertyTerm: cim.opportunityWinRate
+        range: integer
+      trainingCertificationCount:
+        propertyTerm: cim.trainingCertificationCount
+        range: integer
+      majorPostSaleSupportNeeded:
+        propertyTerm: cim.majorPostSaleSupportNeeded
+        range: boolean
+    extends: PartyRole
+  ProductCollateral:
+    classTerm: cim.ProductCollateral
+    mapping:
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      uRL:
+        propertyTerm: cim.uRL
+        range: string
+        mandatory: true
+      product:
+        propertyTerm: cim.product
+        range: Product
+        mandatory: true
+        allowMultiple: true
+  PaymentGatewayPaymentLog:
+    classTerm: cim.PaymentGatewayPaymentLog
+    mapping:
+      name:
+        propertyTerm: cim.name
+        range: string
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      payment:
+        propertyTerm: cim.payment
+        range: Payment
+        mandatory: true
+        allowMultiple: true
+    extends: PaymentGatewayInteractionLog
+  ShipmentDocument:
+    classTerm: cim.ShipmentDocument
+    mapping:
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      shipment:
+        propertyTerm: cim.shipment
+        range: Shipment
+        mandatory: true
+        allowMultiple: true
+  PaymentCard:
+    classTerm: cim.PaymentCard
+    mapping:
+      numberLastDigits:
+        propertyTerm: cim.numberLastDigits
+        range: string
+        mandatory: true
+      maskedNumber:
+        propertyTerm: cim.maskedNumber
+        range: string
+        mandatory: true
+      billToFirstName:
+        propertyTerm: cim.billToFirstName
+        range: string
+      expirationMonth:
+        propertyTerm: cim.expirationMonth
+        range: string
+        mandatory: true
+      companyName:
+        propertyTerm: cim.companyName
+        range: string
+      issueNumber:
+        propertyTerm: cim.issueNumber
+        range: string
+        mandatory: true
+      paymentCardType:
+        propertyTerm: cim.paymentCardType
+        range: string
+        mandatory: true
+      expirationYear:
+        propertyTerm: cim.expirationYear
+        range: string
+        mandatory: true
+      cardToken:
+        propertyTerm: cim.cardToken
+        range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      creditCardExpired:
+        propertyTerm: cim.creditCardExpired
+        range: boolean
+        mandatory: true
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      derivedCardTypeCode:
+        propertyTerm: cim.derivedCardTypeCode
+        range: string
+      billToLastName:
+        propertyTerm: cim.billToLastName
+        range: string
+      billToStreet:
+        propertyTerm: cim.billToStreet
+        range: string
+      billToStreet2:
+        propertyTerm: cim.billToStreet2
+        range: string
+      cardHolderName:
+        propertyTerm: cim.cardHolderName
+        range: string
+        mandatory: true
+      billToCity:
+        propertyTerm: cim.billToCity
+        range: string
+    extends: PaymentMethod
+  PaymentGatewayResultCode:
+    classTerm: cim.PaymentGatewayResultCode
+    mapping:
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      description:
+        propertyTerm: cim.description
+        range: string
+        mandatory: true
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+  SalesOrderDeliveryGroup:
+    classTerm: cim.SalesOrderDeliveryGroup
+    mapping:
+      totalDeliveryAdjustmentTaxAmount:
+        propertyTerm: cim.totalDeliveryAdjustmentTaxAmount
+        range: integer
+      giftMessageText:
+        propertyTerm: cim.giftMessageText
+        range: string
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      description:
+        propertyTerm: cim.description
+        range: string
+        mandatory: true
+      contactPointAddress:
+        propertyTerm: cim.contactPointAddress
+        range: ContactPointAddress
+        mandatory: true
+        allowMultiple: true
+      accountContact:
+        propertyTerm: cim.accountContact
+        range: AccountContact
+        mandatory: true
+        allowMultiple: true
+      totalProductTaxAmount:
+        propertyTerm: cim.totalProductTaxAmount
+        range: integer
+      grandTotalDeliveryAmount:
+        propertyTerm: cim.grandTotalDeliveryAmount
+        range: integer
+      totalDeliveryChargeAmount:
+        propertyTerm: cim.totalDeliveryChargeAmount
+        range: integer
+      promisedDate:
+        propertyTerm: cim.promisedDate
+        range: date
+      originalDeliveryGroup:
+        propertyTerm: cim.originalDeliveryGroup
+        range: SalesOrderDeliveryGroup
+        allowMultiple: true
+      totalDeliveryChargeTaxAmount:
+        propertyTerm: cim.totalDeliveryChargeTaxAmount
+        range: integer
+      totalPriceAmount:
+        propertyTerm: cim.totalPriceAmount
+        range: integer
+        mandatory: true
+      totalUnitPriceAmount:
+        propertyTerm: cim.totalUnitPriceAmount
+        range: integer
+        mandatory: true
+      deliveryInstructionsText:
+        propertyTerm: cim.deliveryInstructionsText
+        range: string
+      totalDeliveryTaxAmount:
+        propertyTerm: cim.totalDeliveryTaxAmount
+        range: integer
+      salesOrderDeliveryStatus:
+        propertyTerm: cim.salesOrderDeliveryStatus
+        range: string
+        mandatory: true
+      totalTaxAmount:
+        propertyTerm: cim.totalTaxAmount
+        range: integer
+      salesOrder:
+        propertyTerm: cim.salesOrder
+        range: SalesOrder
+        mandatory: true
+        allowMultiple: true
+      totalDeliveryAdjustmentAmount:
+        propertyTerm: cim.totalDeliveryAdjustmentAmount
+        range: integer
+      salesOrderDeliveryGroupNumber:
+        propertyTerm: cim.salesOrderDeliveryGroupNumber
+        range: string
+        mandatory: true
+      desiredDeliveryDate:
+        propertyTerm: cim.desiredDeliveryDate
+        range: date
+      isGift:
+        propertyTerm: cim.isGift
+        range: boolean
+      orderDeliveryMethod:
+        propertyTerm: cim.orderDeliveryMethod
+        range: OrderDeliveryMethod
+        mandatory: true
+        allowMultiple: true
+  ShipmentProductPriceAdjustmentTax:
+    classTerm: cim.ShipmentProductPriceAdjustmentTax
+    mapping:
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      shipmentProductPriceAdjustment:
+        propertyTerm: cim.shipmentProductPriceAdjustment
+        range: ShipmentProductPriceAdjustment
+        mandatory: true
+        allowMultiple: true
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+  ProductCategoryAttributeSet:
+    classTerm: cim.ProductCategoryAttributeSet
+    mapping:
+      productCategory:
+        propertyTerm: cim.productCategory
+        range: ProductCategory
+        mandatory: true
+        allowMultiple: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      attributeSet:
+        propertyTerm: cim.attributeSet
+        range: string
+        mandatory: true
+  PaymentGatewayProvider:
+    classTerm: cim.PaymentGatewayProvider
+    mapping:
+      namespacePrefixText:
+        propertyTerm: cim.namespacePrefixText
+        range: string
+        mandatory: true
+      apexAdapterClassName:
+        propertyTerm: cim.apexAdapterClassName
+        range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      developerName:
+        propertyTerm: cim.developerName
+        range: string
+        mandatory: true
+      paymentGatewayProviderCommentText:
+        propertyTerm: cim.paymentGatewayProviderCommentText
+        range: string
+      paymentGatewayProviderName:
+        propertyTerm: cim.paymentGatewayProviderName
+        range: string
+        mandatory: true
+  Coupon:
+    classTerm: cim.Coupon
+    mapping:
+      discountAmount:
+        propertyTerm: cim.discountAmount
+        range: integer
+      couponCount:
+        propertyTerm: cim.couponCount
+        range: integer
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      secondaryScanCodeLabel:
+        propertyTerm: cim.secondaryScanCodeLabel
+        range: string
+      isReturnCoupon:
+        propertyTerm: cim.isReturnCoupon
+        range: boolean
+      scanCode:
+        propertyTerm: cim.scanCode
+        range: string
+      couponCode:
+        propertyTerm: cim.couponCode
+        range: string
+      returnCouponReason:
+        propertyTerm: cim.returnCouponReason
+        range: string
+      isValid:
+        propertyTerm: cim.isValid
+        range: boolean
+      couponStatus:
+        propertyTerm: cim.couponStatus
+        range: string
+      manufacturer:
+        propertyTerm: cim.manufacturer
+        range: Party
+        allowMultiple: true
+      primaryScanCodeLabel:
+        propertyTerm: cim.primaryScanCodeLabel
+        range: string
+      discountPercentage:
+        propertyTerm: cim.discountPercentage
+        range: integer
+      expirationDate:
+        propertyTerm: cim.expirationDate
+        range: date
+    extends: PaymentMethod
+  PaymentAuthorizationReversal:
+    classTerm: cim.PaymentAuthorizationReversal
+    mapping:
+      paymentGatewayDate:
+        propertyTerm: cim.paymentGatewayDate
+        range: time
+        mandatory: true
+      paymentGatewayResult:
+        propertyTerm: cim.paymentGatewayResult
+        range: PaymentGatewayResultCode
+        mandatory: true
+        allowMultiple: true
+      paymentAuthorizationReversalCommentText:
+        propertyTerm: cim.paymentAuthorizationReversalCommentText
+        range: string
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      capturePayment:
+        propertyTerm: cim.capturePayment
+        range: CapturePayment
+        allowMultiple: true
+      paymentAuthorizationReversalName:
+        propertyTerm: cim.paymentAuthorizationReversalName
+        range: string
+      paymentGatewayReferenceNumber:
+        propertyTerm: cim.paymentGatewayReferenceNumber
+        range: string
+        mandatory: true
+      customerAuthorizationReversalPhone:
+        propertyTerm: cim.customerAuthorizationReversalPhone
+        range: string
+      externalCreatedDate:
+        propertyTerm: cim.externalCreatedDate
+        range: date
+        mandatory: true
+      macAddress:
+        propertyTerm: cim.macAddress
+        range: string
+      authorizationReversalAmount:
+        propertyTerm: cim.authorizationReversalAmount
+        range: integer
+        mandatory: true
+      paymentAuthorizationReversalStatus:
+        propertyTerm: cim.paymentAuthorizationReversalStatus
+        range: string
+        mandatory: true
+      paymentAuthorization:
+        propertyTerm: cim.paymentAuthorization
+        range: PaymentAuthorization
+        mandatory: true
+        allowMultiple: true
+      iPAddress:
+        propertyTerm: cim.iPAddress
+        range: string
+      customerAuthorizationReversalEmail:
+        propertyTerm: cim.customerAuthorizationReversalEmail
+        range: string
+      paymentAuthorizationProcessingMode:
+        propertyTerm: cim.paymentAuthorizationProcessingMode
+        range: string
+        mandatory: true
+      paymentGatewayInternalReferenceNumber:
+        propertyTerm: cim.paymentGatewayInternalReferenceNumber
+        range: string
+        mandatory: true
+      requestDate:
+        propertyTerm: cim.requestDate
+        range: time
+        mandatory: true
+  PaymentAllocation:
+    classTerm: cim.PaymentAllocation
+    mapping:
+      externalCreatedDate:
+        propertyTerm: cim.externalCreatedDate
+        range: date
+        mandatory: true
+      relatedPaymentAllocation:
+        propertyTerm: cim.relatedPaymentAllocation
+        range: PaymentAllocation
+        mandatory: true
+        allowMultiple: true
+      paymentAllocationName:
+        propertyTerm: cim.paymentAllocationName
+        range: string
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+  PaymentMethodType:
+    classTerm: cim.PaymentMethodType
+    mapping:
+      maxPerPeriodTransactionCount:
+        propertyTerm: cim.maxPerPeriodTransactionCount
+        range: integer
+      typeDescription:
+        propertyTerm: cim.typeDescription
+        range: string
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      name:
+        propertyTerm: cim.name
+        range: string
+      maxTransactionAmount:
+        propertyTerm: cim.maxTransactionAmount
+        range: integer
+      mediaType:
+        propertyTerm: cim.mediaType
+        range: string
+      useMinimumAgeYear:
+        propertyTerm: cim.useMinimumAgeYear
+        range: integer
+      typeRequiredIdentification:
+        propertyTerm: cim.typeRequiredIdentification
+        range: string
+      maxPerPeriodAmount:
+        propertyTerm: cim.maxPerPeriodAmount
+        range: integer
+  AttributeSetTranslation:
+    classTerm: cim.AttributeSetTranslation
+    mapping:
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      attributeSet:
+        propertyTerm: cim.attributeSet
+        range: string
+        mandatory: true
+      translatedName:
+        propertyTerm: cim.translatedName
+        range: string
+        mandatory: true
+documents:
+  root:
+    declares:
+      SalesOrderProductNoteSchemas: SalesOrderProductNote
+      PriceAdjustmentGroupSchemas: PriceAdjustmentGroup
+      PaymentTreatmentSchemas: PaymentTreatment
+      AccountSchemas: Account
+      PaymentGatewayInteractionTypeSchemas: PaymentGatewayInteractionType
+      PersonLifeEventSchemas: PersonLifeEvent
+      PersonEmploymentSchemas: PersonEmployment
+      ProductRelationshipTypeSchemas: ProductRelationshipType
+      PaymentMethodSchemas: PaymentMethod
+      ShipmentStatusSchemas: ShipmentStatus
+      AccountContactSchemas: AccountContact
+      AttributeValueTranslationSchemas: AttributeValueTranslation
+      CustomerStatusHistorySchemas: CustomerStatusHistory
+      PaymentGatewayAuthorizationLogSchemas: PaymentGatewayAuthorizationLog
+      CompetitorSchemas: Competitor
+      CapturePaymentSchemas: CapturePayment
+      ContactPointAppSchemas: ContactPointApp
+      PriceBookEntrySchemas: PriceBookEntry
+      UncategorizedPartySchemas: UncategorizedParty
+      GoodsProductSchemas: GoodsProduct
+      ShippingMethodSchemas: ShippingMethod
+      PaymentGroupSchemas: PaymentGroup
+      RefundPaymentSchemas: RefundPayment
+      SalesOrderPriceAdjustmentSchemas: SalesOrderPriceAdjustment
+      ServiceProductSchemas: ServiceProduct
+      HouseholdSchemas: Household
+      PaymentCreditMemoAllocationSchemas: PaymentCreditMemoAllocation
+      SupplierSchemas: Supplier
+      CreditTenderSchemas: CreditTender
+      PaymentGatewaySchemas: PaymentGateway
+      DeviceUserSessionSchemas: DeviceUserSession
+      RefundAllocationSchemas: RefundAllocation
+      SalesOrderProductGroupSchemas: SalesOrderProductGroup
+      ProductSchemas: Product
+      ProductImageTranslationSchemas: ProductImageTranslation
+      PartyAdditionalNameSchemas: PartyAdditionalName
+      PersonLanguageSchemas: PersonLanguage
+      CustomerSchemas: Customer
+      AccountContactRoleSchemas: AccountContactRole
+      PersonEducationSchemas: PersonEducation
+      AttributeTranslationSchemas: AttributeTranslation
+      PartyIdentificationSchemas: PartyIdentification
+      ProductValidityTimePeriodUOMSchemas: ProductValidityTimePeriodUOM
+      PartyRelationshipTypeSchemas: PartyRelationshipType
+      ShipmentPackageSchemas: ShipmentPackage
+      ProductImageSchemas: ProductImage
+      ContactPointLocationSchemas: ContactPointLocation
+      ProductCatalogSchemas: ProductCatalog
+      PaymentAuthorizationSchemas: PaymentAuthorization
+      ProductAttributeValueSchemas: ProductAttributeValue
+      ContactPointSocialSchemas: ContactPointSocial
+      PaymentTreatmentMethodSchemas: PaymentTreatmentMethod
+      PaymentCreditMemoApplicationSchemas: PaymentCreditMemoApplication
+      BillingFrequencySchemas: BillingFrequency
+      IndividualSchemas: Individual
+      SalesOrderPaymentSummarySchemas: SalesOrderPaymentSummary
+      PartySchemas: Party
+      ContactPointEmailSchemas: ContactPointEmail
+      PaymentGatewayAuthReversalLogSchemas: PaymentGatewayAuthReversalLog
+      ProductCatalogTranslationSchemas: ProductCatalogTranslation
+      ShipmentSchemas: Shipment
+      PartyRelatedPartySchemas: PartyRelatedParty
+      ProductCategorySchemas: ProductCategory
+      SalesOrderProductReasonSchemas: SalesOrderProductReason
+      ProductAttributeSetSchemas: ProductAttributeSet
+      SalesOrderChangeLogSchemas: SalesOrderChangeLog
+      PaymentInvoiceAllocationSchemas: PaymentInvoiceAllocation
+      ProductTranslationSchemas: ProductTranslation
+      SalesOrderProductTaxSchemas: SalesOrderProductTax
+      PaymentSchemas: Payment
+      ContactPointPhoneSchemas: ContactPointPhone
+      SalesChannelSchemas: SalesChannel
+      ContactPointSchemas: ContactPoint
+      PaymentInvoiceApplicationSchemas: PaymentInvoiceApplication
+      ShipmentProductSchemas: ShipmentProduct
+      ProductCategoryProductSchemas: ProductCategoryProduct
+      SalesOrderProductSchemas: SalesOrderProduct
+      SalesOrderSchemas: SalesOrder
+      BrandSchemas: Brand
+      RefundPaymentAllocationSchemas: RefundPaymentAllocation
+      PaymentPolicySchemas: PaymentPolicy
+      ContactPointAddressSchemas: ContactPointAddress
+      AccountPartnerSchemas: AccountPartner
+      PaymentGatewayInteractionLogSchemas: PaymentGatewayInteractionLog
+      ContactPointTypeSchemas: ContactPointType
+      PaymentApplicationSchemas: PaymentApplication
+      PartyWebAddressSchemas: PartyWebAddress
+      AttributeValueSchemas: AttributeValue
+      ProductCategoryTranslationSchemas: ProductCategoryTranslation
+      OrderDeliveryMethodSchemas: OrderDeliveryMethod
+      LeadSchemas: Lead
+      InternalBusinessUnitSchemas: InternalBusinessUnit
+      ProductRelatedProductSchemas: ProductRelatedProduct
+      ShipmentProductPriceAdjustmentSchemas: ShipmentProductPriceAdjustment
+      SalesOrderTaxSchemas: SalesOrderTax
+      RefundCreditMemoAllocationSchemas: RefundCreditMemoAllocation
+      BundleProductSchemas: BundleProduct
+      PartyRoleSchemas: PartyRole
+      SellerSchemas: Seller
+      ProductCollateralSchemas: ProductCollateral
+      PaymentGatewayPaymentLogSchemas: PaymentGatewayPaymentLog
+      ShipmentDocumentSchemas: ShipmentDocument
+      PaymentCardSchemas: PaymentCard
+      PaymentGatewayResultCodeSchemas: PaymentGatewayResultCode
+      SalesOrderDeliveryGroupSchemas: SalesOrderDeliveryGroup
+      ShipmentProductPriceAdjustmentTaxSchemas: ShipmentProductPriceAdjustmentTax
+      ProductCategoryAttributeSetSchemas: ProductCategoryAttributeSet
+      PaymentGatewayProviderSchemas: PaymentGatewayProvider
+      CouponSchemas: Coupon
+      PaymentAuthorizationReversalSchemas: PaymentAuthorizationReversal
+      PaymentAllocationSchemas: PaymentAllocation
+      PaymentMethodTypeSchemas: PaymentMethodType
+      AttributeSetTranslationSchemas: AttributeSetTranslation
+  fragments:
+    encodes:
+      SalesOrderProductNote: SalesOrderProductNote
+      PriceAdjustmentGroup: PriceAdjustmentGroup
+      PaymentTreatment: PaymentTreatment
+      Account: Account
+      PaymentGatewayInteractionType: PaymentGatewayInteractionType
+      PersonLifeEvent: PersonLifeEvent
+      PersonEmployment: PersonEmployment
+      ProductRelationshipType: ProductRelationshipType
+      PaymentMethod: PaymentMethod
+      ShipmentStatus: ShipmentStatus
+      AccountContact: AccountContact
+      AttributeValueTranslation: AttributeValueTranslation
+      CustomerStatusHistory: CustomerStatusHistory
+      PaymentGatewayAuthorizationLog: PaymentGatewayAuthorizationLog
+      Competitor: Competitor
+      CapturePayment: CapturePayment
+      ContactPointApp: ContactPointApp
+      PriceBookEntry: PriceBookEntry
+      UncategorizedParty: UncategorizedParty
+      GoodsProduct: GoodsProduct
+      ShippingMethod: ShippingMethod
+      PaymentGroup: PaymentGroup
+      RefundPayment: RefundPayment
+      SalesOrderPriceAdjustment: SalesOrderPriceAdjustment
+      ServiceProduct: ServiceProduct
+      Household: Household
+      PaymentCreditMemoAllocation: PaymentCreditMemoAllocation
+      Supplier: Supplier
+      CreditTender: CreditTender
+      PaymentGateway: PaymentGateway
+      DeviceUserSession: DeviceUserSession
+      RefundAllocation: RefundAllocation
+      SalesOrderProductGroup: SalesOrderProductGroup
+      Product: Product
+      ProductImageTranslation: ProductImageTranslation
+      PartyAdditionalName: PartyAdditionalName
+      PersonLanguage: PersonLanguage
+      Customer: Customer
+      AccountContactRole: AccountContactRole
+      PersonEducation: PersonEducation
+      AttributeTranslation: AttributeTranslation
+      PartyIdentification: PartyIdentification
+      ProductValidityTimePeriodUOM: ProductValidityTimePeriodUOM
+      PartyRelationshipType: PartyRelationshipType
+      ShipmentPackage: ShipmentPackage
+      ProductImage: ProductImage
+      ContactPointLocation: ContactPointLocation
+      ProductCatalog: ProductCatalog
+      PaymentAuthorization: PaymentAuthorization
+      ProductAttributeValue: ProductAttributeValue
+      ContactPointSocial: ContactPointSocial
+      PaymentTreatmentMethod: PaymentTreatmentMethod
+      PaymentCreditMemoApplication: PaymentCreditMemoApplication
+      BillingFrequency: BillingFrequency
+      Individual: Individual
+      SalesOrderPaymentSummary: SalesOrderPaymentSummary
+      Party: Party
+      ContactPointEmail: ContactPointEmail
+      PaymentGatewayAuthReversalLog: PaymentGatewayAuthReversalLog
+      ProductCatalogTranslation: ProductCatalogTranslation
+      Shipment: Shipment
+      PartyRelatedParty: PartyRelatedParty
+      ProductCategory: ProductCategory
+      SalesOrderProductReason: SalesOrderProductReason
+      ProductAttributeSet: ProductAttributeSet
+      SalesOrderChangeLog: SalesOrderChangeLog
+      PaymentInvoiceAllocation: PaymentInvoiceAllocation
+      ProductTranslation: ProductTranslation
+      SalesOrderProductTax: SalesOrderProductTax
+      Payment: Payment
+      ContactPointPhone: ContactPointPhone
+      SalesChannel: SalesChannel
+      ContactPoint: ContactPoint
+      PaymentInvoiceApplication: PaymentInvoiceApplication
+      ShipmentProduct: ShipmentProduct
+      ProductCategoryProduct: ProductCategoryProduct
+      SalesOrderProduct: SalesOrderProduct
+      SalesOrder: SalesOrder
+      Brand: Brand
+      RefundPaymentAllocation: RefundPaymentAllocation
+      PaymentPolicy: PaymentPolicy
+      ContactPointAddress: ContactPointAddress
+      AccountPartner: AccountPartner
+      PaymentGatewayInteractionLog: PaymentGatewayInteractionLog
+      ContactPointType: ContactPointType
+      PaymentApplication: PaymentApplication
+      PartyWebAddress: PartyWebAddress
+      AttributeValue: AttributeValue
+      ProductCategoryTranslation: ProductCategoryTranslation
+      OrderDeliveryMethod: OrderDeliveryMethod
+      Lead: Lead
+      InternalBusinessUnit: InternalBusinessUnit
+      ProductRelatedProduct: ProductRelatedProduct
+      ShipmentProductPriceAdjustment: ShipmentProductPriceAdjustment
+      SalesOrderTax: SalesOrderTax
+      RefundCreditMemoAllocation: RefundCreditMemoAllocation
+      BundleProduct: BundleProduct
+      PartyRole: PartyRole
+      Seller: Seller
+      ProductCollateral: ProductCollateral
+      PaymentGatewayPaymentLog: PaymentGatewayPaymentLog
+      ShipmentDocument: ShipmentDocument
+      PaymentCard: PaymentCard
+      PaymentGatewayResultCode: PaymentGatewayResultCode
+      SalesOrderDeliveryGroup: SalesOrderDeliveryGroup
+      ShipmentProductPriceAdjustmentTax: ShipmentProductPriceAdjustmentTax
+      ProductCategoryAttributeSet: ProductCategoryAttributeSet
+      PaymentGatewayProvider: PaymentGatewayProvider
+      Coupon: Coupon
+      PaymentAuthorizationReversal: PaymentAuthorizationReversal
+      PaymentAllocation: PaymentAllocation
+      PaymentMethodType: PaymentMethodType
+      AttributeSetTranslation: AttributeSetTranslation

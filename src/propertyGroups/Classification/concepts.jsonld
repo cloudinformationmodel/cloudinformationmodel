@@ -1,0 +1,44 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "ClassificationPropertyGroup",
+  "name": "Classification Property Group",
+  "@type": "PropertyGroup",
+  "version": "0.1",
+  "propertyConcepts": [
+    {
+      "@id": "nAICS",
+      "@type": "Property",
+      "description": "Internal Id that references a 6 digit North American Industry Identifier",
+      "name": "NAICS",
+      "range": "DataType"
+    },
+    {
+      "@id": "sIC",
+      "@type": "Property",
+      "description": "Internal Id that references a 4 digit Standard Industry Classification code",
+      "name": "SIC",
+      "range": "DataType"
+    },
+    {
+      "@id": "iSIC",
+      "@type": "Property",
+      "description": "Internal Id that references a code from the United Nations International Standard Industrial Classification",
+      "name": "ISIC",
+      "range": "DataType"
+    },
+    {
+      "@id": "primaryIndustryName",
+      "@type": "Property",
+      "description": "An industry associated with this business and is free text (non validated)",
+      "name": "Primary Industry Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "salesChannelType",
+      "@type": "Property",
+      "description": "The category of the Sales Channel, for example retail store, web store, partner, or direct marketing",
+      "name": "Sales Channel Type",
+      "range": "DataType"
+    }
+  ]
+}

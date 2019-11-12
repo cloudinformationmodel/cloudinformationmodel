@@ -1,0 +1,65 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "EngagementPropertyGroup",
+  "name": "Engagement Property Group",
+  "@type": "PropertyGroup",
+  "version": "0.1",
+  "propertyConcepts": [
+    {
+      "@id": "communityParticipationCount",
+      "@type": "Property",
+      "description": "How active is the seller in our ecosystem online by answering questions",
+      "name": "Community Participation Count",
+      "range": "DataType"
+    },
+    {
+      "@id": "trialParticipationCount",
+      "@type": "Property",
+      "description": "Total number of software trials the seller been part of",
+      "name": "Trial Participation Count",
+      "range": "DataType"
+    },
+    {
+      "@id": "trainingParticipationCount",
+      "@type": "Property",
+      "description": "How many people from seller have been trained",
+      "name": "Training Participation Count",
+      "range": "DataType"
+    },
+    {
+      "@id": "trainingCertificationCount",
+      "@type": "Property",
+      "description": "How many people from seller have been certified on our products",
+      "name": "Training Certification Count",
+      "range": "DataType"
+    },
+    {
+      "@id": "eventParticipationCount",
+      "@type": "Property",
+      "description": "How many sales or marketing events the seller attended",
+      "name": "Event Participation Count",
+      "range": "DataType"
+    },
+    {
+      "@id": "documentationDownloadCount",
+      "@type": "Property",
+      "description": "How many e.g. white papers have the seller accessed",
+      "name": "Documentation Download Count",
+      "range": "DataType"
+    },
+    {
+      "@id": "systemLoginCount",
+      "@type": "Property",
+      "description": "How many times the seller accessed our online information which indicate dedication",
+      "name": "System Login Count",
+      "range": "DataType"
+    },
+    {
+      "@id": "jointBusinessPlanExist",
+      "@type": "Property",
+      "description": "Have we established a business plan or not with the seller",
+      "name": "Joint Business Plan Exist",
+      "range": "DataType"
+    }
+  ]
+}

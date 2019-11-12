@@ -1,0 +1,14 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "ShipmentSubjectArea",
+  "@type": "SubjectArea",
+  "version": "0.1",
+  "name": "Shipment",
+  "description": "Tracking the physical packages actually shipped for an order.",
+  "entityGroups": [
+    {
+      "@id": "ShipmentEntityGroup",
+      "name": "Shipment"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+#%Vocabulary 1.0
+base: http://cloudinformationmodel.org/model/
+vocabulary: AccountContact Property Group
+propertyTerms:
+  contactAddress:
+    displayName: Contact Address
+    description: Reference to an address for the Lead
+    range: ContactPointAddress

@@ -1,0 +1,315 @@
+#%Vocabulary 1.0
+base: http://cloudinformationmodel.org/model/
+vocabulary: Payment
+usage: "Example Entities included: Payment, Payment Group, Payment Authorization, Payment Gateway"
+classTerms:
+  PaymentGatewayInteractionType:
+    displayName: Payment Gateway Interaction Type
+    description: Reasons for accessing the Payment Gateway, including authorization, Sale and Void.
+    properties:
+      - name
+      - id
+      - description
+  Payment:
+    displayName: Payment
+    description: An amount of currency paid.
+    properties:
+      - paymentAmount
+      - internalBusinessUnit
+      - name
+      - latestGatewayReferenceNumber
+      - paymentType
+      - externalCreatedDate
+      - netAppliedAmount
+      - latestGatewayInternalResult
+      - latestPaymentGatewayMessageText
+      - paymentGroup
+      - salesOrderPaymentSummary
+      - paymentNumber
+      - paymentTreatment
+      - id
+      - account
+      - customerPhoneNumber
+      - authorizationProcessingMode
+      - customerEmailAddress
+      - macAddress
+      - latestGatewayInternalReferenceNumber
+      - latestGatewayResultCode
+      - paymentGateway
+      - balanceAmount
+      - iPAddress
+      - paymentStatus
+      - latestGatewayDate
+      - paymentCancellationDate
+      - paymentMethod
+      - commentText
+      - totalUnappliedAmount
+      - totalAppliedAmount
+      - paymentEffectiveDate
+  PaymentGatewayInteractionLog:
+    displayName: Payment Gateway Interaction Log
+    description: A log record of all messages exchanged with merchants made via the payment gateway, for authorizations and payments.
+    properties:
+      - paymentGatewayInteractionLogName
+      - paymentGatewayAuthorizationCode
+      - paymentGatewayReferenceNumber
+      - internalResultCode
+      - internalReferenceNumber
+      - paymentGatewayMessageText
+      - paymentGatewayAVSCode
+      - id
+      - paymentGatewayDate
+      - paymentGatewayResult
+      - paymentGatewayInteractionType
+      - paymentGatewayInteractionStatus
+  PaymentGatewayProvider:
+    displayName: Payment Gateway Provider
+    description: Stores class details needed for maintaining Apex adapter.
+    properties:
+      - developerName
+      - namespacePrefixText
+      - id
+      - paymentGatewayProviderName
+      - paymentGatewayProviderCommentText
+      - apexAdapterClassName
+  PaymentPolicy:
+    displayName: Payment Policy
+    description: This entity stores policy information for an org or an account which can be used to automate the process of payment application to invoice based on business needs.
+    properties:
+      - name
+      - paymentPolicyTreatmentSelection
+      - id
+      - description
+      - paymentPolicyStatus
+  PaymentGatewayResultCode:
+    displayName: Payment Gateway Result Code
+    description: The response from the Payment Gateway.
+    properties:
+      - name
+      - id
+      - description
+  PaymentApplication:
+    displayName: Payment Application
+    description: The designation of part or all of a Payment to satisfy a claim on the payment funds.
+    properties:
+      - paymentBalanceAmount
+      - name
+      - externalCreatedDate
+      - unappliedDate
+      - effectiveDate
+      - payment
+      - id
+      - appliedDate
+      - hasBeenUnapplied
+      - paymentApplicationType
+      - appliedAmount
+      - commentText
+  RefundAllocation:
+    displayName: Refund Allocation
+    description: Facilitates applying/unapplying a capture payment, or a credit memo to a Refund Payment.
+    properties:
+      - externalCreatedDate
+      - refundAllocationName
+      - unappliedDate
+      - effectiveDate
+      - refundBalanceAmount
+      - id
+      - appliedDate
+      - hasBeenUnapplied
+      - refundPayment
+      - relatedRefundAllocation
+      - allocatedAmount
+      - refundAllocationType
+  PaymentAuthorization:
+    displayName: Payment Authorization
+    description: An approval from the issuer of a payment instrument (usually a card), that the customer has sufficient funds to cover the cost of the transaction.
+    properties:
+      - paymentGatewayInternalReferenceNumber
+      - paymentGatewayReferenceNumber
+      - gatewayResultCodeDescription
+      - externalCreatedDate
+      - gatewayAuthorizationCode
+      - paymentGroup
+      - expirationDate
+      - paymentMethodID
+      - salesOrderPaymentSummary
+      - paymentAuthorizationNumber
+      - paymentAuthorizationProcessingMode
+      - id
+      - paymentGatewayDate
+      - paymentGatewayResult
+      - macAddress
+      - paymentAuthorizationCommentText
+      - paymentGateway
+      - iPAddress
+      - requestDate
+      - totalPaymentCaptureAmount
+      - totalAuthorizationReversalAmount
+      - gatewayReferenceDetailsText
+      - paymentAuthorizationStatus
+      - authorizationAmount
+      - availableBalanceAmount
+  PaymentGroup:
+    displayName: Payment Group
+    description: Payment Group provides a way to associate payments and payment gateway events, where the payment is not associated with a Sales Order.
+    properties:
+      - id
+      - totalPaymentAmount
+      - totalAuthorizationAmount
+      - paymentGroupNumber
+      - totalReversalAmount
+  PaymentTreatmentMethod:
+    displayName: Payment Treatment Method
+    description: Represents a specific algorithm or method to apply. For example - pay for taxes first, pay for charges first, pay for oldest due invoice first etc. It can also point to a rule based on which application can be done. Treatment has a method.
+    properties:
+      - paymentTreatmentMethodName
+      - paymentTreatmentMethodCode
+      - id
+      - paymentTreatmentMethodDescription
+  PaymentGatewayAuthorizationLog:
+    displayName: Payment Gateway Authorization Log
+    description: A log record of all requests made to financial institutions, made via the payment gateway, to authorize payments.
+    extends: PaymentGatewayInteractionLog
+    properties:
+      - name
+      - id
+      - paymentAuthorization
+  PaymentGatewayAuthReversalLog:
+    displayName: Payment Gateway Authorization Reversal Log
+    description: A log record of all requests made to financial institutions, made via the payment gateway, to cancel payment authorizations.
+    extends: PaymentGatewayInteractionLog
+    properties:
+      - name
+      - paymentAuthorizationReversal
+      - id
+  RefundPaymentAllocation:
+    displayName: Refund Payment Allocation
+    description: Facilitates applying/unapplying refund balance to a payment.
+    extends: RefundAllocation
+    properties:
+      - paymentBalanceAmount
+      - refundPaymentAllocationName
+      - refundAllocationCommentsDate
+      - refundAllocationCommentText
+      - id
+      - creditMemoBalanceAmount
+      - capturePayment
+  RefundPayment:
+    displayName: Refund Payment
+    description: Represents a repayment made, typically to a customer who isn’t satisfied with the goods or services purchased. Refunds are typically made after a payment has already been received from customers
+    extends: Payment
+    properties:
+      - name
+      - externalCreatedDate
+      - id
+  CapturePayment:
+    displayName: Capture Payment
+    description: The transfer of money from the customer's account to the merchant's account.
+    extends: Payment
+    properties:
+      - name
+      - id
+      - isFinalCapture
+      - paymentAuthorization
+      - capturePaymentType
+      - handlingFeeAmount
+  PaymentAllocation:
+    displayName: Payment Allocation
+    description: A Payment Application may be further broken down, to allocate payment funds to one or more line items within an Invoice or Credit Memo
+    properties:
+      - paymentAllocationName
+      - externalCreatedDate
+      - id
+      - relatedPaymentAllocation
+  PaymentCreditMemoApplication:
+    displayName: Payment Credit Memo Application
+    description: Facilitates applying/unapplying payment balance to a credit memo.
+    extends: PaymentApplication
+    properties:
+      - name
+      - id
+  PaymentCreditMemoAllocation:
+    displayName: Payment Credit Memo Allocation
+    description: Facilitates applying a Payment Application to the line items of a Credit Memo.
+    extends: PaymentAllocation
+    properties:
+      - name
+      - id
+      - appliedAmount
+  PaymentInvoiceAllocation:
+    displayName: Payment Invoice Allocation
+    description: Facilitates applying a Payment Application to the line items of an Invoice.
+    extends: PaymentAllocation
+    properties:
+      - paymentInvoiceAllocationName
+      - id
+      - paymentInvoiceApplication
+      - appliedAmount
+      - invoiceBalanceAmount
+  PaymentInvoiceApplication:
+    displayName: Payment Invoice Application
+    description: Facilitates applying/unapplying payment balance to an Invoice.
+    extends: PaymentApplication
+    properties:
+      - paymentInvoiceApplicationName
+      - id
+      - invoiceBalanceAmount
+      - paymentInvoiceApplicationType
+  PaymentGatewayPaymentLog:
+    displayName: Payment Gateway Payment Log
+    description: A log record of all messages originating with financial institutions that previously provided payment authorizations, that payments have been deducted from customers' accounts.
+    extends: PaymentGatewayInteractionLog
+    properties:
+      - name
+      - payment
+      - id
+  PaymentGateway:
+    displayName: Payment Gateway
+    description: Holds the payment gateway merchant details which are used to interact external payment systems.
+    properties:
+      - paymentGatewayCommentText
+      - systemCredential
+      - name
+      - id
+      - paymentGatewayStatus
+      - paymentGatewayProvider
+  PaymentTreatment:
+    displayName: Payment Treatment
+    description: This entity has the information which controls the way in which payment can be applied based on a legal entity or workflow. A policy has multiple treatments associated.
+    properties:
+      - id
+      - shouldAutoInvoice
+      - paymentPolicy
+      - paymentTreatmentName
+      - paymentTreatmentMethod
+      - paymentTreatmentStatus
+      - paymentApplicationLevel
+  PaymentAuthorizationReversal:
+    displayName: Payment Authorization Reversal
+    description: An authorization reversal is a message that alerts the issuer that part or all of a sale has been cancelled and the authorization hold should be rescinded.
+    properties:
+      - paymentGatewayInternalReferenceNumber
+      - paymentGatewayReferenceNumber
+      - paymentAuthorizationReversalCommentText
+      - customerAuthorizationReversalEmail
+      - externalCreatedDate
+      - authorizationReversalAmount
+      - paymentAuthorizationProcessingMode
+      - id
+      - paymentGatewayDate
+      - paymentGatewayResult
+      - paymentAuthorization
+      - macAddress
+      - paymentAuthorizationReversalName
+      - customerAuthorizationReversalPhone
+      - paymentAuthorizationReversalStatus
+      - iPAddress
+      - requestDate
+      - capturePayment
+  RefundCreditMemoAllocation:
+    displayName: Refund Credit Memo Allocation
+    description: Facilitates applying/unapplying refund balance to a credit memo.
+    extends: RefundAllocation
+    properties:
+      - name
+      - id

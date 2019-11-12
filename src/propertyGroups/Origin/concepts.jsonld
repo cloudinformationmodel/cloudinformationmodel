@@ -1,0 +1,23 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "OriginPropertyGroup",
+  "name": "Origin Property Group",
+  "@type": "PropertyGroup",
+  "version": "0.1",
+  "propertyConcepts": [
+    {
+      "@id": "lotIdentifier",
+      "@type": "Property",
+      "description": "If item was made same time as others the lot identifier state what manufacturer called that group",
+      "name": "Lot Identifier",
+      "range": "DataType"
+    },
+    {
+      "@id": "externalSourceRecord",
+      "@type": "Property",
+      "description": "Reference to the record id in the external system the product originated from",
+      "name": "External Source Record Id",
+      "range": "DataType"
+    }
+  ]
+}

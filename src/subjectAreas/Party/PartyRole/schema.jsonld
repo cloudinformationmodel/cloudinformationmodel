@@ -1,0 +1,558 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "PartyRoleEntityGroup",
+  "@type": "EntityGroup",
+  "version": "0.1",
+  "schemas": [
+    {
+      "@type": "Shape",
+      "@id": "Customer",
+      "and": [
+        {
+          "@id": "PartyRole"
+        },
+        {
+          "properties": [
+            {
+              "path": "customerSatisfactionScore",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "churnScore",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "netPromoterScore",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "last12MonthsSupportCallCount",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "last24MonthsNewRevenueAmount",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "last12MonthsNewRevenueAmount",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "totalProfitContributionAmount",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "totalContractedAmount",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "totalBookingsAmount",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "totalLifeTimeValue",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "marketingEmailResponseRate",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "originatingCustomerSource",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "prospectRating",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "customerStatus",
+              "datatype": "xsd:string",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "customerNumber",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "id",
+              "datatype": "cim:id",
+              "maxCount": "1",
+              "minCount": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "Seller",
+      "and": [
+        {
+          "@id": "PartyRole"
+        },
+        {
+          "properties": [
+            {
+              "path": "newCustomerAcquisitionCount",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "estimatedPartnerGrossMargin",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "opportunityWinRate",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "opportunityInvolvementCount",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "demonstrationsGivenCount",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "averageConvertedLeadAmount",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "leadGenerationCount",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "creditRating",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "majorPostSaleSupportNeeded",
+              "datatype": "xsd:boolean",
+              "maxCount": "1"
+            },
+            {
+              "path": "productReturnRate",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "inventoryValueAmount",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "marketingDevelopmentAmount",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "jointBusinessPlanExist",
+              "datatype": "xsd:boolean",
+              "maxCount": "1"
+            },
+            {
+              "path": "systemLoginCount",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "documentationDownloadCount",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "eventParticipationCount",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "trainingCertificationCount",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "trainingParticipationCount",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "trialParticipationCount",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "communityParticipationCount",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "successStoryCount",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "customerSatisfactionScore",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "satisfactionScore",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "salesAmount",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "sellerType",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "activeToDate",
+              "datatype": "xsd:date",
+              "maxCount": "1"
+            },
+            {
+              "path": "activeFromDate",
+              "datatype": "xsd:date",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "id",
+              "datatype": "cim:id",
+              "maxCount": "1",
+              "minCount": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "Supplier",
+      "and": [
+        {
+          "@id": "PartyRole"
+        },
+        {
+          "properties": [
+            {
+              "path": "competitiveMarketingRank",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "competitiveWarrantyRank",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "competitiveCostAvoidanceRank",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "competitiveProductPriceRank",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "satisfactionEthicsRank",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "satisfactionTechnicalSupportRank",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "satisfactionCustomerServiceRank",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "contractInvoiceAccuracyRate",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "contractSLAIssueRate",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "contractBudgetCostRate",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "contractProductReturnRate",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "contractProductQualityRate",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "contractDeliveryCorrectnessRate",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "contractOnTimeDeliveryRate",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "contractSourcingCycleDays",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "competitiveWeightScore",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "competitiveWeightPercent",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "satisfactionWeightScore",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "satisfactionWeightPercent",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "contractWeightScore",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "contractWeightPercent",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "isCarrier",
+              "datatype": "xsd:boolean",
+              "maxCount": "1"
+            },
+            {
+              "path": "supplierScore",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "supplierSpend",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "supplierType",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "activeToDate",
+              "datatype": "xsd:date",
+              "maxCount": "1"
+            },
+            {
+              "path": "activeFromDate",
+              "datatype": "xsd:date",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "id",
+              "datatype": "cim:id",
+              "maxCount": "1",
+              "minCount": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "Competitor",
+      "and": [
+        {
+          "@id": "PartyRole"
+        },
+        {
+          "properties": [
+            {
+              "path": "assetTurnoverRatio",
+              "datatype": "xsd:decimal",
+              "maxCount": "1"
+            },
+            {
+              "path": "assetReturnRatio",
+              "datatype": "xsd:decimal",
+              "maxCount": "1"
+            },
+            {
+              "path": "currentRatio",
+              "datatype": "xsd:decimal",
+              "maxCount": "1"
+            },
+            {
+              "path": "cashFlowGrowth",
+              "datatype": "xsd:decimal",
+              "maxCount": "1"
+            },
+            {
+              "path": "netProfitMargin",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "ptoENumber",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "adKeywords",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "pressMentionsRate",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "socialMediaPostRate",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "adReachRate",
+              "datatype": "xsd:decimal",
+              "maxCount": "1"
+            },
+            {
+              "path": "competitorThreats",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "competitorLeverageOpportunities",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "competitorWeaknesses",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "competitorStrengths",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "competitorObjectives",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "competitorToDate",
+              "datatype": "xsd:date",
+              "maxCount": "1"
+            },
+            {
+              "path": "competitorFromDate",
+              "datatype": "xsd:date",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "id",
+              "datatype": "cim:id",
+              "maxCount": "1",
+              "minCount": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "CustomerStatusHistory",
+      "properties": [
+        {
+          "path": "endDateTIme",
+          "datatype": "xsd:time",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "startDateTime",
+          "datatype": "xsd:time",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "partyRoleStatus",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "partyRole",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "PartyRole"
+    }
+  ]
+}

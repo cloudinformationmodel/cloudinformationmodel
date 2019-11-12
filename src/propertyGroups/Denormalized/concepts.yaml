@@ -1,0 +1,40 @@
+#%Vocabulary 1.0
+base: http://cloudinformationmodel.org/model/
+vocabulary: Denormalized Property Group
+propertyTerms:
+  addressLine1:
+    displayName: Address Line 1
+    description: First line of address e.g. street number and street name
+    range: any
+  stateProvinceName:
+    displayName: State Province Name
+    description: Free text of the state province name the address is located in
+    range: any
+  countryName:
+    displayName: Country Name
+    description: Free text value of country name
+    range: any
+  contactPhone:
+    displayName: Primary Contact Phone
+    description: What is the primary phone number for this address
+    range: ContactPointPhone
+  cityName:
+    displayName: City Name
+    description: Free text name of the city, town or village
+    range: any
+  addressLine3:
+    displayName: Address Line 3
+    description: Third line of an address
+    range: any
+  addressLine2:
+    displayName: Address Line 2
+    description: Second line of an address e.g building or suite number
+    range: any
+  postalCodeText:
+    displayName: Postal Code Text
+    description: Free text value of postal code
+    range: any
+  addressLine4:
+    displayName: Address Line 4
+    description: Forth line of an address
+    range: any

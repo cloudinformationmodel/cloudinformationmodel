@@ -1,0 +1,923 @@
+#%Dialect 1.0
+uses:
+  product_eg: ../../Product/Product/schema.yaml
+  productattribute_eg: ../../Product/ProductAttribute/schema.yaml
+  account_eg: ../../Party/Account/schema.yaml
+  contactpoint_eg: ../../Party/ContactPoint/schema.yaml
+  party_eg: ../../Party/Party/schema.yaml
+  paymentmethod_eg: ../../PaymentMethod/PaymentMethod/schema.yaml
+  partyrole_eg: ../../Party/PartyRole/schema.yaml
+nodeMappings:
+  SalesOrderProductNote:
+    classTerm: cim.SalesOrderProductNote
+    mapping:
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      description:
+        propertyTerm: cim.description
+        range: string
+      noteText:
+        propertyTerm: cim.noteText
+        range: string
+        mandatory: true
+  SalesOrderProductReason:
+    classTerm: cim.SalesOrderProductReason
+    mapping:
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      salesOrderProductReasonCategory:
+        propertyTerm: cim.salesOrderProductReasonCategory
+        range: string
+        mandatory: true
+  SalesOrderProductGroup:
+    classTerm: cim.SalesOrderProductGroup
+    mapping:
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      description:
+        propertyTerm: cim.description
+        range: string
+        mandatory: true
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      salesOrderProductGroupType:
+        propertyTerm: cim.salesOrderProductGroupType
+        range: string
+        mandatory: true
+  SalesOrderDeliveryGroup:
+    classTerm: cim.SalesOrderDeliveryGroup
+    mapping:
+      totalDeliveryAdjustmentTaxAmount:
+        propertyTerm: cim.totalDeliveryAdjustmentTaxAmount
+        range: integer
+      giftMessageText:
+        propertyTerm: cim.giftMessageText
+        range: string
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      description:
+        propertyTerm: cim.description
+        range: string
+        mandatory: true
+      contactPointAddress:
+        propertyTerm: cim.contactPointAddress
+        range: contactpoint_eg.ContactPointAddress
+        mandatory: true
+        allowMultiple: true
+      accountContact:
+        propertyTerm: cim.accountContact
+        range: account_eg.AccountContact
+        mandatory: true
+        allowMultiple: true
+      totalProductTaxAmount:
+        propertyTerm: cim.totalProductTaxAmount
+        range: integer
+      grandTotalDeliveryAmount:
+        propertyTerm: cim.grandTotalDeliveryAmount
+        range: integer
+      totalDeliveryChargeAmount:
+        propertyTerm: cim.totalDeliveryChargeAmount
+        range: integer
+      promisedDate:
+        propertyTerm: cim.promisedDate
+        range: date
+      originalDeliveryGroup:
+        propertyTerm: cim.originalDeliveryGroup
+        range: SalesOrderDeliveryGroup
+        allowMultiple: true
+      totalDeliveryChargeTaxAmount:
+        propertyTerm: cim.totalDeliveryChargeTaxAmount
+        range: integer
+      totalPriceAmount:
+        propertyTerm: cim.totalPriceAmount
+        range: integer
+        mandatory: true
+      totalUnitPriceAmount:
+        propertyTerm: cim.totalUnitPriceAmount
+        range: integer
+        mandatory: true
+      deliveryInstructionsText:
+        propertyTerm: cim.deliveryInstructionsText
+        range: string
+      totalDeliveryTaxAmount:
+        propertyTerm: cim.totalDeliveryTaxAmount
+        range: integer
+      salesOrderDeliveryStatus:
+        propertyTerm: cim.salesOrderDeliveryStatus
+        range: string
+        mandatory: true
+      totalTaxAmount:
+        propertyTerm: cim.totalTaxAmount
+        range: integer
+      salesOrder:
+        propertyTerm: cim.salesOrder
+        range: SalesOrder
+        mandatory: true
+        allowMultiple: true
+      totalDeliveryAdjustmentAmount:
+        propertyTerm: cim.totalDeliveryAdjustmentAmount
+        range: integer
+      salesOrderDeliveryGroupNumber:
+        propertyTerm: cim.salesOrderDeliveryGroupNumber
+        range: string
+        mandatory: true
+      desiredDeliveryDate:
+        propertyTerm: cim.desiredDeliveryDate
+        range: date
+      isGift:
+        propertyTerm: cim.isGift
+        range: boolean
+      orderDeliveryMethod:
+        propertyTerm: cim.orderDeliveryMethod
+        range: OrderDeliveryMethod
+        mandatory: true
+        allowMultiple: true
+  SalesChannel:
+    classTerm: cim.SalesChannel
+    mapping:
+      externalRecord:
+        propertyTerm: cim.externalRecord
+        range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      salesChannelType:
+        propertyTerm: cim.salesChannelType
+        range: string
+        mandatory: true
+      description:
+        propertyTerm: cim.description
+        range: string
+        mandatory: true
+      salesChannelNumber:
+        propertyTerm: cim.salesChannelNumber
+        range: string
+        mandatory: true
+  SalesOrder:
+    classTerm: cim.SalesOrder
+    mapping:
+      orderInsuranceAmount:
+        propertyTerm: cim.orderInsuranceAmount
+        range: integer
+      billToEmail:
+        propertyTerm: cim.billToEmail
+        range: contactpoint_eg.ContactPointEmail
+        allowMultiple: true
+      totalPendingBillingAmount:
+        propertyTerm: cim.totalPendingBillingAmount
+        range: integer
+      originalOrder:
+        propertyTerm: cim.originalOrder
+        range: SalesOrder
+        allowMultiple: true
+      purchaseOrderNumber:
+        propertyTerm: cim.purchaseOrderNumber
+        range: string
+      adjustedProductTaxAmount:
+        propertyTerm: cim.adjustedProductTaxAmount
+        range: integer
+      paidDate:
+        propertyTerm: cim.paidDate
+        range: date
+      companyAuthorizedDate:
+        propertyTerm: cim.companyAuthorizedDate
+        range: date
+      totalProductTaxAmount:
+        propertyTerm: cim.totalProductTaxAmount
+        range: integer
+      adjustedTotalProductAmount:
+        propertyTerm: cim.adjustedTotalProductAmount
+        range: integer
+      promiseDate:
+        propertyTerm: cim.promiseDate
+        range: date
+      isGiftOrder:
+        propertyTerm: cim.isGiftOrder
+        range: boolean
+      iSOCulture:
+        propertyTerm: cim.iSOCulture
+        range: string
+      salesChannel:
+        propertyTerm: cim.salesChannel
+        range: SalesChannel
+        mandatory: true
+        allowMultiple: true
+      isContracted:
+        propertyTerm: cim.isContracted
+        range: boolean
+      fulfilledDate:
+        propertyTerm: cim.fulfilledDate
+        range: date
+      description:
+        propertyTerm: cim.description
+        range: string
+        mandatory: true
+      billToAddress:
+        propertyTerm: cim.billToAddress
+        range: contactpoint_eg.ContactPointAddress
+        mandatory: true
+        allowMultiple: true
+      packedDate:
+        propertyTerm: cim.packedDate
+        range: date
+      totalTaxAmount:
+        propertyTerm: cim.totalTaxAmount
+        range: integer
+      shipToContact:
+        propertyTerm: cim.shipToContact
+        range: account_eg.AccountContact
+        allowMultiple: true
+      promiseFulfillmentDate:
+        propertyTerm: cim.promiseFulfillmentDate
+        range: date
+      grandTotalAmount:
+        propertyTerm: cim.grandTotalAmount
+        range: integer
+      totalDeliveryTaxAmount:
+        propertyTerm: cim.totalDeliveryTaxAmount
+        range: integer
+      internalBusinessUnit:
+        propertyTerm: cim.internalBusinessUnit
+        range: party_eg.InternalBusinessUnit
+        allowMultiple: true
+      paymentMethod:
+        propertyTerm: cim.paymentMethod
+        range: paymentmethod_eg.PaymentMethod
+        mandatory: true
+        allowMultiple: true
+      cancelDate:
+        propertyTerm: cim.cancelDate
+        range: date
+      orderEndDate:
+        propertyTerm: cim.orderEndDate
+        range: date
+      billToContact:
+        propertyTerm: cim.billToContact
+        range: account_eg.AccountContact
+        mandatory: true
+        allowMultiple: true
+      checkoutDate:
+        propertyTerm: cim.checkoutDate
+        range: date
+      totalBookingAmount:
+        propertyTerm: cim.totalBookingAmount
+        range: integer
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      requestedStartDate:
+        propertyTerm: cim.requestedStartDate
+        range: date
+        mandatory: true
+      customerAuthorizedDate:
+        propertyTerm: cim.customerAuthorizedDate
+        range: date
+      salesOrderStatus:
+        propertyTerm: cim.salesOrderStatus
+        range: string
+        mandatory: true
+      totalAdjustedDeliveryTaxAmount:
+        propertyTerm: cim.totalAdjustedDeliveryTaxAmount
+        range: integer
+      isAnonymous:
+        propertyTerm: cim.isAnonymous
+        range: boolean
+      billToAccount:
+        propertyTerm: cim.billToAccount
+        range: account_eg.Account
+        mandatory: true
+        allowMultiple: true
+      shipToAddress:
+        propertyTerm: cim.shipToAddress
+        range: contactpoint_eg.ContactPointAddress
+        allowMultiple: true
+      taxRate:
+        propertyTerm: cim.taxRate
+        range: integer
+      orderNumber:
+        propertyTerm: cim.orderNumber
+        range: string
+        mandatory: true
+      priceCalculationStatusMessageText:
+        propertyTerm: cim.priceCalculationStatusMessageText
+        range: string
+      isReductionOrder:
+        propertyTerm: cim.isReductionOrder
+        range: boolean
+      totalDeliveryAmount:
+        propertyTerm: cim.totalDeliveryAmount
+        range: integer
+      soldToCustomer:
+        propertyTerm: cim.soldToCustomer
+        range: partyrole_eg.Customer
+        allowMultiple: true
+      totalProductAmount:
+        propertyTerm: cim.totalProductAmount
+        range: integer
+      shipToEmail:
+        propertyTerm: cim.shipToEmail
+        range: contactpoint_eg.ContactPointEmail
+        allowMultiple: true
+      orderStartDate:
+        propertyTerm: cim.orderStartDate
+        range: date
+      filedDate:
+        propertyTerm: cim.filedDate
+        range: date
+      isAlerted:
+        propertyTerm: cim.isAlerted
+        range: boolean
+      purchaseOrderDate:
+        propertyTerm: cim.purchaseOrderDate
+        range: date
+      developerStatusCode:
+        propertyTerm: cim.developerStatusCode
+        range: string
+        mandatory: true
+      renewalTerm:
+        propertyTerm: cim.renewalTerm
+        range: string
+      salesOrderSystemStatus:
+        propertyTerm: cim.salesOrderSystemStatus
+        range: string
+      seller:
+        propertyTerm: cim.seller
+        range: partyrole_eg.Seller
+        allowMultiple: true
+      totalAdjustmentAmount:
+        propertyTerm: cim.totalAdjustmentAmount
+        range: integer
+      userDeviceSession:
+        propertyTerm: cim.userDeviceSession
+        range: productattribute_eg.DeviceUserSession
+        allowMultiple: true
+      billingDayOfTheMonth:
+        propertyTerm: cim.billingDayOfTheMonth
+        range: integer
+      renewalUpliftRate:
+        propertyTerm: cim.renewalUpliftRate
+        range: integer
+      totalAdjustmentTaxAmount:
+        propertyTerm: cim.totalAdjustmentTaxAmount
+        range: integer
+      isClosed:
+        propertyTerm: cim.isClosed
+        range: boolean
+      orderDiscount:
+        propertyTerm: cim.orderDiscount
+        range: integer
+      confirmationRecipientEmailText:
+        propertyTerm: cim.confirmationRecipientEmailText
+        range: string
+        mandatory: true
+      billToPhoneNumber:
+        propertyTerm: cim.billToPhoneNumber
+        range: contactpoint_eg.ContactPointPhone
+        allowMultiple: true
+      cancelDateType:
+        propertyTerm: cim.cancelDateType
+        range: string
+      activatedDate:
+        propertyTerm: cim.activatedDate
+        range: date
+      isSuspended:
+        propertyTerm: cim.isSuspended
+        range: boolean
+      isHistoricalOnly:
+        propertyTerm: cim.isHistoricalOnly
+        range: boolean
+      isTaxExempt:
+        propertyTerm: cim.isTaxExempt
+        range: boolean
+      totalDeliveryFeeAmount:
+        propertyTerm: cim.totalDeliveryFeeAmount
+        range: integer
+      salesOrderConfirmationStatus:
+        propertyTerm: cim.salesOrderConfirmationStatus
+        range: string
+        mandatory: true
+      canBillNow:
+        propertyTerm: cim.canBillNow
+        range: boolean
+      totalCancelledBillingAmount:
+        propertyTerm: cim.totalCancelledBillingAmount
+        range: integer
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+  PriceAdjustmentGroup:
+    classTerm: cim.PriceAdjustmentGroup
+  OrderDeliveryMethod:
+    classTerm: cim.OrderDeliveryMethod
+    mapping:
+      externalRecord:
+        propertyTerm: cim.externalRecord
+        range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      product:
+        propertyTerm: cim.product
+        range: product_eg.Product
+        mandatory: true
+        allowMultiple: true
+  SalesOrderPaymentSummary:
+    classTerm: cim.SalesOrderPaymentSummary
+    mapping:
+      authorizationReversalAmount:
+        propertyTerm: cim.authorizationReversalAmount
+        range: integer
+      unappliedAmount:
+        propertyTerm: cim.unappliedAmount
+        range: integer
+      paymentAmount:
+        propertyTerm: cim.paymentAmount
+        range: integer
+      appliedAmount:
+        propertyTerm: cim.appliedAmount
+        range: integer
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      authorizationAmount:
+        propertyTerm: cim.authorizationAmount
+        range: integer
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      salesOrder:
+        propertyTerm: cim.salesOrder
+        range: SalesOrder
+        mandatory: true
+        allowMultiple: true
+      paymentMethod:
+        propertyTerm: cim.paymentMethod
+        range: paymentmethod_eg.PaymentMethod
+        mandatory: true
+        allowMultiple: true
+      capturedAmount:
+        propertyTerm: cim.capturedAmount
+        range: integer
+      availableToApplyBalanceAmount:
+        propertyTerm: cim.availableToApplyBalanceAmount
+        range: integer
+  ProductRelationshipType:
+    classTerm: cim.ProductRelationshipType
+    mapping:
+      parentProductRole:
+        propertyTerm: cim.parentProductRole
+        range: string
+        mandatory: true
+      childProductRole:
+        propertyTerm: cim.childProductRole
+        range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      parentProductRole:
+        propertyTerm: cim.parentProductRole
+        range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      childProductRole:
+        propertyTerm: cim.childProductRole
+        range: string
+        mandatory: true
+  SalesOrderPriceAdjustment:
+    classTerm: cim.SalesOrderPriceAdjustment
+    mapping:
+      totalAdjustmentTaxAmount:
+        propertyTerm: cim.totalAdjustmentTaxAmount
+        range: integer
+      salesOrder:
+        propertyTerm: cim.salesOrder
+        range: SalesOrder
+        mandatory: true
+        allowMultiple: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+    extends: PriceAdjustmentGroup
+  SalesOrderProductTax:
+    classTerm: cim.SalesOrderProductTax
+    mapping:
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      taxAmount:
+        propertyTerm: cim.taxAmount
+        range: integer
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      taxEffectiveDate:
+        propertyTerm: cim.taxEffectiveDate
+        range: date
+      originalSalesOrderProductTax:
+        propertyTerm: cim.originalSalesOrderProductTax
+        range: SalesOrderProductTax
+        allowMultiple: true
+      salesOrderProduct:
+        propertyTerm: cim.salesOrderProduct
+        range: SalesOrderProduct
+        mandatory: true
+        allowMultiple: true
+      description:
+        propertyTerm: cim.description
+        range: string
+        mandatory: true
+    extends: SalesOrderTax
+  SalesOrderChangeLog:
+    classTerm: cim.SalesOrderChangeLog
+    mapping:
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      changeSalesOrder:
+        propertyTerm: cim.changeSalesOrder
+        range: SalesOrder
+        mandatory: true
+        allowMultiple: true
+      changeSalesOrderProduct:
+        propertyTerm: cim.changeSalesOrderProduct
+        range: SalesOrderProduct
+        mandatory: true
+        allowMultiple: true
+      relatedSalesOrder:
+        propertyTerm: cim.relatedSalesOrder
+        range: SalesOrder
+        mandatory: true
+        allowMultiple: true
+      relatedSalesOrderProduct:
+        propertyTerm: cim.relatedSalesOrderProduct
+        range: SalesOrderProduct
+        mandatory: true
+        allowMultiple: true
+  SalesOrderProduct:
+    classTerm: cim.SalesOrderProduct
+    mapping:
+      totalAdjustmentAmount:
+        propertyTerm: cim.totalAdjustmentAmount
+        range: integer
+      totalTaxAmount:
+        propertyTerm: cim.totalTaxAmount
+        range: integer
+      unitPriceAmount:
+        propertyTerm: cim.unitPriceAmount
+        range: integer
+      originalOrderProduct:
+        propertyTerm: cim.originalOrderProduct
+        range: SalesOrderProduct
+        allowMultiple: true
+      salesOrderDeliveryGroup:
+        propertyTerm: cim.salesOrderDeliveryGroup
+        range: SalesOrderDeliveryGroup
+        allowMultiple: true
+      totalRecurringPriceAmount:
+        propertyTerm: cim.totalRecurringPriceAmount
+        range: integer
+      priceBookEntry:
+        propertyTerm: cim.priceBookEntry
+        range: productattribute_eg.PriceBookEntry
+        mandatory: true
+        allowMultiple: true
+      segmentIndexNumber:
+        propertyTerm: cim.segmentIndexNumber
+        range: integer
+      salesOrder:
+        propertyTerm: cim.salesOrder
+        range: SalesOrder
+        mandatory: true
+        allowMultiple: true
+      salesOrderProductStatus:
+        propertyTerm: cim.salesOrderProductStatus
+        range: string
+        mandatory: true
+      orderProductNumber:
+        propertyTerm: cim.orderProductNumber
+        range: string
+        mandatory: true
+      product:
+        propertyTerm: cim.product
+        range: product_eg.Product
+        mandatory: true
+        allowMultiple: true
+      endDate:
+        propertyTerm: cim.endDate
+        range: date
+      totalLineAdjustmentAmount:
+        propertyTerm: cim.totalLineAdjustmentAmount
+        range: integer
+      orderAdjustmentSubTotalAmount:
+        propertyTerm: cim.orderAdjustmentSubTotalAmount
+        range: integer
+      totalDistributedAdjustmentTaxAmount:
+        propertyTerm: cim.totalDistributedAdjustmentTaxAmount
+        range: integer
+      listPriceQuantityUOM:
+        propertyTerm: cim.listPriceQuantityUOM
+        range: string
+        mandatory: true
+      recurringPriceAmount:
+        propertyTerm: cim.recurringPriceAmount
+        range: integer
+      requestedStartDate:
+        propertyTerm: cim.requestedStartDate
+        range: date
+      orderManualAdjustmentSubTotalAmount:
+        propertyTerm: cim.orderManualAdjustmentSubTotalAmount
+        range: integer
+      totalListPriceAmount:
+        propertyTerm: cim.totalListPriceAmount
+        range: integer
+      fulfilledQuantity:
+        propertyTerm: cim.fulfilledQuantity
+        range: integer
+      isAutomaticallyRenewed:
+        propertyTerm: cim.isAutomaticallyRenewed
+        range: boolean
+      requestedEndDate:
+        propertyTerm: cim.requestedEndDate
+        range: date
+      totalDistributedTaxAmount:
+        propertyTerm: cim.totalDistributedTaxAmount
+        range: integer
+      provisioningDate:
+        propertyTerm: cim.provisioningDate
+        range: date
+      sellerAccount:
+        propertyTerm: cim.sellerAccount
+        range: account_eg.Account
+        allowMultiple: true
+      totalProductTaxAmount:
+        propertyTerm: cim.totalProductTaxAmount
+        range: integer
+      cancelledQuantity:
+        propertyTerm: cim.cancelledQuantity
+        range: integer
+      discountPercent:
+        propertyTerm: cim.discountPercent
+        range: integer
+      commentText:
+        propertyTerm: cim.commentText
+        range: string
+      subscriptionRenewalMonthQuantity:
+        propertyTerm: cim.subscriptionRenewalMonthQuantity
+        range: integer
+      shippingAddress:
+        propertyTerm: cim.shippingAddress
+        range: contactpoint_eg.ContactPointAddress
+        allowMultiple: true
+      lineAdjustmentSubTotalAmount:
+        propertyTerm: cim.lineAdjustmentSubTotalAmount
+        range: integer
+      totalLineAmount:
+        propertyTerm: cim.totalLineAmount
+        range: integer
+      shippingCostAmount:
+        propertyTerm: cim.shippingCostAmount
+        range: integer
+      subscriptionTermUnit:
+        propertyTerm: cim.subscriptionTermUnit
+        range: productattribute_eg.ProductValidityTimePeriodUOM
+        allowMultiple: true
+      quantityOrderedUOM:
+        propertyTerm: cim.quantityOrderedUOM
+        range: string
+        mandatory: true
+      totalUnitPriceAmount:
+        propertyTerm: cim.totalUnitPriceAmount
+        range: integer
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      isGift:
+        propertyTerm: cim.isGift
+        range: boolean
+      deliveryTaxAmount:
+        propertyTerm: cim.deliveryTaxAmount
+        range: integer
+      description:
+        propertyTerm: cim.description
+        range: string
+        mandatory: true
+      handlingCostAmount:
+        propertyTerm: cim.handlingCostAmount
+        range: integer
+      salesOrderProductAdjustedTaxAmount:
+        propertyTerm: cim.salesOrderProductAdjustedTaxAmount
+        range: integer
+      salesOrderProductReason:
+        propertyTerm: cim.salesOrderProductReason
+        range: SalesOrderProductReason
+        allowMultiple: true
+      allocationPartitionName:
+        propertyTerm: cim.allocationPartitionName
+        range: string
+      giftOrderMessageText:
+        propertyTerm: cim.giftOrderMessageText
+        range: string
+      discountAmount:
+        propertyTerm: cim.discountAmount
+        range: integer
+      segmentIndex:
+        propertyTerm: cim.segmentIndex
+        range: integer
+      totalPriceAmount:
+        propertyTerm: cim.totalPriceAmount
+        range: integer
+        mandatory: true
+      isBonusProduct:
+        propertyTerm: cim.isBonusProduct
+        range: boolean
+      shippingTaxAmount:
+        propertyTerm: cim.shippingTaxAmount
+        range: integer
+      shippingPhone:
+        propertyTerm: cim.shippingPhone
+        range: contactpoint_eg.ContactPointPhone
+        allowMultiple: true
+      subscriptionTermQuantity:
+        propertyTerm: cim.subscriptionTermQuantity
+        range: integer
+      giftRecipientTelephoneNumber:
+        propertyTerm: cim.giftRecipientTelephoneNumber
+        range: string
+      shippingEmail:
+        propertyTerm: cim.shippingEmail
+        range: contactpoint_eg.ContactPointEmail
+        allowMultiple: true
+      isBundleRoot:
+        propertyTerm: cim.isBundleRoot
+        range: boolean
+      promisedDate:
+        propertyTerm: cim.promisedDate
+        range: date
+      totalAdjustmentTaxAmount:
+        propertyTerm: cim.totalAdjustmentTaxAmount
+        range: integer
+      unitTaxAmount:
+        propertyTerm: cim.unitTaxAmount
+        range: integer
+      adjustedDeliveryTaxAmount:
+        propertyTerm: cim.adjustedDeliveryTaxAmount
+        range: integer
+      listPriceAmount:
+        propertyTerm: cim.listPriceAmount
+        range: integer
+      allocatedQuantity:
+        propertyTerm: cim.allocatedQuantity
+        range: integer
+      listPriceTermUOM:
+        propertyTerm: cim.listPriceTermUOM
+        range: productattribute_eg.ProductValidityTimePeriodUOM
+        allowMultiple: true
+      allocationGroupName:
+        propertyTerm: cim.allocationGroupName
+        range: string
+      availableQuantity:
+        propertyTerm: cim.availableQuantity
+        range: integer
+      orderedQuantity:
+        propertyTerm: cim.orderedQuantity
+        range: integer
+        mandatory: true
+      totalDistributedAdjustmentAmount:
+        propertyTerm: cim.totalDistributedAdjustmentAmount
+        range: integer
+      totalManualAdjustmentAmount:
+        propertyTerm: cim.totalManualAdjustmentAmount
+        range: integer
+  SalesOrderTax:
+    classTerm: cim.SalesOrderTax
+    mapping:
+      salesOrderTaxAmount:
+        propertyTerm: cim.salesOrderTaxAmount
+        range: integer
+      taxRatePercent:
+        propertyTerm: cim.taxRatePercent
+        range: integer
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      taxAddressStreet2Text:
+        propertyTerm: cim.taxAddressStreet2Text
+        range: string
+      taxAddressStreet1Text:
+        propertyTerm: cim.taxAddressStreet1Text
+        range: string
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      taxAddressCityName:
+        propertyTerm: cim.taxAddressCityName
+        range: string
+      taxErrorMessageText:
+        propertyTerm: cim.taxErrorMessageText
+        range: string
+external:
+  cim: http://cloudinformationmodel.org/model/
+dialect: SalesOrderEntityGroup
+version: "0.1"
+documents:
+  root:
+    declares:
+      SalesOrderProductNoteSchemas: SalesOrderProductNote
+      SalesOrderProductReasonSchemas: SalesOrderProductReason
+      SalesOrderProductGroupSchemas: SalesOrderProductGroup
+      SalesOrderDeliveryGroupSchemas: SalesOrderDeliveryGroup
+      SalesChannelSchemas: SalesChannel
+      SalesOrderSchemas: SalesOrder
+      PriceAdjustmentGroupSchemas: PriceAdjustmentGroup
+      OrderDeliveryMethodSchemas: OrderDeliveryMethod
+      SalesOrderPaymentSummarySchemas: SalesOrderPaymentSummary
+      ProductRelationshipTypeSchemas: ProductRelationshipType
+      SalesOrderPriceAdjustmentSchemas: SalesOrderPriceAdjustment
+      SalesOrderProductTaxSchemas: SalesOrderProductTax
+      SalesOrderChangeLogSchemas: SalesOrderChangeLog
+      SalesOrderProductSchemas: SalesOrderProduct
+      SalesOrderTaxSchemas: SalesOrderTax
+  fragments:
+    encodes:
+      SalesOrderProductNote: SalesOrderProductNote
+      SalesOrderProductReason: SalesOrderProductReason
+      SalesOrderProductGroup: SalesOrderProductGroup
+      SalesOrderDeliveryGroup: SalesOrderDeliveryGroup
+      SalesChannel: SalesChannel
+      SalesOrder: SalesOrder
+      PriceAdjustmentGroup: PriceAdjustmentGroup
+      OrderDeliveryMethod: OrderDeliveryMethod
+      SalesOrderPaymentSummary: SalesOrderPaymentSummary
+      ProductRelationshipType: ProductRelationshipType
+      SalesOrderPriceAdjustment: SalesOrderPriceAdjustment
+      SalesOrderProductTax: SalesOrderProductTax
+      SalesOrderChangeLog: SalesOrderChangeLog
+      SalesOrderProduct: SalesOrderProduct
+      SalesOrderTax: SalesOrderTax

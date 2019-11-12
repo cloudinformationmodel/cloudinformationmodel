@@ -1,0 +1,12 @@
+*~
+#*
+*#
+node_modules
+.idea
+*.uml
+**/.#*
+scripts/jvm/target
+scripts/jvm/project/target
+scripts/node_modules
+*.jar
+target

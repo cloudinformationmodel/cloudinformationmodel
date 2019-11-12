@@ -1,0 +1,373 @@
+{
+  "@context" : {
+    "rr" : "http://www.w3.org/ns/r2rml#"
+  },
+  "@graph" : [
+    {
+      "@id" : "/product_catalog_entity_group/product_category_attribute_set",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_CATALOG_ENTITY_GROUP.PRODUCT_CATEGORY_ATTRIBUTE_SET"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/ProductCategoryAttributeSet"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/attributeSet"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "ATTRIBUTE_SET",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/product_catalog_entity_group/product_catalog",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_CATALOG_ENTITY_GROUP.PRODUCT_CATALOG"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/ProductCatalog"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/activeToDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "ACTIVE_TO_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/activeFromDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "ACTIVE_FROM_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/name"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/product_catalog_entity_group/product_category_translation",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_CATALOG_ENTITY_GROUP.PRODUCT_CATEGORY_TRANSLATION"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/ProductCategoryTranslation"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/translatedName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "TRANSLATED_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/product_catalog_entity_group/product_category",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_CATALOG_ENTITY_GROUP.PRODUCT_CATEGORY"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/ProductCategory"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/activeFromDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "ACTIVE_FROM_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/activeToDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "ACTIVE_TO_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/name"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/product_catalog_entity_group/product_catalog_translation",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_CATALOG_ENTITY_GROUP.PRODUCT_CATALOG_TRANSLATION"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/ProductCatalogTranslation"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/translatedName"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "TRANSLATED_NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/product_catalog_entity_group/product_category_product",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_CATALOG_ENTITY_GROUP.PRODUCT_CATEGORY_PRODUCT"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/ProductCategoryProduct"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/activeFromDateTime"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "ACTIVE_FROM_DATE_TIME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#time"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/activeToDateTime"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "ACTIVE_TO_DATE_TIME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#time"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/product_catalog_entity_group/product_category_attribute_set_product_category_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_CATALOG_ENTITY_GROUP.PRODUCT_CATEGORY_ATTRIBUTE_SET_PRODUCT_CATEGORY_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PRODUCT_CATEGORY_ATTRIBUTE_SET_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/productCategory"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/product_catalog_entity_group/product_category"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PRODUCT_CATEGORY_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/product_catalog_entity_group/product_category_translation_product_category_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_CATALOG_ENTITY_GROUP.PRODUCT_CATEGORY_TRANSLATION_PRODUCT_CATEGORY_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PRODUCT_CATEGORY_TRANSLATION_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/productCategory"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/product_catalog_entity_group/product_category"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PRODUCT_CATEGORY_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/product_catalog_entity_group/product_category_product_catalog_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_CATALOG_ENTITY_GROUP.PRODUCT_CATEGORY_PRODUCT_CATALOG_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PRODUCT_CATEGORY_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/productCatalog"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/product_catalog_entity_group/product_catalog"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PRODUCT_CATALOG_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/product_catalog_entity_group/product_category_parent_category_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_CATALOG_ENTITY_GROUP.PRODUCT_CATEGORY_PARENT_CATEGORY_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PRODUCT_CATEGORY_ID_LEFT}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/parentCategory"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/product_catalog_entity_group/product_category"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PRODUCT_CATEGORY_ID_RIGHT",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/product_catalog_entity_group/product_catalog_translation_product_catalog_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_CATALOG_ENTITY_GROUP.PRODUCT_CATALOG_TRANSLATION_PRODUCT_CATALOG_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PRODUCT_CATALOG_TRANSLATION_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/productCatalog"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/product_catalog_entity_group/product_catalog"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PRODUCT_CATALOG_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/product_catalog_entity_group/product_category_product_product_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_CATALOG_ENTITY_GROUP.PRODUCT_CATEGORY_PRODUCT_PRODUCT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PRODUCT_CATEGORY_PRODUCT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/product"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/product_entity_group/product"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PRODUCT_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/product_catalog_entity_group/product_category_product_product_category_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PRODUCT_CATALOG_ENTITY_GROUP.PRODUCT_CATEGORY_PRODUCT_PRODUCT_CATEGORY_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PRODUCT_CATEGORY_PRODUCT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/productCategory"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/product_catalog_entity_group/product_category"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PRODUCT_CATEGORY_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    }
+  ]
+}

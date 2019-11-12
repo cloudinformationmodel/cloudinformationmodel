@@ -1,0 +1,399 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/ContactPoint"
+    },
+    {
+      "$ref": "#/definitions/ContactPointAddress"
+    },
+    {
+      "$ref": "#/definitions/ContactPointApp"
+    },
+    {
+      "$ref": "#/definitions/ContactPointEmail"
+    },
+    {
+      "$ref": "#/definitions/ContactPointLocation"
+    },
+    {
+      "$ref": "#/definitions/ContactPointPhone"
+    },
+    {
+      "$ref": "#/definitions/ContactPointSocial"
+    },
+    {
+      "$ref": "#/definitions/ContactPointType"
+    },
+    {
+      "$ref": "#/definitions/PartyWebAddress"
+    }
+  ],
+  "definitions": {
+    "ContactPointType": {
+      "type": "object",
+      "required": [
+        "optInPriority",
+        "id",
+        "name"
+      ],
+      "properties": {
+        "optInPriority": {
+          "type": "integer"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "ContactPointLocation": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/ContactPoint"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "ContactPointApp": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/ContactPoint"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id"
+          ],
+          "properties": {
+            "applicationLogin": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "ContactPointAddress": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/ContactPoint"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id"
+          ],
+          "properties": {
+            "isUsedForShipping": {
+              "type": "boolean"
+            },
+            "stateProvinceName": {
+              "type": "string"
+            },
+            "addressLine3": {
+              "type": "string"
+            },
+            "countryName": {
+              "type": "string"
+            },
+            "postalCodeText": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "geoLatitude": {
+              "type": "integer"
+            },
+            "addressLine2": {
+              "type": "string"
+            },
+            "addressLine4": {
+              "type": "string"
+            },
+            "geoAccuracy": {
+              "type": "integer"
+            },
+            "contactPhone": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ContactPointPhone"
+              }
+            },
+            "geoLongitude": {
+              "type": "integer"
+            },
+            "addressLine1": {
+              "type": "string"
+            },
+            "cityName": {
+              "type": "string"
+            },
+            "isUsedForBilling": {
+              "type": "boolean"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "PartyWebAddress": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/ContactPoint"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id",
+            "webSiteURL",
+            "party"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "webSiteURL": {
+              "type": "string"
+            },
+            "party": {
+              "type": "array",
+              "items": {
+                "$ref": "../Party/schema.json#/definitions/Party"
+              }
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "ContactPointEmail": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/ContactPoint"
+        },
+        {
+          "type": "object",
+          "required": [
+            "emailLatestBounceReasonText",
+            "id",
+            "emailMailBox",
+            "emailDomain",
+            "emailAddress",
+            "emailLatestBounceDateTime"
+          ],
+          "properties": {
+            "emailLatestBounceReasonText": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "emailMailBox": {
+              "type": "string"
+            },
+            "emailDomain": {
+              "type": "string"
+            },
+            "emailAddress": {
+              "type": "string"
+            },
+            "emailLatestBounceDateTime": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "ContactPointSocial": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/ContactPoint"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id",
+            "profilePictureURL",
+            "followersCount",
+            "socialHandleName",
+            "socialFanStatus",
+            "socialHandle",
+            "socialNetworkProvider"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "profilePictureURL": {
+              "type": "string"
+            },
+            "followersCount": {
+              "type": "integer"
+            },
+            "socialHandleName": {
+              "type": "string"
+            },
+            "socialFanStatus": {
+              "type": "string"
+            },
+            "socialHandle": {
+              "type": "string"
+            },
+            "socialNetworkProvider": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "ContactPointPhone": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/ContactPoint"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id",
+            "isSMSCapable",
+            "formattedInternationalPhoneNumber",
+            "primaryPhoneType",
+            "isFaxCapable",
+            "formattedNationalPhoneNumber",
+            "telephoneNumber"
+          ],
+          "properties": {
+            "extensionNumber": {
+              "type": "string"
+            },
+            "phoneCountryCode": {
+              "type": "string"
+            },
+            "countryName": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "areaCode": {
+              "type": "string"
+            },
+            "isSMSCapable": {
+              "type": "boolean"
+            },
+            "shortCode": {
+              "type": "integer"
+            },
+            "formattedInternationalPhoneNumber": {
+              "type": "string"
+            },
+            "primaryPhoneType": {
+              "type": "string"
+            },
+            "isFaxCapable": {
+              "type": "boolean"
+            },
+            "formattedE164PhoneNumber": {
+              "type": "string"
+            },
+            "formattedNationalPhoneNumber": {
+              "type": "string"
+            },
+            "telephoneNumber": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "ContactPoint": {
+      "type": "object",
+      "required": [
+        "id",
+        "activeFromDate",
+        "party",
+        "contactPointType",
+        "forBusinessUse",
+        "forPersonalUse"
+      ],
+      "properties": {
+        "primaryFlag": {
+          "type": "boolean"
+        },
+        "bestTimeToContactStartTime": {
+          "type": "string",
+          "format": "time"
+        },
+        "profileLastUpdatedDate": {
+          "type": "string",
+          "format": "time"
+        },
+        "partyRole": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "activeFromDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "activeToDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "profileOccurrenceCount": {
+          "type": "integer"
+        },
+        "profileFirstCreatedDate": {
+          "type": "string",
+          "format": "time"
+        },
+        "bestTimeToContactEndTime": {
+          "type": "string",
+          "format": "time"
+        },
+        "party": {
+          "type": "array",
+          "items": {
+            "$ref": "../Party/schema.json#/definitions/Party"
+          }
+        },
+        "contactPointType": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContactPointType"
+          }
+        },
+        "forBusinessUse": {
+          "type": "boolean"
+        },
+        "forPersonalUse": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}

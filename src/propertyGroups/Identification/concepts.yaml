@@ -1,0 +1,44 @@
+#%Vocabulary 1.0
+base: http://cloudinformationmodel.org/model/
+vocabulary: Identification Property Group
+propertyTerms:
+  id:
+    displayName: Individual Id
+    description: Primary key unique identification value
+    range: any
+  dUNSNumber:
+    displayName: DUNS Number
+    description: 9 digit global standard number to identify businesses
+    range: any
+  legalName:
+    displayName: Legal Name
+    description: The registered legal name of the business
+    range: any
+  stockExchangeName:
+    displayName: Stock Exchange Name
+    description: What main stock exchange is the party noted on
+    range: any
+  businessName:
+    displayName: Business Name
+    description: Alternative name under which the business is known to the general public
+    range: any
+  tax:
+    displayName: Tax Id
+    description: What is the government provided tax identification fort this business
+    range: any
+  stockTickerSymbol:
+    displayName: Stock Ticker Symbol
+    description: Main ticker symbol for the primary exchange the business is trading on
+    range: any
+  photoURL:
+    displayName: Photo URL
+    description: Link to a photo
+    range: any
+  companyType:
+    displayName: Company Type
+    description: Discretionary name of the business site location, for example Headquarters or London
+    range: any
+  dandBCompanyName:
+    displayName: D&B Company Name
+    description: Name as stated by the company Dun and Bradstreet
+    range: any

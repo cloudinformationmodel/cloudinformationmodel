@@ -1,0 +1,874 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "ProductEntityGroup",
+  "@type": "EntityGroup",
+  "version": "0.1",
+  "schemas": [
+    {
+      "@type": "Shape",
+      "@id": "Product",
+      "properties": [
+        {
+          "path": "type",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "brandGrade",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "name",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "description",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "longDescription",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "displayUrl",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "isDynamicBundle",
+          "datatype": "xsd:boolean",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "revenueInstallmentCount",
+          "datatype": "xsd:integer",
+          "maxCount": "1"
+        },
+        {
+          "path": "revenueInstallmentPeriod",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "revenueScheduleType",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "canUseRevenueSchedule",
+          "datatype": "xsd:boolean",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "quantityInstallmentCount",
+          "datatype": "xsd:integer",
+          "maxCount": "1"
+        },
+        {
+          "path": "quantityInstallmentPeriod",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "quantityScheduleType",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "canUseQuantitySchedule",
+          "datatype": "xsd:boolean",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "disposalType",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "allowPartialRefund",
+          "datatype": "xsd:boolean",
+          "maxCount": "1"
+        },
+        {
+          "path": "allowCustomerReturn",
+          "datatype": "xsd:boolean",
+          "maxCount": "1"
+        },
+        {
+          "path": "validForPeriodUOM",
+          "node": "ProductValidityTimePeriodUOM"
+        },
+        {
+          "path": "validForPeriodCount",
+          "datatype": "xsd:integer",
+          "maxCount": "1"
+        },
+        {
+          "path": "validToDate",
+          "datatype": "xsd:date",
+          "maxCount": "1"
+        },
+        {
+          "path": "validFromDate",
+          "datatype": "xsd:date",
+          "maxCount": "1"
+        },
+        {
+          "path": "standardWarrantyLengthMonth",
+          "datatype": "xsd:integer",
+          "maxCount": "1"
+        },
+        {
+          "path": "isAutoProvisionable",
+          "datatype": "xsd:boolean",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "isInstallable",
+          "datatype": "xsd:boolean",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "isQualityVerificationRequired",
+          "datatype": "xsd:boolean",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "isQuantityEntryRequired",
+          "datatype": "xsd:boolean",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "isWeightEntryRequired",
+          "datatype": "xsd:boolean",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "isManualPriceEntryRequired",
+          "datatype": "xsd:boolean",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "rewardProgramPointsCount",
+          "datatype": "xsd:integer",
+          "maxCount": "1"
+        },
+        {
+          "path": "isFoodstampPaymentAllowed",
+          "datatype": "xsd:boolean",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "isPartnerDiscountAllowed",
+          "datatype": "xsd:boolean",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "isWorkerDiscountAllowed",
+          "datatype": "xsd:boolean",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "isCustomerDiscountAllowed",
+          "datatype": "xsd:boolean",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "isMultipleCouponsAllowed",
+          "datatype": "xsd:boolean",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "isCouponRedemptionAllowed",
+          "datatype": "xsd:boolean",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "requiredDepositPercentage",
+          "datatype": "xsd:decimal",
+          "maxCount": "1"
+        },
+        {
+          "path": "requiredDepositAmount",
+          "datatype": "xsd:decimal",
+          "maxCount": "1"
+        },
+        {
+          "path": "isRainCheckAllowed",
+          "datatype": "xsd:boolean",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "maximumOrderQuantityCount",
+          "datatype": "xsd:integer",
+          "maxCount": "1"
+        },
+        {
+          "path": "primarySalesChannel",
+          "node": "SalesChannel"
+        },
+        {
+          "path": "minimumOrderQuantityCount",
+          "datatype": "xsd:integer",
+          "maxCount": "1"
+        },
+        {
+          "path": "requiresInvididualUnitPricing",
+          "datatype": "xsd:boolean",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "priceChargeType",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "minimumAdvertisementAmountStartDate",
+          "datatype": "xsd:decimal",
+          "maxCount": "1"
+        },
+        {
+          "path": "minimumAdvertisementAmount",
+          "datatype": "xsd:decimal",
+          "maxCount": "1"
+        },
+        {
+          "path": "mSRPAmount",
+          "datatype": "xsd:decimal",
+          "maxCount": "1"
+        },
+        {
+          "path": "isBackOrdered",
+          "datatype": "xsd:boolean",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "isReturnable",
+          "datatype": "xsd:boolean",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "isSellableWithoutPrice",
+          "datatype": "xsd:boolean",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "isSellableIndependently",
+          "datatype": "xsd:boolean",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "isSellable",
+          "datatype": "xsd:boolean",
+          "maxCount": "1"
+        },
+        {
+          "path": "isPreOrderable",
+          "datatype": "xsd:boolean",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "productStatus",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "isIntellectualPropertyProtected",
+          "datatype": "xsd:boolean",
+          "maxCount": "1"
+        },
+        {
+          "path": "externalSourceRecord",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "lotIdentifier",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "stockLedgerValuationAmount",
+          "datatype": "xsd:integer",
+          "maxCount": "1"
+        },
+        {
+          "path": "glAccountCode",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "isSerialized",
+          "datatype": "xsd:boolean",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "primaryProductCategory",
+          "node": "ProductCategory"
+        },
+        {
+          "path": "versionNumber",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "modelNumber",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "modelYear",
+          "datatype": "xsd:integer",
+          "maxCount": "1"
+        },
+        {
+          "path": "brand",
+          "node": "Brand"
+        },
+        {
+          "path": "manufacturerName",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "masterProduct",
+          "node": "Product"
+        },
+        {
+          "path": "productSKU",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "GoodsProduct",
+      "and": [
+        {
+          "@id": "Product"
+        },
+        {
+          "properties": [
+            {
+              "path": "requiresUnitPriceLabel",
+              "datatype": "xsd:boolean",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "maxHoldingDayCount",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "shelfFacingUnitCount",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "isPerishable",
+              "datatype": "xsd:boolean",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "isMadeToOrder",
+              "datatype": "xsd:boolean",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "requiredCleanupProcess",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "requiredHumidityPercentage",
+              "datatype": "xsd:decimal",
+              "maxCount": "1"
+            },
+            {
+              "path": "requiredTemperatureUOM",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "requiredTemperatureHighestNumber",
+              "datatype": "xsd:decimal",
+              "maxCount": "1"
+            },
+            {
+              "path": "requiredTemperatureLowestNumber",
+              "datatype": "xsd:decimal",
+              "maxCount": "1"
+            },
+            {
+              "path": "environmentRequirement",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "productSecurityRequirement",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "age",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "gender",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "season",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "pattern",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "fabric",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "style",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "color",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "weightUOM",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "tareWeight",
+              "datatype": "xsd:decimal",
+              "maxCount": "1"
+            },
+            {
+              "path": "drainedWeight",
+              "datatype": "xsd:decimal",
+              "maxCount": "1"
+            },
+            {
+              "path": "netWeight",
+              "datatype": "xsd:decimal",
+              "maxCount": "1"
+            },
+            {
+              "path": "grossWeight",
+              "datatype": "xsd:decimal",
+              "maxCount": "1"
+            },
+            {
+              "path": "productMayExpand",
+              "datatype": "xsd:boolean",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "sizeUOM",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "diameter",
+              "datatype": "xsd:decimal",
+              "maxCount": "1"
+            },
+            {
+              "path": "height",
+              "datatype": "xsd:decimal",
+              "maxCount": "1"
+            },
+            {
+              "path": "width",
+              "datatype": "xsd:decimal",
+              "maxCount": "1"
+            },
+            {
+              "path": "depth",
+              "datatype": "xsd:decimal",
+              "maxCount": "1"
+            },
+            {
+              "path": "id",
+              "datatype": "cim:id",
+              "maxCount": "1",
+              "minCount": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "ServiceProduct",
+      "and": [
+        {
+          "@id": "Product"
+        },
+        {
+          "properties": [
+            {
+              "path": "evergreenContractEstimatedChargeAmount",
+              "datatype": "xsd:decimal",
+              "maxCount": "1"
+            },
+            {
+              "path": "evergreenContractEstimatedMonthCount",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "serviceProviderAccount",
+              "node": "Account"
+            },
+            {
+              "path": "rentalCleanupFeeAmount",
+              "datatype": "xsd:decimal",
+              "maxCount": "1"
+            },
+            {
+              "path": "rentalTermViolationPenaltyAmount",
+              "datatype": "xsd:decimal",
+              "maxCount": "1"
+            },
+            {
+              "path": "servicePeriodUOM",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "servicePeriodCount",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "serviceType",
+              "datatype": "xsd:string",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "id",
+              "datatype": "cim:id",
+              "maxCount": "1",
+              "minCount": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "BundleProduct",
+      "and": [
+        {
+          "@id": "Product"
+        },
+        {
+          "properties": [
+            {
+              "path": "weightUOM",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "tareWeight",
+              "datatype": "xsd:decimal",
+              "maxCount": "1"
+            },
+            {
+              "path": "expectedWasteCount",
+              "datatype": "xsd:integer",
+              "maxCount": "1"
+            },
+            {
+              "path": "quantityUnitOfMeasure",
+              "datatype": "xsd:string",
+              "maxCount": "1"
+            },
+            {
+              "path": "quantityCount",
+              "datatype": "xsd:decimal",
+              "maxCount": "1"
+            },
+            {
+              "path": "bundledProductsDecidedAtUse",
+              "datatype": "xsd:boolean",
+              "maxCount": "1"
+            },
+            {
+              "path": "bundledProductsDecidesAvailability",
+              "datatype": "xsd:boolean",
+              "maxCount": "1"
+            },
+            {
+              "path": "bundledProductsSubstitutional",
+              "datatype": "xsd:boolean",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "bundledProductsSoldTogether",
+              "datatype": "xsd:boolean",
+              "maxCount": "1",
+              "minCount": "1"
+            },
+            {
+              "path": "id",
+              "datatype": "cim:id",
+              "maxCount": "1",
+              "minCount": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "ProductTranslation",
+      "properties": [
+        {
+          "path": "longDescription",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "description",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "name",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "product",
+          "node": "Product",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "ProductRelatedProduct",
+      "properties": [
+        {
+          "path": "isDefaultOption",
+          "datatype": "xsd:boolean",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "toDate",
+          "datatype": "xsd:date",
+          "maxCount": "1"
+        },
+        {
+          "path": "fromDate",
+          "datatype": "xsd:date",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "parentProduct",
+          "node": "Product",
+          "minCount": "1"
+        },
+        {
+          "path": "productRelationshipType",
+          "node": "ProductRelationshipType",
+          "minCount": "1"
+        },
+        {
+          "path": "childProduct",
+          "node": "Product",
+          "minCount": "1"
+        },
+        {
+          "path": "salesOrderProduct1",
+          "node": "SalesOrderProduct",
+          "minCount": "1"
+        },
+        {
+          "path": "salesOrderProduct2",
+          "node": "SalesOrderProduct",
+          "minCount": "1"
+        },
+        {
+          "path": "name",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "ProductRelationshipType",
+      "properties": [
+        {
+          "path": "childProductRole",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "parentProductRole",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "ProductImage",
+      "properties": [
+        {
+          "path": "imageViewType",
+          "datatype": "xsd:string",
+          "maxCount": "1"
+        },
+        {
+          "path": "isDefaultImage",
+          "datatype": "xsd:boolean",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "product",
+          "node": "Product",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "ProductImageTranslation",
+      "properties": [
+        {
+          "path": "translatedName",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "productImage",
+          "node": "ProductImage",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "Brand",
+      "properties": [
+        {
+          "path": "brandGrade",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "name",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    }
+  ]
+}

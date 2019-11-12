@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Cloud Information Model</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,900&display=swap" rel="stylesheet">
+  <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap.native/2.0.27/bootstrap-native-v4.min.js"
+  ></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="/css/normalize.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="/css/site.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body>
+<header>
+  <div class="container">
+    <div class="navbar-container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+	<a class="navbar-brand" href="/">
+	  <svg width="110px" height="46px" viewBox="0 0 110 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	    <defs>
+	      <polygon id="path-1" points="0 0.0233160305 42.7180179 0.0233160305 42.7180179 45.9997893 0 45.9997893"></polygon>
+	    </defs>
+	    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+	      <g id="Header---Main" transform="translate(0.000000, -37.000000)">
+		<g id="logo" transform="translate(0.000000, 37.000000)">
+		  <g id="Group-3">
+		    <mask id="mask-2" fill="white">
+		      <use xlink:href="#path-1"></use>
+		    </mask>
+		    <g id="Clip-2"></g>
+		    <path d="M1.91276585,32.2194534 C0.63744878,29.359026 -0.000209756098,26.3002015 -0.000209756098,23.042629 C-0.000209756098,19.7857588 0.63744878,16.7216672 1.91276585,13.8503542 C3.18773333,10.9800947 4.91402602,8.53717863 7.09094472,6.52160611 C9.26751382,4.50708702 11.8468146,2.9202626 14.8284976,1.76148397 C17.8101805,0.602705344 20.9537252,0.0233160305 24.2587821,0.0233160305 C27.8963024,0.0233160305 31.3107821,0.80110229 34.5018715,2.35632366 C37.6926114,3.91224733 40.4313268,6.04720916 42.7180179,8.76120916 L34.455026,15.682629 C33.1244732,14.1793771 31.5810179,13.0104153 29.8246602,12.1750412 C28.0676033,11.3400183 26.2126602,10.9225069 24.2587821,10.9225069 C20.870522,10.9225069 18.0014081,12.0763695 15.652839,14.3830412 C13.3035707,16.6904153 12.1296358,19.5771786 12.1296358,23.042629 C12.1296358,26.4880641 13.3035707,29.359026 15.652839,31.6558656 C18.0014081,33.9530565 20.870522,35.1009496 24.2587821,35.1009496 C26.2126602,35.1009496 28.0676033,34.6887053 29.8246602,33.8638656 C31.5810179,33.039026 33.1244732,31.8749802 34.455026,30.3713771 L42.7180179,37.2931481 C40.4313268,40.0078504 37.6926114,42.137545 34.5018715,43.6825832 C31.3107821,45.2279725 27.8963024,45.9997893 24.2587821,45.9997893 C20.9537252,45.9997893 17.8101805,45.4207511 14.8284976,44.2616214 C11.8468146,43.1028427 9.26751382,41.5212855 7.09094472,39.5169496 C4.91402602,37.5122626 3.18773333,35.0802321 1.91276585,32.2194534" id="Fill-1" fill="#221F1F" mask="url(#mask-2)"></path>
+		  </g>
+		  <polygon id="Fill-4" fill="#221F1F" points="45 45 57 45 57 1 45 1"></polygon>
+		  <polygon id="Fill-6" fill="#221F1F" points="61 45 61 1 70.9941074 1 85.4998244 21.0109996 100.005541 1 110 1 110 45 98.7213273 45 98.7213273 21.6892683 85.4998244 39.6965752 72.2786727 21.6892683 72.2786727 45"></polygon>
+		</g>
+	      </g>
+	    </g>
+	  </svg>
+	</a>
+	<button
+	    class="navbar-toggler collapsed"
+	    type="button"
+	    data-toggle="collapse"
+	    data-target="#navbarNavAltMarkup"
+	    aria-controls="navbarNavAltMarkup"
+	    aria-expanded="false"
+	    aria-label="Toggle navigation"
+	>
+		<span class="navbar-toggler-box">
+		  <span class="navbar-toggler-inner"></span>
+		</span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+	  <div class="navbar-nav ml-auto">
+	    <a class="nav-item nav-link" href="/subject_areas.html">Subject Areas</a>
+	    <a class="nav-item nav-link" href="/documentation.html">Documentation</a>
+	    <a class="nav-item nav-link" href="/about.html">About</a>
+	  </div>
+	</div>
+      </nav>
+    </div>
+  </div>
+</header>
+<section class="layout">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+	<h2 class="subject-area-header">
+	  <span class="subject-area-name">Product</span>
+	</h2>
+
+	<p class="subject-area-description">
+	  <span>Anything you plan to sell or any part of a product that needs to be tracked for service purposes. For example, you are selling a green tractor.</span>
+	</p>
+
+	<div class="row justify-content-center">
+	  <div class="col-12 col-lg-10">
+          <a href="Product.png" target="_blank"><img src="Product.png" class="img-fluid mb-4"/></a>
+	  </div>
+	</div>
+
+	<h3>Entity Groups</h3>
+
+	<div class="table-responsive">
+	  <table>
+	    <thead>
+	    <tr>
+	      <th>Name</th>
+	      <th>Description</th>
+	    </tr>
+	    </thead>
+	    <tbody>
+	      <tr id="Product-scalar-tr">
+		<td class="sprop-name"><a href="productentitygroup.html">Product</a></td>
+		<td class="sprop-data">Example Entities included: Product Type, Product Item, Product Attribute, Product Relation</td>
+	      </tr>
+	      <tr id="Product Attribute-scalar-tr">
+		<td class="sprop-name"><a href="productattributeentitygroup.html">Product Attribute</a></td>
+		<td class="sprop-data">Example Entities included: Attribute Set, Attribute Set Attribute</td>
+	      </tr>
+	      <tr id="Product Catalog-scalar-tr">
+		<td class="sprop-name"><a href="productcatalogentitygroup.html">Product Catalog</a></td>
+		<td class="sprop-data">Example Entities included: Product Catalog, Product Catalog Category, Product Catalog Assignment</td>
+	      </tr>
+	    </tbody>
+	  </table>
+	</div>
+
+	<h3>Entities</h3>
+
+	<div class="table-responsive">
+	  <table>
+	    <thead>
+	    <tr>
+	      <th>Name</th>
+	      <th>Description</th>
+	    </tr>
+	    </thead>
+	    <tbody>
+	      <tr id="Attribute Set Translation-scalar-tr">
+		<td class="sprop-name"><a href="schema_productattributeentitygroup_attributesettranslation.html">Attribute Set Translation</a></td>
+		<td class="sprop-data">Translated attributes for an attribute set</td>
+	      </tr>
+	      <tr id="Attribute Translation-scalar-tr">
+		<td class="sprop-name"><a href="schema_productattributeentitygroup_attributetranslation.html">Attribute Translation</a></td>
+		<td class="sprop-data">Translated attributes for an attribute</td>
+	      </tr>
+	      <tr id="Attribute Value-scalar-tr">
+		<td class="sprop-name"><a href="schema_productattributeentitygroup_attributevalue.html">Attribute Value</a></td>
+		<td class="sprop-data">A predefine set of values for a product attribute e.g. shoe lace length 10, 12, 14 centimeter</td>
+	      </tr>
+	      <tr id="Attribute Value Translation-scalar-tr">
+		<td class="sprop-name"><a href="schema_productattributeentitygroup_attributevaluetranslation.html">Attribute Value Translation</a></td>
+		<td class="sprop-data">Translated attributes for an attribute value</td>
+	      </tr>
+	      <tr id="Brand-scalar-tr">
+		<td class="sprop-name"><a href="schema_productentitygroup_brand.html">Brand</a></td>
+		<td class="sprop-data">What is the brand of the product e.g. Snike shoes</td>
+	      </tr>
+	      <tr id="Bundle Product-scalar-tr">
+		<td class="sprop-name"><a href="schema_productentitygroup_bundleproduct.html">Bundle Product</a></td>
+		<td class="sprop-data">Product groups e.g. mobile phone package include phone, call plan and charger</td>
+	      </tr>
+	      <tr id="Device User Session-scalar-tr">
+		<td class="sprop-name"><a href="schema_productattributeentitygroup_deviceusersession.html">Device User Session</a></td>
+		<td class="sprop-data">A time-bound period when a person used a website or other service, also known as a Visit</td>
+	      </tr>
+	      <tr id="Goods Product-scalar-tr">
+		<td class="sprop-name"><a href="schema_productentitygroup_goodsproduct.html">Goods Product</a></td>
+		<td class="sprop-data">Products you can touch e.g. cart of milk, pallet of coffee, mobile phone x model 1</td>
+	      </tr>
+	      <tr id="Price Book Entry-scalar-tr">
+		<td class="sprop-name"><a href="schema_productattributeentitygroup_pricebookentry.html">Price Book Entry</a></td>
+		<td class="sprop-data">A list of products and their prices.</td>
+	      </tr>
+	      <tr id="Product-scalar-tr">
+		<td class="sprop-name"><a href="schema_productentitygroup_product.html">Product</a></td>
+		<td class="sprop-data">What is intended to be sold e.g. goods, services, bundles, made to order products.</td>
+	      </tr>
+	      <tr id="Product Attribute Set-scalar-tr">
+		<td class="sprop-name"><a href="schema_productattributeentitygroup_productattributeset.html">Product Attribute Set</a></td>
+		<td class="sprop-data">A set of attributes e.g. shoe attributes that are assigned to a particular instance of Product</td>
+	      </tr>
+	      <tr id="Product Attribute Value-scalar-tr">
+		<td class="sprop-name"><a href="schema_productattributeentitygroup_productattributevalue.html">Product Attribute Value</a></td>
+		<td class="sprop-data">Assignment of an attribute value to a product e.g. shoe lace</td>
+	      </tr>
+	      <tr id="Product Catalog-scalar-tr">
+		<td class="sprop-name"><a href="schema_productcatalogentitygroup_productcatalog.html">Product Catalog</a></td>
+		<td class="sprop-data">A catalog used for a certain business process e.g. inventory, merchandizing</td>
+	      </tr>
+	      <tr id="Product Catalog Translation-scalar-tr">
+		<td class="sprop-name"><a href="schema_productcatalogentitygroup_productcatalogtranslation.html">Product Catalog Translation</a></td>
+		<td class="sprop-data">Translated attributes for a product catalog</td>
+	      </tr>
+	      <tr id="Product Category-scalar-tr">
+		<td class="sprop-name"><a href="schema_productcatalogentitygroup_productcategory.html">Product Category</a></td>
+		<td class="sprop-data">A product may consist of many categories e.g. shoes, tshirts</td>
+	      </tr>
+	      <tr id="Product Category Attribute Set-scalar-tr">
+		<td class="sprop-name"><a href="schema_productcatalogentitygroup_productcategoryattributeset.html">Product Category Attribute Set</a></td>
+		<td class="sprop-data">Assignment of an Attribute Set to a Product Category e.g. the Shoe attribute set assigned to the Shoes category</td>
+	      </tr>
+	      <tr id="Product Category Product-scalar-tr">
+		<td class="sprop-name"><a href="schema_productcatalogentitygroup_productcategoryproduct.html">Product Category Product</a></td>
+		<td class="sprop-data">Assignment of product to categories e.g. the Nikedas shoe assigned to shoe and running categories</td>
+	      </tr>
+	      <tr id="Product Category Translation-scalar-tr">
+		<td class="sprop-name"><a href="schema_productcatalogentitygroup_productcategorytranslation.html">Product Category Translation</a></td>
+		<td class="sprop-data">Translated attributes for a product category</td>
+	      </tr>
+	      <tr id="Product Collateral-scalar-tr">
+		<td class="sprop-name"><a href="schema_productattributeentitygroup_productcollateral.html">Product Collateral</a></td>
+		<td class="sprop-data">Collateral for a product e.g. link to brochure one</td>
+	      </tr>
+	      <tr id="Product Image-scalar-tr">
+		<td class="sprop-name"><a href="schema_productentitygroup_productimage.html">Product Image</a></td>
+		<td class="sprop-data">Images of a product</td>
+	      </tr>
+	      <tr id="Product Image Translation-scalar-tr">
+		<td class="sprop-name"><a href="schema_productentitygroup_productimagetranslation.html">Product Image Translation</a></td>
+		<td class="sprop-data">Translated attributes for a product image</td>
+	      </tr>
+	      <tr id="Product Related Product-scalar-tr">
+		<td class="sprop-name"><a href="schema_productentitygroup_productrelatedproduct.html">Product Related Product</a></td>
+		<td class="sprop-data">A grouping of products such as a product bundle</td>
+	      </tr>
+	      <tr id="Product Relationship Type-scalar-tr">
+		<td class="sprop-name"><a href="schema_productentitygroup_productrelationshiptype.html">Product Relationship Type</a></td>
+		<td class="sprop-data">What are the types of relationships available e.g. bundled with&#x2F;bundled in, substitute for&#x2F;substitute of</td>
+	      </tr>
+	      <tr id="Product Translation-scalar-tr">
+		<td class="sprop-name"><a href="schema_productentitygroup_producttranslation.html">Product Translation</a></td>
+		<td class="sprop-data">Translated attributes for a product</td>
+	      </tr>
+	      <tr id="Product Validity Time Period UOM-scalar-tr">
+		<td class="sprop-name"><a href="schema_productattributeentitygroup_productvaliditytimeperioduom.html">Product Validity Time Period UOM</a></td>
+		<td class="sprop-data">Standard units of measure for time, for example minute, second, hour and day</td>
+	      </tr>
+	      <tr id="Service Product-scalar-tr">
+		<td class="sprop-name"><a href="schema_productentitygroup_serviceproduct.html">Service Product</a></td>
+		<td class="sprop-data">Products that are intangible e.g. labor, software subscription</td>
+	      </tr>
+	    </tbody>
+	  </table>
+	</div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+    <footer class="footer">
+      <div class="container">
+	<div class="row text-center text-lg-right">
+	  <div class="col-12">
+	    <ul>
+	      <li><a href="http://www.jdfprojects.org/CIM/" target="_blank" rel="noopener noreferrer">Terms & Conditions</a></li>
+	      <li><a href="http://www.jdfprojects.org/CIM/" target="_blank" rel="noopener noreferrer">Privacy</a></li>
+	      <li><a href="https://github.com/cloudinformationmodel" target="_blank" rel="noopener noreferrer">Github</a></li>
+	    </ul>
+	  </div>
+	</div>
+      </div>
+    </footer>
+    <script
+	type="text/javascript"
+	src="/js/menu.js"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "FinancePropertyGroup",
+  "name": "Finance Property Group",
+  "@type": "PropertyGroup",
+  "version": "0.1",
+  "propertyConcepts": [
+    {
+      "@id": "glAccountCode",
+      "@type": "Property",
+      "description": "How are instances of this product accounted for e.g. as consumable, live stock, merchandize",
+      "name": "GL Account Code",
+      "range": "DataType"
+    },
+    {
+      "@id": "stockLedgerValuationAmount",
+      "@type": "Property",
+      "description": "What is the total value of this goods as we hold it in stock",
+      "name": "Stock Ledger Valuation Amount",
+      "range": "DataType"
+    }
+  ]
+}

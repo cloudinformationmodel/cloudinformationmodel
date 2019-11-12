@@ -1,0 +1,92 @@
+#%Vocabulary 1.0
+base: http://cloudinformationmodel.org/model/
+vocabulary: Progress Property Group
+propertyTerms:
+  salesOrderSystemStatus:
+    displayName: Sales Order System Status
+    description: A status that describes the system state of an order, which is changes independently of the Sales Order Status, which is displayed to the end user.
+    range: any
+  customerAuthorizedDate:
+    displayName: Customer Authorized Date
+    description: Date on which the contact authorized the order.
+    range: any
+  salesOrderStatus:
+    displayName: Sales Order Status
+    description: Current order status e.g. Draft, Ready for Review, Placed, Ready for Activation, Activated
+    range: any
+  packedDate:
+    displayName: Packed Date
+    description: Date the order was completely packed
+    range: any
+  filedDate:
+    displayName: Filed Date
+    description: Date the order was filed
+    range: any
+  isAlerted:
+    displayName: Is Alerted
+    description: Is the order alerted. Used to notify the user that something went wrong during a workflow.
+    range: any
+  isClosed:
+    displayName: Is Closed
+    description: Is the order closed or not. Used to drive and halt workflows
+    range: any
+  cancelDateType:
+    displayName: Cancel Date Type
+    description: ....returned as we do not know what a date type is....
+    range: any
+  orderEndDate:
+    displayName: Order End Date
+    description: Date at which the order ends. For subscription-type orders, this would be the date when the subscription ends.
+    range: any
+  paidDate:
+    displayName: Paid Date
+    description: What date was this order paid in full
+    range: any
+  activatedDate:
+    displayName: Activated Date
+    description: Date and time when the order was activated for fulfillment or shipping.
+    range: any
+  developerStatusCode:
+    displayName: Developer Status Code
+    description: Developer status for the order. An order can be either Draft or Activated
+    range: any
+  promiseFulfillmentDate:
+    displayName: Promise Fulfillment Date
+    description: Date the order was promised to be fulfilled
+    range: any
+  companyAuthorizedDate:
+    displayName: Company Authorized Date
+    description: Date on which the order was authorized by your organization.
+    range: any
+  fulfilledDate:
+    displayName: Fulfilled Date
+    description: What date was the order content completely provided to customer
+    range: any
+  isSuspended:
+    displayName: Is Suspended
+    description: Is the order suspended or not. Used to drive and halt workflows
+    range: any
+  originalOrder:
+    displayName: Original Order
+    description: Reference to the a parent order. Needed for reship, excahnge and even swap orders
+    range: SalesOrder
+  orderStartDate:
+    displayName: Order Start Date
+    description: Date at which the order becomes effective. For subscription-type orders, this would be the date when the subscription begins.
+    range: any
+  cancelDate:
+    displayName: Cancel Date
+    description: Date when the order was cancelled
+    range: any
+  requestedStartDate:
+    displayName: Requested Start Date
+    description: The customer's preferred date for order fulfillment
+    range: any
+  promiseDate:
+    displayName: Promise Date
+    description: Date the promise the order would be fulfilled
+    range: any
+  checkoutDate:
+    displayName: Checkout Date
+    description: What date this the customer checkout the shopping cart related to this order
+    range: any

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Cloud Information Model</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,900&display=swap" rel="stylesheet">
+  <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap.native/2.0.27/bootstrap-native-v4.min.js"
+  ></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="/css/normalize.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="/css/site.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body>
+<header>
+  <div class="container">
+    <div class="navbar-container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="/">
+          <svg width="110px" height="46px" viewBox="0 0 110 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+              <polygon id="path-1" points="0 0.0233160305 42.7180179 0.0233160305 42.7180179 45.9997893 0 45.9997893"></polygon>
+            </defs>
+            <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="Header---Main" transform="translate(0.000000, -37.000000)">
+                <g id="logo" transform="translate(0.000000, 37.000000)">
+                  <g id="Group-3">
+                    <mask id="mask-2" fill="white">
+                      <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Clip-2"></g>
+                    <path d="M1.91276585,32.2194534 C0.63744878,29.359026 -0.000209756098,26.3002015 -0.000209756098,23.042629 C-0.000209756098,19.7857588 0.63744878,16.7216672 1.91276585,13.8503542 C3.18773333,10.9800947 4.91402602,8.53717863 7.09094472,6.52160611 C9.26751382,4.50708702 11.8468146,2.9202626 14.8284976,1.76148397 C17.8101805,0.602705344 20.9537252,0.0233160305 24.2587821,0.0233160305 C27.8963024,0.0233160305 31.3107821,0.80110229 34.5018715,2.35632366 C37.6926114,3.91224733 40.4313268,6.04720916 42.7180179,8.76120916 L34.455026,15.682629 C33.1244732,14.1793771 31.5810179,13.0104153 29.8246602,12.1750412 C28.0676033,11.3400183 26.2126602,10.9225069 24.2587821,10.9225069 C20.870522,10.9225069 18.0014081,12.0763695 15.652839,14.3830412 C13.3035707,16.6904153 12.1296358,19.5771786 12.1296358,23.042629 C12.1296358,26.4880641 13.3035707,29.359026 15.652839,31.6558656 C18.0014081,33.9530565 20.870522,35.1009496 24.2587821,35.1009496 C26.2126602,35.1009496 28.0676033,34.6887053 29.8246602,33.8638656 C31.5810179,33.039026 33.1244732,31.8749802 34.455026,30.3713771 L42.7180179,37.2931481 C40.4313268,40.0078504 37.6926114,42.137545 34.5018715,43.6825832 C31.3107821,45.2279725 27.8963024,45.9997893 24.2587821,45.9997893 C20.9537252,45.9997893 17.8101805,45.4207511 14.8284976,44.2616214 C11.8468146,43.1028427 9.26751382,41.5212855 7.09094472,39.5169496 C4.91402602,37.5122626 3.18773333,35.0802321 1.91276585,32.2194534" id="Fill-1" fill="#221F1F" mask="url(#mask-2)"></path>
+                  </g>
+                  <polygon id="Fill-4" fill="#221F1F" points="45 45 57 45 57 1 45 1"></polygon>
+                  <polygon id="Fill-6" fill="#221F1F" points="61 45 61 1 70.9941074 1 85.4998244 21.0109996 100.005541 1 110 1 110 45 98.7213273 45 98.7213273 21.6892683 85.4998244 39.6965752 72.2786727 21.6892683 72.2786727 45"></polygon>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </a>
+        <button
+            class="navbar-toggler collapsed"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+                <span class="navbar-toggler-box">
+                  <span class="navbar-toggler-inner"></span>
+                </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link" href="/subject_areas.html">Subject Areas</a>
+            <a class="nav-item nav-link" href="/documentation.html">Documentation</a>
+            <a class="nav-item nav-link" href="/about.html">About</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+    <section class="layout">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-8">
+            <div class="about-section">
+              <h2>About</h2>
+              <p>We have developed the Cloud Information Model (CIM) with a standards-based approach and translated it into
+                multiple formats. This approach enables businesses with varying technologies to adopt CIM. It also empowers
+                contributors and fosters growth for a larger CIM ecosystem.</p>
+            </div>
+
+            <div class="tables-format-section">
+              <h3>Standards used in our formats</h3>
+              <p>CIM supports the following standard file formats.</p>
+              <div class="table-responsive">
+                <table>
+                  <thead>
+                  <th>Format</th>
+                  <th>File</th>
+                  <th>Description</th>
+                  <th>Standard</th>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>JSON-LD</td>
+                    <td>concepts.json</td>
+                    <td>Conceptual description of the entities and relationships in the model</td>
+                    <td><a href="https://www.w3.org/TR/rdf-schema/" target="_blank" rel="noopener noreferrer">RDF-Schema</a></td>
+                  </tr>
+                  <tr>
+                    <td>JSON-LD</td>
+                    <td>schema.json</td>
+                    <td>Canonical data shapes and additional constraints</td>
+                    <td><a href="https://www.w3.org/TR/shacl/" target="_blank" rel="noopener noreferrer">SHACL</a></td>
+                  </tr>
+                  <tr>
+                    <td>JSON-LD</td>
+                    <td>schema.r2rml</td>
+                    <td>Mapping from the relational schema to an RDF graph</td>
+                    <td><a href="https://www.w3.org/TR/r2rml/" target="_blank" rel="noopener noreferrer">R2RML</a></td>
+                  </tr>
+                  <tr>
+                    <td>YAML</td>
+                    <td>concepts.yaml</td>
+                    <td>AML human-readable version of the conceptual model</td>
+                    <td><a href="https://a.ml/" target="_blank" rel="noopener noreferrer">AML Vocabulary</a></td>
+                  </tr>
+                  <tr>
+                    <td>YAML</td>
+                    <td>schema.yaml</td>
+                    <td>AML human-readable version of the canonical data shapes</td>
+                    <td><a href="https://a.ml/" target="_blank" rel="noopener noreferrer">AML Dialect</a></td>
+                  </tr>
+                  <tr>
+                    <td>YAML</td>
+                    <td>schema.raml</td>
+                    <td>RAML data types library for the canonical data shapes</td>
+                    <td><a href="https://raml.org/" target="_blank" rel="noopener noreferrer">RAML data types</a></td>
+                  </tr>
+                  <tr>
+                    <td>JSON</td>
+                    <td>schema.json</td>
+                    <td>JSON Schema for the canonical data shapes</td>
+                    <td><a href="https://json-schema.org/latest/json-schema-core.html" target="_blank" rel="noopener noreferrer">JSON Schema</a></td>
+                  </tr>
+                  <tr>
+                    <td>SQL DDL</td>
+                    <td>schema.sql</td>
+                    <td>SQL DDL statements for the canonical shapes</td>
+                    <td><a href="https://www.iso.org/standard/45498.html" target="_blank" rel="noopener noreferrer">SQL 2008</a></td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="how-to-contribute-section">
+              <h3>How to contribute</h3>
+              <p>Anyone can collaborate and contribute in the public CIM repo on GitHub
+                (<a href="https://github.com/cloudinformationmodel" target="_blank" rel="noopener noreferrer">https://github.com/cloudinformationmodel</a>).
+                This repo provides a pull request change model, issue tracking, and community discussion. The CIM repo
+                uses a continuous integration and continuous delivery (CI/CD) pipeline for auto-generation of the model
+                distribution.</p>
+            </div>
+
+            <div class="about-download-section">
+              <h3>The full CIM distribution in our available formats</h3>
+              <p>Click on one of our available formats to download the complete CIM definition.</p>
+            </div>
+            <ul>
+              {{#globalLinks}}
+                <li><a href="{{{href}}}" target="_blank" rel="noopener noreferrer">{{text}}</a></li>
+              {{/globalLinks}}
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row text-center text-lg-right">
+          <div class="col-12">
+            <ul>
+              <li><a href="http://www.jdfprojects.org/CIM/" target="_blank" rel="noopener noreferrer">Terms & Conditions</a></li>
+              <li><a href="http://www.jdfprojects.org/CIM/" target="_blank" rel="noopener noreferrer">Privacy</a></li>
+              <li><a href="https://github.com/cloudinformationmodel" target="_blank" rel="noopener noreferrer">Github</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+        type="text/javascript"
+        src="/js/menu.js"
+    ></script>
+  </body>
+</html>

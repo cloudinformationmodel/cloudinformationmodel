@@ -1,0 +1,106 @@
+#%RAML 1.0 Library
+types:
+  ShipmentProductPriceAdjustmentTax:
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      shipmentProductPriceAdjustment:
+        items: ShipmentProductPriceAdjustment
+  ShipmentStatus:
+    properties:
+      id:
+        type: string
+      description:
+        type: string
+      name:
+        type: string
+  ShipmentProductPriceAdjustment:
+    properties:
+      adjustmentAmount:
+        type: integer
+      shipmentProductPriceAdjustmentAmount:
+        type: integer
+      description:
+        type: string
+      id:
+        type: string
+      shipmentProduct:
+        items: ShipmentProduct
+      adjustmentTaxAmount:
+        type: integer
+  Shipment:
+    properties:
+      giftMessageText:
+        type: string
+      shipmentNumber:
+        type: string
+      id:
+        type: string
+      shipmentStatus:
+        items: ShipmentStatus
+      salesOrder:
+        items: salesorder_eg.SalesOrder
+      isGift:
+        type: boolean
+      actualDeliveryDateTime:
+        type: time-only
+      specialInstructionsText:
+        type: string
+      carrierTrackingNumber:
+        type: string
+      shipToAddress:
+        items: contactpoint_eg.ContactPointAddress
+      estimatedDeliveryDateTime:
+        type: time-only
+      salesOrderDeliveryGroup:
+        items: salesorder_eg.SalesOrderDeliveryGroup
+      scheduledDeliveryDateTime:
+        type: time-only
+      shipmentDate:
+        type: date-only
+  ShipmentPackage:
+    properties:
+      shipment:
+        items: Shipment
+      id:
+        type: string
+      shipmentProductCount:
+        type: integer
+      shipmentProductDescription:
+        type: string
+  ShipmentDocument:
+    properties:
+      shipment:
+        items: Shipment
+      id:
+        type: string
+  ShippingMethod:
+    properties:
+      product:
+        items: product_eg.Product
+      id:
+        type: string
+      description:
+        type: string
+      name:
+        type: string
+  ShipmentProduct:
+    properties:
+      product:
+        items: product_eg.Product
+      shipment:
+        items: Shipment
+      shipmentPackage:
+        items: ShipmentPackage
+      id:
+        type: string
+      salesOrderProduct:
+        items: salesorder_eg.SalesOrderProduct
+      shipmentProductCount:
+        type: integer
+uses:
+  product_eg: ../../Product/Product/schema.yaml
+  contactpoint_eg: ../../Party/ContactPoint/schema.yaml
+  salesorder_eg: ../../SalesOrder/SalesOrder/schema.yaml

@@ -1,0 +1,128 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "FinancialPropertyGroup",
+  "name": "Financial Property Group",
+  "@type": "PropertyGroup",
+  "version": "0.1",
+  "propertyConcepts": [
+    {
+      "@id": "fiscalYearEndMonthDate",
+      "@type": "Property",
+      "description": "The month and date the fiscal year ends for the business",
+      "name": "Fiscal Year End Month Date",
+      "range": "DataType"
+    },
+    {
+      "@id": "annualRevenueAmount",
+      "@type": "Property",
+      "description": "Estimated annual revenue of a global business",
+      "name": "Annual Revenue Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "dunnandBradstreetRating",
+      "@type": "Property",
+      "description": "Indication of a business size and creditworthiness as stated by Dunn and Bradstreet",
+      "name": "Dunn and Bradstreet Rating",
+      "range": "DataType"
+    },
+    {
+      "@id": "businessSizeType",
+      "@type": "Property",
+      "description": "How big is the business e.g. small, medium, enterprise",
+      "name": "Business Size Type",
+      "range": "DataType"
+    },
+    {
+      "@id": "marketCapitalizationAmount",
+      "@type": "Property",
+      "description": "How big is the business market equity on primary stock exchange",
+      "name": "Market Capitalization Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "employeeCount",
+      "@type": "Property",
+      "description": "How many employees does the business have",
+      "name": "Employee Count",
+      "range": "DataType"
+    },
+    {
+      "@id": "bankruptcyHistoryFlag",
+      "@type": "Property",
+      "description": "Set to indicate if company has ever been in bankruptcy even if it is not currently",
+      "name": "Bankruptcy History Flag",
+      "range": "DataType"
+    },
+    {
+      "@id": "bankruptcyDate",
+      "@type": "Property",
+      "description": "When business went into bankruptcy",
+      "name": "Bankruptcy Date",
+      "range": "DataType"
+    },
+    {
+      "@id": "bankruptcyEmergenceDate",
+      "@type": "Property",
+      "description": "When business emerged from bankruptcy",
+      "name": "Bankruptcy Emergence Date",
+      "range": "DataType"
+    },
+    {
+      "@id": "bankruptcyType",
+      "@type": "Property",
+      "description": "What type of bankcruptcy the business ent through e.g. chapter 7, chapter 11",
+      "name": "Bankruptcy Type",
+      "range": "DataType"
+    },
+    {
+      "@id": "netWorth",
+      "@type": "Property",
+      "description": "How much money does the person have in total if all assets counted",
+      "name": "Net Worth",
+      "range": "DataType"
+    },
+    {
+      "@id": "yearlyIncome",
+      "@type": "Property",
+      "description": "What is the more specific income the person have",
+      "name": "Yearly Income",
+      "range": "DataType"
+    },
+    {
+      "@id": "yearlyIncomeRange",
+      "@type": "Property",
+      "description": "What is the income range the person is part of",
+      "name": "Yearly Income Range",
+      "range": "DataType"
+    },
+    {
+      "@id": "consumerCreditScore",
+      "@type": "Property",
+      "description": "What is the credit score the person have e.g. 740",
+      "name": "Consumer Credit Score",
+      "range": "DataType"
+    },
+    {
+      "@id": "consumerCreditScoreProviderName",
+      "@type": "Property",
+      "description": "Who provided the credit score e.g. Experian",
+      "name": "Consumer Credit Score Provider Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "dependentCount",
+      "@type": "Property",
+      "description": "How may dependents e.g. children or grown ups does the person claim to have",
+      "name": "Dependent Count",
+      "range": "DataType"
+    },
+    {
+      "@id": "taxBracketRange",
+      "@type": "Property",
+      "description": "In what income tax bracket does the person fall into e.g. 10000 to 20000, 20001-30000",
+      "name": "Tax Bracket Range",
+      "range": "DataType"
+    }
+  ]
+}

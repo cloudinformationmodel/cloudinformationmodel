@@ -1,0 +1,16 @@
+#%Vocabulary 1.0
+base: http://cloudinformationmodel.org/model/
+vocabulary: Geography Property Group
+propertyTerms:
+  geoCodeLatitude:
+    displayName: Geo Code Latitude
+    description: Latitude to the center of address
+    range: any
+  geoCodeLongitude:
+    displayName: Geo Code Longitude
+    description: Longitude to the center of the address
+    range: any
+  geoCodeAccuracy:
+    displayName: Geo Code Accuracy
+    description: How accurate the lat/long information is
+    range: any

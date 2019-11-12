@@ -1,0 +1,177 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "ProductCatalogEntityGroup",
+  "@type": "EntityGroup",
+  "version": "0.1",
+  "schemas": [
+    {
+      "@type": "Shape",
+      "@id": "ProductCatalog",
+      "properties": [
+        {
+          "path": "activeToDate",
+          "datatype": "xsd:date",
+          "maxCount": "1"
+        },
+        {
+          "path": "activeFromDate",
+          "datatype": "xsd:date",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "name",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "ProductCatalogTranslation",
+      "properties": [
+        {
+          "path": "translatedName",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "productCatalog",
+          "node": "ProductCatalog",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "ProductCategory",
+      "properties": [
+        {
+          "path": "parentCategory",
+          "node": "ProductCategory"
+        },
+        {
+          "path": "activeToDate",
+          "datatype": "xsd:date",
+          "maxCount": "1"
+        },
+        {
+          "path": "activeFromDate",
+          "datatype": "xsd:date",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "productCatalog",
+          "node": "ProductCatalog",
+          "minCount": "1"
+        },
+        {
+          "path": "name",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "ProductCategoryTranslation",
+      "properties": [
+        {
+          "path": "translatedName",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "productCategory",
+          "node": "ProductCategory",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "ProductCategoryProduct",
+      "properties": [
+        {
+          "path": "activeToDateTime",
+          "datatype": "xsd:time",
+          "maxCount": "1"
+        },
+        {
+          "path": "activeFromDateTime",
+          "datatype": "xsd:time",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "product",
+          "node": "Product",
+          "minCount": "1"
+        },
+        {
+          "path": "productCategory",
+          "node": "ProductCategory",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
+      "@id": "ProductCategoryAttributeSet",
+      "properties": [
+        {
+          "path": "attributeSet",
+          "datatype": "xsd:string",
+          "maxCount": "1",
+          "minCount": "1"
+        },
+        {
+          "path": "productCategory",
+          "node": "ProductCategory",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    }
+  ]
+}

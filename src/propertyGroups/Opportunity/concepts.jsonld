@@ -1,0 +1,65 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "OpportunityPropertyGroup",
+  "name": "Opportunity Property Group",
+  "@type": "PropertyGroup",
+  "version": "0.1",
+  "propertyConcepts": [
+    {
+      "@id": "canUseQuantitySchedule",
+      "@type": "Property",
+      "description": "Indicates whether the product can have a quantity schedule",
+      "name": "Quantity Scheduling Enabled",
+      "range": "DataType"
+    },
+    {
+      "@id": "quantityScheduleType",
+      "@type": "Property",
+      "description": "The type of the quantity schedule, if the product has one i.e. Divide, Repeat",
+      "name": "Quantity Schedule Type",
+      "range": "DataType"
+    },
+    {
+      "@id": "quantityInstallmentPeriod",
+      "@type": "Property",
+      "description": "If the product has a quantity schedule, the amount of time covered by the schedule.",
+      "name": "Quantity Installment Period",
+      "range": "DataType"
+    },
+    {
+      "@id": "quantityInstallmentCount",
+      "@type": "Property",
+      "description": "If the product has a quantity schedule, the number of installments.",
+      "name": "Quantity Installment Count",
+      "range": "DataType"
+    },
+    {
+      "@id": "canUseRevenueSchedule",
+      "@type": "Property",
+      "description": "Indicates whether the product can have a revenue schedule",
+      "name": "Revenue Scheduling Enabled",
+      "range": "DataType"
+    },
+    {
+      "@id": "revenueScheduleType",
+      "@type": "Property",
+      "description": "The type of the revenue schedule, if the product has one i.e. Divide, Repeat",
+      "name": "Revenue Schedule Type",
+      "range": "DataType"
+    },
+    {
+      "@id": "revenueInstallmentPeriod",
+      "@type": "Property",
+      "description": "The period of time covered by the schedule i.e. Daily, Weekly, Monthly, Quarterly, Yearly",
+      "name": "Revenue Installment Period",
+      "range": "DataType"
+    },
+    {
+      "@id": "revenueInstallmentCount",
+      "@type": "Property",
+      "description": "If the product has a revenue schedule, the number of installments from 1 to 150",
+      "name": "Revenue Installment Count",
+      "range": "DataType"
+    }
+  ]
+}

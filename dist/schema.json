@@ -1,0 +1,5899 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/Account"
+    },
+    {
+      "$ref": "#/definitions/AccountContact"
+    },
+    {
+      "$ref": "#/definitions/AccountContactRole"
+    },
+    {
+      "$ref": "#/definitions/AccountPartner"
+    },
+    {
+      "$ref": "#/definitions/AttributeSetTranslation"
+    },
+    {
+      "$ref": "#/definitions/AttributeTranslation"
+    },
+    {
+      "$ref": "#/definitions/AttributeValue"
+    },
+    {
+      "$ref": "#/definitions/AttributeValueTranslation"
+    },
+    {
+      "$ref": "#/definitions/BillingFrequency"
+    },
+    {
+      "$ref": "#/definitions/Brand"
+    },
+    {
+      "$ref": "#/definitions/BundleProduct"
+    },
+    {
+      "$ref": "#/definitions/CapturePayment"
+    },
+    {
+      "$ref": "#/definitions/Competitor"
+    },
+    {
+      "$ref": "#/definitions/ContactPoint"
+    },
+    {
+      "$ref": "#/definitions/ContactPointAddress"
+    },
+    {
+      "$ref": "#/definitions/ContactPointApp"
+    },
+    {
+      "$ref": "#/definitions/ContactPointEmail"
+    },
+    {
+      "$ref": "#/definitions/ContactPointLocation"
+    },
+    {
+      "$ref": "#/definitions/ContactPointPhone"
+    },
+    {
+      "$ref": "#/definitions/ContactPointSocial"
+    },
+    {
+      "$ref": "#/definitions/ContactPointType"
+    },
+    {
+      "$ref": "#/definitions/Coupon"
+    },
+    {
+      "$ref": "#/definitions/CreditTender"
+    },
+    {
+      "$ref": "#/definitions/Customer"
+    },
+    {
+      "$ref": "#/definitions/CustomerStatusHistory"
+    },
+    {
+      "$ref": "#/definitions/DeviceUserSession"
+    },
+    {
+      "$ref": "#/definitions/GoodsProduct"
+    },
+    {
+      "$ref": "#/definitions/Household"
+    },
+    {
+      "$ref": "#/definitions/Individual"
+    },
+    {
+      "$ref": "#/definitions/InternalBusinessUnit"
+    },
+    {
+      "$ref": "#/definitions/Lead"
+    },
+    {
+      "$ref": "#/definitions/OrderDeliveryMethod"
+    },
+    {
+      "$ref": "#/definitions/Party"
+    },
+    {
+      "$ref": "#/definitions/PartyAdditionalName"
+    },
+    {
+      "$ref": "#/definitions/PartyIdentification"
+    },
+    {
+      "$ref": "#/definitions/PartyRelatedParty"
+    },
+    {
+      "$ref": "#/definitions/PartyRelationshipType"
+    },
+    {
+      "$ref": "#/definitions/PartyRole"
+    },
+    {
+      "$ref": "#/definitions/PartyWebAddress"
+    },
+    {
+      "$ref": "#/definitions/Payment"
+    },
+    {
+      "$ref": "#/definitions/PaymentAllocation"
+    },
+    {
+      "$ref": "#/definitions/PaymentApplication"
+    },
+    {
+      "$ref": "#/definitions/PaymentAuthorization"
+    },
+    {
+      "$ref": "#/definitions/PaymentAuthorizationReversal"
+    },
+    {
+      "$ref": "#/definitions/PaymentCard"
+    },
+    {
+      "$ref": "#/definitions/PaymentCreditMemoAllocation"
+    },
+    {
+      "$ref": "#/definitions/PaymentCreditMemoApplication"
+    },
+    {
+      "$ref": "#/definitions/PaymentGateway"
+    },
+    {
+      "$ref": "#/definitions/PaymentGatewayAuthReversalLog"
+    },
+    {
+      "$ref": "#/definitions/PaymentGatewayAuthorizationLog"
+    },
+    {
+      "$ref": "#/definitions/PaymentGatewayInteractionLog"
+    },
+    {
+      "$ref": "#/definitions/PaymentGatewayInteractionType"
+    },
+    {
+      "$ref": "#/definitions/PaymentGatewayPaymentLog"
+    },
+    {
+      "$ref": "#/definitions/PaymentGatewayProvider"
+    },
+    {
+      "$ref": "#/definitions/PaymentGatewayResultCode"
+    },
+    {
+      "$ref": "#/definitions/PaymentGroup"
+    },
+    {
+      "$ref": "#/definitions/PaymentInvoiceAllocation"
+    },
+    {
+      "$ref": "#/definitions/PaymentInvoiceApplication"
+    },
+    {
+      "$ref": "#/definitions/PaymentMethod"
+    },
+    {
+      "$ref": "#/definitions/PaymentMethodType"
+    },
+    {
+      "$ref": "#/definitions/PaymentPolicy"
+    },
+    {
+      "$ref": "#/definitions/PaymentTreatment"
+    },
+    {
+      "$ref": "#/definitions/PaymentTreatmentMethod"
+    },
+    {
+      "$ref": "#/definitions/PersonEducation"
+    },
+    {
+      "$ref": "#/definitions/PersonEmployment"
+    },
+    {
+      "$ref": "#/definitions/PersonLanguage"
+    },
+    {
+      "$ref": "#/definitions/PersonLifeEvent"
+    },
+    {
+      "$ref": "#/definitions/PriceAdjustmentGroup"
+    },
+    {
+      "$ref": "#/definitions/PriceBookEntry"
+    },
+    {
+      "$ref": "#/definitions/Product"
+    },
+    {
+      "$ref": "#/definitions/ProductAttributeSet"
+    },
+    {
+      "$ref": "#/definitions/ProductAttributeValue"
+    },
+    {
+      "$ref": "#/definitions/ProductCatalog"
+    },
+    {
+      "$ref": "#/definitions/ProductCatalogTranslation"
+    },
+    {
+      "$ref": "#/definitions/ProductCategory"
+    },
+    {
+      "$ref": "#/definitions/ProductCategoryAttributeSet"
+    },
+    {
+      "$ref": "#/definitions/ProductCategoryProduct"
+    },
+    {
+      "$ref": "#/definitions/ProductCategoryTranslation"
+    },
+    {
+      "$ref": "#/definitions/ProductCollateral"
+    },
+    {
+      "$ref": "#/definitions/ProductImage"
+    },
+    {
+      "$ref": "#/definitions/ProductImageTranslation"
+    },
+    {
+      "$ref": "#/definitions/ProductRelatedProduct"
+    },
+    {
+      "$ref": "#/definitions/ProductRelationshipType"
+    },
+    {
+      "$ref": "#/definitions/ProductRelationshipType"
+    },
+    {
+      "$ref": "#/definitions/ProductTranslation"
+    },
+    {
+      "$ref": "#/definitions/ProductValidityTimePeriodUOM"
+    },
+    {
+      "$ref": "#/definitions/RefundAllocation"
+    },
+    {
+      "$ref": "#/definitions/RefundCreditMemoAllocation"
+    },
+    {
+      "$ref": "#/definitions/RefundPayment"
+    },
+    {
+      "$ref": "#/definitions/RefundPaymentAllocation"
+    },
+    {
+      "$ref": "#/definitions/SalesChannel"
+    },
+    {
+      "$ref": "#/definitions/SalesOrder"
+    },
+    {
+      "$ref": "#/definitions/SalesOrderChangeLog"
+    },
+    {
+      "$ref": "#/definitions/SalesOrderDeliveryGroup"
+    },
+    {
+      "$ref": "#/definitions/SalesOrderPaymentSummary"
+    },
+    {
+      "$ref": "#/definitions/SalesOrderPriceAdjustment"
+    },
+    {
+      "$ref": "#/definitions/SalesOrderProduct"
+    },
+    {
+      "$ref": "#/definitions/SalesOrderProductGroup"
+    },
+    {
+      "$ref": "#/definitions/SalesOrderProductNote"
+    },
+    {
+      "$ref": "#/definitions/SalesOrderProductReason"
+    },
+    {
+      "$ref": "#/definitions/SalesOrderProductTax"
+    },
+    {
+      "$ref": "#/definitions/SalesOrderTax"
+    },
+    {
+      "$ref": "#/definitions/Seller"
+    },
+    {
+      "$ref": "#/definitions/ServiceProduct"
+    },
+    {
+      "$ref": "#/definitions/Shipment"
+    },
+    {
+      "$ref": "#/definitions/ShipmentDocument"
+    },
+    {
+      "$ref": "#/definitions/ShipmentPackage"
+    },
+    {
+      "$ref": "#/definitions/ShipmentProduct"
+    },
+    {
+      "$ref": "#/definitions/ShipmentProductPriceAdjustment"
+    },
+    {
+      "$ref": "#/definitions/ShipmentProductPriceAdjustmentTax"
+    },
+    {
+      "$ref": "#/definitions/ShipmentStatus"
+    },
+    {
+      "$ref": "#/definitions/ShippingMethod"
+    },
+    {
+      "$ref": "#/definitions/Supplier"
+    },
+    {
+      "$ref": "#/definitions/UncategorizedParty"
+    }
+  ],
+  "definitions": {
+    "PaymentGatewayResultCode": {
+      "type": "object",
+      "required": [
+        "id",
+        "description",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "UncategorizedParty": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/Party"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id",
+            "uncategorizedPartyLabel"
+          ],
+          "properties": {
+            "creationReason": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "uncategorizedPartyLabel": {
+              "type": "string"
+            },
+            "originalSourceRecord": {
+              "type": "string"
+            },
+            "originalSourceSystem": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "PersonLanguage": {
+      "type": "object",
+      "required": [
+        "individual",
+        "id"
+      ],
+      "properties": {
+        "individual": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Individual"
+          }
+        },
+        "id": {
+          "type": "string"
+        },
+        "spokenProficiencyLevel": {
+          "type": "string"
+        },
+        "writtenProficiencyLevel": {
+          "type": "string"
+        }
+      }
+    },
+    "ProductRelatedProduct": {
+      "type": "object",
+      "required": [
+        "salesOrderProduct1",
+        "id",
+        "name",
+        "parentProduct",
+        "isDefaultOption",
+        "fromDate",
+        "childProduct",
+        "productRelationshipType",
+        "salesOrderProduct2"
+      ],
+      "properties": {
+        "salesOrderProduct1": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SalesOrderProduct"
+          }
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "parentProduct": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Product"
+          }
+        },
+        "isDefaultOption": {
+          "type": "boolean"
+        },
+        "fromDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "childProduct": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Product"
+          }
+        },
+        "productRelationshipType": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ProductRelationshipType"
+          }
+        },
+        "toDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "salesOrderProduct2": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SalesOrderProduct"
+          }
+        }
+      }
+    },
+    "ProductTranslation": {
+      "type": "object",
+      "required": [
+        "product",
+        "id",
+        "name"
+      ],
+      "properties": {
+        "longDescription": {
+          "type": "string"
+        },
+        "product": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Product"
+          }
+        },
+        "description": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "ShipmentProductPriceAdjustmentTax": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "shipmentProductPriceAdjustment"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "shipmentProductPriceAdjustment": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ShipmentProductPriceAdjustment"
+          }
+        }
+      }
+    },
+    "AttributeValue": {
+      "type": "object",
+      "required": [
+        "attributeValue",
+        "id"
+      ],
+      "properties": {
+        "attributeValue": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        }
+      }
+    },
+    "PaymentCreditMemoApplication": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/PaymentApplication"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "PaymentGatewayAuthReversalLog": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/PaymentGatewayInteractionLog"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "paymentAuthorizationReversal": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/PaymentAuthorizationReversal"
+              }
+            },
+            "name": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "ContactPointType": {
+      "type": "object",
+      "required": [
+        "optInPriority",
+        "id",
+        "name"
+      ],
+      "properties": {
+        "optInPriority": {
+          "type": "integer"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "PaymentAuthorizationReversal": {
+      "type": "object",
+      "required": [
+        "paymentGatewayReferenceNumber",
+        "authorizationReversalAmount",
+        "paymentAuthorizationReversalStatus",
+        "paymentAuthorizationProcessingMode",
+        "id",
+        "paymentGatewayInternalReferenceNumber",
+        "paymentGatewayResult",
+        "paymentAuthorization",
+        "externalCreatedDate",
+        "requestDate",
+        "paymentGatewayDate"
+      ],
+      "properties": {
+        "paymentGatewayReferenceNumber": {
+          "type": "string"
+        },
+        "authorizationReversalAmount": {
+          "type": "integer"
+        },
+        "capturePayment": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CapturePayment"
+          }
+        },
+        "customerAuthorizationReversalPhone": {
+          "type": "string"
+        },
+        "iPAddress": {
+          "type": "string"
+        },
+        "paymentAuthorizationReversalStatus": {
+          "type": "string"
+        },
+        "paymentAuthorizationProcessingMode": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "paymentGatewayInternalReferenceNumber": {
+          "type": "string"
+        },
+        "paymentAuthorizationReversalName": {
+          "type": "string"
+        },
+        "paymentGatewayResult": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PaymentGatewayResultCode"
+          }
+        },
+        "paymentAuthorization": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PaymentAuthorization"
+          }
+        },
+        "externalCreatedDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "requestDate": {
+          "type": "string",
+          "format": "time"
+        },
+        "paymentAuthorizationReversalCommentText": {
+          "type": "string"
+        },
+        "macAddress": {
+          "type": "string"
+        },
+        "customerAuthorizationReversalEmail": {
+          "type": "string"
+        },
+        "paymentGatewayDate": {
+          "type": "string",
+          "format": "time"
+        }
+      }
+    },
+    "PaymentAllocation": {
+      "type": "object",
+      "required": [
+        "id",
+        "externalCreatedDate",
+        "relatedPaymentAllocation"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "externalCreatedDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "relatedPaymentAllocation": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PaymentAllocation"
+          }
+        },
+        "paymentAllocationName": {
+          "type": "string"
+        }
+      }
+    },
+    "SalesOrder": {
+      "type": "object",
+      "required": [
+        "confirmationRecipientEmailText",
+        "description",
+        "requestedStartDate",
+        "id",
+        "name",
+        "salesOrderConfirmationStatus",
+        "paymentMethod",
+        "salesOrderStatus",
+        "billToAccount",
+        "orderNumber",
+        "billToAddress",
+        "billToContact",
+        "salesChannel",
+        "developerStatusCode"
+      ],
+      "properties": {
+        "totalPendingBillingAmount": {
+          "type": "integer"
+        },
+        "checkoutDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "priceCalculationStatusMessageText": {
+          "type": "string"
+        },
+        "confirmationRecipientEmailText": {
+          "type": "string"
+        },
+        "orderEndDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "isTaxExempt": {
+          "type": "boolean"
+        },
+        "totalProductTaxAmount": {
+          "type": "integer"
+        },
+        "isAlerted": {
+          "type": "boolean"
+        },
+        "isAnonymous": {
+          "type": "boolean"
+        },
+        "description": {
+          "type": "string"
+        },
+        "activatedDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "billToEmail": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContactPointEmail"
+          }
+        },
+        "requestedStartDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "id": {
+          "type": "string"
+        },
+        "companyAuthorizedDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "orderInsuranceAmount": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "isClosed": {
+          "type": "boolean"
+        },
+        "shipToEmail": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContactPointEmail"
+          }
+        },
+        "totalDeliveryAmount": {
+          "type": "integer"
+        },
+        "salesOrderConfirmationStatus": {
+          "type": "string"
+        },
+        "customerAuthorizedDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "totalCancelledBillingAmount": {
+          "type": "integer"
+        },
+        "totalAdjustedDeliveryTaxAmount": {
+          "type": "integer"
+        },
+        "paymentMethod": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PaymentMethod"
+          }
+        },
+        "totalAdjustmentAmount": {
+          "type": "integer"
+        },
+        "salesOrderStatus": {
+          "type": "string"
+        },
+        "renewalUpliftRate": {
+          "type": "integer"
+        },
+        "totalProductAmount": {
+          "type": "integer"
+        },
+        "renewalTerm": {
+          "type": "string"
+        },
+        "originalOrder": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SalesOrder"
+          }
+        },
+        "billToAccount": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Account"
+          }
+        },
+        "totalAdjustmentTaxAmount": {
+          "type": "integer"
+        },
+        "isGiftOrder": {
+          "type": "boolean"
+        },
+        "promiseFulfillmentDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "filedDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "iSOCulture": {
+          "type": "string"
+        },
+        "userDeviceSession": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DeviceUserSession"
+          }
+        },
+        "purchaseOrderNumber": {
+          "type": "string"
+        },
+        "totalDeliveryFeeAmount": {
+          "type": "integer"
+        },
+        "totalDeliveryTaxAmount": {
+          "type": "integer"
+        },
+        "totalTaxAmount": {
+          "type": "integer"
+        },
+        "orderNumber": {
+          "type": "string"
+        },
+        "seller": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Seller"
+          }
+        },
+        "billToAddress": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContactPointAddress"
+          }
+        },
+        "shipToAddress": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContactPointAddress"
+          }
+        },
+        "fulfilledDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "billToContact": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AccountContact"
+          }
+        },
+        "paidDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "totalBookingAmount": {
+          "type": "integer"
+        },
+        "adjustedProductTaxAmount": {
+          "type": "integer"
+        },
+        "promiseDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "packedDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "isHistoricalOnly": {
+          "type": "boolean"
+        },
+        "grandTotalAmount": {
+          "type": "integer"
+        },
+        "isContracted": {
+          "type": "boolean"
+        },
+        "canBillNow": {
+          "type": "boolean"
+        },
+        "adjustedTotalProductAmount": {
+          "type": "integer"
+        },
+        "orderDiscount": {
+          "type": "integer"
+        },
+        "internalBusinessUnit": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/InternalBusinessUnit"
+          }
+        },
+        "salesChannel": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SalesChannel"
+          }
+        },
+        "orderStartDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "cancelDateType": {
+          "type": "string"
+        },
+        "isReductionOrder": {
+          "type": "boolean"
+        },
+        "salesOrderSystemStatus": {
+          "type": "string"
+        },
+        "isSuspended": {
+          "type": "boolean"
+        },
+        "billToPhoneNumber": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContactPointPhone"
+          }
+        },
+        "purchaseOrderDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "soldToCustomer": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Customer"
+          }
+        },
+        "billingDayOfTheMonth": {
+          "type": "integer"
+        },
+        "cancelDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "shipToContact": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AccountContact"
+          }
+        },
+        "taxRate": {
+          "type": "integer"
+        },
+        "developerStatusCode": {
+          "type": "string"
+        }
+      }
+    },
+    "ShipmentStatus": {
+      "type": "object",
+      "required": [
+        "id",
+        "description",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "ShipmentProductPriceAdjustment": {
+      "type": "object",
+      "required": [
+        "adjustmentAmount",
+        "description",
+        "id",
+        "shipmentProduct"
+      ],
+      "properties": {
+        "adjustmentAmount": {
+          "type": "integer"
+        },
+        "shipmentProductPriceAdjustmentAmount": {
+          "type": "integer"
+        },
+        "description": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "shipmentProduct": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ShipmentProduct"
+          }
+        },
+        "adjustmentTaxAmount": {
+          "type": "integer"
+        }
+      }
+    },
+    "DeviceUserSession": {
+      "type": "object",
+      "required": [
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "CreditTender": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/PaymentMethod"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id"
+          ],
+          "properties": {
+            "account": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Account"
+              }
+            },
+            "id": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "SalesOrderPaymentSummary": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "salesOrder",
+        "paymentMethod"
+      ],
+      "properties": {
+        "authorizationReversalAmount": {
+          "type": "integer"
+        },
+        "authorizationAmount": {
+          "type": "integer"
+        },
+        "unappliedAmount": {
+          "type": "integer"
+        },
+        "paymentAmount": {
+          "type": "integer"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "salesOrder": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SalesOrder"
+          }
+        },
+        "paymentMethod": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PaymentMethod"
+          }
+        },
+        "appliedAmount": {
+          "type": "integer"
+        },
+        "availableToApplyBalanceAmount": {
+          "type": "integer"
+        },
+        "capturedAmount": {
+          "type": "integer"
+        }
+      }
+    },
+    "ContactPointLocation": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/ContactPoint"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "ProductCategoryAttributeSet": {
+      "type": "object",
+      "required": [
+        "id",
+        "attributeSet",
+        "productCategory"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "attributeSet": {
+          "type": "string"
+        },
+        "productCategory": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ProductCategory"
+          }
+        }
+      }
+    },
+    "PaymentCard": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/PaymentMethod"
+        },
+        {
+          "type": "object",
+          "required": [
+            "creditCardExpired",
+            "cardToken",
+            "issueNumber",
+            "id",
+            "maskedNumber",
+            "name",
+            "cardHolderName",
+            "numberLastDigits",
+            "paymentCardType",
+            "expirationYear",
+            "expirationMonth"
+          ],
+          "properties": {
+            "creditCardExpired": {
+              "type": "boolean"
+            },
+            "cardToken": {
+              "type": "string"
+            },
+            "issueNumber": {
+              "type": "string"
+            },
+            "billToCity": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "maskedNumber": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "companyName": {
+              "type": "string"
+            },
+            "cardHolderName": {
+              "type": "string"
+            },
+            "numberLastDigits": {
+              "type": "string"
+            },
+            "paymentCardType": {
+              "type": "string"
+            },
+            "derivedCardTypeCode": {
+              "type": "string"
+            },
+            "billToFirstName": {
+              "type": "string"
+            },
+            "billToStreet": {
+              "type": "string"
+            },
+            "expirationYear": {
+              "type": "string"
+            },
+            "billToStreet2": {
+              "type": "string"
+            },
+            "expirationMonth": {
+              "type": "string"
+            },
+            "billToLastName": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "ContactPointApp": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/ContactPoint"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id"
+          ],
+          "properties": {
+            "applicationLogin": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "PersonEducation": {
+      "type": "object",
+      "required": [
+        "id",
+        "educationLevel",
+        "educationName",
+        "graduationDate",
+        "individual",
+        "institutionName"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "educationLevel": {
+          "type": "string"
+        },
+        "educationName": {
+          "type": "string"
+        },
+        "graduationDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "individual": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Individual"
+          }
+        },
+        "institutionName": {
+          "type": "string"
+        }
+      }
+    },
+    "SalesOrderTax": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "taxRatePercent"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "salesOrderTaxAmount": {
+          "type": "integer"
+        },
+        "taxAddressCityName": {
+          "type": "string"
+        },
+        "taxErrorMessageText": {
+          "type": "string"
+        },
+        "taxAddressStreet1Text": {
+          "type": "string"
+        },
+        "taxRatePercent": {
+          "type": "integer"
+        },
+        "taxAddressStreet2Text": {
+          "type": "string"
+        }
+      }
+    },
+    "SalesOrderProductNote": {
+      "type": "object",
+      "required": [
+        "id",
+        "noteText"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "noteText": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    },
+    "ProductCatalog": {
+      "type": "object",
+      "required": [
+        "activeFromDate",
+        "id",
+        "name"
+      ],
+      "properties": {
+        "activeToDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "activeFromDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "SalesOrderProduct": {
+      "type": "object",
+      "required": [
+        "totalPriceAmount",
+        "quantityOrderedUOM",
+        "orderProductNumber",
+        "product",
+        "description",
+        "orderedQuantity",
+        "salesOrderProductStatus",
+        "id",
+        "salesOrder",
+        "priceBookEntry",
+        "listPriceQuantityUOM"
+      ],
+      "properties": {
+        "totalRecurringPriceAmount": {
+          "type": "integer"
+        },
+        "totalLineAdjustmentAmount": {
+          "type": "integer"
+        },
+        "totalPriceAmount": {
+          "type": "integer"
+        },
+        "provisioningDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "fulfilledQuantity": {
+          "type": "integer"
+        },
+        "totalLineAmount": {
+          "type": "integer"
+        },
+        "promisedDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "shippingPhone": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContactPointPhone"
+          }
+        },
+        "recurringPriceAmount": {
+          "type": "integer"
+        },
+        "endDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "giftOrderMessageText": {
+          "type": "string"
+        },
+        "quantityOrderedUOM": {
+          "type": "string"
+        },
+        "totalProductTaxAmount": {
+          "type": "integer"
+        },
+        "salesOrderProductReason": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SalesOrderProductReason"
+          }
+        },
+        "lineAdjustmentSubTotalAmount": {
+          "type": "integer"
+        },
+        "commentText": {
+          "type": "string"
+        },
+        "orderProductNumber": {
+          "type": "string"
+        },
+        "product": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Product"
+          }
+        },
+        "description": {
+          "type": "string"
+        },
+        "orderedQuantity": {
+          "type": "integer"
+        },
+        "salesOrderProductStatus": {
+          "type": "string"
+        },
+        "unitPriceAmount": {
+          "type": "integer"
+        },
+        "requestedStartDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "id": {
+          "type": "string"
+        },
+        "subscriptionRenewalMonthQuantity": {
+          "type": "integer"
+        },
+        "orderManualAdjustmentSubTotalAmount": {
+          "type": "integer"
+        },
+        "allocatedQuantity": {
+          "type": "integer"
+        },
+        "allocationPartitionName": {
+          "type": "string"
+        },
+        "salesOrder": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SalesOrder"
+          }
+        },
+        "isGift": {
+          "type": "boolean"
+        },
+        "unitTaxAmount": {
+          "type": "integer"
+        },
+        "deliveryTaxAmount": {
+          "type": "integer"
+        },
+        "isBonusProduct": {
+          "type": "boolean"
+        },
+        "salesOrderProductAdjustedTaxAmount": {
+          "type": "integer"
+        },
+        "totalAdjustmentAmount": {
+          "type": "integer"
+        },
+        "shippingTaxAmount": {
+          "type": "integer"
+        },
+        "totalListPriceAmount": {
+          "type": "integer"
+        },
+        "totalAdjustmentTaxAmount": {
+          "type": "integer"
+        },
+        "orderAdjustmentSubTotalAmount": {
+          "type": "integer"
+        },
+        "subscriptionTermQuantity": {
+          "type": "integer"
+        },
+        "totalDistributedAdjustmentTaxAmount": {
+          "type": "integer"
+        },
+        "totalDistributedTaxAmount": {
+          "type": "integer"
+        },
+        "totalTaxAmount": {
+          "type": "integer"
+        },
+        "adjustedDeliveryTaxAmount": {
+          "type": "integer"
+        },
+        "shippingAddress": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContactPointAddress"
+          }
+        },
+        "listPriceAmount": {
+          "type": "integer"
+        },
+        "priceBookEntry": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PriceBookEntry"
+          }
+        },
+        "segmentIndex": {
+          "type": "integer"
+        },
+        "shippingCostAmount": {
+          "type": "integer"
+        },
+        "isBundleRoot": {
+          "type": "boolean"
+        },
+        "discountAmount": {
+          "type": "integer"
+        },
+        "cancelledQuantity": {
+          "type": "integer"
+        },
+        "shippingEmail": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContactPointEmail"
+          }
+        },
+        "subscriptionTermUnit": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ProductValidityTimePeriodUOM"
+          }
+        },
+        "listPriceTermUOM": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ProductValidityTimePeriodUOM"
+          }
+        },
+        "salesOrderDeliveryGroup": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SalesOrderDeliveryGroup"
+          }
+        },
+        "listPriceQuantityUOM": {
+          "type": "string"
+        },
+        "totalDistributedAdjustmentAmount": {
+          "type": "integer"
+        },
+        "segmentIndexNumber": {
+          "type": "integer"
+        },
+        "totalUnitPriceAmount": {
+          "type": "integer"
+        },
+        "originalOrderProduct": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SalesOrderProduct"
+          }
+        },
+        "availableQuantity": {
+          "type": "integer"
+        },
+        "requestedEndDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "allocationGroupName": {
+          "type": "string"
+        },
+        "sellerAccount": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Account"
+          }
+        },
+        "giftRecipientTelephoneNumber": {
+          "type": "string"
+        },
+        "isAutomaticallyRenewed": {
+          "type": "boolean"
+        },
+        "discountPercent": {
+          "type": "integer"
+        },
+        "totalManualAdjustmentAmount": {
+          "type": "integer"
+        },
+        "handlingCostAmount": {
+          "type": "integer"
+        }
+      }
+    },
+    "PaymentApplication": {
+      "type": "object",
+      "required": [
+        "effectiveDate",
+        "paymentApplicationType",
+        "id",
+        "name",
+        "payment",
+        "appliedAmount",
+        "paymentBalanceAmount",
+        "appliedDate",
+        "externalCreatedDate",
+        "unappliedDate"
+      ],
+      "properties": {
+        "effectiveDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "paymentApplicationType": {
+          "type": "string"
+        },
+        "commentText": {
+          "type": "string"
+        },
+        "hasBeenUnapplied": {
+          "type": "boolean"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "payment": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Payment"
+          }
+        },
+        "appliedAmount": {
+          "type": "integer"
+        },
+        "paymentBalanceAmount": {
+          "type": "integer"
+        },
+        "appliedDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "externalCreatedDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "unappliedDate": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "PaymentGatewayProvider": {
+      "type": "object",
+      "required": [
+        "apexAdapterClassName",
+        "id",
+        "paymentGatewayProviderName",
+        "developerName",
+        "namespacePrefixText"
+      ],
+      "properties": {
+        "apexAdapterClassName": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "paymentGatewayProviderCommentText": {
+          "type": "string"
+        },
+        "paymentGatewayProviderName": {
+          "type": "string"
+        },
+        "developerName": {
+          "type": "string"
+        },
+        "namespacePrefixText": {
+          "type": "string"
+        }
+      }
+    },
+    "PaymentPolicy": {
+      "type": "object",
+      "required": [
+        "description",
+        "id",
+        "name",
+        "paymentPolicyTreatmentSelection",
+        "paymentPolicyStatus"
+      ],
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "paymentPolicyTreatmentSelection": {
+          "type": "string"
+        },
+        "paymentPolicyStatus": {
+          "type": "string"
+        }
+      }
+    },
+    "ProductImage": {
+      "type": "object",
+      "required": [
+        "product",
+        "id",
+        "isDefaultImage"
+      ],
+      "properties": {
+        "product": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Product"
+          }
+        },
+        "id": {
+          "type": "string"
+        },
+        "isDefaultImage": {
+          "type": "boolean"
+        },
+        "imageViewType": {
+          "type": "string"
+        }
+      }
+    },
+    "SalesOrderPriceAdjustment": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/PriceAdjustmentGroup"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id",
+            "salesOrder"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "salesOrder": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/SalesOrder"
+              }
+            },
+            "totalAdjustmentTaxAmount": {
+              "type": "integer"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "Individual": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/Party"
+        },
+        {
+          "type": "object",
+          "required": [
+            "personName",
+            "id"
+          ],
+          "properties": {
+            "hasAlcoholAbuseHistory": {
+              "type": "boolean"
+            },
+            "highestEducationLevel": {
+              "type": "string"
+            },
+            "personHeight": {
+              "type": "integer"
+            },
+            "mailingName": {
+              "type": "string"
+            },
+            "surgeriesLast5YearsCount": {
+              "type": "integer"
+            },
+            "doNotTrackUpdateDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "weddingAnniversaryDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "minorCitationCount": {
+              "type": "integer"
+            },
+            "mainDietaryHabitType": {
+              "type": "string"
+            },
+            "personHeightUnitOfMeasure": {
+              "type": "string"
+            },
+            "firstName": {
+              "type": "string"
+            },
+            "personName": {
+              "type": "string"
+            },
+            "photoURL": {
+              "type": "string"
+            },
+            "isHighRiskHobby": {
+              "type": "boolean"
+            },
+            "doNotProcessFromUpdateDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "militaryService": {
+              "type": "string"
+            },
+            "maritalStatus": {
+              "type": "string"
+            },
+            "doNotMarketFromUpdateDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "shouldForget": {
+              "type": "boolean"
+            },
+            "id": {
+              "type": "string"
+            },
+            "mainDisabilityType": {
+              "type": "string"
+            },
+            "consumerCreditScoreProviderName": {
+              "type": "string"
+            },
+            "isTobaccoConsume": {
+              "type": "boolean"
+            },
+            "webSiteURL": {
+              "type": "string"
+            },
+            "secondLastName": {
+              "type": "string"
+            },
+            "primaryHousehold": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Household"
+              }
+            },
+            "orderingName": {
+              "type": "string"
+            },
+            "hospitalizationsLast5YearsCount": {
+              "type": "integer"
+            },
+            "dependentCount": {
+              "type": "integer"
+            },
+            "convictionsCount": {
+              "type": "integer"
+            },
+            "isGoodDriver": {
+              "type": "boolean"
+            },
+            "primaryHobby": {
+              "type": "string"
+            },
+            "mainPersonalValueType": {
+              "type": "string"
+            },
+            "isAlcoholConsumer": {
+              "type": "boolean"
+            },
+            "taxBracketRange": {
+              "type": "string"
+            },
+            "childrenCount": {
+              "type": "integer"
+            },
+            "isGoodStudent": {
+              "type": "boolean"
+            },
+            "mainLifeAttitudeType": {
+              "type": "string"
+            },
+            "netWorth": {
+              "type": "integer"
+            },
+            "personWeight": {
+              "type": "integer"
+            },
+            "birthDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "religion": {
+              "type": "string"
+            },
+            "sendIndividualData": {
+              "type": "boolean"
+            },
+            "deathDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "doExtractMyDataUpdateDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "birthPlace": {
+              "type": "string"
+            },
+            "overAgeNumber": {
+              "type": "integer"
+            },
+            "doForgetMeFromUpdateDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "personWeightUnitOfMeasure": {
+              "type": "string"
+            },
+            "mainLifeStyleType": {
+              "type": "string"
+            },
+            "gender": {
+              "type": "string"
+            },
+            "hasDrugAbuseHistory": {
+              "type": "boolean"
+            },
+            "salutation": {
+              "type": "string"
+            },
+            "mothersMaidenName": {
+              "type": "string"
+            },
+            "doNotTrackLocationUpdateDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "ethnicity": {
+              "type": "string"
+            },
+            "mainPersonalityType": {
+              "type": "string"
+            },
+            "employedSinceDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "officialName": {
+              "type": "string"
+            },
+            "isHighRiskOccupation": {
+              "type": "boolean"
+            },
+            "residenceCaptureMethod": {
+              "type": "string"
+            },
+            "doNotProfileFromUpdateDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "nameSuffix": {
+              "type": "string"
+            },
+            "isDrugConsumer": {
+              "type": "boolean"
+            },
+            "isHomeOwner": {
+              "type": "boolean"
+            },
+            "doNotProcessReason": {
+              "type": "string"
+            },
+            "occupationType": {
+              "type": "string"
+            },
+            "deathPlace": {
+              "type": "string"
+            },
+            "influencerRating": {
+              "type": "integer"
+            },
+            "militaryStatus": {
+              "type": "string"
+            },
+            "consumerCreditScore": {
+              "type": "integer"
+            },
+            "yearlyIncome": {
+              "type": "integer"
+            },
+            "preferredName": {
+              "type": "string"
+            },
+            "personLifeStage": {
+              "type": "string"
+            },
+            "yearlyIncomeRange": {
+              "type": "string"
+            },
+            "majorCitationCount": {
+              "type": "integer"
+            },
+            "middleName": {
+              "type": "string"
+            },
+            "residenceCountryName": {
+              "type": "string"
+            },
+            "lastName": {
+              "type": "string"
+            },
+            "occupation": {
+              "type": "string"
+            },
+            "currentEmployerName": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "SalesOrderProductGroup": {
+      "type": "object",
+      "required": [
+        "id",
+        "description",
+        "salesOrderProductGroupType",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "salesOrderProductGroupType": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "PaymentTreatmentMethod": {
+      "type": "object",
+      "required": [
+        "id",
+        "paymentTreatmentMethodName",
+        "paymentTreatmentMethodCode",
+        "paymentTreatmentMethodDescription"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "paymentTreatmentMethodName": {
+          "type": "string"
+        },
+        "paymentTreatmentMethodCode": {
+          "type": "string"
+        },
+        "paymentTreatmentMethodDescription": {
+          "type": "string"
+        }
+      }
+    },
+    "ProductCollateral": {
+      "type": "object",
+      "required": [
+        "product",
+        "id",
+        "uRL"
+      ],
+      "properties": {
+        "product": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Product"
+          }
+        },
+        "id": {
+          "type": "string"
+        },
+        "uRL": {
+          "type": "string"
+        }
+      }
+    },
+    "PersonEmployment": {
+      "type": "object",
+      "required": [
+        "employmentStatus",
+        "positionText",
+        "endDate",
+        "startDate",
+        "occupationText",
+        "id",
+        "employerName",
+        "employerAddressLine1",
+        "annualIncome",
+        "individual",
+        "employerPhoneNumber"
+      ],
+      "properties": {
+        "employmentStatus": {
+          "type": "string"
+        },
+        "positionText": {
+          "type": "string"
+        },
+        "employerContactPointAddress": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContactPointAddress"
+          }
+        },
+        "employerAddressLine3": {
+          "type": "string"
+        },
+        "endDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "startDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "occupationText": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "employerName": {
+          "type": "string"
+        },
+        "employerAddressLine4": {
+          "type": "string"
+        },
+        "employerAddressLine1": {
+          "type": "string"
+        },
+        "annualIncome": {
+          "type": "integer"
+        },
+        "employerCityName": {
+          "type": "string"
+        },
+        "individual": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Individual"
+          }
+        },
+        "employerAddressLine2": {
+          "type": "string"
+        },
+        "employerPostalCodeText": {
+          "type": "string"
+        },
+        "employerPhoneNumber": {
+          "type": "string"
+        }
+      }
+    },
+    "PaymentInvoiceApplication": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/PaymentApplication"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id",
+            "invoiceBalanceAmount"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "paymentInvoiceApplicationName": {
+              "type": "string"
+            },
+            "invoiceBalanceAmount": {
+              "type": "integer"
+            },
+            "paymentInvoiceApplicationType": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "ProductCategoryTranslation": {
+      "type": "object",
+      "required": [
+        "id",
+        "translatedName",
+        "productCategory"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "translatedName": {
+          "type": "string"
+        },
+        "productCategory": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ProductCategory"
+          }
+        }
+      }
+    },
+    "Supplier": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/PartyRole"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id",
+            "activeFromDate"
+          ],
+          "properties": {
+            "satisfactionEthicsRank": {
+              "type": "integer"
+            },
+            "contractInvoiceAccuracyRate": {
+              "type": "integer"
+            },
+            "satisfactionWeightPercent": {
+              "type": "integer"
+            },
+            "contractOnTimeDeliveryRate": {
+              "type": "integer"
+            },
+            "id": {
+              "type": "string"
+            },
+            "activeFromDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "activeToDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "competitiveWarrantyRank": {
+              "type": "integer"
+            },
+            "competitiveMarketingRank": {
+              "type": "integer"
+            },
+            "contractDeliveryCorrectnessRate": {
+              "type": "integer"
+            },
+            "competitiveWeightScore": {
+              "type": "integer"
+            },
+            "contractSLAIssueRate": {
+              "type": "integer"
+            },
+            "competitiveWeightPercent": {
+              "type": "integer"
+            },
+            "supplierScore": {
+              "type": "integer"
+            },
+            "competitiveProductPriceRank": {
+              "type": "integer"
+            },
+            "contractWeightPercent": {
+              "type": "integer"
+            },
+            "supplierSpend": {
+              "type": "integer"
+            },
+            "satisfactionTechnicalSupportRank": {
+              "type": "integer"
+            },
+            "contractWeightScore": {
+              "type": "integer"
+            },
+            "satisfactionCustomerServiceRank": {
+              "type": "integer"
+            },
+            "satisfactionWeightScore": {
+              "type": "integer"
+            },
+            "contractSourcingCycleDays": {
+              "type": "integer"
+            },
+            "supplierType": {
+              "type": "string"
+            },
+            "isCarrier": {
+              "type": "boolean"
+            },
+            "contractProductReturnRate": {
+              "type": "integer"
+            },
+            "competitiveCostAvoidanceRank": {
+              "type": "integer"
+            },
+            "contractProductQualityRate": {
+              "type": "integer"
+            },
+            "contractBudgetCostRate": {
+              "type": "integer"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "ProductRelationshipType": {
+      "type": "object",
+      "required": [
+        "id",
+        "parentProductRole",
+        "childProductRole"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "parentProductRole": {
+          "type": "string"
+        },
+        "childProductRole": {
+          "type": "string"
+        }
+      }
+    },
+    "CustomerStatusHistory": {
+      "type": "object",
+      "required": [
+        "startDateTime",
+        "partyRole",
+        "partyRoleStatus",
+        "id",
+        "endDateTIme"
+      ],
+      "properties": {
+        "startDateTime": {
+          "type": "string",
+          "format": "time"
+        },
+        "partyRole": {
+          "type": "string"
+        },
+        "partyRoleStatus": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "endDateTIme": {
+          "type": "string",
+          "format": "time"
+        }
+      }
+    },
+    "ProductImageTranslation": {
+      "type": "object",
+      "required": [
+        "productImage",
+        "id",
+        "translatedName"
+      ],
+      "properties": {
+        "productImage": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ProductImage"
+          }
+        },
+        "id": {
+          "type": "string"
+        },
+        "translatedName": {
+          "type": "string"
+        }
+      }
+    },
+    "Shipment": {
+      "type": "object",
+      "required": [
+        "id",
+        "shipmentDate"
+      ],
+      "properties": {
+        "giftMessageText": {
+          "type": "string"
+        },
+        "shipmentNumber": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "shipmentStatus": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ShipmentStatus"
+          }
+        },
+        "salesOrder": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SalesOrder"
+          }
+        },
+        "isGift": {
+          "type": "boolean"
+        },
+        "actualDeliveryDateTime": {
+          "type": "string",
+          "format": "time"
+        },
+        "specialInstructionsText": {
+          "type": "string"
+        },
+        "carrierTrackingNumber": {
+          "type": "string"
+        },
+        "shipToAddress": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContactPointAddress"
+          }
+        },
+        "estimatedDeliveryDateTime": {
+          "type": "string",
+          "format": "time"
+        },
+        "salesOrderDeliveryGroup": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SalesOrderDeliveryGroup"
+          }
+        },
+        "scheduledDeliveryDateTime": {
+          "type": "string",
+          "format": "time"
+        },
+        "shipmentDate": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "PartyIdentification": {
+      "type": "object",
+      "required": [
+        "partyIdentificationType",
+        "id",
+        "name",
+        "identificationNumber",
+        "party"
+      ],
+      "properties": {
+        "expiryDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "partyIdentificationType": {
+          "type": "string"
+        },
+        "verifiedDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "issuedByAuthority": {
+          "type": "string"
+        },
+        "issuedAtLocation": {
+          "type": "string"
+        },
+        "issuedDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "partyRole": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "identificationNumber": {
+          "type": "string"
+        },
+        "party": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Party"
+          }
+        }
+      }
+    },
+    "PartyRelatedParty": {
+      "type": "object",
+      "required": [
+        "relatedFromDate",
+        "id",
+        "partyRelationshipType",
+        "relatedParty",
+        "relatedToDate",
+        "party"
+      ],
+      "properties": {
+        "relatedFromDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "id": {
+          "type": "string"
+        },
+        "partyRelationshipType": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PartyRelationshipType"
+          }
+        },
+        "relatedParty": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Party"
+          }
+        },
+        "relatedToDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "party": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Party"
+          }
+        }
+      }
+    },
+    "PartyAdditionalName": {
+      "type": "object",
+      "required": [
+        "id",
+        "additionalNameType",
+        "name",
+        "party"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "additionalNameType": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "party": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Party"
+          }
+        }
+      }
+    },
+    "PartyRelationshipType": {
+      "type": "object",
+      "required": [
+        "isBidirectional",
+        "id",
+        "partyRole",
+        "relatedPartyRole"
+      ],
+      "properties": {
+        "isBidirectional": {
+          "type": "boolean"
+        },
+        "id": {
+          "type": "string"
+        },
+        "partyRole": {
+          "type": "string"
+        },
+        "relatedPartyRole": {
+          "type": "string"
+        }
+      }
+    },
+    "ShipmentPackage": {
+      "type": "object",
+      "required": [
+        "shipment",
+        "id",
+        "shipmentProductCount",
+        "shipmentProductDescription"
+      ],
+      "properties": {
+        "shipment": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Shipment"
+          }
+        },
+        "id": {
+          "type": "string"
+        },
+        "shipmentProductCount": {
+          "type": "integer"
+        },
+        "shipmentProductDescription": {
+          "type": "string"
+        }
+      }
+    },
+    "ProductCategory": {
+      "type": "object",
+      "required": [
+        "productCatalog",
+        "id",
+        "activeFromDate",
+        "name"
+      ],
+      "properties": {
+        "productCatalog": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ProductCatalog"
+          }
+        },
+        "id": {
+          "type": "string"
+        },
+        "activeFromDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "activeToDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "name": {
+          "type": "string"
+        },
+        "parentCategory": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ProductCategory"
+          }
+        }
+      }
+    },
+    "Competitor": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/PartyRole"
+        },
+        {
+          "type": "object",
+          "required": [
+            "competitorFromDate",
+            "id"
+          ],
+          "properties": {
+            "competitorStrengths": {
+              "type": "string"
+            },
+            "competitorFromDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "socialMediaPostRate": {
+              "type": "integer"
+            },
+            "competitorThreats": {
+              "type": "string"
+            },
+            "currentRatio": {
+              "type": "integer"
+            },
+            "cashFlowGrowth": {
+              "type": "integer"
+            },
+            "competitorObjectives": {
+              "type": "string"
+            },
+            "netProfitMargin": {
+              "type": "integer"
+            },
+            "id": {
+              "type": "string"
+            },
+            "competitorWeaknesses": {
+              "type": "string"
+            },
+            "pressMentionsRate": {
+              "type": "integer"
+            },
+            "assetTurnoverRatio": {
+              "type": "integer"
+            },
+            "competitorToDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "competitorLeverageOpportunities": {
+              "type": "string"
+            },
+            "assetReturnRatio": {
+              "type": "integer"
+            },
+            "ptoENumber": {
+              "type": "integer"
+            },
+            "adKeywords": {
+              "type": "string"
+            },
+            "adReachRate": {
+              "type": "integer"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "SalesOrderProductReason": {
+      "type": "object",
+      "required": [
+        "id",
+        "salesOrderProductReasonCategory",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "salesOrderProductReasonCategory": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "AttributeTranslation": {
+      "type": "object",
+      "required": [
+        "id",
+        "translatedName"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "translatedName": {
+          "type": "string"
+        }
+      }
+    },
+    "ShipmentDocument": {
+      "type": "object",
+      "required": [
+        "shipment",
+        "id"
+      ],
+      "properties": {
+        "shipment": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Shipment"
+          }
+        },
+        "id": {
+          "type": "string"
+        }
+      }
+    },
+    "ShippingMethod": {
+      "type": "object",
+      "required": [
+        "product",
+        "id",
+        "description",
+        "name"
+      ],
+      "properties": {
+        "product": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Product"
+          }
+        },
+        "id": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "PaymentGatewayInteractionType": {
+      "type": "object",
+      "required": [
+        "id",
+        "description",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "PaymentGroup": {
+      "type": "object",
+      "required": [
+        "totalReversalAmount",
+        "totalAuthorizationAmount",
+        "id",
+        "totalPaymentAmount",
+        "paymentGroupNumber"
+      ],
+      "properties": {
+        "totalReversalAmount": {
+          "type": "integer"
+        },
+        "totalAuthorizationAmount": {
+          "type": "integer"
+        },
+        "id": {
+          "type": "string"
+        },
+        "totalPaymentAmount": {
+          "type": "integer"
+        },
+        "paymentGroupNumber": {
+          "type": "string"
+        }
+      }
+    },
+    "ContactPointAddress": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/ContactPoint"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id"
+          ],
+          "properties": {
+            "isUsedForShipping": {
+              "type": "boolean"
+            },
+            "stateProvinceName": {
+              "type": "string"
+            },
+            "addressLine3": {
+              "type": "string"
+            },
+            "countryName": {
+              "type": "string"
+            },
+            "postalCodeText": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "geoLatitude": {
+              "type": "integer"
+            },
+            "addressLine2": {
+              "type": "string"
+            },
+            "addressLine4": {
+              "type": "string"
+            },
+            "geoAccuracy": {
+              "type": "integer"
+            },
+            "contactPhone": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ContactPointPhone"
+              }
+            },
+            "geoLongitude": {
+              "type": "integer"
+            },
+            "addressLine1": {
+              "type": "string"
+            },
+            "cityName": {
+              "type": "string"
+            },
+            "isUsedForBilling": {
+              "type": "boolean"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "OrderDeliveryMethod": {
+      "type": "object",
+      "required": [
+        "product",
+        "id",
+        "externalRecord",
+        "name"
+      ],
+      "properties": {
+        "product": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Product"
+          }
+        },
+        "id": {
+          "type": "string"
+        },
+        "externalRecord": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "PartyWebAddress": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/ContactPoint"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id",
+            "webSiteURL",
+            "party"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "webSiteURL": {
+              "type": "string"
+            },
+            "party": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Party"
+              }
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "RefundCreditMemoAllocation": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/RefundAllocation"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "GoodsProduct": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/Product"
+        },
+        {
+          "type": "object",
+          "required": [
+            "isMadeToOrder",
+            "id",
+            "isPerishable",
+            "requiresUnitPriceLabel",
+            "productMayExpand"
+          ],
+          "properties": {
+            "productSecurityRequirement": {
+              "type": "string"
+            },
+            "season": {
+              "type": "string"
+            },
+            "color": {
+              "type": "string"
+            },
+            "style": {
+              "type": "string"
+            },
+            "isMadeToOrder": {
+              "type": "boolean"
+            },
+            "height": {
+              "type": "integer"
+            },
+            "fabric": {
+              "type": "string"
+            },
+            "requiredTemperatureUOM": {
+              "type": "string"
+            },
+            "shelfFacingUnitCount": {
+              "type": "integer"
+            },
+            "requiredHumidityPercentage": {
+              "type": "integer"
+            },
+            "id": {
+              "type": "string"
+            },
+            "grossWeight": {
+              "type": "integer"
+            },
+            "tareWeight": {
+              "type": "integer"
+            },
+            "depth": {
+              "type": "integer"
+            },
+            "requiredTemperatureLowestNumber": {
+              "type": "integer"
+            },
+            "gender": {
+              "type": "string"
+            },
+            "maxHoldingDayCount": {
+              "type": "integer"
+            },
+            "diameter": {
+              "type": "integer"
+            },
+            "isPerishable": {
+              "type": "boolean"
+            },
+            "requiredCleanupProcess": {
+              "type": "string"
+            },
+            "pattern": {
+              "type": "string"
+            },
+            "requiredTemperatureHighestNumber": {
+              "type": "integer"
+            },
+            "netWeight": {
+              "type": "integer"
+            },
+            "environmentRequirement": {
+              "type": "string"
+            },
+            "drainedWeight": {
+              "type": "integer"
+            },
+            "age": {
+              "type": "string"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "requiresUnitPriceLabel": {
+              "type": "boolean"
+            },
+            "weightUOM": {
+              "type": "string"
+            },
+            "productMayExpand": {
+              "type": "boolean"
+            },
+            "sizeUOM": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "SalesOrderChangeLog": {
+      "type": "object",
+      "required": [
+        "changeSalesOrder",
+        "id",
+        "name",
+        "relatedSalesOrderProduct",
+        "changeSalesOrderProduct",
+        "relatedSalesOrder"
+      ],
+      "properties": {
+        "changeSalesOrder": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SalesOrder"
+          }
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "relatedSalesOrderProduct": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SalesOrderProduct"
+          }
+        },
+        "changeSalesOrderProduct": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SalesOrderProduct"
+          }
+        },
+        "relatedSalesOrder": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SalesOrder"
+          }
+        }
+      }
+    },
+    "PaymentGatewayPaymentLog": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/PaymentGatewayInteractionLog"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id",
+            "payment"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "payment": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Payment"
+              }
+            },
+            "name": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "RefundAllocation": {
+      "type": "object",
+      "required": [
+        "effectiveDate",
+        "relatedRefundAllocation",
+        "refundAllocationType",
+        "id",
+        "refundPayment",
+        "allocatedAmount",
+        "refundBalanceAmount",
+        "appliedDate",
+        "externalCreatedDate",
+        "unappliedDate"
+      ],
+      "properties": {
+        "effectiveDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "relatedRefundAllocation": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/RefundAllocation"
+          }
+        },
+        "hasBeenUnapplied": {
+          "type": "boolean"
+        },
+        "refundAllocationType": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "refundPayment": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/RefundPayment"
+          }
+        },
+        "allocatedAmount": {
+          "type": "integer"
+        },
+        "refundBalanceAmount": {
+          "type": "integer"
+        },
+        "refundAllocationName": {
+          "type": "string"
+        },
+        "appliedDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "externalCreatedDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "unappliedDate": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "ShipmentProduct": {
+      "type": "object",
+      "required": [
+        "product",
+        "shipment",
+        "shipmentPackage",
+        "id",
+        "salesOrderProduct",
+        "shipmentProductCount"
+      ],
+      "properties": {
+        "product": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Product"
+          }
+        },
+        "shipment": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Shipment"
+          }
+        },
+        "shipmentPackage": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ShipmentPackage"
+          }
+        },
+        "id": {
+          "type": "string"
+        },
+        "salesOrderProduct": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SalesOrderProduct"
+          }
+        },
+        "shipmentProductCount": {
+          "type": "integer"
+        }
+      }
+    },
+    "Seller": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/PartyRole"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id",
+            "activeFromDate"
+          ],
+          "properties": {
+            "communityParticipationCount": {
+              "type": "integer"
+            },
+            "demonstrationsGivenCount": {
+              "type": "integer"
+            },
+            "eventParticipationCount": {
+              "type": "integer"
+            },
+            "customerSatisfactionScore": {
+              "type": "integer"
+            },
+            "trainingCertificationCount": {
+              "type": "integer"
+            },
+            "opportunityInvolvementCount": {
+              "type": "integer"
+            },
+            "marketingDevelopmentAmount": {
+              "type": "integer"
+            },
+            "sellerType": {
+              "type": "string"
+            },
+            "documentationDownloadCount": {
+              "type": "integer"
+            },
+            "id": {
+              "type": "string"
+            },
+            "activeFromDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "activeToDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "trialParticipationCount": {
+              "type": "integer"
+            },
+            "creditRating": {
+              "type": "integer"
+            },
+            "satisfactionScore": {
+              "type": "integer"
+            },
+            "salesAmount": {
+              "type": "integer"
+            },
+            "opportunityWinRate": {
+              "type": "integer"
+            },
+            "productReturnRate": {
+              "type": "integer"
+            },
+            "leadGenerationCount": {
+              "type": "integer"
+            },
+            "inventoryValueAmount": {
+              "type": "integer"
+            },
+            "majorPostSaleSupportNeeded": {
+              "type": "boolean"
+            },
+            "trainingParticipationCount": {
+              "type": "integer"
+            },
+            "newCustomerAcquisitionCount": {
+              "type": "integer"
+            },
+            "successStoryCount": {
+              "type": "integer"
+            },
+            "systemLoginCount": {
+              "type": "integer"
+            },
+            "jointBusinessPlanExist": {
+              "type": "boolean"
+            },
+            "averageConvertedLeadAmount": {
+              "type": "integer"
+            },
+            "estimatedPartnerGrossMargin": {
+              "type": "integer"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "SalesOrderProductTax": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/SalesOrderTax"
+        },
+        {
+          "type": "object",
+          "required": [
+            "description",
+            "id",
+            "name",
+            "salesOrderProduct",
+            "taxAmount"
+          ],
+          "properties": {
+            "description": {
+              "type": "string"
+            },
+            "originalSalesOrderProductTax": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/SalesOrderProductTax"
+              }
+            },
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "taxEffectiveDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "salesOrderProduct": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/SalesOrderProduct"
+              }
+            },
+            "taxAmount": {
+              "type": "integer"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "ContactPointEmail": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/ContactPoint"
+        },
+        {
+          "type": "object",
+          "required": [
+            "emailLatestBounceReasonText",
+            "id",
+            "emailMailBox",
+            "emailDomain",
+            "emailAddress",
+            "emailLatestBounceDateTime"
+          ],
+          "properties": {
+            "emailLatestBounceReasonText": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "emailMailBox": {
+              "type": "string"
+            },
+            "emailDomain": {
+              "type": "string"
+            },
+            "emailAddress": {
+              "type": "string"
+            },
+            "emailLatestBounceDateTime": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "PriceAdjustmentGroup": {
+      "type": "object"
+    },
+    "SalesOrderDeliveryGroup": {
+      "type": "object",
+      "required": [
+        "totalPriceAmount",
+        "description",
+        "id",
+        "name",
+        "contactPointAddress",
+        "salesOrder",
+        "salesOrderDeliveryStatus",
+        "salesOrderDeliveryGroupNumber",
+        "totalUnitPriceAmount",
+        "orderDeliveryMethod",
+        "accountContact"
+      ],
+      "properties": {
+        "totalPriceAmount": {
+          "type": "integer"
+        },
+        "totalDeliveryAdjustmentTaxAmount": {
+          "type": "integer"
+        },
+        "promisedDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "giftMessageText": {
+          "type": "string"
+        },
+        "deliveryInstructionsText": {
+          "type": "string"
+        },
+        "totalProductTaxAmount": {
+          "type": "integer"
+        },
+        "totalDeliveryChargeAmount": {
+          "type": "integer"
+        },
+        "description": {
+          "type": "string"
+        },
+        "grandTotalDeliveryAmount": {
+          "type": "integer"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "contactPointAddress": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContactPointAddress"
+          }
+        },
+        "salesOrder": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SalesOrder"
+          }
+        },
+        "isGift": {
+          "type": "boolean"
+        },
+        "salesOrderDeliveryStatus": {
+          "type": "string"
+        },
+        "totalDeliveryAdjustmentAmount": {
+          "type": "integer"
+        },
+        "totalDeliveryTaxAmount": {
+          "type": "integer"
+        },
+        "totalTaxAmount": {
+          "type": "integer"
+        },
+        "totalDeliveryChargeTaxAmount": {
+          "type": "integer"
+        },
+        "originalDeliveryGroup": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SalesOrderDeliveryGroup"
+          }
+        },
+        "salesOrderDeliveryGroupNumber": {
+          "type": "string"
+        },
+        "desiredDeliveryDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "totalUnitPriceAmount": {
+          "type": "integer"
+        },
+        "orderDeliveryMethod": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/OrderDeliveryMethod"
+          }
+        },
+        "accountContact": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AccountContact"
+          }
+        }
+      }
+    },
+    "BillingFrequency": {
+      "type": "object",
+      "required": [
+        "id",
+        "billingFrequencyName",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "billingFrequencyName": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "Customer": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/PartyRole"
+        },
+        {
+          "type": "object",
+          "required": [
+            "customerStatus",
+            "id"
+          ],
+          "properties": {
+            "customerStatus": {
+              "type": "string"
+            },
+            "prospectRating": {
+              "type": "string"
+            },
+            "netPromoterScore": {
+              "type": "integer"
+            },
+            "customerSatisfactionScore": {
+              "type": "integer"
+            },
+            "id": {
+              "type": "string"
+            },
+            "marketingEmailResponseRate": {
+              "type": "integer"
+            },
+            "totalContractedAmount": {
+              "type": "integer"
+            },
+            "totalProfitContributionAmount": {
+              "type": "integer"
+            },
+            "customerNumber": {
+              "type": "string"
+            },
+            "churnScore": {
+              "type": "integer"
+            },
+            "originatingCustomerSource": {
+              "type": "string"
+            },
+            "totalLifeTimeValue": {
+              "type": "integer"
+            },
+            "totalBookingsAmount": {
+              "type": "integer"
+            },
+            "last24MonthsNewRevenueAmount": {
+              "type": "integer"
+            },
+            "last12MonthsNewRevenueAmount": {
+              "type": "integer"
+            },
+            "last12MonthsSupportCallCount": {
+              "type": "integer"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "PaymentGatewayAuthorizationLog": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/PaymentGatewayInteractionLog"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id",
+            "paymentAuthorization"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "paymentAuthorization": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/PaymentAuthorization"
+              }
+            },
+            "name": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "ProductValidityTimePeriodUOM": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "pluralName"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "pluralName": {
+          "type": "string"
+        }
+      }
+    },
+    "ProductAttributeSet": {
+      "type": "object",
+      "required": [
+        "product",
+        "id",
+        "attributeSet"
+      ],
+      "properties": {
+        "product": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Product"
+          }
+        },
+        "id": {
+          "type": "string"
+        },
+        "attributeSet": {
+          "type": "string"
+        }
+      }
+    },
+    "ProductAttributeValue": {
+      "type": "object",
+      "required": [
+        "product",
+        "id",
+        "name",
+        "attributeSet"
+      ],
+      "properties": {
+        "product": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Product"
+          }
+        },
+        "attributeValue": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AttributeValue"
+          }
+        },
+        "id": {
+          "type": "string"
+        },
+        "customAttributeValue": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "attributeSet": {
+          "type": "string"
+        }
+      }
+    },
+    "PaymentInvoiceAllocation": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/PaymentAllocation"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id",
+            "appliedAmount",
+            "invoiceBalanceAmount"
+          ],
+          "properties": {
+            "paymentInvoiceAllocationName": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "appliedAmount": {
+              "type": "integer"
+            },
+            "invoiceBalanceAmount": {
+              "type": "integer"
+            },
+            "paymentInvoiceApplication": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/PaymentInvoiceApplication"
+              }
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "Payment": {
+      "type": "object",
+      "required": [
+        "paymentStatus",
+        "authorizationProcessingMode",
+        "salesOrderPaymentSummary",
+        "latestGatewayResultCode",
+        "commentText",
+        "paymentNumber",
+        "paymentGroup",
+        "paymentAmount",
+        "latestGatewayInternalResult",
+        "id",
+        "name",
+        "latestGatewayReferenceNumber",
+        "paymentMethod",
+        "latestGatewayDate",
+        "balanceAmount",
+        "paymentType",
+        "paymentGateway",
+        "paymentEffectiveDate",
+        "paymentTreatment",
+        "externalCreatedDate",
+        "internalBusinessUnit",
+        "paymentCancellationDate",
+        "totalAppliedAmount",
+        "netAppliedAmount",
+        "totalUnappliedAmount",
+        "latestGatewayInternalReferenceNumber"
+      ],
+      "properties": {
+        "paymentStatus": {
+          "type": "string"
+        },
+        "authorizationProcessingMode": {
+          "type": "string"
+        },
+        "account": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Account"
+          }
+        },
+        "salesOrderPaymentSummary": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SalesOrderPaymentSummary"
+          }
+        },
+        "latestGatewayResultCode": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PaymentGatewayResultCode"
+          }
+        },
+        "iPAddress": {
+          "type": "string"
+        },
+        "commentText": {
+          "type": "string"
+        },
+        "paymentNumber": {
+          "type": "string"
+        },
+        "paymentGroup": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PaymentGroup"
+          }
+        },
+        "paymentAmount": {
+          "type": "integer"
+        },
+        "latestGatewayInternalResult": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "customerEmailAddress": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "latestGatewayReferenceNumber": {
+          "type": "string"
+        },
+        "paymentMethod": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PaymentMethod"
+          }
+        },
+        "latestGatewayDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "balanceAmount": {
+          "type": "integer"
+        },
+        "paymentType": {
+          "type": "string"
+        },
+        "paymentGateway": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PaymentGateway"
+          }
+        },
+        "customerPhoneNumber": {
+          "type": "string"
+        },
+        "latestPaymentGatewayMessageText": {
+          "type": "string"
+        },
+        "paymentEffectiveDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "paymentTreatment": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PaymentTreatment"
+          }
+        },
+        "externalCreatedDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "internalBusinessUnit": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/InternalBusinessUnit"
+          }
+        },
+        "paymentCancellationDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "macAddress": {
+          "type": "string"
+        },
+        "totalAppliedAmount": {
+          "type": "integer"
+        },
+        "netAppliedAmount": {
+          "type": "integer"
+        },
+        "totalUnappliedAmount": {
+          "type": "integer"
+        },
+        "latestGatewayInternalReferenceNumber": {
+          "type": "string"
+        }
+      }
+    },
+    "PartyRole": {
+      "type": "object"
+    },
+    "AccountContactRole": {
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "accountContactRoleType": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "activeFromDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "activeToDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "accountContact": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AccountContact"
+          }
+        }
+      }
+    },
+    "PaymentCreditMemoAllocation": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/PaymentAllocation"
+        },
+        {
+          "type": "object",
+          "required": [
+            "appliedAmount",
+            "id"
+          ],
+          "properties": {
+            "appliedAmount": {
+              "type": "integer"
+            },
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "ContactPointSocial": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/ContactPoint"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id",
+            "profilePictureURL",
+            "followersCount",
+            "socialHandleName",
+            "socialFanStatus",
+            "socialHandle",
+            "socialNetworkProvider"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "profilePictureURL": {
+              "type": "string"
+            },
+            "followersCount": {
+              "type": "integer"
+            },
+            "socialHandleName": {
+              "type": "string"
+            },
+            "socialFanStatus": {
+              "type": "string"
+            },
+            "socialHandle": {
+              "type": "string"
+            },
+            "socialNetworkProvider": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "AccountContact": {
+      "type": "object",
+      "required": [
+        "account",
+        "id",
+        "individual"
+      ],
+      "properties": {
+        "reportsToAccountContact": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AccountContact"
+          }
+        },
+        "mailingAddress": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContactPointAddress"
+          }
+        },
+        "account": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Account"
+          }
+        },
+        "faxPhone": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContactPointPhone"
+          }
+        },
+        "id": {
+          "type": "string"
+        },
+        "departmentName": {
+          "type": "string"
+        },
+        "businessPhone": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContactPointPhone"
+          }
+        },
+        "contactEmail": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContactPointEmail"
+          }
+        },
+        "mobilePhone": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContactPointPhone"
+          }
+        },
+        "assistantPhone": {
+          "type": "string"
+        },
+        "indirectRelationAccountContact": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AccountContact"
+          }
+        },
+        "title": {
+          "type": "string"
+        },
+        "lastActivityDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "contactNote": {
+          "type": "string"
+        },
+        "assistantName": {
+          "type": "string"
+        },
+        "individual": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Individual"
+          }
+        },
+        "otherContactAddress": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContactPointAddress"
+          }
+        },
+        "homePhone": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContactPointPhone"
+          }
+        }
+      }
+    },
+    "PaymentTreatment": {
+      "type": "object",
+      "required": [
+        "paymentTreatmentMethod",
+        "id",
+        "paymentTreatmentStatus",
+        "paymentPolicy"
+      ],
+      "properties": {
+        "paymentTreatmentMethod": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PaymentTreatmentMethod"
+          }
+        },
+        "id": {
+          "type": "string"
+        },
+        "paymentApplicationLevel": {
+          "type": "string"
+        },
+        "shouldAutoInvoice": {
+          "type": "boolean"
+        },
+        "paymentTreatmentStatus": {
+          "type": "string"
+        },
+        "paymentPolicy": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PaymentPolicy"
+          }
+        },
+        "paymentTreatmentName": {
+          "type": "string"
+        }
+      }
+    },
+    "ServiceProduct": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/Product"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id",
+            "serviceType"
+          ],
+          "properties": {
+            "rentalTermViolationPenaltyAmount": {
+              "type": "integer"
+            },
+            "evergreenContractEstimatedMonthCount": {
+              "type": "integer"
+            },
+            "id": {
+              "type": "string"
+            },
+            "evergreenContractEstimatedChargeAmount": {
+              "type": "integer"
+            },
+            "servicePeriodUOM": {
+              "type": "string"
+            },
+            "servicePeriodCount": {
+              "type": "integer"
+            },
+            "serviceProviderAccount": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Account"
+              }
+            },
+            "rentalCleanupFeeAmount": {
+              "type": "integer"
+            },
+            "serviceType": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "AccountPartner": {
+      "type": "object",
+      "required": [
+        "account",
+        "id",
+        "partnerAccount"
+      ],
+      "properties": {
+        "account": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Account"
+          }
+        },
+        "id": {
+          "type": "string"
+        },
+        "partnerAccount": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Account"
+          }
+        }
+      }
+    },
+    "ContactPointPhone": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/ContactPoint"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id",
+            "isSMSCapable",
+            "formattedInternationalPhoneNumber",
+            "primaryPhoneType",
+            "isFaxCapable",
+            "formattedNationalPhoneNumber",
+            "telephoneNumber"
+          ],
+          "properties": {
+            "extensionNumber": {
+              "type": "string"
+            },
+            "phoneCountryCode": {
+              "type": "string"
+            },
+            "countryName": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "areaCode": {
+              "type": "string"
+            },
+            "isSMSCapable": {
+              "type": "boolean"
+            },
+            "shortCode": {
+              "type": "integer"
+            },
+            "formattedInternationalPhoneNumber": {
+              "type": "string"
+            },
+            "primaryPhoneType": {
+              "type": "string"
+            },
+            "isFaxCapable": {
+              "type": "boolean"
+            },
+            "formattedE164PhoneNumber": {
+              "type": "string"
+            },
+            "formattedNationalPhoneNumber": {
+              "type": "string"
+            },
+            "telephoneNumber": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "PaymentMethodType": {
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "typeDescription": {
+          "type": "string"
+        },
+        "mediaType": {
+          "type": "string"
+        },
+        "maxPerPeriodAmount": {
+          "type": "integer"
+        },
+        "typeRequiredIdentification": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "useMinimumAgeYear": {
+          "type": "integer"
+        },
+        "maxTransactionAmount": {
+          "type": "integer"
+        },
+        "maxPerPeriodTransactionCount": {
+          "type": "integer"
+        }
+      }
+    },
+    "ProductCatalogTranslation": {
+      "type": "object",
+      "required": [
+        "productCatalog",
+        "id",
+        "translatedName"
+      ],
+      "properties": {
+        "productCatalog": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ProductCatalog"
+          }
+        },
+        "id": {
+          "type": "string"
+        },
+        "translatedName": {
+          "type": "string"
+        }
+      }
+    },
+    "ProductCategoryProduct": {
+      "type": "object",
+      "required": [
+        "product",
+        "id",
+        "activeFromDateTime",
+        "productCategory"
+      ],
+      "properties": {
+        "product": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Product"
+          }
+        },
+        "id": {
+          "type": "string"
+        },
+        "activeFromDateTime": {
+          "type": "string",
+          "format": "time"
+        },
+        "activeToDateTime": {
+          "type": "string",
+          "format": "time"
+        },
+        "productCategory": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ProductCategory"
+          }
+        }
+      }
+    },
+    "Product": {
+      "type": "object",
+      "required": [
+        "longDescription",
+        "isBackOrdered",
+        "isWorkerDiscountAllowed",
+        "isWeightEntryRequired",
+        "isQuantityEntryRequired",
+        "isSerialized",
+        "description",
+        "id",
+        "name",
+        "isAutoProvisionable",
+        "isCouponRedemptionAllowed",
+        "isSellableIndependently",
+        "canUseRevenueSchedule",
+        "isCustomerDiscountAllowed",
+        "productStatus",
+        "isPreOrderable",
+        "requiresInvididualUnitPricing",
+        "canUseQuantitySchedule",
+        "isInstallable",
+        "isRainCheckAllowed",
+        "isMultipleCouponsAllowed",
+        "priceChargeType",
+        "isPartnerDiscountAllowed",
+        "productSKU",
+        "isManualPriceEntryRequired",
+        "isSellableWithoutPrice",
+        "isReturnable",
+        "isDynamicBundle",
+        "isQualityVerificationRequired",
+        "isFoodstampPaymentAllowed"
+      ],
+      "properties": {
+        "quantityScheduleType": {
+          "type": "string"
+        },
+        "disposalType": {
+          "type": "string"
+        },
+        "longDescription": {
+          "type": "string"
+        },
+        "primaryProductCategory": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ProductCategory"
+          }
+        },
+        "minimumAdvertisementAmount": {
+          "type": "integer"
+        },
+        "isBackOrdered": {
+          "type": "boolean"
+        },
+        "validForPeriodCount": {
+          "type": "integer"
+        },
+        "isWorkerDiscountAllowed": {
+          "type": "boolean"
+        },
+        "allowPartialRefund": {
+          "type": "boolean"
+        },
+        "isWeightEntryRequired": {
+          "type": "boolean"
+        },
+        "isQuantityEntryRequired": {
+          "type": "boolean"
+        },
+        "isSerialized": {
+          "type": "boolean"
+        },
+        "rewardProgramPointsCount": {
+          "type": "integer"
+        },
+        "description": {
+          "type": "string"
+        },
+        "revenueInstallmentPeriod": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "isAutoProvisionable": {
+          "type": "boolean"
+        },
+        "isCouponRedemptionAllowed": {
+          "type": "boolean"
+        },
+        "isSellableIndependently": {
+          "type": "boolean"
+        },
+        "canUseRevenueSchedule": {
+          "type": "boolean"
+        },
+        "manufacturerName": {
+          "type": "string"
+        },
+        "isIntellectualPropertyProtected": {
+          "type": "boolean"
+        },
+        "modelYear": {
+          "type": "integer"
+        },
+        "isCustomerDiscountAllowed": {
+          "type": "boolean"
+        },
+        "productStatus": {
+          "type": "string"
+        },
+        "brandGrade": {
+          "type": "string"
+        },
+        "quantityInstallmentCount": {
+          "type": "integer"
+        },
+        "requiredDepositAmount": {
+          "type": "integer"
+        },
+        "revenueScheduleType": {
+          "type": "string"
+        },
+        "isPreOrderable": {
+          "type": "boolean"
+        },
+        "requiresInvididualUnitPricing": {
+          "type": "boolean"
+        },
+        "standardWarrantyLengthMonth": {
+          "type": "integer"
+        },
+        "canUseQuantitySchedule": {
+          "type": "boolean"
+        },
+        "isInstallable": {
+          "type": "boolean"
+        },
+        "isRainCheckAllowed": {
+          "type": "boolean"
+        },
+        "minimumAdvertisementAmountStartDate": {
+          "type": "integer"
+        },
+        "maximumOrderQuantityCount": {
+          "type": "integer"
+        },
+        "isMultipleCouponsAllowed": {
+          "type": "boolean"
+        },
+        "allowCustomerReturn": {
+          "type": "boolean"
+        },
+        "modelNumber": {
+          "type": "string"
+        },
+        "mSRPAmount": {
+          "type": "integer"
+        },
+        "externalSourceRecord": {
+          "type": "string"
+        },
+        "masterProduct": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Product"
+          }
+        },
+        "isSellable": {
+          "type": "boolean"
+        },
+        "validToDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "priceChargeType": {
+          "type": "string"
+        },
+        "primarySalesChannel": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SalesChannel"
+          }
+        },
+        "isPartnerDiscountAllowed": {
+          "type": "boolean"
+        },
+        "revenueInstallmentCount": {
+          "type": "integer"
+        },
+        "productSKU": {
+          "type": "string"
+        },
+        "quantityInstallmentPeriod": {
+          "type": "string"
+        },
+        "isManualPriceEntryRequired": {
+          "type": "boolean"
+        },
+        "type": {
+          "type": "string"
+        },
+        "isSellableWithoutPrice": {
+          "type": "boolean"
+        },
+        "glAccountCode": {
+          "type": "string"
+        },
+        "isReturnable": {
+          "type": "boolean"
+        },
+        "displayUrl": {
+          "type": "string"
+        },
+        "validForPeriodUOM": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ProductValidityTimePeriodUOM"
+          }
+        },
+        "versionNumber": {
+          "type": "string"
+        },
+        "brand": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Brand"
+          }
+        },
+        "lotIdentifier": {
+          "type": "string"
+        },
+        "validFromDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "stockLedgerValuationAmount": {
+          "type": "integer"
+        },
+        "isDynamicBundle": {
+          "type": "boolean"
+        },
+        "isQualityVerificationRequired": {
+          "type": "boolean"
+        },
+        "requiredDepositPercentage": {
+          "type": "integer"
+        },
+        "isFoodstampPaymentAllowed": {
+          "type": "boolean"
+        },
+        "minimumOrderQuantityCount": {
+          "type": "integer"
+        }
+      }
+    },
+    "AttributeSetTranslation": {
+      "type": "object",
+      "required": [
+        "id",
+        "translatedName",
+        "attributeSet"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "translatedName": {
+          "type": "string"
+        },
+        "attributeSet": {
+          "type": "string"
+        }
+      }
+    },
+    "PaymentAuthorization": {
+      "type": "object",
+      "required": [
+        "paymentGatewayReferenceNumber",
+        "salesOrderPaymentSummary",
+        "totalPaymentCaptureAmount",
+        "paymentAuthorizationProcessingMode",
+        "authorizationAmount",
+        "expirationDate",
+        "paymentGroup",
+        "id",
+        "paymentGatewayInternalReferenceNumber",
+        "gatewayReferenceDetailsText",
+        "totalAuthorizationReversalAmount",
+        "paymentGateway",
+        "paymentGatewayResult",
+        "externalCreatedDate",
+        "paymentAuthorizationNumber",
+        "requestDate",
+        "availableBalanceAmount",
+        "paymentMethodID",
+        "gatewayAuthorizationCode",
+        "paymentGatewayDate",
+        "paymentAuthorizationStatus"
+      ],
+      "properties": {
+        "paymentGatewayReferenceNumber": {
+          "type": "string"
+        },
+        "salesOrderPaymentSummary": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SalesOrderPaymentSummary"
+          }
+        },
+        "iPAddress": {
+          "type": "string"
+        },
+        "totalPaymentCaptureAmount": {
+          "type": "integer"
+        },
+        "paymentAuthorizationProcessingMode": {
+          "type": "string"
+        },
+        "authorizationAmount": {
+          "type": "integer"
+        },
+        "expirationDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "paymentGroup": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PaymentGroup"
+          }
+        },
+        "id": {
+          "type": "string"
+        },
+        "paymentGatewayInternalReferenceNumber": {
+          "type": "string"
+        },
+        "gatewayReferenceDetailsText": {
+          "type": "string"
+        },
+        "totalAuthorizationReversalAmount": {
+          "type": "integer"
+        },
+        "paymentGateway": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PaymentGateway"
+          }
+        },
+        "paymentGatewayResult": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PaymentGatewayResultCode"
+          }
+        },
+        "paymentAuthorizationCommentText": {
+          "type": "string"
+        },
+        "externalCreatedDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "paymentAuthorizationNumber": {
+          "type": "string"
+        },
+        "requestDate": {
+          "type": "string",
+          "format": "time"
+        },
+        "availableBalanceAmount": {
+          "type": "integer"
+        },
+        "paymentMethodID": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PaymentMethod"
+          }
+        },
+        "gatewayResultCodeDescription": {
+          "type": "string"
+        },
+        "macAddress": {
+          "type": "string"
+        },
+        "gatewayAuthorizationCode": {
+          "type": "string"
+        },
+        "paymentGatewayDate": {
+          "type": "string",
+          "format": "time"
+        },
+        "paymentAuthorizationStatus": {
+          "type": "string"
+        }
+      }
+    },
+    "Brand": {
+      "type": "object",
+      "required": [
+        "id",
+        "brandGrade",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "brandGrade": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "RefundPaymentAllocation": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/RefundAllocation"
+        },
+        {
+          "type": "object",
+          "required": [
+            "capturePayment",
+            "refundAllocationCommentsDate",
+            "id",
+            "paymentBalanceAmount",
+            "creditMemoBalanceAmount"
+          ],
+          "properties": {
+            "capturePayment": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/CapturePayment"
+              }
+            },
+            "refundAllocationCommentsDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "id": {
+              "type": "string"
+            },
+            "paymentBalanceAmount": {
+              "type": "integer"
+            },
+            "refundAllocationCommentText": {
+              "type": "string"
+            },
+            "creditMemoBalanceAmount": {
+              "type": "integer"
+            },
+            "refundPaymentAllocationName": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "PriceBookEntry": {
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "minRequiredQuantity": {
+          "type": "integer"
+        },
+        "unitListPrice": {
+          "type": "integer"
+        },
+        "product": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Product"
+          }
+        },
+        "minRequiredOrderValue": {
+          "type": "integer"
+        },
+        "isActive": {
+          "type": "boolean"
+        },
+        "id": {
+          "type": "string"
+        },
+        "maxRequiredOrderValue": {
+          "type": "integer"
+        },
+        "useStandardPrice": {
+          "type": "boolean"
+        },
+        "servicePeriodCount": {
+          "type": "integer"
+        }
+      }
+    },
+    "AttributeValueTranslation": {
+      "type": "object",
+      "required": [
+        "translatedAttributeValue",
+        "attributeValue",
+        "id"
+      ],
+      "properties": {
+        "translatedAttributeValue": {
+          "type": "string"
+        },
+        "attributeValue": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AttributeValue"
+          }
+        },
+        "id": {
+          "type": "string"
+        },
+        "translatedAttributeValueDescription": {
+          "type": "string"
+        }
+      }
+    },
+    "RefundPayment": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/Payment"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id",
+            "externalCreatedDate"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "externalCreatedDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "name": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "PaymentGateway": {
+      "type": "object",
+      "required": [
+        "paymentGatewayStatus",
+        "id",
+        "name",
+        "paymentGatewayProvider"
+      ],
+      "properties": {
+        "paymentGatewayStatus": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "paymentGatewayCommentText": {
+          "type": "string"
+        },
+        "paymentGatewayProvider": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PaymentGatewayProvider"
+          }
+        },
+        "systemCredential": {
+          "type": "string"
+        }
+      }
+    },
+    "Household": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/Party"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id",
+            "name"
+          ],
+          "properties": {
+            "householdMemberCount": {
+              "type": "integer"
+            },
+            "householdFormedDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "householdDissolvedDate": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "CapturePayment": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/Payment"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id",
+            "capturePaymentType",
+            "paymentAuthorization"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "capturePaymentType": {
+              "type": "string"
+            },
+            "handlingFeeAmount": {
+              "type": "integer"
+            },
+            "paymentAuthorization": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/PaymentAuthorization"
+              }
+            },
+            "isFinalCapture": {
+              "type": "boolean"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "Lead": {
+      "type": "object",
+      "required": [
+        "partyRole",
+        "id",
+        "leadSource"
+      ],
+      "properties": {
+        "faxContactPhone": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContactPointPhone"
+          }
+        },
+        "stateProvinceName": {
+          "type": "string"
+        },
+        "leadStatus": {
+          "type": "string"
+        },
+        "photoURL": {
+          "type": "string"
+        },
+        "countryName": {
+          "type": "string"
+        },
+        "partyRole": {
+          "type": "string"
+        },
+        "convertedDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "description": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "contactPointEmail": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContactPointEmail"
+          }
+        },
+        "companyName": {
+          "type": "string"
+        },
+        "streetName": {
+          "type": "string"
+        },
+        "leadScore": {
+          "type": "integer"
+        },
+        "mobileContactPhone": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContactPointPhone"
+          }
+        },
+        "contactAddress": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContactPointAddress"
+          }
+        },
+        "geoCodeLatitude": {
+          "type": "integer"
+        },
+        "leadRating": {
+          "type": "string"
+        },
+        "geoCodeLongitude": {
+          "type": "integer"
+        },
+        "emailBouncedDate": {
+          "type": "string",
+          "format": "time"
+        },
+        "geoCodeAccuracy": {
+          "type": "integer"
+        },
+        "leadSource": {
+          "type": "string"
+        },
+        "convertedToAccount": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Account"
+          }
+        },
+        "convertedToAccountContact": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AccountContact"
+          }
+        },
+        "phoneContactPoint": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContactPointPhone"
+          }
+        },
+        "lastActivityDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "annualRevenue": {
+          "type": "integer"
+        },
+        "emailBouncedReason": {
+          "type": "string"
+        },
+        "website": {
+          "type": "string"
+        },
+        "isConverted": {
+          "type": "boolean"
+        },
+        "partnerAccount": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Account"
+          }
+        }
+      }
+    },
+    "BundleProduct": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/Product"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id",
+            "bundledProductsSubstitutional",
+            "bundledProductsSoldTogether"
+          ],
+          "properties": {
+            "expectedWasteCount": {
+              "type": "integer"
+            },
+            "quantityCount": {
+              "type": "integer"
+            },
+            "id": {
+              "type": "string"
+            },
+            "tareWeight": {
+              "type": "integer"
+            },
+            "bundledProductsSubstitutional": {
+              "type": "boolean"
+            },
+            "bundledProductsDecidedAtUse": {
+              "type": "boolean"
+            },
+            "bundledProductsDecidesAvailability": {
+              "type": "boolean"
+            },
+            "bundledProductsSoldTogether": {
+              "type": "boolean"
+            },
+            "weightUOM": {
+              "type": "string"
+            },
+            "quantityUnitOfMeasure": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "PersonLifeEvent": {
+      "type": "object",
+      "required": [
+        "individual",
+        "id",
+        "personLifeEventDateTime",
+        "personLifeEventType"
+      ],
+      "properties": {
+        "individual": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Individual"
+          }
+        },
+        "id": {
+          "type": "string"
+        },
+        "personLifeEventDateTime": {
+          "type": "string",
+          "format": "time"
+        },
+        "personLifeEventType": {
+          "type": "string"
+        }
+      }
+    },
+    "Party": {
+      "type": "object",
+      "required": [
+        "partyType",
+        "id"
+      ],
+      "properties": {
+        "partyType": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "globalParty": {
+          "type": "string"
+        },
+        "noMergeReason": {
+          "type": "string"
+        },
+        "primaryAccount": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Account"
+          }
+        }
+      }
+    },
+    "Coupon": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/PaymentMethod"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id"
+          ],
+          "properties": {
+            "manufacturer": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Party"
+              }
+            },
+            "primaryScanCodeLabel": {
+              "type": "string"
+            },
+            "isReturnCoupon": {
+              "type": "boolean"
+            },
+            "expirationDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "id": {
+              "type": "string"
+            },
+            "secondaryScanCodeLabel": {
+              "type": "string"
+            },
+            "scanCode": {
+              "type": "string"
+            },
+            "couponCode": {
+              "type": "string"
+            },
+            "returnCouponReason": {
+              "type": "string"
+            },
+            "discountAmount": {
+              "type": "integer"
+            },
+            "isValid": {
+              "type": "boolean"
+            },
+            "couponStatus": {
+              "type": "string"
+            },
+            "discountPercentage": {
+              "type": "integer"
+            },
+            "couponCount": {
+              "type": "integer"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "SalesChannel": {
+      "type": "object",
+      "required": [
+        "externalRecord",
+        "salesChannelType",
+        "description",
+        "id",
+        "name",
+        "salesChannelNumber"
+      ],
+      "properties": {
+        "externalRecord": {
+          "type": "string"
+        },
+        "salesChannelType": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "salesChannelNumber": {
+          "type": "string"
+        }
+      }
+    },
+    "InternalBusinessUnit": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/Party"
+        },
+        {
+          "type": "object",
+          "required": [
+            "id",
+            "businessUnitType",
+            "name"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "businessUnitType": {
+              "type": "string"
+            },
+            "parentInternalBusinessUnit": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/InternalBusinessUnit"
+              }
+            },
+            "name": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "type": "object"
+    },
+    "PaymentMethod": {
+      "type": "object",
+      "required": [
+        "paymentMethodType",
+        "paymentMethodStatus",
+        "id"
+      ],
+      "properties": {
+        "paymentMethodType": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PaymentMethodType"
+          }
+        },
+        "paymentMethodStatus": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        }
+      }
+    },
+    "PaymentGatewayInteractionLog": {
+      "type": "object",
+      "required": [
+        "paymentGatewayInteractionType",
+        "paymentGatewayReferenceNumber",
+        "paymentGatewayAuthorizationCode",
+        "internalResultCode",
+        "paymentGatewayAVSCode",
+        "id",
+        "internalReferenceNumber",
+        "paymentGatewayResult",
+        "paymentGatewayInteractionLogName",
+        "paymentGatewayInteractionStatus",
+        "paymentGatewayDate"
+      ],
+      "properties": {
+        "paymentGatewayInteractionType": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PaymentGatewayInteractionType"
+          }
+        },
+        "paymentGatewayReferenceNumber": {
+          "type": "string"
+        },
+        "paymentGatewayMessageText": {
+          "type": "string"
+        },
+        "paymentGatewayAuthorizationCode": {
+          "type": "string"
+        },
+        "internalResultCode": {
+          "type": "string"
+        },
+        "paymentGatewayAVSCode": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "internalReferenceNumber": {
+          "type": "string"
+        },
+        "paymentGatewayResult": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PaymentGatewayResultCode"
+          }
+        },
+        "paymentGatewayInteractionLogName": {
+          "type": "string"
+        },
+        "paymentGatewayInteractionStatus": {
+          "type": "string"
+        },
+        "paymentGatewayDate": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "ContactPoint": {
+      "type": "object",
+      "required": [
+        "id",
+        "activeFromDate",
+        "party",
+        "contactPointType",
+        "forBusinessUse",
+        "forPersonalUse"
+      ],
+      "properties": {
+        "primaryFlag": {
+          "type": "boolean"
+        },
+        "bestTimeToContactStartTime": {
+          "type": "string",
+          "format": "time"
+        },
+        "profileLastUpdatedDate": {
+          "type": "string",
+          "format": "time"
+        },
+        "partyRole": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "activeFromDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "activeToDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "profileOccurrenceCount": {
+          "type": "integer"
+        },
+        "profileFirstCreatedDate": {
+          "type": "string",
+          "format": "time"
+        },
+        "bestTimeToContactEndTime": {
+          "type": "string",
+          "format": "time"
+        },
+        "party": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Party"
+          }
+        },
+        "contactPointType": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContactPointType"
+          }
+        },
+        "forBusinessUse": {
+          "type": "boolean"
+        },
+        "forPersonalUse": {
+          "type": "boolean"
+        }
+      }
+    },
+    "Account": {
+      "type": "object",
+      "required": [
+        "useAsSalesAccount",
+        "useAsServiceAccount",
+        "useAsBillingAccount",
+        "id",
+        "name",
+        "useAsShippingAccount",
+        "number",
+        "paymentTerm"
+      ],
+      "properties": {
+        "billDeliveryMethod": {
+          "type": "string"
+        },
+        "billContactAddress": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContactPointAddress"
+          }
+        },
+        "useAsSalesAccount": {
+          "type": "boolean"
+        },
+        "assignTerritoryFlag": {
+          "type": "boolean"
+        },
+        "billFrequency": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/BillingFrequency"
+          }
+        },
+        "autoPayEnabledFlag": {
+          "type": "boolean"
+        },
+        "autoPaymentAmount": {
+          "type": "integer"
+        },
+        "useAsServiceAccount": {
+          "type": "boolean"
+        },
+        "useAsBillingAccount": {
+          "type": "boolean"
+        },
+        "partyRole": {
+          "type": "string"
+        },
+        "faxPhone": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContactPointPhone"
+          }
+        },
+        "description": {
+          "type": "string"
+        },
+        "salesPhone": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContactPointPhone"
+          }
+        },
+        "id": {
+          "type": "string"
+        },
+        "sLAExpirationDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "name": {
+          "type": "string"
+        },
+        "accountType": {
+          "type": "string"
+        },
+        "autoPaymentMethod": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PaymentMethod"
+          }
+        },
+        "balanceAmount": {
+          "type": "integer"
+        },
+        "holdStatusReason": {
+          "type": "string"
+        },
+        "generalLedgerAccount": {
+          "type": "string"
+        },
+        "thirtyDayBalanceAmount": {
+          "type": "integer"
+        },
+        "sixtyDayBalanceAmount": {
+          "type": "integer"
+        },
+        "useAsShippingAccount": {
+          "type": "boolean"
+        },
+        "shippingAddress": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContactPointAddress"
+          }
+        },
+        "party": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Party"
+          }
+        },
+        "parentAccount": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Account"
+          }
+        },
+        "sLAType": {
+          "type": "string"
+        },
+        "shippingContact": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AccountContact"
+          }
+        },
+        "balanceAmountLimit": {
+          "type": "integer"
+        },
+        "shippingPhoneid": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContactPointPhone"
+          }
+        },
+        "shippingEmail": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContactPointEmail"
+          }
+        },
+        "lastActivityDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "orderDeliveryMethod": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/OrderDeliveryMethod"
+          }
+        },
+        "primarySalesContactPoint": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContactPoint"
+          }
+        },
+        "number": {
+          "type": "string"
+        },
+        "ninetyDayBalanceAmount": {
+          "type": "integer"
+        },
+        "paymentTerm": {
+          "type": "string"
+        },
+        "defaultFreightTerms": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

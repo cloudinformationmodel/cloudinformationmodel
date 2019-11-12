@@ -1,0 +1,37 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "ValidityPropertyGroup",
+  "name": "Validity Property Group",
+  "@type": "PropertyGroup",
+  "version": "0.1",
+  "propertyConcepts": [
+    {
+      "@id": "validFromDate",
+      "@type": "Property",
+      "description": "The date from which the product can actually be used",
+      "name": "Valid From Date",
+      "range": "DataType"
+    },
+    {
+      "@id": "validToDate",
+      "@type": "Property",
+      "description": "The date to which the product can actually be used",
+      "name": "Valid To Date",
+      "range": "DataType"
+    },
+    {
+      "@id": "validForPeriodCount",
+      "@type": "Property",
+      "description": "E.g. valid for 1, 2 or 3",
+      "name": "Valid For Period Count",
+      "range": "DataType"
+    },
+    {
+      "@id": "validForPeriodUOM",
+      "@type": "Property",
+      "description": "E.g. valid for hours, days, months",
+      "name": "Valid For Period Unit Of Measure",
+      "range": "ProductValidityTimePeriodUOM"
+    }
+  ]
+}

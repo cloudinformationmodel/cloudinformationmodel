@@ -1,0 +1,23 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "TaxationPropertyGroup",
+  "name": "Taxation Property Group",
+  "@type": "PropertyGroup",
+  "version": "0.1",
+  "propertyConcepts": [
+    {
+      "@id": "originalSalesOrderProductTax",
+      "@type": "Property",
+      "description": "A tax item on an earlier version of the Sales Order Product",
+      "name": "Original Sales Order Product Tax Id",
+      "range": "SalesOrderProductTax"
+    },
+    {
+      "@id": "taxRatePercent",
+      "@type": "Property",
+      "description": "The percentage rate that will be applied to another amount such as Product Total to calculate the tax.",
+      "name": "Tax Rate Percent",
+      "range": "DataType"
+    }
+  ]
+}

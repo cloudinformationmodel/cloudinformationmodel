@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Cloud Information Model</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,900&display=swap" rel="stylesheet">
+  <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap.native/2.0.27/bootstrap-native-v4.min.js"
+  ></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="/css/normalize.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="/css/site.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body>
+<header>
+  <div class="container">
+    <div class="navbar-container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+	<a class="navbar-brand" href="/">
+	  <svg width="110px" height="46px" viewBox="0 0 110 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	    <defs>
+	      <polygon id="path-1" points="0 0.0233160305 42.7180179 0.0233160305 42.7180179 45.9997893 0 45.9997893"></polygon>
+	    </defs>
+	    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+	      <g id="Header---Main" transform="translate(0.000000, -37.000000)">
+		<g id="logo" transform="translate(0.000000, 37.000000)">
+		  <g id="Group-3">
+		    <mask id="mask-2" fill="white">
+		      <use xlink:href="#path-1"></use>
+		    </mask>
+		    <g id="Clip-2"></g>
+		    <path d="M1.91276585,32.2194534 C0.63744878,29.359026 -0.000209756098,26.3002015 -0.000209756098,23.042629 C-0.000209756098,19.7857588 0.63744878,16.7216672 1.91276585,13.8503542 C3.18773333,10.9800947 4.91402602,8.53717863 7.09094472,6.52160611 C9.26751382,4.50708702 11.8468146,2.9202626 14.8284976,1.76148397 C17.8101805,0.602705344 20.9537252,0.0233160305 24.2587821,0.0233160305 C27.8963024,0.0233160305 31.3107821,0.80110229 34.5018715,2.35632366 C37.6926114,3.91224733 40.4313268,6.04720916 42.7180179,8.76120916 L34.455026,15.682629 C33.1244732,14.1793771 31.5810179,13.0104153 29.8246602,12.1750412 C28.0676033,11.3400183 26.2126602,10.9225069 24.2587821,10.9225069 C20.870522,10.9225069 18.0014081,12.0763695 15.652839,14.3830412 C13.3035707,16.6904153 12.1296358,19.5771786 12.1296358,23.042629 C12.1296358,26.4880641 13.3035707,29.359026 15.652839,31.6558656 C18.0014081,33.9530565 20.870522,35.1009496 24.2587821,35.1009496 C26.2126602,35.1009496 28.0676033,34.6887053 29.8246602,33.8638656 C31.5810179,33.039026 33.1244732,31.8749802 34.455026,30.3713771 L42.7180179,37.2931481 C40.4313268,40.0078504 37.6926114,42.137545 34.5018715,43.6825832 C31.3107821,45.2279725 27.8963024,45.9997893 24.2587821,45.9997893 C20.9537252,45.9997893 17.8101805,45.4207511 14.8284976,44.2616214 C11.8468146,43.1028427 9.26751382,41.5212855 7.09094472,39.5169496 C4.91402602,37.5122626 3.18773333,35.0802321 1.91276585,32.2194534" id="Fill-1" fill="#221F1F" mask="url(#mask-2)"></path>
+		  </g>
+		  <polygon id="Fill-4" fill="#221F1F" points="45 45 57 45 57 1 45 1"></polygon>
+		  <polygon id="Fill-6" fill="#221F1F" points="61 45 61 1 70.9941074 1 85.4998244 21.0109996 100.005541 1 110 1 110 45 98.7213273 45 98.7213273 21.6892683 85.4998244 39.6965752 72.2786727 21.6892683 72.2786727 45"></polygon>
+		</g>
+	      </g>
+	    </g>
+	  </svg>
+	</a>
+	<button
+	    class="navbar-toggler collapsed"
+	    type="button"
+	    data-toggle="collapse"
+	    data-target="#navbarNavAltMarkup"
+	    aria-controls="navbarNavAltMarkup"
+	    aria-expanded="false"
+	    aria-label="Toggle navigation"
+	>
+		<span class="navbar-toggler-box">
+		  <span class="navbar-toggler-inner"></span>
+		</span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+	  <div class="navbar-nav ml-auto">
+	    <a class="nav-item nav-link" href="/subject_areas.html">Subject Areas</a>
+	    <a class="nav-item nav-link" href="/documentation.html">Documentation</a>
+	    <a class="nav-item nav-link" href="/about.html">About</a>
+	  </div>
+	</div>
+      </nav>
+    </div>
+  </div>
+</header>
+<section class="layout">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+	<h2 class="subject-area-header">
+	  <span class="subject-area-name">Party</span>
+	</h2>
+
+	<p class="subject-area-description">
+	  <span>This defines who you have trading relationships with and how. For example: customer &amp; supplier along with their phone number and email.</span>
+	</p>
+
+	<div class="row justify-content-center">
+	  <div class="col-12 col-lg-10">
+          <a href="Party.png" target="_blank"><img src="Party.png" class="img-fluid mb-4"/></a>
+	  </div>
+	</div>
+
+	<h3>Entity Groups</h3>
+
+	<div class="table-responsive">
+	  <table>
+	    <thead>
+	    <tr>
+	      <th>Name</th>
+	      <th>Description</th>
+	    </tr>
+	    </thead>
+	    <tbody>
+	      <tr id="Account-scalar-tr">
+		<td class="sprop-name"><a href="accountentitygroup.html">Account</a></td>
+		<td class="sprop-data">Example Entities included: Account, Account Contact, Bill Frequency</td>
+	      </tr>
+	      <tr id="Contact Point-scalar-tr">
+		<td class="sprop-name"><a href="contactpointentitygroup.html">Contact Point</a></td>
+		<td class="sprop-data">Example Entities included: Contact Point, Contact Consent, Contact Channel</td>
+	      </tr>
+	      <tr id="Lead-scalar-tr">
+		<td class="sprop-name"><a href="leadentitygroup.html">Lead</a></td>
+		<td class="sprop-data">Example Entities included: Lead, Lead Status, Lead Source</td>
+	      </tr>
+	      <tr id="Party-scalar-tr">
+		<td class="sprop-name"><a href="partyentitygroup.html">Party</a></td>
+		<td class="sprop-data">Example Entities included: Organization, Individual, Affiliate Group, Uncategorized</td>
+	      </tr>
+	      <tr id="Party Role-scalar-tr">
+		<td class="sprop-name"><a href="partyroleentitygroup.html">Party Role</a></td>
+		<td class="sprop-data">Example Entities included: Party Role, Buyer Role, Actor Role, Customer Role</td>
+	      </tr>
+	    </tbody>
+	  </table>
+	</div>
+
+	<h3>Entities</h3>
+
+	<div class="table-responsive">
+	  <table>
+	    <thead>
+	    <tr>
+	      <th>Name</th>
+	      <th>Description</th>
+	    </tr>
+	    </thead>
+	    <tbody>
+	      <tr id="Account-scalar-tr">
+		<td class="sprop-name"><a href="schema_accountentitygroup_account.html">Account</a></td>
+		<td class="sprop-data">How the party want to interact with your enterprise e.g. have multiple billing accounts</td>
+	      </tr>
+	      <tr id="Account Contact-scalar-tr">
+		<td class="sprop-name"><a href="schema_accountentitygroup_accountcontact.html">Account Contact</a></td>
+		<td class="sprop-data">An individual who has a role specific to an Account.</td>
+	      </tr>
+	      <tr id="Account Contact Role-scalar-tr">
+		<td class="sprop-name"><a href="schema_accountentitygroup_accountcontactrole.html">Account Contact Role</a></td>
+		<td class="sprop-data">What role does a contact play on an account e.g. decision maker, influencer</td>
+	      </tr>
+	      <tr id="Account Partner-scalar-tr">
+		<td class="sprop-name"><a href="schema_accountentitygroup_accountpartner.html">Account Partner</a></td>
+		<td class="sprop-data">State what partner (account) is related to&#x2F;have access to another account</td>
+	      </tr>
+	      <tr id="Billing Frequency-scalar-tr">
+		<td class="sprop-name"><a href="schema_accountentitygroup_billingfrequency.html">Billing Frequency</a></td>
+		<td class="sprop-data">Describes a period of time used for recurring bills e.g. monthly or semi-monthly</td>
+	      </tr>
+	      <tr id="Competitor-scalar-tr">
+		<td class="sprop-name"><a href="schema_partyroleentitygroup_competitor.html">Competitor</a></td>
+		<td class="sprop-data">Information about a party playing role of competitor e.g. strength (in products), weaknesses (in offerings), opportunities (to overtake), threats (to our business)</td>
+	      </tr>
+	      <tr id="Contact Point-scalar-tr">
+		<td class="sprop-name"><a href="schema_contactpointentitygroup_contactpoint.html">Contact Point</a></td>
+		<td class="sprop-data">All contact points for a party e.g. phone 123-4567, email info@northerntrailoutfitters.com</td>
+	      </tr>
+	      <tr id="Contact Point Address-scalar-tr">
+		<td class="sprop-name"><a href="schema_contactpointentitygroup_contactpointaddress.html">Contact Point Address</a></td>
+		<td class="sprop-data">Mailing address for a party e.g. 123 Main St, Big City, CA12345, USA</td>
+	      </tr>
+	      <tr id="Contact Point App-scalar-tr">
+		<td class="sprop-name"><a href="schema_contactpointentitygroup_contactpointapp.html">Contact Point App</a></td>
+		<td class="sprop-data">Software Application for a party and optionally on a specific device e.g. John Doe have Strava App on device iPhone123</td>
+	      </tr>
+	      <tr id="Contact Point Email-scalar-tr">
+		<td class="sprop-name"><a href="schema_contactpointentitygroup_contactpointemail.html">Contact Point Email</a></td>
+		<td class="sprop-data">Email address for a party e.g. email info@northerntrailoutfitters.com</td>
+	      </tr>
+	      <tr id="Contact Point Location-scalar-tr">
+		<td class="sprop-name"><a href="schema_contactpointentitygroup_contactpointlocation.html">Contact Point Location</a></td>
+		<td class="sprop-data">Physical location for a party e.g. party Northern Trail Outfitters at Standford Shopping Mall</td>
+	      </tr>
+	      <tr id="Contact Point Phone-scalar-tr">
+		<td class="sprop-name"><a href="schema_contactpointentitygroup_contactpointphone.html">Contact Point Phone</a></td>
+		<td class="sprop-data">Phone number for a party e.g. phone 123-4567</td>
+	      </tr>
+	      <tr id="Contact Point Social-scalar-tr">
+		<td class="sprop-name"><a href="schema_contactpointentitygroup_contactpointsocial.html">Contact Point Social</a></td>
+		<td class="sprop-data">Social handle for a party e.g. trustednews at twitter</td>
+	      </tr>
+	      <tr id="Contact Point Type-scalar-tr">
+		<td class="sprop-name"><a href="schema_contactpointentitygroup_contactpointtype.html">Contact Point Type</a></td>
+		<td class="sprop-data">Contain the fixed list of types a contact point can be of e.g. phone, email</td>
+	      </tr>
+	      <tr id="Customer-scalar-tr">
+		<td class="sprop-name"><a href="schema_partyroleentitygroup_customer.html">Customer</a></td>
+		<td class="sprop-data">Information about a party playing role of customer e.g. life time value, life cycle status</td>
+	      </tr>
+	      <tr id="Customer Status History-scalar-tr">
+		<td class="sprop-name"><a href="schema_partyroleentitygroup_customerstatushistory.html">Customer Status History</a></td>
+		<td class="sprop-data">History of when customer changed frome one status to another</td>
+	      </tr>
+	      <tr id="Household-scalar-tr">
+		<td class="sprop-name"><a href="schema_partyentitygroup_household.html">Household</a></td>
+		<td class="sprop-data">A combination of people, normally recorded in the system for marketing or service purposes</td>
+	      </tr>
+	      <tr id="Individual-scalar-tr">
+		<td class="sprop-name"><a href="schema_partyentitygroup_individual.html">Individual</a></td>
+		<td class="sprop-data">Represent the person you are, or will be, dealing with using the system</td>
+	      </tr>
+	      <tr id="Internal Business Unit-scalar-tr">
+		<td class="sprop-name"><a href="schema_partyentitygroup_internalbusinessunit.html">Internal Business Unit</a></td>
+		<td class="sprop-data">Defining a part of your own internal organization. May be anything from a holding company, a line of business, a country division, a department and for which you may want to track e.g. if it is a legal entity, default GL Code, profit-and-loss etc against.</td>
+	      </tr>
+	      <tr id="Lead-scalar-tr">
+		<td class="sprop-name"><a href="schema_leadentitygroup_lead.html">Lead</a></td>
+		<td class="sprop-data">A person or company that showed interest in the company&#39;s products</td>
+	      </tr>
+	      <tr id="Party-scalar-tr">
+		<td class="sprop-name"><a href="schema_partyentitygroup_party.html">Party</a></td>
+		<td class="sprop-data">A unified, in system, definition of who you are dealing with e.g. John Doe, Northern Trail Outfitters and can be of different types e.g. individual, business, affiliation group.</td>
+	      </tr>
+	      <tr id="Party Additional Name-scalar-tr">
+		<td class="sprop-name"><a href="schema_partyentitygroup_partyadditionalname.html">Party Additional Name</a></td>
+		<td class="sprop-data">Under what name is a person also known as( AKA), under what alternate name is a business doing business as (DBA)</td>
+	      </tr>
+	      <tr id="Party Identification-scalar-tr">
+		<td class="sprop-name"><a href="schema_partyentitygroup_partyidentification.html">Party Identification</a></td>
+		<td class="sprop-data">Set of ways to identify a party e.g. driving license, birth certificate</td>
+	      </tr>
+	      <tr id="Party Related Party-scalar-tr">
+		<td class="sprop-name"><a href="schema_partyentitygroup_partyrelatedparty.html">Party Related Party</a></td>
+		<td class="sprop-data">Relates any two parties together e.g. Jane and John Doe part of The Doe Household</td>
+	      </tr>
+	      <tr id="Party Relationship Type-scalar-tr">
+		<td class="sprop-name"><a href="schema_partyentitygroup_partyrelationshiptype.html">Party Relationship Type</a></td>
+		<td class="sprop-data">Define name of a relationship and how to read the relationship both ways e.g. household for &#x2F; household member of</td>
+	      </tr>
+	      <tr id="Party Role-scalar-tr">
+		<td class="sprop-name"><a href="schema_partyroleentitygroup_partyrole.html">Party Role</a></td>
+		<td class="sprop-data">Trading roles a party may play at the same time i.e. Customer, Supplier, Seller, Competitor, Worker</td>
+	      </tr>
+	      <tr id="Party Web Address-scalar-tr">
+		<td class="sprop-name"><a href="schema_contactpointentitygroup_partywebaddress.html">Party Web Address</a></td>
+		<td class="sprop-data">What is the Web URL for the Party</td>
+	      </tr>
+	      <tr id="Person Education-scalar-tr">
+		<td class="sprop-name"><a href="schema_partyentitygroup_personeducation.html">Person Education</a></td>
+		<td class="sprop-data">Education a person has e.g. Phd, High School</td>
+	      </tr>
+	      <tr id="Person Employment-scalar-tr">
+		<td class="sprop-name"><a href="schema_partyentitygroup_personemployment.html">Person Employment</a></td>
+		<td class="sprop-data">Information about an employee</td>
+	      </tr>
+	      <tr id="Person Language-scalar-tr">
+		<td class="sprop-name"><a href="schema_partyentitygroup_personlanguage.html">Person Language</a></td>
+		<td class="sprop-data">Languages a person can comprehend and level of comprehension</td>
+	      </tr>
+	      <tr id="Person Life Event-scalar-tr">
+		<td class="sprop-name"><a href="schema_partyentitygroup_personlifeevent.html">Person Life Event</a></td>
+		<td class="sprop-data">Major events a person had in their lives e.g. graudation date, marriage date</td>
+	      </tr>
+	      <tr id="Seller-scalar-tr">
+		<td class="sprop-name"><a href="schema_partyroleentitygroup_seller.html">Seller</a></td>
+		<td class="sprop-data">Information about a party playing role of seller e.g. customer satisfaction score</td>
+	      </tr>
+	      <tr id="Supplier-scalar-tr">
+		<td class="sprop-name"><a href="schema_partyroleentitygroup_supplier.html">Supplier</a></td>
+		<td class="sprop-data">Information about a party playing role of supplier e.g. vendor ranking</td>
+	      </tr>
+	      <tr id="Uncategorized Party-scalar-tr">
+		<td class="sprop-name"><a href="schema_partyentitygroup_uncategorizedparty.html">Uncategorized Party</a></td>
+		<td class="sprop-data">A party we may be, or will be, dealing with but we do not know who they are yet e.g. Social Handle &#39;TrustedNews&#39; which we do not yet know if a person or a business but complain about our company so we want to log a case to investigate further. E.g. an ord</td>
+	      </tr>
+	    </tbody>
+	  </table>
+	</div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+    <footer class="footer">
+      <div class="container">
+	<div class="row text-center text-lg-right">
+	  <div class="col-12">
+	    <ul>
+	      <li><a href="http://www.jdfprojects.org/CIM/" target="_blank" rel="noopener noreferrer">Terms & Conditions</a></li>
+	      <li><a href="http://www.jdfprojects.org/CIM/" target="_blank" rel="noopener noreferrer">Privacy</a></li>
+	      <li><a href="https://github.com/cloudinformationmodel" target="_blank" rel="noopener noreferrer">Github</a></li>
+	    </ul>
+	  </div>
+	</div>
+      </div>
+    </footer>
+    <script
+	type="text/javascript"
+	src="/js/menu.js"
+    ></script>
+  </body>
+</html>

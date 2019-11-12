@@ -1,0 +1,14 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "PaymentMethodSubjectArea",
+  "@type": "SubjectArea",
+  "version": "0.1",
+  "name": "Payment Method",
+  "description": "A method of paying for a product or service, like a credit card or check.",
+  "entityGroups": [
+    {
+      "@id": "PaymentMethodEntityGroup",
+      "name": "Payment Method"
+    }
+  ]
+}

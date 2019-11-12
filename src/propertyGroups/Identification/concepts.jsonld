@@ -1,0 +1,79 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "IdentificationPropertyGroup",
+  "name": "Identification Property Group",
+  "@type": "PropertyGroup",
+  "version": "0.1",
+  "propertyConcepts": [
+    {
+      "@id": "businessName",
+      "@type": "Property",
+      "description": "Alternative name under which the business is known to the general public",
+      "name": "Business Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "legalName",
+      "@type": "Property",
+      "description": "The registered legal name of the business",
+      "name": "Legal Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "dandBCompanyName",
+      "@type": "Property",
+      "description": "Name as stated by the company Dun and Bradstreet",
+      "name": "D&B Company Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "dUNSNumber",
+      "@type": "Property",
+      "description": "9 digit global standard number to identify businesses",
+      "name": "DUNS Number",
+      "range": "DataType"
+    },
+    {
+      "@id": "stockExchangeName",
+      "@type": "Property",
+      "description": "What main stock exchange is the party noted on",
+      "name": "Stock Exchange Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "stockTickerSymbol",
+      "@type": "Property",
+      "description": "Main ticker symbol for the primary exchange the business is trading on",
+      "name": "Stock Ticker Symbol",
+      "range": "DataType"
+    },
+    {
+      "@id": "tax",
+      "@type": "Property",
+      "description": "What is the government provided tax identification fort this business",
+      "name": "Tax Id",
+      "range": "DataType"
+    },
+    {
+      "@id": "companyType",
+      "@type": "Property",
+      "description": "Discretionary name of the business site location, for example Headquarters or London",
+      "name": "Company Type",
+      "range": "DataType"
+    },
+    {
+      "@id": "id",
+      "@type": "Property",
+      "description": "Primary key unique identification value",
+      "name": "Individual Id",
+      "range": "DataType"
+    },
+    {
+      "@id": "photoURL",
+      "@type": "Property",
+      "description": "Link to a photo",
+      "name": "Photo URL",
+      "range": "DataType"
+    }
+  ]
+}

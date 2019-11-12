@@ -1,0 +1,649 @@
+{
+  "@context" : {
+    "rr" : "http://www.w3.org/ns/r2rml#"
+  },
+  "@graph" : [
+    {
+      "@id" : "/shipment_entity_group/shipment_product_price_adjustment_tax",
+      "rr:logicalTable" : {
+        "rr:tableName" : "SHIPMENT_ENTITY_GROUP.SHIPMENT_PRODUCT_PRICE_ADJUSTMENT_TAX"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/ShipmentProductPriceAdjustmentTax"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/name"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/shipment_entity_group/shipment_status",
+      "rr:logicalTable" : {
+        "rr:tableName" : "SHIPMENT_ENTITY_GROUP.SHIPMENT_STATUS"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/ShipmentStatus"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/description"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "DESCRIPTION",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/name"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/shipment_entity_group/shipment_product_price_adjustment",
+      "rr:logicalTable" : {
+        "rr:tableName" : "SHIPMENT_ENTITY_GROUP.SHIPMENT_PRODUCT_PRICE_ADJUSTMENT"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/ShipmentProductPriceAdjustment"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/adjustmentAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "ADJUSTMENT_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/shipmentProductPriceAdjustmentAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "SHIPMENT_PRODUCT_PRICE_ADJUSTMENT_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/description"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "DESCRIPTION",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/adjustmentTaxAmount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "ADJUSTMENT_TAX_AMOUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/shipment_entity_group/shipment",
+      "rr:logicalTable" : {
+        "rr:tableName" : "SHIPMENT_ENTITY_GROUP.SHIPMENT"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/Shipment"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/giftMessageText"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "GIFT_MESSAGE_TEXT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/shipmentNumber"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "SHIPMENT_NUMBER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/isGift"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "IS_GIFT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/actualDeliveryDateTime"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "ACTUAL_DELIVERY_DATE_TIME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#time"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/specialInstructionsText"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "SPECIAL_INSTRUCTIONS_TEXT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/carrierTrackingNumber"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "CARRIER_TRACKING_NUMBER",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/estimatedDeliveryDateTime"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "ESTIMATED_DELIVERY_DATE_TIME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#time"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/scheduledDeliveryDateTime"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "SCHEDULED_DELIVERY_DATE_TIME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#time"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/shipmentDate"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "SHIPMENT_DATE",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#date"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/shipment_entity_group/shipment_package",
+      "rr:logicalTable" : {
+        "rr:tableName" : "SHIPMENT_ENTITY_GROUP.SHIPMENT_PACKAGE"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/ShipmentPackage"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/shipmentProductCount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "SHIPMENT_PRODUCT_COUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/shipmentProductDescription"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "SHIPMENT_PRODUCT_DESCRIPTION",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/shipment_entity_group/shipment_document",
+      "rr:logicalTable" : {
+        "rr:tableName" : "SHIPMENT_ENTITY_GROUP.SHIPMENT_DOCUMENT"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/ShipmentDocument"
+        }
+      },
+      "rr:predicateObjectMap" : [
+      ]
+    },
+    {
+      "@id" : "/shipment_entity_group/shipping_method",
+      "rr:logicalTable" : {
+        "rr:tableName" : "SHIPMENT_ENTITY_GROUP.SHIPPING_METHOD"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/ShippingMethod"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/description"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "DESCRIPTION",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        },
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/name"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "NAME",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/shipment_entity_group/shipment_product",
+      "rr:logicalTable" : {
+        "rr:tableName" : "SHIPMENT_ENTITY_GROUP.SHIPMENT_PRODUCT"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+        "rr:class" : {
+          "@id" : "http://cloudinformationmodel.org/model/ShipmentProduct"
+        }
+      },
+      "rr:predicateObjectMap" : [
+        {
+          "rr:predicate" : {
+            "@id" : "http://cloudinformationmodel.org/model/shipmentProductCount"
+          },
+          "rr:objectMap" : {
+            "rr:column" : "SHIPMENT_PRODUCT_COUNT",
+            "rr:datatype" : {
+              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@id" : "/shipment_entity_group/shi_pro_pri_adj_tax_shi_pro_pri_adj_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "SHIPMENT_ENTITY_GROUP.SHI_PRO_PRI_ADJ_TAX_SHI_PRO_PRI_ADJ_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{SHIPMENT_PRODUCT_PRICE_ADJUSTMENT_TAX_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/shipmentProductPriceAdjustment"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/shipment_entity_group/shipment_product_price_adjustment"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "SHIPMENT_PRODUCT_PRICE_ADJUSTMENT_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/shipment_entity_group/shipment_product_price_adjustment_shipment_product_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "SHIPMENT_ENTITY_GROUP.SHIPMENT_PRODUCT_PRICE_ADJUSTMENT_SHIPMENT_PRODUCT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{SHIPMENT_PRODUCT_PRICE_ADJUSTMENT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/shipmentProduct"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/shipment_entity_group/shipment_product"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "SHIPMENT_PRODUCT_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/shipment_entity_group/shipment_shipment_status_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "SHIPMENT_ENTITY_GROUP.SHIPMENT_SHIPMENT_STATUS_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{SHIPMENT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/shipmentStatus"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/shipment_entity_group/shipment_status"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "SHIPMENT_STATUS_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/shipment_entity_group/shipment_sales_order_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "SHIPMENT_ENTITY_GROUP.SHIPMENT_SALES_ORDER_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{SHIPMENT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/salesOrder"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/sales_order_entity_group/sales_order"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "SALES_ORDER_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/shipment_entity_group/shipment_ship_to_address_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "SHIPMENT_ENTITY_GROUP.SHIPMENT_SHIP_TO_ADDRESS_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{SHIPMENT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/shipToAddress"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/contact_point_entity_group/contact_point_address"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "CONTACT_POINT_ADDRESS_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/shipment_entity_group/shipment_sales_order_delivery_group_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "SHIPMENT_ENTITY_GROUP.SHIPMENT_SALES_ORDER_DELIVERY_GROUP_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{SHIPMENT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/salesOrderDeliveryGroup"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/sales_order_entity_group/sales_order_delivery_group"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "SALES_ORDER_DELIVERY_GROUP_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/shipment_entity_group/shipment_package_shipment_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "SHIPMENT_ENTITY_GROUP.SHIPMENT_PACKAGE_SHIPMENT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{SHIPMENT_PACKAGE_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/shipment"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/shipment_entity_group/shipment"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "SHIPMENT_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/shipment_entity_group/shipment_document_shipment_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "SHIPMENT_ENTITY_GROUP.SHIPMENT_DOCUMENT_SHIPMENT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{SHIPMENT_DOCUMENT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/shipment"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/shipment_entity_group/shipment"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "SHIPMENT_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/shipment_entity_group/shipping_method_product_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "SHIPMENT_ENTITY_GROUP.SHIPPING_METHOD_PRODUCT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{SHIPPING_METHOD_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/product"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/product_entity_group/product"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PRODUCT_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/shipment_entity_group/shipment_product_product_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "SHIPMENT_ENTITY_GROUP.SHIPMENT_PRODUCT_PRODUCT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{SHIPMENT_PRODUCT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/product"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/product_entity_group/product"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PRODUCT_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/shipment_entity_group/shipment_product_shipment_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "SHIPMENT_ENTITY_GROUP.SHIPMENT_PRODUCT_SHIPMENT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{SHIPMENT_PRODUCT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/shipment"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/shipment_entity_group/shipment"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "SHIPMENT_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/shipment_entity_group/shipment_product_shipment_package_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "SHIPMENT_ENTITY_GROUP.SHIPMENT_PRODUCT_SHIPMENT_PACKAGE_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{SHIPMENT_PRODUCT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/shipmentPackage"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/shipment_entity_group/shipment_package"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "SHIPMENT_PACKAGE_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/shipment_entity_group/shipment_product_sales_order_product_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "SHIPMENT_ENTITY_GROUP.SHIPMENT_PRODUCT_SALES_ORDER_PRODUCT_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{SHIPMENT_PRODUCT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/salesOrderProduct"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/sales_order_entity_group/sales_order_product"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "SALES_ORDER_PRODUCT_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    }
+  ]
+}

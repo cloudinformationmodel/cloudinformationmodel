@@ -1,0 +1,496 @@
+#%RAML 1.0 Library
+types:
+  SalesOrder:
+    properties:
+      totalPendingBillingAmount:
+        type: integer
+      checkoutDate:
+        type: date-only
+      priceCalculationStatusMessageText:
+        type: string
+      confirmationRecipientEmailText:
+        type: string
+      orderEndDate:
+        type: date-only
+      isTaxExempt:
+        type: boolean
+      totalProductTaxAmount:
+        type: integer
+      isAlerted:
+        type: boolean
+      isAnonymous:
+        type: boolean
+      description:
+        type: string
+      activatedDate:
+        type: date-only
+      billToEmail:
+        items: contactpoint_eg.ContactPointEmail
+      requestedStartDate:
+        type: date-only
+      id:
+        type: string
+      companyAuthorizedDate:
+        type: date-only
+      orderInsuranceAmount:
+        type: integer
+      name:
+        type: string
+      isClosed:
+        type: boolean
+      shipToEmail:
+        items: contactpoint_eg.ContactPointEmail
+      totalDeliveryAmount:
+        type: integer
+      salesOrderConfirmationStatus:
+        type: string
+      customerAuthorizedDate:
+        type: date-only
+      totalCancelledBillingAmount:
+        type: integer
+      totalAdjustedDeliveryTaxAmount:
+        type: integer
+      paymentMethod:
+        items: paymentmethod_eg.PaymentMethod
+      totalAdjustmentAmount:
+        type: integer
+      salesOrderStatus:
+        type: string
+      renewalUpliftRate:
+        type: integer
+      totalProductAmount:
+        type: integer
+      renewalTerm:
+        type: string
+      originalOrder:
+        items: SalesOrder
+      billToAccount:
+        items: account_eg.Account
+      totalAdjustmentTaxAmount:
+        type: integer
+      isGiftOrder:
+        type: boolean
+      promiseFulfillmentDate:
+        type: date-only
+      filedDate:
+        type: date-only
+      iSOCulture:
+        type: string
+      userDeviceSession:
+        items: productattribute_eg.DeviceUserSession
+      purchaseOrderNumber:
+        type: string
+      totalDeliveryFeeAmount:
+        type: integer
+      totalDeliveryTaxAmount:
+        type: integer
+      totalTaxAmount:
+        type: integer
+      orderNumber:
+        type: string
+      seller:
+        items: partyrole_eg.Seller
+      billToAddress:
+        items: contactpoint_eg.ContactPointAddress
+      shipToAddress:
+        items: contactpoint_eg.ContactPointAddress
+      fulfilledDate:
+        type: date-only
+      billToContact:
+        items: account_eg.AccountContact
+      paidDate:
+        type: date-only
+      totalBookingAmount:
+        type: integer
+      adjustedProductTaxAmount:
+        type: integer
+      promiseDate:
+        type: date-only
+      packedDate:
+        type: date-only
+      isHistoricalOnly:
+        type: boolean
+      grandTotalAmount:
+        type: integer
+      isContracted:
+        type: boolean
+      canBillNow:
+        type: boolean
+      adjustedTotalProductAmount:
+        type: integer
+      orderDiscount:
+        type: integer
+      internalBusinessUnit:
+        items: party_eg.InternalBusinessUnit
+      salesChannel:
+        items: SalesChannel
+      orderStartDate:
+        type: date-only
+      cancelDateType:
+        type: string
+      isReductionOrder:
+        type: boolean
+      salesOrderSystemStatus:
+        type: string
+      isSuspended:
+        type: boolean
+      billToPhoneNumber:
+        items: contactpoint_eg.ContactPointPhone
+      purchaseOrderDate:
+        type: date-only
+      soldToCustomer:
+        items: partyrole_eg.Customer
+      billingDayOfTheMonth:
+        type: integer
+      cancelDate:
+        type: date-only
+      shipToContact:
+        items: account_eg.AccountContact
+      taxRate:
+        type: integer
+      developerStatusCode:
+        type: string
+  SalesOrderPaymentSummary:
+    properties:
+      authorizationReversalAmount:
+        type: integer
+      authorizationAmount:
+        type: integer
+      unappliedAmount:
+        type: integer
+      paymentAmount:
+        type: integer
+      id:
+        type: string
+      name:
+        type: string
+      salesOrder:
+        items: SalesOrder
+      paymentMethod:
+        items: paymentmethod_eg.PaymentMethod
+      appliedAmount:
+        type: integer
+      availableToApplyBalanceAmount:
+        type: integer
+      capturedAmount:
+        type: integer
+  SalesOrderTax:
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      salesOrderTaxAmount:
+        type: integer
+      taxAddressCityName:
+        type: string
+      taxErrorMessageText:
+        type: string
+      taxAddressStreet1Text:
+        type: string
+      taxRatePercent:
+        type: integer
+      taxAddressStreet2Text:
+        type: string
+  SalesOrderProductNote:
+    properties:
+      id:
+        type: string
+      noteText:
+        type: string
+      description:
+        type: string
+  SalesOrderProduct:
+    properties:
+      totalRecurringPriceAmount:
+        type: integer
+      totalLineAdjustmentAmount:
+        type: integer
+      totalPriceAmount:
+        type: integer
+      provisioningDate:
+        type: date-only
+      fulfilledQuantity:
+        type: integer
+      totalLineAmount:
+        type: integer
+      promisedDate:
+        type: date-only
+      shippingPhone:
+        items: contactpoint_eg.ContactPointPhone
+      recurringPriceAmount:
+        type: integer
+      endDate:
+        type: date-only
+      giftOrderMessageText:
+        type: string
+      quantityOrderedUOM:
+        type: string
+      totalProductTaxAmount:
+        type: integer
+      salesOrderProductReason:
+        items: SalesOrderProductReason
+      lineAdjustmentSubTotalAmount:
+        type: integer
+      commentText:
+        type: string
+      orderProductNumber:
+        type: string
+      product:
+        items: product_eg.Product
+      description:
+        type: string
+      orderedQuantity:
+        type: integer
+      salesOrderProductStatus:
+        type: string
+      unitPriceAmount:
+        type: integer
+      requestedStartDate:
+        type: date-only
+      id:
+        type: string
+      subscriptionRenewalMonthQuantity:
+        type: integer
+      orderManualAdjustmentSubTotalAmount:
+        type: integer
+      allocatedQuantity:
+        type: integer
+      allocationPartitionName:
+        type: string
+      salesOrder:
+        items: SalesOrder
+      isGift:
+        type: boolean
+      unitTaxAmount:
+        type: integer
+      deliveryTaxAmount:
+        type: integer
+      isBonusProduct:
+        type: boolean
+      salesOrderProductAdjustedTaxAmount:
+        type: integer
+      totalAdjustmentAmount:
+        type: integer
+      shippingTaxAmount:
+        type: integer
+      totalListPriceAmount:
+        type: integer
+      totalAdjustmentTaxAmount:
+        type: integer
+      orderAdjustmentSubTotalAmount:
+        type: integer
+      subscriptionTermQuantity:
+        type: integer
+      totalDistributedAdjustmentTaxAmount:
+        type: integer
+      totalDistributedTaxAmount:
+        type: integer
+      totalTaxAmount:
+        type: integer
+      adjustedDeliveryTaxAmount:
+        type: integer
+      shippingAddress:
+        items: contactpoint_eg.ContactPointAddress
+      listPriceAmount:
+        type: integer
+      priceBookEntry:
+        items: productattribute_eg.PriceBookEntry
+      segmentIndex:
+        type: integer
+      shippingCostAmount:
+        type: integer
+      isBundleRoot:
+        type: boolean
+      discountAmount:
+        type: integer
+      cancelledQuantity:
+        type: integer
+      shippingEmail:
+        items: contactpoint_eg.ContactPointEmail
+      subscriptionTermUnit:
+        items: productattribute_eg.ProductValidityTimePeriodUOM
+      listPriceTermUOM:
+        items: productattribute_eg.ProductValidityTimePeriodUOM
+      salesOrderDeliveryGroup:
+        items: SalesOrderDeliveryGroup
+      listPriceQuantityUOM:
+        type: string
+      totalDistributedAdjustmentAmount:
+        type: integer
+      segmentIndexNumber:
+        type: integer
+      totalUnitPriceAmount:
+        type: integer
+      originalOrderProduct:
+        items: SalesOrderProduct
+      availableQuantity:
+        type: integer
+      requestedEndDate:
+        type: date-only
+      allocationGroupName:
+        type: string
+      sellerAccount:
+        items: account_eg.Account
+      giftRecipientTelephoneNumber:
+        type: string
+      isAutomaticallyRenewed:
+        type: boolean
+      discountPercent:
+        type: integer
+      totalManualAdjustmentAmount:
+        type: integer
+      handlingCostAmount:
+        type: integer
+  SalesOrderPriceAdjustment:
+    type: PriceAdjustmentGroup
+    properties:
+      id:
+        type: string
+      salesOrder:
+        items: SalesOrder
+      totalAdjustmentTaxAmount:
+        type: integer
+  SalesOrderProductGroup:
+    properties:
+      id:
+        type: string
+      description:
+        type: string
+      salesOrderProductGroupType:
+        type: string
+      name:
+        type: string
+  ProductRelationshipType:
+    properties:
+      id:
+        type: string
+      parentProductRole:
+        type: string
+      childProductRole:
+        type: string
+  SalesOrderProductReason:
+    properties:
+      id:
+        type: string
+      salesOrderProductReasonCategory:
+        type: string
+      name:
+        type: string
+  OrderDeliveryMethod:
+    properties:
+      product:
+        items: product_eg.Product
+      id:
+        type: string
+      externalRecord:
+        type: string
+      name:
+        type: string
+  SalesOrderChangeLog:
+    properties:
+      changeSalesOrder:
+        items: SalesOrder
+      id:
+        type: string
+      name:
+        type: string
+      relatedSalesOrderProduct:
+        items: SalesOrderProduct
+      changeSalesOrderProduct:
+        items: SalesOrderProduct
+      relatedSalesOrder:
+        items: SalesOrder
+  SalesOrderProductTax:
+    type: SalesOrderTax
+    properties:
+      description:
+        type: string
+      originalSalesOrderProductTax:
+        items: SalesOrderProductTax
+      id:
+        type: string
+      name:
+        type: string
+      taxEffectiveDate:
+        type: date-only
+      salesOrderProduct:
+        items: SalesOrderProduct
+      taxAmount:
+        type: integer
+  PriceAdjustmentGroup:
+    properties: {}
+  SalesOrderDeliveryGroup:
+    properties:
+      totalPriceAmount:
+        type: integer
+      totalDeliveryAdjustmentTaxAmount:
+        type: integer
+      promisedDate:
+        type: date-only
+      giftMessageText:
+        type: string
+      deliveryInstructionsText:
+        type: string
+      totalProductTaxAmount:
+        type: integer
+      totalDeliveryChargeAmount:
+        type: integer
+      description:
+        type: string
+      grandTotalDeliveryAmount:
+        type: integer
+      id:
+        type: string
+      name:
+        type: string
+      contactPointAddress:
+        items: contactpoint_eg.ContactPointAddress
+      salesOrder:
+        items: SalesOrder
+      isGift:
+        type: boolean
+      salesOrderDeliveryStatus:
+        type: string
+      totalDeliveryAdjustmentAmount:
+        type: integer
+      totalDeliveryTaxAmount:
+        type: integer
+      totalTaxAmount:
+        type: integer
+      totalDeliveryChargeTaxAmount:
+        type: integer
+      originalDeliveryGroup:
+        items: SalesOrderDeliveryGroup
+      salesOrderDeliveryGroupNumber:
+        type: string
+      desiredDeliveryDate:
+        type: date-only
+      totalUnitPriceAmount:
+        type: integer
+      orderDeliveryMethod:
+        items: OrderDeliveryMethod
+      accountContact:
+        items: account_eg.AccountContact
+  SalesChannel:
+    properties:
+      externalRecord:
+        type: string
+      salesChannelType:
+        type: string
+      description:
+        type: string
+      id:
+        type: string
+      name:
+        type: string
+      salesChannelNumber:
+        type: string
+uses:
+  account_eg: ../../Party/Account/schema.yaml
+  partyrole_eg: ../../Party/PartyRole/schema.yaml
+  product_eg: ../../Product/Product/schema.yaml
+  party_eg: ../../Party/Party/schema.yaml
+  productattribute_eg: ../../Product/ProductAttribute/schema.yaml
+  paymentmethod_eg: ../../PaymentMethod/PaymentMethod/schema.yaml
+  contactpoint_eg: ../../Party/ContactPoint/schema.yaml

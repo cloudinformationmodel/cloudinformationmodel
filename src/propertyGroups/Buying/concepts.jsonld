@@ -1,0 +1,44 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "BuyingPropertyGroup",
+  "name": "Buying Property Group",
+  "@type": "PropertyGroup",
+  "version": "0.1",
+  "propertyConcepts": [
+    {
+      "@id": "soldToCustomer",
+      "@type": "Property",
+      "description": "Reference to the Customer (party role) of a person who is buyer (sell-to), when that is different than the bill-to for the sales order.",
+      "name": "Sold To Customer",
+      "range": "Customer"
+    },
+    {
+      "@id": "purchaseOrderDate",
+      "@type": "Property",
+      "description": "Date of the purchase order.",
+      "name": "Purchase Order Date",
+      "range": "DataType"
+    },
+    {
+      "@id": "purchaseOrderNumber",
+      "@type": "Property",
+      "description": "Number identifying the purchase order. Maximum is 80.",
+      "name": "Purchase Order Number",
+      "range": "DataType"
+    },
+    {
+      "@id": "isGiftOrder",
+      "@type": "Property",
+      "description": "Is this the whole order a gift order",
+      "name": "Is Gift Order",
+      "range": "DataType"
+    },
+    {
+      "@id": "iSOCulture",
+      "@type": "Property",
+      "description": "....returned as we do not know what this means e.g. i18n support",
+      "name": "ISO Culture",
+      "range": "DataType"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "DefinePropertyGroup",
+  "name": "Define Property Group",
+  "@type": "PropertyGroup",
+  "version": "0.1",
+  "propertyConcepts": [
+    {
+      "@id": "party",
+      "@type": "Property",
+      "description": "What is the first party this relation involves",
+      "name": "Party",
+      "range": "Party"
+    },
+    {
+      "@id": "relatedParty",
+      "@type": "Property",
+      "description": "What is the secondary party this relation involves",
+      "name": "Related Party",
+      "range": "Party"
+    },
+    {
+      "@id": "partyRelationshipType",
+      "@type": "Property",
+      "description": "Type of affiliation",
+      "name": "Party Relationship Type",
+      "range": "PartyRelationshipType"
+    },
+    {
+      "@id": "relatedFromDate",
+      "@type": "Property",
+      "description": "Date when affiliation starts",
+      "name": "Related From Date",
+      "range": "DataType"
+    },
+    {
+      "@id": "relatedToDate",
+      "@type": "Property",
+      "description": "Date when affiliation ends",
+      "name": "Related To Date",
+      "range": "DataType"
+    },
+    {
+      "@id": "partyRole",
+      "@type": "Property",
+      "description": "What is the first party role this relation involves",
+      "name": "Party Role",
+      "range": "DataType"
+    },
+    {
+      "@id": "relatedPartyRole",
+      "@type": "Property",
+      "description": "What is the secondary party role this relation involves",
+      "name": "Related Party Role",
+      "range": "DataType"
+    },
+    {
+      "@id": "isBidirectional",
+      "@type": "Property",
+      "description": "If the relationship is not restricted from role 1 to role 2 then set this to true",
+      "name": "Is Bidirectional",
+      "range": "DataType"
+    },
+    {
+      "@id": "partnerAccount",
+      "@type": "Property",
+      "description": "Reference to Partner type of Account",
+      "name": "Partner Account",
+      "range": "Account"
+    },
+    {
+      "@id": "account",
+      "@type": "Property",
+      "description": "Reference to the Account the Partner have access to",
+      "name": "Account",
+      "range": "Account"
+    }
+  ]
+}

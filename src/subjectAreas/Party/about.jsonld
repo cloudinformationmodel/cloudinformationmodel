@@ -1,0 +1,30 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "PartySubjectArea",
+  "@type": "SubjectArea",
+  "version": "0.1",
+  "name": "Party",
+  "description": "This defines who you have trading relationships with and how. For example: customer & supplier along with their phone number and email.",
+  "entityGroups": [
+    {
+      "@id": "AccountEntityGroup",
+      "name": "Account"
+    },
+    {
+      "@id": "ContactPointEntityGroup",
+      "name": "Contact Point"
+    },
+    {
+      "@id": "PartyRoleEntityGroup",
+      "name": "Party Role"
+    },
+    {
+      "@id": "LeadEntityGroup",
+      "name": "Lead"
+    },
+    {
+      "@id": "PartyEntityGroup",
+      "name": "Party"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "HealthPropertyGroup",
+  "name": "Health Property Group",
+  "@type": "PropertyGroup",
+  "version": "0.1",
+  "propertyConcepts": [
+    {
+      "@id": "mainDietaryHabitType",
+      "@type": "Property",
+      "description": "Dietary habit e.g. kosher food eater",
+      "name": "Main Dietary Habit Type",
+      "range": "DataType"
+    },
+    {
+      "@id": "mainDisabilityType",
+      "@type": "Property",
+      "description": "Disability or Impairment e.g. wheel chair bound",
+      "name": "Main Disability Type",
+      "range": "DataType"
+    },
+    {
+      "@id": "personHeight",
+      "@type": "Property",
+      "description": "How tall is the person",
+      "name": "Person Height",
+      "range": "DataType"
+    },
+    {
+      "@id": "personHeightUnitOfMeasure",
+      "@type": "Property",
+      "description": "What unit of measure is used for height",
+      "name": "Person Height Unit Of Measure",
+      "range": "DataType"
+    },
+    {
+      "@id": "personWeight",
+      "@type": "Property",
+      "description": "How heavy is the person",
+      "name": "Person Weight",
+      "range": "DataType"
+    },
+    {
+      "@id": "personWeightUnitOfMeasure",
+      "@type": "Property",
+      "description": "What unit of measure is used for weight",
+      "name": "Person Weight Unit Of Measure",
+      "range": "DataType"
+    },
+    {
+      "@id": "isAlcoholConsumer",
+      "@type": "Property",
+      "description": "Indicator whether individual currently consume alcohol",
+      "name": "Is Alcohol Consumer",
+      "range": "DataType"
+    },
+    {
+      "@id": "hasAlcoholAbuseHistory",
+      "@type": "Property",
+      "description": "Indicator whether individual have a history of Alchol abuse",
+      "name": "Has Alcohol Abuse History",
+      "range": "DataType"
+    },
+    {
+      "@id": "isDrugConsumer",
+      "@type": "Property",
+      "description": "Indicator whether individual currently consume any drug other than alcohol",
+      "name": "Is Drug Consumer",
+      "range": "DataType"
+    },
+    {
+      "@id": "hasDrugAbuseHistory",
+      "@type": "Property",
+      "description": "Indicator whether individual had a history of drug abuse",
+      "name": "Has Drug Abuse History",
+      "range": "DataType"
+    },
+    {
+      "@id": "isTobaccoConsume",
+      "@type": "Property",
+      "description": "Indicator whether individual had a history of drug abuse",
+      "name": "Is Tobacco Consumer",
+      "range": "DataType"
+    },
+    {
+      "@id": "hospitalizationsLast5YearsCount",
+      "@type": "Property",
+      "description": "How many times the individual been hospitalized last 5 years",
+      "name": "Hospitalizations Last 5 Years Count",
+      "range": "DataType"
+    },
+    {
+      "@id": "surgeriesLast5YearsCount",
+      "@type": "Property",
+      "description": "How many times the individual had any type of surgery in last 5 years",
+      "name": "Surgeries Last 5 Years Count",
+      "range": "DataType"
+    }
+  ]
+}

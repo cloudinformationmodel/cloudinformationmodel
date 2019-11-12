@@ -1,0 +1,828 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "IdentifyingPropertyGroup",
+  "name": "Identifying Property Group",
+  "@type": "PropertyGroup",
+  "version": "0.1",
+  "propertyConcepts": [
+    {
+      "@id": "capturePaymentType",
+      "@type": "Property",
+      "description": "Payment, Refund, Canceled (voided) Payment and Canceled (voided) Refund are settement types. Either subtype of Payment (Payment, Refund) can be processed or cancelled.",
+      "name": "Capture Payment Type",
+      "range": "DataType"
+    },
+    {
+      "@id": "paymentNumber",
+      "@type": "Property",
+      "description": "Unique number assigned to this payment and displayed to end users. Note: map this to Salesforce Reference Number",
+      "name": "Payment Number",
+      "range": "DataType"
+    },
+    {
+      "@id": "paymentStatus",
+      "@type": "Property",
+      "description": "The current state of the payment.",
+      "name": "Payment Status",
+      "range": "DataType"
+    },
+    {
+      "@id": "authorizationProcessingMode",
+      "@type": "Property",
+      "description": "Mode to determine if the payment is processed by Salesforce Payment Platform or is an external authorization that is being recorded in our platform.",
+      "name": "Authorization Processing Mode",
+      "range": "DataType"
+    },
+    {
+      "@id": "internalBusinessUnit",
+      "@type": "Property",
+      "description": "Defining a part of your own internal organization. May be anything from a holding company, a line of business, a country division, a department and for which you may want to track e.g. if it is a legal entity, default GL Code, profit-and-loss etc against.",
+      "name": "Internal Business Unit",
+      "range": "InternalBusinessUnit"
+    },
+    {
+      "@id": "paymentTreatment",
+      "@type": "Property",
+      "description": "Policy information that controls how a payment is applied to invoices.",
+      "name": "Payment Treatment",
+      "range": "PaymentTreatment"
+    },
+    {
+      "@id": "paymentType",
+      "@type": "Property",
+      "description": "Idnetifies the Payment as either a Capture Payment or Refund Payment",
+      "name": "Payment Type",
+      "range": "DataType"
+    },
+    {
+      "@id": "paymentApplicationType",
+      "@type": "Property",
+      "description": "True if the application of a Payment to an invoice or credit memo has been reversed.",
+      "name": "Payment Application Type",
+      "range": "DataType"
+    },
+    {
+      "@id": "paymentAuthorizationNumber",
+      "@type": "Property",
+      "description": "automatically-generated number that identifies the Payment Authorization.",
+      "name": "Payment Authorization Number",
+      "range": "DataType"
+    },
+    {
+      "@id": "paymentMethodID",
+      "@type": "Property",
+      "description": "A means by which a buyer compensates a seller for a purchased good or service.",
+      "name": "Payment Method",
+      "range": "PaymentMethod"
+    },
+    {
+      "@id": "paymentAuthorizationStatus",
+      "@type": "Property",
+      "description": "Processing stage of the Payment Authorization or Payment Authorization Reversal",
+      "name": "Payment Authorization Status",
+      "range": "DataType"
+    },
+    {
+      "@id": "paymentGateway",
+      "@type": "Property",
+      "description": "Holds the payment gateway merchant details which are used to interact external payment systems.",
+      "name": "Payment Gateway",
+      "range": "PaymentGateway"
+    },
+    {
+      "@id": "salesOrderPaymentSummary",
+      "@type": "Property",
+      "description": "Association to a Payment is via Sales Order Payment Summary; multiple payments may be grouped into a Sales Order Payment.  For each instance of Payment Authorization, either PaymentGroupID or SalesOrderPaymentSummaryId should always be set, but never bot",
+      "name": "Sales Order Payment Summary",
+      "range": "SalesOrderPaymentSummary"
+    },
+    {
+      "@id": "paymentGroup",
+      "@type": "Property",
+      "description": "Payment Group provides a way to associate payments and payment gateway events, where the payment is not associated with a Sales Order.  For each instance of Payment Authorization, either PaymentGroupID or SalesOrderPaymentSummaryId should always be set,",
+      "name": "Payment Group",
+      "range": "PaymentGroup"
+    },
+    {
+      "@id": "paymentAuthorizationProcessingMode",
+      "@type": "Property",
+      "description": "This describes whether the payment processing was done by the Salesforce platform, or an external system.",
+      "name": "Payment Authorization Processing Mode",
+      "range": "DataType"
+    },
+    {
+      "@id": "paymentAuthorizationReversalStatus",
+      "@type": "Property",
+      "description": "Processing stage of the Payment Authorization or Payment Authorization Reversal",
+      "name": "Payment Authorization Reversal Status",
+      "range": "DataType"
+    },
+    {
+      "@id": "systemCredential",
+      "@type": "Property",
+      "description": "Stored authentication information for Merchant Credential",
+      "name": "System Credential",
+      "range": "DataType"
+    },
+    {
+      "@id": "paymentGatewayProvider",
+      "@type": "Property",
+      "description": "Stores class details needed for maintaining Apex adapter.",
+      "name": "Payment Gateway Provider",
+      "range": "PaymentGatewayProvider"
+    },
+    {
+      "@id": "paymentGatewayStatus",
+      "@type": "Property",
+      "description": "Enum values for Payment Gateway Status: Active, Inactive",
+      "name": "Payment Gateway Status",
+      "range": "DataType"
+    },
+    {
+      "@id": "paymentAuthorization",
+      "@type": "Property",
+      "description": "An approval from the issuer of a payment instrument (usually a card), that the customer has sufficient funds to cover the cost of the transaction.",
+      "name": "Payment Authorization",
+      "range": "PaymentAuthorization"
+    },
+    {
+      "@id": "paymentAuthorizationReversal",
+      "@type": "Property",
+      "description": "An authorization reversal is a message that alerts the issuer that part or all of a sale has been cancelled and the authorization hold should be rescinded.",
+      "name": "Payment Authorization Reversal",
+      "range": "PaymentAuthorizationReversal"
+    },
+    {
+      "@id": "paymentGatewayReferenceNumber",
+      "@type": "Property",
+      "description": "Each gateway sends a unique reference number for the request and is called gateway reference number.In case of issues this can be used to identify the request on gateway side.",
+      "name": "Payment Gateway Reference Number",
+      "range": "DataType"
+    },
+    {
+      "@id": "paymentGatewayInteractionStatus",
+      "@type": "Property",
+      "description": "Expected Enum values include: Success, Failed,Timeout",
+      "name": "Payment Gateway Interaction Status",
+      "range": "DataType"
+    },
+    {
+      "@id": "internalResultCode",
+      "@type": "Property",
+      "description": "Salesforce internal result code. Maps to one or more gateway result code",
+      "name": "Internal Result Code",
+      "range": "DataType"
+    },
+    {
+      "@id": "paymentGatewayInteractionType",
+      "@type": "Property",
+      "description": "Expected Enum values include: Auth, Sale, Void, Capure, AVS, CheckGiftCardBalance, etc.",
+      "name": "Payment Gateway Interaction Type",
+      "range": "PaymentGatewayInteractionType"
+    },
+    {
+      "@id": "paymentGatewayResult",
+      "@type": "Property",
+      "description": "Each Payment Gateway has its own set of Result Codes. Examples are 00 for success 100 for declined etc.",
+      "name": "Payment Gateway Result",
+      "range": "PaymentGatewayResultCode"
+    },
+    {
+      "@id": "payment",
+      "@type": "Property",
+      "description": "",
+      "name": "Payment",
+      "range": "Payment"
+    },
+    {
+      "@id": "paymentGroupNumber",
+      "@type": "Property",
+      "description": "automatically-generated number that identifies the Payment Group.",
+      "name": "Payment Group Number",
+      "range": "DataType"
+    },
+    {
+      "@id": "appliedAmount",
+      "@type": "Property",
+      "description": "The portion, in currency, of the Payment applied to the invoice line item.",
+      "name": "Applied Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "paymentPolicyTreatmentSelection",
+      "@type": "Property",
+      "description": "Determines how to select one treatment out of many. Enum values: Legal Entity, Workflow, Use Default, None",
+      "name": "Payment Policy Treatment Selection",
+      "range": "DataType"
+    },
+    {
+      "@id": "paymentPolicyStatus",
+      "@type": "Property",
+      "description": "Enum values: Active, Inactive",
+      "name": "Payment Policy Status",
+      "range": "DataType"
+    },
+    {
+      "@id": "paymentTreatmentStatus",
+      "@type": "Property",
+      "description": "Whether this treatment is Active or Inactive",
+      "name": "Payment Treatment Status",
+      "range": "DataType"
+    },
+    {
+      "@id": "paymentTreatmentMethod",
+      "@type": "Property",
+      "description": "Represents a specific algorithm or method to apply. For example - pay for taxes first, pay for charges first, pay for oldest due invoice first etc. It can also point to a rule based on which application can be done. Treatment has a method.",
+      "name": "Payment Treatment Method",
+      "range": "PaymentTreatmentMethod"
+    },
+    {
+      "@id": "paymentPolicy",
+      "@type": "Property",
+      "description": "This entity stores policy information for an org or an account which can be used to automate the process of payment application to invoice based on business needs.",
+      "name": "Payment Policy",
+      "range": "PaymentPolicy"
+    },
+    {
+      "@id": "allocatedAmount",
+      "@type": "Property",
+      "description": "The portion, in currency, of the Payment or Credit Memo that has been allocated to a Refund. This amount is used for both applying and un-applying amounts to a Refund Payment.",
+      "name": "Allocated Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "refundBalanceAmount",
+      "@type": "Property",
+      "description": "The unallocated portion of the overall Refund Payment Amount that exists after application to this Capture Payment or Credit Memo. This could be non-zero if a refund amount was determined before a decision to obtain the funding from either a capture payme",
+      "name": "Refund Balance Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "relatedRefundAllocation",
+      "@type": "Property",
+      "description": "In cases where refunds are un-applied to payments, a new RefundAllocation is created and will be related back to the original, using this field.",
+      "name": "Related Refund Allocation",
+      "range": "RefundAllocation"
+    },
+    {
+      "@id": "refundAllocationType",
+      "@type": "Property",
+      "description": "Identifies the Refund Allocation as either a Refund Payment Allocation or a Refund Credit Memo Allocation",
+      "name": "Refund Allocation Type",
+      "range": "DataType"
+    },
+    {
+      "@id": "refundPayment",
+      "@type": "Property",
+      "description": "Represents a repayment made, typically to a customer who isn’t satisfied with the goods or services purchased. Refunds are typically made after a payment has already been received from customers",
+      "name": "Refund Payment",
+      "range": "RefundPayment"
+    },
+    {
+      "@id": "creditMemoBalanceAmount",
+      "@type": "Property",
+      "description": "The unapplied portion of the Credit Memo that remains after application to this Refund Payment.",
+      "name": "Credit Memo Balance Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "paymentBalanceAmount",
+      "@type": "Property",
+      "description": "The unapplied portion of the PaymentAmount that remains after application to this Refund Payment.",
+      "name": "Payment Balance Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "capturePayment",
+      "@type": "Property",
+      "description": "Capture Payment is the transfer of money from the customer's account to the merchant's account.",
+      "name": "Capture Payment",
+      "range": "CapturePayment"
+    },
+    {
+      "@id": "paymentMethodType",
+      "@type": "Property",
+      "description": "e.g. Cash Tender, Credit Tender, Bank Transfer, Coupon, Trade In Tender",
+      "name": "Payment Method Type",
+      "range": "PaymentMethodType"
+    },
+    {
+      "@id": "paymentMethodStatusName",
+      "@type": "Property",
+      "description": "values of the Payment Method Status Code:",
+      "name": "Payment Method Status Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "paymentCardTypeName",
+      "@type": "Property",
+      "description": "Enum value for a list of allowed Payment Card types: Visa, Mastercard, American Express, Discover (TBD)",
+      "name": "Payment Card Type Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "paymentCardCategoryName",
+      "@type": "Property",
+      "description": "Credit Card, Debit Card",
+      "name": "Payment Card Category Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "couponCode",
+      "@type": "Property",
+      "description": "An alphanumeric code used to promote and identify the coupon.",
+      "name": "Coupon Code",
+      "range": "DataType"
+    },
+    {
+      "@id": "scanCode",
+      "@type": "Property",
+      "description": "A bar or QR code used to promote and identify the coupon.",
+      "name": "Scan Code",
+      "range": "DataType"
+    },
+    {
+      "@id": "discountPercentage",
+      "@type": "Property",
+      "description": "The amount of price reduction from the standard price, expressed as a decimal fraction, e.g. .10 for 10% off",
+      "name": "Discount Percentage",
+      "range": "DataType"
+    },
+    {
+      "@id": "discountAmount",
+      "@type": "Property",
+      "description": "The amount of price reduction from the standard price, expressed as a fixed amount e.g., $2.00",
+      "name": "Discount Amount",
+      "range": "DataType"
+    },
+    {
+      "@id": "couponStatusName",
+      "@type": "Property",
+      "description": "Description of the status, e.g. Active, Inactive",
+      "name": "Coupon Status Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "shipmentDate",
+      "@type": "Property",
+      "description": "Date shipment was sent",
+      "name": "Shipment Date",
+      "range": "DataType"
+    },
+    {
+      "@id": "shipmentPackage",
+      "@type": "Property",
+      "description": "The package in which the product item was packed.",
+      "name": "Shipment Package",
+      "range": "ShipmentPackage"
+    },
+    {
+      "@id": "shipmentProductCount",
+      "@type": "Property",
+      "description": "How many instances of the product is shipped",
+      "name": "Shipment Product Count",
+      "range": "DataType"
+    },
+    {
+      "@id": "shipment",
+      "@type": "Property",
+      "description": "Reference to the shipment order this package is for",
+      "name": "Shipment",
+      "range": "Shipment"
+    },
+    {
+      "@id": "shipmentProductPriceAdjustment",
+      "@type": "Property",
+      "description": "The adjustment on the Shipment Product for which the tax has been calculated",
+      "name": "Shipment Product Price Adjustment",
+      "range": "ShipmentProductPriceAdjustment"
+    },
+    {
+      "@id": "phoneCountryCode",
+      "@type": "Property",
+      "description": "Entered Country code for the phone number e.g. +1, +91, +234",
+      "name": "Phone Country Code",
+      "range": "DataType"
+    },
+    {
+      "@id": "socialHandle",
+      "@type": "Property",
+      "description": "Id of the social persona e.g. @joe",
+      "name": "Social Handle Id",
+      "range": "DataType"
+    },
+    {
+      "@id": "socialHandleName",
+      "@type": "Property",
+      "description": "Name of the social persona e.g Joe Doe",
+      "name": "Social Handle Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "profilePictureURL",
+      "@type": "Property",
+      "description": "Link to a photo",
+      "name": "Profile Picture URL",
+      "range": "DataType"
+    },
+    {
+      "@id": "webSiteURL",
+      "@type": "Property",
+      "description": "The Web Site for the party",
+      "name": "Web Site URL",
+      "range": "DataType"
+    },
+    {
+      "@id": "party",
+      "@type": "Property",
+      "description": "Reference to the parent Party e.g. Individual, Business, Affiliation Group",
+      "name": "Party",
+      "range": "Party"
+    },
+    {
+      "@id": "number",
+      "@type": "Property",
+      "description": "Number assigned to this customer account",
+      "name": "Account Number",
+      "range": "DataType"
+    },
+    {
+      "@id": "accountType",
+      "@type": "Property",
+      "description": "E.g. loyalty account, business credit account, layaway, short term rental",
+      "name": "Account Type",
+      "range": "DataType"
+    },
+    {
+      "@id": "customerNumber",
+      "@type": "Property",
+      "description": "Number used to identify this customer",
+      "name": "Customer Number",
+      "range": "DataType"
+    },
+    {
+      "@id": "account",
+      "@type": "Property",
+      "description": "Reference to the primary account that the person is the contact for",
+      "name": "Account",
+      "range": "Account"
+    },
+    {
+      "@id": "individual",
+      "@type": "Property",
+      "description": "Reference to the person that is the contact for the account",
+      "name": "Individual",
+      "range": "Individual"
+    },
+    {
+      "@id": "partyRole",
+      "@type": "Property",
+      "description": "Reference to business role that this Lead role is an extension of",
+      "name": "Lead Party Role",
+      "range": "DataType"
+    },
+    {
+      "@id": "productSKU",
+      "@type": "Property",
+      "description": "The unique Stock Keeping Unit identifier for the product e.g. SHOE-SNIKE-MOD1-SZ12-RED",
+      "name": "Product SKU",
+      "range": "DataType"
+    },
+    {
+      "@id": "masterProduct",
+      "@type": "Property",
+      "description": "Reference to product that is not sold but defines what is to be sold",
+      "name": "Master Product",
+      "range": "Product"
+    },
+    {
+      "@id": "manufacturerName",
+      "@type": "Property",
+      "description": "Name of the manufacturer for this product",
+      "name": "Manufacturer Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "brand",
+      "@type": "Property",
+      "description": "What is the brand of the product e.g. Snike shoes",
+      "name": "Brand",
+      "range": "Brand"
+    },
+    {
+      "@id": "modelYear",
+      "@type": "Property",
+      "description": "What is the marketed model year for this product",
+      "name": "Model Year",
+      "range": "DataType"
+    },
+    {
+      "@id": "modelNumber",
+      "@type": "Property",
+      "description": "Identifier the manufacturer use e.g. SHOE-123-RED-8",
+      "name": "Model Number",
+      "range": "DataType"
+    },
+    {
+      "@id": "versionNumber",
+      "@type": "Property",
+      "description": "The version of the product e.g. 1.3.5",
+      "name": "Version Number",
+      "range": "DataType"
+    },
+    {
+      "@id": "type",
+      "@type": "Property",
+      "description": "Name of the product type",
+      "name": "Product Type",
+      "range": "DataType"
+    },
+    {
+      "@id": "childProduct",
+      "@type": "Property",
+      "description": "Reference to product 2 that is related to product 1",
+      "name": "Child Product Id",
+      "range": "Product"
+    },
+    {
+      "@id": "parentProduct",
+      "@type": "Property",
+      "description": "Reference to product 1 that is related to product 2",
+      "name": "Parent Product Id",
+      "range": "Product"
+    },
+    {
+      "@id": "parentProductRole",
+      "@type": "Property",
+      "description": "What is the first role in the relationshp e.g. Consist of",
+      "name": "Parent Product Role",
+      "range": "DataType"
+    },
+    {
+      "@id": "childProductRole",
+      "@type": "Property",
+      "description": "What is the second role in the relationshp e.g. Component of",
+      "name": "Child Product Role",
+      "range": "DataType"
+    },
+    {
+      "@id": "isDefaultImage",
+      "@type": "Property",
+      "description": "Is this the default image for the product or not",
+      "name": "Is Default Image",
+      "range": "DataType"
+    },
+    {
+      "@id": "imageViewType",
+      "@type": "Property",
+      "description": "View types may indicate size e.g. 'small' 'large' or usage e.g. 'swatch' or any other image classifications.",
+      "name": "Image View Type",
+      "range": "DataType"
+    },
+    {
+      "@id": "productImage",
+      "@type": "Property",
+      "description": "Reference to the parent entity which have attributes to be translated",
+      "name": "Product Image",
+      "range": "ProductImage"
+    },
+    {
+      "@id": "brandGrade",
+      "@type": "Property",
+      "description": "What is the value of the brand e.g. premium, regular, value",
+      "name": "Brand Grade",
+      "range": "DataType"
+    },
+    {
+      "@id": "pluralName",
+      "@type": "Property",
+      "description": "E.g. Minutes, Hours",
+      "name": "Plural Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "uRL",
+      "@type": "Property",
+      "description": "Reference to the URL of the collateral",
+      "name": "URL",
+      "range": "DataType"
+    },
+    {
+      "@id": "attributeValue",
+      "@type": "Property",
+      "description": "The value of the product attribute",
+      "name": "Attribute Value",
+      "range": "DataType"
+    },
+    {
+      "@id": "translatedAttributeValueDescription",
+      "@type": "Property",
+      "description": "Attribute Description to be translated",
+      "name": "Translated Attribute Value Description",
+      "range": "DataType"
+    },
+    {
+      "@id": "translatedAttributeValue",
+      "@type": "Property",
+      "description": "Attribute Value to be translated",
+      "name": "Translated Attribute Value",
+      "range": "DataType"
+    },
+    {
+      "@id": "attributeValue",
+      "@type": "Property",
+      "description": "Reference to the attribute value being assigned to the product",
+      "name": "Attribute Value",
+      "range": "AttributeValue"
+    },
+    {
+      "@id": "customAttributeValue",
+      "@type": "Property",
+      "description": "If value is not from a predefined list a manual value can be entered here",
+      "name": "Custom Attribute Value",
+      "range": "DataType"
+    },
+    {
+      "@id": "productCatalog",
+      "@type": "Property",
+      "description": "Reference to product catalog the category is part of",
+      "name": "Product Catalog",
+      "range": "ProductCatalog"
+    },
+    {
+      "@id": "translatedName",
+      "@type": "Property",
+      "description": "Name attribute to be translated",
+      "name": "Translated Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "productCategory",
+      "@type": "Property",
+      "description": "Reference to what category the attribute set is applicable to",
+      "name": "Product Category",
+      "range": "ProductCategory"
+    },
+    {
+      "@id": "attributeSet",
+      "@type": "Property",
+      "description": "Reference to what attribute set the category is using",
+      "name": "Attribute Set",
+      "range": "DataType"
+    },
+    {
+      "@id": "salesChannelNumber",
+      "@type": "Property",
+      "description": "automatically-generated number that identifies the Sales Order Channel.",
+      "name": "Sales Channel Number",
+      "range": "DataType"
+    },
+    {
+      "@id": "externalRecord",
+      "@type": "Property",
+      "description": "An ID used in an external system to uniquely identify a Sales Channel",
+      "name": "External Record Id",
+      "range": "DataType"
+    },
+    {
+      "@id": "salesChannel",
+      "@type": "Property",
+      "description": "The sales channel used to place the order",
+      "name": "Sales Channel",
+      "range": "SalesChannel"
+    },
+    {
+      "@id": "salesOrderProductReasonCategory",
+      "@type": "Property",
+      "description": "The category for the Sales Order Product Reason",
+      "name": "Sales Order Product Reason Category",
+      "range": "DataType"
+    },
+    {
+      "@id": "originalPriceAdjustmentGroup",
+      "@type": "Property",
+      "description": "The original adjustment group. This will be used for change order scenarios.",
+      "name": "Original Price Adjustment Group",
+      "range": "DataType"
+    },
+    {
+      "@id": "coupon",
+      "@type": "Property",
+      "description": "A discount coupon which is used to calculate the adjustment",
+      "name": "Coupon",
+      "range": "Coupon"
+    },
+    {
+      "@id": "salesOrderPriceAdjustment",
+      "@type": "Property",
+      "description": "The Sales Order Price Adjustment to which the Sales Order Product Price Adjustment is optionally related, and will roll up to.",
+      "name": "Sales Order Price Adjustment Id",
+      "range": "SalesOrderPriceAdjustment"
+    },
+    {
+      "@id": "salesOrderProductPriceAdjustmentType",
+      "@type": "Property",
+      "description": "The type of Sales Order Product Price Adjustment: OrderProduct, Distributed (from order-level), or manual",
+      "name": "Sales Order Product Price Adjustment Type",
+      "range": "SalesOrderProductPriceAdjustmentType"
+    },
+    {
+      "@id": "salesOrderProductPriceAdjustmentTypeName",
+      "@type": "Property",
+      "description": "The type of Sales Order Product Price Adjustment: OrderProduct, Distributed (from order-level), or manual",
+      "name": "Sales Order Product Price Adjustment Type Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "description",
+      "@type": "Property",
+      "description": "Long name/description for the tax item",
+      "name": "Description",
+      "range": "DataType"
+    },
+    {
+      "@id": "salesOrderProductPriceAdjustment",
+      "@type": "Property",
+      "description": "The adjustment on the Sales Order Product for which the tax has been calculated",
+      "name": "Sales Order Product Price Adjustment",
+      "range": "SalesOrderProductPriceAdjustment"
+    },
+    {
+      "@id": "orderDeliveryMethod",
+      "@type": "Property",
+      "description": "The delivery method for the Sales Order Delivery Group",
+      "name": "Order Delivery Method",
+      "range": "OrderDeliveryMethod"
+    },
+    {
+      "@id": "originalDeliveryGroup",
+      "@type": "Property",
+      "description": "The original delivery group. This will be used in change order scenarios.",
+      "name": "Original Delivery Group",
+      "range": "SalesOrderDeliveryGroup"
+    },
+    {
+      "@id": "salesOrderDeliveryStatus",
+      "@type": "Property",
+      "description": "The status of the Sales Order Delivery Group",
+      "name": "Sales Order Delivery Status",
+      "range": "DataType"
+    },
+    {
+      "@id": "product",
+      "@type": "Property",
+      "description": "The Product which defines the Delivery Method",
+      "name": "Product",
+      "range": "Product"
+    },
+    {
+      "@id": "salesOrderProduct2",
+      "@type": "Property",
+      "description": "The primary key of a SalesOrderProduct, which forms part of the association",
+      "name": "Sales Order Product 2",
+      "range": "SalesOrderProduct"
+    },
+    {
+      "@id": "salesOrderProduct1",
+      "@type": "Property",
+      "description": "The primary key of a SalesOrderProduct, which forms part of the association",
+      "name": "Sales Order Product 1",
+      "range": "SalesOrderProduct"
+    },
+    {
+      "@id": "name",
+      "@type": "Property",
+      "description": "Name of this Sales Order Product Identity Document",
+      "name": "Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "salesOrderProduct",
+      "@type": "Property",
+      "description": "The related Sales Order Product, which is associated to a required Identity Document",
+      "name": "Sales Order Product Id",
+      "range": "SalesOrderProduct"
+    },
+    {
+      "@id": "id",
+      "@type": "Property",
+      "description": "Primary Key",
+      "name": "Sales Order Payment Summary Id",
+      "range": "DataType"
+    },
+    {
+      "@id": "paymentMethod",
+      "@type": "Property",
+      "description": "The common Payment Method for all payments in the Sales Order Payment Summary",
+      "name": "Payment Method",
+      "range": "PaymentMethod"
+    },
+    {
+      "@id": "salesOrder",
+      "@type": "Property",
+      "description": "The Sales Order to which the payment is applied",
+      "name": "Sales Order",
+      "range": "SalesOrder"
+    }
+  ]
+}

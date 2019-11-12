@@ -1,0 +1,191 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "UsePropertyGroup",
+  "name": "Use Property Group",
+  "@type": "PropertyGroup",
+  "version": "0.1",
+  "propertyConcepts": [
+    {
+      "@id": "bestTimeToContactStartTime",
+      "@type": "Property",
+      "description": "Best time during day to contact via this contact point",
+      "name": "Best Time To Contact Start Time",
+      "range": "DataType"
+    },
+    {
+      "@id": "bestTimeToContactEndTime",
+      "@type": "Property",
+      "description": "Best time during day to contact via this contact point",
+      "name": "Best Time To Contact End Time",
+      "range": "DataType"
+    },
+    {
+      "@id": "primaryFlag",
+      "@type": "Property",
+      "description": "Is this the primary contact point (cross all contact channels)",
+      "name": "Primary Flag",
+      "range": "DataType"
+    },
+    {
+      "@id": "forPersonalUse",
+      "@type": "Property",
+      "description": "Is the phone used for personal purpose",
+      "name": "For Personal Use",
+      "range": "DataType"
+    },
+    {
+      "@id": "forBusinessUse",
+      "@type": "Property",
+      "description": "Is the phone used for business purpose",
+      "name": "For Business Use",
+      "range": "DataType"
+    },
+    {
+      "@id": "primaryPhoneType",
+      "@type": "Property",
+      "description": "Is it primarily a 'Home', 'Business', 'Fax', 'Mobile' or 'Other' phone",
+      "name": "Primary Phone Type",
+      "range": "DataType"
+    },
+    {
+      "@id": "isSMSCapable",
+      "@type": "Property",
+      "description": "Is the phone capable to send and receive SMS",
+      "name": "Is SMS Capable",
+      "range": "DataType"
+    },
+    {
+      "@id": "isFaxCapable",
+      "@type": "Property",
+      "description": "Is the phone number able to receive fax",
+      "name": "Is Fax Capable",
+      "range": "DataType"
+    },
+    {
+      "@id": "followersCount",
+      "@type": "Property",
+      "description": "How many followers does the handle have",
+      "name": "Followers Count",
+      "range": "DataType"
+    },
+    {
+      "@id": "socialFanStatus",
+      "@type": "Property",
+      "description": "Does the social persona like our products e.g. Influencer, Fan, Detractor, Neutral",
+      "name": "Social Fan Status",
+      "range": "DataType"
+    },
+    {
+      "@id": "productRelationshipType",
+      "@type": "Property",
+      "description": "What is the relation between product 1 and 2 e.g. consist of/component of",
+      "name": "Product Relationship Type",
+      "range": "ProductRelationshipType"
+    },
+    {
+      "@id": "fromDate",
+      "@type": "Property",
+      "description": "Active to date",
+      "name": "From Date",
+      "range": "DataType"
+    },
+    {
+      "@id": "toDate",
+      "@type": "Property",
+      "description": "Active to date",
+      "name": "To Date",
+      "range": "DataType"
+    },
+    {
+      "@id": "isDefaultOption",
+      "@type": "Property",
+      "description": "Is this the default option for a product e.g. phone case PC1 is default for phone P2",
+      "name": "Is Default Option",
+      "range": "DataType"
+    },
+    {
+      "@id": "unitListPrice",
+      "@type": "Property",
+      "description": "What is the list price for the product in this price book",
+      "name": "Unit List Price",
+      "range": "DataType"
+    },
+    {
+      "@id": "isActive",
+      "@type": "Property",
+      "description": "Is the price book entry active or not",
+      "name": "IsActive",
+      "range": "DataType"
+    },
+    {
+      "@id": "useStandardPrice",
+      "@type": "Property",
+      "description": "Use the products price as defined in the standard price book",
+      "name": "Use Standard Price",
+      "range": "DataType"
+    },
+    {
+      "@id": "minRequiredQuantity",
+      "@type": "Property",
+      "description": "What is minimum required quantity to order the product from this price book",
+      "name": "Min Required Quantity",
+      "range": "DataType"
+    },
+    {
+      "@id": "servicePeriodCount",
+      "@type": "Property",
+      "description": "What is max possible quantity one can order of this product from this price book",
+      "name": "Max Required Quantity",
+      "range": "DataType"
+    },
+    {
+      "@id": "minRequiredOrderValue",
+      "@type": "Property",
+      "description": "What is the minium order value required for this product",
+      "name": "Min Required Order Value",
+      "range": "DataType"
+    },
+    {
+      "@id": "maxRequiredOrderValue",
+      "@type": "Property",
+      "description": "What is the maximum order value allowed for this product",
+      "name": "Max Required Order Value",
+      "range": "DataType"
+    },
+    {
+      "@id": "activeFromDate",
+      "@type": "Property",
+      "description": "From what date is the category active",
+      "name": "Active From Date",
+      "range": "DataType"
+    },
+    {
+      "@id": "activeToDate",
+      "@type": "Property",
+      "description": "To what data is the category active",
+      "name": "Active To Date",
+      "range": "DataType"
+    },
+    {
+      "@id": "parentCategory",
+      "@type": "Property",
+      "description": "An optional reference to a parent category e.g. mobile phone part of phone category",
+      "name": "Parent Category",
+      "range": "ProductCategory"
+    },
+    {
+      "@id": "activeFromDateTime",
+      "@type": "Property",
+      "description": "From what date is the product active within the category",
+      "name": "Active From Date Time",
+      "range": "DataType"
+    },
+    {
+      "@id": "activeToDateTime",
+      "@type": "Property",
+      "description": "To what date is the product active within the category",
+      "name": "Active To Date Time",
+      "range": "DataType"
+    }
+  ]
+}

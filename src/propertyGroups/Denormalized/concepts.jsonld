@@ -1,0 +1,72 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "DenormalizedPropertyGroup",
+  "name": "Denormalized Property Group",
+  "@type": "PropertyGroup",
+  "version": "0.1",
+  "propertyConcepts": [
+    {
+      "@id": "addressLine1",
+      "@type": "Property",
+      "description": "First line of address e.g. street number and street name",
+      "name": "Address Line 1",
+      "range": "DataType"
+    },
+    {
+      "@id": "addressLine2",
+      "@type": "Property",
+      "description": "Second line of an address e.g building or suite number",
+      "name": "Address Line 2",
+      "range": "DataType"
+    },
+    {
+      "@id": "addressLine3",
+      "@type": "Property",
+      "description": "Third line of an address",
+      "name": "Address Line 3",
+      "range": "DataType"
+    },
+    {
+      "@id": "addressLine4",
+      "@type": "Property",
+      "description": "Forth line of an address",
+      "name": "Address Line 4",
+      "range": "DataType"
+    },
+    {
+      "@id": "cityName",
+      "@type": "Property",
+      "description": "Free text name of the city, town or village",
+      "name": "City Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "postalCodeText",
+      "@type": "Property",
+      "description": "Free text value of postal code",
+      "name": "Postal Code Text",
+      "range": "DataType"
+    },
+    {
+      "@id": "stateProvinceName",
+      "@type": "Property",
+      "description": "Free text of the state province name the address is located in",
+      "name": "State Province Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "countryName",
+      "@type": "Property",
+      "description": "Free text value of country name",
+      "name": "Country Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "contactPhone",
+      "@type": "Property",
+      "description": "What is the primary phone number for this address",
+      "name": "Primary Contact Phone",
+      "range": "ContactPointPhone"
+    }
+  ]
+}

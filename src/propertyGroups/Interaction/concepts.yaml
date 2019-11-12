@@ -1,0 +1,44 @@
+#%Vocabulary 1.0
+base: http://cloudinformationmodel.org/model/
+vocabulary: Interaction Property Group
+propertyTerms:
+  reportsToAccountContact:
+    displayName: Reports To Account Contact
+    description: Who does the contact report to
+    range: AccountContact
+  mobilePhone:
+    displayName: Mobile Phone
+    description: Reference to Contacts' mobile phone number.
+    range: ContactPointPhone
+  contactEmail:
+    displayName: Contact Email
+    description: Reference to email address for the contact.
+    range: ContactPointEmail
+  indirectRelationAccountContact:
+    displayName: Indirect Relation Account Contact
+    description: If the Account Contact Relationship is an indirect relationship this reference state in what direct relationship/context those are valid in
+    range: AccountContact
+  lastActivityDate:
+    displayName: Last Activity Date
+    description: Either due date of the most recent event logged or of the most recently closed task
+    range: any
+  otherContactAddress:
+    displayName: Other Contact Address
+    description: Reference to Other address
+    range: ContactPointAddress
+  faxPhone:
+    displayName: Fax Phone
+    description: Reference to fax number for the contact
+    range: ContactPointPhone
+  businessPhone:
+    displayName: Business Phone
+    description: Reference to telephone number for the contact
+    range: ContactPointPhone
+  mailingAddress:
+    displayName: Mailing Address
+    description: Reference to Mailing address
+    range: ContactPointAddress
+  homePhone:
+    displayName: Home Phone
+    description: Reference to home telephone number for the contact.
+    range: ContactPointPhone

@@ -1,0 +1,58 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "StylingPropertyGroup",
+  "name": "Styling Property Group",
+  "@type": "PropertyGroup",
+  "version": "0.1",
+  "propertyConcepts": [
+    {
+      "@id": "color",
+      "@type": "Property",
+      "description": "What is the primary color of the product",
+      "name": "Color",
+      "range": "DataType"
+    },
+    {
+      "@id": "style",
+      "@type": "Property",
+      "description": "Is product generally deemed e.g. slim, regular",
+      "name": "Style",
+      "range": "DataType"
+    },
+    {
+      "@id": "fabric",
+      "@type": "Property",
+      "description": "Is product mainly in one fabric e.g. cotton, leather",
+      "name": "Fabric",
+      "range": "DataType"
+    },
+    {
+      "@id": "pattern",
+      "@type": "Property",
+      "description": "Is product in a certain pattern e.g. checkered, striped",
+      "name": "Pattern",
+      "range": "DataType"
+    },
+    {
+      "@id": "season",
+      "@type": "Property",
+      "description": "Is product intended for e.g. winter, summer",
+      "name": "Season",
+      "range": "DataType"
+    },
+    {
+      "@id": "gender",
+      "@type": "Property",
+      "description": "Is product intended for e.g. females, unisex",
+      "name": "Gender",
+      "range": "DataType"
+    },
+    {
+      "@id": "age",
+      "@type": "Property",
+      "description": "Is product intended for e.g. newborns, teenagers",
+      "name": "Age",
+      "range": "DataType"
+    }
+  ]
+}

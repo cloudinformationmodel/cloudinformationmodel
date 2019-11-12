@@ -1,0 +1,32 @@
+#%Vocabulary 1.0
+base: http://cloudinformationmodel.org/model/
+vocabulary: System Property Group
+propertyTerms:
+  Id:
+    displayName: Identifier
+    description: Generic Primary Key
+    range: any
+  externalRecord:
+    displayName: External Record Id
+    description: Corresponding record Id from external data source system
+    range: any
+  lastModifiedDate:
+    displayName: Last Modified Date
+    description: Date and time when a user last modified this record
+    range: any
+  createdDate:
+    displayName: Created Date
+    description: Date and time when this record was created
+    range: any
+  systemModstamp:
+    displayName: System Modified Stamp
+    description: Date and time when this record was last modified by a user or by an automated process
+    range: any
+  salesOrderProduct:
+    displayName: Sales Order Product
+    description: User who created the record
+    range: SalesOrderProduct
+  name:
+    displayName: Name
+    description: the name/label of a Sales Order System Status value
+    range: any

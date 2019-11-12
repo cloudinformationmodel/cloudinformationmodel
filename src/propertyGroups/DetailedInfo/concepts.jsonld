@@ -1,0 +1,58 @@
+{
+  "@context": "http://cloudinformationmodel.org/context.jsonld",
+  "@id": "DetailedInfoPropertyGroup",
+  "name": "Detailed Info Property Group",
+  "@type": "PropertyGroup",
+  "version": "0.1",
+  "propertyConcepts": [
+    {
+      "@id": "countryName",
+      "@type": "Property",
+      "description": "Country for the address of the lead.",
+      "name": "Country Name",
+      "range": "DataType"
+    },
+    {
+      "@id": "lastActivityDate",
+      "@type": "Property",
+      "description": "Value either due date of most recent event logged or most recently closed task",
+      "name": "Last Activity Date",
+      "range": "DataType"
+    },
+    {
+      "@id": "photoURL",
+      "@type": "Property",
+      "description": "Profile image associated with the lead.",
+      "name": "Photo URL",
+      "range": "DataType"
+    },
+    {
+      "@id": "leadRating",
+      "@type": "Property",
+      "description": "Rating of the lead e.g. warm, cold",
+      "name": "Lead Rating",
+      "range": "DataType"
+    },
+    {
+      "@id": "leadScore",
+      "@type": "Property",
+      "description": "Score value assigned by Einstein logic e.g 99 of 100",
+      "name": "Lead Score",
+      "range": "DataType"
+    },
+    {
+      "@id": "website",
+      "@type": "Property",
+      "description": "Website for the lead.",
+      "name": "Website",
+      "range": "DataType"
+    },
+    {
+      "@id": "partnerAccount",
+      "@type": "Property",
+      "description": "What partner did this lead come from (if applicable)",
+      "name": "Partner Account",
+      "range": "Account"
+    }
+  ]
+}

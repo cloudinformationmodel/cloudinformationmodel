@@ -1,0 +1,2518 @@
+#%RAML 1.0 Library
+types:
+  PaymentGatewayResultCode:
+    properties:
+      id:
+        type: string
+      description:
+        type: string
+      name:
+        type: string
+  UncategorizedParty:
+    type: Party
+    properties:
+      creationReason:
+        type: string
+      id:
+        type: string
+      uncategorizedPartyLabel:
+        type: string
+      originalSourceRecord:
+        type: string
+      originalSourceSystem:
+        type: string
+  PersonLanguage:
+    properties:
+      individual:
+        items: Individual
+      id:
+        type: string
+      spokenProficiencyLevel:
+        type: string
+      writtenProficiencyLevel:
+        type: string
+  ProductRelatedProduct:
+    properties:
+      salesOrderProduct1:
+        items: SalesOrderProduct
+      id:
+        type: string
+      name:
+        type: string
+      parentProduct:
+        items: Product
+      isDefaultOption:
+        type: boolean
+      fromDate:
+        type: date-only
+      childProduct:
+        items: Product
+      productRelationshipType:
+        items: ProductRelationshipType
+      toDate:
+        type: date-only
+      salesOrderProduct2:
+        items: SalesOrderProduct
+  ProductTranslation:
+    properties:
+      longDescription:
+        type: string
+      product:
+        items: Product
+      description:
+        type: string
+      id:
+        type: string
+      name:
+        type: string
+  ShipmentProductPriceAdjustmentTax:
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      shipmentProductPriceAdjustment:
+        items: ShipmentProductPriceAdjustment
+  AttributeValue:
+    properties:
+      attributeValue:
+        type: string
+      id:
+        type: string
+  PaymentCreditMemoApplication:
+    type: PaymentApplication
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+  PaymentGatewayAuthReversalLog:
+    type: PaymentGatewayInteractionLog
+    properties:
+      id:
+        type: string
+      paymentAuthorizationReversal:
+        items: PaymentAuthorizationReversal
+      name:
+        type: string
+  ContactPointType:
+    properties:
+      optInPriority:
+        type: integer
+      id:
+        type: string
+      name:
+        type: string
+  PaymentAuthorizationReversal:
+    properties:
+      paymentGatewayReferenceNumber:
+        type: string
+      authorizationReversalAmount:
+        type: integer
+      capturePayment:
+        items: CapturePayment
+      customerAuthorizationReversalPhone:
+        type: string
+      iPAddress:
+        type: string
+      paymentAuthorizationReversalStatus:
+        type: string
+      paymentAuthorizationProcessingMode:
+        type: string
+      id:
+        type: string
+      paymentGatewayInternalReferenceNumber:
+        type: string
+      paymentAuthorizationReversalName:
+        type: string
+      paymentGatewayResult:
+        items: PaymentGatewayResultCode
+      paymentAuthorization:
+        items: PaymentAuthorization
+      externalCreatedDate:
+        type: date-only
+      requestDate:
+        type: time-only
+      paymentAuthorizationReversalCommentText:
+        type: string
+      macAddress:
+        type: string
+      customerAuthorizationReversalEmail:
+        type: string
+      paymentGatewayDate:
+        type: time-only
+  PaymentAllocation:
+    properties:
+      id:
+        type: string
+      externalCreatedDate:
+        type: date-only
+      relatedPaymentAllocation:
+        items: PaymentAllocation
+      paymentAllocationName:
+        type: string
+  SalesOrder:
+    properties:
+      totalPendingBillingAmount:
+        type: integer
+      checkoutDate:
+        type: date-only
+      priceCalculationStatusMessageText:
+        type: string
+      confirmationRecipientEmailText:
+        type: string
+      orderEndDate:
+        type: date-only
+      isTaxExempt:
+        type: boolean
+      totalProductTaxAmount:
+        type: integer
+      isAlerted:
+        type: boolean
+      isAnonymous:
+        type: boolean
+      description:
+        type: string
+      activatedDate:
+        type: date-only
+      billToEmail:
+        items: ContactPointEmail
+      requestedStartDate:
+        type: date-only
+      id:
+        type: string
+      companyAuthorizedDate:
+        type: date-only
+      orderInsuranceAmount:
+        type: integer
+      name:
+        type: string
+      isClosed:
+        type: boolean
+      shipToEmail:
+        items: ContactPointEmail
+      totalDeliveryAmount:
+        type: integer
+      salesOrderConfirmationStatus:
+        type: string
+      customerAuthorizedDate:
+        type: date-only
+      totalCancelledBillingAmount:
+        type: integer
+      totalAdjustedDeliveryTaxAmount:
+        type: integer
+      paymentMethod:
+        items: PaymentMethod
+      totalAdjustmentAmount:
+        type: integer
+      salesOrderStatus:
+        type: string
+      renewalUpliftRate:
+        type: integer
+      totalProductAmount:
+        type: integer
+      renewalTerm:
+        type: string
+      originalOrder:
+        items: SalesOrder
+      billToAccount:
+        items: Account
+      totalAdjustmentTaxAmount:
+        type: integer
+      isGiftOrder:
+        type: boolean
+      promiseFulfillmentDate:
+        type: date-only
+      filedDate:
+        type: date-only
+      iSOCulture:
+        type: string
+      userDeviceSession:
+        items: DeviceUserSession
+      purchaseOrderNumber:
+        type: string
+      totalDeliveryFeeAmount:
+        type: integer
+      totalDeliveryTaxAmount:
+        type: integer
+      totalTaxAmount:
+        type: integer
+      orderNumber:
+        type: string
+      seller:
+        items: Seller
+      billToAddress:
+        items: ContactPointAddress
+      shipToAddress:
+        items: ContactPointAddress
+      fulfilledDate:
+        type: date-only
+      billToContact:
+        items: AccountContact
+      paidDate:
+        type: date-only
+      totalBookingAmount:
+        type: integer
+      adjustedProductTaxAmount:
+        type: integer
+      promiseDate:
+        type: date-only
+      packedDate:
+        type: date-only
+      isHistoricalOnly:
+        type: boolean
+      grandTotalAmount:
+        type: integer
+      isContracted:
+        type: boolean
+      canBillNow:
+        type: boolean
+      adjustedTotalProductAmount:
+        type: integer
+      orderDiscount:
+        type: integer
+      internalBusinessUnit:
+        items: InternalBusinessUnit
+      salesChannel:
+        items: SalesChannel
+      orderStartDate:
+        type: date-only
+      cancelDateType:
+        type: string
+      isReductionOrder:
+        type: boolean
+      salesOrderSystemStatus:
+        type: string
+      isSuspended:
+        type: boolean
+      billToPhoneNumber:
+        items: ContactPointPhone
+      purchaseOrderDate:
+        type: date-only
+      soldToCustomer:
+        items: Customer
+      billingDayOfTheMonth:
+        type: integer
+      cancelDate:
+        type: date-only
+      shipToContact:
+        items: AccountContact
+      taxRate:
+        type: integer
+      developerStatusCode:
+        type: string
+  ShipmentStatus:
+    properties:
+      id:
+        type: string
+      description:
+        type: string
+      name:
+        type: string
+  ShipmentProductPriceAdjustment:
+    properties:
+      adjustmentAmount:
+        type: integer
+      shipmentProductPriceAdjustmentAmount:
+        type: integer
+      description:
+        type: string
+      id:
+        type: string
+      shipmentProduct:
+        items: ShipmentProduct
+      adjustmentTaxAmount:
+        type: integer
+  DeviceUserSession:
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+  CreditTender:
+    type: PaymentMethod
+    properties:
+      account:
+        items: Account
+      id:
+        type: string
+  SalesOrderPaymentSummary:
+    properties:
+      authorizationReversalAmount:
+        type: integer
+      authorizationAmount:
+        type: integer
+      unappliedAmount:
+        type: integer
+      paymentAmount:
+        type: integer
+      id:
+        type: string
+      name:
+        type: string
+      salesOrder:
+        items: SalesOrder
+      paymentMethod:
+        items: PaymentMethod
+      appliedAmount:
+        type: integer
+      availableToApplyBalanceAmount:
+        type: integer
+      capturedAmount:
+        type: integer
+  ContactPointLocation:
+    type: ContactPoint
+    properties:
+      id:
+        type: string
+  ProductCategoryAttributeSet:
+    properties:
+      id:
+        type: string
+      attributeSet:
+        type: string
+      productCategory:
+        items: ProductCategory
+  PaymentCard:
+    type: PaymentMethod
+    properties:
+      creditCardExpired:
+        type: boolean
+      cardToken:
+        type: string
+      issueNumber:
+        type: string
+      billToCity:
+        type: string
+      id:
+        type: string
+      maskedNumber:
+        type: string
+      name:
+        type: string
+      companyName:
+        type: string
+      cardHolderName:
+        type: string
+      numberLastDigits:
+        type: string
+      paymentCardType:
+        type: string
+      derivedCardTypeCode:
+        type: string
+      billToFirstName:
+        type: string
+      billToStreet:
+        type: string
+      expirationYear:
+        type: string
+      billToStreet2:
+        type: string
+      expirationMonth:
+        type: string
+      billToLastName:
+        type: string
+  ContactPointApp:
+    type: ContactPoint
+    properties:
+      applicationLogin:
+        type: string
+      id:
+        type: string
+  PersonEducation:
+    properties:
+      id:
+        type: string
+      educationLevel:
+        type: string
+      educationName:
+        type: string
+      graduationDate:
+        type: date-only
+      individual:
+        items: Individual
+      institutionName:
+        type: string
+  SalesOrderTax:
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      salesOrderTaxAmount:
+        type: integer
+      taxAddressCityName:
+        type: string
+      taxErrorMessageText:
+        type: string
+      taxAddressStreet1Text:
+        type: string
+      taxRatePercent:
+        type: integer
+      taxAddressStreet2Text:
+        type: string
+  SalesOrderProductNote:
+    properties:
+      id:
+        type: string
+      noteText:
+        type: string
+      description:
+        type: string
+  ProductCatalog:
+    properties:
+      activeToDate:
+        type: date-only
+      activeFromDate:
+        type: date-only
+      id:
+        type: string
+      name:
+        type: string
+  SalesOrderProduct:
+    properties:
+      totalRecurringPriceAmount:
+        type: integer
+      totalLineAdjustmentAmount:
+        type: integer
+      totalPriceAmount:
+        type: integer
+      provisioningDate:
+        type: date-only
+      fulfilledQuantity:
+        type: integer
+      totalLineAmount:
+        type: integer
+      promisedDate:
+        type: date-only
+      shippingPhone:
+        items: ContactPointPhone
+      recurringPriceAmount:
+        type: integer
+      endDate:
+        type: date-only
+      giftOrderMessageText:
+        type: string
+      quantityOrderedUOM:
+        type: string
+      totalProductTaxAmount:
+        type: integer
+      salesOrderProductReason:
+        items: SalesOrderProductReason
+      lineAdjustmentSubTotalAmount:
+        type: integer
+      commentText:
+        type: string
+      orderProductNumber:
+        type: string
+      product:
+        items: Product
+      description:
+        type: string
+      orderedQuantity:
+        type: integer
+      salesOrderProductStatus:
+        type: string
+      unitPriceAmount:
+        type: integer
+      requestedStartDate:
+        type: date-only
+      id:
+        type: string
+      subscriptionRenewalMonthQuantity:
+        type: integer
+      orderManualAdjustmentSubTotalAmount:
+        type: integer
+      allocatedQuantity:
+        type: integer
+      allocationPartitionName:
+        type: string
+      salesOrder:
+        items: SalesOrder
+      isGift:
+        type: boolean
+      unitTaxAmount:
+        type: integer
+      deliveryTaxAmount:
+        type: integer
+      isBonusProduct:
+        type: boolean
+      salesOrderProductAdjustedTaxAmount:
+        type: integer
+      totalAdjustmentAmount:
+        type: integer
+      shippingTaxAmount:
+        type: integer
+      totalListPriceAmount:
+        type: integer
+      totalAdjustmentTaxAmount:
+        type: integer
+      orderAdjustmentSubTotalAmount:
+        type: integer
+      subscriptionTermQuantity:
+        type: integer
+      totalDistributedAdjustmentTaxAmount:
+        type: integer
+      totalDistributedTaxAmount:
+        type: integer
+      totalTaxAmount:
+        type: integer
+      adjustedDeliveryTaxAmount:
+        type: integer
+      shippingAddress:
+        items: ContactPointAddress
+      listPriceAmount:
+        type: integer
+      priceBookEntry:
+        items: PriceBookEntry
+      segmentIndex:
+        type: integer
+      shippingCostAmount:
+        type: integer
+      isBundleRoot:
+        type: boolean
+      discountAmount:
+        type: integer
+      cancelledQuantity:
+        type: integer
+      shippingEmail:
+        items: ContactPointEmail
+      subscriptionTermUnit:
+        items: ProductValidityTimePeriodUOM
+      listPriceTermUOM:
+        items: ProductValidityTimePeriodUOM
+      salesOrderDeliveryGroup:
+        items: SalesOrderDeliveryGroup
+      listPriceQuantityUOM:
+        type: string
+      totalDistributedAdjustmentAmount:
+        type: integer
+      segmentIndexNumber:
+        type: integer
+      totalUnitPriceAmount:
+        type: integer
+      originalOrderProduct:
+        items: SalesOrderProduct
+      availableQuantity:
+        type: integer
+      requestedEndDate:
+        type: date-only
+      allocationGroupName:
+        type: string
+      sellerAccount:
+        items: Account
+      giftRecipientTelephoneNumber:
+        type: string
+      isAutomaticallyRenewed:
+        type: boolean
+      discountPercent:
+        type: integer
+      totalManualAdjustmentAmount:
+        type: integer
+      handlingCostAmount:
+        type: integer
+  PaymentApplication:
+    properties:
+      effectiveDate:
+        type: date-only
+      paymentApplicationType:
+        type: string
+      commentText:
+        type: string
+      hasBeenUnapplied:
+        type: boolean
+      id:
+        type: string
+      name:
+        type: string
+      payment:
+        items: Payment
+      appliedAmount:
+        type: integer
+      paymentBalanceAmount:
+        type: integer
+      appliedDate:
+        type: date-only
+      externalCreatedDate:
+        type: date-only
+      unappliedDate:
+        type: date-only
+  PaymentGatewayProvider:
+    properties:
+      apexAdapterClassName:
+        type: string
+      id:
+        type: string
+      paymentGatewayProviderCommentText:
+        type: string
+      paymentGatewayProviderName:
+        type: string
+      developerName:
+        type: string
+      namespacePrefixText:
+        type: string
+  PaymentPolicy:
+    properties:
+      description:
+        type: string
+      id:
+        type: string
+      name:
+        type: string
+      paymentPolicyTreatmentSelection:
+        type: string
+      paymentPolicyStatus:
+        type: string
+  ProductImage:
+    properties:
+      product:
+        items: Product
+      id:
+        type: string
+      isDefaultImage:
+        type: boolean
+      imageViewType:
+        type: string
+  SalesOrderPriceAdjustment:
+    type: PriceAdjustmentGroup
+    properties:
+      id:
+        type: string
+      salesOrder:
+        items: SalesOrder
+      totalAdjustmentTaxAmount:
+        type: integer
+  Individual:
+    type: Party
+    properties:
+      hasAlcoholAbuseHistory:
+        type: boolean
+      highestEducationLevel:
+        type: string
+      personHeight:
+        type: integer
+      mailingName:
+        type: string
+      surgeriesLast5YearsCount:
+        type: integer
+      doNotTrackUpdateDate:
+        type: date-only
+      weddingAnniversaryDate:
+        type: date-only
+      minorCitationCount:
+        type: integer
+      mainDietaryHabitType:
+        type: string
+      personHeightUnitOfMeasure:
+        type: string
+      firstName:
+        type: string
+      personName:
+        type: string
+      photoURL:
+        type: string
+      isHighRiskHobby:
+        type: boolean
+      doNotProcessFromUpdateDate:
+        type: date-only
+      militaryService:
+        type: string
+      maritalStatus:
+        type: string
+      doNotMarketFromUpdateDate:
+        type: date-only
+      shouldForget:
+        type: boolean
+      id:
+        type: string
+      mainDisabilityType:
+        type: string
+      consumerCreditScoreProviderName:
+        type: string
+      isTobaccoConsume:
+        type: boolean
+      webSiteURL:
+        type: string
+      secondLastName:
+        type: string
+      primaryHousehold:
+        items: Household
+      orderingName:
+        type: string
+      hospitalizationsLast5YearsCount:
+        type: integer
+      dependentCount:
+        type: integer
+      convictionsCount:
+        type: integer
+      isGoodDriver:
+        type: boolean
+      primaryHobby:
+        type: string
+      mainPersonalValueType:
+        type: string
+      isAlcoholConsumer:
+        type: boolean
+      taxBracketRange:
+        type: string
+      childrenCount:
+        type: integer
+      isGoodStudent:
+        type: boolean
+      mainLifeAttitudeType:
+        type: string
+      netWorth:
+        type: integer
+      personWeight:
+        type: integer
+      birthDate:
+        type: date-only
+      religion:
+        type: string
+      sendIndividualData:
+        type: boolean
+      deathDate:
+        type: date-only
+      doExtractMyDataUpdateDate:
+        type: date-only
+      birthPlace:
+        type: string
+      overAgeNumber:
+        type: integer
+      doForgetMeFromUpdateDate:
+        type: date-only
+      personWeightUnitOfMeasure:
+        type: string
+      mainLifeStyleType:
+        type: string
+      gender:
+        type: string
+      hasDrugAbuseHistory:
+        type: boolean
+      salutation:
+        type: string
+      mothersMaidenName:
+        type: string
+      doNotTrackLocationUpdateDate:
+        type: date-only
+      ethnicity:
+        type: string
+      mainPersonalityType:
+        type: string
+      employedSinceDate:
+        type: date-only
+      officialName:
+        type: string
+      isHighRiskOccupation:
+        type: boolean
+      residenceCaptureMethod:
+        type: string
+      doNotProfileFromUpdateDate:
+        type: date-only
+      nameSuffix:
+        type: string
+      isDrugConsumer:
+        type: boolean
+      isHomeOwner:
+        type: boolean
+      doNotProcessReason:
+        type: string
+      occupationType:
+        type: string
+      deathPlace:
+        type: string
+      influencerRating:
+        type: integer
+      militaryStatus:
+        type: string
+      consumerCreditScore:
+        type: integer
+      yearlyIncome:
+        type: integer
+      preferredName:
+        type: string
+      personLifeStage:
+        type: string
+      yearlyIncomeRange:
+        type: string
+      majorCitationCount:
+        type: integer
+      middleName:
+        type: string
+      residenceCountryName:
+        type: string
+      lastName:
+        type: string
+      occupation:
+        type: string
+      currentEmployerName:
+        type: string
+  SalesOrderProductGroup:
+    properties:
+      id:
+        type: string
+      description:
+        type: string
+      salesOrderProductGroupType:
+        type: string
+      name:
+        type: string
+  PaymentTreatmentMethod:
+    properties:
+      id:
+        type: string
+      paymentTreatmentMethodName:
+        type: string
+      paymentTreatmentMethodCode:
+        type: string
+      paymentTreatmentMethodDescription:
+        type: string
+  ProductCollateral:
+    properties:
+      product:
+        items: Product
+      id:
+        type: string
+      uRL:
+        type: string
+  PersonEmployment:
+    properties:
+      employmentStatus:
+        type: string
+      positionText:
+        type: string
+      employerContactPointAddress:
+        items: ContactPointAddress
+      employerAddressLine3:
+        type: string
+      endDate:
+        type: date-only
+      startDate:
+        type: date-only
+      occupationText:
+        type: string
+      id:
+        type: string
+      employerName:
+        type: string
+      employerAddressLine4:
+        type: string
+      employerAddressLine1:
+        type: string
+      annualIncome:
+        type: integer
+      employerCityName:
+        type: string
+      individual:
+        items: Individual
+      employerAddressLine2:
+        type: string
+      employerPostalCodeText:
+        type: string
+      employerPhoneNumber:
+        type: string
+  PaymentInvoiceApplication:
+    type: PaymentApplication
+    properties:
+      id:
+        type: string
+      paymentInvoiceApplicationName:
+        type: string
+      invoiceBalanceAmount:
+        type: integer
+      paymentInvoiceApplicationType:
+        type: string
+  ProductCategoryTranslation:
+    properties:
+      id:
+        type: string
+      translatedName:
+        type: string
+      productCategory:
+        items: ProductCategory
+  Supplier:
+    type: PartyRole
+    properties:
+      satisfactionEthicsRank:
+        type: integer
+      contractInvoiceAccuracyRate:
+        type: integer
+      satisfactionWeightPercent:
+        type: integer
+      contractOnTimeDeliveryRate:
+        type: integer
+      id:
+        type: string
+      activeFromDate:
+        type: date-only
+      activeToDate:
+        type: date-only
+      competitiveWarrantyRank:
+        type: integer
+      competitiveMarketingRank:
+        type: integer
+      contractDeliveryCorrectnessRate:
+        type: integer
+      competitiveWeightScore:
+        type: integer
+      contractSLAIssueRate:
+        type: integer
+      competitiveWeightPercent:
+        type: integer
+      supplierScore:
+        type: integer
+      competitiveProductPriceRank:
+        type: integer
+      contractWeightPercent:
+        type: integer
+      supplierSpend:
+        type: integer
+      satisfactionTechnicalSupportRank:
+        type: integer
+      contractWeightScore:
+        type: integer
+      satisfactionCustomerServiceRank:
+        type: integer
+      satisfactionWeightScore:
+        type: integer
+      contractSourcingCycleDays:
+        type: integer
+      supplierType:
+        type: string
+      isCarrier:
+        type: boolean
+      contractProductReturnRate:
+        type: integer
+      competitiveCostAvoidanceRank:
+        type: integer
+      contractProductQualityRate:
+        type: integer
+      contractBudgetCostRate:
+        type: integer
+  ProductRelationshipType:
+    properties:
+      id:
+        type: string
+      parentProductRole:
+        type: string
+      childProductRole:
+        type: string
+  CustomerStatusHistory:
+    properties:
+      startDateTime:
+        type: time-only
+      partyRole:
+        type: string
+      partyRoleStatus:
+        type: string
+      id:
+        type: string
+      endDateTIme:
+        type: time-only
+  ProductImageTranslation:
+    properties:
+      productImage:
+        items: ProductImage
+      id:
+        type: string
+      translatedName:
+        type: string
+  Shipment:
+    properties:
+      giftMessageText:
+        type: string
+      shipmentNumber:
+        type: string
+      id:
+        type: string
+      shipmentStatus:
+        items: ShipmentStatus
+      salesOrder:
+        items: SalesOrder
+      isGift:
+        type: boolean
+      actualDeliveryDateTime:
+        type: time-only
+      specialInstructionsText:
+        type: string
+      carrierTrackingNumber:
+        type: string
+      shipToAddress:
+        items: ContactPointAddress
+      estimatedDeliveryDateTime:
+        type: time-only
+      salesOrderDeliveryGroup:
+        items: SalesOrderDeliveryGroup
+      scheduledDeliveryDateTime:
+        type: time-only
+      shipmentDate:
+        type: date-only
+  PartyIdentification:
+    properties:
+      expiryDate:
+        type: date-only
+      partyIdentificationType:
+        type: string
+      verifiedDate:
+        type: date-only
+      issuedByAuthority:
+        type: string
+      issuedAtLocation:
+        type: string
+      issuedDate:
+        type: date-only
+      partyRole:
+        type: string
+      id:
+        type: string
+      name:
+        type: string
+      identificationNumber:
+        type: string
+      party:
+        items: Party
+  PartyRelatedParty:
+    properties:
+      relatedFromDate:
+        type: date-only
+      id:
+        type: string
+      partyRelationshipType:
+        items: PartyRelationshipType
+      relatedParty:
+        items: Party
+      relatedToDate:
+        type: date-only
+      party:
+        items: Party
+  PartyAdditionalName:
+    properties:
+      id:
+        type: string
+      additionalNameType:
+        type: string
+      name:
+        type: string
+      party:
+        items: Party
+  PartyRelationshipType:
+    properties:
+      isBidirectional:
+        type: boolean
+      id:
+        type: string
+      partyRole:
+        type: string
+      relatedPartyRole:
+        type: string
+  ShipmentPackage:
+    properties:
+      shipment:
+        items: Shipment
+      id:
+        type: string
+      shipmentProductCount:
+        type: integer
+      shipmentProductDescription:
+        type: string
+  ProductCategory:
+    properties:
+      productCatalog:
+        items: ProductCatalog
+      id:
+        type: string
+      activeFromDate:
+        type: date-only
+      activeToDate:
+        type: date-only
+      name:
+        type: string
+      parentCategory:
+        items: ProductCategory
+  Competitor:
+    type: PartyRole
+    properties:
+      competitorStrengths:
+        type: string
+      competitorFromDate:
+        type: date-only
+      socialMediaPostRate:
+        type: integer
+      competitorThreats:
+        type: string
+      currentRatio:
+        type: integer
+      cashFlowGrowth:
+        type: integer
+      competitorObjectives:
+        type: string
+      netProfitMargin:
+        type: integer
+      id:
+        type: string
+      competitorWeaknesses:
+        type: string
+      pressMentionsRate:
+        type: integer
+      assetTurnoverRatio:
+        type: integer
+      competitorToDate:
+        type: date-only
+      competitorLeverageOpportunities:
+        type: string
+      assetReturnRatio:
+        type: integer
+      ptoENumber:
+        type: integer
+      adKeywords:
+        type: string
+      adReachRate:
+        type: integer
+  SalesOrderProductReason:
+    properties:
+      id:
+        type: string
+      salesOrderProductReasonCategory:
+        type: string
+      name:
+        type: string
+  AttributeTranslation:
+    properties:
+      id:
+        type: string
+      translatedName:
+        type: string
+  ShipmentDocument:
+    properties:
+      shipment:
+        items: Shipment
+      id:
+        type: string
+  ShippingMethod:
+    properties:
+      product:
+        items: Product
+      id:
+        type: string
+      description:
+        type: string
+      name:
+        type: string
+  PaymentGatewayInteractionType:
+    properties:
+      id:
+        type: string
+      description:
+        type: string
+      name:
+        type: string
+  PaymentGroup:
+    properties:
+      totalReversalAmount:
+        type: integer
+      totalAuthorizationAmount:
+        type: integer
+      id:
+        type: string
+      totalPaymentAmount:
+        type: integer
+      paymentGroupNumber:
+        type: string
+  ContactPointAddress:
+    type: ContactPoint
+    properties:
+      isUsedForShipping:
+        type: boolean
+      stateProvinceName:
+        type: string
+      addressLine3:
+        type: string
+      countryName:
+        type: string
+      postalCodeText:
+        type: string
+      id:
+        type: string
+      geoLatitude:
+        type: integer
+      addressLine2:
+        type: string
+      addressLine4:
+        type: string
+      geoAccuracy:
+        type: integer
+      contactPhone:
+        items: ContactPointPhone
+      geoLongitude:
+        type: integer
+      addressLine1:
+        type: string
+      cityName:
+        type: string
+      isUsedForBilling:
+        type: boolean
+  OrderDeliveryMethod:
+    properties:
+      product:
+        items: Product
+      id:
+        type: string
+      externalRecord:
+        type: string
+      name:
+        type: string
+  PartyWebAddress:
+    type: ContactPoint
+    properties:
+      id:
+        type: string
+      webSiteURL:
+        type: string
+      party:
+        items: Party
+  RefundCreditMemoAllocation:
+    type: RefundAllocation
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+  GoodsProduct:
+    type: Product
+    properties:
+      productSecurityRequirement:
+        type: string
+      season:
+        type: string
+      color:
+        type: string
+      style:
+        type: string
+      isMadeToOrder:
+        type: boolean
+      height:
+        type: integer
+      fabric:
+        type: string
+      requiredTemperatureUOM:
+        type: string
+      shelfFacingUnitCount:
+        type: integer
+      requiredHumidityPercentage:
+        type: integer
+      id:
+        type: string
+      grossWeight:
+        type: integer
+      tareWeight:
+        type: integer
+      depth:
+        type: integer
+      requiredTemperatureLowestNumber:
+        type: integer
+      gender:
+        type: string
+      maxHoldingDayCount:
+        type: integer
+      diameter:
+        type: integer
+      isPerishable:
+        type: boolean
+      requiredCleanupProcess:
+        type: string
+      pattern:
+        type: string
+      requiredTemperatureHighestNumber:
+        type: integer
+      netWeight:
+        type: integer
+      environmentRequirement:
+        type: string
+      drainedWeight:
+        type: integer
+      age:
+        type: string
+      width:
+        type: integer
+      requiresUnitPriceLabel:
+        type: boolean
+      weightUOM:
+        type: string
+      productMayExpand:
+        type: boolean
+      sizeUOM:
+        type: string
+  SalesOrderChangeLog:
+    properties:
+      changeSalesOrder:
+        items: SalesOrder
+      id:
+        type: string
+      name:
+        type: string
+      relatedSalesOrderProduct:
+        items: SalesOrderProduct
+      changeSalesOrderProduct:
+        items: SalesOrderProduct
+      relatedSalesOrder:
+        items: SalesOrder
+  PaymentGatewayPaymentLog:
+    type: PaymentGatewayInteractionLog
+    properties:
+      id:
+        type: string
+      payment:
+        items: Payment
+      name:
+        type: string
+  RefundAllocation:
+    properties:
+      effectiveDate:
+        type: date-only
+      relatedRefundAllocation:
+        items: RefundAllocation
+      hasBeenUnapplied:
+        type: boolean
+      refundAllocationType:
+        type: string
+      id:
+        type: string
+      refundPayment:
+        items: RefundPayment
+      allocatedAmount:
+        type: integer
+      refundBalanceAmount:
+        type: integer
+      refundAllocationName:
+        type: string
+      appliedDate:
+        type: date-only
+      externalCreatedDate:
+        type: date-only
+      unappliedDate:
+        type: date-only
+  ShipmentProduct:
+    properties:
+      product:
+        items: Product
+      shipment:
+        items: Shipment
+      shipmentPackage:
+        items: ShipmentPackage
+      id:
+        type: string
+      salesOrderProduct:
+        items: SalesOrderProduct
+      shipmentProductCount:
+        type: integer
+  Seller:
+    type: PartyRole
+    properties:
+      communityParticipationCount:
+        type: integer
+      demonstrationsGivenCount:
+        type: integer
+      eventParticipationCount:
+        type: integer
+      customerSatisfactionScore:
+        type: integer
+      trainingCertificationCount:
+        type: integer
+      opportunityInvolvementCount:
+        type: integer
+      marketingDevelopmentAmount:
+        type: integer
+      sellerType:
+        type: string
+      documentationDownloadCount:
+        type: integer
+      id:
+        type: string
+      activeFromDate:
+        type: date-only
+      activeToDate:
+        type: date-only
+      trialParticipationCount:
+        type: integer
+      creditRating:
+        type: integer
+      satisfactionScore:
+        type: integer
+      salesAmount:
+        type: integer
+      opportunityWinRate:
+        type: integer
+      productReturnRate:
+        type: integer
+      leadGenerationCount:
+        type: integer
+      inventoryValueAmount:
+        type: integer
+      majorPostSaleSupportNeeded:
+        type: boolean
+      trainingParticipationCount:
+        type: integer
+      newCustomerAcquisitionCount:
+        type: integer
+      successStoryCount:
+        type: integer
+      systemLoginCount:
+        type: integer
+      jointBusinessPlanExist:
+        type: boolean
+      averageConvertedLeadAmount:
+        type: integer
+      estimatedPartnerGrossMargin:
+        type: integer
+  SalesOrderProductTax:
+    type: SalesOrderTax
+    properties:
+      description:
+        type: string
+      originalSalesOrderProductTax:
+        items: SalesOrderProductTax
+      id:
+        type: string
+      name:
+        type: string
+      taxEffectiveDate:
+        type: date-only
+      salesOrderProduct:
+        items: SalesOrderProduct
+      taxAmount:
+        type: integer
+  ContactPointEmail:
+    type: ContactPoint
+    properties:
+      emailLatestBounceReasonText:
+        type: string
+      id:
+        type: string
+      emailMailBox:
+        type: string
+      emailDomain:
+        type: string
+      emailAddress:
+        type: string
+      emailLatestBounceDateTime:
+        type: date-only
+  PriceAdjustmentGroup:
+    properties: {}
+  SalesOrderDeliveryGroup:
+    properties:
+      totalPriceAmount:
+        type: integer
+      totalDeliveryAdjustmentTaxAmount:
+        type: integer
+      promisedDate:
+        type: date-only
+      giftMessageText:
+        type: string
+      deliveryInstructionsText:
+        type: string
+      totalProductTaxAmount:
+        type: integer
+      totalDeliveryChargeAmount:
+        type: integer
+      description:
+        type: string
+      grandTotalDeliveryAmount:
+        type: integer
+      id:
+        type: string
+      name:
+        type: string
+      contactPointAddress:
+        items: ContactPointAddress
+      salesOrder:
+        items: SalesOrder
+      isGift:
+        type: boolean
+      salesOrderDeliveryStatus:
+        type: string
+      totalDeliveryAdjustmentAmount:
+        type: integer
+      totalDeliveryTaxAmount:
+        type: integer
+      totalTaxAmount:
+        type: integer
+      totalDeliveryChargeTaxAmount:
+        type: integer
+      originalDeliveryGroup:
+        items: SalesOrderDeliveryGroup
+      salesOrderDeliveryGroupNumber:
+        type: string
+      desiredDeliveryDate:
+        type: date-only
+      totalUnitPriceAmount:
+        type: integer
+      orderDeliveryMethod:
+        items: OrderDeliveryMethod
+      accountContact:
+        items: AccountContact
+  BillingFrequency:
+    properties:
+      id:
+        type: string
+      billingFrequencyName:
+        type: string
+      name:
+        type: string
+  Customer:
+    type: PartyRole
+    properties:
+      customerStatus:
+        type: string
+      prospectRating:
+        type: string
+      netPromoterScore:
+        type: integer
+      customerSatisfactionScore:
+        type: integer
+      id:
+        type: string
+      marketingEmailResponseRate:
+        type: integer
+      totalContractedAmount:
+        type: integer
+      totalProfitContributionAmount:
+        type: integer
+      customerNumber:
+        type: string
+      churnScore:
+        type: integer
+      originatingCustomerSource:
+        type: string
+      totalLifeTimeValue:
+        type: integer
+      totalBookingsAmount:
+        type: integer
+      last24MonthsNewRevenueAmount:
+        type: integer
+      last12MonthsNewRevenueAmount:
+        type: integer
+      last12MonthsSupportCallCount:
+        type: integer
+  PaymentGatewayAuthorizationLog:
+    type: PaymentGatewayInteractionLog
+    properties:
+      id:
+        type: string
+      paymentAuthorization:
+        items: PaymentAuthorization
+      name:
+        type: string
+  ProductValidityTimePeriodUOM:
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      pluralName:
+        type: string
+  ProductAttributeSet:
+    properties:
+      product:
+        items: Product
+      id:
+        type: string
+      attributeSet:
+        type: string
+  ProductAttributeValue:
+    properties:
+      product:
+        items: Product
+      attributeValue:
+        items: AttributeValue
+      id:
+        type: string
+      customAttributeValue:
+        type: string
+      name:
+        type: string
+      attributeSet:
+        type: string
+  PaymentInvoiceAllocation:
+    type: PaymentAllocation
+    properties:
+      paymentInvoiceAllocationName:
+        type: string
+      id:
+        type: string
+      appliedAmount:
+        type: integer
+      invoiceBalanceAmount:
+        type: integer
+      paymentInvoiceApplication:
+        items: PaymentInvoiceApplication
+  Payment:
+    properties:
+      paymentStatus:
+        type: string
+      authorizationProcessingMode:
+        type: string
+      account:
+        items: Account
+      salesOrderPaymentSummary:
+        items: SalesOrderPaymentSummary
+      latestGatewayResultCode:
+        items: PaymentGatewayResultCode
+      iPAddress:
+        type: string
+      commentText:
+        type: string
+      paymentNumber:
+        type: string
+      paymentGroup:
+        items: PaymentGroup
+      paymentAmount:
+        type: integer
+      latestGatewayInternalResult:
+        type: string
+      id:
+        type: string
+      customerEmailAddress:
+        type: string
+      name:
+        type: string
+      latestGatewayReferenceNumber:
+        type: string
+      paymentMethod:
+        items: PaymentMethod
+      latestGatewayDate:
+        type: date-only
+      balanceAmount:
+        type: integer
+      paymentType:
+        type: string
+      paymentGateway:
+        items: PaymentGateway
+      customerPhoneNumber:
+        type: string
+      latestPaymentGatewayMessageText:
+        type: string
+      paymentEffectiveDate:
+        type: date-only
+      paymentTreatment:
+        items: PaymentTreatment
+      externalCreatedDate:
+        type: date-only
+      internalBusinessUnit:
+        items: InternalBusinessUnit
+      paymentCancellationDate:
+        type: date-only
+      macAddress:
+        type: string
+      totalAppliedAmount:
+        type: integer
+      netAppliedAmount:
+        type: integer
+      totalUnappliedAmount:
+        type: integer
+      latestGatewayInternalReferenceNumber:
+        type: string
+  PartyRole:
+    properties: {}
+  AccountContactRole:
+    properties:
+      accountContactRoleType:
+        type: string
+      id:
+        type: string
+      activeFromDate:
+        type: date-only
+      activeToDate:
+        type: date-only
+      accountContact:
+        items: AccountContact
+  PaymentCreditMemoAllocation:
+    type: PaymentAllocation
+    properties:
+      appliedAmount:
+        type: integer
+      id:
+        type: string
+      name:
+        type: string
+  ContactPointSocial:
+    type: ContactPoint
+    properties:
+      id:
+        type: string
+      profilePictureURL:
+        type: string
+      followersCount:
+        type: integer
+      socialHandleName:
+        type: string
+      socialFanStatus:
+        type: string
+      socialHandle:
+        type: string
+      socialNetworkProvider:
+        type: string
+  AccountContact:
+    properties:
+      reportsToAccountContact:
+        items: AccountContact
+      mailingAddress:
+        items: ContactPointAddress
+      account:
+        items: Account
+      faxPhone:
+        items: ContactPointPhone
+      id:
+        type: string
+      departmentName:
+        type: string
+      businessPhone:
+        items: ContactPointPhone
+      contactEmail:
+        items: ContactPointEmail
+      mobilePhone:
+        items: ContactPointPhone
+      assistantPhone:
+        type: string
+      indirectRelationAccountContact:
+        items: AccountContact
+      title:
+        type: string
+      lastActivityDate:
+        type: date-only
+      contactNote:
+        type: string
+      assistantName:
+        type: string
+      individual:
+        items: Individual
+      otherContactAddress:
+        items: ContactPointAddress
+      homePhone:
+        items: ContactPointPhone
+  PaymentTreatment:
+    properties:
+      paymentTreatmentMethod:
+        items: PaymentTreatmentMethod
+      id:
+        type: string
+      paymentApplicationLevel:
+        type: string
+      shouldAutoInvoice:
+        type: boolean
+      paymentTreatmentStatus:
+        type: string
+      paymentPolicy:
+        items: PaymentPolicy
+      paymentTreatmentName:
+        type: string
+  ServiceProduct:
+    type: Product
+    properties:
+      rentalTermViolationPenaltyAmount:
+        type: integer
+      evergreenContractEstimatedMonthCount:
+        type: integer
+      id:
+        type: string
+      evergreenContractEstimatedChargeAmount:
+        type: integer
+      servicePeriodUOM:
+        type: string
+      servicePeriodCount:
+        type: integer
+      serviceProviderAccount:
+        items: Account
+      rentalCleanupFeeAmount:
+        type: integer
+      serviceType:
+        type: string
+  AccountPartner:
+    properties:
+      account:
+        items: Account
+      id:
+        type: string
+      partnerAccount:
+        items: Account
+  ContactPointPhone:
+    type: ContactPoint
+    properties:
+      extensionNumber:
+        type: string
+      phoneCountryCode:
+        type: string
+      countryName:
+        type: string
+      id:
+        type: string
+      areaCode:
+        type: string
+      isSMSCapable:
+        type: boolean
+      shortCode:
+        type: integer
+      formattedInternationalPhoneNumber:
+        type: string
+      primaryPhoneType:
+        type: string
+      isFaxCapable:
+        type: boolean
+      formattedE164PhoneNumber:
+        type: string
+      formattedNationalPhoneNumber:
+        type: string
+      telephoneNumber:
+        type: string
+  PaymentMethodType:
+    properties:
+      typeDescription:
+        type: string
+      mediaType:
+        type: string
+      maxPerPeriodAmount:
+        type: integer
+      typeRequiredIdentification:
+        type: string
+      id:
+        type: string
+      name:
+        type: string
+      useMinimumAgeYear:
+        type: integer
+      maxTransactionAmount:
+        type: integer
+      maxPerPeriodTransactionCount:
+        type: integer
+  ProductCatalogTranslation:
+    properties:
+      productCatalog:
+        items: ProductCatalog
+      id:
+        type: string
+      translatedName:
+        type: string
+  ProductCategoryProduct:
+    properties:
+      product:
+        items: Product
+      id:
+        type: string
+      activeFromDateTime:
+        type: time-only
+      activeToDateTime:
+        type: time-only
+      productCategory:
+        items: ProductCategory
+  Product:
+    properties:
+      quantityScheduleType:
+        type: string
+      disposalType:
+        type: string
+      longDescription:
+        type: string
+      primaryProductCategory:
+        items: ProductCategory
+      minimumAdvertisementAmount:
+        type: integer
+      isBackOrdered:
+        type: boolean
+      validForPeriodCount:
+        type: integer
+      isWorkerDiscountAllowed:
+        type: boolean
+      allowPartialRefund:
+        type: boolean
+      isWeightEntryRequired:
+        type: boolean
+      isQuantityEntryRequired:
+        type: boolean
+      isSerialized:
+        type: boolean
+      rewardProgramPointsCount:
+        type: integer
+      description:
+        type: string
+      revenueInstallmentPeriod:
+        type: string
+      id:
+        type: string
+      name:
+        type: string
+      isAutoProvisionable:
+        type: boolean
+      isCouponRedemptionAllowed:
+        type: boolean
+      isSellableIndependently:
+        type: boolean
+      canUseRevenueSchedule:
+        type: boolean
+      manufacturerName:
+        type: string
+      isIntellectualPropertyProtected:
+        type: boolean
+      modelYear:
+        type: integer
+      isCustomerDiscountAllowed:
+        type: boolean
+      productStatus:
+        type: string
+      brandGrade:
+        type: string
+      quantityInstallmentCount:
+        type: integer
+      requiredDepositAmount:
+        type: integer
+      revenueScheduleType:
+        type: string
+      isPreOrderable:
+        type: boolean
+      requiresInvididualUnitPricing:
+        type: boolean
+      standardWarrantyLengthMonth:
+        type: integer
+      canUseQuantitySchedule:
+        type: boolean
+      isInstallable:
+        type: boolean
+      isRainCheckAllowed:
+        type: boolean
+      minimumAdvertisementAmountStartDate:
+        type: integer
+      maximumOrderQuantityCount:
+        type: integer
+      isMultipleCouponsAllowed:
+        type: boolean
+      allowCustomerReturn:
+        type: boolean
+      modelNumber:
+        type: string
+      mSRPAmount:
+        type: integer
+      externalSourceRecord:
+        type: string
+      masterProduct:
+        items: Product
+      isSellable:
+        type: boolean
+      validToDate:
+        type: date-only
+      priceChargeType:
+        type: string
+      primarySalesChannel:
+        items: SalesChannel
+      isPartnerDiscountAllowed:
+        type: boolean
+      revenueInstallmentCount:
+        type: integer
+      productSKU:
+        type: string
+      quantityInstallmentPeriod:
+        type: string
+      isManualPriceEntryRequired:
+        type: boolean
+      type:
+        type: string
+      isSellableWithoutPrice:
+        type: boolean
+      glAccountCode:
+        type: string
+      isReturnable:
+        type: boolean
+      displayUrl:
+        type: string
+      validForPeriodUOM:
+        items: ProductValidityTimePeriodUOM
+      versionNumber:
+        type: string
+      brand:
+        items: Brand
+      lotIdentifier:
+        type: string
+      validFromDate:
+        type: date-only
+      stockLedgerValuationAmount:
+        type: integer
+      isDynamicBundle:
+        type: boolean
+      isQualityVerificationRequired:
+        type: boolean
+      requiredDepositPercentage:
+        type: integer
+      isFoodstampPaymentAllowed:
+        type: boolean
+      minimumOrderQuantityCount:
+        type: integer
+  AttributeSetTranslation:
+    properties:
+      id:
+        type: string
+      translatedName:
+        type: string
+      attributeSet:
+        type: string
+  PaymentAuthorization:
+    properties:
+      paymentGatewayReferenceNumber:
+        type: string
+      salesOrderPaymentSummary:
+        items: SalesOrderPaymentSummary
+      iPAddress:
+        type: string
+      totalPaymentCaptureAmount:
+        type: integer
+      paymentAuthorizationProcessingMode:
+        type: string
+      authorizationAmount:
+        type: integer
+      expirationDate:
+        type: date-only
+      paymentGroup:
+        items: PaymentGroup
+      id:
+        type: string
+      paymentGatewayInternalReferenceNumber:
+        type: string
+      gatewayReferenceDetailsText:
+        type: string
+      totalAuthorizationReversalAmount:
+        type: integer
+      paymentGateway:
+        items: PaymentGateway
+      paymentGatewayResult:
+        items: PaymentGatewayResultCode
+      paymentAuthorizationCommentText:
+        type: string
+      externalCreatedDate:
+        type: date-only
+      paymentAuthorizationNumber:
+        type: string
+      requestDate:
+        type: time-only
+      availableBalanceAmount:
+        type: integer
+      paymentMethodID:
+        items: PaymentMethod
+      gatewayResultCodeDescription:
+        type: string
+      macAddress:
+        type: string
+      gatewayAuthorizationCode:
+        type: string
+      paymentGatewayDate:
+        type: time-only
+      paymentAuthorizationStatus:
+        type: string
+  Brand:
+    properties:
+      id:
+        type: string
+      brandGrade:
+        type: string
+      name:
+        type: string
+  RefundPaymentAllocation:
+    type: RefundAllocation
+    properties:
+      capturePayment:
+        items: CapturePayment
+      refundAllocationCommentsDate:
+        type: date-only
+      id:
+        type: string
+      paymentBalanceAmount:
+        type: integer
+      refundAllocationCommentText:
+        type: string
+      creditMemoBalanceAmount:
+        type: integer
+      refundPaymentAllocationName:
+        type: string
+  PriceBookEntry:
+    properties:
+      minRequiredQuantity:
+        type: integer
+      unitListPrice:
+        type: integer
+      product:
+        items: Product
+      minRequiredOrderValue:
+        type: integer
+      isActive:
+        type: boolean
+      id:
+        type: string
+      maxRequiredOrderValue:
+        type: integer
+      useStandardPrice:
+        type: boolean
+      servicePeriodCount:
+        type: integer
+  AttributeValueTranslation:
+    properties:
+      translatedAttributeValue:
+        type: string
+      attributeValue:
+        items: AttributeValue
+      id:
+        type: string
+      translatedAttributeValueDescription:
+        type: string
+  RefundPayment:
+    type: Payment
+    properties:
+      id:
+        type: string
+      externalCreatedDate:
+        type: date-only
+      name:
+        type: string
+  PaymentGateway:
+    properties:
+      paymentGatewayStatus:
+        type: string
+      id:
+        type: string
+      name:
+        type: string
+      paymentGatewayCommentText:
+        type: string
+      paymentGatewayProvider:
+        items: PaymentGatewayProvider
+      systemCredential:
+        type: string
+  Household:
+    type: Party
+    properties:
+      householdMemberCount:
+        type: integer
+      householdFormedDate:
+        type: date-only
+      id:
+        type: string
+      name:
+        type: string
+      householdDissolvedDate:
+        type: date-only
+  CapturePayment:
+    type: Payment
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      capturePaymentType:
+        type: string
+      handlingFeeAmount:
+        type: integer
+      paymentAuthorization:
+        items: PaymentAuthorization
+      isFinalCapture:
+        type: boolean
+  Lead:
+    properties:
+      faxContactPhone:
+        items: ContactPointPhone
+      stateProvinceName:
+        type: string
+      leadStatus:
+        type: string
+      photoURL:
+        type: string
+      countryName:
+        type: string
+      partyRole:
+        type: string
+      convertedDate:
+        type: date-only
+      description:
+        type: string
+      id:
+        type: string
+      contactPointEmail:
+        items: ContactPointEmail
+      companyName:
+        type: string
+      streetName:
+        type: string
+      leadScore:
+        type: integer
+      mobileContactPhone:
+        items: ContactPointPhone
+      contactAddress:
+        items: ContactPointAddress
+      geoCodeLatitude:
+        type: integer
+      leadRating:
+        type: string
+      geoCodeLongitude:
+        type: integer
+      emailBouncedDate:
+        type: time-only
+      geoCodeAccuracy:
+        type: integer
+      leadSource:
+        type: string
+      convertedToAccount:
+        items: Account
+      convertedToAccountContact:
+        items: AccountContact
+      phoneContactPoint:
+        items: ContactPointPhone
+      lastActivityDate:
+        type: date-only
+      annualRevenue:
+        type: integer
+      emailBouncedReason:
+        type: string
+      website:
+        type: string
+      isConverted:
+        type: boolean
+      partnerAccount:
+        items: Account
+  BundleProduct:
+    type: Product
+    properties:
+      expectedWasteCount:
+        type: integer
+      quantityCount:
+        type: integer
+      id:
+        type: string
+      tareWeight:
+        type: integer
+      bundledProductsSubstitutional:
+        type: boolean
+      bundledProductsDecidedAtUse:
+        type: boolean
+      bundledProductsDecidesAvailability:
+        type: boolean
+      bundledProductsSoldTogether:
+        type: boolean
+      weightUOM:
+        type: string
+      quantityUnitOfMeasure:
+        type: string
+  PersonLifeEvent:
+    properties:
+      individual:
+        items: Individual
+      id:
+        type: string
+      personLifeEventDateTime:
+        type: time-only
+      personLifeEventType:
+        type: string
+  Party:
+    properties:
+      partyType:
+        type: string
+      id:
+        type: string
+      globalParty:
+        type: string
+      noMergeReason:
+        type: string
+      primaryAccount:
+        items: Account
+  Coupon:
+    type: PaymentMethod
+    properties:
+      manufacturer:
+        items: Party
+      primaryScanCodeLabel:
+        type: string
+      isReturnCoupon:
+        type: boolean
+      expirationDate:
+        type: date-only
+      id:
+        type: string
+      secondaryScanCodeLabel:
+        type: string
+      scanCode:
+        type: string
+      couponCode:
+        type: string
+      returnCouponReason:
+        type: string
+      discountAmount:
+        type: integer
+      isValid:
+        type: boolean
+      couponStatus:
+        type: string
+      discountPercentage:
+        type: integer
+      couponCount:
+        type: integer
+  SalesChannel:
+    properties:
+      externalRecord:
+        type: string
+      salesChannelType:
+        type: string
+      description:
+        type: string
+      id:
+        type: string
+      name:
+        type: string
+      salesChannelNumber:
+        type: string
+  InternalBusinessUnit:
+    type: Party
+    properties:
+      id:
+        type: string
+      businessUnitType:
+        type: string
+      parentInternalBusinessUnit:
+        items: InternalBusinessUnit
+      name:
+        type: string
+  PaymentMethod:
+    properties:
+      paymentMethodType:
+        items: PaymentMethodType
+      paymentMethodStatus:
+        type: string
+      id:
+        type: string
+  PaymentGatewayInteractionLog:
+    properties:
+      paymentGatewayInteractionType:
+        items: PaymentGatewayInteractionType
+      paymentGatewayReferenceNumber:
+        type: string
+      paymentGatewayMessageText:
+        type: string
+      paymentGatewayAuthorizationCode:
+        type: string
+      internalResultCode:
+        type: string
+      paymentGatewayAVSCode:
+        type: string
+      id:
+        type: string
+      internalReferenceNumber:
+        type: string
+      paymentGatewayResult:
+        items: PaymentGatewayResultCode
+      paymentGatewayInteractionLogName:
+        type: string
+      paymentGatewayInteractionStatus:
+        type: string
+      paymentGatewayDate:
+        type: date-only
+  ContactPoint:
+    properties:
+      primaryFlag:
+        type: boolean
+      bestTimeToContactStartTime:
+        type: time-only
+      profileLastUpdatedDate:
+        type: time-only
+      partyRole:
+        type: string
+      id:
+        type: string
+      activeFromDate:
+        type: date-only
+      activeToDate:
+        type: date-only
+      profileOccurrenceCount:
+        type: integer
+      profileFirstCreatedDate:
+        type: time-only
+      bestTimeToContactEndTime:
+        type: time-only
+      party:
+        items: Party
+      contactPointType:
+        items: ContactPointType
+      forBusinessUse:
+        type: boolean
+      forPersonalUse:
+        type: boolean
+  Account:
+    properties:
+      billDeliveryMethod:
+        type: string
+      billContactAddress:
+        items: ContactPointAddress
+      useAsSalesAccount:
+        type: boolean
+      assignTerritoryFlag:
+        type: boolean
+      billFrequency:
+        items: BillingFrequency
+      autoPayEnabledFlag:
+        type: boolean
+      autoPaymentAmount:
+        type: integer
+      useAsServiceAccount:
+        type: boolean
+      useAsBillingAccount:
+        type: boolean
+      partyRole:
+        type: string
+      faxPhone:
+        items: ContactPointPhone
+      description:
+        type: string
+      salesPhone:
+        items: ContactPointPhone
+      id:
+        type: string
+      sLAExpirationDate:
+        type: date-only
+      name:
+        type: string
+      accountType:
+        type: string
+      autoPaymentMethod:
+        items: PaymentMethod
+      balanceAmount:
+        type: integer
+      holdStatusReason:
+        type: string
+      generalLedgerAccount:
+        type: string
+      thirtyDayBalanceAmount:
+        type: integer
+      sixtyDayBalanceAmount:
+        type: integer
+      useAsShippingAccount:
+        type: boolean
+      shippingAddress:
+        items: ContactPointAddress
+      party:
+        items: Party
+      parentAccount:
+        items: Account
+      sLAType:
+        type: string
+      shippingContact:
+        items: AccountContact
+      balanceAmountLimit:
+        type: integer
+      shippingPhoneid:
+        items: ContactPointPhone
+      shippingEmail:
+        items: ContactPointEmail
+      lastActivityDate:
+        type: date-only
+      orderDeliveryMethod:
+        items: OrderDeliveryMethod
+      primarySalesContactPoint:
+        items: ContactPoint
+      number:
+        type: string
+      ninetyDayBalanceAmount:
+        type: integer
+      paymentTerm:
+        type: string
+      defaultFreightTerms:
+        type: string

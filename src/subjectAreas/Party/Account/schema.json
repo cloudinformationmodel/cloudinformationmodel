@@ -1,0 +1,365 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/Account"
+    },
+    {
+      "$ref": "#/definitions/AccountContact"
+    },
+    {
+      "$ref": "#/definitions/AccountContactRole"
+    },
+    {
+      "$ref": "#/definitions/AccountPartner"
+    },
+    {
+      "$ref": "#/definitions/BillingFrequency"
+    }
+  ],
+  "definitions": {
+    "BillingFrequency": {
+      "type": "object",
+      "required": [
+        "id",
+        "billingFrequencyName",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "billingFrequencyName": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "AccountContactRole": {
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "accountContactRoleType": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "activeFromDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "activeToDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "accountContact": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AccountContact"
+          }
+        }
+      }
+    },
+    "AccountContact": {
+      "type": "object",
+      "required": [
+        "account",
+        "id",
+        "individual"
+      ],
+      "properties": {
+        "reportsToAccountContact": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AccountContact"
+          }
+        },
+        "mailingAddress": {
+          "type": "array",
+          "items": {
+            "$ref": "../ContactPoint/schema.json#/definitions/ContactPointAddress"
+          }
+        },
+        "account": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Account"
+          }
+        },
+        "faxPhone": {
+          "type": "array",
+          "items": {
+            "$ref": "../ContactPoint/schema.json#/definitions/ContactPointPhone"
+          }
+        },
+        "id": {
+          "type": "string"
+        },
+        "departmentName": {
+          "type": "string"
+        },
+        "businessPhone": {
+          "type": "array",
+          "items": {
+            "$ref": "../ContactPoint/schema.json#/definitions/ContactPointPhone"
+          }
+        },
+        "contactEmail": {
+          "type": "array",
+          "items": {
+            "$ref": "../ContactPoint/schema.json#/definitions/ContactPointEmail"
+          }
+        },
+        "mobilePhone": {
+          "type": "array",
+          "items": {
+            "$ref": "../ContactPoint/schema.json#/definitions/ContactPointPhone"
+          }
+        },
+        "assistantPhone": {
+          "type": "string"
+        },
+        "indirectRelationAccountContact": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AccountContact"
+          }
+        },
+        "title": {
+          "type": "string"
+        },
+        "lastActivityDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "contactNote": {
+          "type": "string"
+        },
+        "assistantName": {
+          "type": "string"
+        },
+        "individual": {
+          "type": "array",
+          "items": {
+            "$ref": "../Party/schema.json#/definitions/Individual"
+          }
+        },
+        "otherContactAddress": {
+          "type": "array",
+          "items": {
+            "$ref": "../ContactPoint/schema.json#/definitions/ContactPointAddress"
+          }
+        },
+        "homePhone": {
+          "type": "array",
+          "items": {
+            "$ref": "../ContactPoint/schema.json#/definitions/ContactPointPhone"
+          }
+        }
+      }
+    },
+    "AccountPartner": {
+      "type": "object",
+      "required": [
+        "account",
+        "id",
+        "partnerAccount"
+      ],
+      "properties": {
+        "account": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Account"
+          }
+        },
+        "id": {
+          "type": "string"
+        },
+        "partnerAccount": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Account"
+          }
+        }
+      }
+    },
+    "Account": {
+      "type": "object",
+      "required": [
+        "useAsSalesAccount",
+        "useAsServiceAccount",
+        "useAsBillingAccount",
+        "id",
+        "name",
+        "useAsShippingAccount",
+        "number",
+        "paymentTerm"
+      ],
+      "properties": {
+        "billDeliveryMethod": {
+          "type": "string"
+        },
+        "billContactAddress": {
+          "type": "array",
+          "items": {
+            "$ref": "../ContactPoint/schema.json#/definitions/ContactPointAddress"
+          }
+        },
+        "useAsSalesAccount": {
+          "type": "boolean"
+        },
+        "assignTerritoryFlag": {
+          "type": "boolean"
+        },
+        "billFrequency": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/BillingFrequency"
+          }
+        },
+        "autoPayEnabledFlag": {
+          "type": "boolean"
+        },
+        "autoPaymentAmount": {
+          "type": "integer"
+        },
+        "useAsServiceAccount": {
+          "type": "boolean"
+        },
+        "useAsBillingAccount": {
+          "type": "boolean"
+        },
+        "partyRole": {
+          "type": "string"
+        },
+        "faxPhone": {
+          "type": "array",
+          "items": {
+            "$ref": "../ContactPoint/schema.json#/definitions/ContactPointPhone"
+          }
+        },
+        "description": {
+          "type": "string"
+        },
+        "salesPhone": {
+          "type": "array",
+          "items": {
+            "$ref": "../ContactPoint/schema.json#/definitions/ContactPointPhone"
+          }
+        },
+        "id": {
+          "type": "string"
+        },
+        "sLAExpirationDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "name": {
+          "type": "string"
+        },
+        "accountType": {
+          "type": "string"
+        },
+        "autoPaymentMethod": {
+          "type": "array",
+          "items": {
+            "$ref": "../../PaymentMethod/PaymentMethod/schema.json#/definitions/PaymentMethod"
+          }
+        },
+        "balanceAmount": {
+          "type": "integer"
+        },
+        "holdStatusReason": {
+          "type": "string"
+        },
+        "generalLedgerAccount": {
+          "type": "string"
+        },
+        "thirtyDayBalanceAmount": {
+          "type": "integer"
+        },
+        "sixtyDayBalanceAmount": {
+          "type": "integer"
+        },
+        "useAsShippingAccount": {
+          "type": "boolean"
+        },
+        "shippingAddress": {
+          "type": "array",
+          "items": {
+            "$ref": "../ContactPoint/schema.json#/definitions/ContactPointAddress"
+          }
+        },
+        "party": {
+          "type": "array",
+          "items": {
+            "$ref": "../Party/schema.json#/definitions/Party"
+          }
+        },
+        "parentAccount": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Account"
+          }
+        },
+        "sLAType": {
+          "type": "string"
+        },
+        "shippingContact": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AccountContact"
+          }
+        },
+        "balanceAmountLimit": {
+          "type": "integer"
+        },
+        "shippingPhoneid": {
+          "type": "array",
+          "items": {
+            "$ref": "../ContactPoint/schema.json#/definitions/ContactPointPhone"
+          }
+        },
+        "shippingEmail": {
+          "type": "array",
+          "items": {
+            "$ref": "../ContactPoint/schema.json#/definitions/ContactPointEmail"
+          }
+        },
+        "lastActivityDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "orderDeliveryMethod": {
+          "type": "array",
+          "items": {
+            "$ref": "../../SalesOrder/SalesOrder/schema.json#/definitions/OrderDeliveryMethod"
+          }
+        },
+        "primarySalesContactPoint": {
+          "type": "array",
+          "items": {
+            "$ref": "../ContactPoint/schema.json#/definitions/ContactPoint"
+          }
+        },
+        "number": {
+          "type": "string"
+        },
+        "ninetyDayBalanceAmount": {
+          "type": "integer"
+        },
+        "paymentTerm": {
+          "type": "string"
+        },
+        "defaultFreightTerms": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

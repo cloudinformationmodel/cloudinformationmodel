@@ -1,0 +1,148 @@
+#%Dialect 1.0
+uses:
+  product_eg: ../Product/schema.yaml
+nodeMappings:
+  ProductCategory:
+    classTerm: cim.ProductCategory
+    mapping:
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      activeFromDate:
+        propertyTerm: cim.activeFromDate
+        range: date
+        mandatory: true
+      parentCategory:
+        propertyTerm: cim.parentCategory
+        range: ProductCategory
+        allowMultiple: true
+      productCatalog:
+        propertyTerm: cim.productCatalog
+        range: ProductCatalog
+        mandatory: true
+        allowMultiple: true
+      activeToDate:
+        propertyTerm: cim.activeToDate
+        range: date
+  ProductCatalog:
+    classTerm: cim.ProductCatalog
+    mapping:
+      activeFromDate:
+        propertyTerm: cim.activeFromDate
+        range: date
+        mandatory: true
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      activeToDate:
+        propertyTerm: cim.activeToDate
+        range: date
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+  ProductCategoryProduct:
+    classTerm: cim.ProductCategoryProduct
+    mapping:
+      activeFromDateTime:
+        propertyTerm: cim.activeFromDateTime
+        range: time
+        mandatory: true
+      productCategory:
+        propertyTerm: cim.productCategory
+        range: ProductCategory
+        mandatory: true
+        allowMultiple: true
+      activeToDateTime:
+        propertyTerm: cim.activeToDateTime
+        range: time
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      product:
+        propertyTerm: cim.product
+        range: product_eg.Product
+        mandatory: true
+        allowMultiple: true
+  ProductCategoryAttributeSet:
+    classTerm: cim.ProductCategoryAttributeSet
+    mapping:
+      productCategory:
+        propertyTerm: cim.productCategory
+        range: ProductCategory
+        mandatory: true
+        allowMultiple: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      attributeSet:
+        propertyTerm: cim.attributeSet
+        range: string
+        mandatory: true
+  ProductCategoryTranslation:
+    classTerm: cim.ProductCategoryTranslation
+    mapping:
+      productCategory:
+        propertyTerm: cim.productCategory
+        range: ProductCategory
+        mandatory: true
+        allowMultiple: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      translatedName:
+        propertyTerm: cim.translatedName
+        range: string
+        mandatory: true
+  ProductCatalogTranslation:
+    classTerm: cim.ProductCatalogTranslation
+    mapping:
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      translatedName:
+        propertyTerm: cim.translatedName
+        range: string
+        mandatory: true
+      productCatalog:
+        propertyTerm: cim.productCatalog
+        range: ProductCatalog
+        mandatory: true
+        allowMultiple: true
+external:
+  cim: http://cloudinformationmodel.org/model/
+dialect: ProductCatalogEntityGroup
+version: "0.1"
+documents:
+  root:
+    declares:
+      ProductCategorySchemas: ProductCategory
+      ProductCatalogSchemas: ProductCatalog
+      ProductCategoryProductSchemas: ProductCategoryProduct
+      ProductCategoryAttributeSetSchemas: ProductCategoryAttributeSet
+      ProductCategoryTranslationSchemas: ProductCategoryTranslation
+      ProductCatalogTranslationSchemas: ProductCatalogTranslation
+  fragments:
+    encodes:
+      ProductCategory: ProductCategory
+      ProductCatalog: ProductCatalog
+      ProductCategoryProduct: ProductCategoryProduct
+      ProductCategoryAttributeSet: ProductCategoryAttributeSet
+      ProductCategoryTranslation: ProductCategoryTranslation
+      ProductCatalogTranslation: ProductCatalogTranslation
