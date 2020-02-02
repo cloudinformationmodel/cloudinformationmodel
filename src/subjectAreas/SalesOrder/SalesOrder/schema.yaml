@@ -503,8 +503,8 @@ nodeMappings:
       availableToApplyBalanceAmount:
         propertyTerm: cim.availableToApplyBalanceAmount
         range: integer
-  ProductRelationshipType:
-    classTerm: cim.ProductRelationshipType
+  OrderProductRelationshipType:
+    classTerm: cim.OrderProductRelationshipType
     mapping:
       parentProductRole:
         propertyTerm: cim.parentProductRole
@@ -898,7 +898,7 @@ documents:
       PriceAdjustmentGroupSchemas: PriceAdjustmentGroup
       OrderDeliveryMethodSchemas: OrderDeliveryMethod
       SalesOrderPaymentSummarySchemas: SalesOrderPaymentSummary
-      ProductRelationshipTypeSchemas: ProductRelationshipType
+      OrderProductRelationshipTypeSchemas: OrderProductRelationshipType
       SalesOrderPriceAdjustmentSchemas: SalesOrderPriceAdjustment
       SalesOrderProductTaxSchemas: SalesOrderProductTax
       SalesOrderChangeLogSchemas: SalesOrderChangeLog
@@ -915,7 +915,7 @@ documents:
       PriceAdjustmentGroup: PriceAdjustmentGroup
       OrderDeliveryMethod: OrderDeliveryMethod
       SalesOrderPaymentSummary: SalesOrderPaymentSummary
-      ProductRelationshipType: ProductRelationshipType
+      OrderProductRelationshipType: OrderProductRelationshipType
       SalesOrderPriceAdjustment: SalesOrderPriceAdjustment
       SalesOrderProductTax: SalesOrderProductTax
       SalesOrderChangeLog: SalesOrderChangeLog

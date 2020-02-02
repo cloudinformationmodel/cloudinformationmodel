@@ -8,7 +8,7 @@
       "$ref": "#/definitions/PriceAdjustmentGroup"
     },
     {
-      "$ref": "#/definitions/ProductRelationshipType"
+      "$ref": "#/definitions/OrderProductRelationshipType"
     },
     {
       "$ref": "#/definitions/SalesChannel"
@@ -51,881 +51,881 @@
     "SalesOrder": {
       "type": "object",
       "required": [
-        "confirmationRecipientEmailText",
-        "description",
-        "requestedStartDate",
-        "id",
-        "name",
-        "salesOrderConfirmationStatus",
-        "paymentMethod",
-        "salesOrderStatus",
-        "billToAccount",
-        "orderNumber",
-        "billToAddress",
-        "billToContact",
-        "salesChannel",
-        "developerStatusCode"
+	"confirmationRecipientEmailText",
+	"description",
+	"requestedStartDate",
+	"id",
+	"name",
+	"salesOrderConfirmationStatus",
+	"paymentMethod",
+	"salesOrderStatus",
+	"billToAccount",
+	"orderNumber",
+	"billToAddress",
+	"billToContact",
+	"salesChannel",
+	"developerStatusCode"
       ],
       "properties": {
-        "totalPendingBillingAmount": {
-          "type": "integer"
-        },
-        "checkoutDate": {
-          "type": "string",
-          "format": "date"
-        },
-        "priceCalculationStatusMessageText": {
-          "type": "string"
-        },
-        "confirmationRecipientEmailText": {
-          "type": "string"
-        },
-        "orderEndDate": {
-          "type": "string",
-          "format": "date"
-        },
-        "isTaxExempt": {
-          "type": "boolean"
-        },
-        "totalProductTaxAmount": {
-          "type": "integer"
-        },
-        "isAlerted": {
-          "type": "boolean"
-        },
-        "isAnonymous": {
-          "type": "boolean"
-        },
-        "description": {
-          "type": "string"
-        },
-        "activatedDate": {
-          "type": "string",
-          "format": "date"
-        },
-        "billToEmail": {
-          "type": "array",
-          "items": {
-            "$ref": "../../Party/ContactPoint/schema.json#/definitions/ContactPointEmail"
-          }
-        },
-        "requestedStartDate": {
-          "type": "string",
-          "format": "date"
-        },
-        "id": {
-          "type": "string"
-        },
-        "companyAuthorizedDate": {
-          "type": "string",
-          "format": "date"
-        },
-        "orderInsuranceAmount": {
-          "type": "integer"
-        },
-        "name": {
-          "type": "string"
-        },
-        "isClosed": {
-          "type": "boolean"
-        },
-        "shipToEmail": {
-          "type": "array",
-          "items": {
-            "$ref": "../../Party/ContactPoint/schema.json#/definitions/ContactPointEmail"
-          }
-        },
-        "totalDeliveryAmount": {
-          "type": "integer"
-        },
-        "salesOrderConfirmationStatus": {
-          "type": "string"
-        },
-        "customerAuthorizedDate": {
-          "type": "string",
-          "format": "date"
-        },
-        "totalCancelledBillingAmount": {
-          "type": "integer"
-        },
-        "totalAdjustedDeliveryTaxAmount": {
-          "type": "integer"
-        },
-        "paymentMethod": {
-          "type": "array",
-          "items": {
-            "$ref": "../../PaymentMethod/PaymentMethod/schema.json#/definitions/PaymentMethod"
-          }
-        },
-        "totalAdjustmentAmount": {
-          "type": "integer"
-        },
-        "salesOrderStatus": {
-          "type": "string"
-        },
-        "renewalUpliftRate": {
-          "type": "integer"
-        },
-        "totalProductAmount": {
-          "type": "integer"
-        },
-        "renewalTerm": {
-          "type": "string"
-        },
-        "originalOrder": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/SalesOrder"
-          }
-        },
-        "billToAccount": {
-          "type": "array",
-          "items": {
-            "$ref": "../../Party/Account/schema.json#/definitions/Account"
-          }
-        },
-        "totalAdjustmentTaxAmount": {
-          "type": "integer"
-        },
-        "isGiftOrder": {
-          "type": "boolean"
-        },
-        "promiseFulfillmentDate": {
-          "type": "string",
-          "format": "date"
-        },
-        "filedDate": {
-          "type": "string",
-          "format": "date"
-        },
-        "iSOCulture": {
-          "type": "string"
-        },
-        "userDeviceSession": {
-          "type": "array",
-          "items": {
-            "$ref": "../../Product/ProductAttribute/schema.json#/definitions/DeviceUserSession"
-          }
-        },
-        "purchaseOrderNumber": {
-          "type": "string"
-        },
-        "totalDeliveryFeeAmount": {
-          "type": "integer"
-        },
-        "totalDeliveryTaxAmount": {
-          "type": "integer"
-        },
-        "totalTaxAmount": {
-          "type": "integer"
-        },
-        "orderNumber": {
-          "type": "string"
-        },
-        "seller": {
-          "type": "array",
-          "items": {
-            "$ref": "../../Party/PartyRole/schema.json#/definitions/Seller"
-          }
-        },
-        "billToAddress": {
-          "type": "array",
-          "items": {
-            "$ref": "../../Party/ContactPoint/schema.json#/definitions/ContactPointAddress"
-          }
-        },
-        "shipToAddress": {
-          "type": "array",
-          "items": {
-            "$ref": "../../Party/ContactPoint/schema.json#/definitions/ContactPointAddress"
-          }
-        },
-        "fulfilledDate": {
-          "type": "string",
-          "format": "date"
-        },
-        "billToContact": {
-          "type": "array",
-          "items": {
-            "$ref": "../../Party/Account/schema.json#/definitions/AccountContact"
-          }
-        },
-        "paidDate": {
-          "type": "string",
-          "format": "date"
-        },
-        "totalBookingAmount": {
-          "type": "integer"
-        },
-        "adjustedProductTaxAmount": {
-          "type": "integer"
-        },
-        "promiseDate": {
-          "type": "string",
-          "format": "date"
-        },
-        "packedDate": {
-          "type": "string",
-          "format": "date"
-        },
-        "isHistoricalOnly": {
-          "type": "boolean"
-        },
-        "grandTotalAmount": {
-          "type": "integer"
-        },
-        "isContracted": {
-          "type": "boolean"
-        },
-        "canBillNow": {
-          "type": "boolean"
-        },
-        "adjustedTotalProductAmount": {
-          "type": "integer"
-        },
-        "orderDiscount": {
-          "type": "integer"
-        },
-        "internalBusinessUnit": {
-          "type": "array",
-          "items": {
-            "$ref": "../../Party/Party/schema.json#/definitions/InternalBusinessUnit"
-          }
-        },
-        "salesChannel": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/SalesChannel"
-          }
-        },
-        "orderStartDate": {
-          "type": "string",
-          "format": "date"
-        },
-        "cancelDateType": {
-          "type": "string"
-        },
-        "isReductionOrder": {
-          "type": "boolean"
-        },
-        "salesOrderSystemStatus": {
-          "type": "string"
-        },
-        "isSuspended": {
-          "type": "boolean"
-        },
-        "billToPhoneNumber": {
-          "type": "array",
-          "items": {
-            "$ref": "../../Party/ContactPoint/schema.json#/definitions/ContactPointPhone"
-          }
-        },
-        "purchaseOrderDate": {
-          "type": "string",
-          "format": "date"
-        },
-        "soldToCustomer": {
-          "type": "array",
-          "items": {
-            "$ref": "../../Party/PartyRole/schema.json#/definitions/Customer"
-          }
-        },
-        "billingDayOfTheMonth": {
-          "type": "integer"
-        },
-        "cancelDate": {
-          "type": "string",
-          "format": "date"
-        },
-        "shipToContact": {
-          "type": "array",
-          "items": {
-            "$ref": "../../Party/Account/schema.json#/definitions/AccountContact"
-          }
-        },
-        "taxRate": {
-          "type": "integer"
-        },
-        "developerStatusCode": {
-          "type": "string"
-        }
+	"totalPendingBillingAmount": {
+	  "type": "integer"
+	},
+	"checkoutDate": {
+	  "type": "string",
+	  "format": "date"
+	},
+	"priceCalculationStatusMessageText": {
+	  "type": "string"
+	},
+	"confirmationRecipientEmailText": {
+	  "type": "string"
+	},
+	"orderEndDate": {
+	  "type": "string",
+	  "format": "date"
+	},
+	"isTaxExempt": {
+	  "type": "boolean"
+	},
+	"totalProductTaxAmount": {
+	  "type": "integer"
+	},
+	"isAlerted": {
+	  "type": "boolean"
+	},
+	"isAnonymous": {
+	  "type": "boolean"
+	},
+	"description": {
+	  "type": "string"
+	},
+	"activatedDate": {
+	  "type": "string",
+	  "format": "date"
+	},
+	"billToEmail": {
+	  "type": "array",
+	  "items": {
+	    "$ref": "../../Party/ContactPoint/schema.json#/definitions/ContactPointEmail"
+	  }
+	},
+	"requestedStartDate": {
+	  "type": "string",
+	  "format": "date"
+	},
+	"id": {
+	  "type": "string"
+	},
+	"companyAuthorizedDate": {
+	  "type": "string",
+	  "format": "date"
+	},
+	"orderInsuranceAmount": {
+	  "type": "integer"
+	},
+	"name": {
+	  "type": "string"
+	},
+	"isClosed": {
+	  "type": "boolean"
+	},
+	"shipToEmail": {
+	  "type": "array",
+	  "items": {
+	    "$ref": "../../Party/ContactPoint/schema.json#/definitions/ContactPointEmail"
+	  }
+	},
+	"totalDeliveryAmount": {
+	  "type": "integer"
+	},
+	"salesOrderConfirmationStatus": {
+	  "type": "string"
+	},
+	"customerAuthorizedDate": {
+	  "type": "string",
+	  "format": "date"
+	},
+	"totalCancelledBillingAmount": {
+	  "type": "integer"
+	},
+	"totalAdjustedDeliveryTaxAmount": {
+	  "type": "integer"
+	},
+	"paymentMethod": {
+	  "type": "array",
+	  "items": {
+	    "$ref": "../../PaymentMethod/PaymentMethod/schema.json#/definitions/PaymentMethod"
+	  }
+	},
+	"totalAdjustmentAmount": {
+	  "type": "integer"
+	},
+	"salesOrderStatus": {
+	  "type": "string"
+	},
+	"renewalUpliftRate": {
+	  "type": "integer"
+	},
+	"totalProductAmount": {
+	  "type": "integer"
+	},
+	"renewalTerm": {
+	  "type": "string"
+	},
+	"originalOrder": {
+	  "type": "array",
+	  "items": {
+	    "$ref": "#/definitions/SalesOrder"
+	  }
+	},
+	"billToAccount": {
+	  "type": "array",
+	  "items": {
+	    "$ref": "../../Party/Account/schema.json#/definitions/Account"
+	  }
+	},
+	"totalAdjustmentTaxAmount": {
+	  "type": "integer"
+	},
+	"isGiftOrder": {
+	  "type": "boolean"
+	},
+	"promiseFulfillmentDate": {
+	  "type": "string",
+	  "format": "date"
+	},
+	"filedDate": {
+	  "type": "string",
+	  "format": "date"
+	},
+	"iSOCulture": {
+	  "type": "string"
+	},
+	"userDeviceSession": {
+	  "type": "array",
+	  "items": {
+	    "$ref": "../../Product/ProductAttribute/schema.json#/definitions/DeviceUserSession"
+	  }
+	},
+	"purchaseOrderNumber": {
+	  "type": "string"
+	},
+	"totalDeliveryFeeAmount": {
+	  "type": "integer"
+	},
+	"totalDeliveryTaxAmount": {
+	  "type": "integer"
+	},
+	"totalTaxAmount": {
+	  "type": "integer"
+	},
+	"orderNumber": {
+	  "type": "string"
+	},
+	"seller": {
+	  "type": "array",
+	  "items": {
+	    "$ref": "../../Party/PartyRole/schema.json#/definitions/Seller"
+	  }
+	},
+	"billToAddress": {
+	  "type": "array",
+	  "items": {
+	    "$ref": "../../Party/ContactPoint/schema.json#/definitions/ContactPointAddress"
+	  }
+	},
+	"shipToAddress": {
+	  "type": "array",
+	  "items": {
+	    "$ref": "../../Party/ContactPoint/schema.json#/definitions/ContactPointAddress"
+	  }
+	},
+	"fulfilledDate": {
+	  "type": "string",
+	  "format": "date"
+	},
+	"billToContact": {
+	  "type": "array",
+	  "items": {
+	    "$ref": "../../Party/Account/schema.json#/definitions/AccountContact"
+	  }
+	},
+	"paidDate": {
+	  "type": "string",
+	  "format": "date"
+	},
+	"totalBookingAmount": {
+	  "type": "integer"
+	},
+	"adjustedProductTaxAmount": {
+	  "type": "integer"
+	},
+	"promiseDate": {
+	  "type": "string",
+	  "format": "date"
+	},
+	"packedDate": {
+	  "type": "string",
+	  "format": "date"
+	},
+	"isHistoricalOnly": {
+	  "type": "boolean"
+	},
+	"grandTotalAmount": {
+	  "type": "integer"
+	},
+	"isContracted": {
+	  "type": "boolean"
+	},
+	"canBillNow": {
+	  "type": "boolean"
+	},
+	"adjustedTotalProductAmount": {
+	  "type": "integer"
+	},
+	"orderDiscount": {
+	  "type": "integer"
+	},
+	"internalBusinessUnit": {
+	  "type": "array",
+	  "items": {
+	    "$ref": "../../Party/Party/schema.json#/definitions/InternalBusinessUnit"
+	  }
+	},
+	"salesChannel": {
+	  "type": "array",
+	  "items": {
+	    "$ref": "#/definitions/SalesChannel"
+	  }
+	},
+	"orderStartDate": {
+	  "type": "string",
+	  "format": "date"
+	},
+	"cancelDateType": {
+	  "type": "string"
+	},
+	"isReductionOrder": {
+	  "type": "boolean"
+	},
+	"salesOrderSystemStatus": {
+	  "type": "string"
+	},
+	"isSuspended": {
+	  "type": "boolean"
+	},
+	"billToPhoneNumber": {
+	  "type": "array",
+	  "items": {
+	    "$ref": "../../Party/ContactPoint/schema.json#/definitions/ContactPointPhone"
+	  }
+	},
+	"purchaseOrderDate": {
+	  "type": "string",
+	  "format": "date"
+	},
+	"soldToCustomer": {
+	  "type": "array",
+	  "items": {
+	    "$ref": "../../Party/PartyRole/schema.json#/definitions/Customer"
+	  }
+	},
+	"billingDayOfTheMonth": {
+	  "type": "integer"
+	},
+	"cancelDate": {
+	  "type": "string",
+	  "format": "date"
+	},
+	"shipToContact": {
+	  "type": "array",
+	  "items": {
+	    "$ref": "../../Party/Account/schema.json#/definitions/AccountContact"
+	  }
+	},
+	"taxRate": {
+	  "type": "integer"
+	},
+	"developerStatusCode": {
+	  "type": "string"
+	}
       }
     },
     "SalesOrderPaymentSummary": {
       "type": "object",
       "required": [
-        "id",
-        "name",
-        "salesOrder",
-        "paymentMethod"
+	"id",
+	"name",
+	"salesOrder",
+	"paymentMethod"
       ],
       "properties": {
-        "authorizationReversalAmount": {
-          "type": "integer"
-        },
-        "authorizationAmount": {
-          "type": "integer"
-        },
-        "unappliedAmount": {
-          "type": "integer"
-        },
-        "paymentAmount": {
-          "type": "integer"
-        },
-        "id": {
-          "type": "string"
-        },
-        "name": {
-          "type": "string"
-        },
-        "salesOrder": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/SalesOrder"
-          }
-        },
-        "paymentMethod": {
-          "type": "array",
-          "items": {
-            "$ref": "../../PaymentMethod/PaymentMethod/schema.json#/definitions/PaymentMethod"
-          }
-        },
-        "appliedAmount": {
-          "type": "integer"
-        },
-        "availableToApplyBalanceAmount": {
-          "type": "integer"
-        },
-        "capturedAmount": {
-          "type": "integer"
-        }
+	"authorizationReversalAmount": {
+	  "type": "integer"
+	},
+	"authorizationAmount": {
+	  "type": "integer"
+	},
+	"unappliedAmount": {
+	  "type": "integer"
+	},
+	"paymentAmount": {
+	  "type": "integer"
+	},
+	"id": {
+	  "type": "string"
+	},
+	"name": {
+	  "type": "string"
+	},
+	"salesOrder": {
+	  "type": "array",
+	  "items": {
+	    "$ref": "#/definitions/SalesOrder"
+	  }
+	},
+	"paymentMethod": {
+	  "type": "array",
+	  "items": {
+	    "$ref": "../../PaymentMethod/PaymentMethod/schema.json#/definitions/PaymentMethod"
+	  }
+	},
+	"appliedAmount": {
+	  "type": "integer"
+	},
+	"availableToApplyBalanceAmount": {
+	  "type": "integer"
+	},
+	"capturedAmount": {
+	  "type": "integer"
+	}
       }
     },
     "SalesOrderTax": {
       "type": "object",
       "required": [
-        "id",
-        "name",
-        "taxRatePercent"
+	"id",
+	"name",
+	"taxRatePercent"
       ],
       "properties": {
-        "id": {
-          "type": "string"
-        },
-        "name": {
-          "type": "string"
-        },
-        "salesOrderTaxAmount": {
-          "type": "integer"
-        },
-        "taxAddressCityName": {
-          "type": "string"
-        },
-        "taxErrorMessageText": {
-          "type": "string"
-        },
-        "taxAddressStreet1Text": {
-          "type": "string"
-        },
-        "taxRatePercent": {
-          "type": "integer"
-        },
-        "taxAddressStreet2Text": {
-          "type": "string"
-        }
+	"id": {
+	  "type": "string"
+	},
+	"name": {
+	  "type": "string"
+	},
+	"salesOrderTaxAmount": {
+	  "type": "integer"
+	},
+	"taxAddressCityName": {
+	  "type": "string"
+	},
+	"taxErrorMessageText": {
+	  "type": "string"
+	},
+	"taxAddressStreet1Text": {
+	  "type": "string"
+	},
+	"taxRatePercent": {
+	  "type": "integer"
+	},
+	"taxAddressStreet2Text": {
+	  "type": "string"
+	}
       }
     },
     "SalesOrderProductNote": {
       "type": "object",
       "required": [
-        "id",
-        "noteText"
+	"id",
+	"noteText"
       ],
       "properties": {
-        "id": {
-          "type": "string"
-        },
-        "noteText": {
-          "type": "string"
-        },
-        "description": {
-          "type": "string"
-        }
+	"id": {
+	  "type": "string"
+	},
+	"noteText": {
+	  "type": "string"
+	},
+	"description": {
+	  "type": "string"
+	}
       }
     },
     "SalesOrderProduct": {
       "type": "object",
       "required": [
-        "totalPriceAmount",
-        "quantityOrderedUOM",
-        "orderProductNumber",
-        "product",
-        "description",
-        "orderedQuantity",
-        "salesOrderProductStatus",
-        "id",
-        "salesOrder",
-        "priceBookEntry",
-        "listPriceQuantityUOM"
+	"totalPriceAmount",
+	"quantityOrderedUOM",
+	"orderProductNumber",
+	"product",
+	"description",
+	"orderedQuantity",
+	"salesOrderProductStatus",
+	"id",
+	"salesOrder",
+	"priceBookEntry",
+	"listPriceQuantityUOM"
       ],
       "properties": {
-        "totalRecurringPriceAmount": {
-          "type": "integer"
-        },
-        "totalLineAdjustmentAmount": {
-          "type": "integer"
-        },
-        "totalPriceAmount": {
-          "type": "integer"
-        },
-        "provisioningDate": {
-          "type": "string",
-          "format": "date"
-        },
-        "fulfilledQuantity": {
-          "type": "integer"
-        },
-        "totalLineAmount": {
-          "type": "integer"
-        },
-        "promisedDate": {
-          "type": "string",
-          "format": "date"
-        },
-        "shippingPhone": {
-          "type": "array",
-          "items": {
-            "$ref": "../../Party/ContactPoint/schema.json#/definitions/ContactPointPhone"
-          }
-        },
-        "recurringPriceAmount": {
-          "type": "integer"
-        },
-        "endDate": {
-          "type": "string",
-          "format": "date"
-        },
-        "giftOrderMessageText": {
-          "type": "string"
-        },
-        "quantityOrderedUOM": {
-          "type": "string"
-        },
-        "totalProductTaxAmount": {
-          "type": "integer"
-        },
-        "salesOrderProductReason": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/SalesOrderProductReason"
-          }
-        },
-        "lineAdjustmentSubTotalAmount": {
-          "type": "integer"
-        },
-        "commentText": {
-          "type": "string"
-        },
-        "orderProductNumber": {
-          "type": "string"
-        },
-        "product": {
-          "type": "array",
-          "items": {
-            "$ref": "../../Product/Product/schema.json#/definitions/Product"
-          }
-        },
-        "description": {
-          "type": "string"
-        },
-        "orderedQuantity": {
-          "type": "integer"
-        },
-        "salesOrderProductStatus": {
-          "type": "string"
-        },
-        "unitPriceAmount": {
-          "type": "integer"
-        },
-        "requestedStartDate": {
-          "type": "string",
-          "format": "date"
-        },
-        "id": {
-          "type": "string"
-        },
-        "subscriptionRenewalMonthQuantity": {
-          "type": "integer"
-        },
-        "orderManualAdjustmentSubTotalAmount": {
-          "type": "integer"
-        },
-        "allocatedQuantity": {
-          "type": "integer"
-        },
-        "allocationPartitionName": {
-          "type": "string"
-        },
-        "salesOrder": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/SalesOrder"
-          }
-        },
-        "isGift": {
-          "type": "boolean"
-        },
-        "unitTaxAmount": {
-          "type": "integer"
-        },
-        "deliveryTaxAmount": {
-          "type": "integer"
-        },
-        "isBonusProduct": {
-          "type": "boolean"
-        },
-        "salesOrderProductAdjustedTaxAmount": {
-          "type": "integer"
-        },
-        "totalAdjustmentAmount": {
-          "type": "integer"
-        },
-        "shippingTaxAmount": {
-          "type": "integer"
-        },
-        "totalListPriceAmount": {
-          "type": "integer"
-        },
-        "totalAdjustmentTaxAmount": {
-          "type": "integer"
-        },
-        "orderAdjustmentSubTotalAmount": {
-          "type": "integer"
-        },
-        "subscriptionTermQuantity": {
-          "type": "integer"
-        },
-        "totalDistributedAdjustmentTaxAmount": {
-          "type": "integer"
-        },
-        "totalDistributedTaxAmount": {
-          "type": "integer"
-        },
-        "totalTaxAmount": {
-          "type": "integer"
-        },
-        "adjustedDeliveryTaxAmount": {
-          "type": "integer"
-        },
-        "shippingAddress": {
-          "type": "array",
-          "items": {
-            "$ref": "../../Party/ContactPoint/schema.json#/definitions/ContactPointAddress"
-          }
-        },
-        "listPriceAmount": {
-          "type": "integer"
-        },
-        "priceBookEntry": {
-          "type": "array",
-          "items": {
-            "$ref": "../../Product/ProductAttribute/schema.json#/definitions/PriceBookEntry"
-          }
-        },
-        "segmentIndex": {
-          "type": "integer"
-        },
-        "shippingCostAmount": {
-          "type": "integer"
-        },
-        "isBundleRoot": {
-          "type": "boolean"
-        },
-        "discountAmount": {
-          "type": "integer"
-        },
-        "cancelledQuantity": {
-          "type": "integer"
-        },
-        "shippingEmail": {
-          "type": "array",
-          "items": {
-            "$ref": "../../Party/ContactPoint/schema.json#/definitions/ContactPointEmail"
-          }
-        },
-        "subscriptionTermUnit": {
-          "type": "array",
-          "items": {
-            "$ref": "../../Product/ProductAttribute/schema.json#/definitions/ProductValidityTimePeriodUOM"
-          }
-        },
-        "listPriceTermUOM": {
-          "type": "array",
-          "items": {
-            "$ref": "../../Product/ProductAttribute/schema.json#/definitions/ProductValidityTimePeriodUOM"
-          }
-        },
-        "salesOrderDeliveryGroup": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/SalesOrderDeliveryGroup"
-          }
-        },
-        "listPriceQuantityUOM": {
-          "type": "string"
-        },
-        "totalDistributedAdjustmentAmount": {
-          "type": "integer"
-        },
-        "segmentIndexNumber": {
-          "type": "integer"
-        },
-        "totalUnitPriceAmount": {
-          "type": "integer"
-        },
-        "originalOrderProduct": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/SalesOrderProduct"
-          }
-        },
-        "availableQuantity": {
-          "type": "integer"
-        },
-        "requestedEndDate": {
-          "type": "string",
-          "format": "date"
-        },
-        "allocationGroupName": {
-          "type": "string"
-        },
-        "sellerAccount": {
-          "type": "array",
-          "items": {
-            "$ref": "../../Party/Account/schema.json#/definitions/Account"
-          }
-        },
-        "giftRecipientTelephoneNumber": {
-          "type": "string"
-        },
-        "isAutomaticallyRenewed": {
-          "type": "boolean"
-        },
-        "discountPercent": {
-          "type": "integer"
-        },
-        "totalManualAdjustmentAmount": {
-          "type": "integer"
-        },
-        "handlingCostAmount": {
-          "type": "integer"
-        }
+	"totalRecurringPriceAmount": {
+	  "type": "integer"
+	},
+	"totalLineAdjustmentAmount": {
+	  "type": "integer"
+	},
+	"totalPriceAmount": {
+	  "type": "integer"
+	},
+	"provisioningDate": {
+	  "type": "string",
+	  "format": "date"
+	},
+	"fulfilledQuantity": {
+	  "type": "integer"
+	},
+	"totalLineAmount": {
+	  "type": "integer"
+	},
+	"promisedDate": {
+	  "type": "string",
+	  "format": "date"
+	},
+	"shippingPhone": {
+	  "type": "array",
+	  "items": {
+	    "$ref": "../../Party/ContactPoint/schema.json#/definitions/ContactPointPhone"
+	  }
+	},
+	"recurringPriceAmount": {
+	  "type": "integer"
+	},
+	"endDate": {
+	  "type": "string",
+	  "format": "date"
+	},
+	"giftOrderMessageText": {
+	  "type": "string"
+	},
+	"quantityOrderedUOM": {
+	  "type": "string"
+	},
+	"totalProductTaxAmount": {
+	  "type": "integer"
+	},
+	"salesOrderProductReason": {
+	  "type": "array",
+	  "items": {
+	    "$ref": "#/definitions/SalesOrderProductReason"
+	  }
+	},
+	"lineAdjustmentSubTotalAmount": {
+	  "type": "integer"
+	},
+	"commentText": {
+	  "type": "string"
+	},
+	"orderProductNumber": {
+	  "type": "string"
+	},
+	"product": {
+	  "type": "array",
+	  "items": {
+	    "$ref": "../../Product/Product/schema.json#/definitions/Product"
+	  }
+	},
+	"description": {
+	  "type": "string"
+	},
+	"orderedQuantity": {
+	  "type": "integer"
+	},
+	"salesOrderProductStatus": {
+	  "type": "string"
+	},
+	"unitPriceAmount": {
+	  "type": "integer"
+	},
+	"requestedStartDate": {
+	  "type": "string",
+	  "format": "date"
+	},
+	"id": {
+	  "type": "string"
+	},
+	"subscriptionRenewalMonthQuantity": {
+	  "type": "integer"
+	},
+	"orderManualAdjustmentSubTotalAmount": {
+	  "type": "integer"
+	},
+	"allocatedQuantity": {
+	  "type": "integer"
+	},
+	"allocationPartitionName": {
+	  "type": "string"
+	},
+	"salesOrder": {
+	  "type": "array",
+	  "items": {
+	    "$ref": "#/definitions/SalesOrder"
+	  }
+	},
+	"isGift": {
+	  "type": "boolean"
+	},
+	"unitTaxAmount": {
+	  "type": "integer"
+	},
+	"deliveryTaxAmount": {
+	  "type": "integer"
+	},
+	"isBonusProduct": {
+	  "type": "boolean"
+	},
+	"salesOrderProductAdjustedTaxAmount": {
+	  "type": "integer"
+	},
+	"totalAdjustmentAmount": {
+	  "type": "integer"
+	},
+	"shippingTaxAmount": {
+	  "type": "integer"
+	},
+	"totalListPriceAmount": {
+	  "type": "integer"
+	},
+	"totalAdjustmentTaxAmount": {
+	  "type": "integer"
+	},
+	"orderAdjustmentSubTotalAmount": {
+	  "type": "integer"
+	},
+	"subscriptionTermQuantity": {
+	  "type": "integer"
+	},
+	"totalDistributedAdjustmentTaxAmount": {
+	  "type": "integer"
+	},
+	"totalDistributedTaxAmount": {
+	  "type": "integer"
+	},
+	"totalTaxAmount": {
+	  "type": "integer"
+	},
+	"adjustedDeliveryTaxAmount": {
+	  "type": "integer"
+	},
+	"shippingAddress": {
+	  "type": "array",
+	  "items": {
+	    "$ref": "../../Party/ContactPoint/schema.json#/definitions/ContactPointAddress"
+	  }
+	},
+	"listPriceAmount": {
+	  "type": "integer"
+	},
+	"priceBookEntry": {
+	  "type": "array",
+	  "items": {
+	    "$ref": "../../Product/ProductAttribute/schema.json#/definitions/PriceBookEntry"
+	  }
+	},
+	"segmentIndex": {
+	  "type": "integer"
+	},
+	"shippingCostAmount": {
+	  "type": "integer"
+	},
+	"isBundleRoot": {
+	  "type": "boolean"
+	},
+	"discountAmount": {
+	  "type": "integer"
+	},
+	"cancelledQuantity": {
+	  "type": "integer"
+	},
+	"shippingEmail": {
+	  "type": "array",
+	  "items": {
+	    "$ref": "../../Party/ContactPoint/schema.json#/definitions/ContactPointEmail"
+	  }
+	},
+	"subscriptionTermUnit": {
+	  "type": "array",
+	  "items": {
+	    "$ref": "../../Product/ProductAttribute/schema.json#/definitions/ProductValidityTimePeriodUOM"
+	  }
+	},
+	"listPriceTermUOM": {
+	  "type": "array",
+	  "items": {
+	    "$ref": "../../Product/ProductAttribute/schema.json#/definitions/ProductValidityTimePeriodUOM"
+	  }
+	},
+	"salesOrderDeliveryGroup": {
+	  "type": "array",
+	  "items": {
+	    "$ref": "#/definitions/SalesOrderDeliveryGroup"
+	  }
+	},
+	"listPriceQuantityUOM": {
+	  "type": "string"
+	},
+	"totalDistributedAdjustmentAmount": {
+	  "type": "integer"
+	},
+	"segmentIndexNumber": {
+	  "type": "integer"
+	},
+	"totalUnitPriceAmount": {
+	  "type": "integer"
+	},
+	"originalOrderProduct": {
+	  "type": "array",
+	  "items": {
+	    "$ref": "#/definitions/SalesOrderProduct"
+	  }
+	},
+	"availableQuantity": {
+	  "type": "integer"
+	},
+	"requestedEndDate": {
+	  "type": "string",
+	  "format": "date"
+	},
+	"allocationGroupName": {
+	  "type": "string"
+	},
+	"sellerAccount": {
+	  "type": "array",
+	  "items": {
+	    "$ref": "../../Party/Account/schema.json#/definitions/Account"
+	  }
+	},
+	"giftRecipientTelephoneNumber": {
+	  "type": "string"
+	},
+	"isAutomaticallyRenewed": {
+	  "type": "boolean"
+	},
+	"discountPercent": {
+	  "type": "integer"
+	},
+	"totalManualAdjustmentAmount": {
+	  "type": "integer"
+	},
+	"handlingCostAmount": {
+	  "type": "integer"
+	}
       }
     },
     "SalesOrderPriceAdjustment": {
       "allOf": [
-        {
-          "$ref": "#/definitions/PriceAdjustmentGroup"
-        },
-        {
-          "type": "object",
-          "required": [
-            "id",
-            "salesOrder"
-          ],
-          "properties": {
-            "id": {
-              "type": "string"
-            },
-            "salesOrder": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/SalesOrder"
-              }
-            },
-            "totalAdjustmentTaxAmount": {
-              "type": "integer"
-            }
-          }
-        }
+	{
+	  "$ref": "#/definitions/PriceAdjustmentGroup"
+	},
+	{
+	  "type": "object",
+	  "required": [
+	    "id",
+	    "salesOrder"
+	  ],
+	  "properties": {
+	    "id": {
+	      "type": "string"
+	    },
+	    "salesOrder": {
+	      "type": "array",
+	      "items": {
+		"$ref": "#/definitions/SalesOrder"
+	      }
+	    },
+	    "totalAdjustmentTaxAmount": {
+	      "type": "integer"
+	    }
+	  }
+	}
       ],
       "type": "object"
     },
     "SalesOrderProductGroup": {
       "type": "object",
       "required": [
-        "id",
-        "description",
-        "salesOrderProductGroupType",
-        "name"
+	"id",
+	"description",
+	"salesOrderProductGroupType",
+	"name"
       ],
       "properties": {
-        "id": {
-          "type": "string"
-        },
-        "description": {
-          "type": "string"
-        },
-        "salesOrderProductGroupType": {
-          "type": "string"
-        },
-        "name": {
-          "type": "string"
-        }
+	"id": {
+	  "type": "string"
+	},
+	"description": {
+	  "type": "string"
+	},
+	"salesOrderProductGroupType": {
+	  "type": "string"
+	},
+	"name": {
+	  "type": "string"
+	}
       }
     },
-    "ProductRelationshipType": {
+    "OrderProductRelationshipType": {
       "type": "object",
       "required": [
-        "id",
-        "parentProductRole",
-        "childProductRole"
+	"id",
+	"parentProductRole",
+	"childProductRole"
       ],
       "properties": {
-        "id": {
-          "type": "string"
-        },
-        "parentProductRole": {
-          "type": "string"
-        },
-        "childProductRole": {
-          "type": "string"
-        }
+	"id": {
+	  "type": "string"
+	},
+	"parentProductRole": {
+	  "type": "string"
+	},
+	"childProductRole": {
+	  "type": "string"
+	}
       }
     },
     "SalesOrderProductReason": {
       "type": "object",
       "required": [
-        "id",
-        "salesOrderProductReasonCategory",
-        "name"
+	"id",
+	"salesOrderProductReasonCategory",
+	"name"
       ],
       "properties": {
-        "id": {
-          "type": "string"
-        },
-        "salesOrderProductReasonCategory": {
-          "type": "string"
-        },
-        "name": {
-          "type": "string"
-        }
+	"id": {
+	  "type": "string"
+	},
+	"salesOrderProductReasonCategory": {
+	  "type": "string"
+	},
+	"name": {
+	  "type": "string"
+	}
       }
     },
     "OrderDeliveryMethod": {
       "type": "object",
       "required": [
-        "product",
-        "id",
-        "externalRecord",
-        "name"
+	"product",
+	"id",
+	"externalRecord",
+	"name"
       ],
       "properties": {
-        "product": {
-          "type": "array",
-          "items": {
-            "$ref": "../../Product/Product/schema.json#/definitions/Product"
-          }
-        },
-        "id": {
-          "type": "string"
-        },
-        "externalRecord": {
-          "type": "string"
-        },
-        "name": {
-          "type": "string"
-        }
+	"product": {
+	  "type": "array",
+	  "items": {
+	    "$ref": "../../Product/Product/schema.json#/definitions/Product"
+	  }
+	},
+	"id": {
+	  "type": "string"
+	},
+	"externalRecord": {
+	  "type": "string"
+	},
+	"name": {
+	  "type": "string"
+	}
       }
     },
     "SalesOrderChangeLog": {
       "type": "object",
       "required": [
-        "changeSalesOrder",
-        "id",
-        "name",
-        "relatedSalesOrderProduct",
-        "changeSalesOrderProduct",
-        "relatedSalesOrder"
+	"changeSalesOrder",
+	"id",
+	"name",
+	"relatedSalesOrderProduct",
+	"changeSalesOrderProduct",
+	"relatedSalesOrder"
       ],
       "properties": {
-        "changeSalesOrder": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/SalesOrder"
-          }
-        },
-        "id": {
-          "type": "string"
-        },
-        "name": {
-          "type": "string"
-        },
-        "relatedSalesOrderProduct": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/SalesOrderProduct"
-          }
-        },
-        "changeSalesOrderProduct": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/SalesOrderProduct"
-          }
-        },
-        "relatedSalesOrder": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/SalesOrder"
-          }
-        }
+	"changeSalesOrder": {
+	  "type": "array",
+	  "items": {
+	    "$ref": "#/definitions/SalesOrder"
+	  }
+	},
+	"id": {
+	  "type": "string"
+	},
+	"name": {
+	  "type": "string"
+	},
+	"relatedSalesOrderProduct": {
+	  "type": "array",
+	  "items": {
+	    "$ref": "#/definitions/SalesOrderProduct"
+	  }
+	},
+	"changeSalesOrderProduct": {
+	  "type": "array",
+	  "items": {
+	    "$ref": "#/definitions/SalesOrderProduct"
+	  }
+	},
+	"relatedSalesOrder": {
+	  "type": "array",
+	  "items": {
+	    "$ref": "#/definitions/SalesOrder"
+	  }
+	}
       }
     },
     "SalesOrderProductTax": {
       "allOf": [
-        {
-          "$ref": "#/definitions/SalesOrderTax"
-        },
-        {
-          "type": "object",
-          "required": [
-            "description",
-            "id",
-            "name",
-            "salesOrderProduct",
-            "taxAmount"
-          ],
-          "properties": {
-            "description": {
-              "type": "string"
-            },
-            "originalSalesOrderProductTax": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/SalesOrderProductTax"
-              }
-            },
-            "id": {
-              "type": "string"
-            },
-            "name": {
-              "type": "string"
-            },
-            "taxEffectiveDate": {
-              "type": "string",
-              "format": "date"
-            },
-            "salesOrderProduct": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/SalesOrderProduct"
-              }
-            },
-            "taxAmount": {
-              "type": "integer"
-            }
-          }
-        }
+	{
+	  "$ref": "#/definitions/SalesOrderTax"
+	},
+	{
+	  "type": "object",
+	  "required": [
+	    "description",
+	    "id",
+	    "name",
+	    "salesOrderProduct",
+	    "taxAmount"
+	  ],
+	  "properties": {
+	    "description": {
+	      "type": "string"
+	    },
+	    "originalSalesOrderProductTax": {
+	      "type": "array",
+	      "items": {
+		"$ref": "#/definitions/SalesOrderProductTax"
+	      }
+	    },
+	    "id": {
+	      "type": "string"
+	    },
+	    "name": {
+	      "type": "string"
+	    },
+	    "taxEffectiveDate": {
+	      "type": "string",
+	      "format": "date"
+	    },
+	    "salesOrderProduct": {
+	      "type": "array",
+	      "items": {
+		"$ref": "#/definitions/SalesOrderProduct"
+	      }
+	    },
+	    "taxAmount": {
+	      "type": "integer"
+	    }
+	  }
+	}
       ],
       "type": "object"
     },
@@ -935,142 +935,142 @@
     "SalesOrderDeliveryGroup": {
       "type": "object",
       "required": [
-        "totalPriceAmount",
-        "description",
-        "id",
-        "name",
-        "contactPointAddress",
-        "salesOrder",
-        "salesOrderDeliveryStatus",
-        "salesOrderDeliveryGroupNumber",
-        "totalUnitPriceAmount",
-        "orderDeliveryMethod",
-        "accountContact"
+	"totalPriceAmount",
+	"description",
+	"id",
+	"name",
+	"contactPointAddress",
+	"salesOrder",
+	"salesOrderDeliveryStatus",
+	"salesOrderDeliveryGroupNumber",
+	"totalUnitPriceAmount",
+	"orderDeliveryMethod",
+	"accountContact"
       ],
       "properties": {
-        "totalPriceAmount": {
-          "type": "integer"
-        },
-        "totalDeliveryAdjustmentTaxAmount": {
-          "type": "integer"
-        },
-        "promisedDate": {
-          "type": "string",
-          "format": "date"
-        },
-        "giftMessageText": {
-          "type": "string"
-        },
-        "deliveryInstructionsText": {
-          "type": "string"
-        },
-        "totalProductTaxAmount": {
-          "type": "integer"
-        },
-        "totalDeliveryChargeAmount": {
-          "type": "integer"
-        },
-        "description": {
-          "type": "string"
-        },
-        "grandTotalDeliveryAmount": {
-          "type": "integer"
-        },
-        "id": {
-          "type": "string"
-        },
-        "name": {
-          "type": "string"
-        },
-        "contactPointAddress": {
-          "type": "array",
-          "items": {
-            "$ref": "../../Party/ContactPoint/schema.json#/definitions/ContactPointAddress"
-          }
-        },
-        "salesOrder": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/SalesOrder"
-          }
-        },
-        "isGift": {
-          "type": "boolean"
-        },
-        "salesOrderDeliveryStatus": {
-          "type": "string"
-        },
-        "totalDeliveryAdjustmentAmount": {
-          "type": "integer"
-        },
-        "totalDeliveryTaxAmount": {
-          "type": "integer"
-        },
-        "totalTaxAmount": {
-          "type": "integer"
-        },
-        "totalDeliveryChargeTaxAmount": {
-          "type": "integer"
-        },
-        "originalDeliveryGroup": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/SalesOrderDeliveryGroup"
-          }
-        },
-        "salesOrderDeliveryGroupNumber": {
-          "type": "string"
-        },
-        "desiredDeliveryDate": {
-          "type": "string",
-          "format": "date"
-        },
-        "totalUnitPriceAmount": {
-          "type": "integer"
-        },
-        "orderDeliveryMethod": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/OrderDeliveryMethod"
-          }
-        },
-        "accountContact": {
-          "type": "array",
-          "items": {
-            "$ref": "../../Party/Account/schema.json#/definitions/AccountContact"
-          }
-        }
+	"totalPriceAmount": {
+	  "type": "integer"
+	},
+	"totalDeliveryAdjustmentTaxAmount": {
+	  "type": "integer"
+	},
+	"promisedDate": {
+	  "type": "string",
+	  "format": "date"
+	},
+	"giftMessageText": {
+	  "type": "string"
+	},
+	"deliveryInstructionsText": {
+	  "type": "string"
+	},
+	"totalProductTaxAmount": {
+	  "type": "integer"
+	},
+	"totalDeliveryChargeAmount": {
+	  "type": "integer"
+	},
+	"description": {
+	  "type": "string"
+	},
+	"grandTotalDeliveryAmount": {
+	  "type": "integer"
+	},
+	"id": {
+	  "type": "string"
+	},
+	"name": {
+	  "type": "string"
+	},
+	"contactPointAddress": {
+	  "type": "array",
+	  "items": {
+	    "$ref": "../../Party/ContactPoint/schema.json#/definitions/ContactPointAddress"
+	  }
+	},
+	"salesOrder": {
+	  "type": "array",
+	  "items": {
+	    "$ref": "#/definitions/SalesOrder"
+	  }
+	},
+	"isGift": {
+	  "type": "boolean"
+	},
+	"salesOrderDeliveryStatus": {
+	  "type": "string"
+	},
+	"totalDeliveryAdjustmentAmount": {
+	  "type": "integer"
+	},
+	"totalDeliveryTaxAmount": {
+	  "type": "integer"
+	},
+	"totalTaxAmount": {
+	  "type": "integer"
+	},
+	"totalDeliveryChargeTaxAmount": {
+	  "type": "integer"
+	},
+	"originalDeliveryGroup": {
+	  "type": "array",
+	  "items": {
+	    "$ref": "#/definitions/SalesOrderDeliveryGroup"
+	  }
+	},
+	"salesOrderDeliveryGroupNumber": {
+	  "type": "string"
+	},
+	"desiredDeliveryDate": {
+	  "type": "string",
+	  "format": "date"
+	},
+	"totalUnitPriceAmount": {
+	  "type": "integer"
+	},
+	"orderDeliveryMethod": {
+	  "type": "array",
+	  "items": {
+	    "$ref": "#/definitions/OrderDeliveryMethod"
+	  }
+	},
+	"accountContact": {
+	  "type": "array",
+	  "items": {
+	    "$ref": "../../Party/Account/schema.json#/definitions/AccountContact"
+	  }
+	}
       }
     },
     "SalesChannel": {
       "type": "object",
       "required": [
-        "externalRecord",
-        "salesChannelType",
-        "description",
-        "id",
-        "name",
-        "salesChannelNumber"
+	"externalRecord",
+	"salesChannelType",
+	"description",
+	"id",
+	"name",
+	"salesChannelNumber"
       ],
       "properties": {
-        "externalRecord": {
-          "type": "string"
-        },
-        "salesChannelType": {
-          "type": "string"
-        },
-        "description": {
-          "type": "string"
-        },
-        "id": {
-          "type": "string"
-        },
-        "name": {
-          "type": "string"
-        },
-        "salesChannelNumber": {
-          "type": "string"
-        }
+	"externalRecord": {
+	  "type": "string"
+	},
+	"salesChannelType": {
+	  "type": "string"
+	},
+	"description": {
+	  "type": "string"
+	},
+	"id": {
+	  "type": "string"
+	},
+	"name": {
+	  "type": "string"
+	},
+	"salesChannelNumber": {
+	  "type": "string"
+	}
       }
     }
   }

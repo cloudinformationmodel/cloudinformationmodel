@@ -6,1864 +6,1864 @@
     {
       "@id" : "/sales_order_entity_group/sales_order",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
-        "rr:class" : {
-          "@id" : "http://cloudinformationmodel.org/model/SalesOrder"
-        }
+	"rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+	"rr:class" : {
+	  "@id" : "http://cloudinformationmodel.org/model/SalesOrder"
+	}
       },
       "rr:predicateObjectMap" : [
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/totalPendingBillingAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TOTAL_PENDING_BILLING_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/checkoutDate"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "CHECKOUT_DATE",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#date"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/priceCalculationStatusMessageText"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "PRICE_CALCULATION_STATUS_MESSAGE_TEXT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/confirmationRecipientEmailText"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "CONFIRMATION_RECIPIENT_EMAIL_TEXT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/orderEndDate"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "ORDER_END_DATE",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#date"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/isTaxExempt"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "IS_TAX_EXEMPT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/totalProductTaxAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TOTAL_PRODUCT_TAX_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/isAlerted"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "IS_ALERTED",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/isAnonymous"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "IS_ANONYMOUS",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/description"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "DESCRIPTION",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/activatedDate"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "ACTIVATED_DATE",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#date"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/requestedStartDate"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "REQUESTED_START_DATE",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#date"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/companyAuthorizedDate"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "COMPANY_AUTHORIZED_DATE",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#date"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/orderInsuranceAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "ORDER_INSURANCE_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/name"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "NAME",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/isClosed"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "IS_CLOSED",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/totalDeliveryAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TOTAL_DELIVERY_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/salesOrderConfirmationStatus"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "SALES_ORDER_CONFIRMATION_STATUS",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/customerAuthorizedDate"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "CUSTOMER_AUTHORIZED_DATE",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#date"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/totalCancelledBillingAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TOTAL_CANCELLED_BILLING_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/totalAdjustedDeliveryTaxAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TOTAL_ADJUSTED_DELIVERY_TAX_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/totalAdjustmentAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TOTAL_ADJUSTMENT_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/salesOrderStatus"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "SALES_ORDER_STATUS",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/renewalUpliftRate"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "RENEWAL_UPLIFT_RATE",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/totalProductAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TOTAL_PRODUCT_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/renewalTerm"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "RENEWAL_TERM",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/totalAdjustmentTaxAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TOTAL_ADJUSTMENT_TAX_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/isGiftOrder"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "IS_GIFT_ORDER",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/promiseFulfillmentDate"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "PROMISE_FULFILLMENT_DATE",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#date"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/filedDate"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "FILED_DATE",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#date"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/iSOCulture"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "I_SO_CULTURE",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/purchaseOrderNumber"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "PURCHASE_ORDER_NUMBER",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/totalDeliveryFeeAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TOTAL_DELIVERY_FEE_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/totalDeliveryTaxAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TOTAL_DELIVERY_TAX_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/totalTaxAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TOTAL_TAX_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/orderNumber"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "ORDER_NUMBER",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/fulfilledDate"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "FULFILLED_DATE",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#date"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/paidDate"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "PAID_DATE",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#date"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/totalBookingAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TOTAL_BOOKING_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/adjustedProductTaxAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "ADJUSTED_PRODUCT_TAX_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/promiseDate"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "PROMISE_DATE",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#date"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/packedDate"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "PACKED_DATE",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#date"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/isHistoricalOnly"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "IS_HISTORICAL_ONLY",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/grandTotalAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "GRAND_TOTAL_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/isContracted"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "IS_CONTRACTED",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/canBillNow"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "CAN_BILL_NOW",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/adjustedTotalProductAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "ADJUSTED_TOTAL_PRODUCT_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/orderDiscount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "ORDER_DISCOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/orderStartDate"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "ORDER_START_DATE",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#date"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/cancelDateType"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "CANCEL_DATE_TYPE",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/isReductionOrder"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "IS_REDUCTION_ORDER",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/salesOrderSystemStatus"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "SALES_ORDER_SYSTEM_STATUS",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/isSuspended"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "IS_SUSPENDED",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/purchaseOrderDate"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "PURCHASE_ORDER_DATE",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#date"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/billingDayOfTheMonth"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "BILLING_DAY_OF_THE_MONTH",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/cancelDate"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "CANCEL_DATE",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#date"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/taxRate"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TAX_RATE",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/developerStatusCode"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "DEVELOPER_STATUS_CODE",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        }
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/totalPendingBillingAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TOTAL_PENDING_BILLING_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/checkoutDate"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "CHECKOUT_DATE",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#date"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/priceCalculationStatusMessageText"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "PRICE_CALCULATION_STATUS_MESSAGE_TEXT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/confirmationRecipientEmailText"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "CONFIRMATION_RECIPIENT_EMAIL_TEXT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/orderEndDate"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "ORDER_END_DATE",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#date"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/isTaxExempt"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "IS_TAX_EXEMPT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/totalProductTaxAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TOTAL_PRODUCT_TAX_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/isAlerted"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "IS_ALERTED",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/isAnonymous"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "IS_ANONYMOUS",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/description"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "DESCRIPTION",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/activatedDate"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "ACTIVATED_DATE",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#date"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/requestedStartDate"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "REQUESTED_START_DATE",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#date"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/companyAuthorizedDate"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "COMPANY_AUTHORIZED_DATE",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#date"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/orderInsuranceAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "ORDER_INSURANCE_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/name"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "NAME",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/isClosed"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "IS_CLOSED",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/totalDeliveryAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TOTAL_DELIVERY_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/salesOrderConfirmationStatus"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "SALES_ORDER_CONFIRMATION_STATUS",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/customerAuthorizedDate"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "CUSTOMER_AUTHORIZED_DATE",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#date"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/totalCancelledBillingAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TOTAL_CANCELLED_BILLING_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/totalAdjustedDeliveryTaxAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TOTAL_ADJUSTED_DELIVERY_TAX_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/totalAdjustmentAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TOTAL_ADJUSTMENT_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/salesOrderStatus"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "SALES_ORDER_STATUS",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/renewalUpliftRate"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "RENEWAL_UPLIFT_RATE",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/totalProductAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TOTAL_PRODUCT_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/renewalTerm"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "RENEWAL_TERM",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/totalAdjustmentTaxAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TOTAL_ADJUSTMENT_TAX_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/isGiftOrder"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "IS_GIFT_ORDER",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/promiseFulfillmentDate"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "PROMISE_FULFILLMENT_DATE",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#date"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/filedDate"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "FILED_DATE",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#date"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/iSOCulture"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "I_SO_CULTURE",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/purchaseOrderNumber"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "PURCHASE_ORDER_NUMBER",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/totalDeliveryFeeAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TOTAL_DELIVERY_FEE_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/totalDeliveryTaxAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TOTAL_DELIVERY_TAX_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/totalTaxAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TOTAL_TAX_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/orderNumber"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "ORDER_NUMBER",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/fulfilledDate"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "FULFILLED_DATE",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#date"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/paidDate"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "PAID_DATE",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#date"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/totalBookingAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TOTAL_BOOKING_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/adjustedProductTaxAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "ADJUSTED_PRODUCT_TAX_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/promiseDate"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "PROMISE_DATE",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#date"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/packedDate"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "PACKED_DATE",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#date"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/isHistoricalOnly"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "IS_HISTORICAL_ONLY",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/grandTotalAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "GRAND_TOTAL_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/isContracted"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "IS_CONTRACTED",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/canBillNow"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "CAN_BILL_NOW",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/adjustedTotalProductAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "ADJUSTED_TOTAL_PRODUCT_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/orderDiscount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "ORDER_DISCOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/orderStartDate"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "ORDER_START_DATE",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#date"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/cancelDateType"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "CANCEL_DATE_TYPE",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/isReductionOrder"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "IS_REDUCTION_ORDER",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/salesOrderSystemStatus"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "SALES_ORDER_SYSTEM_STATUS",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/isSuspended"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "IS_SUSPENDED",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/purchaseOrderDate"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "PURCHASE_ORDER_DATE",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#date"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/billingDayOfTheMonth"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "BILLING_DAY_OF_THE_MONTH",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/cancelDate"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "CANCEL_DATE",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#date"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/taxRate"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TAX_RATE",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/developerStatusCode"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "DEVELOPER_STATUS_CODE",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	}
       ]
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_payment_summary",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PAYMENT_SUMMARY"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PAYMENT_SUMMARY"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
-        "rr:class" : {
-          "@id" : "http://cloudinformationmodel.org/model/SalesOrderPaymentSummary"
-        }
+	"rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+	"rr:class" : {
+	  "@id" : "http://cloudinformationmodel.org/model/SalesOrderPaymentSummary"
+	}
       },
       "rr:predicateObjectMap" : [
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/authorizationReversalAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "AUTHORIZATION_REVERSAL_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/authorizationAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "AUTHORIZATION_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/unappliedAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "UNAPPLIED_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/paymentAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "PAYMENT_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/name"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "NAME",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/appliedAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "APPLIED_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/availableToApplyBalanceAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "AVAILABLE_TO_APPLY_BALANCE_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/capturedAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "CAPTURED_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        }
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/authorizationReversalAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "AUTHORIZATION_REVERSAL_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/authorizationAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "AUTHORIZATION_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/unappliedAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "UNAPPLIED_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/paymentAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "PAYMENT_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/name"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "NAME",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/appliedAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "APPLIED_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/availableToApplyBalanceAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "AVAILABLE_TO_APPLY_BALANCE_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/capturedAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "CAPTURED_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	}
       ]
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_tax",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_TAX"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_TAX"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
-        "rr:class" : {
-          "@id" : "http://cloudinformationmodel.org/model/SalesOrderTax"
-        }
+	"rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+	"rr:class" : {
+	  "@id" : "http://cloudinformationmodel.org/model/SalesOrderTax"
+	}
       },
       "rr:predicateObjectMap" : [
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/name"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "NAME",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/salesOrderTaxAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "SALES_ORDER_TAX_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/taxAddressCityName"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TAX_ADDRESS_CITY_NAME",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/taxErrorMessageText"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TAX_ERROR_MESSAGE_TEXT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/taxAddressStreet1Text"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TAX_ADDRESS_STREET1_TEXT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/taxRatePercent"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TAX_RATE_PERCENT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/taxAddressStreet2Text"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TAX_ADDRESS_STREET2_TEXT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        }
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/name"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "NAME",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/salesOrderTaxAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "SALES_ORDER_TAX_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/taxAddressCityName"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TAX_ADDRESS_CITY_NAME",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/taxErrorMessageText"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TAX_ERROR_MESSAGE_TEXT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/taxAddressStreet1Text"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TAX_ADDRESS_STREET1_TEXT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/taxRatePercent"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TAX_RATE_PERCENT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/taxAddressStreet2Text"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TAX_ADDRESS_STREET2_TEXT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	}
       ]
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_product_note",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PRODUCT_NOTE"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PRODUCT_NOTE"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
-        "rr:class" : {
-          "@id" : "http://cloudinformationmodel.org/model/SalesOrderProductNote"
-        }
+	"rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+	"rr:class" : {
+	  "@id" : "http://cloudinformationmodel.org/model/SalesOrderProductNote"
+	}
       },
       "rr:predicateObjectMap" : [
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/noteText"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "NOTE_TEXT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/description"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "DESCRIPTION",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        }
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/noteText"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "NOTE_TEXT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/description"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "DESCRIPTION",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	}
       ]
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_product",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PRODUCT"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PRODUCT"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
-        "rr:class" : {
-          "@id" : "http://cloudinformationmodel.org/model/SalesOrderProduct"
-        }
+	"rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+	"rr:class" : {
+	  "@id" : "http://cloudinformationmodel.org/model/SalesOrderProduct"
+	}
       },
       "rr:predicateObjectMap" : [
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/totalRecurringPriceAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TOTAL_RECURRING_PRICE_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/totalLineAdjustmentAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TOTAL_LINE_ADJUSTMENT_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/totalPriceAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TOTAL_PRICE_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/provisioningDate"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "PROVISIONING_DATE",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#date"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/fulfilledQuantity"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "FULFILLED_QUANTITY",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/totalLineAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TOTAL_LINE_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/promisedDate"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "PROMISED_DATE",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#date"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/recurringPriceAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "RECURRING_PRICE_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/endDate"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "END_DATE",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#date"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/giftOrderMessageText"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "GIFT_ORDER_MESSAGE_TEXT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/quantityOrderedUOM"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "QUANTITY_ORDERED_UO_M",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/totalProductTaxAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TOTAL_PRODUCT_TAX_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/lineAdjustmentSubTotalAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "LINE_ADJUSTMENT_SUB_TOTAL_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/commentText"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "COMMENT_TEXT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/orderProductNumber"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "ORDER_PRODUCT_NUMBER",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/description"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "DESCRIPTION",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/orderedQuantity"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "ORDERED_QUANTITY",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/salesOrderProductStatus"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "SALES_ORDER_PRODUCT_STATUS",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/unitPriceAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "UNIT_PRICE_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/requestedStartDate"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "REQUESTED_START_DATE",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#date"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/subscriptionRenewalMonthQuantity"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "SUBSCRIPTION_RENEWAL_MONTH_QUANTITY",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/orderManualAdjustmentSubTotalAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "ORDER_MANUAL_ADJUSTMENT_SUB_TOTAL_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/allocatedQuantity"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "ALLOCATED_QUANTITY",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/allocationPartitionName"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "ALLOCATION_PARTITION_NAME",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/isGift"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "IS_GIFT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/unitTaxAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "UNIT_TAX_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/deliveryTaxAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "DELIVERY_TAX_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/isBonusProduct"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "IS_BONUS_PRODUCT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/salesOrderProductAdjustedTaxAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "SALES_ORDER_PRODUCT_ADJUSTED_TAX_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/totalAdjustmentAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TOTAL_ADJUSTMENT_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/shippingTaxAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "SHIPPING_TAX_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/totalListPriceAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TOTAL_LIST_PRICE_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/totalAdjustmentTaxAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TOTAL_ADJUSTMENT_TAX_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/orderAdjustmentSubTotalAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "ORDER_ADJUSTMENT_SUB_TOTAL_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/subscriptionTermQuantity"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "SUBSCRIPTION_TERM_QUANTITY",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/totalDistributedAdjustmentTaxAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TOTAL_DISTRIBUTED_ADJUSTMENT_TAX_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/totalDistributedTaxAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TOTAL_DISTRIBUTED_TAX_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/totalTaxAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TOTAL_TAX_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/adjustedDeliveryTaxAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "ADJUSTED_DELIVERY_TAX_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/listPriceAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "LIST_PRICE_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/segmentIndex"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "SEGMENT_INDEX",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/shippingCostAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "SHIPPING_COST_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/isBundleRoot"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "IS_BUNDLE_ROOT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/discountAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "DISCOUNT_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/cancelledQuantity"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "CANCELLED_QUANTITY",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/listPriceQuantityUOM"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "LIST_PRICE_QUANTITY_UO_M",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/totalDistributedAdjustmentAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TOTAL_DISTRIBUTED_ADJUSTMENT_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/segmentIndexNumber"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "SEGMENT_INDEX_NUMBER",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/totalUnitPriceAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TOTAL_UNIT_PRICE_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/availableQuantity"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "AVAILABLE_QUANTITY",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/requestedEndDate"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "REQUESTED_END_DATE",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#date"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/allocationGroupName"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "ALLOCATION_GROUP_NAME",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/giftRecipientTelephoneNumber"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "GIFT_RECIPIENT_TELEPHONE_NUMBER",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/isAutomaticallyRenewed"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "IS_AUTOMATICALLY_RENEWED",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/discountPercent"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "DISCOUNT_PERCENT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/totalManualAdjustmentAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TOTAL_MANUAL_ADJUSTMENT_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/handlingCostAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "HANDLING_COST_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        }
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/totalRecurringPriceAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TOTAL_RECURRING_PRICE_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/totalLineAdjustmentAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TOTAL_LINE_ADJUSTMENT_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/totalPriceAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TOTAL_PRICE_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/provisioningDate"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "PROVISIONING_DATE",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#date"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/fulfilledQuantity"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "FULFILLED_QUANTITY",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/totalLineAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TOTAL_LINE_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/promisedDate"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "PROMISED_DATE",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#date"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/recurringPriceAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "RECURRING_PRICE_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/endDate"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "END_DATE",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#date"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/giftOrderMessageText"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "GIFT_ORDER_MESSAGE_TEXT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/quantityOrderedUOM"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "QUANTITY_ORDERED_UO_M",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/totalProductTaxAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TOTAL_PRODUCT_TAX_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/lineAdjustmentSubTotalAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "LINE_ADJUSTMENT_SUB_TOTAL_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/commentText"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "COMMENT_TEXT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/orderProductNumber"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "ORDER_PRODUCT_NUMBER",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/description"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "DESCRIPTION",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/orderedQuantity"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "ORDERED_QUANTITY",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/salesOrderProductStatus"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "SALES_ORDER_PRODUCT_STATUS",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/unitPriceAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "UNIT_PRICE_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/requestedStartDate"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "REQUESTED_START_DATE",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#date"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/subscriptionRenewalMonthQuantity"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "SUBSCRIPTION_RENEWAL_MONTH_QUANTITY",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/orderManualAdjustmentSubTotalAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "ORDER_MANUAL_ADJUSTMENT_SUB_TOTAL_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/allocatedQuantity"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "ALLOCATED_QUANTITY",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/allocationPartitionName"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "ALLOCATION_PARTITION_NAME",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/isGift"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "IS_GIFT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/unitTaxAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "UNIT_TAX_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/deliveryTaxAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "DELIVERY_TAX_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/isBonusProduct"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "IS_BONUS_PRODUCT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/salesOrderProductAdjustedTaxAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "SALES_ORDER_PRODUCT_ADJUSTED_TAX_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/totalAdjustmentAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TOTAL_ADJUSTMENT_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/shippingTaxAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "SHIPPING_TAX_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/totalListPriceAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TOTAL_LIST_PRICE_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/totalAdjustmentTaxAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TOTAL_ADJUSTMENT_TAX_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/orderAdjustmentSubTotalAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "ORDER_ADJUSTMENT_SUB_TOTAL_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/subscriptionTermQuantity"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "SUBSCRIPTION_TERM_QUANTITY",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/totalDistributedAdjustmentTaxAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TOTAL_DISTRIBUTED_ADJUSTMENT_TAX_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/totalDistributedTaxAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TOTAL_DISTRIBUTED_TAX_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/totalTaxAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TOTAL_TAX_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/adjustedDeliveryTaxAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "ADJUSTED_DELIVERY_TAX_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/listPriceAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "LIST_PRICE_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/segmentIndex"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "SEGMENT_INDEX",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/shippingCostAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "SHIPPING_COST_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/isBundleRoot"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "IS_BUNDLE_ROOT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/discountAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "DISCOUNT_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/cancelledQuantity"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "CANCELLED_QUANTITY",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/listPriceQuantityUOM"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "LIST_PRICE_QUANTITY_UO_M",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/totalDistributedAdjustmentAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TOTAL_DISTRIBUTED_ADJUSTMENT_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/segmentIndexNumber"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "SEGMENT_INDEX_NUMBER",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/totalUnitPriceAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TOTAL_UNIT_PRICE_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/availableQuantity"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "AVAILABLE_QUANTITY",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/requestedEndDate"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "REQUESTED_END_DATE",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#date"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/allocationGroupName"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "ALLOCATION_GROUP_NAME",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/giftRecipientTelephoneNumber"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "GIFT_RECIPIENT_TELEPHONE_NUMBER",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/isAutomaticallyRenewed"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "IS_AUTOMATICALLY_RENEWED",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/discountPercent"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "DISCOUNT_PERCENT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/totalManualAdjustmentAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TOTAL_MANUAL_ADJUSTMENT_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/handlingCostAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "HANDLING_COST_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	}
       ]
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_price_adjustment",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PRICE_ADJUSTMENT"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PRICE_ADJUSTMENT"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
-        "rr:class" : {
-          "@id" : "http://cloudinformationmodel.org/model/SalesOrderPriceAdjustment"
-        }
+	"rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+	"rr:class" : {
+	  "@id" : "http://cloudinformationmodel.org/model/SalesOrderPriceAdjustment"
+	}
       },
       "rr:predicateObjectMap" : [
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/totalAdjustmentTaxAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TOTAL_ADJUSTMENT_TAX_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        }
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/totalAdjustmentTaxAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TOTAL_ADJUSTMENT_TAX_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	}
       ]
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_product_group",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PRODUCT_GROUP"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PRODUCT_GROUP"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
-        "rr:class" : {
-          "@id" : "http://cloudinformationmodel.org/model/SalesOrderProductGroup"
-        }
+	"rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+	"rr:class" : {
+	  "@id" : "http://cloudinformationmodel.org/model/SalesOrderProductGroup"
+	}
       },
       "rr:predicateObjectMap" : [
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/description"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "DESCRIPTION",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/salesOrderProductGroupType"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "SALES_ORDER_PRODUCT_GROUP_TYPE",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/name"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "NAME",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        }
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/description"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "DESCRIPTION",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/salesOrderProductGroupType"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "SALES_ORDER_PRODUCT_GROUP_TYPE",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/name"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "NAME",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	}
       ]
     },
     {
       "@id" : "/sales_order_entity_group/product_relationship_type",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.PRODUCT_RELATIONSHIP_TYPE"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.PRODUCT_RELATIONSHIP_TYPE"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
-        "rr:class" : {
-          "@id" : "http://cloudinformationmodel.org/model/ProductRelationshipType"
-        }
+	"rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+	"rr:class" : {
+	  "@id" : "http://cloudinformationmodel.org/model/OrderProductRelationshipType"
+	}
       },
       "rr:predicateObjectMap" : [
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/parentProductRole"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "PARENT_PRODUCT_ROLE",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/childProductRole"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "CHILD_PRODUCT_ROLE",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        }
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/parentProductRole"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "PARENT_PRODUCT_ROLE",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/childProductRole"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "CHILD_PRODUCT_ROLE",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	}
       ]
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_product_reason",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PRODUCT_REASON"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PRODUCT_REASON"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
-        "rr:class" : {
-          "@id" : "http://cloudinformationmodel.org/model/SalesOrderProductReason"
-        }
+	"rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+	"rr:class" : {
+	  "@id" : "http://cloudinformationmodel.org/model/SalesOrderProductReason"
+	}
       },
       "rr:predicateObjectMap" : [
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/salesOrderProductReasonCategory"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "SALES_ORDER_PRODUCT_REASON_CATEGORY",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/name"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "NAME",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        }
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/salesOrderProductReasonCategory"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "SALES_ORDER_PRODUCT_REASON_CATEGORY",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/name"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "NAME",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	}
       ]
     },
     {
       "@id" : "/sales_order_entity_group/order_delivery_method",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.ORDER_DELIVERY_METHOD"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.ORDER_DELIVERY_METHOD"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
-        "rr:class" : {
-          "@id" : "http://cloudinformationmodel.org/model/OrderDeliveryMethod"
-        }
+	"rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+	"rr:class" : {
+	  "@id" : "http://cloudinformationmodel.org/model/OrderDeliveryMethod"
+	}
       },
       "rr:predicateObjectMap" : [
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/externalRecord"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "EXTERNAL_RECORD",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/name"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "NAME",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        }
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/externalRecord"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "EXTERNAL_RECORD",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/name"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "NAME",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	}
       ]
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_change_log",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_CHANGE_LOG"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_CHANGE_LOG"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
-        "rr:class" : {
-          "@id" : "http://cloudinformationmodel.org/model/SalesOrderChangeLog"
-        }
+	"rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+	"rr:class" : {
+	  "@id" : "http://cloudinformationmodel.org/model/SalesOrderChangeLog"
+	}
       },
       "rr:predicateObjectMap" : [
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/name"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "NAME",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        }
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/name"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "NAME",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	}
       ]
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_product_tax",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PRODUCT_TAX"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PRODUCT_TAX"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
-        "rr:class" : {
-          "@id" : "http://cloudinformationmodel.org/model/SalesOrderProductTax"
-        }
+	"rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+	"rr:class" : {
+	  "@id" : "http://cloudinformationmodel.org/model/SalesOrderProductTax"
+	}
       },
       "rr:predicateObjectMap" : [
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/description"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "DESCRIPTION",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/name"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "NAME",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/taxEffectiveDate"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TAX_EFFECTIVE_DATE",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#date"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/taxAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TAX_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/salesOrderTaxAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "SALES_ORDER_TAX_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/taxAddressCityName"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TAX_ADDRESS_CITY_NAME",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/taxErrorMessageText"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TAX_ERROR_MESSAGE_TEXT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/taxAddressStreet1Text"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TAX_ADDRESS_STREET1_TEXT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/taxRatePercent"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TAX_RATE_PERCENT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/taxAddressStreet2Text"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TAX_ADDRESS_STREET2_TEXT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        }
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/description"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "DESCRIPTION",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/name"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "NAME",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/taxEffectiveDate"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TAX_EFFECTIVE_DATE",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#date"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/taxAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TAX_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/salesOrderTaxAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "SALES_ORDER_TAX_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/taxAddressCityName"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TAX_ADDRESS_CITY_NAME",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/taxErrorMessageText"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TAX_ERROR_MESSAGE_TEXT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/taxAddressStreet1Text"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TAX_ADDRESS_STREET1_TEXT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/taxRatePercent"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TAX_RATE_PERCENT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/taxAddressStreet2Text"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TAX_ADDRESS_STREET2_TEXT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	}
       ]
     },
     {
       "@id" : "/sales_order_entity_group/price_adjustment_group",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.PRICE_ADJUSTMENT_GROUP"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.PRICE_ADJUSTMENT_GROUP"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{PRICE_ADJUSTMENT_GROUP_ID}",
-        "rr:class" : {
-          "@id" : "http://cloudinformationmodel.org/model/PriceAdjustmentGroup"
-        }
+	"rr:template" : "http://cloudinformationmodel.org/instances#{PRICE_ADJUSTMENT_GROUP_ID}",
+	"rr:class" : {
+	  "@id" : "http://cloudinformationmodel.org/model/PriceAdjustmentGroup"
+	}
       },
       "rr:predicateObjectMap" : [
       ]
@@ -1871,1259 +1871,1259 @@
     {
       "@id" : "/sales_order_entity_group/sales_order_delivery_group",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_DELIVERY_GROUP"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_DELIVERY_GROUP"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
-        "rr:class" : {
-          "@id" : "http://cloudinformationmodel.org/model/SalesOrderDeliveryGroup"
-        }
+	"rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+	"rr:class" : {
+	  "@id" : "http://cloudinformationmodel.org/model/SalesOrderDeliveryGroup"
+	}
       },
       "rr:predicateObjectMap" : [
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/totalPriceAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TOTAL_PRICE_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/totalDeliveryAdjustmentTaxAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TOTAL_DELIVERY_ADJUSTMENT_TAX_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/promisedDate"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "PROMISED_DATE",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#date"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/giftMessageText"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "GIFT_MESSAGE_TEXT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/deliveryInstructionsText"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "DELIVERY_INSTRUCTIONS_TEXT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/totalProductTaxAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TOTAL_PRODUCT_TAX_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/totalDeliveryChargeAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TOTAL_DELIVERY_CHARGE_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/description"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "DESCRIPTION",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/grandTotalDeliveryAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "GRAND_TOTAL_DELIVERY_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/name"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "NAME",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/isGift"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "IS_GIFT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/salesOrderDeliveryStatus"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "SALES_ORDER_DELIVERY_STATUS",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/totalDeliveryAdjustmentAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TOTAL_DELIVERY_ADJUSTMENT_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/totalDeliveryTaxAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TOTAL_DELIVERY_TAX_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/totalTaxAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TOTAL_TAX_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/totalDeliveryChargeTaxAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TOTAL_DELIVERY_CHARGE_TAX_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/salesOrderDeliveryGroupNumber"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "SALES_ORDER_DELIVERY_GROUP_NUMBER",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/desiredDeliveryDate"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "DESIRED_DELIVERY_DATE",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#date"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/totalUnitPriceAmount"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "TOTAL_UNIT_PRICE_AMOUNT",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-            }
-          }
-        }
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/totalPriceAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TOTAL_PRICE_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/totalDeliveryAdjustmentTaxAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TOTAL_DELIVERY_ADJUSTMENT_TAX_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/promisedDate"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "PROMISED_DATE",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#date"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/giftMessageText"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "GIFT_MESSAGE_TEXT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/deliveryInstructionsText"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "DELIVERY_INSTRUCTIONS_TEXT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/totalProductTaxAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TOTAL_PRODUCT_TAX_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/totalDeliveryChargeAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TOTAL_DELIVERY_CHARGE_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/description"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "DESCRIPTION",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/grandTotalDeliveryAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "GRAND_TOTAL_DELIVERY_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/name"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "NAME",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/isGift"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "IS_GIFT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/salesOrderDeliveryStatus"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "SALES_ORDER_DELIVERY_STATUS",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/totalDeliveryAdjustmentAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TOTAL_DELIVERY_ADJUSTMENT_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/totalDeliveryTaxAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TOTAL_DELIVERY_TAX_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/totalTaxAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TOTAL_TAX_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/totalDeliveryChargeTaxAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TOTAL_DELIVERY_CHARGE_TAX_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/salesOrderDeliveryGroupNumber"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "SALES_ORDER_DELIVERY_GROUP_NUMBER",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/desiredDeliveryDate"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "DESIRED_DELIVERY_DATE",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#date"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/totalUnitPriceAmount"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "TOTAL_UNIT_PRICE_AMOUNT",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+	    }
+	  }
+	}
       ]
     },
     {
       "@id" : "/sales_order_entity_group/sales_channel",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_CHANNEL"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_CHANNEL"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
-        "rr:class" : {
-          "@id" : "http://cloudinformationmodel.org/model/SalesChannel"
-        }
+	"rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
+	"rr:class" : {
+	  "@id" : "http://cloudinformationmodel.org/model/SalesChannel"
+	}
       },
       "rr:predicateObjectMap" : [
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/externalRecord"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "EXTERNAL_RECORD",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/salesChannelType"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "SALES_CHANNEL_TYPE",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/description"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "DESCRIPTION",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/name"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "NAME",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/salesChannelNumber"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "SALES_CHANNEL_NUMBER",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        }
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/externalRecord"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "EXTERNAL_RECORD",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/salesChannelType"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "SALES_CHANNEL_TYPE",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/description"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "DESCRIPTION",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/name"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "NAME",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	},
+	{
+	  "rr:predicate" : {
+	    "@id" : "http://cloudinformationmodel.org/model/salesChannelNumber"
+	  },
+	  "rr:objectMap" : {
+	    "rr:column" : "SALES_CHANNEL_NUMBER",
+	    "rr:datatype" : {
+	      "@id" : "http://www.w3.org/2001/XMLSchema#string"
+	    }
+	  }
+	}
       ]
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_bill_to_email_join",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_BILL_TO_EMAIL_JOIN"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_BILL_TO_EMAIL_JOIN"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_ID}"
+	"rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_ID}"
       },
       "rr:predicateObjectMap" : {
-        "rr:predicate" : {
-          "@id" : "http://cloudinformationmodel.org/model/billToEmail"
-        },
-        "rr:objectMap" : {
-          "rr:parentTriplesMap" : {
-            "@id" : "/contact_point_entity_group/contact_point_email"
-          },
-          "rr:joinCondition" : {
-            "rr:child" : "CONTACT_POINT_EMAIL_ID",
-            "rr:parent" : "ID"
-          }
-        }
+	"rr:predicate" : {
+	  "@id" : "http://cloudinformationmodel.org/model/billToEmail"
+	},
+	"rr:objectMap" : {
+	  "rr:parentTriplesMap" : {
+	    "@id" : "/contact_point_entity_group/contact_point_email"
+	  },
+	  "rr:joinCondition" : {
+	    "rr:child" : "CONTACT_POINT_EMAIL_ID",
+	    "rr:parent" : "ID"
+	  }
+	}
       }
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_ship_to_email_join",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_SHIP_TO_EMAIL_JOIN"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_SHIP_TO_EMAIL_JOIN"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_ID}"
+	"rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_ID}"
       },
       "rr:predicateObjectMap" : {
-        "rr:predicate" : {
-          "@id" : "http://cloudinformationmodel.org/model/shipToEmail"
-        },
-        "rr:objectMap" : {
-          "rr:parentTriplesMap" : {
-            "@id" : "/contact_point_entity_group/contact_point_email"
-          },
-          "rr:joinCondition" : {
-            "rr:child" : "CONTACT_POINT_EMAIL_ID",
-            "rr:parent" : "ID"
-          }
-        }
+	"rr:predicate" : {
+	  "@id" : "http://cloudinformationmodel.org/model/shipToEmail"
+	},
+	"rr:objectMap" : {
+	  "rr:parentTriplesMap" : {
+	    "@id" : "/contact_point_entity_group/contact_point_email"
+	  },
+	  "rr:joinCondition" : {
+	    "rr:child" : "CONTACT_POINT_EMAIL_ID",
+	    "rr:parent" : "ID"
+	  }
+	}
       }
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_payment_method_join",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PAYMENT_METHOD_JOIN"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PAYMENT_METHOD_JOIN"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_ID}"
+	"rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_ID}"
       },
       "rr:predicateObjectMap" : {
-        "rr:predicate" : {
-          "@id" : "http://cloudinformationmodel.org/model/paymentMethod"
-        },
-        "rr:objectMap" : {
-          "rr:parentTriplesMap" : {
-            "@id" : "/payment_method_entity_group/payment_method"
-          },
-          "rr:joinCondition" : {
-            "rr:child" : "PAYMENT_METHOD_ID",
-            "rr:parent" : "ID"
-          }
-        }
+	"rr:predicate" : {
+	  "@id" : "http://cloudinformationmodel.org/model/paymentMethod"
+	},
+	"rr:objectMap" : {
+	  "rr:parentTriplesMap" : {
+	    "@id" : "/payment_method_entity_group/payment_method"
+	  },
+	  "rr:joinCondition" : {
+	    "rr:child" : "PAYMENT_METHOD_ID",
+	    "rr:parent" : "ID"
+	  }
+	}
       }
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_original_order_join",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_ORIGINAL_ORDER_JOIN"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_ORIGINAL_ORDER_JOIN"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_ID_LEFT}"
+	"rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_ID_LEFT}"
       },
       "rr:predicateObjectMap" : {
-        "rr:predicate" : {
-          "@id" : "http://cloudinformationmodel.org/model/originalOrder"
-        },
-        "rr:objectMap" : {
-          "rr:parentTriplesMap" : {
-            "@id" : "/sales_order_entity_group/sales_order"
-          },
-          "rr:joinCondition" : {
-            "rr:child" : "SALES_ORDER_ID_RIGHT",
-            "rr:parent" : "ID"
-          }
-        }
+	"rr:predicate" : {
+	  "@id" : "http://cloudinformationmodel.org/model/originalOrder"
+	},
+	"rr:objectMap" : {
+	  "rr:parentTriplesMap" : {
+	    "@id" : "/sales_order_entity_group/sales_order"
+	  },
+	  "rr:joinCondition" : {
+	    "rr:child" : "SALES_ORDER_ID_RIGHT",
+	    "rr:parent" : "ID"
+	  }
+	}
       }
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_bill_to_account_join",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_BILL_TO_ACCOUNT_JOIN"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_BILL_TO_ACCOUNT_JOIN"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_ID}"
+	"rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_ID}"
       },
       "rr:predicateObjectMap" : {
-        "rr:predicate" : {
-          "@id" : "http://cloudinformationmodel.org/model/billToAccount"
-        },
-        "rr:objectMap" : {
-          "rr:parentTriplesMap" : {
-            "@id" : "/account_entity_group/account"
-          },
-          "rr:joinCondition" : {
-            "rr:child" : "ACCOUNT_ID",
-            "rr:parent" : "ID"
-          }
-        }
+	"rr:predicate" : {
+	  "@id" : "http://cloudinformationmodel.org/model/billToAccount"
+	},
+	"rr:objectMap" : {
+	  "rr:parentTriplesMap" : {
+	    "@id" : "/account_entity_group/account"
+	  },
+	  "rr:joinCondition" : {
+	    "rr:child" : "ACCOUNT_ID",
+	    "rr:parent" : "ID"
+	  }
+	}
       }
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_user_device_session_join",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_USER_DEVICE_SESSION_JOIN"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_USER_DEVICE_SESSION_JOIN"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_ID}"
+	"rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_ID}"
       },
       "rr:predicateObjectMap" : {
-        "rr:predicate" : {
-          "@id" : "http://cloudinformationmodel.org/model/userDeviceSession"
-        },
-        "rr:objectMap" : {
-          "rr:parentTriplesMap" : {
-            "@id" : "/product_attribute_entity_group/device_user_session"
-          },
-          "rr:joinCondition" : {
-            "rr:child" : "DEVICE_USER_SESSION_ID",
-            "rr:parent" : "ID"
-          }
-        }
+	"rr:predicate" : {
+	  "@id" : "http://cloudinformationmodel.org/model/userDeviceSession"
+	},
+	"rr:objectMap" : {
+	  "rr:parentTriplesMap" : {
+	    "@id" : "/product_attribute_entity_group/device_user_session"
+	  },
+	  "rr:joinCondition" : {
+	    "rr:child" : "DEVICE_USER_SESSION_ID",
+	    "rr:parent" : "ID"
+	  }
+	}
       }
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_seller_join",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_SELLER_JOIN"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_SELLER_JOIN"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_ID}"
+	"rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_ID}"
       },
       "rr:predicateObjectMap" : {
-        "rr:predicate" : {
-          "@id" : "http://cloudinformationmodel.org/model/seller"
-        },
-        "rr:objectMap" : {
-          "rr:parentTriplesMap" : {
-            "@id" : "/party_role_entity_group/seller"
-          },
-          "rr:joinCondition" : {
-            "rr:child" : "SELLER_ID",
-            "rr:parent" : "ID"
-          }
-        }
+	"rr:predicate" : {
+	  "@id" : "http://cloudinformationmodel.org/model/seller"
+	},
+	"rr:objectMap" : {
+	  "rr:parentTriplesMap" : {
+	    "@id" : "/party_role_entity_group/seller"
+	  },
+	  "rr:joinCondition" : {
+	    "rr:child" : "SELLER_ID",
+	    "rr:parent" : "ID"
+	  }
+	}
       }
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_bill_to_address_join",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_BILL_TO_ADDRESS_JOIN"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_BILL_TO_ADDRESS_JOIN"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_ID}"
+	"rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_ID}"
       },
       "rr:predicateObjectMap" : {
-        "rr:predicate" : {
-          "@id" : "http://cloudinformationmodel.org/model/billToAddress"
-        },
-        "rr:objectMap" : {
-          "rr:parentTriplesMap" : {
-            "@id" : "/contact_point_entity_group/contact_point_address"
-          },
-          "rr:joinCondition" : {
-            "rr:child" : "CONTACT_POINT_ADDRESS_ID",
-            "rr:parent" : "ID"
-          }
-        }
+	"rr:predicate" : {
+	  "@id" : "http://cloudinformationmodel.org/model/billToAddress"
+	},
+	"rr:objectMap" : {
+	  "rr:parentTriplesMap" : {
+	    "@id" : "/contact_point_entity_group/contact_point_address"
+	  },
+	  "rr:joinCondition" : {
+	    "rr:child" : "CONTACT_POINT_ADDRESS_ID",
+	    "rr:parent" : "ID"
+	  }
+	}
       }
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_ship_to_address_join",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_SHIP_TO_ADDRESS_JOIN"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_SHIP_TO_ADDRESS_JOIN"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_ID}"
+	"rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_ID}"
       },
       "rr:predicateObjectMap" : {
-        "rr:predicate" : {
-          "@id" : "http://cloudinformationmodel.org/model/shipToAddress"
-        },
-        "rr:objectMap" : {
-          "rr:parentTriplesMap" : {
-            "@id" : "/contact_point_entity_group/contact_point_address"
-          },
-          "rr:joinCondition" : {
-            "rr:child" : "CONTACT_POINT_ADDRESS_ID",
-            "rr:parent" : "ID"
-          }
-        }
+	"rr:predicate" : {
+	  "@id" : "http://cloudinformationmodel.org/model/shipToAddress"
+	},
+	"rr:objectMap" : {
+	  "rr:parentTriplesMap" : {
+	    "@id" : "/contact_point_entity_group/contact_point_address"
+	  },
+	  "rr:joinCondition" : {
+	    "rr:child" : "CONTACT_POINT_ADDRESS_ID",
+	    "rr:parent" : "ID"
+	  }
+	}
       }
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_bill_to_contact_join",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_BILL_TO_CONTACT_JOIN"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_BILL_TO_CONTACT_JOIN"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_ID}"
+	"rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_ID}"
       },
       "rr:predicateObjectMap" : {
-        "rr:predicate" : {
-          "@id" : "http://cloudinformationmodel.org/model/billToContact"
-        },
-        "rr:objectMap" : {
-          "rr:parentTriplesMap" : {
-            "@id" : "/account_entity_group/account_contact"
-          },
-          "rr:joinCondition" : {
-            "rr:child" : "ACCOUNT_CONTACT_ID",
-            "rr:parent" : "ID"
-          }
-        }
+	"rr:predicate" : {
+	  "@id" : "http://cloudinformationmodel.org/model/billToContact"
+	},
+	"rr:objectMap" : {
+	  "rr:parentTriplesMap" : {
+	    "@id" : "/account_entity_group/account_contact"
+	  },
+	  "rr:joinCondition" : {
+	    "rr:child" : "ACCOUNT_CONTACT_ID",
+	    "rr:parent" : "ID"
+	  }
+	}
       }
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_internal_business_unit_join",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_INTERNAL_BUSINESS_UNIT_JOIN"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_INTERNAL_BUSINESS_UNIT_JOIN"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_ID}"
+	"rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_ID}"
       },
       "rr:predicateObjectMap" : {
-        "rr:predicate" : {
-          "@id" : "http://cloudinformationmodel.org/model/internalBusinessUnit"
-        },
-        "rr:objectMap" : {
-          "rr:parentTriplesMap" : {
-            "@id" : "/party_entity_group/internal_business_unit"
-          },
-          "rr:joinCondition" : {
-            "rr:child" : "INTERNAL_BUSINESS_UNIT_ID",
-            "rr:parent" : "ID"
-          }
-        }
+	"rr:predicate" : {
+	  "@id" : "http://cloudinformationmodel.org/model/internalBusinessUnit"
+	},
+	"rr:objectMap" : {
+	  "rr:parentTriplesMap" : {
+	    "@id" : "/party_entity_group/internal_business_unit"
+	  },
+	  "rr:joinCondition" : {
+	    "rr:child" : "INTERNAL_BUSINESS_UNIT_ID",
+	    "rr:parent" : "ID"
+	  }
+	}
       }
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_sales_channel_join",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_SALES_CHANNEL_JOIN"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_SALES_CHANNEL_JOIN"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_ID}"
+	"rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_ID}"
       },
       "rr:predicateObjectMap" : {
-        "rr:predicate" : {
-          "@id" : "http://cloudinformationmodel.org/model/salesChannel"
-        },
-        "rr:objectMap" : {
-          "rr:parentTriplesMap" : {
-            "@id" : "/sales_order_entity_group/sales_channel"
-          },
-          "rr:joinCondition" : {
-            "rr:child" : "SALES_CHANNEL_ID",
-            "rr:parent" : "ID"
-          }
-        }
+	"rr:predicate" : {
+	  "@id" : "http://cloudinformationmodel.org/model/salesChannel"
+	},
+	"rr:objectMap" : {
+	  "rr:parentTriplesMap" : {
+	    "@id" : "/sales_order_entity_group/sales_channel"
+	  },
+	  "rr:joinCondition" : {
+	    "rr:child" : "SALES_CHANNEL_ID",
+	    "rr:parent" : "ID"
+	  }
+	}
       }
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_bill_to_phone_number_join",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_BILL_TO_PHONE_NUMBER_JOIN"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_BILL_TO_PHONE_NUMBER_JOIN"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_ID}"
+	"rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_ID}"
       },
       "rr:predicateObjectMap" : {
-        "rr:predicate" : {
-          "@id" : "http://cloudinformationmodel.org/model/billToPhoneNumber"
-        },
-        "rr:objectMap" : {
-          "rr:parentTriplesMap" : {
-            "@id" : "/contact_point_entity_group/contact_point_phone"
-          },
-          "rr:joinCondition" : {
-            "rr:child" : "CONTACT_POINT_PHONE_ID",
-            "rr:parent" : "ID"
-          }
-        }
+	"rr:predicate" : {
+	  "@id" : "http://cloudinformationmodel.org/model/billToPhoneNumber"
+	},
+	"rr:objectMap" : {
+	  "rr:parentTriplesMap" : {
+	    "@id" : "/contact_point_entity_group/contact_point_phone"
+	  },
+	  "rr:joinCondition" : {
+	    "rr:child" : "CONTACT_POINT_PHONE_ID",
+	    "rr:parent" : "ID"
+	  }
+	}
       }
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_sold_to_customer_join",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_SOLD_TO_CUSTOMER_JOIN"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_SOLD_TO_CUSTOMER_JOIN"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_ID}"
+	"rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_ID}"
       },
       "rr:predicateObjectMap" : {
-        "rr:predicate" : {
-          "@id" : "http://cloudinformationmodel.org/model/soldToCustomer"
-        },
-        "rr:objectMap" : {
-          "rr:parentTriplesMap" : {
-            "@id" : "/party_role_entity_group/customer"
-          },
-          "rr:joinCondition" : {
-            "rr:child" : "CUSTOMER_ID",
-            "rr:parent" : "ID"
-          }
-        }
+	"rr:predicate" : {
+	  "@id" : "http://cloudinformationmodel.org/model/soldToCustomer"
+	},
+	"rr:objectMap" : {
+	  "rr:parentTriplesMap" : {
+	    "@id" : "/party_role_entity_group/customer"
+	  },
+	  "rr:joinCondition" : {
+	    "rr:child" : "CUSTOMER_ID",
+	    "rr:parent" : "ID"
+	  }
+	}
       }
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_ship_to_contact_join",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_SHIP_TO_CONTACT_JOIN"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_SHIP_TO_CONTACT_JOIN"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_ID}"
+	"rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_ID}"
       },
       "rr:predicateObjectMap" : {
-        "rr:predicate" : {
-          "@id" : "http://cloudinformationmodel.org/model/shipToContact"
-        },
-        "rr:objectMap" : {
-          "rr:parentTriplesMap" : {
-            "@id" : "/account_entity_group/account_contact"
-          },
-          "rr:joinCondition" : {
-            "rr:child" : "ACCOUNT_CONTACT_ID",
-            "rr:parent" : "ID"
-          }
-        }
+	"rr:predicate" : {
+	  "@id" : "http://cloudinformationmodel.org/model/shipToContact"
+	},
+	"rr:objectMap" : {
+	  "rr:parentTriplesMap" : {
+	    "@id" : "/account_entity_group/account_contact"
+	  },
+	  "rr:joinCondition" : {
+	    "rr:child" : "ACCOUNT_CONTACT_ID",
+	    "rr:parent" : "ID"
+	  }
+	}
       }
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_payment_summary_sales_order_join",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PAYMENT_SUMMARY_SALES_ORDER_JOIN"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PAYMENT_SUMMARY_SALES_ORDER_JOIN"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_PAYMENT_SUMMARY_ID}"
+	"rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_PAYMENT_SUMMARY_ID}"
       },
       "rr:predicateObjectMap" : {
-        "rr:predicate" : {
-          "@id" : "http://cloudinformationmodel.org/model/salesOrder"
-        },
-        "rr:objectMap" : {
-          "rr:parentTriplesMap" : {
-            "@id" : "/sales_order_entity_group/sales_order"
-          },
-          "rr:joinCondition" : {
-            "rr:child" : "SALES_ORDER_ID",
-            "rr:parent" : "ID"
-          }
-        }
+	"rr:predicate" : {
+	  "@id" : "http://cloudinformationmodel.org/model/salesOrder"
+	},
+	"rr:objectMap" : {
+	  "rr:parentTriplesMap" : {
+	    "@id" : "/sales_order_entity_group/sales_order"
+	  },
+	  "rr:joinCondition" : {
+	    "rr:child" : "SALES_ORDER_ID",
+	    "rr:parent" : "ID"
+	  }
+	}
       }
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_payment_summary_payment_method_join",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PAYMENT_SUMMARY_PAYMENT_METHOD_JOIN"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PAYMENT_SUMMARY_PAYMENT_METHOD_JOIN"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_PAYMENT_SUMMARY_ID}"
+	"rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_PAYMENT_SUMMARY_ID}"
       },
       "rr:predicateObjectMap" : {
-        "rr:predicate" : {
-          "@id" : "http://cloudinformationmodel.org/model/paymentMethod"
-        },
-        "rr:objectMap" : {
-          "rr:parentTriplesMap" : {
-            "@id" : "/payment_method_entity_group/payment_method"
-          },
-          "rr:joinCondition" : {
-            "rr:child" : "PAYMENT_METHOD_ID",
-            "rr:parent" : "ID"
-          }
-        }
+	"rr:predicate" : {
+	  "@id" : "http://cloudinformationmodel.org/model/paymentMethod"
+	},
+	"rr:objectMap" : {
+	  "rr:parentTriplesMap" : {
+	    "@id" : "/payment_method_entity_group/payment_method"
+	  },
+	  "rr:joinCondition" : {
+	    "rr:child" : "PAYMENT_METHOD_ID",
+	    "rr:parent" : "ID"
+	  }
+	}
       }
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_product_shipping_phone_join",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PRODUCT_SHIPPING_PHONE_JOIN"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PRODUCT_SHIPPING_PHONE_JOIN"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_PRODUCT_ID}"
+	"rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_PRODUCT_ID}"
       },
       "rr:predicateObjectMap" : {
-        "rr:predicate" : {
-          "@id" : "http://cloudinformationmodel.org/model/shippingPhone"
-        },
-        "rr:objectMap" : {
-          "rr:parentTriplesMap" : {
-            "@id" : "/contact_point_entity_group/contact_point_phone"
-          },
-          "rr:joinCondition" : {
-            "rr:child" : "CONTACT_POINT_PHONE_ID",
-            "rr:parent" : "ID"
-          }
-        }
+	"rr:predicate" : {
+	  "@id" : "http://cloudinformationmodel.org/model/shippingPhone"
+	},
+	"rr:objectMap" : {
+	  "rr:parentTriplesMap" : {
+	    "@id" : "/contact_point_entity_group/contact_point_phone"
+	  },
+	  "rr:joinCondition" : {
+	    "rr:child" : "CONTACT_POINT_PHONE_ID",
+	    "rr:parent" : "ID"
+	  }
+	}
       }
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_product_sales_order_product_reason_join",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PRODUCT_SALES_ORDER_PRODUCT_REASON_JOIN"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PRODUCT_SALES_ORDER_PRODUCT_REASON_JOIN"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_PRODUCT_ID}"
+	"rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_PRODUCT_ID}"
       },
       "rr:predicateObjectMap" : {
-        "rr:predicate" : {
-          "@id" : "http://cloudinformationmodel.org/model/salesOrderProductReason"
-        },
-        "rr:objectMap" : {
-          "rr:parentTriplesMap" : {
-            "@id" : "/sales_order_entity_group/sales_order_product_reason"
-          },
-          "rr:joinCondition" : {
-            "rr:child" : "SALES_ORDER_PRODUCT_REASON_ID",
-            "rr:parent" : "ID"
-          }
-        }
+	"rr:predicate" : {
+	  "@id" : "http://cloudinformationmodel.org/model/salesOrderProductReason"
+	},
+	"rr:objectMap" : {
+	  "rr:parentTriplesMap" : {
+	    "@id" : "/sales_order_entity_group/sales_order_product_reason"
+	  },
+	  "rr:joinCondition" : {
+	    "rr:child" : "SALES_ORDER_PRODUCT_REASON_ID",
+	    "rr:parent" : "ID"
+	  }
+	}
       }
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_product_product_join",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PRODUCT_PRODUCT_JOIN"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PRODUCT_PRODUCT_JOIN"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_PRODUCT_ID}"
+	"rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_PRODUCT_ID}"
       },
       "rr:predicateObjectMap" : {
-        "rr:predicate" : {
-          "@id" : "http://cloudinformationmodel.org/model/product"
-        },
-        "rr:objectMap" : {
-          "rr:parentTriplesMap" : {
-            "@id" : "/product_entity_group/product"
-          },
-          "rr:joinCondition" : {
-            "rr:child" : "PRODUCT_ID",
-            "rr:parent" : "ID"
-          }
-        }
+	"rr:predicate" : {
+	  "@id" : "http://cloudinformationmodel.org/model/product"
+	},
+	"rr:objectMap" : {
+	  "rr:parentTriplesMap" : {
+	    "@id" : "/product_entity_group/product"
+	  },
+	  "rr:joinCondition" : {
+	    "rr:child" : "PRODUCT_ID",
+	    "rr:parent" : "ID"
+	  }
+	}
       }
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_product_sales_order_join",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PRODUCT_SALES_ORDER_JOIN"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PRODUCT_SALES_ORDER_JOIN"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_PRODUCT_ID}"
+	"rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_PRODUCT_ID}"
       },
       "rr:predicateObjectMap" : {
-        "rr:predicate" : {
-          "@id" : "http://cloudinformationmodel.org/model/salesOrder"
-        },
-        "rr:objectMap" : {
-          "rr:parentTriplesMap" : {
-            "@id" : "/sales_order_entity_group/sales_order"
-          },
-          "rr:joinCondition" : {
-            "rr:child" : "SALES_ORDER_ID",
-            "rr:parent" : "ID"
-          }
-        }
+	"rr:predicate" : {
+	  "@id" : "http://cloudinformationmodel.org/model/salesOrder"
+	},
+	"rr:objectMap" : {
+	  "rr:parentTriplesMap" : {
+	    "@id" : "/sales_order_entity_group/sales_order"
+	  },
+	  "rr:joinCondition" : {
+	    "rr:child" : "SALES_ORDER_ID",
+	    "rr:parent" : "ID"
+	  }
+	}
       }
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_product_shipping_address_join",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PRODUCT_SHIPPING_ADDRESS_JOIN"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PRODUCT_SHIPPING_ADDRESS_JOIN"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_PRODUCT_ID}"
+	"rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_PRODUCT_ID}"
       },
       "rr:predicateObjectMap" : {
-        "rr:predicate" : {
-          "@id" : "http://cloudinformationmodel.org/model/shippingAddress"
-        },
-        "rr:objectMap" : {
-          "rr:parentTriplesMap" : {
-            "@id" : "/contact_point_entity_group/contact_point_address"
-          },
-          "rr:joinCondition" : {
-            "rr:child" : "CONTACT_POINT_ADDRESS_ID",
-            "rr:parent" : "ID"
-          }
-        }
+	"rr:predicate" : {
+	  "@id" : "http://cloudinformationmodel.org/model/shippingAddress"
+	},
+	"rr:objectMap" : {
+	  "rr:parentTriplesMap" : {
+	    "@id" : "/contact_point_entity_group/contact_point_address"
+	  },
+	  "rr:joinCondition" : {
+	    "rr:child" : "CONTACT_POINT_ADDRESS_ID",
+	    "rr:parent" : "ID"
+	  }
+	}
       }
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_product_price_book_entry_join",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PRODUCT_PRICE_BOOK_ENTRY_JOIN"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PRODUCT_PRICE_BOOK_ENTRY_JOIN"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_PRODUCT_ID}"
+	"rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_PRODUCT_ID}"
       },
       "rr:predicateObjectMap" : {
-        "rr:predicate" : {
-          "@id" : "http://cloudinformationmodel.org/model/priceBookEntry"
-        },
-        "rr:objectMap" : {
-          "rr:parentTriplesMap" : {
-            "@id" : "/product_attribute_entity_group/price_book_entry"
-          },
-          "rr:joinCondition" : {
-            "rr:child" : "PRICE_BOOK_ENTRY_ID",
-            "rr:parent" : "ID"
-          }
-        }
+	"rr:predicate" : {
+	  "@id" : "http://cloudinformationmodel.org/model/priceBookEntry"
+	},
+	"rr:objectMap" : {
+	  "rr:parentTriplesMap" : {
+	    "@id" : "/product_attribute_entity_group/price_book_entry"
+	  },
+	  "rr:joinCondition" : {
+	    "rr:child" : "PRICE_BOOK_ENTRY_ID",
+	    "rr:parent" : "ID"
+	  }
+	}
       }
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_product_shipping_email_join",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PRODUCT_SHIPPING_EMAIL_JOIN"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PRODUCT_SHIPPING_EMAIL_JOIN"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_PRODUCT_ID}"
+	"rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_PRODUCT_ID}"
       },
       "rr:predicateObjectMap" : {
-        "rr:predicate" : {
-          "@id" : "http://cloudinformationmodel.org/model/shippingEmail"
-        },
-        "rr:objectMap" : {
-          "rr:parentTriplesMap" : {
-            "@id" : "/contact_point_entity_group/contact_point_email"
-          },
-          "rr:joinCondition" : {
-            "rr:child" : "CONTACT_POINT_EMAIL_ID",
-            "rr:parent" : "ID"
-          }
-        }
+	"rr:predicate" : {
+	  "@id" : "http://cloudinformationmodel.org/model/shippingEmail"
+	},
+	"rr:objectMap" : {
+	  "rr:parentTriplesMap" : {
+	    "@id" : "/contact_point_entity_group/contact_point_email"
+	  },
+	  "rr:joinCondition" : {
+	    "rr:child" : "CONTACT_POINT_EMAIL_ID",
+	    "rr:parent" : "ID"
+	  }
+	}
       }
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_product_subscription_term_unit_join",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PRODUCT_SUBSCRIPTION_TERM_UNIT_JOIN"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PRODUCT_SUBSCRIPTION_TERM_UNIT_JOIN"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_PRODUCT_ID}"
+	"rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_PRODUCT_ID}"
       },
       "rr:predicateObjectMap" : {
-        "rr:predicate" : {
-          "@id" : "http://cloudinformationmodel.org/model/subscriptionTermUnit"
-        },
-        "rr:objectMap" : {
-          "rr:parentTriplesMap" : {
-            "@id" : "/product_attribute_entity_group/product_validity_time_period_uo_m"
-          },
-          "rr:joinCondition" : {
-            "rr:child" : "PRODUCT_VALIDITY_TIME_PERIOD_UO_M_ID",
-            "rr:parent" : "ID"
-          }
-        }
+	"rr:predicate" : {
+	  "@id" : "http://cloudinformationmodel.org/model/subscriptionTermUnit"
+	},
+	"rr:objectMap" : {
+	  "rr:parentTriplesMap" : {
+	    "@id" : "/product_attribute_entity_group/product_validity_time_period_uo_m"
+	  },
+	  "rr:joinCondition" : {
+	    "rr:child" : "PRODUCT_VALIDITY_TIME_PERIOD_UO_M_ID",
+	    "rr:parent" : "ID"
+	  }
+	}
       }
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_product_list_price_term_uo_m_join",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PRODUCT_LIST_PRICE_TERM_UO_M_JOIN"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PRODUCT_LIST_PRICE_TERM_UO_M_JOIN"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_PRODUCT_ID}"
+	"rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_PRODUCT_ID}"
       },
       "rr:predicateObjectMap" : {
-        "rr:predicate" : {
-          "@id" : "http://cloudinformationmodel.org/model/listPriceTermUOM"
-        },
-        "rr:objectMap" : {
-          "rr:parentTriplesMap" : {
-            "@id" : "/product_attribute_entity_group/product_validity_time_period_uo_m"
-          },
-          "rr:joinCondition" : {
-            "rr:child" : "PRODUCT_VALIDITY_TIME_PERIOD_UO_M_ID",
-            "rr:parent" : "ID"
-          }
-        }
+	"rr:predicate" : {
+	  "@id" : "http://cloudinformationmodel.org/model/listPriceTermUOM"
+	},
+	"rr:objectMap" : {
+	  "rr:parentTriplesMap" : {
+	    "@id" : "/product_attribute_entity_group/product_validity_time_period_uo_m"
+	  },
+	  "rr:joinCondition" : {
+	    "rr:child" : "PRODUCT_VALIDITY_TIME_PERIOD_UO_M_ID",
+	    "rr:parent" : "ID"
+	  }
+	}
       }
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_product_sales_order_delivery_group_join",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PRODUCT_SALES_ORDER_DELIVERY_GROUP_JOIN"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PRODUCT_SALES_ORDER_DELIVERY_GROUP_JOIN"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_PRODUCT_ID}"
+	"rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_PRODUCT_ID}"
       },
       "rr:predicateObjectMap" : {
-        "rr:predicate" : {
-          "@id" : "http://cloudinformationmodel.org/model/salesOrderDeliveryGroup"
-        },
-        "rr:objectMap" : {
-          "rr:parentTriplesMap" : {
-            "@id" : "/sales_order_entity_group/sales_order_delivery_group"
-          },
-          "rr:joinCondition" : {
-            "rr:child" : "SALES_ORDER_DELIVERY_GROUP_ID",
-            "rr:parent" : "ID"
-          }
-        }
+	"rr:predicate" : {
+	  "@id" : "http://cloudinformationmodel.org/model/salesOrderDeliveryGroup"
+	},
+	"rr:objectMap" : {
+	  "rr:parentTriplesMap" : {
+	    "@id" : "/sales_order_entity_group/sales_order_delivery_group"
+	  },
+	  "rr:joinCondition" : {
+	    "rr:child" : "SALES_ORDER_DELIVERY_GROUP_ID",
+	    "rr:parent" : "ID"
+	  }
+	}
       }
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_product_original_order_product_join",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PRODUCT_ORIGINAL_ORDER_PRODUCT_JOIN"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PRODUCT_ORIGINAL_ORDER_PRODUCT_JOIN"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_PRODUCT_ID_LEFT}"
+	"rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_PRODUCT_ID_LEFT}"
       },
       "rr:predicateObjectMap" : {
-        "rr:predicate" : {
-          "@id" : "http://cloudinformationmodel.org/model/originalOrderProduct"
-        },
-        "rr:objectMap" : {
-          "rr:parentTriplesMap" : {
-            "@id" : "/sales_order_entity_group/sales_order_product"
-          },
-          "rr:joinCondition" : {
-            "rr:child" : "SALES_ORDER_PRODUCT_ID_RIGHT",
-            "rr:parent" : "ID"
-          }
-        }
+	"rr:predicate" : {
+	  "@id" : "http://cloudinformationmodel.org/model/originalOrderProduct"
+	},
+	"rr:objectMap" : {
+	  "rr:parentTriplesMap" : {
+	    "@id" : "/sales_order_entity_group/sales_order_product"
+	  },
+	  "rr:joinCondition" : {
+	    "rr:child" : "SALES_ORDER_PRODUCT_ID_RIGHT",
+	    "rr:parent" : "ID"
+	  }
+	}
       }
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_product_seller_account_join",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PRODUCT_SELLER_ACCOUNT_JOIN"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PRODUCT_SELLER_ACCOUNT_JOIN"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_PRODUCT_ID}"
+	"rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_PRODUCT_ID}"
       },
       "rr:predicateObjectMap" : {
-        "rr:predicate" : {
-          "@id" : "http://cloudinformationmodel.org/model/sellerAccount"
-        },
-        "rr:objectMap" : {
-          "rr:parentTriplesMap" : {
-            "@id" : "/account_entity_group/account"
-          },
-          "rr:joinCondition" : {
-            "rr:child" : "ACCOUNT_ID",
-            "rr:parent" : "ID"
-          }
-        }
+	"rr:predicate" : {
+	  "@id" : "http://cloudinformationmodel.org/model/sellerAccount"
+	},
+	"rr:objectMap" : {
+	  "rr:parentTriplesMap" : {
+	    "@id" : "/account_entity_group/account"
+	  },
+	  "rr:joinCondition" : {
+	    "rr:child" : "ACCOUNT_ID",
+	    "rr:parent" : "ID"
+	  }
+	}
       }
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_price_adjustment_sales_order_join",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PRICE_ADJUSTMENT_SALES_ORDER_JOIN"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PRICE_ADJUSTMENT_SALES_ORDER_JOIN"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_PRICE_ADJUSTMENT_ID}"
+	"rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_PRICE_ADJUSTMENT_ID}"
       },
       "rr:predicateObjectMap" : {
-        "rr:predicate" : {
-          "@id" : "http://cloudinformationmodel.org/model/salesOrder"
-        },
-        "rr:objectMap" : {
-          "rr:parentTriplesMap" : {
-            "@id" : "/sales_order_entity_group/sales_order"
-          },
-          "rr:joinCondition" : {
-            "rr:child" : "SALES_ORDER_ID",
-            "rr:parent" : "ID"
-          }
-        }
+	"rr:predicate" : {
+	  "@id" : "http://cloudinformationmodel.org/model/salesOrder"
+	},
+	"rr:objectMap" : {
+	  "rr:parentTriplesMap" : {
+	    "@id" : "/sales_order_entity_group/sales_order"
+	  },
+	  "rr:joinCondition" : {
+	    "rr:child" : "SALES_ORDER_ID",
+	    "rr:parent" : "ID"
+	  }
+	}
       }
     },
     {
       "@id" : "/sales_order_entity_group/order_delivery_method_product_join",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.ORDER_DELIVERY_METHOD_PRODUCT_JOIN"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.ORDER_DELIVERY_METHOD_PRODUCT_JOIN"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{ORDER_DELIVERY_METHOD_ID}"
+	"rr:template" : "http://cloudinformationmodel.org/instances#{ORDER_DELIVERY_METHOD_ID}"
       },
       "rr:predicateObjectMap" : {
-        "rr:predicate" : {
-          "@id" : "http://cloudinformationmodel.org/model/product"
-        },
-        "rr:objectMap" : {
-          "rr:parentTriplesMap" : {
-            "@id" : "/product_entity_group/product"
-          },
-          "rr:joinCondition" : {
-            "rr:child" : "PRODUCT_ID",
-            "rr:parent" : "ID"
-          }
-        }
+	"rr:predicate" : {
+	  "@id" : "http://cloudinformationmodel.org/model/product"
+	},
+	"rr:objectMap" : {
+	  "rr:parentTriplesMap" : {
+	    "@id" : "/product_entity_group/product"
+	  },
+	  "rr:joinCondition" : {
+	    "rr:child" : "PRODUCT_ID",
+	    "rr:parent" : "ID"
+	  }
+	}
       }
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_change_log_change_sales_order_join",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_CHANGE_LOG_CHANGE_SALES_ORDER_JOIN"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_CHANGE_LOG_CHANGE_SALES_ORDER_JOIN"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_CHANGE_LOG_ID}"
+	"rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_CHANGE_LOG_ID}"
       },
       "rr:predicateObjectMap" : {
-        "rr:predicate" : {
-          "@id" : "http://cloudinformationmodel.org/model/changeSalesOrder"
-        },
-        "rr:objectMap" : {
-          "rr:parentTriplesMap" : {
-            "@id" : "/sales_order_entity_group/sales_order"
-          },
-          "rr:joinCondition" : {
-            "rr:child" : "SALES_ORDER_ID",
-            "rr:parent" : "ID"
-          }
-        }
+	"rr:predicate" : {
+	  "@id" : "http://cloudinformationmodel.org/model/changeSalesOrder"
+	},
+	"rr:objectMap" : {
+	  "rr:parentTriplesMap" : {
+	    "@id" : "/sales_order_entity_group/sales_order"
+	  },
+	  "rr:joinCondition" : {
+	    "rr:child" : "SALES_ORDER_ID",
+	    "rr:parent" : "ID"
+	  }
+	}
       }
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_change_log_related_sales_order_product_join",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_CHANGE_LOG_RELATED_SALES_ORDER_PRODUCT_JOIN"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_CHANGE_LOG_RELATED_SALES_ORDER_PRODUCT_JOIN"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_CHANGE_LOG_ID}"
+	"rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_CHANGE_LOG_ID}"
       },
       "rr:predicateObjectMap" : {
-        "rr:predicate" : {
-          "@id" : "http://cloudinformationmodel.org/model/relatedSalesOrderProduct"
-        },
-        "rr:objectMap" : {
-          "rr:parentTriplesMap" : {
-            "@id" : "/sales_order_entity_group/sales_order_product"
-          },
-          "rr:joinCondition" : {
-            "rr:child" : "SALES_ORDER_PRODUCT_ID",
-            "rr:parent" : "ID"
-          }
-        }
+	"rr:predicate" : {
+	  "@id" : "http://cloudinformationmodel.org/model/relatedSalesOrderProduct"
+	},
+	"rr:objectMap" : {
+	  "rr:parentTriplesMap" : {
+	    "@id" : "/sales_order_entity_group/sales_order_product"
+	  },
+	  "rr:joinCondition" : {
+	    "rr:child" : "SALES_ORDER_PRODUCT_ID",
+	    "rr:parent" : "ID"
+	  }
+	}
       }
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_change_log_change_sales_order_product_join",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_CHANGE_LOG_CHANGE_SALES_ORDER_PRODUCT_JOIN"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_CHANGE_LOG_CHANGE_SALES_ORDER_PRODUCT_JOIN"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_CHANGE_LOG_ID}"
+	"rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_CHANGE_LOG_ID}"
       },
       "rr:predicateObjectMap" : {
-        "rr:predicate" : {
-          "@id" : "http://cloudinformationmodel.org/model/changeSalesOrderProduct"
-        },
-        "rr:objectMap" : {
-          "rr:parentTriplesMap" : {
-            "@id" : "/sales_order_entity_group/sales_order_product"
-          },
-          "rr:joinCondition" : {
-            "rr:child" : "SALES_ORDER_PRODUCT_ID",
-            "rr:parent" : "ID"
-          }
-        }
+	"rr:predicate" : {
+	  "@id" : "http://cloudinformationmodel.org/model/changeSalesOrderProduct"
+	},
+	"rr:objectMap" : {
+	  "rr:parentTriplesMap" : {
+	    "@id" : "/sales_order_entity_group/sales_order_product"
+	  },
+	  "rr:joinCondition" : {
+	    "rr:child" : "SALES_ORDER_PRODUCT_ID",
+	    "rr:parent" : "ID"
+	  }
+	}
       }
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_change_log_related_sales_order_join",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_CHANGE_LOG_RELATED_SALES_ORDER_JOIN"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_CHANGE_LOG_RELATED_SALES_ORDER_JOIN"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_CHANGE_LOG_ID}"
+	"rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_CHANGE_LOG_ID}"
       },
       "rr:predicateObjectMap" : {
-        "rr:predicate" : {
-          "@id" : "http://cloudinformationmodel.org/model/relatedSalesOrder"
-        },
-        "rr:objectMap" : {
-          "rr:parentTriplesMap" : {
-            "@id" : "/sales_order_entity_group/sales_order"
-          },
-          "rr:joinCondition" : {
-            "rr:child" : "SALES_ORDER_ID",
-            "rr:parent" : "ID"
-          }
-        }
+	"rr:predicate" : {
+	  "@id" : "http://cloudinformationmodel.org/model/relatedSalesOrder"
+	},
+	"rr:objectMap" : {
+	  "rr:parentTriplesMap" : {
+	    "@id" : "/sales_order_entity_group/sales_order"
+	  },
+	  "rr:joinCondition" : {
+	    "rr:child" : "SALES_ORDER_ID",
+	    "rr:parent" : "ID"
+	  }
+	}
       }
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_product_tax_original_sales_order_product_tax_join",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PRODUCT_TAX_ORIGINAL_SALES_ORDER_PRODUCT_TAX_JOIN"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PRODUCT_TAX_ORIGINAL_SALES_ORDER_PRODUCT_TAX_JOIN"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_PRODUCT_TAX_ID_LEFT}"
+	"rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_PRODUCT_TAX_ID_LEFT}"
       },
       "rr:predicateObjectMap" : {
-        "rr:predicate" : {
-          "@id" : "http://cloudinformationmodel.org/model/originalSalesOrderProductTax"
-        },
-        "rr:objectMap" : {
-          "rr:parentTriplesMap" : {
-            "@id" : "/sales_order_entity_group/sales_order_product_tax"
-          },
-          "rr:joinCondition" : {
-            "rr:child" : "SALES_ORDER_PRODUCT_TAX_ID_RIGHT",
-            "rr:parent" : "ID"
-          }
-        }
+	"rr:predicate" : {
+	  "@id" : "http://cloudinformationmodel.org/model/originalSalesOrderProductTax"
+	},
+	"rr:objectMap" : {
+	  "rr:parentTriplesMap" : {
+	    "@id" : "/sales_order_entity_group/sales_order_product_tax"
+	  },
+	  "rr:joinCondition" : {
+	    "rr:child" : "SALES_ORDER_PRODUCT_TAX_ID_RIGHT",
+	    "rr:parent" : "ID"
+	  }
+	}
       }
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_product_tax_sales_order_product_join",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PRODUCT_TAX_SALES_ORDER_PRODUCT_JOIN"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_PRODUCT_TAX_SALES_ORDER_PRODUCT_JOIN"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_PRODUCT_TAX_ID}"
+	"rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_PRODUCT_TAX_ID}"
       },
       "rr:predicateObjectMap" : {
-        "rr:predicate" : {
-          "@id" : "http://cloudinformationmodel.org/model/salesOrderProduct"
-        },
-        "rr:objectMap" : {
-          "rr:parentTriplesMap" : {
-            "@id" : "/sales_order_entity_group/sales_order_product"
-          },
-          "rr:joinCondition" : {
-            "rr:child" : "SALES_ORDER_PRODUCT_ID",
-            "rr:parent" : "ID"
-          }
-        }
+	"rr:predicate" : {
+	  "@id" : "http://cloudinformationmodel.org/model/salesOrderProduct"
+	},
+	"rr:objectMap" : {
+	  "rr:parentTriplesMap" : {
+	    "@id" : "/sales_order_entity_group/sales_order_product"
+	  },
+	  "rr:joinCondition" : {
+	    "rr:child" : "SALES_ORDER_PRODUCT_ID",
+	    "rr:parent" : "ID"
+	  }
+	}
       }
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_delivery_group_contact_point_address_join",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_DELIVERY_GROUP_CONTACT_POINT_ADDRESS_JOIN"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_DELIVERY_GROUP_CONTACT_POINT_ADDRESS_JOIN"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_DELIVERY_GROUP_ID}"
+	"rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_DELIVERY_GROUP_ID}"
       },
       "rr:predicateObjectMap" : {
-        "rr:predicate" : {
-          "@id" : "http://cloudinformationmodel.org/model/contactPointAddress"
-        },
-        "rr:objectMap" : {
-          "rr:parentTriplesMap" : {
-            "@id" : "/contact_point_entity_group/contact_point_address"
-          },
-          "rr:joinCondition" : {
-            "rr:child" : "CONTACT_POINT_ADDRESS_ID",
-            "rr:parent" : "ID"
-          }
-        }
+	"rr:predicate" : {
+	  "@id" : "http://cloudinformationmodel.org/model/contactPointAddress"
+	},
+	"rr:objectMap" : {
+	  "rr:parentTriplesMap" : {
+	    "@id" : "/contact_point_entity_group/contact_point_address"
+	  },
+	  "rr:joinCondition" : {
+	    "rr:child" : "CONTACT_POINT_ADDRESS_ID",
+	    "rr:parent" : "ID"
+	  }
+	}
       }
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_delivery_group_sales_order_join",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_DELIVERY_GROUP_SALES_ORDER_JOIN"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_DELIVERY_GROUP_SALES_ORDER_JOIN"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_DELIVERY_GROUP_ID}"
+	"rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_DELIVERY_GROUP_ID}"
       },
       "rr:predicateObjectMap" : {
-        "rr:predicate" : {
-          "@id" : "http://cloudinformationmodel.org/model/salesOrder"
-        },
-        "rr:objectMap" : {
-          "rr:parentTriplesMap" : {
-            "@id" : "/sales_order_entity_group/sales_order"
-          },
-          "rr:joinCondition" : {
-            "rr:child" : "SALES_ORDER_ID",
-            "rr:parent" : "ID"
-          }
-        }
+	"rr:predicate" : {
+	  "@id" : "http://cloudinformationmodel.org/model/salesOrder"
+	},
+	"rr:objectMap" : {
+	  "rr:parentTriplesMap" : {
+	    "@id" : "/sales_order_entity_group/sales_order"
+	  },
+	  "rr:joinCondition" : {
+	    "rr:child" : "SALES_ORDER_ID",
+	    "rr:parent" : "ID"
+	  }
+	}
       }
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_delivery_group_original_delivery_group_join",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_DELIVERY_GROUP_ORIGINAL_DELIVERY_GROUP_JOIN"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_DELIVERY_GROUP_ORIGINAL_DELIVERY_GROUP_JOIN"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_DELIVERY_GROUP_ID_LEFT}"
+	"rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_DELIVERY_GROUP_ID_LEFT}"
       },
       "rr:predicateObjectMap" : {
-        "rr:predicate" : {
-          "@id" : "http://cloudinformationmodel.org/model/originalDeliveryGroup"
-        },
-        "rr:objectMap" : {
-          "rr:parentTriplesMap" : {
-            "@id" : "/sales_order_entity_group/sales_order_delivery_group"
-          },
-          "rr:joinCondition" : {
-            "rr:child" : "SALES_ORDER_DELIVERY_GROUP_ID_RIGHT",
-            "rr:parent" : "ID"
-          }
-        }
+	"rr:predicate" : {
+	  "@id" : "http://cloudinformationmodel.org/model/originalDeliveryGroup"
+	},
+	"rr:objectMap" : {
+	  "rr:parentTriplesMap" : {
+	    "@id" : "/sales_order_entity_group/sales_order_delivery_group"
+	  },
+	  "rr:joinCondition" : {
+	    "rr:child" : "SALES_ORDER_DELIVERY_GROUP_ID_RIGHT",
+	    "rr:parent" : "ID"
+	  }
+	}
       }
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_delivery_group_order_delivery_method_join",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_DELIVERY_GROUP_ORDER_DELIVERY_METHOD_JOIN"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_DELIVERY_GROUP_ORDER_DELIVERY_METHOD_JOIN"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_DELIVERY_GROUP_ID}"
+	"rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_DELIVERY_GROUP_ID}"
       },
       "rr:predicateObjectMap" : {
-        "rr:predicate" : {
-          "@id" : "http://cloudinformationmodel.org/model/orderDeliveryMethod"
-        },
-        "rr:objectMap" : {
-          "rr:parentTriplesMap" : {
-            "@id" : "/sales_order_entity_group/order_delivery_method"
-          },
-          "rr:joinCondition" : {
-            "rr:child" : "ORDER_DELIVERY_METHOD_ID",
-            "rr:parent" : "ID"
-          }
-        }
+	"rr:predicate" : {
+	  "@id" : "http://cloudinformationmodel.org/model/orderDeliveryMethod"
+	},
+	"rr:objectMap" : {
+	  "rr:parentTriplesMap" : {
+	    "@id" : "/sales_order_entity_group/order_delivery_method"
+	  },
+	  "rr:joinCondition" : {
+	    "rr:child" : "ORDER_DELIVERY_METHOD_ID",
+	    "rr:parent" : "ID"
+	  }
+	}
       }
     },
     {
       "@id" : "/sales_order_entity_group/sales_order_delivery_group_account_contact_join",
       "rr:logicalTable" : {
-        "rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_DELIVERY_GROUP_ACCOUNT_CONTACT_JOIN"
+	"rr:tableName" : "SALES_ORDER_ENTITY_GROUP.SALES_ORDER_DELIVERY_GROUP_ACCOUNT_CONTACT_JOIN"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_DELIVERY_GROUP_ID}"
+	"rr:template" : "http://cloudinformationmodel.org/instances#{SALES_ORDER_DELIVERY_GROUP_ID}"
       },
       "rr:predicateObjectMap" : {
-        "rr:predicate" : {
-          "@id" : "http://cloudinformationmodel.org/model/accountContact"
-        },
-        "rr:objectMap" : {
-          "rr:parentTriplesMap" : {
-            "@id" : "/account_entity_group/account_contact"
-          },
-          "rr:joinCondition" : {
-            "rr:child" : "ACCOUNT_CONTACT_ID",
-            "rr:parent" : "ID"
-          }
-        }
+	"rr:predicate" : {
+	  "@id" : "http://cloudinformationmodel.org/model/accountContact"
+	},
+	"rr:objectMap" : {
+	  "rr:parentTriplesMap" : {
+	    "@id" : "/account_entity_group/account_contact"
+	  },
+	  "rr:joinCondition" : {
+	    "rr:child" : "ACCOUNT_CONTACT_ID",
+	    "rr:parent" : "ID"
+	  }
+	}
       }
     }
   ]

@@ -168,7 +168,7 @@ classTerms:
       - appliedAmount
       - paymentMethod
       - authorizationAmount
-  ProductRelationshipType:
+  OrderProductRelationshipType:
     displayName: Sales Order Product Relationship Type
     description: Reasons why products are related such as bundle, option or covering
     properties:
