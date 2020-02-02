@@ -6,6 +6,10 @@ nodeMappings:
   PaymentMethod:
     classTerm: cim.PaymentMethod
     mapping:
+      paymentMethodStatus:
+        propertyTerm: cim.paymentMethodStatus
+        range: string
+        mandatory: true
       paymentMethodType:
         propertyTerm: cim.paymentMethodType
         range: PaymentMethodType
@@ -16,112 +20,108 @@ nodeMappings:
         range: guid
         unique: true
         mandatory: true
-      paymentMethodStatus:
-        propertyTerm: cim.paymentMethodStatus
-        range: string
-        mandatory: true
   PaymentCard:
     classTerm: cim.PaymentCard
     mapping:
-      numberLastDigits:
-        propertyTerm: cim.numberLastDigits
-        range: string
-        mandatory: true
-      maskedNumber:
-        propertyTerm: cim.maskedNumber
-        range: string
-        mandatory: true
-      billToFirstName:
-        propertyTerm: cim.billToFirstName
-        range: string
-      expirationMonth:
-        propertyTerm: cim.expirationMonth
+      cardHolderName:
+        propertyTerm: cim.cardHolderName
         range: string
         mandatory: true
       companyName:
         propertyTerm: cim.companyName
         range: string
-      issueNumber:
-        propertyTerm: cim.issueNumber
-        range: string
-        mandatory: true
-      paymentCardType:
-        propertyTerm: cim.paymentCardType
-        range: string
-        mandatory: true
-      expirationYear:
-        propertyTerm: cim.expirationYear
-        range: string
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
         mandatory: true
       cardToken:
         propertyTerm: cim.cardToken
         range: string
         mandatory: true
-      id:
-        propertyTerm: cim.id
-        range: guid
-        unique: true
-        mandatory: true
+      billToFirstName:
+        propertyTerm: cim.billToFirstName
+        range: string
+      billToCity:
+        propertyTerm: cim.billToCity
+        range: string
       creditCardExpired:
         propertyTerm: cim.creditCardExpired
         range: boolean
         mandatory: true
+      billToStreet2:
+        propertyTerm: cim.billToStreet2
+        range: string
+      expirationMonth:
+        propertyTerm: cim.expirationMonth
+        range: string
+        mandatory: true
+      billToStreet:
+        propertyTerm: cim.billToStreet
+        range: string
+      maskedNumber:
+        propertyTerm: cim.maskedNumber
+        range: string
+        mandatory: true
       name:
         propertyTerm: cim.name
+        range: string
+        mandatory: true
+      billToLastName:
+        propertyTerm: cim.billToLastName
+        range: string
+      expirationYear:
+        propertyTerm: cim.expirationYear
         range: string
         mandatory: true
       derivedCardTypeCode:
         propertyTerm: cim.derivedCardTypeCode
         range: string
-      billToLastName:
-        propertyTerm: cim.billToLastName
-        range: string
-      billToStreet:
-        propertyTerm: cim.billToStreet
-        range: string
-      billToStreet2:
-        propertyTerm: cim.billToStreet2
-        range: string
-      cardHolderName:
-        propertyTerm: cim.cardHolderName
+      paymentCardType:
+        propertyTerm: cim.paymentCardType
         range: string
         mandatory: true
-      billToCity:
-        propertyTerm: cim.billToCity
+      issueNumber:
+        propertyTerm: cim.issueNumber
         range: string
+        mandatory: true
+      numberLastDigits:
+        propertyTerm: cim.numberLastDigits
+        range: string
+        mandatory: true
     extends: PaymentMethod
   PaymentMethodType:
     classTerm: cim.PaymentMethodType
     mapping:
-      maxPerPeriodTransactionCount:
-        propertyTerm: cim.maxPerPeriodTransactionCount
+      useMinimumAgeYear:
+        propertyTerm: cim.useMinimumAgeYear
         range: integer
-      typeDescription:
-        propertyTerm: cim.typeDescription
-        range: string
       id:
         propertyTerm: cim.id
         range: guid
         unique: true
         mandatory: true
-      name:
-        propertyTerm: cim.name
+      typeDescription:
+        propertyTerm: cim.typeDescription
         range: string
-      maxTransactionAmount:
-        propertyTerm: cim.maxTransactionAmount
+      maxPerPeriodTransactionCount:
+        propertyTerm: cim.maxPerPeriodTransactionCount
         range: integer
       mediaType:
         propertyTerm: cim.mediaType
         range: string
-      useMinimumAgeYear:
-        propertyTerm: cim.useMinimumAgeYear
-        range: integer
-      typeRequiredIdentification:
-        propertyTerm: cim.typeRequiredIdentification
-        range: string
       maxPerPeriodAmount:
         propertyTerm: cim.maxPerPeriodAmount
         range: integer
+      maxTransactionAmount:
+        propertyTerm: cim.maxTransactionAmount
+        range: integer
+      name:
+        propertyTerm: cim.name
+        range: string
+      typeRequiredIdentification:
+        propertyTerm: cim.typeRequiredIdentification
+        range: string
   CreditTender:
     classTerm: cim.CreditTender
     mapping:
@@ -138,9 +138,22 @@ nodeMappings:
   Coupon:
     classTerm: cim.Coupon
     mapping:
+      manufacturer:
+        propertyTerm: cim.manufacturer
+        range: party_eg.Party
+        allowMultiple: true
+      returnCouponReason:
+        propertyTerm: cim.returnCouponReason
+        range: string
+      isReturnCoupon:
+        propertyTerm: cim.isReturnCoupon
+        range: boolean
       discountAmount:
         propertyTerm: cim.discountAmount
         range: integer
+      secondaryScanCodeLabel:
+        propertyTerm: cim.secondaryScanCodeLabel
+        range: string
       couponCount:
         propertyTerm: cim.couponCount
         range: integer
@@ -149,40 +162,27 @@ nodeMappings:
         range: guid
         unique: true
         mandatory: true
-      secondaryScanCodeLabel:
-        propertyTerm: cim.secondaryScanCodeLabel
-        range: string
-      isReturnCoupon:
-        propertyTerm: cim.isReturnCoupon
-        range: boolean
-      scanCode:
-        propertyTerm: cim.scanCode
-        range: string
-      couponCode:
-        propertyTerm: cim.couponCode
-        range: string
-      returnCouponReason:
-        propertyTerm: cim.returnCouponReason
-        range: string
-      isValid:
-        propertyTerm: cim.isValid
-        range: boolean
-      couponStatus:
-        propertyTerm: cim.couponStatus
-        range: string
-      manufacturer:
-        propertyTerm: cim.manufacturer
-        range: party_eg.Party
-        allowMultiple: true
       primaryScanCodeLabel:
         propertyTerm: cim.primaryScanCodeLabel
         range: string
       discountPercentage:
         propertyTerm: cim.discountPercentage
         range: integer
+      scanCode:
+        propertyTerm: cim.scanCode
+        range: string
+      isValid:
+        propertyTerm: cim.isValid
+        range: boolean
       expirationDate:
         propertyTerm: cim.expirationDate
         range: date
+      couponStatus:
+        propertyTerm: cim.couponStatus
+        range: string
+      couponCode:
+        propertyTerm: cim.couponCode
+        range: string
     extends: PaymentMethod
 external:
   cim: http://cloudinformationmodel.org/model/

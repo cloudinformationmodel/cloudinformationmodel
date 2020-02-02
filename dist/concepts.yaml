@@ -518,6 +518,13 @@ classTerms:
       - id
       - name
       - product
+  OrderProductRelationshipType:
+    displayName: Sales Order Product Relationship Type
+    description: Reasons why products are related such as bundle, option or covering
+    properties:
+      - childProductRole
+      - id
+      - parentProductRole
   Party:
     displayName: Party
     description: A unified, in system, definition of who you are dealing with e.g. John Doe, Northern Trail Outfitters and can be of different types e.g. individual, business, affiliation group.
@@ -1116,8 +1123,8 @@ classTerms:
       - salesOrderProduct2
       - toDate
   ProductRelationshipType:
-    displayName: Sales Order Product Relationship Type
-    description: Reasons why products are related such as bundle, option or covering
+    displayName: Product Relationship Type
+    description: What are the types of relationships available e.g. bundled with/bundled in, substitute for/substitute of
     properties:
       - childProductRole
       - id

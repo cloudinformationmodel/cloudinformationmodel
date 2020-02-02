@@ -3,6 +3,13 @@ base: http://cloudinformationmodel.org/model/
 vocabulary: Sales Order
 usage: "Example Entities included: Sales Order, Opportunity, Payment Method"
 classTerms:
+  OrderProductRelationshipType:
+    displayName: Sales Order Product Relationship Type
+    description: Reasons why products are related such as bundle, option or covering
+    properties:
+      - childProductRole
+      - id
+      - parentProductRole
   SalesOrderProductNote:
     displayName: Sales Order Product Note
     description: A document accompanying a Sales Order that lists the description, quantity of the goods to be delivered or other information.
@@ -168,13 +175,6 @@ classTerms:
       - appliedAmount
       - paymentMethod
       - authorizationAmount
-  OrderProductRelationshipType:
-    displayName: Sales Order Product Relationship Type
-    description: Reasons why products are related such as bundle, option or covering
-    properties:
-      - childProductRole
-      - id
-      - parentProductRole
   SalesOrderPriceAdjustment:
     displayName: Sales Order Price Adjustment
     description: A change to the price of a Sales Order that is made before order fulfillment. A Sales Order Price Adjustment may be comprised of Sales Order Product Price Adjustments that allocate the overall adjustment amount to one or more of the products and services

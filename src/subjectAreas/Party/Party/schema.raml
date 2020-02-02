@@ -17,9 +17,9 @@ types:
     properties:
       individual:
         items: Individual
-      id:
-        type: string
       spokenProficiencyLevel:
+        type: string
+      id:
         type: string
       writtenProficiencyLevel:
         type: string
@@ -311,10 +311,10 @@ types:
         type: date-only
   PersonLifeEvent:
     properties:
-      individual:
-        items: Individual
       id:
         type: string
+      individual:
+        items: Individual
       personLifeEventDateTime:
         type: time-only
       personLifeEventType:

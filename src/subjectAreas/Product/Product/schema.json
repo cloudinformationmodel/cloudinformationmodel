@@ -81,7 +81,7 @@
         "productRelationshipType": {
           "type": "array",
           "items": {
-            "$ref": "../../SalesOrder/SalesOrder/schema.json#/definitions/ProductRelationshipType"
+            "$ref": "#/definitions/ProductRelationshipType"
           }
         },
         "toDate": {

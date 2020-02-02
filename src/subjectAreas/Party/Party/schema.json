@@ -87,10 +87,10 @@
             "$ref": "#/definitions/Individual"
           }
         },
-        "id": {
+        "spokenProficiencyLevel": {
           "type": "string"
         },
-        "spokenProficiencyLevel": {
+        "id": {
           "type": "string"
         },
         "writtenProficiencyLevel": {
@@ -663,20 +663,20 @@
     "PersonLifeEvent": {
       "type": "object",
       "required": [
-        "individual",
         "id",
+        "individual",
         "personLifeEventDateTime",
         "personLifeEventType"
       ],
       "properties": {
+        "id": {
+          "type": "string"
+        },
         "individual": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/Individual"
           }
-        },
-        "id": {
-          "type": "string"
         },
         "personLifeEventDateTime": {
           "type": "string",

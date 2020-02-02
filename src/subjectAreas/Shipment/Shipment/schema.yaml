@@ -25,13 +25,13 @@ nodeMappings:
         range: guid
         unique: true
         mandatory: true
-      shipmentProductDescription:
-        propertyTerm: cim.shipmentProductDescription
-        range: string
-        mandatory: true
       shipmentProductCount:
         propertyTerm: cim.shipmentProductCount
         range: integer
+        mandatory: true
+      shipmentProductDescription:
+        propertyTerm: cim.shipmentProductDescription
+        range: string
         mandatory: true
       shipment:
         propertyTerm: cim.shipment
@@ -41,116 +41,111 @@ nodeMappings:
   ShippingMethod:
     classTerm: cim.ShippingMethod
     mapping:
-      description:
-        propertyTerm: cim.description
-        range: string
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
         mandatory: true
+      product:
+        propertyTerm: cim.product
+        range: product_eg.Product
+        mandatory: true
+        allowMultiple: true
       name:
         propertyTerm: cim.name
         range: string
         mandatory: true
-      product:
-        propertyTerm: cim.product
-        range: product_eg.Product
-        mandatory: true
-        allowMultiple: true
-      id:
-        propertyTerm: cim.id
-        range: guid
-        unique: true
+      description:
+        propertyTerm: cim.description
+        range: string
         mandatory: true
   ShipmentProduct:
     classTerm: cim.ShipmentProduct
     mapping:
-      shipment:
-        propertyTerm: cim.shipment
-        range: Shipment
-        mandatory: true
-        allowMultiple: true
-      id:
-        propertyTerm: cim.id
-        range: guid
-        unique: true
-        mandatory: true
-      shipmentProductCount:
-        propertyTerm: cim.shipmentProductCount
-        range: integer
-        mandatory: true
-      product:
-        propertyTerm: cim.product
-        range: product_eg.Product
-        mandatory: true
-        allowMultiple: true
       salesOrderProduct:
         propertyTerm: cim.salesOrderProduct
         range: salesorder_eg.SalesOrderProduct
         mandatory: true
         allowMultiple: true
+      product:
+        propertyTerm: cim.product
+        range: product_eg.Product
+        mandatory: true
+        allowMultiple: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
       shipmentPackage:
         propertyTerm: cim.shipmentPackage
         range: ShipmentPackage
         mandatory: true
         allowMultiple: true
+      shipment:
+        propertyTerm: cim.shipment
+        range: Shipment
+        mandatory: true
+        allowMultiple: true
+      shipmentProductCount:
+        propertyTerm: cim.shipmentProductCount
+        range: integer
+        mandatory: true
   Shipment:
     classTerm: cim.Shipment
     mapping:
+      shipmentStatus:
+        propertyTerm: cim.shipmentStatus
+        range: ShipmentStatus
+        allowMultiple: true
       salesOrder:
         propertyTerm: cim.salesOrder
         range: salesorder_eg.SalesOrder
         allowMultiple: true
-      shipmentDate:
-        propertyTerm: cim.shipmentDate
-        range: date
-        mandatory: true
-      id:
-        propertyTerm: cim.id
-        range: guid
-        unique: true
-        mandatory: true
-      shipmentNumber:
-        propertyTerm: cim.shipmentNumber
+      carrierTrackingNumber:
+        propertyTerm: cim.carrierTrackingNumber
         range: string
       salesOrderDeliveryGroup:
         propertyTerm: cim.salesOrderDeliveryGroup
         range: salesorder_eg.SalesOrderDeliveryGroup
         allowMultiple: true
-      giftMessageText:
-        propertyTerm: cim.giftMessageText
-        range: string
+      shipmentDate:
+        propertyTerm: cim.shipmentDate
+        range: date
+        mandatory: true
       specialInstructionsText:
         propertyTerm: cim.specialInstructionsText
+        range: string
+      giftMessageText:
+        propertyTerm: cim.giftMessageText
         range: string
       actualDeliveryDateTime:
         propertyTerm: cim.actualDeliveryDateTime
         range: time
-      scheduledDeliveryDateTime:
-        propertyTerm: cim.scheduledDeliveryDateTime
-        range: time
       estimatedDeliveryDateTime:
         propertyTerm: cim.estimatedDeliveryDateTime
         range: time
+      isGift:
+        propertyTerm: cim.isGift
+        range: boolean
+      scheduledDeliveryDateTime:
+        propertyTerm: cim.scheduledDeliveryDateTime
+        range: time
+      shipmentNumber:
+        propertyTerm: cim.shipmentNumber
+        range: string
       shipToAddress:
         propertyTerm: cim.shipToAddress
         range: contactpoint_eg.ContactPointAddress
         allowMultiple: true
-      carrierTrackingNumber:
-        propertyTerm: cim.carrierTrackingNumber
-        range: string
-      isGift:
-        propertyTerm: cim.isGift
-        range: boolean
-      shipmentStatus:
-        propertyTerm: cim.shipmentStatus
-        range: ShipmentStatus
-        allowMultiple: true
-  ShipmentProductPriceAdjustment:
-    classTerm: cim.ShipmentProductPriceAdjustment
-    mapping:
       id:
         propertyTerm: cim.id
         range: guid
         unique: true
         mandatory: true
+  ShipmentProductPriceAdjustment:
+    classTerm: cim.ShipmentProductPriceAdjustment
+    mapping:
       adjustmentTaxAmount:
         propertyTerm: cim.adjustmentTaxAmount
         range: integer
@@ -158,17 +153,22 @@ nodeMappings:
         propertyTerm: cim.adjustmentAmount
         range: integer
         mandatory: true
-      shipmentProductPriceAdjustmentAmount:
-        propertyTerm: cim.shipmentProductPriceAdjustmentAmount
-        range: integer
       shipmentProduct:
         propertyTerm: cim.shipmentProduct
         range: ShipmentProduct
         mandatory: true
         allowMultiple: true
+      shipmentProductPriceAdjustmentAmount:
+        propertyTerm: cim.shipmentProductPriceAdjustmentAmount
+        range: integer
       description:
         propertyTerm: cim.description
         range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
         mandatory: true
   ShipmentStatus:
     classTerm: cim.ShipmentStatus

@@ -25,9 +25,9 @@ types:
     properties:
       individual:
         items: Individual
-      id:
-        type: string
       spokenProficiencyLevel:
+        type: string
+      id:
         type: string
       writtenProficiencyLevel:
         type: string
@@ -853,17 +853,17 @@ types:
         type: string
       description:
         type: string
-      salesOrderProductGroupType:
-        type: string
       name:
+        type: string
+      salesOrderProductGroupType:
         type: string
   PaymentTreatmentMethod:
     properties:
       id:
         type: string
-      paymentTreatmentMethodName:
-        type: string
       paymentTreatmentMethodCode:
+        type: string
+      paymentTreatmentMethodName:
         type: string
       paymentTreatmentMethodDescription:
         type: string
@@ -1728,10 +1728,10 @@ types:
   PaymentCreditMemoAllocation:
     type: PaymentAllocation
     properties:
-      appliedAmount:
-        type: integer
       id:
         type: string
+      appliedAmount:
+        type: integer
       name:
         type: string
   ContactPointSocial:
@@ -2047,9 +2047,9 @@ types:
     properties:
       id:
         type: string
-      translatedName:
-        type: string
       attributeSet:
+        type: string
+      translatedName:
         type: string
   PaymentAuthorization:
     properties:
@@ -2296,10 +2296,10 @@ types:
         type: string
   PersonLifeEvent:
     properties:
-      individual:
-        items: Individual
       id:
         type: string
+      individual:
+        items: Individual
       personLifeEventDateTime:
         type: time-only
       personLifeEventType:
@@ -2316,6 +2316,14 @@ types:
         type: string
       primaryAccount:
         items: Account
+  OrderProductRelationshipType:
+    properties:
+      id:
+        type: string
+      parentProductRole:
+        type: string
+      childProductRole:
+        type: string
   Coupon:
     type: PaymentMethod
     properties:
@@ -2376,9 +2384,9 @@ types:
     properties:
       paymentMethodType:
         items: PaymentMethodType
-      paymentMethodStatus:
-        type: string
       id:
+        type: string
+      paymentMethodStatus:
         type: string
   PaymentGatewayInteractionLog:
     properties:

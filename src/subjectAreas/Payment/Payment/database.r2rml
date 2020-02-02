@@ -756,10 +756,10 @@
       "rr:predicateObjectMap" : [
         {
           "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/paymentTreatmentMethodName"
+            "@id" : "http://cloudinformationmodel.org/model/paymentTreatmentMethodCode"
           },
           "rr:objectMap" : {
-            "rr:column" : "PAYMENT_TREATMENT_METHOD_NAME",
+            "rr:column" : "PAYMENT_TREATMENT_METHOD_CODE",
             "rr:datatype" : {
               "@id" : "http://www.w3.org/2001/XMLSchema#string"
             }
@@ -767,10 +767,10 @@
         },
         {
           "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/paymentTreatmentMethodCode"
+            "@id" : "http://cloudinformationmodel.org/model/paymentTreatmentMethodName"
           },
           "rr:objectMap" : {
-            "rr:column" : "PAYMENT_TREATMENT_METHOD_CODE",
+            "rr:column" : "PAYMENT_TREATMENT_METHOD_NAME",
             "rr:datatype" : {
               "@id" : "http://www.w3.org/2001/XMLSchema#string"
             }

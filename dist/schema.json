@@ -98,6 +98,9 @@
       "$ref": "#/definitions/OrderDeliveryMethod"
     },
     {
+      "$ref": "#/definitions/OrderProductRelationshipType"
+    },
+    {
       "$ref": "#/definitions/Party"
     },
     {
@@ -246,9 +249,6 @@
     },
     {
       "$ref": "#/definitions/ProductRelatedProduct"
-    },
-    {
-      "$ref": "#/definitions/ProductRelationshipType"
     },
     {
       "$ref": "#/definitions/ProductRelationshipType"
@@ -409,10 +409,10 @@
             "$ref": "#/definitions/Individual"
           }
         },
-        "id": {
+        "spokenProficiencyLevel": {
           "type": "string"
         },
-        "spokenProficiencyLevel": {
+        "id": {
           "type": "string"
         },
         "writtenProficiencyLevel": {
@@ -2144,8 +2144,8 @@
       "required": [
         "id",
         "description",
-        "salesOrderProductGroupType",
-        "name"
+        "name",
+        "salesOrderProductGroupType"
       ],
       "properties": {
         "id": {
@@ -2154,10 +2154,10 @@
         "description": {
           "type": "string"
         },
-        "salesOrderProductGroupType": {
+        "name": {
           "type": "string"
         },
-        "name": {
+        "salesOrderProductGroupType": {
           "type": "string"
         }
       }
@@ -2166,18 +2166,18 @@
       "type": "object",
       "required": [
         "id",
-        "paymentTreatmentMethodName",
         "paymentTreatmentMethodCode",
+        "paymentTreatmentMethodName",
         "paymentTreatmentMethodDescription"
       ],
       "properties": {
         "id": {
           "type": "string"
         },
-        "paymentTreatmentMethodName": {
+        "paymentTreatmentMethodCode": {
           "type": "string"
         },
-        "paymentTreatmentMethodCode": {
+        "paymentTreatmentMethodName": {
           "type": "string"
         },
         "paymentTreatmentMethodDescription": {
@@ -4135,15 +4135,15 @@
         {
           "type": "object",
           "required": [
-            "appliedAmount",
-            "id"
+            "id",
+            "appliedAmount"
           ],
           "properties": {
-            "appliedAmount": {
-              "type": "integer"
-            },
             "id": {
               "type": "string"
+            },
+            "appliedAmount": {
+              "type": "integer"
             },
             "name": {
               "type": "string"
@@ -4821,17 +4821,17 @@
       "type": "object",
       "required": [
         "id",
-        "translatedName",
-        "attributeSet"
+        "attributeSet",
+        "translatedName"
       ],
       "properties": {
         "id": {
           "type": "string"
         },
-        "translatedName": {
+        "attributeSet": {
           "type": "string"
         },
-        "attributeSet": {
+        "translatedName": {
           "type": "string"
         }
       }
@@ -5395,20 +5395,20 @@
     "PersonLifeEvent": {
       "type": "object",
       "required": [
-        "individual",
         "id",
+        "individual",
         "personLifeEventDateTime",
         "personLifeEventType"
       ],
       "properties": {
+        "id": {
+          "type": "string"
+        },
         "individual": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/Individual"
           }
-        },
-        "id": {
-          "type": "string"
         },
         "personLifeEventDateTime": {
           "type": "string",
@@ -5443,6 +5443,25 @@
           "items": {
             "$ref": "#/definitions/Account"
           }
+        }
+      }
+    },
+    "OrderProductRelationshipType": {
+      "type": "object",
+      "required": [
+        "id",
+        "parentProductRole",
+        "childProductRole"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "parentProductRole": {
+          "type": "string"
+        },
+        "childProductRole": {
+          "type": "string"
         }
       }
     },
@@ -5576,8 +5595,8 @@
       "type": "object",
       "required": [
         "paymentMethodType",
-        "paymentMethodStatus",
-        "id"
+        "id",
+        "paymentMethodStatus"
       ],
       "properties": {
         "paymentMethodType": {
@@ -5586,10 +5605,10 @@
             "$ref": "#/definitions/PaymentMethodType"
           }
         },
-        "paymentMethodStatus": {
+        "id": {
           "type": "string"
         },
-        "id": {
+        "paymentMethodStatus": {
           "type": "string"
         }
       }

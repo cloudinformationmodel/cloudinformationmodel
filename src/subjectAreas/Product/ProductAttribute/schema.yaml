@@ -22,18 +22,9 @@ nodeMappings:
   PriceBookEntry:
     classTerm: cim.PriceBookEntry
     mapping:
-      useStandardPrice:
-        propertyTerm: cim.useStandardPrice
-        range: boolean
-      unitListPrice:
-        propertyTerm: cim.unitListPrice
+      minRequiredQuantity:
+        propertyTerm: cim.minRequiredQuantity
         range: integer
-      servicePeriodCount:
-        propertyTerm: cim.servicePeriodCount
-        range: integer
-      isActive:
-        propertyTerm: cim.isActive
-        range: boolean
       product:
         propertyTerm: cim.product
         range: product_eg.Product
@@ -41,36 +32,41 @@ nodeMappings:
       minRequiredOrderValue:
         propertyTerm: cim.minRequiredOrderValue
         range: integer
-      minRequiredQuantity:
-        propertyTerm: cim.minRequiredQuantity
+      isActive:
+        propertyTerm: cim.isActive
+        range: boolean
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      unitListPrice:
+        propertyTerm: cim.unitListPrice
         range: integer
+      useStandardPrice:
+        propertyTerm: cim.useStandardPrice
+        range: boolean
       maxRequiredOrderValue:
         propertyTerm: cim.maxRequiredOrderValue
         range: integer
-      id:
-        propertyTerm: cim.id
-        range: guid
-        unique: true
-        mandatory: true
+      servicePeriodCount:
+        propertyTerm: cim.servicePeriodCount
+        range: integer
   DeviceUserSession:
     classTerm: cim.DeviceUserSession
     mapping:
-      name:
-        propertyTerm: cim.name
-        range: string
-        mandatory: true
       id:
         propertyTerm: cim.id
         range: guid
         unique: true
+        mandatory: true
+      name:
+        propertyTerm: cim.name
+        range: string
         mandatory: true
   ProductValidityTimePeriodUOM:
     classTerm: cim.ProductValidityTimePeriodUOM
     mapping:
-      name:
-        propertyTerm: cim.name
-        range: string
-        mandatory: true
       pluralName:
         propertyTerm: cim.pluralName
         range: string
@@ -80,6 +76,10 @@ nodeMappings:
         range: guid
         unique: true
         mandatory: true
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
   AttributeValueTranslation:
     classTerm: cim.AttributeValueTranslation
     mapping:
@@ -87,14 +87,14 @@ nodeMappings:
         propertyTerm: cim.translatedAttributeValue
         range: string
         mandatory: true
+      translatedAttributeValueDescription:
+        propertyTerm: cim.translatedAttributeValueDescription
+        range: string
       attributeValue:
         propertyTerm: cim.attributeValue
         range: AttributeValue
         mandatory: true
         allowMultiple: true
-      translatedAttributeValueDescription:
-        propertyTerm: cim.translatedAttributeValueDescription
-        range: string
       id:
         propertyTerm: cim.id
         range: guid
@@ -103,22 +103,13 @@ nodeMappings:
   ProductAttributeValue:
     classTerm: cim.ProductAttributeValue
     mapping:
-      name:
-        propertyTerm: cim.name
+      attributeSet:
+        propertyTerm: cim.attributeSet
         range: string
         mandatory: true
       customAttributeValue:
         propertyTerm: cim.customAttributeValue
         range: string
-      id:
-        propertyTerm: cim.id
-        range: guid
-        unique: true
-        mandatory: true
-      attributeSet:
-        propertyTerm: cim.attributeSet
-        range: string
-        mandatory: true
       attributeValue:
         propertyTerm: cim.attributeValue
         range: AttributeValue
@@ -128,6 +119,15 @@ nodeMappings:
         range: product_eg.Product
         mandatory: true
         allowMultiple: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
   AttributeTranslation:
     classTerm: cim.AttributeTranslation
     mapping:
@@ -148,42 +148,42 @@ nodeMappings:
         range: guid
         unique: true
         mandatory: true
-      attributeSet:
-        propertyTerm: cim.attributeSet
-        range: string
-        mandatory: true
       translatedName:
         propertyTerm: cim.translatedName
+        range: string
+        mandatory: true
+      attributeSet:
+        propertyTerm: cim.attributeSet
         range: string
         mandatory: true
   ProductAttributeSet:
     classTerm: cim.ProductAttributeSet
     mapping:
-      attributeSet:
-        propertyTerm: cim.attributeSet
-        range: string
-        mandatory: true
-      id:
-        propertyTerm: cim.id
-        range: guid
-        unique: true
-        mandatory: true
       product:
         propertyTerm: cim.product
         range: product_eg.Product
         mandatory: true
         allowMultiple: true
-  AttributeValue:
-    classTerm: cim.AttributeValue
-    mapping:
-      attributeValue:
-        propertyTerm: cim.attributeValue
-        range: string
-        mandatory: true
       id:
         propertyTerm: cim.id
         range: guid
         unique: true
+        mandatory: true
+      attributeSet:
+        propertyTerm: cim.attributeSet
+        range: string
+        mandatory: true
+  AttributeValue:
+    classTerm: cim.AttributeValue
+    mapping:
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      attributeValue:
+        propertyTerm: cim.attributeValue
+        range: string
         mandatory: true
 external:
   cim: http://cloudinformationmodel.org/model/

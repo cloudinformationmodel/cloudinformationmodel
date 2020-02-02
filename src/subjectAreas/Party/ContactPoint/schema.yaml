@@ -5,12 +5,20 @@ nodeMappings:
   ContactPointEmail:
     classTerm: cim.ContactPointEmail
     mapping:
-      emailDomain:
-        propertyTerm: cim.emailDomain
+      emailAddress:
+        propertyTerm: cim.emailAddress
         range: string
         mandatory: true
       emailLatestBounceReasonText:
         propertyTerm: cim.emailLatestBounceReasonText
+        range: string
+        mandatory: true
+      emailLatestBounceDateTime:
+        propertyTerm: cim.emailLatestBounceDateTime
+        range: date
+        mandatory: true
+      emailMailBox:
+        propertyTerm: cim.emailMailBox
         range: string
         mandatory: true
       id:
@@ -18,17 +26,9 @@ nodeMappings:
         range: guid
         unique: true
         mandatory: true
-      emailMailBox:
-        propertyTerm: cim.emailMailBox
+      emailDomain:
+        propertyTerm: cim.emailDomain
         range: string
-        mandatory: true
-      emailAddress:
-        propertyTerm: cim.emailAddress
-        range: string
-        mandatory: true
-      emailLatestBounceDateTime:
-        propertyTerm: cim.emailLatestBounceDateTime
-        range: date
         mandatory: true
     extends: ContactPoint
   ContactPointApp:
@@ -64,9 +64,25 @@ nodeMappings:
   ContactPointPhone:
     classTerm: cim.ContactPointPhone
     mapping:
-      primaryPhoneType:
-        propertyTerm: cim.primaryPhoneType
+      areaCode:
+        propertyTerm: cim.areaCode
         range: string
+      countryName:
+        propertyTerm: cim.countryName
+        range: string
+      formattedE164PhoneNumber:
+        propertyTerm: cim.formattedE164PhoneNumber
+        range: string
+      telephoneNumber:
+        propertyTerm: cim.telephoneNumber
+        range: string
+        mandatory: true
+      shortCode:
+        propertyTerm: cim.shortCode
+        range: integer
+      isSMSCapable:
+        propertyTerm: cim.isSMSCapable
+        range: boolean
         mandatory: true
       isFaxCapable:
         propertyTerm: cim.isFaxCapable
@@ -75,85 +91,38 @@ nodeMappings:
       phoneCountryCode:
         propertyTerm: cim.phoneCountryCode
         range: string
-      isSMSCapable:
-        propertyTerm: cim.isSMSCapable
-        range: boolean
-        mandatory: true
-      shortCode:
-        propertyTerm: cim.shortCode
-        range: integer
-      areaCode:
-        propertyTerm: cim.areaCode
-        range: string
-      formattedE164PhoneNumber:
-        propertyTerm: cim.formattedE164PhoneNumber
-        range: string
-      id:
-        propertyTerm: cim.id
-        range: guid
-        unique: true
-        mandatory: true
-      telephoneNumber:
-        propertyTerm: cim.telephoneNumber
-        range: string
-        mandatory: true
-      formattedInternationalPhoneNumber:
-        propertyTerm: cim.formattedInternationalPhoneNumber
+      primaryPhoneType:
+        propertyTerm: cim.primaryPhoneType
         range: string
         mandatory: true
       formattedNationalPhoneNumber:
         propertyTerm: cim.formattedNationalPhoneNumber
         range: string
         mandatory: true
-      extensionNumber:
-        propertyTerm: cim.extensionNumber
-        range: string
-      countryName:
-        propertyTerm: cim.countryName
-        range: string
-    extends: ContactPoint
-  ContactPoint:
-    classTerm: cim.ContactPoint
-    mapping:
-      profileOccurrenceCount:
-        propertyTerm: cim.profileOccurrenceCount
-        range: integer
-      party:
-        propertyTerm: cim.party
-        range: party_eg.Party
-        mandatory: true
-        allowMultiple: true
-      forPersonalUse:
-        propertyTerm: cim.forPersonalUse
-        range: boolean
-        mandatory: true
-      profileLastUpdatedDate:
-        propertyTerm: cim.profileLastUpdatedDate
-        range: time
       id:
         propertyTerm: cim.id
         range: guid
         unique: true
         mandatory: true
-      primaryFlag:
-        propertyTerm: cim.primaryFlag
-        range: boolean
-      forBusinessUse:
-        propertyTerm: cim.forBusinessUse
-        range: boolean
-        mandatory: true
-      bestTimeToContactEndTime:
-        propertyTerm: cim.bestTimeToContactEndTime
-        range: time
-      partyRole:
-        propertyTerm: cim.partyRole
+      formattedInternationalPhoneNumber:
+        propertyTerm: cim.formattedInternationalPhoneNumber
         range: string
-      bestTimeToContactStartTime:
-        propertyTerm: cim.bestTimeToContactStartTime
-        range: time
+        mandatory: true
+      extensionNumber:
+        propertyTerm: cim.extensionNumber
+        range: string
+    extends: ContactPoint
+  ContactPoint:
+    classTerm: cim.ContactPoint
+    mapping:
       activeToDate:
         propertyTerm: cim.activeToDate
         range: date
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
       profileFirstCreatedDate:
         propertyTerm: cim.profileFirstCreatedDate
         range: time
@@ -161,32 +130,59 @@ nodeMappings:
         propertyTerm: cim.activeFromDate
         range: date
         mandatory: true
+      bestTimeToContactStartTime:
+        propertyTerm: cim.bestTimeToContactStartTime
+        range: time
+      forBusinessUse:
+        propertyTerm: cim.forBusinessUse
+        range: boolean
+        mandatory: true
+      primaryFlag:
+        propertyTerm: cim.primaryFlag
+        range: boolean
+      bestTimeToContactEndTime:
+        propertyTerm: cim.bestTimeToContactEndTime
+        range: time
+      profileLastUpdatedDate:
+        propertyTerm: cim.profileLastUpdatedDate
+        range: time
       contactPointType:
         propertyTerm: cim.contactPointType
         range: ContactPointType
         mandatory: true
         allowMultiple: true
+      forPersonalUse:
+        propertyTerm: cim.forPersonalUse
+        range: boolean
+        mandatory: true
+      partyRole:
+        propertyTerm: cim.partyRole
+        range: string
+      party:
+        propertyTerm: cim.party
+        range: party_eg.Party
+        mandatory: true
+        allowMultiple: true
+      profileOccurrenceCount:
+        propertyTerm: cim.profileOccurrenceCount
+        range: integer
   ContactPointSocial:
     classTerm: cim.ContactPointSocial
     mapping:
-      socialNetworkProvider:
-        propertyTerm: cim.socialNetworkProvider
-        range: string
-        mandatory: true
-      followersCount:
-        propertyTerm: cim.followersCount
-        range: integer
-        mandatory: true
-      socialHandleName:
-        propertyTerm: cim.socialHandleName
-        range: string
-        mandatory: true
       socialFanStatus:
         propertyTerm: cim.socialFanStatus
         range: string
         mandatory: true
       profilePictureURL:
         propertyTerm: cim.profilePictureURL
+        range: string
+        mandatory: true
+      followersCount:
+        propertyTerm: cim.followersCount
+        range: integer
+        mandatory: true
+      socialNetworkProvider:
+        propertyTerm: cim.socialNetworkProvider
         range: string
         mandatory: true
       id:
@@ -196,6 +192,10 @@ nodeMappings:
         mandatory: true
       socialHandle:
         propertyTerm: cim.socialHandle
+        range: string
+        mandatory: true
+      socialHandleName:
+        propertyTerm: cim.socialHandleName
         range: string
         mandatory: true
     extends: ContactPoint
@@ -227,54 +227,54 @@ nodeMappings:
   ContactPointAddress:
     classTerm: cim.ContactPointAddress
     mapping:
-      addressLine4:
-        propertyTerm: cim.addressLine4
+      addressLine2:
+        propertyTerm: cim.addressLine2
         range: string
-      isUsedForBilling:
-        propertyTerm: cim.isUsedForBilling
-        range: boolean
+      geoLatitude:
+        propertyTerm: cim.geoLatitude
+        range: integer
+      addressLine1:
+        propertyTerm: cim.addressLine1
+        range: string
       id:
         propertyTerm: cim.id
         range: guid
         unique: true
         mandatory: true
-      countryName:
-        propertyTerm: cim.countryName
+      cityName:
+        propertyTerm: cim.cityName
         range: string
-      geoLongitude:
-        propertyTerm: cim.geoLongitude
-        range: integer
-      stateProvinceName:
-        propertyTerm: cim.stateProvinceName
-        range: string
-      addressLine1:
-        propertyTerm: cim.addressLine1
-        range: string
-      addressLine3:
-        propertyTerm: cim.addressLine3
-        range: string
-      geoLatitude:
-        propertyTerm: cim.geoLatitude
-        range: integer
-      isUsedForShipping:
-        propertyTerm: cim.isUsedForShipping
+      isUsedForBilling:
+        propertyTerm: cim.isUsedForBilling
         range: boolean
       geoAccuracy:
         propertyTerm: cim.geoAccuracy
         range: integer
-      cityName:
-        propertyTerm: cim.cityName
-        range: string
       postalCodeText:
         propertyTerm: cim.postalCodeText
         range: string
-      addressLine2:
-        propertyTerm: cim.addressLine2
+      countryName:
+        propertyTerm: cim.countryName
         range: string
+      addressLine4:
+        propertyTerm: cim.addressLine4
+        range: string
+      stateProvinceName:
+        propertyTerm: cim.stateProvinceName
+        range: string
+      addressLine3:
+        propertyTerm: cim.addressLine3
+        range: string
+      isUsedForShipping:
+        propertyTerm: cim.isUsedForShipping
+        range: boolean
       contactPhone:
         propertyTerm: cim.contactPhone
         range: ContactPointPhone
         allowMultiple: true
+      geoLongitude:
+        propertyTerm: cim.geoLongitude
+        range: integer
     extends: ContactPoint
 external:
   cim: http://cloudinformationmodel.org/model/

@@ -357,17 +357,9 @@ types:
         type: string
       description:
         type: string
-      salesOrderProductGroupType:
-        type: string
       name:
         type: string
-  OrderProductRelationshipType:
-    properties:
-      id:
-        type: string
-      parentProductRole:
-        type: string
-      childProductRole:
+      salesOrderProductGroupType:
         type: string
   SalesOrderProductReason:
     properties:
@@ -472,6 +464,14 @@ types:
         items: OrderDeliveryMethod
       accountContact:
         items: account_eg.AccountContact
+  OrderProductRelationshipType:
+    properties:
+      id:
+        type: string
+      parentProductRole:
+        type: string
+      childProductRole:
+        type: string
   SalesChannel:
     properties:
       externalRecord:
@@ -488,9 +488,9 @@ types:
         type: string
 uses:
   account_eg: ../../Party/Account/schema.yaml
-  partyrole_eg: ../../Party/PartyRole/schema.yaml
-  product_eg: ../../Product/Product/schema.yaml
-  party_eg: ../../Party/Party/schema.yaml
   productattribute_eg: ../../Product/ProductAttribute/schema.yaml
+  party_eg: ../../Party/Party/schema.yaml
   paymentmethod_eg: ../../PaymentMethod/PaymentMethod/schema.yaml
   contactpoint_eg: ../../Party/ContactPoint/schema.yaml
+  partyrole_eg: ../../Party/PartyRole/schema.yaml
+  product_eg: ../../Product/Product/schema.yaml

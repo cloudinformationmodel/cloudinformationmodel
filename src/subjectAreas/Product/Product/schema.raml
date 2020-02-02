@@ -17,7 +17,7 @@ types:
       childProduct:
         items: Product
       productRelationshipType:
-        items: salesorder_eg.ProductRelationshipType
+        items: ProductRelationshipType
       toDate:
         type: date-only
       salesOrderProduct2:
@@ -318,7 +318,7 @@ types:
       quantityUnitOfMeasure:
         type: string
 uses:
-  productattribute_eg: ../ProductAttribute/schema.yaml
   account_eg: ../../Party/Account/schema.yaml
+  productattribute_eg: ../ProductAttribute/schema.yaml
   productcatalog_eg: ../ProductCatalog/schema.yaml
   salesorder_eg: ../../SalesOrder/SalesOrder/schema.yaml

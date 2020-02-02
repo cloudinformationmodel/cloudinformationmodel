@@ -8,9 +8,37 @@ nodeMappings:
   PaymentGatewayInteractionType:
     classTerm: cim.PaymentGatewayInteractionType
     mapping:
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
       description:
         propertyTerm: cim.description
         range: string
+        mandatory: true
+  Payment:
+    classTerm: cim.Payment
+    mapping:
+      paymentAmount:
+        propertyTerm: cim.paymentAmount
+        range: integer
+        mandatory: true
+      latestGatewayDate:
+        propertyTerm: cim.latestGatewayDate
+        range: date
+        mandatory: true
+      authorizationProcessingMode:
+        propertyTerm: cim.authorizationProcessingMode
+        range: string
+        mandatory: true
+      totalAppliedAmount:
+        propertyTerm: cim.totalAppliedAmount
+        range: integer
         mandatory: true
       name:
         propertyTerm: cim.name
@@ -21,47 +49,54 @@ nodeMappings:
         range: guid
         unique: true
         mandatory: true
-  Payment:
-    classTerm: cim.Payment
-    mapping:
-      netAppliedAmount:
-        propertyTerm: cim.netAppliedAmount
-        range: integer
+      externalCreatedDate:
+        propertyTerm: cim.externalCreatedDate
+        range: date
+        mandatory: true
+      latestGatewayReferenceNumber:
+        propertyTerm: cim.latestGatewayReferenceNumber
+        range: string
+        mandatory: true
+      paymentTreatment:
+        propertyTerm: cim.paymentTreatment
+        range: PaymentTreatment
+        mandatory: true
+        allowMultiple: true
+      account:
+        propertyTerm: cim.account
+        range: account_eg.Account
+        allowMultiple: true
+      paymentNumber:
+        propertyTerm: cim.paymentNumber
+        range: string
+        mandatory: true
+      customerEmailAddress:
+        propertyTerm: cim.customerEmailAddress
+        range: string
+      macAddress:
+        propertyTerm: cim.macAddress
+        range: string
+      customerPhoneNumber:
+        propertyTerm: cim.customerPhoneNumber
+        range: string
+      paymentGateway:
+        propertyTerm: cim.paymentGateway
+        range: PaymentGateway
+        mandatory: true
+        allowMultiple: true
+      latestGatewayInternalReferenceNumber:
+        propertyTerm: cim.latestGatewayInternalReferenceNumber
+        range: string
+        mandatory: true
+      paymentEffectiveDate:
+        propertyTerm: cim.paymentEffectiveDate
+        range: date
         mandatory: true
       internalBusinessUnit:
         propertyTerm: cim.internalBusinessUnit
         range: party_eg.InternalBusinessUnit
         mandatory: true
         allowMultiple: true
-      paymentAmount:
-        propertyTerm: cim.paymentAmount
-        range: integer
-        mandatory: true
-      latestGatewayReferenceNumber:
-        propertyTerm: cim.latestGatewayReferenceNumber
-        range: string
-        mandatory: true
-      customerPhoneNumber:
-        propertyTerm: cim.customerPhoneNumber
-        range: string
-      macAddress:
-        propertyTerm: cim.macAddress
-        range: string
-      authorizationProcessingMode:
-        propertyTerm: cim.authorizationProcessingMode
-        range: string
-        mandatory: true
-      iPAddress:
-        propertyTerm: cim.iPAddress
-        range: string
-      paymentCancellationDate:
-        propertyTerm: cim.paymentCancellationDate
-        range: date
-        mandatory: true
-      name:
-        propertyTerm: cim.name
-        range: string
-        mandatory: true
       salesOrderPaymentSummary:
         propertyTerm: cim.salesOrderPaymentSummary
         range: salesorder_eg.SalesOrderPaymentSummary
@@ -72,85 +107,50 @@ nodeMappings:
         range: PaymentGroup
         mandatory: true
         allowMultiple: true
-      paymentStatus:
-        propertyTerm: cim.paymentStatus
-        range: string
-        mandatory: true
-      paymentMethod:
-        propertyTerm: cim.paymentMethod
-        range: paymentmethod_eg.PaymentMethod
-        mandatory: true
-        allowMultiple: true
-      totalUnappliedAmount:
-        propertyTerm: cim.totalUnappliedAmount
+      balanceAmount:
+        propertyTerm: cim.balanceAmount
         range: integer
         mandatory: true
-      paymentTreatment:
-        propertyTerm: cim.paymentTreatment
-        range: PaymentTreatment
-        mandatory: true
-        allowMultiple: true
-      latestPaymentGatewayMessageText:
-        propertyTerm: cim.latestPaymentGatewayMessageText
+      iPAddress:
+        propertyTerm: cim.iPAddress
         range: string
-      latestGatewayDate:
-        propertyTerm: cim.latestGatewayDate
-        range: date
-        mandatory: true
-      paymentGateway:
-        propertyTerm: cim.paymentGateway
-        range: PaymentGateway
-        mandatory: true
-        allowMultiple: true
       latestGatewayResultCode:
         propertyTerm: cim.latestGatewayResultCode
         range: PaymentGatewayResultCode
         mandatory: true
         allowMultiple: true
-      customerEmailAddress:
-        propertyTerm: cim.customerEmailAddress
-        range: string
-      id:
-        propertyTerm: cim.id
-        range: guid
-        unique: true
+      paymentMethod:
+        propertyTerm: cim.paymentMethod
+        range: paymentmethod_eg.PaymentMethod
         mandatory: true
-      paymentEffectiveDate:
-        propertyTerm: cim.paymentEffectiveDate
+        allowMultiple: true
+      paymentCancellationDate:
+        propertyTerm: cim.paymentCancellationDate
         range: date
         mandatory: true
-      totalAppliedAmount:
-        propertyTerm: cim.totalAppliedAmount
+      totalUnappliedAmount:
+        propertyTerm: cim.totalUnappliedAmount
         range: integer
         mandatory: true
-      latestGatewayInternalReferenceNumber:
-        propertyTerm: cim.latestGatewayInternalReferenceNumber
+      commentText:
+        propertyTerm: cim.commentText
         range: string
         mandatory: true
       latestGatewayInternalResult:
         propertyTerm: cim.latestGatewayInternalResult
         range: string
         mandatory: true
-      commentText:
-        propertyTerm: cim.commentText
+      paymentStatus:
+        propertyTerm: cim.paymentStatus
         range: string
         mandatory: true
-      account:
-        propertyTerm: cim.account
-        range: account_eg.Account
-        allowMultiple: true
-      paymentNumber:
-        propertyTerm: cim.paymentNumber
-        range: string
-        mandatory: true
-      balanceAmount:
-        propertyTerm: cim.balanceAmount
+      netAppliedAmount:
+        propertyTerm: cim.netAppliedAmount
         range: integer
         mandatory: true
-      externalCreatedDate:
-        propertyTerm: cim.externalCreatedDate
-        range: date
-        mandatory: true
+      latestPaymentGatewayMessageText:
+        propertyTerm: cim.latestPaymentGatewayMessageText
+        range: string
       paymentType:
         propertyTerm: cim.paymentType
         range: string
@@ -158,36 +158,41 @@ nodeMappings:
   PaymentGatewayInteractionLog:
     classTerm: cim.PaymentGatewayInteractionLog
     mapping:
-      paymentGatewayInteractionStatus:
-        propertyTerm: cim.paymentGatewayInteractionStatus
-        range: string
-        mandatory: true
-      internalReferenceNumber:
-        propertyTerm: cim.internalReferenceNumber
-        range: string
-        mandatory: true
       paymentGatewayInteractionLogName:
         propertyTerm: cim.paymentGatewayInteractionLogName
         range: string
         mandatory: true
+      paymentGatewayResult:
+        propertyTerm: cim.paymentGatewayResult
+        range: PaymentGatewayResultCode
+        mandatory: true
+        allowMultiple: true
       paymentGatewayInteractionType:
         propertyTerm: cim.paymentGatewayInteractionType
         range: PaymentGatewayInteractionType
         mandatory: true
         allowMultiple: true
-      paymentGatewayAuthorizationCode:
-        propertyTerm: cim.paymentGatewayAuthorizationCode
+      internalResultCode:
+        propertyTerm: cim.internalResultCode
         range: string
         mandatory: true
-      paymentGatewayAVSCode:
-        propertyTerm: cim.paymentGatewayAVSCode
+      paymentGatewayReferenceNumber:
+        propertyTerm: cim.paymentGatewayReferenceNumber
+        range: string
+        mandatory: true
+      paymentGatewayAuthorizationCode:
+        propertyTerm: cim.paymentGatewayAuthorizationCode
         range: string
         mandatory: true
       paymentGatewayMessageText:
         propertyTerm: cim.paymentGatewayMessageText
         range: string
-      internalResultCode:
-        propertyTerm: cim.internalResultCode
+      internalReferenceNumber:
+        propertyTerm: cim.internalReferenceNumber
+        range: string
+        mandatory: true
+      paymentGatewayInteractionStatus:
+        propertyTerm: cim.paymentGatewayInteractionStatus
         range: string
         mandatory: true
       id:
@@ -199,24 +204,22 @@ nodeMappings:
         propertyTerm: cim.paymentGatewayDate
         range: date
         mandatory: true
-      paymentGatewayReferenceNumber:
-        propertyTerm: cim.paymentGatewayReferenceNumber
+      paymentGatewayAVSCode:
+        propertyTerm: cim.paymentGatewayAVSCode
         range: string
         mandatory: true
-      paymentGatewayResult:
-        propertyTerm: cim.paymentGatewayResult
-        range: PaymentGatewayResultCode
-        mandatory: true
-        allowMultiple: true
   PaymentGatewayProvider:
     classTerm: cim.PaymentGatewayProvider
     mapping:
-      namespacePrefixText:
-        propertyTerm: cim.namespacePrefixText
+      paymentGatewayProviderCommentText:
+        propertyTerm: cim.paymentGatewayProviderCommentText
+        range: string
+      paymentGatewayProviderName:
+        propertyTerm: cim.paymentGatewayProviderName
         range: string
         mandatory: true
-      apexAdapterClassName:
-        propertyTerm: cim.apexAdapterClassName
+      namespacePrefixText:
+        propertyTerm: cim.namespacePrefixText
         range: string
         mandatory: true
       id:
@@ -228,11 +231,8 @@ nodeMappings:
         propertyTerm: cim.developerName
         range: string
         mandatory: true
-      paymentGatewayProviderCommentText:
-        propertyTerm: cim.paymentGatewayProviderCommentText
-        range: string
-      paymentGatewayProviderName:
-        propertyTerm: cim.paymentGatewayProviderName
+      apexAdapterClassName:
+        propertyTerm: cim.apexAdapterClassName
         range: string
         mandatory: true
   PaymentPolicy:
@@ -242,14 +242,6 @@ nodeMappings:
         propertyTerm: cim.name
         range: string
         mandatory: true
-      paymentPolicyStatus:
-        propertyTerm: cim.paymentPolicyStatus
-        range: string
-        mandatory: true
-      description:
-        propertyTerm: cim.description
-        range: string
-        mandatory: true
       id:
         propertyTerm: cim.id
         range: guid
@@ -257,6 +249,14 @@ nodeMappings:
         mandatory: true
       paymentPolicyTreatmentSelection:
         propertyTerm: cim.paymentPolicyTreatmentSelection
+        range: string
+        mandatory: true
+      paymentPolicyStatus:
+        propertyTerm: cim.paymentPolicyStatus
+        range: string
+        mandatory: true
+      description:
+        propertyTerm: cim.description
         range: string
         mandatory: true
   PaymentGatewayResultCode:
@@ -278,24 +278,10 @@ nodeMappings:
   RefundAllocation:
     classTerm: cim.RefundAllocation
     mapping:
-      refundBalanceAmount:
-        propertyTerm: cim.refundBalanceAmount
-        range: integer
-        mandatory: true
-      refundAllocationType:
-        propertyTerm: cim.refundAllocationType
-        range: string
-        mandatory: true
-      hasBeenUnapplied:
-        propertyTerm: cim.hasBeenUnapplied
-        range: boolean
-      unappliedDate:
-        propertyTerm: cim.unappliedDate
-        range: date
-        mandatory: true
-      effectiveDate:
-        propertyTerm: cim.effectiveDate
-        range: date
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
         mandatory: true
       refundAllocationName:
         propertyTerm: cim.refundAllocationName
@@ -304,21 +290,31 @@ nodeMappings:
         propertyTerm: cim.externalCreatedDate
         range: date
         mandatory: true
-      refundPayment:
-        propertyTerm: cim.refundPayment
-        range: RefundPayment
+      refundBalanceAmount:
+        propertyTerm: cim.refundBalanceAmount
+        range: integer
         mandatory: true
-        allowMultiple: true
+      hasBeenUnapplied:
+        propertyTerm: cim.hasBeenUnapplied
+        range: boolean
+      refundAllocationType:
+        propertyTerm: cim.refundAllocationType
+        range: string
+        mandatory: true
+      unappliedDate:
+        propertyTerm: cim.unappliedDate
+        range: date
+        mandatory: true
       relatedRefundAllocation:
         propertyTerm: cim.relatedRefundAllocation
         range: RefundAllocation
         mandatory: true
         allowMultiple: true
-      id:
-        propertyTerm: cim.id
-        range: guid
-        unique: true
+      refundPayment:
+        propertyTerm: cim.refundPayment
+        range: RefundPayment
         mandatory: true
+        allowMultiple: true
       allocatedAmount:
         propertyTerm: cim.allocatedAmount
         range: integer
@@ -327,32 +323,24 @@ nodeMappings:
         propertyTerm: cim.appliedDate
         range: date
         mandatory: true
-  PaymentApplication:
-    classTerm: cim.PaymentApplication
-    mapping:
-      name:
-        propertyTerm: cim.name
-        range: string
-        mandatory: true
-      hasBeenUnapplied:
-        propertyTerm: cim.hasBeenUnapplied
-        range: boolean
-      unappliedDate:
-        propertyTerm: cim.unappliedDate
-        range: date
-        mandatory: true
-      payment:
-        propertyTerm: cim.payment
-        range: Payment
-        mandatory: true
-        allowMultiple: true
       effectiveDate:
         propertyTerm: cim.effectiveDate
         range: date
         mandatory: true
-      paymentApplicationType:
-        propertyTerm: cim.paymentApplicationType
-        range: string
+  PaymentApplication:
+    classTerm: cim.PaymentApplication
+    mapping:
+      hasBeenUnapplied:
+        propertyTerm: cim.hasBeenUnapplied
+        range: boolean
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      effectiveDate:
+        propertyTerm: cim.effectiveDate
+        range: date
         mandatory: true
       paymentBalanceAmount:
         propertyTerm: cim.paymentBalanceAmount
@@ -362,79 +350,47 @@ nodeMappings:
         propertyTerm: cim.appliedDate
         range: date
         mandatory: true
+      paymentApplicationType:
+        propertyTerm: cim.paymentApplicationType
+        range: string
+        mandatory: true
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      unappliedDate:
+        propertyTerm: cim.unappliedDate
+        range: date
+        mandatory: true
+      payment:
+        propertyTerm: cim.payment
+        range: Payment
+        mandatory: true
+        allowMultiple: true
       externalCreatedDate:
         propertyTerm: cim.externalCreatedDate
         range: date
         mandatory: true
-      id:
-        propertyTerm: cim.id
-        range: guid
-        unique: true
-        mandatory: true
-      commentText:
-        propertyTerm: cim.commentText
-        range: string
       appliedAmount:
         propertyTerm: cim.appliedAmount
         range: integer
         mandatory: true
+      commentText:
+        propertyTerm: cim.commentText
+        range: string
   PaymentAuthorization:
     classTerm: cim.PaymentAuthorization
     mapping:
-      gatewayReferenceDetailsText:
-        propertyTerm: cim.gatewayReferenceDetailsText
+      paymentAuthorizationCommentText:
+        propertyTerm: cim.paymentAuthorizationCommentText
         range: string
-        mandatory: true
-      expirationDate:
-        propertyTerm: cim.expirationDate
-        range: date
+      paymentAuthorizationNumber:
+        propertyTerm: cim.paymentAuthorizationNumber
+        range: string
         mandatory: true
       paymentGroup:
         propertyTerm: cim.paymentGroup
         range: PaymentGroup
-        mandatory: true
-        allowMultiple: true
-      totalAuthorizationReversalAmount:
-        propertyTerm: cim.totalAuthorizationReversalAmount
-        range: integer
-        mandatory: true
-      paymentAuthorizationProcessingMode:
-        propertyTerm: cim.paymentAuthorizationProcessingMode
-        range: string
-        mandatory: true
-      iPAddress:
-        propertyTerm: cim.iPAddress
-        range: string
-      availableBalanceAmount:
-        propertyTerm: cim.availableBalanceAmount
-        range: integer
-        mandatory: true
-      paymentGatewayDate:
-        propertyTerm: cim.paymentGatewayDate
-        range: time
-        mandatory: true
-      gatewayResultCodeDescription:
-        propertyTerm: cim.gatewayResultCodeDescription
-        range: string
-      paymentMethodID:
-        propertyTerm: cim.paymentMethodID
-        range: paymentmethod_eg.PaymentMethod
-        mandatory: true
-        allowMultiple: true
-      paymentAuthorizationStatus:
-        propertyTerm: cim.paymentAuthorizationStatus
-        range: string
-        mandatory: true
-      macAddress:
-        propertyTerm: cim.macAddress
-        range: string
-      paymentGatewayInternalReferenceNumber:
-        propertyTerm: cim.paymentGatewayInternalReferenceNumber
-        range: string
-        mandatory: true
-      paymentGatewayResult:
-        propertyTerm: cim.paymentGatewayResult
-        range: PaymentGatewayResultCode
         mandatory: true
         allowMultiple: true
       paymentGateway:
@@ -442,57 +398,98 @@ nodeMappings:
         range: PaymentGateway
         mandatory: true
         allowMultiple: true
-      paymentAuthorizationNumber:
-        propertyTerm: cim.paymentAuthorizationNumber
-        range: string
-        mandatory: true
-      paymentAuthorizationCommentText:
-        propertyTerm: cim.paymentAuthorizationCommentText
-        range: string
-      gatewayAuthorizationCode:
-        propertyTerm: cim.gatewayAuthorizationCode
+      gatewayReferenceDetailsText:
+        propertyTerm: cim.gatewayReferenceDetailsText
         range: string
         mandatory: true
       totalPaymentCaptureAmount:
         propertyTerm: cim.totalPaymentCaptureAmount
         range: integer
         mandatory: true
-      authorizationAmount:
-        propertyTerm: cim.authorizationAmount
-        range: integer
-        mandatory: true
-      externalCreatedDate:
-        propertyTerm: cim.externalCreatedDate
-        range: date
-        mandatory: true
-      id:
-        propertyTerm: cim.id
-        range: guid
-        unique: true
-        mandatory: true
-      requestDate:
-        propertyTerm: cim.requestDate
+      macAddress:
+        propertyTerm: cim.macAddress
+        range: string
+      paymentGatewayDate:
+        propertyTerm: cim.paymentGatewayDate
         range: time
         mandatory: true
-      paymentGatewayReferenceNumber:
-        propertyTerm: cim.paymentGatewayReferenceNumber
+      iPAddress:
+        propertyTerm: cim.iPAddress
         range: string
+      gatewayResultCodeDescription:
+        propertyTerm: cim.gatewayResultCodeDescription
+        range: string
+      paymentGatewayInternalReferenceNumber:
+        propertyTerm: cim.paymentGatewayInternalReferenceNumber
+        range: string
+        mandatory: true
+      expirationDate:
+        propertyTerm: cim.expirationDate
+        range: date
+        mandatory: true
+      paymentMethodID:
+        propertyTerm: cim.paymentMethodID
+        range: paymentmethod_eg.PaymentMethod
+        mandatory: true
+        allowMultiple: true
+      totalAuthorizationReversalAmount:
+        propertyTerm: cim.totalAuthorizationReversalAmount
+        range: integer
         mandatory: true
       salesOrderPaymentSummary:
         propertyTerm: cim.salesOrderPaymentSummary
         range: salesorder_eg.SalesOrderPaymentSummary
         mandatory: true
         allowMultiple: true
+      paymentAuthorizationStatus:
+        propertyTerm: cim.paymentAuthorizationStatus
+        range: string
+        mandatory: true
+      gatewayAuthorizationCode:
+        propertyTerm: cim.gatewayAuthorizationCode
+        range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      availableBalanceAmount:
+        propertyTerm: cim.availableBalanceAmount
+        range: integer
+        mandatory: true
+      authorizationAmount:
+        propertyTerm: cim.authorizationAmount
+        range: integer
+        mandatory: true
+      paymentAuthorizationProcessingMode:
+        propertyTerm: cim.paymentAuthorizationProcessingMode
+        range: string
+        mandatory: true
+      paymentGatewayReferenceNumber:
+        propertyTerm: cim.paymentGatewayReferenceNumber
+        range: string
+        mandatory: true
+      paymentGatewayResult:
+        propertyTerm: cim.paymentGatewayResult
+        range: PaymentGatewayResultCode
+        mandatory: true
+        allowMultiple: true
+      requestDate:
+        propertyTerm: cim.requestDate
+        range: time
+        mandatory: true
+      externalCreatedDate:
+        propertyTerm: cim.externalCreatedDate
+        range: date
+        mandatory: true
   PaymentGroup:
     classTerm: cim.PaymentGroup
     mapping:
-      totalReversalAmount:
-        propertyTerm: cim.totalReversalAmount
-        range: integer
-        mandatory: true
-      totalPaymentAmount:
-        propertyTerm: cim.totalPaymentAmount
-        range: integer
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
         mandatory: true
       paymentGroupNumber:
         propertyTerm: cim.paymentGroupNumber
@@ -502,20 +499,23 @@ nodeMappings:
         propertyTerm: cim.totalAuthorizationAmount
         range: integer
         mandatory: true
-      id:
-        propertyTerm: cim.id
-        range: guid
-        unique: true
+      totalPaymentAmount:
+        propertyTerm: cim.totalPaymentAmount
+        range: integer
+        mandatory: true
+      totalReversalAmount:
+        propertyTerm: cim.totalReversalAmount
+        range: integer
         mandatory: true
   PaymentTreatmentMethod:
     classTerm: cim.PaymentTreatmentMethod
     mapping:
-      paymentTreatmentMethodCode:
-        propertyTerm: cim.paymentTreatmentMethodCode
-        range: string
-        mandatory: true
       paymentTreatmentMethodName:
         propertyTerm: cim.paymentTreatmentMethodName
+        range: string
+        mandatory: true
+      paymentTreatmentMethodCode:
+        propertyTerm: cim.paymentTreatmentMethodCode
         range: string
         mandatory: true
       id:
@@ -530,32 +530,32 @@ nodeMappings:
   PaymentGatewayAuthorizationLog:
     classTerm: cim.PaymentGatewayAuthorizationLog
     mapping:
-      paymentAuthorization:
-        propertyTerm: cim.paymentAuthorization
-        range: PaymentAuthorization
-        mandatory: true
-        allowMultiple: true
-      name:
-        propertyTerm: cim.name
-        range: string
       id:
         propertyTerm: cim.id
         range: guid
         unique: true
         mandatory: true
+      name:
+        propertyTerm: cim.name
+        range: string
+      paymentAuthorization:
+        propertyTerm: cim.paymentAuthorization
+        range: PaymentAuthorization
+        mandatory: true
+        allowMultiple: true
     extends: PaymentGatewayInteractionLog
   CapturePayment:
     classTerm: cim.CapturePayment
     mapping:
+      name:
+        propertyTerm: cim.name
+        range: string
       isFinalCapture:
         propertyTerm: cim.isFinalCapture
         range: boolean
       handlingFeeAmount:
         propertyTerm: cim.handlingFeeAmount
         range: integer
-      name:
-        propertyTerm: cim.name
-        range: string
       capturePaymentType:
         propertyTerm: cim.capturePaymentType
         range: string
@@ -573,11 +573,16 @@ nodeMappings:
   RefundPaymentAllocation:
     classTerm: cim.RefundPaymentAllocation
     mapping:
-      refundAllocationCommentText:
-        propertyTerm: cim.refundAllocationCommentText
-        range: string
+      refundAllocationCommentsDate:
+        propertyTerm: cim.refundAllocationCommentsDate
+        range: date
+        mandatory: true
       creditMemoBalanceAmount:
         propertyTerm: cim.creditMemoBalanceAmount
+        range: integer
+        mandatory: true
+      paymentBalanceAmount:
+        propertyTerm: cim.paymentBalanceAmount
         range: integer
         mandatory: true
       capturePayment:
@@ -588,32 +593,27 @@ nodeMappings:
       refundPaymentAllocationName:
         propertyTerm: cim.refundPaymentAllocationName
         range: string
+      refundAllocationCommentText:
+        propertyTerm: cim.refundAllocationCommentText
+        range: string
       id:
         propertyTerm: cim.id
         range: guid
         unique: true
-        mandatory: true
-      paymentBalanceAmount:
-        propertyTerm: cim.paymentBalanceAmount
-        range: integer
-        mandatory: true
-      refundAllocationCommentsDate:
-        propertyTerm: cim.refundAllocationCommentsDate
-        range: date
         mandatory: true
     extends: RefundAllocation
   PaymentGatewayAuthReversalLog:
     classTerm: cim.PaymentGatewayAuthReversalLog
     mapping:
-      paymentAuthorizationReversal:
-        propertyTerm: cim.paymentAuthorizationReversal
-        range: PaymentAuthorizationReversal
-        allowMultiple: true
       id:
         propertyTerm: cim.id
         range: guid
         unique: true
         mandatory: true
+      paymentAuthorizationReversal:
+        propertyTerm: cim.paymentAuthorizationReversal
+        range: PaymentAuthorizationReversal
+        allowMultiple: true
       name:
         propertyTerm: cim.name
         range: string
@@ -621,22 +621,30 @@ nodeMappings:
   RefundPayment:
     classTerm: cim.RefundPayment
     mapping:
-      externalCreatedDate:
-        propertyTerm: cim.externalCreatedDate
-        range: date
-        mandatory: true
-      name:
-        propertyTerm: cim.name
-        range: string
       id:
         propertyTerm: cim.id
         range: guid
         unique: true
         mandatory: true
+      name:
+        propertyTerm: cim.name
+        range: string
+      externalCreatedDate:
+        propertyTerm: cim.externalCreatedDate
+        range: date
+        mandatory: true
     extends: Payment
   PaymentAllocation:
     classTerm: cim.PaymentAllocation
     mapping:
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      paymentAllocationName:
+        propertyTerm: cim.paymentAllocationName
+        range: string
       externalCreatedDate:
         propertyTerm: cim.externalCreatedDate
         range: date
@@ -646,41 +654,33 @@ nodeMappings:
         range: PaymentAllocation
         mandatory: true
         allowMultiple: true
-      paymentAllocationName:
-        propertyTerm: cim.paymentAllocationName
-        range: string
-      id:
-        propertyTerm: cim.id
-        range: guid
-        unique: true
-        mandatory: true
   PaymentCreditMemoApplication:
     classTerm: cim.PaymentCreditMemoApplication
     mapping:
+      name:
+        propertyTerm: cim.name
+        range: string
       id:
         propertyTerm: cim.id
         range: guid
         unique: true
         mandatory: true
-      name:
-        propertyTerm: cim.name
-        range: string
     extends: PaymentApplication
   PaymentCreditMemoAllocation:
     classTerm: cim.PaymentCreditMemoAllocation
     mapping:
-      name:
-        propertyTerm: cim.name
-        range: string
+      appliedAmount:
+        propertyTerm: cim.appliedAmount
+        range: integer
+        mandatory: true
       id:
         propertyTerm: cim.id
         range: guid
         unique: true
         mandatory: true
-      appliedAmount:
-        propertyTerm: cim.appliedAmount
-        range: integer
-        mandatory: true
+      name:
+        propertyTerm: cim.name
+        range: string
     extends: PaymentAllocation
   PaymentInvoiceAllocation:
     classTerm: cim.PaymentInvoiceAllocation
@@ -694,10 +694,6 @@ nodeMappings:
         range: guid
         unique: true
         mandatory: true
-      appliedAmount:
-        propertyTerm: cim.appliedAmount
-        range: integer
-        mandatory: true
       paymentInvoiceAllocationName:
         propertyTerm: cim.paymentInvoiceAllocationName
         range: string
@@ -705,37 +701,41 @@ nodeMappings:
         propertyTerm: cim.invoiceBalanceAmount
         range: integer
         mandatory: true
+      appliedAmount:
+        propertyTerm: cim.appliedAmount
+        range: integer
+        mandatory: true
     extends: PaymentAllocation
   PaymentInvoiceApplication:
     classTerm: cim.PaymentInvoiceApplication
     mapping:
+      paymentInvoiceApplicationName:
+        propertyTerm: cim.paymentInvoiceApplicationName
+        range: string
       id:
         propertyTerm: cim.id
         range: guid
         unique: true
-        mandatory: true
-      invoiceBalanceAmount:
-        propertyTerm: cim.invoiceBalanceAmount
-        range: integer
         mandatory: true
       paymentInvoiceApplicationType:
         propertyTerm: cim.paymentInvoiceApplicationType
         range: string
-      paymentInvoiceApplicationName:
-        propertyTerm: cim.paymentInvoiceApplicationName
-        range: string
+      invoiceBalanceAmount:
+        propertyTerm: cim.invoiceBalanceAmount
+        range: integer
+        mandatory: true
     extends: PaymentApplication
   PaymentGatewayPaymentLog:
     classTerm: cim.PaymentGatewayPaymentLog
     mapping:
-      name:
-        propertyTerm: cim.name
-        range: string
       id:
         propertyTerm: cim.id
         range: guid
         unique: true
         mandatory: true
+      name:
+        propertyTerm: cim.name
+        range: string
       payment:
         propertyTerm: cim.payment
         range: Payment
@@ -745,38 +745,36 @@ nodeMappings:
   PaymentGateway:
     classTerm: cim.PaymentGateway
     mapping:
+      systemCredential:
+        propertyTerm: cim.systemCredential
+        range: string
+      paymentGatewayCommentText:
+        propertyTerm: cim.paymentGatewayCommentText
+        range: string
+      paymentGatewayStatus:
+        propertyTerm: cim.paymentGatewayStatus
+        range: string
+        mandatory: true
       paymentGatewayProvider:
         propertyTerm: cim.paymentGatewayProvider
         range: PaymentGatewayProvider
         mandatory: true
         allowMultiple: true
-      paymentGatewayStatus:
-        propertyTerm: cim.paymentGatewayStatus
+      name:
+        propertyTerm: cim.name
         range: string
         mandatory: true
-      paymentGatewayCommentText:
-        propertyTerm: cim.paymentGatewayCommentText
-        range: string
-      systemCredential:
-        propertyTerm: cim.systemCredential
-        range: string
       id:
         propertyTerm: cim.id
         range: guid
         unique: true
         mandatory: true
-      name:
-        propertyTerm: cim.name
-        range: string
-        mandatory: true
   PaymentTreatment:
     classTerm: cim.PaymentTreatment
     mapping:
-      paymentTreatmentMethod:
-        propertyTerm: cim.paymentTreatmentMethod
-        range: PaymentTreatmentMethod
-        mandatory: true
-        allowMultiple: true
+      paymentTreatmentName:
+        propertyTerm: cim.paymentTreatmentName
+        range: string
       paymentPolicy:
         propertyTerm: cim.paymentPolicy
         range: PaymentPolicy
@@ -786,34 +784,76 @@ nodeMappings:
         propertyTerm: cim.paymentTreatmentStatus
         range: string
         mandatory: true
-      paymentApplicationLevel:
-        propertyTerm: cim.paymentApplicationLevel
-        range: string
+      paymentTreatmentMethod:
+        propertyTerm: cim.paymentTreatmentMethod
+        range: PaymentTreatmentMethod
+        mandatory: true
+        allowMultiple: true
       id:
         propertyTerm: cim.id
         range: guid
         unique: true
         mandatory: true
+      paymentApplicationLevel:
+        propertyTerm: cim.paymentApplicationLevel
+        range: string
       shouldAutoInvoice:
         propertyTerm: cim.shouldAutoInvoice
         range: boolean
-      paymentTreatmentName:
-        propertyTerm: cim.paymentTreatmentName
-        range: string
   PaymentAuthorizationReversal:
     classTerm: cim.PaymentAuthorizationReversal
     mapping:
+      paymentAuthorizationReversalCommentText:
+        propertyTerm: cim.paymentAuthorizationReversalCommentText
+        range: string
+      paymentGatewayReferenceNumber:
+        propertyTerm: cim.paymentGatewayReferenceNumber
+        range: string
+        mandatory: true
+      paymentAuthorizationReversalName:
+        propertyTerm: cim.paymentAuthorizationReversalName
+        range: string
       paymentGatewayDate:
         propertyTerm: cim.paymentGatewayDate
         range: time
         mandatory: true
+      macAddress:
+        propertyTerm: cim.macAddress
+        range: string
+      paymentAuthorization:
+        propertyTerm: cim.paymentAuthorization
+        range: PaymentAuthorization
+        mandatory: true
+        allowMultiple: true
+      externalCreatedDate:
+        propertyTerm: cim.externalCreatedDate
+        range: date
+        mandatory: true
+      requestDate:
+        propertyTerm: cim.requestDate
+        range: time
+        mandatory: true
+      authorizationReversalAmount:
+        propertyTerm: cim.authorizationReversalAmount
+        range: integer
+        mandatory: true
+      paymentAuthorizationProcessingMode:
+        propertyTerm: cim.paymentAuthorizationProcessingMode
+        range: string
+        mandatory: true
+      customerAuthorizationReversalEmail:
+        propertyTerm: cim.customerAuthorizationReversalEmail
+        range: string
+      customerAuthorizationReversalPhone:
+        propertyTerm: cim.customerAuthorizationReversalPhone
+        range: string
       paymentGatewayResult:
         propertyTerm: cim.paymentGatewayResult
         range: PaymentGatewayResultCode
         mandatory: true
         allowMultiple: true
-      paymentAuthorizationReversalCommentText:
-        propertyTerm: cim.paymentAuthorizationReversalCommentText
+      iPAddress:
+        propertyTerm: cim.iPAddress
         range: string
       id:
         propertyTerm: cim.id
@@ -824,53 +864,13 @@ nodeMappings:
         propertyTerm: cim.capturePayment
         range: CapturePayment
         allowMultiple: true
-      paymentAuthorizationReversalName:
-        propertyTerm: cim.paymentAuthorizationReversalName
-        range: string
-      paymentGatewayReferenceNumber:
-        propertyTerm: cim.paymentGatewayReferenceNumber
-        range: string
-        mandatory: true
-      customerAuthorizationReversalPhone:
-        propertyTerm: cim.customerAuthorizationReversalPhone
-        range: string
-      externalCreatedDate:
-        propertyTerm: cim.externalCreatedDate
-        range: date
-        mandatory: true
-      macAddress:
-        propertyTerm: cim.macAddress
-        range: string
-      authorizationReversalAmount:
-        propertyTerm: cim.authorizationReversalAmount
-        range: integer
-        mandatory: true
-      paymentAuthorizationReversalStatus:
-        propertyTerm: cim.paymentAuthorizationReversalStatus
-        range: string
-        mandatory: true
-      paymentAuthorization:
-        propertyTerm: cim.paymentAuthorization
-        range: PaymentAuthorization
-        mandatory: true
-        allowMultiple: true
-      iPAddress:
-        propertyTerm: cim.iPAddress
-        range: string
-      customerAuthorizationReversalEmail:
-        propertyTerm: cim.customerAuthorizationReversalEmail
-        range: string
-      paymentAuthorizationProcessingMode:
-        propertyTerm: cim.paymentAuthorizationProcessingMode
-        range: string
-        mandatory: true
       paymentGatewayInternalReferenceNumber:
         propertyTerm: cim.paymentGatewayInternalReferenceNumber
         range: string
         mandatory: true
-      requestDate:
-        propertyTerm: cim.requestDate
-        range: time
+      paymentAuthorizationReversalStatus:
+        propertyTerm: cim.paymentAuthorizationReversalStatus
+        range: string
         mandatory: true
   RefundCreditMemoAllocation:
     classTerm: cim.RefundCreditMemoAllocation

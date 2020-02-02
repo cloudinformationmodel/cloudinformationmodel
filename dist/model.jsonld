@@ -11255,7 +11255,7 @@
               "description": "Standardized methods for transferring purchased products or services to the destination of fulfillment. Delivery methods are characterized by the means of transportation used, and by the delivering organization or group."
             },
             {
-              "@id": "ProductRelationshipType",
+              "@id": "OrderProductRelationshipType",
               "name": "Sales Order Product Relationship Type",
               "@type": "Class",
               "description": "Reasons why products are related such as bundle, option or covering"
@@ -11373,7 +11373,7 @@
               "@id": "parentProductRole",
               "@type": "Property",
               "domain": [
-                "ProductRelationshipType"
+                "OrderProductRelationshipType"
               ]
             },
             {
@@ -12189,7 +12189,7 @@
                 "SalesOrderDeliveryGroup",
                 "SalesChannel",
                 "SalesOrderProductNote",
-                "ProductRelationshipType",
+                "OrderProductRelationshipType",
                 "SalesOrderProductReason",
                 "SalesOrderProductTax",
                 "OrderDeliveryMethod",
@@ -12307,7 +12307,7 @@
               "@id": "childProductRole",
               "@type": "Property",
               "domain": [
-                "ProductRelationshipType"
+                "OrderProductRelationshipType"
               ]
             },
             {
@@ -13700,7 +13700,7 @@
             },
             {
               "@type": "Shape",
-              "@id": "ProductRelationshipType",
+              "@id": "OrderProductRelationshipType",
               "properties": [
                 {
                   "path": "childProductRole",
