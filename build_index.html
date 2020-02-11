@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+## HTML documentation
+rm -rf html-index/*
+mkdir -p html-index
+pushd ./scripts/node_modules/@aml-org/aml2html
+npm run aml2html -- ../../../../html-index -d ../../../../src -g ../../../cfg.js -t ../../../templates
+popd
+cp -rf ./scripts/templates/*  ./html-index/
+rm -rf ./html-index/*.mustache
+cp ./html-index/index.html ./html/index.html
+cp ./html-index/images/partners/* ./html/images/partners/
+
+rm -rf ./html-index
