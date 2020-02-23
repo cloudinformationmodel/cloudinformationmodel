@@ -20,7 +20,7 @@ types:
     properties:
       adjustmentAmount:
         type: integer
-      shipmentProductPriceAdjustmentAmount:
+      shipmentProductPriceAdjustmentAmount?:
         type: integer
       description:
         type: string
@@ -28,35 +28,35 @@ types:
         type: string
       shipmentProduct:
         items: ShipmentProduct
-      adjustmentTaxAmount:
+      adjustmentTaxAmount?:
         type: integer
   Shipment:
     properties:
-      giftMessageText:
+      giftMessageText?:
         type: string
-      shipmentNumber:
+      shipmentNumber?:
         type: string
       id:
         type: string
-      shipmentStatus:
+      shipmentStatus?:
         items: ShipmentStatus
-      salesOrder:
+      salesOrder?:
         items: salesorder_eg.SalesOrder
-      isGift:
+      isGift?:
         type: boolean
-      actualDeliveryDateTime:
+      actualDeliveryDateTime?:
         type: time-only
-      specialInstructionsText:
+      specialInstructionsText?:
         type: string
-      carrierTrackingNumber:
+      carrierTrackingNumber?:
         type: string
-      shipToAddress:
+      shipToAddress?:
         items: contactpoint_eg.ContactPointAddress
-      estimatedDeliveryDateTime:
+      estimatedDeliveryDateTime?:
         type: time-only
-      salesOrderDeliveryGroup:
+      salesOrderDeliveryGroup?:
         items: salesorder_eg.SalesOrderDeliveryGroup
-      scheduledDeliveryDateTime:
+      scheduledDeliveryDateTime?:
         type: time-only
       shipmentDate:
         type: date-only
@@ -101,6 +101,6 @@ types:
       shipmentProductCount:
         type: integer
 uses:
-  product_eg: ../../Product/Product/schema.yaml
-  contactpoint_eg: ../../Party/ContactPoint/schema.yaml
   salesorder_eg: ../../SalesOrder/SalesOrder/schema.yaml
+  contactpoint_eg: ../../Party/ContactPoint/schema.yaml
+  product_eg: ../../Product/Product/schema.yaml

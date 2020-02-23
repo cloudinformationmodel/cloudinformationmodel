@@ -132,9 +132,21 @@
 		<td class="sprop-name"><a href="schema_salesorderentitygroup_priceadjustmentgroup.html">Price Adjustment Group</a></td>
 		<td class="sprop-data">Supertype of: Sales Order Price Adjustment, Sales Order Product Price Adjustment, and FulfillmentOrderProductPriceAdjustment</td>
 	      </tr>
+	      <tr id="Price Adjustment Method-scalar-tr">
+		<td class="sprop-name"><a href="schema_salesorderentitygroup_priceadjustmentmethod.html">Price Adjustment Method</a></td>
+		<td class="sprop-data">Defines how the adjustment will be calculated. Valid values used in Commerce Cloud are: percentage, fixed_price, amount, free, price_book_price, bonus, total_fixed_price, bonus_choice, percentage_off_options</td>
+	      </tr>
+	      <tr id="Renewal Term-scalar-tr">
+		<td class="sprop-name"><a href="schema_salesorderentitygroup_renewalterm.html">Renewal Term</a></td>
+		<td class="sprop-data">For renewal orders, the length of the renewal term</td>
+	      </tr>
 	      <tr id="Sales Channel-scalar-tr">
 		<td class="sprop-name"><a href="schema_salesorderentitygroup_saleschannel.html">Sales Channel</a></td>
 		<td class="sprop-data">Which channel is used to sell goods e.g. Web Store, Retail Store, Street Faire</td>
+	      </tr>
+	      <tr id="Sales Channel Type-scalar-tr">
+		<td class="sprop-name"><a href="schema_salesorderentitygroup_saleschanneltype.html">Sales Channel Type</a></td>
+		<td class="sprop-data">Standard ways of selling products such as web, retail, direct marketing, etc</td>
 	      </tr>
 	      <tr id="Sales Order-scalar-tr">
 		<td class="sprop-name"><a href="schema_salesorderentitygroup_salesorder.html">Sales Order</a></td>
@@ -144,9 +156,21 @@
 		<td class="sprop-name"><a href="schema_salesorderentitygroup_salesorderchangelog.html">Sales Order Change Log</a></td>
 		<td class="sprop-data">Change log for sales order</td>
 	      </tr>
+	      <tr id="Sales Order ChangeT ype-scalar-tr">
+		<td class="sprop-name"><a href="schema_salesorderentitygroup_salesorderchangetype.html">Sales Order ChangeT ype</a></td>
+		<td class="sprop-data">The reason for a revision of an earlier sales order, e.g. quantity change, new distributed adjustment, new line adjustment, etc.</td>
+	      </tr>
+	      <tr id="Sales Order Confirmation Status-scalar-tr">
+		<td class="sprop-name"><a href="schema_salesorderentitygroup_salesorderconfirmationstatus.html">Sales Order Confirmation Status</a></td>
+		<td class="sprop-data">Stages of customer approval and finalization of a Sales Order.</td>
+	      </tr>
 	      <tr id="Sales Order Delivery Group-scalar-tr">
 		<td class="sprop-name"><a href="schema_salesorderentitygroup_salesorderdeliverygroup.html">Sales Order Delivery Group</a></td>
 		<td class="sprop-data">One or more Sales Order Products that share a common Sales Order Delivery Method, and Shipping Address</td>
+	      </tr>
+	      <tr id="Sales Order Delivery Status-scalar-tr">
+		<td class="sprop-name"><a href="schema_salesorderentitygroup_salesorderdeliverystatus.html">Sales Order Delivery Status</a></td>
+		<td class="sprop-data">The progress of a delivery such as awaiting pickup, in progress or complete</td>
 	      </tr>
 	      <tr id="Sales Order Payment Summary-scalar-tr">
 		<td class="sprop-name"><a href="schema_salesorderentitygroup_salesorderpaymentsummary.html">Sales Order Payment Summary</a></td>
@@ -156,6 +180,10 @@
 		<td class="sprop-name"><a href="schema_salesorderentitygroup_salesorderpriceadjustment.html">Sales Order Price Adjustment</a></td>
 		<td class="sprop-data">A change to the price of a Sales Order that is made before order fulfillment. A Sales Order Price Adjustment may be comprised of Sales Order Product Price Adjustments that allocate the overall adjustment amount to one or more of the products and services</td>
 	      </tr>
+	      <tr id="Sales Order Price Adjustment Type-scalar-tr">
+		<td class="sprop-name"><a href="schema_salesorderentitygroup_salesorderpriceadjustmenttype.html">Sales Order Price Adjustment Type</a></td>
+		<td class="sprop-data">Reasons for adjusting the price of an order such as promotional discount, or customer satisfaction issue</td>
+	      </tr>
 	      <tr id="Sales Order Product-scalar-tr">
 		<td class="sprop-name"><a href="schema_salesorderentitygroup_salesorderproduct.html">Sales Order Product</a></td>
 		<td class="sprop-data">A component of a Sales Order that identifies a product or service that will be sold to the customer</td>
@@ -163,6 +191,10 @@
 	      <tr id="Sales Order Product Group-scalar-tr">
 		<td class="sprop-name"><a href="schema_salesorderentitygroup_salesorderproductgroup.html">Sales Order Product Group</a></td>
 		<td class="sprop-data">Products may be grouped together for various reasons, such as products that should be shipped together. Every product in a Sales Order Product Group is not required to be a Sales Order Product.</td>
+	      </tr>
+	      <tr id="Sales Order Product Group Type-scalar-tr">
+		<td class="sprop-name"><a href="schema_salesorderentitygroup_salesorderproductgrouptype.html">Sales Order Product Group Type</a></td>
+		<td class="sprop-data">Reasons for grouping products together on sales orders, for example products that ship together.</td>
 	      </tr>
 	      <tr id="Sales Order Product Note-scalar-tr">
 		<td class="sprop-name"><a href="schema_salesorderentitygroup_salesorderproductnote.html">Sales Order Product Note</a></td>
@@ -172,17 +204,37 @@
 		<td class="sprop-name"><a href="schema_salesorderentitygroup_salesorderproductreason.html">Sales Order Product Reason</a></td>
 		<td class="sprop-data">The customer motive for ordering a product or service, such as replacement, new purchase, upgrade</td>
 	      </tr>
+	      <tr id="Sales Order Product Reason Category-scalar-tr">
+		<td class="sprop-name"><a href="schema_salesorderentitygroup_salesorderproductreasoncategory.html">Sales Order Product Reason Category</a></td>
+		<td class="sprop-data">Groupings of Sales Order Product Reasons, such as product related or service related</td>
+	      </tr>
 	      <tr id="Sales Order Product Relationship Type-scalar-tr">
 		<td class="sprop-name"><a href="schema_salesorderentitygroup_salesorderproductrelationshiptype.html">Sales Order Product Relationship Type</a></td>
 		<td class="sprop-data">Reasons why products are related such as bundle, option or covering</td>
+	      </tr>
+	      <tr id="Sales Order Product Status-scalar-tr">
+		<td class="sprop-name"><a href="schema_salesorderentitygroup_salesorderproductstatus.html">Sales Order Product Status</a></td>
+		<td class="sprop-data">The status of a line component of a Sales Order</td>
 	      </tr>
 	      <tr id="Sales Order Product Tax-scalar-tr">
 		<td class="sprop-name"><a href="schema_salesorderentitygroup_salesorderproducttax.html">Sales Order Product Tax</a></td>
 		<td class="sprop-data">A tax on the price of a Sales Order Product.</td>
 	      </tr>
+	      <tr id="Sales Order Segment-scalar-tr">
+		<td class="sprop-name"><a href="schema_salesorderentitygroup_salesordersegment.html">Sales Order Segment</a></td>
+		<td class="sprop-data">A sub-period of an overall subscription which has pricing associated with it</td>
+	      </tr>
+	      <tr id="Sales Order Status-scalar-tr">
+		<td class="sprop-name"><a href="schema_salesorderentitygroup_salesorderstatus.html">Sales Order Status</a></td>
+		<td class="sprop-data">The status of a Sales Order</td>
+	      </tr>
 	      <tr id="Sales Order Tax-scalar-tr">
 		<td class="sprop-name"><a href="schema_salesorderentitygroup_salesordertax.html">Sales Order Tax</a></td>
 		<td class="sprop-data">A charge that is imposed by a government entity for public purposes. Types are aligned to phases of the process: SalesOrderTax, FulfillmentProductTax and ShipmentProductTax</td>
+	      </tr>
+	      <tr id="Sales Order Type-scalar-tr">
+		<td class="sprop-name"><a href="schema_salesorderentitygroup_salesordertype.html">Sales Order Type</a></td>
+		<td class="sprop-data">Classifies a Sales Order as a New, Renewal or Change order</td>
 	      </tr>
 	    </tbody>
 	  </table>

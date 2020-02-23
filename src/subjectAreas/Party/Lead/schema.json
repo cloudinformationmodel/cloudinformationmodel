@@ -33,7 +33,10 @@
           "type": "string"
         },
         "partyRole": {
-          "type": "string"
+          "type": "array",
+          "items": {
+            "$ref": "../PartyRole/schema.json#/definitions/PartyRole"
+          }
         },
         "convertedDate": {
           "type": "string",

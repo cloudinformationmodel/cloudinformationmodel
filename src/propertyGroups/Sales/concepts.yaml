@@ -185,7 +185,7 @@ propertyTerms:
   salesOrderProductGroupType:
     displayName: Sales Order Product Group Type
     description: Description/name of the Product Group Type, e.g. PriceBreakdown, ShipTogether
-    range: any
+    range: SalesOrderProductGroupType
   totalDeliveryChargeAmount:
     displayName: Total Delivery Charge Amount
     description: "\u03A3 OrderItem(Type == DeliveryCharge): IF (TotalLineAmount != NULL, TotalLineAmount, UnitPrice * Quantity)"
@@ -261,11 +261,11 @@ propertyTerms:
   salesOrderPriceAdjustmentTypeID:
     displayName: Sales Order Price Adjustment Type Id
     description: "Defines which subtype an instance of the Price Adjustment Group is for: Sales Order, Sales Order Product, Fulfillment Product or Shipment Product."
-    range: any
+    range: SalesOrderPriceAdjustmentType
   salesOrderConfirmationStatus:
     displayName: Sales Order Confirmation Status
     description: What stage of customer approval and finalization has been achieved.
-    range: any
+    range: SalesOrderConfirmationStatus
   giftRecipientTelephoneNumber:
     displayName: Gift Recipient Telephone Number
     description: Telephone number of the gift recipient
@@ -397,7 +397,7 @@ propertyTerms:
   renewalTerm:
     displayName: Renewal Term
     description: For renewal orders, the length of the renewal term
-    range: any
+    range: RenewalTerm
   noteText:
     displayName: Note Text
     description: A user-defined text note about a SalesOrderProduct.
@@ -457,7 +457,7 @@ propertyTerms:
   priceAdjustmentMethod:
     displayName: Price Adjustment Method
     description: "Defines how the adjustment will be calculated. Valid values used in Commerce Cloud are: percentage, fixed_price, amount, free, price_book_price, bonus, total_fixed_price, bonus_choice, percentage_off_options"
-    range: any
+    range: PriceAdjustmentMethod
   salesOrderChangeTypeName:
     displayName: Sales Order Change Type Name
     description: Codes that define reasons for changing a Sales Order, e.g. quantity change, new distributed adjustment, new line adjustment, etc.
@@ -565,7 +565,7 @@ propertyTerms:
   salesOrderProductStatus:
     displayName: Sales Order Product Status
     description: Status of the product within the order. Values may include Placed and Activated
-    range: any
+    range: SalesOrderProductStatus
   totalPendingBillingAmount:
     displayName: Total Pending Billing Amount
     description: Total pending for all order products.

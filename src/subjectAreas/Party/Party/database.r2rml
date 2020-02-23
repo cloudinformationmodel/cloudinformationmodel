@@ -1352,17 +1352,6 @@
         },
         {
           "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/partyRole"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "PARTY_ROLE",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
             "@id" : "http://cloudinformationmodel.org/model/name"
           },
           "rr:objectMap" : {
@@ -1903,6 +1892,29 @@
           },
           "rr:joinCondition" : {
             "rr:child" : "INDIVIDUAL_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/party_entity_group/party_identification_party_role_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PARTY_ENTITY_GROUP.PARTY_IDENTIFICATION_PARTY_ROLE_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PARTY_IDENTIFICATION_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/partyRole"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/party_role_entity_group/party_role"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PARTY_ROLE_ID",
             "rr:parent" : "ID"
           }
         }

@@ -5,13 +5,22 @@
       "$ref": "#/definitions/OrderDeliveryMethod"
     },
     {
-      "$ref": "#/definitions/OrderProductRelationshipType"
-    },
-    {
       "$ref": "#/definitions/PriceAdjustmentGroup"
     },
     {
+      "$ref": "#/definitions/PriceAdjustmentMethod"
+    },
+    {
+      "$ref": "#/definitions/ProductRelationshipType"
+    },
+    {
+      "$ref": "#/definitions/RenewalTerm"
+    },
+    {
       "$ref": "#/definitions/SalesChannel"
+    },
+    {
+      "$ref": "#/definitions/SalesChannelType"
     },
     {
       "$ref": "#/definitions/SalesOrder"
@@ -20,7 +29,16 @@
       "$ref": "#/definitions/SalesOrderChangeLog"
     },
     {
+      "$ref": "#/definitions/SalesOrderChangeType"
+    },
+    {
+      "$ref": "#/definitions/SalesOrderConfirmationStatus"
+    },
+    {
       "$ref": "#/definitions/SalesOrderDeliveryGroup"
+    },
+    {
+      "$ref": "#/definitions/SalesOrderDeliveryStatus"
     },
     {
       "$ref": "#/definitions/SalesOrderPaymentSummary"
@@ -29,10 +47,16 @@
       "$ref": "#/definitions/SalesOrderPriceAdjustment"
     },
     {
+      "$ref": "#/definitions/SalesOrderPriceAdjustmentType"
+    },
+    {
       "$ref": "#/definitions/SalesOrderProduct"
     },
     {
       "$ref": "#/definitions/SalesOrderProductGroup"
+    },
+    {
+      "$ref": "#/definitions/SalesOrderProductGroupType"
     },
     {
       "$ref": "#/definitions/SalesOrderProductNote"
@@ -41,13 +65,88 @@
       "$ref": "#/definitions/SalesOrderProductReason"
     },
     {
+      "$ref": "#/definitions/SalesOrderProductReasonCategory"
+    },
+    {
+      "$ref": "#/definitions/SalesOrderProductStatus"
+    },
+    {
       "$ref": "#/definitions/SalesOrderProductTax"
     },
     {
+      "$ref": "#/definitions/SalesOrderSegment"
+    },
+    {
+      "$ref": "#/definitions/SalesOrderStatus"
+    },
+    {
       "$ref": "#/definitions/SalesOrderTax"
+    },
+    {
+      "$ref": "#/definitions/SalesOrderType"
     }
   ],
   "definitions": {
+    "SalesOrderDeliveryStatus": {
+      "type": "object",
+      "required": [
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "SalesOrderProductReasonCategory": {
+      "type": "object",
+      "required": [
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "RenewalTerm": {
+      "type": "object",
+      "required": [
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "SalesChannelType": {
+      "type": "object",
+      "required": [
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
     "SalesOrder": {
       "type": "object",
       "required": [
@@ -57,6 +156,7 @@
         "id",
         "name",
         "salesOrderConfirmationStatus",
+        "salesOrderType",
         "paymentMethod",
         "salesOrderStatus",
         "billToAccount",
@@ -139,7 +239,16 @@
           "type": "integer"
         },
         "salesOrderConfirmationStatus": {
-          "type": "string"
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SalesOrderConfirmationStatus"
+          }
+        },
+        "salesOrderType": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SalesOrderType"
+          }
         },
         "customerAuthorizedDate": {
           "type": "string",
@@ -161,7 +270,10 @@
           "type": "integer"
         },
         "salesOrderStatus": {
-          "type": "string"
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SalesOrderStatus"
+          }
         },
         "renewalUpliftRate": {
           "type": "integer"
@@ -170,7 +282,10 @@
           "type": "integer"
         },
         "renewalTerm": {
-          "type": "string"
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/RenewalTerm"
+          }
         },
         "originalOrder": {
           "type": "array",
@@ -401,6 +516,36 @@
         }
       }
     },
+    "SalesOrderType": {
+      "type": "object",
+      "required": [
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "SalesOrderPriceAdjustmentType": {
+      "type": "object",
+      "required": [
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
     "SalesOrderTax": {
       "type": "object",
       "required": [
@@ -445,10 +590,10 @@
         "id": {
           "type": "string"
         },
-        "noteText": {
+        "description": {
           "type": "string"
         },
-        "description": {
+        "noteText": {
           "type": "string"
         }
       }
@@ -542,7 +687,10 @@
           "type": "integer"
         },
         "salesOrderProductStatus": {
-          "type": "string"
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SalesOrderProductStatus"
+          }
         },
         "unitPriceAmount": {
           "type": "integer"
@@ -751,13 +899,28 @@
       ],
       "type": "object"
     },
+    "SalesOrderStatus": {
+      "type": "object",
+      "required": [
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
     "SalesOrderProductGroup": {
       "type": "object",
       "required": [
         "id",
         "description",
-        "name",
-        "salesOrderProductGroupType"
+        "salesOrderProductGroupType",
+        "name"
       ],
       "properties": {
         "id": {
@@ -766,10 +929,92 @@
         "description": {
           "type": "string"
         },
+        "salesOrderProductGroupType": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SalesOrderProductGroupType"
+          }
+        },
         "name": {
           "type": "string"
+        }
+      }
+    },
+    "ProductRelationshipType": {
+      "type": "object",
+      "required": [
+        "id",
+        "parentProductRole",
+        "childProductRole"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
         },
-        "salesOrderProductGroupType": {
+        "parentProductRole": {
+          "type": "string"
+        },
+        "childProductRole": {
+          "type": "string"
+        }
+      }
+    },
+    "SalesOrderProductGroupType": {
+      "type": "object",
+      "required": [
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "SalesOrderConfirmationStatus": {
+      "type": "object",
+      "required": [
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "SalesOrderChangeType": {
+      "type": "object",
+      "required": [
+        "id",
+        "salesOrderChangeTypeName"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "salesOrderChangeTypeName": {
+          "type": "string"
+        }
+      }
+    },
+    "PriceAdjustmentMethod": {
+      "type": "object",
+      "required": [
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
           "type": "string"
         }
       }
@@ -786,7 +1031,10 @@
           "type": "string"
         },
         "salesOrderProductReasonCategory": {
-          "type": "string"
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SalesOrderProductReasonCategory"
+          }
         },
         "name": {
           "type": "string"
@@ -979,7 +1227,10 @@
           "type": "boolean"
         },
         "salesOrderDeliveryStatus": {
-          "type": "string"
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SalesOrderDeliveryStatus"
+          }
         },
         "totalDeliveryAdjustmentAmount": {
           "type": "integer"
@@ -1023,21 +1274,32 @@
         }
       }
     },
-    "OrderProductRelationshipType": {
+    "SalesOrderProductStatus": {
       "type": "object",
       "required": [
         "id",
-        "parentProductRole",
-        "childProductRole"
+        "name"
       ],
       "properties": {
         "id": {
           "type": "string"
         },
-        "parentProductRole": {
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "SalesOrderSegment": {
+      "type": "object",
+      "required": [
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
           "type": "string"
         },
-        "childProductRole": {
+        "name": {
           "type": "string"
         }
       }
@@ -1057,7 +1319,10 @@
           "type": "string"
         },
         "salesChannelType": {
-          "type": "string"
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SalesChannelType"
+          }
         },
         "description": {
           "type": "string"

@@ -46,11 +46,11 @@ types:
     properties:
       product:
         items: product_eg.Product
-      attributeValue:
+      attributeValue?:
         items: AttributeValue
       id:
         type: string
-      customAttributeValue:
+      customAttributeValue?:
         type: string
       name:
         type: string
@@ -60,29 +60,29 @@ types:
     properties:
       id:
         type: string
-      attributeSet:
-        type: string
       translatedName:
+        type: string
+      attributeSet:
         type: string
   PriceBookEntry:
     properties:
-      minRequiredQuantity:
+      minRequiredQuantity?:
         type: integer
-      unitListPrice:
+      unitListPrice?:
         type: integer
-      product:
+      product?:
         items: product_eg.Product
-      minRequiredOrderValue:
+      minRequiredOrderValue?:
         type: integer
-      isActive:
+      isActive?:
         type: boolean
       id:
         type: string
-      maxRequiredOrderValue:
+      maxRequiredOrderValue?:
         type: integer
-      useStandardPrice:
+      useStandardPrice?:
         type: boolean
-      servicePeriodCount:
+      servicePeriodCount?:
         type: integer
   AttributeValueTranslation:
     properties:
@@ -92,7 +92,7 @@ types:
         items: AttributeValue
       id:
         type: string
-      translatedAttributeValueDescription:
+      translatedAttributeValueDescription?:
         type: string
 uses:
   product_eg: ../Product/schema.yaml

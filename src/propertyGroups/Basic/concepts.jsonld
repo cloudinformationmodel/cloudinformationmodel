@@ -605,7 +605,7 @@
       "@type": "Property",
       "description": "Reference to the party role that has this status",
       "name": "Party Role",
-      "range": "DataType"
+      "range": "PartyRole"
     },
     {
       "@id": "partyRoleStatus",
@@ -746,6 +746,13 @@
       "description": "How often to send emails",
       "name": "Email Frequency Name",
       "range": "DataType"
+    },
+    {
+      "@id": "salesOrderType",
+      "@type": "Property",
+      "description": "The type of order: Change, Renewal or Amendment.",
+      "name": "Sales Order Type",
+      "range": "SalesOrderType"
     },
     {
       "@id": "contactPointAddress",

@@ -31,7 +31,7 @@
       "@type": "Property",
       "description": "Reference to Party Role, populated if contact point only applicable in context of a role",
       "name": "Party Role",
-      "range": "DataType"
+      "range": "PartyRole"
     },
     {
       "@id": "contactPointType",

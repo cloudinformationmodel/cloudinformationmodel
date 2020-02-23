@@ -381,18 +381,18 @@
       "type": "object",
       "required": [
         "id",
-        "paymentTreatmentMethodCode",
         "paymentTreatmentMethodName",
+        "paymentTreatmentMethodCode",
         "paymentTreatmentMethodDescription"
       ],
       "properties": {
         "id": {
           "type": "string"
         },
-        "paymentTreatmentMethodCode": {
+        "paymentTreatmentMethodName": {
           "type": "string"
         },
-        "paymentTreatmentMethodName": {
+        "paymentTreatmentMethodCode": {
           "type": "string"
         },
         "paymentTreatmentMethodDescription": {

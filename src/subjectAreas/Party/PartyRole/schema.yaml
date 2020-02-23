@@ -1,82 +1,116 @@
 #%Dialect 1.0
+uses:
+  party_eg: ../Party/schema.yaml
 nodeMappings:
-  PartyRole:
-    classTerm: cim.PartyRole
   Competitor:
     classTerm: cim.Competitor
     mapping:
-      cashFlowGrowth:
-        propertyTerm: cim.cashFlowGrowth
+      currentRatio:
+        propertyTerm: cim.currentRatio
         range: integer
+      competitorFromDate:
+        propertyTerm: cim.competitorFromDate
+        range: date
+        mandatory: true
       assetReturnRatio:
         propertyTerm: cim.assetReturnRatio
         range: integer
-      netProfitMargin:
-        propertyTerm: cim.netProfitMargin
-        range: integer
-      competitorThreats:
-        propertyTerm: cim.competitorThreats
+      competitorToDate:
+        propertyTerm: cim.competitorToDate
+        range: date
+      competitorWeaknesses:
+        propertyTerm: cim.competitorWeaknesses
         range: string
+      competitorStrengths:
+        propertyTerm: cim.competitorStrengths
+        range: string
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      pressMentionsRate:
+        propertyTerm: cim.pressMentionsRate
+        range: integer
+      cashFlowGrowth:
+        propertyTerm: cim.cashFlowGrowth
+        range: integer
+      assetTurnoverRatio:
+        propertyTerm: cim.assetTurnoverRatio
+        range: integer
       socialMediaPostRate:
         propertyTerm: cim.socialMediaPostRate
         range: integer
       adKeywords:
         propertyTerm: cim.adKeywords
         range: string
-      competitorStrengths:
-        propertyTerm: cim.competitorStrengths
-        range: string
-      currentRatio:
-        propertyTerm: cim.currentRatio
-        range: integer
-      competitorLeverageOpportunities:
-        propertyTerm: cim.competitorLeverageOpportunities
-        range: string
-      pressMentionsRate:
-        propertyTerm: cim.pressMentionsRate
-        range: integer
-      competitorObjectives:
-        propertyTerm: cim.competitorObjectives
-        range: string
-      id:
-        propertyTerm: cim.id
-        range: guid
-        unique: true
-        mandatory: true
-      competitorToDate:
-        propertyTerm: cim.competitorToDate
-        range: date
-      assetTurnoverRatio:
-        propertyTerm: cim.assetTurnoverRatio
+      ptoENumber:
+        propertyTerm: cim.ptoENumber
         range: integer
       adReachRate:
         propertyTerm: cim.adReachRate
         range: integer
-      ptoENumber:
-        propertyTerm: cim.ptoENumber
+      netProfitMargin:
+        propertyTerm: cim.netProfitMargin
         range: integer
-      competitorWeaknesses:
-        propertyTerm: cim.competitorWeaknesses
+      competitorLeverageOpportunities:
+        propertyTerm: cim.competitorLeverageOpportunities
         range: string
-      competitorFromDate:
-        propertyTerm: cim.competitorFromDate
-        range: date
-        mandatory: true
+      competitorObjectives:
+        propertyTerm: cim.competitorObjectives
+        range: string
+      competitorThreats:
+        propertyTerm: cim.competitorThreats
+        range: string
     extends: PartyRole
-  Customer:
-    classTerm: cim.Customer
+  PartyRole:
+    classTerm: cim.PartyRole
     mapping:
-      netPromoterScore:
-        propertyTerm: cim.netPromoterScore
-        range: integer
-      customerSatisfactionScore:
-        propertyTerm: cim.customerSatisfactionScore
-        range: integer
       id:
         propertyTerm: cim.id
         range: guid
         unique: true
         mandatory: true
+      party:
+        propertyTerm: cim.party
+        range: party_eg.Party
+        mandatory: true
+        allowMultiple: true
+  Customer:
+    classTerm: cim.Customer
+    mapping:
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      totalContractedAmount:
+        propertyTerm: cim.totalContractedAmount
+        range: integer
+      totalLifeTimeValue:
+        propertyTerm: cim.totalLifeTimeValue
+        range: integer
+      marketingEmailResponseRate:
+        propertyTerm: cim.marketingEmailResponseRate
+        range: integer
+      originatingCustomerSource:
+        propertyTerm: cim.originatingCustomerSource
+        range: string
+      totalProfitContributionAmount:
+        propertyTerm: cim.totalProfitContributionAmount
+        range: integer
+      prospectRating:
+        propertyTerm: cim.prospectRating
+        range: string
+      netPromoterScore:
+        propertyTerm: cim.netPromoterScore
+        range: integer
+      last24MonthsNewRevenueAmount:
+        propertyTerm: cim.last24MonthsNewRevenueAmount
+        range: integer
+      last12MonthsSupportCallCount:
+        propertyTerm: cim.last12MonthsSupportCallCount
+        range: integer
       customerStatus:
         propertyTerm: cim.customerStatus
         range: string
@@ -87,33 +121,12 @@ nodeMappings:
       churnScore:
         propertyTerm: cim.churnScore
         range: integer
-      last24MonthsNewRevenueAmount:
-        propertyTerm: cim.last24MonthsNewRevenueAmount
-        range: integer
-      totalContractedAmount:
-        propertyTerm: cim.totalContractedAmount
-        range: integer
-      totalProfitContributionAmount:
-        propertyTerm: cim.totalProfitContributionAmount
-        range: integer
-      marketingEmailResponseRate:
-        propertyTerm: cim.marketingEmailResponseRate
+      customerSatisfactionScore:
+        propertyTerm: cim.customerSatisfactionScore
         range: integer
       customerNumber:
         propertyTerm: cim.customerNumber
         range: string
-      last12MonthsSupportCallCount:
-        propertyTerm: cim.last12MonthsSupportCallCount
-        range: integer
-      prospectRating:
-        propertyTerm: cim.prospectRating
-        range: string
-      originatingCustomerSource:
-        propertyTerm: cim.originatingCustomerSource
-        range: string
-      totalLifeTimeValue:
-        propertyTerm: cim.totalLifeTimeValue
-        range: integer
       last12MonthsNewRevenueAmount:
         propertyTerm: cim.last12MonthsNewRevenueAmount
         range: integer
@@ -121,38 +134,46 @@ nodeMappings:
   Seller:
     classTerm: cim.Seller
     mapping:
-      customerSatisfactionScore:
-        propertyTerm: cim.customerSatisfactionScore
-        range: integer
-      trainingCertificationCount:
-        propertyTerm: cim.trainingCertificationCount
-        range: integer
-      communityParticipationCount:
-        propertyTerm: cim.communityParticipationCount
-        range: integer
-      inventoryValueAmount:
-        propertyTerm: cim.inventoryValueAmount
-        range: integer
-      majorPostSaleSupportNeeded:
-        propertyTerm: cim.majorPostSaleSupportNeeded
-        range: boolean
       newCustomerAcquisitionCount:
         propertyTerm: cim.newCustomerAcquisitionCount
         range: integer
-      satisfactionScore:
-        propertyTerm: cim.satisfactionScore
+      successStoryCount:
+        propertyTerm: cim.successStoryCount
+        range: integer
+      marketingDevelopmentAmount:
+        propertyTerm: cim.marketingDevelopmentAmount
+        range: integer
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      jointBusinessPlanExist:
+        propertyTerm: cim.jointBusinessPlanExist
+        range: boolean
+      averageConvertedLeadAmount:
+        propertyTerm: cim.averageConvertedLeadAmount
+        range: integer
+      documentationDownloadCount:
+        propertyTerm: cim.documentationDownloadCount
         range: integer
       systemLoginCount:
         propertyTerm: cim.systemLoginCount
         range: integer
-      jointBusinessPlanExist:
-        propertyTerm: cim.jointBusinessPlanExist
-        range: boolean
-      documentationDownloadCount:
-        propertyTerm: cim.documentationDownloadCount
+      trialParticipationCount:
+        propertyTerm: cim.trialParticipationCount
         range: integer
-      averageConvertedLeadAmount:
-        propertyTerm: cim.averageConvertedLeadAmount
+      opportunityInvolvementCount:
+        propertyTerm: cim.opportunityInvolvementCount
+        range: integer
+      customerSatisfactionScore:
+        propertyTerm: cim.customerSatisfactionScore
+        range: integer
+      satisfactionScore:
+        propertyTerm: cim.satisfactionScore
+        range: integer
+      estimatedPartnerGrossMargin:
+        propertyTerm: cim.estimatedPartnerGrossMargin
         range: integer
       productReturnRate:
         propertyTerm: cim.productReturnRate
@@ -160,18 +181,18 @@ nodeMappings:
       sellerType:
         propertyTerm: cim.sellerType
         range: string
-      trialParticipationCount:
-        propertyTerm: cim.trialParticipationCount
+      creditRating:
+        propertyTerm: cim.creditRating
         range: integer
-      marketingDevelopmentAmount:
-        propertyTerm: cim.marketingDevelopmentAmount
+      salesAmount:
+        propertyTerm: cim.salesAmount
         range: integer
       eventParticipationCount:
         propertyTerm: cim.eventParticipationCount
         range: integer
-      creditRating:
-        propertyTerm: cim.creditRating
-        range: integer
+      majorPostSaleSupportNeeded:
+        propertyTerm: cim.majorPostSaleSupportNeeded
+        range: boolean
       activeFromDate:
         propertyTerm: cim.activeFromDate
         range: date
@@ -179,111 +200,70 @@ nodeMappings:
       activeToDate:
         propertyTerm: cim.activeToDate
         range: date
-      id:
-        propertyTerm: cim.id
-        range: guid
-        unique: true
-        mandatory: true
-      opportunityInvolvementCount:
-        propertyTerm: cim.opportunityInvolvementCount
-        range: integer
-      estimatedPartnerGrossMargin:
-        propertyTerm: cim.estimatedPartnerGrossMargin
-        range: integer
-      successStoryCount:
-        propertyTerm: cim.successStoryCount
-        range: integer
       opportunityWinRate:
         propertyTerm: cim.opportunityWinRate
         range: integer
-      demonstrationsGivenCount:
-        propertyTerm: cim.demonstrationsGivenCount
-        range: integer
-      trainingParticipationCount:
-        propertyTerm: cim.trainingParticipationCount
+      communityParticipationCount:
+        propertyTerm: cim.communityParticipationCount
         range: integer
       leadGenerationCount:
         propertyTerm: cim.leadGenerationCount
         range: integer
-      salesAmount:
-        propertyTerm: cim.salesAmount
+      trainingCertificationCount:
+        propertyTerm: cim.trainingCertificationCount
+        range: integer
+      inventoryValueAmount:
+        propertyTerm: cim.inventoryValueAmount
+        range: integer
+      trainingParticipationCount:
+        propertyTerm: cim.trainingParticipationCount
+        range: integer
+      demonstrationsGivenCount:
+        propertyTerm: cim.demonstrationsGivenCount
         range: integer
     extends: PartyRole
   CustomerStatusHistory:
     classTerm: cim.CustomerStatusHistory
     mapping:
-      partyRoleStatus:
-        propertyTerm: cim.partyRoleStatus
-        range: string
+      partyRole:
+        propertyTerm: cim.partyRole
+        range: PartyRole
         mandatory: true
+        allowMultiple: true
       startDateTime:
         propertyTerm: cim.startDateTime
         range: time
-        mandatory: true
-      id:
-        propertyTerm: cim.id
-        range: guid
-        unique: true
-        mandatory: true
-      partyRole:
-        propertyTerm: cim.partyRole
-        range: string
         mandatory: true
       endDateTIme:
         propertyTerm: cim.endDateTIme
         range: time
         mandatory: true
-  Supplier:
-    classTerm: cim.Supplier
-    mapping:
-      supplierSpend:
-        propertyTerm: cim.supplierSpend
-        range: integer
-      competitiveCostAvoidanceRank:
-        propertyTerm: cim.competitiveCostAvoidanceRank
-        range: integer
-      supplierScore:
-        propertyTerm: cim.supplierScore
-        range: integer
-      activeToDate:
-        propertyTerm: cim.activeToDate
-        range: date
-      competitiveProductPriceRank:
-        propertyTerm: cim.competitiveProductPriceRank
-        range: integer
-      contractOnTimeDeliveryRate:
-        propertyTerm: cim.contractOnTimeDeliveryRate
-        range: integer
-      satisfactionWeightPercent:
-        propertyTerm: cim.satisfactionWeightPercent
-        range: integer
-      contractBudgetCostRate:
-        propertyTerm: cim.contractBudgetCostRate
-        range: integer
-      contractSourcingCycleDays:
-        propertyTerm: cim.contractSourcingCycleDays
-        range: integer
-      competitiveMarketingRank:
-        propertyTerm: cim.competitiveMarketingRank
-        range: integer
-      competitiveWeightPercent:
-        propertyTerm: cim.competitiveWeightPercent
-        range: integer
-      contractWeightScore:
-        propertyTerm: cim.contractWeightScore
-        range: integer
+      partyRoleStatus:
+        propertyTerm: cim.partyRoleStatus
+        range: string
+        mandatory: true
       id:
         propertyTerm: cim.id
         range: guid
         unique: true
         mandatory: true
-      satisfactionCustomerServiceRank:
-        propertyTerm: cim.satisfactionCustomerServiceRank
-        range: integer
-      activeFromDate:
-        propertyTerm: cim.activeFromDate
-        range: date
+  Supplier:
+    classTerm: cim.Supplier
+    mapping:
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
         mandatory: true
+      supplierSpend:
+        propertyTerm: cim.supplierSpend
+        range: integer
+      competitiveProductPriceRank:
+        propertyTerm: cim.competitiveProductPriceRank
+        range: integer
+      activeToDate:
+        propertyTerm: cim.activeToDate
+        range: date
       satisfactionEthicsRank:
         propertyTerm: cim.satisfactionEthicsRank
         range: integer
@@ -293,36 +273,70 @@ nodeMappings:
       contractWeightPercent:
         propertyTerm: cim.contractWeightPercent
         range: integer
+      satisfactionCustomerServiceRank:
+        propertyTerm: cim.satisfactionCustomerServiceRank
+        range: integer
+      competitiveWarrantyRank:
+        propertyTerm: cim.competitiveWarrantyRank
+        range: integer
+      supplierType:
+        propertyTerm: cim.supplierType
+        range: string
+      contractWeightScore:
+        propertyTerm: cim.contractWeightScore
+        range: integer
       satisfactionWeightScore:
         propertyTerm: cim.satisfactionWeightScore
         range: integer
       contractProductReturnRate:
         propertyTerm: cim.contractProductReturnRate
         range: integer
-      contractSLAIssueRate:
-        propertyTerm: cim.contractSLAIssueRate
+      competitiveWeightScore:
+        propertyTerm: cim.competitiveWeightScore
+        range: integer
+      contractSourcingCycleDays:
+        propertyTerm: cim.contractSourcingCycleDays
+        range: integer
+      competitiveWeightPercent:
+        propertyTerm: cim.competitiveWeightPercent
+        range: integer
+      competitiveMarketingRank:
+        propertyTerm: cim.competitiveMarketingRank
         range: integer
       contractInvoiceAccuracyRate:
         propertyTerm: cim.contractInvoiceAccuracyRate
         range: integer
-      competitiveWarrantyRank:
-        propertyTerm: cim.competitiveWarrantyRank
+      contractProductQualityRate:
+        propertyTerm: cim.contractProductQualityRate
         range: integer
-      contractDeliveryCorrectnessRate:
-        propertyTerm: cim.contractDeliveryCorrectnessRate
+      supplierScore:
+        propertyTerm: cim.supplierScore
         range: integer
-      competitiveWeightScore:
-        propertyTerm: cim.competitiveWeightScore
+      competitiveCostAvoidanceRank:
+        propertyTerm: cim.competitiveCostAvoidanceRank
         range: integer
       isCarrier:
         propertyTerm: cim.isCarrier
         range: boolean
-      supplierType:
-        propertyTerm: cim.supplierType
-        range: string
-      contractProductQualityRate:
-        propertyTerm: cim.contractProductQualityRate
+      satisfactionWeightPercent:
+        propertyTerm: cim.satisfactionWeightPercent
         range: integer
+      contractOnTimeDeliveryRate:
+        propertyTerm: cim.contractOnTimeDeliveryRate
+        range: integer
+      contractDeliveryCorrectnessRate:
+        propertyTerm: cim.contractDeliveryCorrectnessRate
+        range: integer
+      contractBudgetCostRate:
+        propertyTerm: cim.contractBudgetCostRate
+        range: integer
+      contractSLAIssueRate:
+        propertyTerm: cim.contractSLAIssueRate
+        range: integer
+      activeFromDate:
+        propertyTerm: cim.activeFromDate
+        range: date
+        mandatory: true
     extends: PartyRole
 external:
   cim: http://cloudinformationmodel.org/model/
@@ -331,16 +345,16 @@ version: "0.1"
 documents:
   root:
     declares:
-      PartyRoleSchemas: PartyRole
       CompetitorSchemas: Competitor
+      PartyRoleSchemas: PartyRole
       CustomerSchemas: Customer
       SellerSchemas: Seller
       CustomerStatusHistorySchemas: CustomerStatusHistory
       SupplierSchemas: Supplier
   fragments:
     encodes:
-      PartyRole: PartyRole
       Competitor: Competitor
+      PartyRole: PartyRole
       Customer: Customer
       Seller: Seller
       CustomerStatusHistory: CustomerStatusHistory

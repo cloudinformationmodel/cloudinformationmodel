@@ -1,8 +1,8 @@
 #%Dialect 1.0
 uses:
-  product_eg: ../../Product/Product/schema.yaml
-  contactpoint_eg: ../../Party/ContactPoint/schema.yaml
   salesorder_eg: ../../SalesOrder/SalesOrder/schema.yaml
+  contactpoint_eg: ../../Party/ContactPoint/schema.yaml
+  product_eg: ../../Product/Product/schema.yaml
 nodeMappings:
   ShipmentDocument:
     classTerm: cim.ShipmentDocument
@@ -20,11 +20,6 @@ nodeMappings:
   ShipmentPackage:
     classTerm: cim.ShipmentPackage
     mapping:
-      id:
-        propertyTerm: cim.id
-        range: guid
-        unique: true
-        mandatory: true
       shipmentProductCount:
         propertyTerm: cim.shipmentProductCount
         range: integer
@@ -38,35 +33,22 @@ nodeMappings:
         range: Shipment
         mandatory: true
         allowMultiple: true
-  ShippingMethod:
-    classTerm: cim.ShippingMethod
-    mapping:
       id:
         propertyTerm: cim.id
         range: guid
         unique: true
         mandatory: true
-      product:
-        propertyTerm: cim.product
-        range: product_eg.Product
-        mandatory: true
-        allowMultiple: true
-      name:
-        propertyTerm: cim.name
-        range: string
-        mandatory: true
+  ShippingMethod:
+    classTerm: cim.ShippingMethod
+    mapping:
       description:
         propertyTerm: cim.description
         range: string
         mandatory: true
-  ShipmentProduct:
-    classTerm: cim.ShipmentProduct
-    mapping:
-      salesOrderProduct:
-        propertyTerm: cim.salesOrderProduct
-        range: salesorder_eg.SalesOrderProduct
+      name:
+        propertyTerm: cim.name
+        range: string
         mandatory: true
-        allowMultiple: true
       product:
         propertyTerm: cim.product
         range: product_eg.Product
@@ -77,6 +59,9 @@ nodeMappings:
         range: guid
         unique: true
         mandatory: true
+  ShipmentProduct:
+    classTerm: cim.ShipmentProduct
+    mapping:
       shipmentPackage:
         propertyTerm: cim.shipmentPackage
         range: ShipmentPackage
@@ -87,10 +72,25 @@ nodeMappings:
         range: Shipment
         mandatory: true
         allowMultiple: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      salesOrderProduct:
+        propertyTerm: cim.salesOrderProduct
+        range: salesorder_eg.SalesOrderProduct
+        mandatory: true
+        allowMultiple: true
       shipmentProductCount:
         propertyTerm: cim.shipmentProductCount
         range: integer
         mandatory: true
+      product:
+        propertyTerm: cim.product
+        range: product_eg.Product
+        mandatory: true
+        allowMultiple: true
   Shipment:
     classTerm: cim.Shipment
     mapping:
@@ -98,39 +98,10 @@ nodeMappings:
         propertyTerm: cim.shipmentStatus
         range: ShipmentStatus
         allowMultiple: true
-      salesOrder:
-        propertyTerm: cim.salesOrder
-        range: salesorder_eg.SalesOrder
-        allowMultiple: true
-      carrierTrackingNumber:
-        propertyTerm: cim.carrierTrackingNumber
-        range: string
-      salesOrderDeliveryGroup:
-        propertyTerm: cim.salesOrderDeliveryGroup
-        range: salesorder_eg.SalesOrderDeliveryGroup
-        allowMultiple: true
       shipmentDate:
         propertyTerm: cim.shipmentDate
         range: date
         mandatory: true
-      specialInstructionsText:
-        propertyTerm: cim.specialInstructionsText
-        range: string
-      giftMessageText:
-        propertyTerm: cim.giftMessageText
-        range: string
-      actualDeliveryDateTime:
-        propertyTerm: cim.actualDeliveryDateTime
-        range: time
-      estimatedDeliveryDateTime:
-        propertyTerm: cim.estimatedDeliveryDateTime
-        range: time
-      isGift:
-        propertyTerm: cim.isGift
-        range: boolean
-      scheduledDeliveryDateTime:
-        propertyTerm: cim.scheduledDeliveryDateTime
-        range: time
       shipmentNumber:
         propertyTerm: cim.shipmentNumber
         range: string
@@ -138,45 +109,70 @@ nodeMappings:
         propertyTerm: cim.shipToAddress
         range: contactpoint_eg.ContactPointAddress
         allowMultiple: true
+      giftMessageText:
+        propertyTerm: cim.giftMessageText
+        range: string
+      carrierTrackingNumber:
+        propertyTerm: cim.carrierTrackingNumber
+        range: string
+      estimatedDeliveryDateTime:
+        propertyTerm: cim.estimatedDeliveryDateTime
+        range: time
+      scheduledDeliveryDateTime:
+        propertyTerm: cim.scheduledDeliveryDateTime
+        range: time
       id:
         propertyTerm: cim.id
         range: guid
         unique: true
         mandatory: true
+      isGift:
+        propertyTerm: cim.isGift
+        range: boolean
+      actualDeliveryDateTime:
+        propertyTerm: cim.actualDeliveryDateTime
+        range: time
+      salesOrderDeliveryGroup:
+        propertyTerm: cim.salesOrderDeliveryGroup
+        range: salesorder_eg.SalesOrderDeliveryGroup
+        allowMultiple: true
+      specialInstructionsText:
+        propertyTerm: cim.specialInstructionsText
+        range: string
+      salesOrder:
+        propertyTerm: cim.salesOrder
+        range: salesorder_eg.SalesOrder
+        allowMultiple: true
   ShipmentProductPriceAdjustment:
     classTerm: cim.ShipmentProductPriceAdjustment
     mapping:
-      adjustmentTaxAmount:
-        propertyTerm: cim.adjustmentTaxAmount
+      shipmentProductPriceAdjustmentAmount:
+        propertyTerm: cim.shipmentProductPriceAdjustmentAmount
         range: integer
       adjustmentAmount:
         propertyTerm: cim.adjustmentAmount
         range: integer
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      description:
+        propertyTerm: cim.description
+        range: string
         mandatory: true
       shipmentProduct:
         propertyTerm: cim.shipmentProduct
         range: ShipmentProduct
         mandatory: true
         allowMultiple: true
-      shipmentProductPriceAdjustmentAmount:
-        propertyTerm: cim.shipmentProductPriceAdjustmentAmount
+      adjustmentTaxAmount:
+        propertyTerm: cim.adjustmentTaxAmount
         range: integer
-      description:
-        propertyTerm: cim.description
-        range: string
-        mandatory: true
-      id:
-        propertyTerm: cim.id
-        range: guid
-        unique: true
-        mandatory: true
   ShipmentStatus:
     classTerm: cim.ShipmentStatus
     mapping:
-      description:
-        propertyTerm: cim.description
-        range: string
-        mandatory: true
       id:
         propertyTerm: cim.id
         range: guid
@@ -186,9 +182,17 @@ nodeMappings:
         propertyTerm: cim.name
         range: string
         mandatory: true
+      description:
+        propertyTerm: cim.description
+        range: string
+        mandatory: true
   ShipmentProductPriceAdjustmentTax:
     classTerm: cim.ShipmentProductPriceAdjustmentTax
     mapping:
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
       id:
         propertyTerm: cim.id
         range: guid
@@ -199,10 +203,6 @@ nodeMappings:
         range: ShipmentProductPriceAdjustment
         mandatory: true
         allowMultiple: true
-      name:
-        propertyTerm: cim.name
-        range: string
-        mandatory: true
 external:
   cim: http://cloudinformationmodel.org/model/
 dialect: ShipmentEntityGroup

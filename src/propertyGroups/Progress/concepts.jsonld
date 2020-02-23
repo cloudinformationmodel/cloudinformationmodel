@@ -17,7 +17,7 @@
       "@type": "Property",
       "description": "Current order status e.g. Draft, Ready for Review, Placed, Ready for Activation, Activated",
       "name": "Sales Order Status",
-      "range": "DataType"
+      "range": "SalesOrderStatus"
     },
     {
       "@id": "salesOrderSystemStatus",

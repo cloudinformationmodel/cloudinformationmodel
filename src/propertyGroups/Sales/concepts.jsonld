@@ -283,14 +283,14 @@
       "@type": "Property",
       "description": "For renewal orders, the length of the renewal term",
       "name": "Renewal Term",
-      "range": "DataType"
+      "range": "RenewalTerm"
     },
     {
       "@id": "salesOrderConfirmationStatus",
       "@type": "Property",
       "description": "What stage of customer approval and finalization has been achieved.",
       "name": "Sales Order Confirmation Status",
-      "range": "DataType"
+      "range": "SalesOrderConfirmationStatus"
     },
     {
       "@id": "seller",
@@ -465,7 +465,7 @@
       "@type": "Property",
       "description": "Status of the product within the order. Values may include Placed and Activated",
       "name": "Sales Order Product Status",
-      "range": "DataType"
+      "range": "SalesOrderProductStatus"
     },
     {
       "@id": "sellerAccount",
@@ -661,14 +661,14 @@
       "@type": "Property",
       "description": "Defines how the adjustment will be calculated. Valid values used in Commerce Cloud are: percentage, fixed_price, amount, free, price_book_price, bonus, total_fixed_price, bonus_choice, percentage_off_options",
       "name": "Price Adjustment Method",
-      "range": "DataType"
+      "range": "PriceAdjustmentMethod"
     },
     {
       "@id": "salesOrderPriceAdjustmentTypeID",
       "@type": "Property",
       "description": "Defines which subtype an instance of the Price Adjustment Group is for: Sales Order, Sales Order Product, Fulfillment Product or Shipment Product.",
       "name": "Sales Order Price Adjustment Type Id",
-      "range": "DataType"
+      "range": "SalesOrderPriceAdjustmentType"
     },
     {
       "@id": "isManuallyApplied",
@@ -892,7 +892,7 @@
       "@type": "Property",
       "description": "Description/name of the Product Group Type, e.g. PriceBreakdown, ShipTogether",
       "name": "Sales Order Product Group Type",
-      "range": "DataType"
+      "range": "SalesOrderProductGroupType"
     },
     {
       "@id": "salesOrderProductGroup",

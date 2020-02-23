@@ -13,16 +13,16 @@ types:
     properties:
       id:
         type: string
-      name:
+      name?:
         type: string
   PaymentGatewayAuthReversalLog:
     type: PaymentGatewayInteractionLog
     properties:
       id:
         type: string
-      paymentAuthorizationReversal:
+      paymentAuthorizationReversal?:
         items: PaymentAuthorizationReversal
-      name:
+      name?:
         type: string
   PaymentAuthorizationReversal:
     properties:
@@ -30,11 +30,11 @@ types:
         type: string
       authorizationReversalAmount:
         type: integer
-      capturePayment:
+      capturePayment?:
         items: CapturePayment
-      customerAuthorizationReversalPhone:
+      customerAuthorizationReversalPhone?:
         type: string
-      iPAddress:
+      iPAddress?:
         type: string
       paymentAuthorizationReversalStatus:
         type: string
@@ -44,7 +44,7 @@ types:
         type: string
       paymentGatewayInternalReferenceNumber:
         type: string
-      paymentAuthorizationReversalName:
+      paymentAuthorizationReversalName?:
         type: string
       paymentGatewayResult:
         items: PaymentGatewayResultCode
@@ -54,11 +54,11 @@ types:
         type: date-only
       requestDate:
         type: time-only
-      paymentAuthorizationReversalCommentText:
+      paymentAuthorizationReversalCommentText?:
         type: string
-      macAddress:
+      macAddress?:
         type: string
-      customerAuthorizationReversalEmail:
+      customerAuthorizationReversalEmail?:
         type: string
       paymentGatewayDate:
         type: time-only
@@ -70,7 +70,7 @@ types:
         type: date-only
       relatedPaymentAllocation:
         items: PaymentAllocation
-      paymentAllocationName:
+      paymentAllocationName?:
         type: string
   PaymentApplication:
     properties:
@@ -78,9 +78,9 @@ types:
         type: date-only
       paymentApplicationType:
         type: string
-      commentText:
+      commentText?:
         type: string
-      hasBeenUnapplied:
+      hasBeenUnapplied?:
         type: boolean
       id:
         type: string
@@ -104,7 +104,7 @@ types:
         type: string
       id:
         type: string
-      paymentGatewayProviderCommentText:
+      paymentGatewayProviderCommentText?:
         type: string
       paymentGatewayProviderName:
         type: string
@@ -128,9 +128,9 @@ types:
     properties:
       id:
         type: string
-      paymentTreatmentMethodCode:
-        type: string
       paymentTreatmentMethodName:
+        type: string
+      paymentTreatmentMethodCode:
         type: string
       paymentTreatmentMethodDescription:
         type: string
@@ -139,11 +139,11 @@ types:
     properties:
       id:
         type: string
-      paymentInvoiceApplicationName:
+      paymentInvoiceApplicationName?:
         type: string
       invoiceBalanceAmount:
         type: integer
-      paymentInvoiceApplicationType:
+      paymentInvoiceApplicationType?:
         type: string
   PaymentGatewayInteractionType:
     properties:
@@ -170,7 +170,7 @@ types:
     properties:
       id:
         type: string
-      name:
+      name?:
         type: string
   PaymentGatewayPaymentLog:
     type: PaymentGatewayInteractionLog
@@ -179,7 +179,7 @@ types:
         type: string
       payment:
         items: Payment
-      name:
+      name?:
         type: string
   RefundAllocation:
     properties:
@@ -187,7 +187,7 @@ types:
         type: date-only
       relatedRefundAllocation:
         items: RefundAllocation
-      hasBeenUnapplied:
+      hasBeenUnapplied?:
         type: boolean
       refundAllocationType:
         type: string
@@ -199,7 +199,7 @@ types:
         type: integer
       refundBalanceAmount:
         type: integer
-      refundAllocationName:
+      refundAllocationName?:
         type: string
       appliedDate:
         type: date-only
@@ -214,12 +214,12 @@ types:
         type: string
       paymentAuthorization:
         items: PaymentAuthorization
-      name:
+      name?:
         type: string
   PaymentInvoiceAllocation:
     type: PaymentAllocation
     properties:
-      paymentInvoiceAllocationName:
+      paymentInvoiceAllocationName?:
         type: string
       id:
         type: string
@@ -227,7 +227,7 @@ types:
         type: integer
       invoiceBalanceAmount:
         type: integer
-      paymentInvoiceApplication:
+      paymentInvoiceApplication?:
         items: PaymentInvoiceApplication
   Payment:
     properties:
@@ -235,13 +235,13 @@ types:
         type: string
       authorizationProcessingMode:
         type: string
-      account:
+      account?:
         items: account_eg.Account
       salesOrderPaymentSummary:
         items: salesorder_eg.SalesOrderPaymentSummary
       latestGatewayResultCode:
         items: PaymentGatewayResultCode
-      iPAddress:
+      iPAddress?:
         type: string
       commentText:
         type: string
@@ -255,7 +255,7 @@ types:
         type: string
       id:
         type: string
-      customerEmailAddress:
+      customerEmailAddress?:
         type: string
       name:
         type: string
@@ -271,9 +271,9 @@ types:
         type: string
       paymentGateway:
         items: PaymentGateway
-      customerPhoneNumber:
+      customerPhoneNumber?:
         type: string
-      latestPaymentGatewayMessageText:
+      latestPaymentGatewayMessageText?:
         type: string
       paymentEffectiveDate:
         type: date-only
@@ -285,7 +285,7 @@ types:
         items: party_eg.InternalBusinessUnit
       paymentCancellationDate:
         type: date-only
-      macAddress:
+      macAddress?:
         type: string
       totalAppliedAmount:
         type: integer
@@ -302,7 +302,7 @@ types:
         type: string
       appliedAmount:
         type: integer
-      name:
+      name?:
         type: string
   PaymentTreatment:
     properties:
@@ -310,15 +310,15 @@ types:
         items: PaymentTreatmentMethod
       id:
         type: string
-      paymentApplicationLevel:
+      paymentApplicationLevel?:
         type: string
-      shouldAutoInvoice:
+      shouldAutoInvoice?:
         type: boolean
       paymentTreatmentStatus:
         type: string
       paymentPolicy:
         items: PaymentPolicy
-      paymentTreatmentName:
+      paymentTreatmentName?:
         type: string
   PaymentAuthorization:
     properties:
@@ -326,7 +326,7 @@ types:
         type: string
       salesOrderPaymentSummary:
         items: salesorder_eg.SalesOrderPaymentSummary
-      iPAddress:
+      iPAddress?:
         type: string
       totalPaymentCaptureAmount:
         type: integer
@@ -350,7 +350,7 @@ types:
         items: PaymentGateway
       paymentGatewayResult:
         items: PaymentGatewayResultCode
-      paymentAuthorizationCommentText:
+      paymentAuthorizationCommentText?:
         type: string
       externalCreatedDate:
         type: date-only
@@ -362,9 +362,9 @@ types:
         type: integer
       paymentMethodID:
         items: paymentmethod_eg.PaymentMethod
-      gatewayResultCodeDescription:
+      gatewayResultCodeDescription?:
         type: string
-      macAddress:
+      macAddress?:
         type: string
       gatewayAuthorizationCode:
         type: string
@@ -383,11 +383,11 @@ types:
         type: string
       paymentBalanceAmount:
         type: integer
-      refundAllocationCommentText:
+      refundAllocationCommentText?:
         type: string
       creditMemoBalanceAmount:
         type: integer
-      refundPaymentAllocationName:
+      refundPaymentAllocationName?:
         type: string
   RefundPayment:
     type: Payment
@@ -396,7 +396,7 @@ types:
         type: string
       externalCreatedDate:
         type: date-only
-      name:
+      name?:
         type: string
   PaymentGateway:
     properties:
@@ -406,26 +406,26 @@ types:
         type: string
       name:
         type: string
-      paymentGatewayCommentText:
+      paymentGatewayCommentText?:
         type: string
       paymentGatewayProvider:
         items: PaymentGatewayProvider
-      systemCredential:
+      systemCredential?:
         type: string
   CapturePayment:
     type: Payment
     properties:
       id:
         type: string
-      name:
+      name?:
         type: string
       capturePaymentType:
         type: string
-      handlingFeeAmount:
+      handlingFeeAmount?:
         type: integer
       paymentAuthorization:
         items: PaymentAuthorization
-      isFinalCapture:
+      isFinalCapture?:
         type: boolean
   PaymentGatewayInteractionLog:
     properties:
@@ -433,7 +433,7 @@ types:
         items: PaymentGatewayInteractionType
       paymentGatewayReferenceNumber:
         type: string
-      paymentGatewayMessageText:
+      paymentGatewayMessageText?:
         type: string
       paymentGatewayAuthorizationCode:
         type: string
@@ -454,7 +454,7 @@ types:
       paymentGatewayDate:
         type: date-only
 uses:
-  account_eg: ../../Party/Account/schema.yaml
-  party_eg: ../../Party/Party/schema.yaml
   salesorder_eg: ../../SalesOrder/SalesOrder/schema.yaml
+  party_eg: ../../Party/Party/schema.yaml
   paymentmethod_eg: ../../PaymentMethod/PaymentMethod/schema.yaml
+  account_eg: ../../Party/Account/schema.yaml

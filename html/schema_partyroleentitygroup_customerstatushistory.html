@@ -166,6 +166,24 @@
                 <span>Description: </span><span>History of when customer changed frome one status to another</span>
               </p>
 
+                <h3>Related entities</h3>
+                <div class="table-responsive">
+                    <table id="related-entities-schemas-table">
+                        <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Description</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="PartyRole-schemas-tr">
+                                    <td class="name-td"><a href="schema_partyroleentitygroup_partyrole.html"> Party Role</a></td>
+                                    <td class="description-td">Trading roles a party may play at the same time i.e. Customer, Supplier, Seller, Competitor, Worker</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
             
               <div class="table-responsive">
@@ -200,17 +218,6 @@
                         </ul>
                       </td>
                     </tr>
-                    <tr id="partyRole-scalar-tr">
-                      <td>partyRole</td>
-                      <td>
-                        <ul>
-                          <li class="sprop-term-id">Term URI: http:&#x2F;&#x2F;cloudinformationmodel.org&#x2F;model&#x2F;partyRole</li>
-                          <li class="sprop-range">Range: string</li>
-                            <li class="sprop-description">Description: Reference to business role that this Lead role is an extension of</li>
-                            <li class="sprop-constraint">mandatory: true</li>
-                        </ul>
-                      </td>
-                    </tr>
                     <tr id="partyRoleStatus-scalar-tr">
                       <td>partyRoleStatus</td>
                       <td>
@@ -237,7 +244,39 @@
                 </table>
               </div>
 
-            <p>No Link Properties</p>
+            
+              <div class="table-responsive">
+                <h3>Link Properties</h3>
+                <table id="customerstatushistory-lprops-table">
+                  <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Details</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                    <tr id="partyRole-link-tr">
+                      <td>partyRole</td>
+                      <td>
+                        <ul>
+                          <li class="lprop-term-id">Term URI: http:&#x2F;&#x2F;cloudinformationmodel.org&#x2F;model&#x2F;partyRole</li>
+                          <li class="lprop-range">
+                            <span class="lprop-range-list-title">Range:</span>
+                            <ul class="lprop-range-list">
+                                <li class="lprop-range-list-item">
+                                    <a href="schema_partyroleentitygroup_partyrole.html" title="PartyRole"> Party Role</a>
+                                </li>
+                            </ul>
+                          </li>
+                            <li class="lprop-description">Description: Reference to business role that this Lead role is an extension of</li>
+                            <li class="lprop-constraint">mandatory: true</li>
+                            <li class="lprop-constraint">allowMultiple: true</li>
+                        </ul>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
           </div>
         </div>
       </div>

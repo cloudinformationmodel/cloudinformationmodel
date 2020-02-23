@@ -10,6 +10,12 @@
   "description": "Example Entities included: Party Role, Buyer Role, Actor Role, Customer Role",
   "classConcepts": [
     {
+      "@id": "PartyRole",
+      "name": "Party Role",
+      "@type": "Class",
+      "description": "Trading roles a party may play at the same time i.e. Customer, Supplier, Seller, Competitor, Worker"
+    },
+    {
       "@id": "Customer",
       "name": "Customer",
       "@type": "Class",
@@ -42,12 +48,6 @@
       "name": "Customer Status History",
       "@type": "Class",
       "description": "History of when customer changed frome one status to another"
-    },
-    {
-      "@id": "PartyRole",
-      "@type": "Class",
-      "name": "Party Role",
-      "description": "Trading roles a party may play at the same time i.e. Customer, Supplier, Seller, Competitor, Worker"
     }
   ],
   "propertyConcepts": [
@@ -175,6 +175,7 @@
       "@type": "Property",
       "domain": [
         "Competitor",
+        "PartyRole",
         "Customer",
         "Supplier",
         "Seller",
@@ -333,6 +334,13 @@
       "@type": "Property",
       "domain": [
         "Competitor"
+      ]
+    },
+    {
+      "@id": "party",
+      "@type": "Property",
+      "domain": [
+        "PartyRole"
       ]
     },
     {

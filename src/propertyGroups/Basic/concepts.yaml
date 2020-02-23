@@ -73,7 +73,7 @@ propertyTerms:
   partyRole:
     displayName: Party Role
     description: Reference to the party role that has this status
-    range: any
+    range: PartyRole
   issuedAtLocation:
     displayName: Issued At Location
     description: Where was the identification issued
@@ -362,6 +362,10 @@ propertyTerms:
     displayName: Graduation Date
     description: When did person graduate from this education
     range: any
+  salesOrderType:
+    displayName: Sales Order Type
+    description: "The type of order: Change, Renewal or Amendment."
+    range: SalesOrderType
   employerAddressLine4:
     displayName: Employer Address Line 4
     description: Forth line of an address

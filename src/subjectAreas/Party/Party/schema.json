@@ -77,21 +77,21 @@
     "PersonLanguage": {
       "type": "object",
       "required": [
-        "individual",
-        "id"
+        "id",
+        "individual"
       ],
       "properties": {
-        "individual": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/Individual"
-          }
-        },
         "spokenProficiencyLevel": {
           "type": "string"
         },
         "id": {
           "type": "string"
+        },
+        "individual": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Individual"
+          }
         },
         "writtenProficiencyLevel": {
           "type": "string"
@@ -516,7 +516,10 @@
           "format": "date"
         },
         "partyRole": {
-          "type": "string"
+          "type": "array",
+          "items": {
+            "$ref": "../PartyRole/schema.json#/definitions/PartyRole"
+          }
         },
         "id": {
           "type": "string"
@@ -582,8 +585,8 @@
       "required": [
         "id",
         "additionalNameType",
-        "name",
-        "party"
+        "party",
+        "name"
       ],
       "properties": {
         "id": {
@@ -592,14 +595,14 @@
         "additionalNameType": {
           "type": "string"
         },
-        "name": {
-          "type": "string"
-        },
         "party": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/Party"
           }
+        },
+        "name": {
+          "type": "string"
         }
       }
     },
@@ -663,20 +666,20 @@
     "PersonLifeEvent": {
       "type": "object",
       "required": [
-        "id",
         "individual",
+        "id",
         "personLifeEventDateTime",
         "personLifeEventType"
       ],
       "properties": {
-        "id": {
-          "type": "string"
-        },
         "individual": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/Individual"
           }
+        },
+        "id": {
+          "type": "string"
         },
         "personLifeEventDateTime": {
           "type": "string",

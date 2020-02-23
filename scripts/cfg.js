@@ -13,7 +13,7 @@ const id = function(id) {
 const label = function(name) {
     let toTransform = name;
     if (toTransform.indexOf("EntityGroup") !== -1) {
-        toTransform = toTransform.replace("EntityGroup", "");
+	toTransform = toTransform.replace("EntityGroup", "");
     }
     return toTransform.replace(/([A-Z])/g, ' $1')
 };
@@ -21,7 +21,7 @@ const label = function(name) {
 module.exports = {
     idMapping: id,
     labelMapping: label,
-    downloadLinks: "../../../format_links.json",
+    downloadLinks: "format_links.json",
     dialectsHeader: "Entity Groups",
     schemasHeader: "Entities",
     indexHeader: "Cloud Information Model",

@@ -351,7 +351,10 @@
           "format": "time"
         },
         "partyRole": {
-          "type": "string"
+          "type": "array",
+          "items": {
+            "$ref": "../PartyRole/schema.json#/definitions/PartyRole"
+          }
         },
         "id": {
           "type": "string"

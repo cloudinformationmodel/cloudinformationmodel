@@ -98,9 +98,6 @@
       "$ref": "#/definitions/OrderDeliveryMethod"
     },
     {
-      "$ref": "#/definitions/OrderProductRelationshipType"
-    },
-    {
       "$ref": "#/definitions/Party"
     },
     {
@@ -209,6 +206,9 @@
       "$ref": "#/definitions/PriceAdjustmentGroup"
     },
     {
+      "$ref": "#/definitions/PriceAdjustmentMethod"
+    },
+    {
       "$ref": "#/definitions/PriceBookEntry"
     },
     {
@@ -254,6 +254,9 @@
       "$ref": "#/definitions/ProductRelationshipType"
     },
     {
+      "$ref": "#/definitions/ProductRelationshipType"
+    },
+    {
       "$ref": "#/definitions/ProductTranslation"
     },
     {
@@ -272,7 +275,13 @@
       "$ref": "#/definitions/RefundPaymentAllocation"
     },
     {
+      "$ref": "#/definitions/RenewalTerm"
+    },
+    {
       "$ref": "#/definitions/SalesChannel"
+    },
+    {
+      "$ref": "#/definitions/SalesChannelType"
     },
     {
       "$ref": "#/definitions/SalesOrder"
@@ -281,7 +290,16 @@
       "$ref": "#/definitions/SalesOrderChangeLog"
     },
     {
+      "$ref": "#/definitions/SalesOrderChangeType"
+    },
+    {
+      "$ref": "#/definitions/SalesOrderConfirmationStatus"
+    },
+    {
       "$ref": "#/definitions/SalesOrderDeliveryGroup"
+    },
+    {
+      "$ref": "#/definitions/SalesOrderDeliveryStatus"
     },
     {
       "$ref": "#/definitions/SalesOrderPaymentSummary"
@@ -290,10 +308,16 @@
       "$ref": "#/definitions/SalesOrderPriceAdjustment"
     },
     {
+      "$ref": "#/definitions/SalesOrderPriceAdjustmentType"
+    },
+    {
       "$ref": "#/definitions/SalesOrderProduct"
     },
     {
       "$ref": "#/definitions/SalesOrderProductGroup"
+    },
+    {
+      "$ref": "#/definitions/SalesOrderProductGroupType"
     },
     {
       "$ref": "#/definitions/SalesOrderProductNote"
@@ -302,10 +326,25 @@
       "$ref": "#/definitions/SalesOrderProductReason"
     },
     {
+      "$ref": "#/definitions/SalesOrderProductReasonCategory"
+    },
+    {
+      "$ref": "#/definitions/SalesOrderProductStatus"
+    },
+    {
       "$ref": "#/definitions/SalesOrderProductTax"
     },
     {
+      "$ref": "#/definitions/SalesOrderSegment"
+    },
+    {
+      "$ref": "#/definitions/SalesOrderStatus"
+    },
+    {
       "$ref": "#/definitions/SalesOrderTax"
+    },
+    {
+      "$ref": "#/definitions/SalesOrderType"
     },
     {
       "$ref": "#/definitions/Seller"
@@ -399,21 +438,21 @@
     "PersonLanguage": {
       "type": "object",
       "required": [
-        "individual",
-        "id"
+        "id",
+        "individual"
       ],
       "properties": {
-        "individual": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/Individual"
-          }
-        },
         "spokenProficiencyLevel": {
           "type": "string"
         },
         "id": {
           "type": "string"
+        },
+        "individual": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Individual"
+          }
         },
         "writtenProficiencyLevel": {
           "type": "string"
@@ -483,6 +522,21 @@
         }
       }
     },
+    "SalesOrderDeliveryStatus": {
+      "type": "object",
+      "required": [
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
     "ProductTranslation": {
       "type": "object",
       "required": [
@@ -511,6 +565,21 @@
         }
       }
     },
+    "SalesOrderProductReasonCategory": {
+      "type": "object",
+      "required": [
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
     "ShipmentProductPriceAdjustmentTax": {
       "type": "object",
       "required": [
@@ -530,6 +599,21 @@
           "items": {
             "$ref": "#/definitions/ShipmentProductPriceAdjustment"
           }
+        }
+      }
+    },
+    "RenewalTerm": {
+      "type": "object",
+      "required": [
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
         }
       }
     },
@@ -727,6 +811,21 @@
         }
       }
     },
+    "SalesChannelType": {
+      "type": "object",
+      "required": [
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
     "SalesOrder": {
       "type": "object",
       "required": [
@@ -736,6 +835,7 @@
         "id",
         "name",
         "salesOrderConfirmationStatus",
+        "salesOrderType",
         "paymentMethod",
         "salesOrderStatus",
         "billToAccount",
@@ -818,7 +918,16 @@
           "type": "integer"
         },
         "salesOrderConfirmationStatus": {
-          "type": "string"
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SalesOrderConfirmationStatus"
+          }
+        },
+        "salesOrderType": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SalesOrderType"
+          }
         },
         "customerAuthorizedDate": {
           "type": "string",
@@ -840,7 +949,10 @@
           "type": "integer"
         },
         "salesOrderStatus": {
-          "type": "string"
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SalesOrderStatus"
+          }
         },
         "renewalUpliftRate": {
           "type": "integer"
@@ -849,7 +961,10 @@
           "type": "integer"
         },
         "renewalTerm": {
-          "type": "string"
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/RenewalTerm"
+          }
         },
         "originalOrder": {
           "type": "array",
@@ -1314,6 +1429,21 @@
       ],
       "type": "object"
     },
+    "SalesOrderType": {
+      "type": "object",
+      "required": [
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
     "PersonEducation": {
       "type": "object",
       "required": [
@@ -1345,6 +1475,21 @@
           }
         },
         "institutionName": {
+          "type": "string"
+        }
+      }
+    },
+    "SalesOrderPriceAdjustmentType": {
+      "type": "object",
+      "required": [
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
           "type": "string"
         }
       }
@@ -1393,10 +1538,10 @@
         "id": {
           "type": "string"
         },
-        "noteText": {
+        "description": {
           "type": "string"
         },
-        "description": {
+        "noteText": {
           "type": "string"
         }
       }
@@ -1514,7 +1659,10 @@
           "type": "integer"
         },
         "salesOrderProductStatus": {
-          "type": "string"
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SalesOrderProductStatus"
+          }
         },
         "unitPriceAmount": {
           "type": "integer"
@@ -2139,13 +2287,28 @@
       ],
       "type": "object"
     },
+    "SalesOrderStatus": {
+      "type": "object",
+      "required": [
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
     "SalesOrderProductGroup": {
       "type": "object",
       "required": [
         "id",
         "description",
-        "name",
-        "salesOrderProductGroupType"
+        "salesOrderProductGroupType",
+        "name"
       ],
       "properties": {
         "id": {
@@ -2154,10 +2317,13 @@
         "description": {
           "type": "string"
         },
-        "name": {
-          "type": "string"
-        },
         "salesOrderProductGroupType": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SalesOrderProductGroupType"
+          }
+        },
+        "name": {
           "type": "string"
         }
       }
@@ -2166,18 +2332,18 @@
       "type": "object",
       "required": [
         "id",
-        "paymentTreatmentMethodCode",
         "paymentTreatmentMethodName",
+        "paymentTreatmentMethodCode",
         "paymentTreatmentMethodDescription"
       ],
       "properties": {
         "id": {
           "type": "string"
         },
-        "paymentTreatmentMethodCode": {
+        "paymentTreatmentMethodName": {
           "type": "string"
         },
-        "paymentTreatmentMethodName": {
+        "paymentTreatmentMethodCode": {
           "type": "string"
         },
         "paymentTreatmentMethodDescription": {
@@ -2472,7 +2638,10 @@
           "format": "time"
         },
         "partyRole": {
-          "type": "string"
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PartyRole"
+          }
         },
         "partyRoleStatus": {
           "type": "string"
@@ -2504,6 +2673,21 @@
           "type": "string"
         },
         "translatedName": {
+          "type": "string"
+        }
+      }
+    },
+    "SalesOrderProductGroupType": {
+      "type": "object",
+      "required": [
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
           "type": "string"
         }
       }
@@ -2575,6 +2759,21 @@
         }
       }
     },
+    "SalesOrderConfirmationStatus": {
+      "type": "object",
+      "required": [
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
     "PartyIdentification": {
       "type": "object",
       "required": [
@@ -2607,7 +2806,10 @@
           "format": "date"
         },
         "partyRole": {
-          "type": "string"
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PartyRole"
+          }
         },
         "id": {
           "type": "string"
@@ -2668,13 +2870,28 @@
         }
       }
     },
+    "SalesOrderChangeType": {
+      "type": "object",
+      "required": [
+        "id",
+        "salesOrderChangeTypeName"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "salesOrderChangeTypeName": {
+          "type": "string"
+        }
+      }
+    },
     "PartyAdditionalName": {
       "type": "object",
       "required": [
         "id",
         "additionalNameType",
-        "name",
-        "party"
+        "party",
+        "name"
       ],
       "properties": {
         "id": {
@@ -2683,14 +2900,29 @@
         "additionalNameType": {
           "type": "string"
         },
-        "name": {
-          "type": "string"
-        },
         "party": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/Party"
           }
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "PriceAdjustmentMethod": {
+      "type": "object",
+      "required": [
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
         }
       }
     },
@@ -2865,7 +3097,10 @@
           "type": "string"
         },
         "salesOrderProductReasonCategory": {
-          "type": "string"
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SalesOrderProductReasonCategory"
+          }
         },
         "name": {
           "type": "string"
@@ -3670,7 +3905,10 @@
           "type": "boolean"
         },
         "salesOrderDeliveryStatus": {
-          "type": "string"
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SalesOrderDeliveryStatus"
+          }
         },
         "totalDeliveryAdjustmentAmount": {
           "type": "integer"
@@ -4097,7 +4335,22 @@
       }
     },
     "PartyRole": {
-      "type": "object"
+      "type": "object",
+      "required": [
+        "id",
+        "party"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "party": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Party"
+          }
+        }
+      }
     },
     "AccountContactRole": {
       "type": "object",
@@ -4124,6 +4377,21 @@
           "items": {
             "$ref": "#/definitions/AccountContact"
           }
+        }
+      }
+    },
+    "SalesOrderProductStatus": {
+      "type": "object",
+      "required": [
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
         }
       }
     },
@@ -4821,17 +5089,17 @@
       "type": "object",
       "required": [
         "id",
-        "attributeSet",
-        "translatedName"
+        "translatedName",
+        "attributeSet"
       ],
       "properties": {
         "id": {
           "type": "string"
         },
-        "attributeSet": {
+        "translatedName": {
           "type": "string"
         },
-        "translatedName": {
+        "attributeSet": {
           "type": "string"
         }
       }
@@ -5060,6 +5328,21 @@
         }
       }
     },
+    "SalesOrderSegment": {
+      "type": "object",
+      "required": [
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
     "AttributeValueTranslation": {
       "type": "object",
       "required": [
@@ -5244,7 +5527,10 @@
           "type": "string"
         },
         "partyRole": {
-          "type": "string"
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PartyRole"
+          }
         },
         "convertedDate": {
           "type": "string",
@@ -5395,20 +5681,20 @@
     "PersonLifeEvent": {
       "type": "object",
       "required": [
-        "id",
         "individual",
+        "id",
         "personLifeEventDateTime",
         "personLifeEventType"
       ],
       "properties": {
-        "id": {
-          "type": "string"
-        },
         "individual": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/Individual"
           }
+        },
+        "id": {
+          "type": "string"
         },
         "personLifeEventDateTime": {
           "type": "string",
@@ -5443,25 +5729,6 @@
           "items": {
             "$ref": "#/definitions/Account"
           }
-        }
-      }
-    },
-    "OrderProductRelationshipType": {
-      "type": "object",
-      "required": [
-        "id",
-        "parentProductRole",
-        "childProductRole"
-      ],
-      "properties": {
-        "id": {
-          "type": "string"
-        },
-        "parentProductRole": {
-          "type": "string"
-        },
-        "childProductRole": {
-          "type": "string"
         }
       }
     },
@@ -5542,7 +5809,10 @@
           "type": "string"
         },
         "salesChannelType": {
-          "type": "string"
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SalesChannelType"
+          }
         },
         "description": {
           "type": "string"
@@ -5595,8 +5865,8 @@
       "type": "object",
       "required": [
         "paymentMethodType",
-        "id",
-        "paymentMethodStatus"
+        "paymentMethodStatus",
+        "id"
       ],
       "properties": {
         "paymentMethodType": {
@@ -5605,10 +5875,10 @@
             "$ref": "#/definitions/PaymentMethodType"
           }
         },
-        "id": {
+        "paymentMethodStatus": {
           "type": "string"
         },
-        "paymentMethodStatus": {
+        "id": {
           "type": "string"
         }
       }
@@ -5697,7 +5967,10 @@
           "format": "time"
         },
         "partyRole": {
-          "type": "string"
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PartyRole"
+          }
         },
         "id": {
           "type": "string"
@@ -5788,7 +6061,10 @@
           "type": "boolean"
         },
         "partyRole": {
-          "type": "string"
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PartyRole"
+          }
         },
         "faxPhone": {
           "type": "array",

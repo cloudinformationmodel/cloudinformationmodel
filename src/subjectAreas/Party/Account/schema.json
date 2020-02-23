@@ -235,7 +235,10 @@
           "type": "boolean"
         },
         "partyRole": {
-          "type": "string"
+          "type": "array",
+          "items": {
+            "$ref": "../PartyRole/schema.json#/definitions/PartyRole"
+          }
         },
         "faxPhone": {
           "type": "array",

@@ -3,25 +3,25 @@ types:
   UncategorizedParty:
     type: Party
     properties:
-      creationReason:
+      creationReason?:
         type: string
       id:
         type: string
       uncategorizedPartyLabel:
         type: string
-      originalSourceRecord:
+      originalSourceRecord?:
         type: string
-      originalSourceSystem:
+      originalSourceSystem?:
         type: string
   PersonLanguage:
     properties:
-      individual:
-        items: Individual
-      spokenProficiencyLevel:
+      spokenProficiencyLevel?:
         type: string
       id:
         type: string
-      writtenProficiencyLevel:
+      individual:
+        items: Individual
+      writtenProficiencyLevel?:
         type: string
   PersonEducation:
     properties:
@@ -40,167 +40,167 @@ types:
   Individual:
     type: Party
     properties:
-      hasAlcoholAbuseHistory:
+      hasAlcoholAbuseHistory?:
         type: boolean
-      highestEducationLevel:
+      highestEducationLevel?:
         type: string
-      personHeight:
+      personHeight?:
         type: integer
-      mailingName:
+      mailingName?:
         type: string
-      surgeriesLast5YearsCount:
+      surgeriesLast5YearsCount?:
         type: integer
-      doNotTrackUpdateDate:
+      doNotTrackUpdateDate?:
         type: date-only
-      weddingAnniversaryDate:
+      weddingAnniversaryDate?:
         type: date-only
-      minorCitationCount:
+      minorCitationCount?:
         type: integer
-      mainDietaryHabitType:
+      mainDietaryHabitType?:
         type: string
-      personHeightUnitOfMeasure:
+      personHeightUnitOfMeasure?:
         type: string
-      firstName:
+      firstName?:
         type: string
       personName:
         type: string
-      photoURL:
+      photoURL?:
         type: string
-      isHighRiskHobby:
+      isHighRiskHobby?:
         type: boolean
-      doNotProcessFromUpdateDate:
+      doNotProcessFromUpdateDate?:
         type: date-only
-      militaryService:
+      militaryService?:
         type: string
-      maritalStatus:
+      maritalStatus?:
         type: string
-      doNotMarketFromUpdateDate:
+      doNotMarketFromUpdateDate?:
         type: date-only
-      shouldForget:
+      shouldForget?:
         type: boolean
       id:
         type: string
-      mainDisabilityType:
+      mainDisabilityType?:
         type: string
-      consumerCreditScoreProviderName:
+      consumerCreditScoreProviderName?:
         type: string
-      isTobaccoConsume:
+      isTobaccoConsume?:
         type: boolean
-      webSiteURL:
+      webSiteURL?:
         type: string
-      secondLastName:
+      secondLastName?:
         type: string
-      primaryHousehold:
+      primaryHousehold?:
         items: Household
-      orderingName:
+      orderingName?:
         type: string
-      hospitalizationsLast5YearsCount:
+      hospitalizationsLast5YearsCount?:
         type: integer
-      dependentCount:
+      dependentCount?:
         type: integer
-      convictionsCount:
+      convictionsCount?:
         type: integer
-      isGoodDriver:
+      isGoodDriver?:
         type: boolean
-      primaryHobby:
+      primaryHobby?:
         type: string
-      mainPersonalValueType:
+      mainPersonalValueType?:
         type: string
-      isAlcoholConsumer:
+      isAlcoholConsumer?:
         type: boolean
-      taxBracketRange:
+      taxBracketRange?:
         type: string
-      childrenCount:
+      childrenCount?:
         type: integer
-      isGoodStudent:
+      isGoodStudent?:
         type: boolean
-      mainLifeAttitudeType:
+      mainLifeAttitudeType?:
         type: string
-      netWorth:
+      netWorth?:
         type: integer
-      personWeight:
+      personWeight?:
         type: integer
-      birthDate:
+      birthDate?:
         type: date-only
-      religion:
+      religion?:
         type: string
-      sendIndividualData:
+      sendIndividualData?:
         type: boolean
-      deathDate:
+      deathDate?:
         type: date-only
-      doExtractMyDataUpdateDate:
+      doExtractMyDataUpdateDate?:
         type: date-only
-      birthPlace:
+      birthPlace?:
         type: string
-      overAgeNumber:
+      overAgeNumber?:
         type: integer
-      doForgetMeFromUpdateDate:
+      doForgetMeFromUpdateDate?:
         type: date-only
-      personWeightUnitOfMeasure:
+      personWeightUnitOfMeasure?:
         type: string
-      mainLifeStyleType:
+      mainLifeStyleType?:
         type: string
-      gender:
+      gender?:
         type: string
-      hasDrugAbuseHistory:
+      hasDrugAbuseHistory?:
         type: boolean
-      salutation:
+      salutation?:
         type: string
-      mothersMaidenName:
+      mothersMaidenName?:
         type: string
-      doNotTrackLocationUpdateDate:
+      doNotTrackLocationUpdateDate?:
         type: date-only
-      ethnicity:
+      ethnicity?:
         type: string
-      mainPersonalityType:
+      mainPersonalityType?:
         type: string
-      employedSinceDate:
+      employedSinceDate?:
         type: date-only
-      officialName:
+      officialName?:
         type: string
-      isHighRiskOccupation:
+      isHighRiskOccupation?:
         type: boolean
-      residenceCaptureMethod:
+      residenceCaptureMethod?:
         type: string
-      doNotProfileFromUpdateDate:
+      doNotProfileFromUpdateDate?:
         type: date-only
-      nameSuffix:
+      nameSuffix?:
         type: string
-      isDrugConsumer:
+      isDrugConsumer?:
         type: boolean
-      isHomeOwner:
+      isHomeOwner?:
         type: boolean
-      doNotProcessReason:
+      doNotProcessReason?:
         type: string
-      occupationType:
+      occupationType?:
         type: string
-      deathPlace:
+      deathPlace?:
         type: string
-      influencerRating:
+      influencerRating?:
         type: integer
-      militaryStatus:
+      militaryStatus?:
         type: string
-      consumerCreditScore:
+      consumerCreditScore?:
         type: integer
-      yearlyIncome:
+      yearlyIncome?:
         type: integer
-      preferredName:
+      preferredName?:
         type: string
-      personLifeStage:
+      personLifeStage?:
         type: string
-      yearlyIncomeRange:
+      yearlyIncomeRange?:
         type: string
-      majorCitationCount:
+      majorCitationCount?:
         type: integer
-      middleName:
+      middleName?:
         type: string
-      residenceCountryName:
+      residenceCountryName?:
         type: string
-      lastName:
+      lastName?:
         type: string
-      occupation:
+      occupation?:
         type: string
-      currentEmployerName:
+      currentEmployerName?:
         type: string
   PersonEmployment:
     properties:
@@ -208,9 +208,9 @@ types:
         type: string
       positionText:
         type: string
-      employerContactPointAddress:
+      employerContactPointAddress?:
         items: contactpoint_eg.ContactPointAddress
-      employerAddressLine3:
+      employerAddressLine3?:
         type: string
       endDate:
         type: date-only
@@ -222,38 +222,38 @@ types:
         type: string
       employerName:
         type: string
-      employerAddressLine4:
+      employerAddressLine4?:
         type: string
       employerAddressLine1:
         type: string
       annualIncome:
         type: integer
-      employerCityName:
+      employerCityName?:
         type: string
       individual:
         items: Individual
-      employerAddressLine2:
+      employerAddressLine2?:
         type: string
-      employerPostalCodeText:
+      employerPostalCodeText?:
         type: string
       employerPhoneNumber:
         type: string
   PartyIdentification:
     properties:
-      expiryDate:
+      expiryDate?:
         type: date-only
       partyIdentificationType:
         type: string
-      verifiedDate:
+      verifiedDate?:
         type: date-only
-      issuedByAuthority:
+      issuedByAuthority?:
         type: string
-      issuedAtLocation:
+      issuedAtLocation?:
         type: string
-      issuedDate:
+      issuedDate?:
         type: date-only
-      partyRole:
-        type: string
+      partyRole?:
+        items: partyrole_eg.PartyRole
       id:
         type: string
       name:
@@ -282,10 +282,10 @@ types:
         type: string
       additionalNameType:
         type: string
-      name:
-        type: string
       party:
         items: Party
+      name:
+        type: string
   PartyRelationshipType:
     properties:
       isBidirectional:
@@ -299,22 +299,22 @@ types:
   Household:
     type: Party
     properties:
-      householdMemberCount:
+      householdMemberCount?:
         type: integer
-      householdFormedDate:
+      householdFormedDate?:
         type: date-only
       id:
         type: string
       name:
         type: string
-      householdDissolvedDate:
+      householdDissolvedDate?:
         type: date-only
   PersonLifeEvent:
     properties:
-      id:
-        type: string
       individual:
         items: Individual
+      id:
+        type: string
       personLifeEventDateTime:
         type: time-only
       personLifeEventType:
@@ -325,11 +325,11 @@ types:
         type: string
       id:
         type: string
-      globalParty:
+      globalParty?:
         type: string
-      noMergeReason:
+      noMergeReason?:
         type: string
-      primaryAccount:
+      primaryAccount?:
         items: account_eg.Account
   InternalBusinessUnit:
     type: Party
@@ -338,10 +338,11 @@ types:
         type: string
       businessUnitType:
         type: string
-      parentInternalBusinessUnit:
+      parentInternalBusinessUnit?:
         items: InternalBusinessUnit
       name:
         type: string
 uses:
-  account_eg: ../Account/schema.yaml
   contactpoint_eg: ../ContactPoint/schema.yaml
+  partyrole_eg: ../PartyRole/schema.yaml
+  account_eg: ../Account/schema.yaml

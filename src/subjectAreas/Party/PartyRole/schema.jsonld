@@ -6,6 +6,23 @@
   "schemas": [
     {
       "@type": "Shape",
+      "@id": "PartyRole",
+      "properties": [
+        {
+          "path": "party",
+          "node": "Party",
+          "minCount": "1"
+        },
+        {
+          "path": "id",
+          "datatype": "cim:id",
+          "maxCount": "1",
+          "minCount": "1"
+        }
+      ]
+    },
+    {
+      "@type": "Shape",
       "@id": "Customer",
       "and": [
         {
@@ -538,8 +555,7 @@
         },
         {
           "path": "partyRole",
-          "datatype": "xsd:string",
-          "maxCount": "1",
+          "node": "PartyRole",
           "minCount": "1"
         },
         {
@@ -549,10 +565,6 @@
           "minCount": "1"
         }
       ]
-    },
-    {
-      "@type": "Shape",
-      "@id": "PartyRole"
     }
   ]
 }

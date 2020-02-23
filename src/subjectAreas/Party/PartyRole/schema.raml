@@ -3,68 +3,68 @@ types:
   Supplier:
     type: PartyRole
     properties:
-      satisfactionEthicsRank:
+      satisfactionEthicsRank?:
         type: integer
-      contractInvoiceAccuracyRate:
+      contractInvoiceAccuracyRate?:
         type: integer
-      satisfactionWeightPercent:
+      satisfactionWeightPercent?:
         type: integer
-      contractOnTimeDeliveryRate:
+      contractOnTimeDeliveryRate?:
         type: integer
       id:
         type: string
       activeFromDate:
         type: date-only
-      activeToDate:
+      activeToDate?:
         type: date-only
-      competitiveWarrantyRank:
+      competitiveWarrantyRank?:
         type: integer
-      competitiveMarketingRank:
+      competitiveMarketingRank?:
         type: integer
-      contractDeliveryCorrectnessRate:
+      contractDeliveryCorrectnessRate?:
         type: integer
-      competitiveWeightScore:
+      competitiveWeightScore?:
         type: integer
-      contractSLAIssueRate:
+      contractSLAIssueRate?:
         type: integer
-      competitiveWeightPercent:
+      competitiveWeightPercent?:
         type: integer
-      supplierScore:
+      supplierScore?:
         type: integer
-      competitiveProductPriceRank:
+      competitiveProductPriceRank?:
         type: integer
-      contractWeightPercent:
+      contractWeightPercent?:
         type: integer
-      supplierSpend:
+      supplierSpend?:
         type: integer
-      satisfactionTechnicalSupportRank:
+      satisfactionTechnicalSupportRank?:
         type: integer
-      contractWeightScore:
+      contractWeightScore?:
         type: integer
-      satisfactionCustomerServiceRank:
+      satisfactionCustomerServiceRank?:
         type: integer
-      satisfactionWeightScore:
+      satisfactionWeightScore?:
         type: integer
-      contractSourcingCycleDays:
+      contractSourcingCycleDays?:
         type: integer
-      supplierType:
+      supplierType?:
         type: string
-      isCarrier:
+      isCarrier?:
         type: boolean
-      contractProductReturnRate:
+      contractProductReturnRate?:
         type: integer
-      competitiveCostAvoidanceRank:
+      competitiveCostAvoidanceRank?:
         type: integer
-      contractProductQualityRate:
+      contractProductQualityRate?:
         type: integer
-      contractBudgetCostRate:
+      contractBudgetCostRate?:
         type: integer
   CustomerStatusHistory:
     properties:
       startDateTime:
         type: time-only
       partyRole:
-        type: string
+        items: PartyRole
       partyRoleStatus:
         type: string
       id:
@@ -74,135 +74,141 @@ types:
   Competitor:
     type: PartyRole
     properties:
-      competitorStrengths:
+      competitorStrengths?:
         type: string
       competitorFromDate:
         type: date-only
-      socialMediaPostRate:
+      socialMediaPostRate?:
         type: integer
-      competitorThreats:
+      competitorThreats?:
         type: string
-      currentRatio:
+      currentRatio?:
         type: integer
-      cashFlowGrowth:
+      cashFlowGrowth?:
         type: integer
-      competitorObjectives:
+      competitorObjectives?:
         type: string
-      netProfitMargin:
+      netProfitMargin?:
         type: integer
       id:
         type: string
-      competitorWeaknesses:
+      competitorWeaknesses?:
         type: string
-      pressMentionsRate:
+      pressMentionsRate?:
         type: integer
-      assetTurnoverRatio:
+      assetTurnoverRatio?:
         type: integer
-      competitorToDate:
+      competitorToDate?:
         type: date-only
-      competitorLeverageOpportunities:
+      competitorLeverageOpportunities?:
         type: string
-      assetReturnRatio:
+      assetReturnRatio?:
         type: integer
-      ptoENumber:
+      ptoENumber?:
         type: integer
-      adKeywords:
+      adKeywords?:
         type: string
-      adReachRate:
+      adReachRate?:
         type: integer
   Seller:
     type: PartyRole
     properties:
-      communityParticipationCount:
+      communityParticipationCount?:
         type: integer
-      demonstrationsGivenCount:
+      demonstrationsGivenCount?:
         type: integer
-      eventParticipationCount:
+      eventParticipationCount?:
         type: integer
-      customerSatisfactionScore:
+      customerSatisfactionScore?:
         type: integer
-      trainingCertificationCount:
+      trainingCertificationCount?:
         type: integer
-      opportunityInvolvementCount:
+      opportunityInvolvementCount?:
         type: integer
-      marketingDevelopmentAmount:
+      marketingDevelopmentAmount?:
         type: integer
-      sellerType:
+      sellerType?:
         type: string
-      documentationDownloadCount:
+      documentationDownloadCount?:
         type: integer
       id:
         type: string
       activeFromDate:
         type: date-only
-      activeToDate:
+      activeToDate?:
         type: date-only
-      trialParticipationCount:
+      trialParticipationCount?:
         type: integer
-      creditRating:
+      creditRating?:
         type: integer
-      satisfactionScore:
+      satisfactionScore?:
         type: integer
-      salesAmount:
+      salesAmount?:
         type: integer
-      opportunityWinRate:
+      opportunityWinRate?:
         type: integer
-      productReturnRate:
+      productReturnRate?:
         type: integer
-      leadGenerationCount:
+      leadGenerationCount?:
         type: integer
-      inventoryValueAmount:
+      inventoryValueAmount?:
         type: integer
-      majorPostSaleSupportNeeded:
+      majorPostSaleSupportNeeded?:
         type: boolean
-      trainingParticipationCount:
+      trainingParticipationCount?:
         type: integer
-      newCustomerAcquisitionCount:
+      newCustomerAcquisitionCount?:
         type: integer
-      successStoryCount:
+      successStoryCount?:
         type: integer
-      systemLoginCount:
+      systemLoginCount?:
         type: integer
-      jointBusinessPlanExist:
+      jointBusinessPlanExist?:
         type: boolean
-      averageConvertedLeadAmount:
+      averageConvertedLeadAmount?:
         type: integer
-      estimatedPartnerGrossMargin:
+      estimatedPartnerGrossMargin?:
         type: integer
   Customer:
     type: PartyRole
     properties:
       customerStatus:
         type: string
-      prospectRating:
+      prospectRating?:
         type: string
-      netPromoterScore:
+      netPromoterScore?:
         type: integer
-      customerSatisfactionScore:
+      customerSatisfactionScore?:
         type: integer
       id:
         type: string
-      marketingEmailResponseRate:
+      marketingEmailResponseRate?:
         type: integer
-      totalContractedAmount:
+      totalContractedAmount?:
         type: integer
-      totalProfitContributionAmount:
+      totalProfitContributionAmount?:
         type: integer
-      customerNumber:
+      customerNumber?:
         type: string
-      churnScore:
+      churnScore?:
         type: integer
-      originatingCustomerSource:
+      originatingCustomerSource?:
         type: string
-      totalLifeTimeValue:
+      totalLifeTimeValue?:
         type: integer
-      totalBookingsAmount:
+      totalBookingsAmount?:
         type: integer
-      last24MonthsNewRevenueAmount:
+      last24MonthsNewRevenueAmount?:
         type: integer
-      last12MonthsNewRevenueAmount:
+      last12MonthsNewRevenueAmount?:
         type: integer
-      last12MonthsSupportCallCount:
+      last12MonthsSupportCallCount?:
         type: integer
   PartyRole:
-    properties: {}
+    properties:
+      id:
+        type: string
+      party:
+        items: party_eg.Party
+uses:
+  party_eg: ../Party/schema.yaml

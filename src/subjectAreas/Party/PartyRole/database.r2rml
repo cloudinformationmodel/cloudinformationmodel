@@ -339,17 +339,6 @@
         },
         {
           "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/partyRole"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "PARTY_ROLE",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
             "@id" : "http://cloudinformationmodel.org/model/partyRoleStatus"
           },
           "rr:objectMap" : {
@@ -1069,13 +1058,151 @@
         "rr:tableName" : "PARTY_ROLE_ENTITY_GROUP.PARTY_ROLE"
       },
       "rr:subjectMap" : {
-        "rr:template" : "http://cloudinformationmodel.org/instances#{PARTY_ROLE_ID}",
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ID}",
         "rr:class" : {
           "@id" : "http://cloudinformationmodel.org/model/PartyRole"
         }
       },
       "rr:predicateObjectMap" : [
       ]
+    },
+    {
+      "@id" : "/party_role_entity_group/supplier_party_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PARTY_ROLE_ENTITY_GROUP.SUPPLIER_PARTY_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{SUPPLIER_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/party"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/party_entity_group/party"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PARTY_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/party_role_entity_group/customer_status_history_party_role_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PARTY_ROLE_ENTITY_GROUP.CUSTOMER_STATUS_HISTORY_PARTY_ROLE_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{CUSTOMER_STATUS_HISTORY_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/partyRole"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/party_role_entity_group/party_role"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PARTY_ROLE_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/party_role_entity_group/competitor_party_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PARTY_ROLE_ENTITY_GROUP.COMPETITOR_PARTY_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{COMPETITOR_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/party"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/party_entity_group/party"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PARTY_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/party_role_entity_group/seller_party_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PARTY_ROLE_ENTITY_GROUP.SELLER_PARTY_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{SELLER_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/party"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/party_entity_group/party"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PARTY_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/party_role_entity_group/customer_party_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PARTY_ROLE_ENTITY_GROUP.CUSTOMER_PARTY_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{CUSTOMER_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/party"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/party_entity_group/party"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PARTY_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/party_role_entity_group/party_role_party_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "PARTY_ROLE_ENTITY_GROUP.PARTY_ROLE_PARTY_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PARTY_ROLE_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/party"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/party_entity_group/party"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PARTY_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
     }
   ]
 }

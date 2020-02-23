@@ -225,10 +225,10 @@
       "rr:predicateObjectMap" : [
         {
           "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/attributeSet"
+            "@id" : "http://cloudinformationmodel.org/model/translatedName"
           },
           "rr:objectMap" : {
-            "rr:column" : "ATTRIBUTE_SET",
+            "rr:column" : "TRANSLATED_NAME",
             "rr:datatype" : {
               "@id" : "http://www.w3.org/2001/XMLSchema#string"
             }
@@ -236,10 +236,10 @@
         },
         {
           "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/translatedName"
+            "@id" : "http://cloudinformationmodel.org/model/attributeSet"
           },
           "rr:objectMap" : {
-            "rr:column" : "TRANSLATED_NAME",
+            "rr:column" : "ATTRIBUTE_SET",
             "rr:datatype" : {
               "@id" : "http://www.w3.org/2001/XMLSchema#string"
             }

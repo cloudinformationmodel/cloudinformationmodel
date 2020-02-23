@@ -139,7 +139,10 @@
           "format": "time"
         },
         "partyRole": {
-          "type": "string"
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PartyRole"
+          }
         },
         "partyRoleStatus": {
           "type": "string"
@@ -395,7 +398,22 @@
       "type": "object"
     },
     "PartyRole": {
-      "type": "object"
+      "type": "object",
+      "required": [
+        "id",
+        "party"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "party": {
+          "type": "array",
+          "items": {
+            "$ref": "../Party/schema.json#/definitions/Party"
+          }
+        }
+      }
     }
   }
 }

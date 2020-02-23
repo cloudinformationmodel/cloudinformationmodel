@@ -271,17 +271,6 @@
         },
         {
           "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/partyRole"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "PARTY_ROLE",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
             "@id" : "http://cloudinformationmodel.org/model/description"
           },
           "rr:objectMap" : {
@@ -832,6 +821,29 @@
           },
           "rr:joinCondition" : {
             "rr:child" : "BILLING_FREQUENCY_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/account_entity_group/account_party_role_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "ACCOUNT_ENTITY_GROUP.ACCOUNT_PARTY_ROLE_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{ACCOUNT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/partyRole"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/party_role_entity_group/party_role"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PARTY_ROLE_ID",
             "rr:parent" : "ID"
           }
         }

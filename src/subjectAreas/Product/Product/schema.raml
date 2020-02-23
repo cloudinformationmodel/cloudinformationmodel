@@ -17,18 +17,18 @@ types:
       childProduct:
         items: Product
       productRelationshipType:
-        items: ProductRelationshipType
-      toDate:
+        items: salesorder_eg.ProductRelationshipType
+      toDate?:
         type: date-only
       salesOrderProduct2:
         items: salesorder_eg.SalesOrderProduct
   ProductTranslation:
     properties:
-      longDescription:
+      longDescription?:
         type: string
       product:
         items: Product
-      description:
+      description?:
         type: string
       id:
         type: string
@@ -42,7 +42,7 @@ types:
         type: string
       isDefaultImage:
         type: boolean
-      imageViewType:
+      imageViewType?:
         type: string
   ProductRelationshipType:
     properties:
@@ -63,108 +63,108 @@ types:
   GoodsProduct:
     type: Product
     properties:
-      productSecurityRequirement:
+      productSecurityRequirement?:
         type: string
-      season:
+      season?:
         type: string
-      color:
+      color?:
         type: string
-      style:
+      style?:
         type: string
       isMadeToOrder:
         type: boolean
-      height:
+      height?:
         type: integer
-      fabric:
+      fabric?:
         type: string
-      requiredTemperatureUOM:
+      requiredTemperatureUOM?:
         type: string
-      shelfFacingUnitCount:
+      shelfFacingUnitCount?:
         type: integer
-      requiredHumidityPercentage:
+      requiredHumidityPercentage?:
         type: integer
       id:
         type: string
-      grossWeight:
+      grossWeight?:
         type: integer
-      tareWeight:
+      tareWeight?:
         type: integer
-      depth:
+      depth?:
         type: integer
-      requiredTemperatureLowestNumber:
+      requiredTemperatureLowestNumber?:
         type: integer
-      gender:
+      gender?:
         type: string
-      maxHoldingDayCount:
+      maxHoldingDayCount?:
         type: integer
-      diameter:
+      diameter?:
         type: integer
       isPerishable:
         type: boolean
-      requiredCleanupProcess:
+      requiredCleanupProcess?:
         type: string
-      pattern:
+      pattern?:
         type: string
-      requiredTemperatureHighestNumber:
+      requiredTemperatureHighestNumber?:
         type: integer
-      netWeight:
+      netWeight?:
         type: integer
-      environmentRequirement:
+      environmentRequirement?:
         type: string
-      drainedWeight:
+      drainedWeight?:
         type: integer
-      age:
+      age?:
         type: string
-      width:
+      width?:
         type: integer
       requiresUnitPriceLabel:
         type: boolean
-      weightUOM:
+      weightUOM?:
         type: string
       productMayExpand:
         type: boolean
-      sizeUOM:
+      sizeUOM?:
         type: string
   ServiceProduct:
     type: Product
     properties:
-      rentalTermViolationPenaltyAmount:
+      rentalTermViolationPenaltyAmount?:
         type: integer
-      evergreenContractEstimatedMonthCount:
+      evergreenContractEstimatedMonthCount?:
         type: integer
       id:
         type: string
-      evergreenContractEstimatedChargeAmount:
+      evergreenContractEstimatedChargeAmount?:
         type: integer
-      servicePeriodUOM:
+      servicePeriodUOM?:
         type: string
-      servicePeriodCount:
+      servicePeriodCount?:
         type: integer
-      serviceProviderAccount:
+      serviceProviderAccount?:
         items: account_eg.Account
-      rentalCleanupFeeAmount:
+      rentalCleanupFeeAmount?:
         type: integer
       serviceType:
         type: string
   Product:
     properties:
-      quantityScheduleType:
+      quantityScheduleType?:
         type: string
-      disposalType:
+      disposalType?:
         type: string
       longDescription:
         type: string
-      primaryProductCategory:
+      primaryProductCategory?:
         items: productcatalog_eg.ProductCategory
-      minimumAdvertisementAmount:
+      minimumAdvertisementAmount?:
         type: integer
       isBackOrdered:
         type: boolean
-      validForPeriodCount:
+      validForPeriodCount?:
         type: integer
       isWorkerDiscountAllowed:
         type: boolean
-      allowPartialRefund:
+      allowPartialRefund?:
         type: boolean
       isWeightEntryRequired:
         type: boolean
@@ -172,11 +172,11 @@ types:
         type: boolean
       isSerialized:
         type: boolean
-      rewardProgramPointsCount:
+      rewardProgramPointsCount?:
         type: integer
       description:
         type: string
-      revenueInstallmentPeriod:
+      revenueInstallmentPeriod?:
         type: string
       id:
         type: string
@@ -190,29 +190,29 @@ types:
         type: boolean
       canUseRevenueSchedule:
         type: boolean
-      manufacturerName:
+      manufacturerName?:
         type: string
-      isIntellectualPropertyProtected:
+      isIntellectualPropertyProtected?:
         type: boolean
-      modelYear:
+      modelYear?:
         type: integer
       isCustomerDiscountAllowed:
         type: boolean
       productStatus:
         type: string
-      brandGrade:
+      brandGrade?:
         type: string
-      quantityInstallmentCount:
+      quantityInstallmentCount?:
         type: integer
-      requiredDepositAmount:
+      requiredDepositAmount?:
         type: integer
-      revenueScheduleType:
+      revenueScheduleType?:
         type: string
       isPreOrderable:
         type: boolean
       requiresInvididualUnitPricing:
         type: boolean
-      standardWarrantyLengthMonth:
+      standardWarrantyLengthMonth?:
         type: integer
       canUseQuantitySchedule:
         type: boolean
@@ -220,71 +220,71 @@ types:
         type: boolean
       isRainCheckAllowed:
         type: boolean
-      minimumAdvertisementAmountStartDate:
+      minimumAdvertisementAmountStartDate?:
         type: integer
-      maximumOrderQuantityCount:
+      maximumOrderQuantityCount?:
         type: integer
       isMultipleCouponsAllowed:
         type: boolean
-      allowCustomerReturn:
+      allowCustomerReturn?:
         type: boolean
-      modelNumber:
+      modelNumber?:
         type: string
-      mSRPAmount:
+      mSRPAmount?:
         type: integer
-      externalSourceRecord:
+      externalSourceRecord?:
         type: string
-      masterProduct:
+      masterProduct?:
         items: Product
-      isSellable:
+      isSellable?:
         type: boolean
-      validToDate:
+      validToDate?:
         type: date-only
       priceChargeType:
         type: string
-      primarySalesChannel:
+      primarySalesChannel?:
         items: salesorder_eg.SalesChannel
       isPartnerDiscountAllowed:
         type: boolean
-      revenueInstallmentCount:
+      revenueInstallmentCount?:
         type: integer
       productSKU:
         type: string
-      quantityInstallmentPeriod:
+      quantityInstallmentPeriod?:
         type: string
       isManualPriceEntryRequired:
         type: boolean
-      type:
+      type?:
         type: string
       isSellableWithoutPrice:
         type: boolean
-      glAccountCode:
+      glAccountCode?:
         type: string
       isReturnable:
         type: boolean
-      displayUrl:
+      displayUrl?:
         type: string
-      validForPeriodUOM:
+      validForPeriodUOM?:
         items: productattribute_eg.ProductValidityTimePeriodUOM
-      versionNumber:
+      versionNumber?:
         type: string
-      brand:
+      brand?:
         items: Brand
-      lotIdentifier:
+      lotIdentifier?:
         type: string
-      validFromDate:
+      validFromDate?:
         type: date-only
-      stockLedgerValuationAmount:
+      stockLedgerValuationAmount?:
         type: integer
       isDynamicBundle:
         type: boolean
       isQualityVerificationRequired:
         type: boolean
-      requiredDepositPercentage:
+      requiredDepositPercentage?:
         type: integer
       isFoodstampPaymentAllowed:
         type: boolean
-      minimumOrderQuantityCount:
+      minimumOrderQuantityCount?:
         type: integer
   Brand:
     properties:
@@ -297,28 +297,28 @@ types:
   BundleProduct:
     type: Product
     properties:
-      expectedWasteCount:
+      expectedWasteCount?:
         type: integer
-      quantityCount:
+      quantityCount?:
         type: integer
       id:
         type: string
-      tareWeight:
+      tareWeight?:
         type: integer
       bundledProductsSubstitutional:
         type: boolean
-      bundledProductsDecidedAtUse:
+      bundledProductsDecidedAtUse?:
         type: boolean
-      bundledProductsDecidesAvailability:
+      bundledProductsDecidesAvailability?:
         type: boolean
       bundledProductsSoldTogether:
         type: boolean
-      weightUOM:
+      weightUOM?:
         type: string
-      quantityUnitOfMeasure:
+      quantityUnitOfMeasure?:
         type: string
 uses:
-  account_eg: ../../Party/Account/schema.yaml
-  productattribute_eg: ../ProductAttribute/schema.yaml
-  productcatalog_eg: ../ProductCatalog/schema.yaml
   salesorder_eg: ../../SalesOrder/SalesOrder/schema.yaml
+  account_eg: ../../Party/Account/schema.yaml
+  productcatalog_eg: ../ProductCatalog/schema.yaml
+  productattribute_eg: ../ProductAttribute/schema.yaml

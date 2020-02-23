@@ -224,8 +224,8 @@
       "type": "object",
       "required": [
         "paymentMethodType",
-        "id",
-        "paymentMethodStatus"
+        "paymentMethodStatus",
+        "id"
       ],
       "properties": {
         "paymentMethodType": {
@@ -234,10 +234,10 @@
             "$ref": "#/definitions/PaymentMethodType"
           }
         },
-        "id": {
+        "paymentMethodStatus": {
           "type": "string"
         },
-        "paymentMethodStatus": {
+        "id": {
           "type": "string"
         }
       }

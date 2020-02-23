@@ -5,7 +5,7 @@ propertyTerms:
   salesChannelType:
     displayName: Sales Channel Type
     description: The category of the Sales Channel, for example retail store, web store, partner, or direct marketing
-    range: any
+    range: SalesChannelType
   nAICS:
     displayName: NAICS
     description: Internal Id that references a 6 digit North American Industry Identifier

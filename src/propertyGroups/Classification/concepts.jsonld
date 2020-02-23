@@ -38,7 +38,7 @@
       "@type": "Property",
       "description": "The category of the Sales Channel, for example retail store, web store, partner, or direct marketing",
       "name": "Sales Channel Type",
-      "range": "DataType"
+      "range": "SalesChannelType"
     }
   ]
 }

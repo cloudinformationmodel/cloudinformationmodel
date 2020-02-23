@@ -21,7 +21,7 @@ propertyTerms:
   salesOrderProductReasonCategory:
     displayName: Sales Order Product Reason Category
     description: The category for the Sales Order Product Reason
-    range: any
+    range: SalesOrderProductReasonCategory
   internalBusinessUnit:
     displayName: Internal Business Unit
     description: Defining a part of your own internal organization. May be anything from a holding company, a line of business, a country division, a department and for which you may want to track e.g. if it is a legal entity, default GL Code, profit-and-loss etc against.
@@ -61,7 +61,7 @@ propertyTerms:
   partyRole:
     displayName: Lead Party Role
     description: Reference to business role that this Lead role is an extension of
-    range: any
+    range: PartyRole
   manufacturerName:
     displayName: Manufacturer Name
     description: Name of the manufacturer for this product
@@ -425,7 +425,7 @@ propertyTerms:
   salesOrderDeliveryStatus:
     displayName: Sales Order Delivery Status
     description: The status of the Sales Order Delivery Group
-    range: any
+    range: SalesOrderDeliveryStatus
   capturePayment:
     displayName: Capture Payment
     description: Capture Payment is the transfer of money from the customer's account to the merchant's account.

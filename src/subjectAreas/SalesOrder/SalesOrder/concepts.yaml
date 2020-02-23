@@ -3,13 +3,12 @@ base: http://cloudinformationmodel.org/model/
 vocabulary: Sales Order
 usage: "Example Entities included: Sales Order, Opportunity, Payment Method"
 classTerms:
-  OrderProductRelationshipType:
-    displayName: Sales Order Product Relationship Type
-    description: Reasons why products are related such as bundle, option or covering
+  SalesOrderConfirmationStatus:
+    displayName: Sales Order Confirmation Status
+    description: Stages of customer approval and finalization of a Sales Order.
     properties:
-      - childProductRole
+      - name
       - id
-      - parentProductRole
   SalesOrderProductNote:
     displayName: Sales Order Product Note
     description: A document accompanying a Sales Order that lists the description, quantity of the goods to be delivered or other information.
@@ -17,19 +16,17 @@ classTerms:
       - id
       - noteText
       - description
-  SalesOrderProductGroup:
-    displayName: Sales Order Product Group
-    description: Products may be grouped together for various reasons, such as products that should be shipped together. Every product in a Sales Order Product Group is not required to be a Sales Order Product.
-    properties:
-      - name
-      - salesOrderProductGroupType
-      - id
-      - description
   SalesOrderProductReason:
     displayName: Sales Order Product Reason
     description: The customer motive for ordering a product or service, such as replacement, new purchase, upgrade
     properties:
       - salesOrderProductReasonCategory
+      - name
+      - id
+  SalesOrderProductGroupType:
+    displayName: Sales Order Product Group Type
+    description: Reasons for grouping products together on sales orders, for example products that ship together.
+    properties:
       - name
       - id
   SalesOrderDeliveryGroup:
@@ -61,6 +58,91 @@ classTerms:
       - isGift
       - orderDeliveryMethod
       - totalDeliveryAdjustmentTaxAmount
+  SalesOrderType:
+    displayName: Sales Order Type
+    description: Classifies a Sales Order as a New, Renewal or Change order
+    properties:
+      - name
+      - id
+  SalesChannel:
+    displayName: Sales Channel
+    description: Which channel is used to sell goods e.g. Web Store, Retail Store, Street Faire
+    properties:
+      - name
+      - externalRecord
+      - id
+      - salesChannelType
+      - salesChannelNumber
+      - description
+  OrderDeliveryMethod:
+    displayName: Order Delivery Method
+    description: Standardized methods for transferring purchased products or services to the destination of fulfillment. Delivery methods are characterized by the means of transportation used, and by the delivering organization or group.
+    properties:
+      - name
+      - externalRecord
+      - product
+      - id
+  SalesOrderDeliveryStatus:
+    displayName: Sales Order Delivery Status
+    description: The progress of a delivery such as awaiting pickup, in progress or complete
+    properties:
+      - name
+      - id
+  SalesOrderChangeType:
+    displayName: Sales Order ChangeT ype
+    description: The reason for a revision of an earlier sales order, e.g. quantity change, new distributed adjustment, new line adjustment, etc.
+    properties:
+      - id
+      - salesOrderChangeTypeName
+  SalesOrderPaymentSummary:
+    displayName: Sales Order Payment Summary
+    description: One or more Payments having the same Payment Method, that have been applied to a single Sales Order.
+    properties:
+      - paymentAmount
+      - availableToApplyBalanceAmount
+      - name
+      - capturedAmount
+      - authorizationReversalAmount
+      - salesOrder
+      - id
+      - unappliedAmount
+      - appliedAmount
+      - paymentMethod
+      - authorizationAmount
+  SalesOrderPriceAdjustment:
+    displayName: Sales Order Price Adjustment
+    description: A change to the price of a Sales Order that is made before order fulfillment. A Sales Order Price Adjustment may be comprised of Sales Order Product Price Adjustments that allocate the overall adjustment amount to one or more of the products and services
+    extends: PriceAdjustmentGroup
+    properties:
+      - salesOrder
+      - id
+      - totalAdjustmentTaxAmount
+  SalesOrderStatus:
+    displayName: Sales Order Status
+    description: The status of a Sales Order
+    properties:
+      - name
+      - id
+  PriceAdjustmentMethod:
+    displayName: Price Adjustment Method
+    description: "Defines how the adjustment will be calculated. Valid values used in Commerce Cloud are: percentage, fixed_price, amount, free, price_book_price, bonus, total_fixed_price, bonus_choice, percentage_off_options"
+    properties:
+      - name
+      - id
+  SalesOrderProductReasonCategory:
+    displayName: Sales Order Product Reason Category
+    description: Groupings of Sales Order Product Reasons, such as product related or service related
+    properties:
+      - name
+      - id
+  SalesOrderProductGroup:
+    displayName: Sales Order Product Group
+    description: Products may be grouped together for various reasons, such as products that should be shipped together. Every product in a Sales Order Product Group is not required to be a Sales Order Product.
+    properties:
+      - name
+      - salesOrderProductGroupType
+      - id
+      - description
   SalesOrder:
     displayName: Sales Order
     description: An internal document generated by the seller, indicating that the customer is now ready to purchase products and services
@@ -133,56 +215,35 @@ classTerms:
       - isGiftOrder
       - confirmationRecipientEmailText
       - orderStartDate
+      - salesOrderType
       - adjustedTotalProductAmount
       - description
       - paymentMethod
       - fulfilledDate
       - totalPendingBillingAmount
       - totalAdjustmentTaxAmount
-  SalesChannel:
-    displayName: Sales Channel
-    description: Which channel is used to sell goods e.g. Web Store, Retail Store, Street Faire
+  SalesOrderProductStatus:
+    displayName: Sales Order Product Status
+    description: The status of a line component of a Sales Order
     properties:
       - name
-      - externalRecord
       - id
-      - salesChannelType
-      - salesChannelNumber
-      - description
   PriceAdjustmentGroup:
     displayName: Price Adjustment Group
     description: "Supertype of: Sales Order Price Adjustment, Sales Order Product Price Adjustment, and FulfillmentOrderProductPriceAdjustment"
-  OrderDeliveryMethod:
-    displayName: Order Delivery Method
-    description: Standardized methods for transferring purchased products or services to the destination of fulfillment. Delivery methods are characterized by the means of transportation used, and by the delivering organization or group.
+  ProductRelationshipType:
+    displayName: Sales Order Product Relationship Type
+    description: Reasons why products are related such as bundle, option or covering
+    properties:
+      - childProductRole
+      - id
+      - parentProductRole
+  SalesChannelType:
+    displayName: Sales Channel Type
+    description: Standard ways of selling products such as web, retail, direct marketing, etc
     properties:
       - name
-      - externalRecord
-      - product
       - id
-  SalesOrderPaymentSummary:
-    displayName: Sales Order Payment Summary
-    description: One or more Payments having the same Payment Method, that have been applied to a single Sales Order.
-    properties:
-      - paymentAmount
-      - availableToApplyBalanceAmount
-      - name
-      - capturedAmount
-      - authorizationReversalAmount
-      - salesOrder
-      - id
-      - unappliedAmount
-      - appliedAmount
-      - paymentMethod
-      - authorizationAmount
-  SalesOrderPriceAdjustment:
-    displayName: Sales Order Price Adjustment
-    description: A change to the price of a Sales Order that is made before order fulfillment. A Sales Order Price Adjustment may be comprised of Sales Order Product Price Adjustments that allocate the overall adjustment amount to one or more of the products and services
-    extends: PriceAdjustmentGroup
-    properties:
-      - salesOrder
-      - id
-      - totalAdjustmentTaxAmount
   SalesOrderProductTax:
     displayName: Sales Order Product Tax
     description: A tax on the price of a Sales Order Product.
@@ -195,6 +256,12 @@ classTerms:
       - taxEffectiveDate
       - salesOrderProduct
       - description
+  RenewalTerm:
+    displayName: Renewal Term
+    description: For renewal orders, the length of the renewal term
+    properties:
+      - name
+      - id
   SalesOrderChangeLog:
     displayName: Sales Order Change Log
     description: Change log for sales order
@@ -205,6 +272,12 @@ classTerms:
       - id
       - changeSalesOrderProduct
       - relatedSalesOrderProduct
+  SalesOrderPriceAdjustmentType:
+    displayName: Sales Order Price Adjustment Type
+    description: Reasons for adjusting the price of an order such as promotional discount, or customer satisfaction issue
+    properties:
+      - name
+      - id
   SalesOrderProduct:
     displayName: Sales Order Product
     description: A component of a Sales Order that identifies a product or service that will be sold to the customer
@@ -279,6 +352,12 @@ classTerms:
       - isBundleRoot
       - shippingCostAmount
       - totalAdjustmentTaxAmount
+  SalesOrderSegment:
+    displayName: Sales Order Segment
+    description: A sub-period of an overall subscription which has pricing associated with it
+    properties:
+      - name
+      - id
   SalesOrderTax:
     displayName: Sales Order Tax
     description: "A charge that is imposed by a government entity for public purposes. Types are aligned to phases of the process: SalesOrderTax, FulfillmentProductTax and ShipmentProductTax"

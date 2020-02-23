@@ -23,7 +23,7 @@ credentials += Credentials("GitHub Package Registry","maven.pkg.github.com",
 mainClass in (Compile, run) := Some("cloudinformationmodel.scripts.jvm.CIMBuilder")
 
 libraryDependencies += "org.slf4j" % "slf4j-api" % "1.7.25"
-libraryDependencies += "com.github.amlorg" %% "amf-client" % "3.5.4"
-libraryDependencies += "com.github.amlorg" %% "cim2aml" % "0.1.1"
-libraryDependencies += "com.github.amlorg" %% "aml2dt" % "0.1.1"
-libraryDependencies += "com.github.amlorg" %% "aml2sql" % "0.1.0"
+libraryDependencies += "com.github.amlorg" %% "amf-client" % "4.0.4"
+libraryDependencies += "com.github.amlorg" %% "cim2aml" % "0.1.2"
+libraryDependencies += "com.github.amlorg" %% "aml2dt" % "0.1.2"
+libraryDependencies += "com.github.amlorg" %% "aml2sql" % "0.1.1"

@@ -10,53 +10,53 @@ types:
         type: string
   AccountContactRole:
     properties:
-      accountContactRoleType:
+      accountContactRoleType?:
         type: string
       id:
         type: string
-      activeFromDate:
+      activeFromDate?:
         type: date-only
-      activeToDate:
+      activeToDate?:
         type: date-only
-      accountContact:
+      accountContact?:
         items: AccountContact
   AccountContact:
     properties:
-      reportsToAccountContact:
+      reportsToAccountContact?:
         items: AccountContact
-      mailingAddress:
+      mailingAddress?:
         items: contactpoint_eg.ContactPointAddress
       account:
         items: Account
-      faxPhone:
+      faxPhone?:
         items: contactpoint_eg.ContactPointPhone
       id:
         type: string
-      departmentName:
+      departmentName?:
         type: string
-      businessPhone:
+      businessPhone?:
         items: contactpoint_eg.ContactPointPhone
-      contactEmail:
+      contactEmail?:
         items: contactpoint_eg.ContactPointEmail
-      mobilePhone:
+      mobilePhone?:
         items: contactpoint_eg.ContactPointPhone
-      assistantPhone:
+      assistantPhone?:
         type: string
-      indirectRelationAccountContact:
+      indirectRelationAccountContact?:
         items: AccountContact
-      title:
+      title?:
         type: string
-      lastActivityDate:
+      lastActivityDate?:
         type: date-only
-      contactNote:
+      contactNote?:
         type: string
-      assistantName:
+      assistantName?:
         type: string
       individual:
         items: party_eg.Individual
-      otherContactAddress:
+      otherContactAddress?:
         items: contactpoint_eg.ContactPointAddress
-      homePhone:
+      homePhone?:
         items: contactpoint_eg.ContactPointPhone
   AccountPartner:
     properties:
@@ -68,86 +68,87 @@ types:
         items: Account
   Account:
     properties:
-      billDeliveryMethod:
+      billDeliveryMethod?:
         type: string
-      billContactAddress:
+      billContactAddress?:
         items: contactpoint_eg.ContactPointAddress
       useAsSalesAccount:
         type: boolean
-      assignTerritoryFlag:
+      assignTerritoryFlag?:
         type: boolean
-      billFrequency:
+      billFrequency?:
         items: BillingFrequency
-      autoPayEnabledFlag:
+      autoPayEnabledFlag?:
         type: boolean
-      autoPaymentAmount:
+      autoPaymentAmount?:
         type: integer
       useAsServiceAccount:
         type: boolean
       useAsBillingAccount:
         type: boolean
-      partyRole:
-        type: string
-      faxPhone:
+      partyRole?:
+        items: partyrole_eg.PartyRole
+      faxPhone?:
         items: contactpoint_eg.ContactPointPhone
-      description:
+      description?:
         type: string
-      salesPhone:
+      salesPhone?:
         items: contactpoint_eg.ContactPointPhone
       id:
         type: string
-      sLAExpirationDate:
+      sLAExpirationDate?:
         type: date-only
       name:
         type: string
-      accountType:
+      accountType?:
         type: string
-      autoPaymentMethod:
+      autoPaymentMethod?:
         items: paymentmethod_eg.PaymentMethod
-      balanceAmount:
+      balanceAmount?:
         type: integer
-      holdStatusReason:
+      holdStatusReason?:
         type: string
-      generalLedgerAccount:
+      generalLedgerAccount?:
         type: string
-      thirtyDayBalanceAmount:
+      thirtyDayBalanceAmount?:
         type: integer
-      sixtyDayBalanceAmount:
+      sixtyDayBalanceAmount?:
         type: integer
       useAsShippingAccount:
         type: boolean
-      shippingAddress:
+      shippingAddress?:
         items: contactpoint_eg.ContactPointAddress
-      party:
+      party?:
         items: party_eg.Party
-      parentAccount:
+      parentAccount?:
         items: Account
-      sLAType:
+      sLAType?:
         type: string
-      shippingContact:
+      shippingContact?:
         items: AccountContact
-      balanceAmountLimit:
+      balanceAmountLimit?:
         type: integer
-      shippingPhoneid:
+      shippingPhoneid?:
         items: contactpoint_eg.ContactPointPhone
-      shippingEmail:
+      shippingEmail?:
         items: contactpoint_eg.ContactPointEmail
-      lastActivityDate:
+      lastActivityDate?:
         type: date-only
-      orderDeliveryMethod:
+      orderDeliveryMethod?:
         items: salesorder_eg.OrderDeliveryMethod
-      primarySalesContactPoint:
+      primarySalesContactPoint?:
         items: contactpoint_eg.ContactPoint
       number:
         type: string
-      ninetyDayBalanceAmount:
+      ninetyDayBalanceAmount?:
         type: integer
       paymentTerm:
         type: string
-      defaultFreightTerms:
+      defaultFreightTerms?:
         type: string
 uses:
-  contactpoint_eg: ../ContactPoint/schema.yaml
   party_eg: ../Party/schema.yaml
-  salesorder_eg: ../../SalesOrder/SalesOrder/schema.yaml
+  partyrole_eg: ../PartyRole/schema.yaml
   paymentmethod_eg: ../../PaymentMethod/PaymentMethod/schema.yaml
+  contactpoint_eg: ../ContactPoint/schema.yaml
+  salesorder_eg: ../../SalesOrder/SalesOrder/schema.yaml

@@ -16,42 +16,42 @@ types:
   ContactPointApp:
     type: ContactPoint
     properties:
-      applicationLogin:
+      applicationLogin?:
         type: string
       id:
         type: string
   ContactPointAddress:
     type: ContactPoint
     properties:
-      isUsedForShipping:
+      isUsedForShipping?:
         type: boolean
-      stateProvinceName:
+      stateProvinceName?:
         type: string
-      addressLine3:
+      addressLine3?:
         type: string
-      countryName:
+      countryName?:
         type: string
-      postalCodeText:
+      postalCodeText?:
         type: string
       id:
         type: string
-      geoLatitude:
+      geoLatitude?:
         type: integer
-      addressLine2:
+      addressLine2?:
         type: string
-      addressLine4:
+      addressLine4?:
         type: string
-      geoAccuracy:
+      geoAccuracy?:
         type: integer
-      contactPhone:
+      contactPhone?:
         items: ContactPointPhone
-      geoLongitude:
+      geoLongitude?:
         type: integer
-      addressLine1:
+      addressLine1?:
         type: string
-      cityName:
+      cityName?:
         type: string
-      isUsedForBilling:
+      isUsedForBilling?:
         type: boolean
   PartyWebAddress:
     type: ContactPoint
@@ -97,19 +97,19 @@ types:
   ContactPointPhone:
     type: ContactPoint
     properties:
-      extensionNumber:
+      extensionNumber?:
         type: string
-      phoneCountryCode:
+      phoneCountryCode?:
         type: string
-      countryName:
+      countryName?:
         type: string
       id:
         type: string
-      areaCode:
+      areaCode?:
         type: string
       isSMSCapable:
         type: boolean
-      shortCode:
+      shortCode?:
         type: integer
       formattedInternationalPhoneNumber:
         type: string
@@ -117,7 +117,7 @@ types:
         type: string
       isFaxCapable:
         type: boolean
-      formattedE164PhoneNumber:
+      formattedE164PhoneNumber?:
         type: string
       formattedNationalPhoneNumber:
         type: string
@@ -125,25 +125,25 @@ types:
         type: string
   ContactPoint:
     properties:
-      primaryFlag:
+      primaryFlag?:
         type: boolean
-      bestTimeToContactStartTime:
+      bestTimeToContactStartTime?:
         type: time-only
-      profileLastUpdatedDate:
+      profileLastUpdatedDate?:
         type: time-only
-      partyRole:
-        type: string
+      partyRole?:
+        items: partyrole_eg.PartyRole
       id:
         type: string
       activeFromDate:
         type: date-only
-      activeToDate:
+      activeToDate?:
         type: date-only
-      profileOccurrenceCount:
+      profileOccurrenceCount?:
         type: integer
-      profileFirstCreatedDate:
+      profileFirstCreatedDate?:
         type: time-only
-      bestTimeToContactEndTime:
+      bestTimeToContactEndTime?:
         type: time-only
       party:
         items: party_eg.Party
@@ -154,4 +154,5 @@ types:
       forPersonalUse:
         type: boolean
 uses:
+  partyrole_eg: ../PartyRole/schema.yaml
   party_eg: ../Party/schema.yaml

@@ -479,7 +479,7 @@
       "@type": "Property",
       "description": "Reference to business role that this Lead role is an extension of",
       "name": "Lead Party Role",
-      "range": "DataType"
+      "range": "PartyRole"
     },
     {
       "@id": "productSKU",
@@ -696,7 +696,7 @@
       "@type": "Property",
       "description": "The category for the Sales Order Product Reason",
       "name": "Sales Order Product Reason Category",
-      "range": "DataType"
+      "range": "SalesOrderProductReasonCategory"
     },
     {
       "@id": "originalPriceAdjustmentGroup",
@@ -766,7 +766,7 @@
       "@type": "Property",
       "description": "The status of the Sales Order Delivery Group",
       "name": "Sales Order Delivery Status",
-      "range": "DataType"
+      "range": "SalesOrderDeliveryStatus"
     },
     {
       "@id": "product",

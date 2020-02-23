@@ -86,17 +86,6 @@
         },
         {
           "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/partyRole"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "PARTY_ROLE",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
             "@id" : "http://cloudinformationmodel.org/model/activeFromDate"
           },
           "rr:objectMap" : {
@@ -227,17 +216,6 @@
             "rr:column" : "PROFILE_LAST_UPDATED_DATE",
             "rr:datatype" : {
               "@id" : "http://www.w3.org/2001/XMLSchema#time"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/partyRole"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "PARTY_ROLE",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
             }
           }
         },
@@ -510,17 +488,6 @@
         },
         {
           "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/partyRole"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "PARTY_ROLE",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
             "@id" : "http://cloudinformationmodel.org/model/activeFromDate"
           },
           "rr:objectMap" : {
@@ -651,17 +618,6 @@
             "rr:column" : "PROFILE_LAST_UPDATED_DATE",
             "rr:datatype" : {
               "@id" : "http://www.w3.org/2001/XMLSchema#time"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/partyRole"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "PARTY_ROLE",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
             }
           }
         },
@@ -841,17 +797,6 @@
             "rr:column" : "PROFILE_LAST_UPDATED_DATE",
             "rr:datatype" : {
               "@id" : "http://www.w3.org/2001/XMLSchema#time"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/partyRole"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "PARTY_ROLE",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
             }
           }
         },
@@ -1042,17 +987,6 @@
             "rr:column" : "PROFILE_LAST_UPDATED_DATE",
             "rr:datatype" : {
               "@id" : "http://www.w3.org/2001/XMLSchema#time"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/partyRole"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "PARTY_ROLE",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
             }
           }
         },
@@ -1314,17 +1248,6 @@
         },
         {
           "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/partyRole"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "PARTY_ROLE",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
             "@id" : "http://cloudinformationmodel.org/model/activeFromDate"
           },
           "rr:objectMap" : {
@@ -1449,17 +1372,6 @@
         },
         {
           "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/partyRole"
-          },
-          "rr:objectMap" : {
-            "rr:column" : "PARTY_ROLE",
-            "rr:datatype" : {
-              "@id" : "http://www.w3.org/2001/XMLSchema#string"
-            }
-          }
-        },
-        {
-          "rr:predicate" : {
             "@id" : "http://cloudinformationmodel.org/model/activeFromDate"
           },
           "rr:objectMap" : {
@@ -1538,6 +1450,29 @@
       ]
     },
     {
+      "@id" : "/contact_point_entity_group/contact_point_location_party_role_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "CONTACT_POINT_ENTITY_GROUP.CONTACT_POINT_LOCATION_PARTY_ROLE_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{CONTACT_POINT_LOCATION_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/partyRole"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/party_role_entity_group/party_role"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PARTY_ROLE_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
       "@id" : "/contact_point_entity_group/contact_point_location_party_join",
       "rr:logicalTable" : {
         "rr:tableName" : "CONTACT_POINT_ENTITY_GROUP.CONTACT_POINT_LOCATION_PARTY_JOIN"
@@ -1578,6 +1513,29 @@
           },
           "rr:joinCondition" : {
             "rr:child" : "CONTACT_POINT_TYPE_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/contact_point_entity_group/contact_point_app_party_role_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "CONTACT_POINT_ENTITY_GROUP.CONTACT_POINT_APP_PARTY_ROLE_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{CONTACT_POINT_APP_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/partyRole"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/party_role_entity_group/party_role"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PARTY_ROLE_ID",
             "rr:parent" : "ID"
           }
         }
@@ -1653,6 +1611,29 @@
       }
     },
     {
+      "@id" : "/contact_point_entity_group/contact_point_address_party_role_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "CONTACT_POINT_ENTITY_GROUP.CONTACT_POINT_ADDRESS_PARTY_ROLE_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{CONTACT_POINT_ADDRESS_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/partyRole"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/party_role_entity_group/party_role"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PARTY_ROLE_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
       "@id" : "/contact_point_entity_group/contact_point_address_party_join",
       "rr:logicalTable" : {
         "rr:tableName" : "CONTACT_POINT_ENTITY_GROUP.CONTACT_POINT_ADDRESS_PARTY_JOIN"
@@ -1722,6 +1703,29 @@
       }
     },
     {
+      "@id" : "/contact_point_entity_group/party_web_address_party_role_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "CONTACT_POINT_ENTITY_GROUP.PARTY_WEB_ADDRESS_PARTY_ROLE_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{PARTY_WEB_ADDRESS_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/partyRole"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/party_role_entity_group/party_role"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PARTY_ROLE_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
       "@id" : "/contact_point_entity_group/party_web_address_contact_point_type_join",
       "rr:logicalTable" : {
         "rr:tableName" : "CONTACT_POINT_ENTITY_GROUP.PARTY_WEB_ADDRESS_CONTACT_POINT_TYPE_JOIN"
@@ -1739,6 +1743,29 @@
           },
           "rr:joinCondition" : {
             "rr:child" : "CONTACT_POINT_TYPE_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/contact_point_entity_group/contact_point_email_party_role_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "CONTACT_POINT_ENTITY_GROUP.CONTACT_POINT_EMAIL_PARTY_ROLE_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{CONTACT_POINT_EMAIL_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/partyRole"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/party_role_entity_group/party_role"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PARTY_ROLE_ID",
             "rr:parent" : "ID"
           }
         }
@@ -1791,6 +1818,29 @@
       }
     },
     {
+      "@id" : "/contact_point_entity_group/contact_point_social_party_role_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "CONTACT_POINT_ENTITY_GROUP.CONTACT_POINT_SOCIAL_PARTY_ROLE_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{CONTACT_POINT_SOCIAL_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/partyRole"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/party_role_entity_group/party_role"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PARTY_ROLE_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
       "@id" : "/contact_point_entity_group/contact_point_social_party_join",
       "rr:logicalTable" : {
         "rr:tableName" : "CONTACT_POINT_ENTITY_GROUP.CONTACT_POINT_SOCIAL_PARTY_JOIN"
@@ -1837,6 +1887,29 @@
       }
     },
     {
+      "@id" : "/contact_point_entity_group/contact_point_phone_party_role_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "CONTACT_POINT_ENTITY_GROUP.CONTACT_POINT_PHONE_PARTY_ROLE_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{CONTACT_POINT_PHONE_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/partyRole"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/party_role_entity_group/party_role"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PARTY_ROLE_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
       "@id" : "/contact_point_entity_group/contact_point_phone_party_join",
       "rr:logicalTable" : {
         "rr:tableName" : "CONTACT_POINT_ENTITY_GROUP.CONTACT_POINT_PHONE_PARTY_JOIN"
@@ -1877,6 +1950,29 @@
           },
           "rr:joinCondition" : {
             "rr:child" : "CONTACT_POINT_TYPE_ID",
+            "rr:parent" : "ID"
+          }
+        }
+      }
+    },
+    {
+      "@id" : "/contact_point_entity_group/contact_point_party_role_join",
+      "rr:logicalTable" : {
+        "rr:tableName" : "CONTACT_POINT_ENTITY_GROUP.CONTACT_POINT_PARTY_ROLE_JOIN"
+      },
+      "rr:subjectMap" : {
+        "rr:template" : "http://cloudinformationmodel.org/instances#{CONTACT_POINT_ID}"
+      },
+      "rr:predicateObjectMap" : {
+        "rr:predicate" : {
+          "@id" : "http://cloudinformationmodel.org/model/partyRole"
+        },
+        "rr:objectMap" : {
+          "rr:parentTriplesMap" : {
+            "@id" : "/party_role_entity_group/party_role"
+          },
+          "rr:joinCondition" : {
+            "rr:child" : "PARTY_ROLE_ID",
             "rr:parent" : "ID"
           }
         }

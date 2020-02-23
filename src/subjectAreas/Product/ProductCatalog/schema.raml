@@ -10,7 +10,7 @@ types:
         items: ProductCategory
   ProductCatalog:
     properties:
-      activeToDate:
+      activeToDate?:
         type: date-only
       activeFromDate:
         type: date-only
@@ -34,11 +34,11 @@ types:
         type: string
       activeFromDate:
         type: date-only
-      activeToDate:
+      activeToDate?:
         type: date-only
       name:
         type: string
-      parentCategory:
+      parentCategory?:
         items: ProductCategory
   ProductCatalogTranslation:
     properties:
@@ -56,7 +56,7 @@ types:
         type: string
       activeFromDateTime:
         type: time-only
-      activeToDateTime:
+      activeToDateTime?:
         type: time-only
       productCategory:
         items: ProductCategory

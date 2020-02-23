@@ -13,7 +13,7 @@ propertyTerms:
   salesOrderStatus:
     displayName: Sales Order Status
     description: Current order status e.g. Draft, Ready for Review, Placed, Ready for Activation, Activated
-    range: any
+    range: SalesOrderStatus
   packedDate:
     displayName: Packed Date
     description: Date the order was completely packed

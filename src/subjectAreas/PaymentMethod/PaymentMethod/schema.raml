@@ -3,7 +3,7 @@ types:
   CreditTender:
     type: PaymentMethod
     properties:
-      account:
+      account?:
         items: account_eg.Account
       id:
         type: string
@@ -16,7 +16,7 @@ types:
         type: string
       issueNumber:
         type: string
-      billToCity:
+      billToCity?:
         type: string
       id:
         type: string
@@ -24,7 +24,7 @@ types:
         type: string
       name:
         type: string
-      companyName:
+      companyName?:
         type: string
       cardHolderName:
         type: string
@@ -32,79 +32,79 @@ types:
         type: string
       paymentCardType:
         type: string
-      derivedCardTypeCode:
+      derivedCardTypeCode?:
         type: string
-      billToFirstName:
+      billToFirstName?:
         type: string
-      billToStreet:
+      billToStreet?:
         type: string
       expirationYear:
         type: string
-      billToStreet2:
+      billToStreet2?:
         type: string
       expirationMonth:
         type: string
-      billToLastName:
+      billToLastName?:
         type: string
   PaymentMethodType:
     properties:
-      typeDescription:
+      typeDescription?:
         type: string
-      mediaType:
+      mediaType?:
         type: string
-      maxPerPeriodAmount:
+      maxPerPeriodAmount?:
         type: integer
-      typeRequiredIdentification:
+      typeRequiredIdentification?:
         type: string
       id:
         type: string
-      name:
+      name?:
         type: string
-      useMinimumAgeYear:
+      useMinimumAgeYear?:
         type: integer
-      maxTransactionAmount:
+      maxTransactionAmount?:
         type: integer
-      maxPerPeriodTransactionCount:
+      maxPerPeriodTransactionCount?:
         type: integer
   Coupon:
     type: PaymentMethod
     properties:
-      manufacturer:
+      manufacturer?:
         items: party_eg.Party
-      primaryScanCodeLabel:
+      primaryScanCodeLabel?:
         type: string
-      isReturnCoupon:
+      isReturnCoupon?:
         type: boolean
-      expirationDate:
+      expirationDate?:
         type: date-only
       id:
         type: string
-      secondaryScanCodeLabel:
+      secondaryScanCodeLabel?:
         type: string
-      scanCode:
+      scanCode?:
         type: string
-      couponCode:
+      couponCode?:
         type: string
-      returnCouponReason:
+      returnCouponReason?:
         type: string
-      discountAmount:
+      discountAmount?:
         type: integer
-      isValid:
+      isValid?:
         type: boolean
-      couponStatus:
+      couponStatus?:
         type: string
-      discountPercentage:
+      discountPercentage?:
         type: integer
-      couponCount:
+      couponCount?:
         type: integer
   PaymentMethod:
     properties:
       paymentMethodType:
         items: PaymentMethodType
-      id:
-        type: string
       paymentMethodStatus:
         type: string
+      id:
+        type: string
 uses:
-  account_eg: ../../Party/Account/schema.yaml
   party_eg: ../../Party/Party/schema.yaml
+  account_eg: ../../Party/Account/schema.yaml

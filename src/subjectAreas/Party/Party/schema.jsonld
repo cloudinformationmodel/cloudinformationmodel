@@ -701,8 +701,7 @@
       "properties": [
         {
           "path": "partyRole",
-          "datatype": "xsd:string",
-          "maxCount": "1"
+          "node": "PartyRole"
         },
         {
           "path": "verifiedDate",

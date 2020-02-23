@@ -17,7 +17,7 @@ propertyTerms:
   partyRole:
     displayName: Party Role
     description: Reference to Party Role, populated if contact point only applicable in context of a role
-    range: any
+    range: PartyRole
   id:
     displayName: Party Identification Id
     description: Primary key

@@ -1,113 +1,115 @@
 #%Dialect 1.0
 uses:
-  account_eg: ../Account/schema.yaml
   contactpoint_eg: ../ContactPoint/schema.yaml
+  partyrole_eg: ../PartyRole/schema.yaml
+  account_eg: ../Account/schema.yaml
 nodeMappings:
   Lead:
     classTerm: cim.Lead
     mapping:
-      streetName:
-        propertyTerm: cim.streetName
-        range: string
-      contactAddress:
-        propertyTerm: cim.contactAddress
-        range: contactpoint_eg.ContactPointAddress
-        allowMultiple: true
-      isConverted:
-        propertyTerm: cim.isConverted
-        range: boolean
+      convertedDate:
+        propertyTerm: cim.convertedDate
+        range: date
       faxContactPhone:
         propertyTerm: cim.faxContactPhone
         range: contactpoint_eg.ContactPointPhone
         allowMultiple: true
-      partyRole:
-        propertyTerm: cim.partyRole
+      leadRating:
+        propertyTerm: cim.leadRating
         range: string
-        mandatory: true
-      description:
-        propertyTerm: cim.description
-        range: string
-      partnerAccount:
-        propertyTerm: cim.partnerAccount
-        range: account_eg.Account
-        allowMultiple: true
-      website:
-        propertyTerm: cim.website
-        range: string
-      geoCodeAccuracy:
-        propertyTerm: cim.geoCodeAccuracy
-        range: integer
-      annualRevenue:
-        propertyTerm: cim.annualRevenue
-        range: integer
-      convertedToAccountContact:
-        propertyTerm: cim.convertedToAccountContact
-        range: account_eg.AccountContact
-        allowMultiple: true
       geoCodeLatitude:
         propertyTerm: cim.geoCodeLatitude
         range: integer
-      convertedToAccount:
-        propertyTerm: cim.convertedToAccount
-        range: account_eg.Account
-        allowMultiple: true
-      leadStatus:
-        propertyTerm: cim.leadStatus
+      stateProvinceName:
+        propertyTerm: cim.stateProvinceName
         range: string
-      convertedDate:
-        propertyTerm: cim.convertedDate
-        range: date
-      phoneContactPoint:
-        propertyTerm: cim.phoneContactPoint
-        range: contactpoint_eg.ContactPointPhone
-        allowMultiple: true
       mobileContactPhone:
         propertyTerm: cim.mobileContactPhone
         range: contactpoint_eg.ContactPointPhone
         allowMultiple: true
-      lastActivityDate:
-        propertyTerm: cim.lastActivityDate
-        range: date
-      id:
-        propertyTerm: cim.id
-        range: guid
-        unique: true
+      partyRole:
+        propertyTerm: cim.partyRole
+        range: partyrole_eg.PartyRole
         mandatory: true
-      stateProvinceName:
-        propertyTerm: cim.stateProvinceName
+        allowMultiple: true
+      contactPointEmail:
+        propertyTerm: cim.contactPointEmail
+        range: contactpoint_eg.ContactPointEmail
+        allowMultiple: true
+      leadStatus:
+        propertyTerm: cim.leadStatus
         range: string
-      photoURL:
-        propertyTerm: cim.photoURL
-        range: string
-      leadRating:
-        propertyTerm: cim.leadRating
+      description:
+        propertyTerm: cim.description
         range: string
       companyName:
         propertyTerm: cim.companyName
         range: string
-      countryName:
-        propertyTerm: cim.countryName
-        range: string
-      leadScore:
-        propertyTerm: cim.leadScore
+      geoCodeLongitude:
+        propertyTerm: cim.geoCodeLongitude
         range: integer
       leadSource:
         propertyTerm: cim.leadSource
         range: string
         mandatory: true
-      contactPointEmail:
-        propertyTerm: cim.contactPointEmail
-        range: contactpoint_eg.ContactPointEmail
+      geoCodeAccuracy:
+        propertyTerm: cim.geoCodeAccuracy
+        range: integer
+      leadScore:
+        propertyTerm: cim.leadScore
+        range: integer
+      lastActivityDate:
+        propertyTerm: cim.lastActivityDate
+        range: date
+      partnerAccount:
+        propertyTerm: cim.partnerAccount
+        range: account_eg.Account
         allowMultiple: true
+      convertedToAccount:
+        propertyTerm: cim.convertedToAccount
+        range: account_eg.Account
+        allowMultiple: true
+      contactAddress:
+        propertyTerm: cim.contactAddress
+        range: contactpoint_eg.ContactPointAddress
+        allowMultiple: true
+      convertedToAccountContact:
+        propertyTerm: cim.convertedToAccountContact
+        range: account_eg.AccountContact
+        allowMultiple: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      website:
+        propertyTerm: cim.website
+        range: string
+      phoneContactPoint:
+        propertyTerm: cim.phoneContactPoint
+        range: contactpoint_eg.ContactPointPhone
+        allowMultiple: true
+      photoURL:
+        propertyTerm: cim.photoURL
+        range: string
       emailBouncedDate:
         propertyTerm: cim.emailBouncedDate
         range: time
+      isConverted:
+        propertyTerm: cim.isConverted
+        range: boolean
       emailBouncedReason:
         propertyTerm: cim.emailBouncedReason
         range: string
-      geoCodeLongitude:
-        propertyTerm: cim.geoCodeLongitude
+      streetName:
+        propertyTerm: cim.streetName
+        range: string
+      annualRevenue:
+        propertyTerm: cim.annualRevenue
         range: integer
+      countryName:
+        propertyTerm: cim.countryName
+        range: string
 external:
   cim: http://cloudinformationmodel.org/model/
 dialect: LeadEntityGroup

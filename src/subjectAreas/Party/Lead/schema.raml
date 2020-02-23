@@ -2,66 +2,67 @@
 types:
   Lead:
     properties:
-      faxContactPhone:
+      faxContactPhone?:
         items: contactpoint_eg.ContactPointPhone
-      stateProvinceName:
+      stateProvinceName?:
         type: string
-      leadStatus:
+      leadStatus?:
         type: string
-      photoURL:
+      photoURL?:
         type: string
-      countryName:
+      countryName?:
         type: string
       partyRole:
-        type: string
-      convertedDate:
+        items: partyrole_eg.PartyRole
+      convertedDate?:
         type: date-only
-      description:
+      description?:
         type: string
       id:
         type: string
-      contactPointEmail:
+      contactPointEmail?:
         items: contactpoint_eg.ContactPointEmail
-      companyName:
+      companyName?:
         type: string
-      streetName:
+      streetName?:
         type: string
-      leadScore:
+      leadScore?:
         type: integer
-      mobileContactPhone:
+      mobileContactPhone?:
         items: contactpoint_eg.ContactPointPhone
-      contactAddress:
+      contactAddress?:
         items: contactpoint_eg.ContactPointAddress
-      geoCodeLatitude:
+      geoCodeLatitude?:
         type: integer
-      leadRating:
+      leadRating?:
         type: string
-      geoCodeLongitude:
+      geoCodeLongitude?:
         type: integer
-      emailBouncedDate:
+      emailBouncedDate?:
         type: time-only
-      geoCodeAccuracy:
+      geoCodeAccuracy?:
         type: integer
       leadSource:
         type: string
-      convertedToAccount:
+      convertedToAccount?:
         items: account_eg.Account
-      convertedToAccountContact:
+      convertedToAccountContact?:
         items: account_eg.AccountContact
-      phoneContactPoint:
+      phoneContactPoint?:
         items: contactpoint_eg.ContactPointPhone
-      lastActivityDate:
+      lastActivityDate?:
         type: date-only
-      annualRevenue:
+      annualRevenue?:
         type: integer
-      emailBouncedReason:
+      emailBouncedReason?:
         type: string
-      website:
+      website?:
         type: string
-      isConverted:
+      isConverted?:
         type: boolean
-      partnerAccount:
+      partnerAccount?:
         items: account_eg.Account
 uses:
-  account_eg: ../Account/schema.yaml
   contactpoint_eg: ../ContactPoint/schema.yaml
+  partyrole_eg: ../PartyRole/schema.yaml
+  account_eg: ../Account/schema.yaml

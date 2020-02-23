@@ -195,6 +195,11 @@
                                     <td class="description-td">A unified, in system, definition of who you are dealing with e.g. John Doe, Northern Trail Outfitters and can be of different types e.g. individual, business, affiliation group.</td>
 
                             </tr>
+                            <tr id="partyrole_eg.PartyRole-schemas-tr">
+                                  <td class="name-td">partyrole_eg. Party Role</td>
+                                  <td class="description-td"></td>
+
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -281,16 +286,6 @@
                           <li class="sprop-range">Range: guid</li>
                             <li class="sprop-description">Description: Primary Key</li>
                             <li class="sprop-constraint">mandatory: true</li>
-                        </ul>
-                      </td>
-                    </tr>
-                    <tr id="partyRole-scalar-tr">
-                      <td>partyRole</td>
-                      <td>
-                        <ul>
-                          <li class="sprop-term-id">Term URI: http:&#x2F;&#x2F;cloudinformationmodel.org&#x2F;model&#x2F;partyRole</li>
-                          <li class="sprop-range">Range: string</li>
-                            <li class="sprop-description">Description: Reference to business role that this Lead role is an extension of</li>
                         </ul>
                       </td>
                     </tr>
@@ -383,6 +378,24 @@
                           </li>
                             <li class="lprop-description">Description: Reference to the parent Party e.g. Individual, Business, Affiliation Group</li>
                             <li class="lprop-constraint">mandatory: true</li>
+                            <li class="lprop-constraint">allowMultiple: true</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr id="partyRole-link-tr">
+                      <td>partyRole</td>
+                      <td>
+                        <ul>
+                          <li class="lprop-term-id">Term URI: http:&#x2F;&#x2F;cloudinformationmodel.org&#x2F;model&#x2F;partyRole</li>
+                          <li class="lprop-range">
+                            <span class="lprop-range-list-title">Range:</span>
+                            <ul class="lprop-range-list">
+                                <li class="lprop-range-list-item">
+                                    partyrole_eg.PartyRole
+                                </li>
+                            </ul>
+                          </li>
+                            <li class="lprop-description">Description: Reference to business role that this Lead role is an extension of</li>
                             <li class="lprop-constraint">allowMultiple: true</li>
                         </ul>
                       </td>
