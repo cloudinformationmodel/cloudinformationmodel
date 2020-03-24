@@ -88,7 +88,7 @@
                 <ul>
                   {{#navData.dialects}}
                     <li class="dialects-nav-item {{^active}}in{{/active}}active-nav-item">
-                      <a href="{{htmlName}}" title="{{label}}">{{label}}</a>
+                      <a href="{{{pageName}}}.html" title="{{label}}">{{label}}</a>
                     </li>
                   {{/navData.dialects}}
                 </ul>
@@ -98,7 +98,7 @@
                 <ul>
                   {{#navData.nodeMappings}}
                     <li class="schemas-nav-item {{^active}}in{{/active}}active-nav-item">
-                      <a href="{{htmlName}}" title="{{label}}">{{label}}</a>
+                      <a href="{{{pageName}}}.html" title="{{label}}">{{label}}</a>
                     </li>
                   {{/navData.nodeMappings}}
                 </ul>
@@ -137,14 +137,14 @@
                         <tbody>
                         {{#linkedSchemas}}
                             <tr id="{{rangeName}}-schemas-tr">
-                                {{#rangeHtmlName}}
-                                    <td class="name-td"><a href="{{rangeHtmlName}}">{{rangeLabel}}</a></td>
+                                {{#rangePageName}}
+                                    <td class="name-td"><a href="{{{rangePageName}}}.html">{{rangeLabel}}</a></td>
                                     <td class="description-td">{{rangeDescription}}</td>
-                                {{/rangeHtmlName}}
-                                {{^rangeHtmlName}}
+                                {{/rangePageName}}
+                                {{^rangePageName}}
                                   <td class="name-td">{{rangeLabel}}</td>
                                   <td class="description-td">{{rangeDescription}}</td>
-                                {{/rangeHtmlName}}
+                                {{/rangePageName}}
 
                             </tr>
                         {{/linkedSchemas}}
@@ -210,12 +210,12 @@
                             <ul class="lprop-range-list">
                               {{#range}}
                                 <li class="lprop-range-list-item">
-                                  {{#rangeHtmlName}}
-                                    <a href="{{rangeHtmlName}}" title="{{rangeName}}">{{rangeLabel}}</a>
-                                  {{/rangeHtmlName}}
-                                  {{^rangeHtmlName}}
+                                  {{#rangePageName}}
+                                    <a href="{{{rangePageName}}}.html" title="{{rangeName}}">{{rangeLabel}}</a>
+                                  {{/rangePageName}}
+                                  {{^rangePageName}}
                                     {{rangeName}}
-                                  {{/rangeHtmlName}}
+                                  {{/rangePageName}}
                                 </li>
                               {{/range}}
                             </ul>

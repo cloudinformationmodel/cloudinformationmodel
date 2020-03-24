@@ -14,11 +14,11 @@ popd
 ## HTML documentation
 rm -rf html/*
 mkdir -p html
-pushd ./scripts/node_modules/@aml-org/aml2html
-npm run aml2html -- ../../../../html -d ../../../../src -g ../../../cfg.js -t ../../../templates
+pushd ./scripts/node_modules/@aml-org/aml2doc
+npm run aml2doc -- ../../../../html -d ../../../../src -g ../../../cfg.js -t ../../../templates -s html
 popd
 cp -rf ./scripts/templates/*  ./html/
-rm -rf ./html/*.mustache
+rm -rf ./html/html
 
 ## Additional HTML pages
 pushd ./scripts
