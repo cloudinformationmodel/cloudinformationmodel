@@ -234,9 +234,9 @@ types:
     properties:
       id:
         type: string
-      description?:
-        type: string
       noteText:
+        type: string
+      description?:
         type: string
   SalesOrderProduct:
     properties:
@@ -567,10 +567,10 @@ types:
       salesChannelNumber:
         type: string
 uses:
-  partyrole_eg: ../../Party/PartyRole/schema.yaml
-  party_eg: ../../Party/Party/schema.yaml
-  contactpoint_eg: ../../Party/ContactPoint/schema.yaml
-  product_eg: ../../Product/Product/schema.yaml
-  account_eg: ../../Party/Account/schema.yaml
-  paymentmethod_eg: ../../PaymentMethod/PaymentMethod/schema.yaml
   productattribute_eg: ../../Product/ProductAttribute/schema.yaml
+  product_eg: ../../Product/Product/schema.yaml
+  paymentmethod_eg: ../../PaymentMethod/PaymentMethod/schema.yaml
+  partyrole_eg: ../../Party/PartyRole/schema.yaml
+  account_eg: ../../Party/Account/schema.yaml
+  contactpoint_eg: ../../Party/ContactPoint/schema.yaml
+  party_eg: ../../Party/Party/schema.yaml

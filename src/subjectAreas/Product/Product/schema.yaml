@@ -2,30 +2,39 @@
 uses:
   salesorder_eg: ../../SalesOrder/SalesOrder/schema.yaml
   account_eg: ../../Party/Account/schema.yaml
-  productcatalog_eg: ../ProductCatalog/schema.yaml
   productattribute_eg: ../ProductAttribute/schema.yaml
+  productcatalog_eg: ../ProductCatalog/schema.yaml
 nodeMappings:
   BundleProduct:
     classTerm: cim.BundleProduct
     mapping:
-      weightUOM:
-        propertyTerm: cim.weightUOM
-        range: string
-      bundledProductsDecidesAvailability:
-        propertyTerm: cim.bundledProductsDecidesAvailability
-        range: boolean
-      expectedWasteCount:
-        propertyTerm: cim.expectedWasteCount
-        range: integer
-      bundledProductsSubstitutional:
-        propertyTerm: cim.bundledProductsSubstitutional
-        range: boolean
-        mandatory: true
       quantityUnitOfMeasure:
         propertyTerm: cim.quantityUnitOfMeasure
         range: string
+      quantityCount:
+        propertyTerm: cim.quantityCount
+        range: integer
+      bundledProductsDecidesAvailability:
+        propertyTerm: cim.bundledProductsDecidesAvailability
+        range: boolean
+      bundledProductsDecidedAtUse:
+        propertyTerm: cim.bundledProductsDecidedAtUse
+        range: boolean
+      tareWeight:
+        propertyTerm: cim.tareWeight
+        range: integer
+      expectedWasteCount:
+        propertyTerm: cim.expectedWasteCount
+        range: integer
       bundledProductsSoldTogether:
         propertyTerm: cim.bundledProductsSoldTogether
+        range: boolean
+        mandatory: true
+      weightUOM:
+        propertyTerm: cim.weightUOM
+        range: string
+      bundledProductsSubstitutional:
+        propertyTerm: cim.bundledProductsSubstitutional
         range: boolean
         mandatory: true
       id:
@@ -33,76 +42,58 @@ nodeMappings:
         range: guid
         unique: true
         mandatory: true
-      quantityCount:
-        propertyTerm: cim.quantityCount
-        range: integer
-      tareWeight:
-        propertyTerm: cim.tareWeight
-        range: integer
-      bundledProductsDecidedAtUse:
-        propertyTerm: cim.bundledProductsDecidedAtUse
-        range: boolean
     extends: Product
   ProductRelatedProduct:
     classTerm: cim.ProductRelatedProduct
     mapping:
+      fromDate:
+        propertyTerm: cim.fromDate
+        range: date
+        mandatory: true
       parentProduct:
         propertyTerm: cim.parentProduct
         range: Product
         mandatory: true
         allowMultiple: true
-      childProduct:
-        propertyTerm: cim.childProduct
-        range: Product
-        mandatory: true
-        allowMultiple: true
-      fromDate:
-        propertyTerm: cim.fromDate
-        range: date
-        mandatory: true
-      id:
-        propertyTerm: cim.id
-        range: guid
-        unique: true
-        mandatory: true
-      name:
-        propertyTerm: cim.name
-        range: string
-        mandatory: true
-      salesOrderProduct1:
-        propertyTerm: cim.salesOrderProduct1
-        range: salesorder_eg.SalesOrderProduct
-        mandatory: true
-        allowMultiple: true
-      isDefaultOption:
-        propertyTerm: cim.isDefaultOption
-        range: boolean
-        mandatory: true
       salesOrderProduct2:
         propertyTerm: cim.salesOrderProduct2
         range: salesorder_eg.SalesOrderProduct
         mandatory: true
         allowMultiple: true
-      toDate:
-        propertyTerm: cim.toDate
-        range: date
+      salesOrderProduct1:
+        propertyTerm: cim.salesOrderProduct1
+        range: salesorder_eg.SalesOrderProduct
+        mandatory: true
+        allowMultiple: true
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      isDefaultOption:
+        propertyTerm: cim.isDefaultOption
+        range: boolean
+        mandatory: true
       productRelationshipType:
         propertyTerm: cim.productRelationshipType
         range: salesorder_eg.ProductRelationshipType
         mandatory: true
         allowMultiple: true
-  ProductRelationshipType:
-    classTerm: cim.ProductRelationshipType
-    mapping:
-      parentProductRole:
-        propertyTerm: cim.parentProductRole
-        range: string
+      toDate:
+        propertyTerm: cim.toDate
+        range: date
+      childProduct:
+        propertyTerm: cim.childProduct
+        range: Product
         mandatory: true
+        allowMultiple: true
       id:
         propertyTerm: cim.id
         range: guid
         unique: true
         mandatory: true
+  ProductRelationshipType:
+    classTerm: cim.ProductRelationshipType
+    mapping:
       childProductRole:
         propertyTerm: cim.childProductRole
         range: string
@@ -111,6 +102,15 @@ nodeMappings:
         propertyTerm: cim.id
         range: guid
         unique: true
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      parentProductRole:
+        propertyTerm: cim.parentProductRole
+        range: string
         mandatory: true
       parentProductRole:
         propertyTerm: cim.parentProductRole
@@ -123,54 +123,54 @@ nodeMappings:
   ProductTranslation:
     classTerm: cim.ProductTranslation
     mapping:
+      description:
+        propertyTerm: cim.description
+        range: string
       name:
         propertyTerm: cim.name
         range: string
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
         mandatory: true
       product:
         propertyTerm: cim.product
         range: Product
         mandatory: true
         allowMultiple: true
-      id:
-        propertyTerm: cim.id
-        range: guid
-        unique: true
-        mandatory: true
       longDescription:
         propertyTerm: cim.longDescription
-        range: string
-      description:
-        propertyTerm: cim.description
         range: string
   ServiceProduct:
     classTerm: cim.ServiceProduct
     mapping:
-      evergreenContractEstimatedMonthCount:
-        propertyTerm: cim.evergreenContractEstimatedMonthCount
-        range: integer
-      serviceProviderAccount:
-        propertyTerm: cim.serviceProviderAccount
-        range: account_eg.Account
-        allowMultiple: true
       servicePeriodUOM:
         propertyTerm: cim.servicePeriodUOM
         range: string
-      serviceType:
-        propertyTerm: cim.serviceType
-        range: string
-        mandatory: true
       servicePeriodCount:
         propertyTerm: cim.servicePeriodCount
+        range: integer
+      rentalCleanupFeeAmount:
+        propertyTerm: cim.rentalCleanupFeeAmount
         range: integer
       evergreenContractEstimatedChargeAmount:
         propertyTerm: cim.evergreenContractEstimatedChargeAmount
         range: integer
+      serviceType:
+        propertyTerm: cim.serviceType
+        range: string
+        mandatory: true
+      serviceProviderAccount:
+        propertyTerm: cim.serviceProviderAccount
+        range: account_eg.Account
+        allowMultiple: true
       rentalTermViolationPenaltyAmount:
         propertyTerm: cim.rentalTermViolationPenaltyAmount
         range: integer
-      rentalCleanupFeeAmount:
-        propertyTerm: cim.rentalCleanupFeeAmount
+      evergreenContractEstimatedMonthCount:
+        propertyTerm: cim.evergreenContractEstimatedMonthCount
         range: integer
       id:
         propertyTerm: cim.id
@@ -181,113 +181,109 @@ nodeMappings:
   GoodsProduct:
     classTerm: cim.GoodsProduct
     mapping:
-      requiredTemperatureLowestNumber:
-        propertyTerm: cim.requiredTemperatureLowestNumber
-        range: integer
-      style:
-        propertyTerm: cim.style
+      environmentRequirement:
+        propertyTerm: cim.environmentRequirement
         range: string
       requiresUnitPriceLabel:
         propertyTerm: cim.requiresUnitPriceLabel
         range: boolean
         mandatory: true
-      depth:
-        propertyTerm: cim.depth
-        range: integer
-      season:
-        propertyTerm: cim.season
-        range: string
-      fabric:
-        propertyTerm: cim.fabric
-        range: string
-      sizeUOM:
-        propertyTerm: cim.sizeUOM
-        range: string
-      shelfFacingUnitCount:
-        propertyTerm: cim.shelfFacingUnitCount
-        range: integer
-      grossWeight:
-        propertyTerm: cim.grossWeight
-        range: integer
-      requiredTemperatureHighestNumber:
-        propertyTerm: cim.requiredTemperatureHighestNumber
-        range: integer
-      requiredTemperatureUOM:
-        propertyTerm: cim.requiredTemperatureUOM
-        range: string
-      age:
-        propertyTerm: cim.age
-        range: string
-      width:
-        propertyTerm: cim.width
-        range: integer
-      requiredCleanupProcess:
-        propertyTerm: cim.requiredCleanupProcess
-        range: string
-      productSecurityRequirement:
-        propertyTerm: cim.productSecurityRequirement
-        range: string
-      drainedWeight:
-        propertyTerm: cim.drainedWeight
-        range: integer
-      weightUOM:
-        propertyTerm: cim.weightUOM
-        range: string
-      pattern:
-        propertyTerm: cim.pattern
-        range: string
-      netWeight:
-        propertyTerm: cim.netWeight
-        range: integer
-      productMayExpand:
-        propertyTerm: cim.productMayExpand
-        range: boolean
-        mandatory: true
-      diameter:
-        propertyTerm: cim.diameter
-        range: integer
-      gender:
-        propertyTerm: cim.gender
-        range: string
       isPerishable:
         propertyTerm: cim.isPerishable
-        range: boolean
-        mandatory: true
-      color:
-        propertyTerm: cim.color
-        range: string
-      environmentRequirement:
-        propertyTerm: cim.environmentRequirement
-        range: string
-      id:
-        propertyTerm: cim.id
-        range: guid
-        unique: true
-        mandatory: true
-      maxHoldingDayCount:
-        propertyTerm: cim.maxHoldingDayCount
-        range: integer
-      requiredHumidityPercentage:
-        propertyTerm: cim.requiredHumidityPercentage
-        range: integer
-      isMadeToOrder:
-        propertyTerm: cim.isMadeToOrder
         range: boolean
         mandatory: true
       tareWeight:
         propertyTerm: cim.tareWeight
         range: integer
+      productSecurityRequirement:
+        propertyTerm: cim.productSecurityRequirement
+        range: string
+      style:
+        propertyTerm: cim.style
+        range: string
+      productMayExpand:
+        propertyTerm: cim.productMayExpand
+        range: boolean
+        mandatory: true
+      requiredHumidityPercentage:
+        propertyTerm: cim.requiredHumidityPercentage
+        range: integer
+      grossWeight:
+        propertyTerm: cim.grossWeight
+        range: integer
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      gender:
+        propertyTerm: cim.gender
+        range: string
+      fabric:
+        propertyTerm: cim.fabric
+        range: string
+      color:
+        propertyTerm: cim.color
+        range: string
+      season:
+        propertyTerm: cim.season
+        range: string
+      requiredCleanupProcess:
+        propertyTerm: cim.requiredCleanupProcess
+        range: string
+      drainedWeight:
+        propertyTerm: cim.drainedWeight
+        range: integer
+      requiredTemperatureLowestNumber:
+        propertyTerm: cim.requiredTemperatureLowestNumber
+        range: integer
+      requiredTemperatureHighestNumber:
+        propertyTerm: cim.requiredTemperatureHighestNumber
+        range: integer
+      netWeight:
+        propertyTerm: cim.netWeight
+        range: integer
+      age:
+        propertyTerm: cim.age
+        range: string
+      shelfFacingUnitCount:
+        propertyTerm: cim.shelfFacingUnitCount
+        range: integer
+      weightUOM:
+        propertyTerm: cim.weightUOM
+        range: string
+      width:
+        propertyTerm: cim.width
+        range: integer
+      sizeUOM:
+        propertyTerm: cim.sizeUOM
+        range: string
+      maxHoldingDayCount:
+        propertyTerm: cim.maxHoldingDayCount
+        range: integer
+      diameter:
+        propertyTerm: cim.diameter
+        range: integer
+      depth:
+        propertyTerm: cim.depth
+        range: integer
       height:
         propertyTerm: cim.height
         range: integer
+      isMadeToOrder:
+        propertyTerm: cim.isMadeToOrder
+        range: boolean
+        mandatory: true
+      pattern:
+        propertyTerm: cim.pattern
+        range: string
+      requiredTemperatureUOM:
+        propertyTerm: cim.requiredTemperatureUOM
+        range: string
     extends: Product
   Brand:
     classTerm: cim.Brand
     mapping:
-      name:
-        propertyTerm: cim.name
-        range: string
-        mandatory: true
       brandGrade:
         propertyTerm: cim.brandGrade
         range: string
@@ -297,124 +293,256 @@ nodeMappings:
         range: guid
         unique: true
         mandatory: true
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
   ProductImage:
     classTerm: cim.ProductImage
     mapping:
-      isDefaultImage:
-        propertyTerm: cim.isDefaultImage
-        range: boolean
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
         mandatory: true
-      imageViewType:
-        propertyTerm: cim.imageViewType
-        range: string
       product:
         propertyTerm: cim.product
         range: Product
         mandatory: true
         allowMultiple: true
-      id:
-        propertyTerm: cim.id
-        range: guid
-        unique: true
+      imageViewType:
+        propertyTerm: cim.imageViewType
+        range: string
+      isDefaultImage:
+        propertyTerm: cim.isDefaultImage
+        range: boolean
         mandatory: true
   Product:
     classTerm: cim.Product
     mapping:
-      priceChargeType:
-        propertyTerm: cim.priceChargeType
-        range: string
-        mandatory: true
-      allowCustomerReturn:
-        propertyTerm: cim.allowCustomerReturn
-        range: boolean
-      minimumOrderQuantityCount:
-        propertyTerm: cim.minimumOrderQuantityCount
+      requiredDepositPercentage:
+        propertyTerm: cim.requiredDepositPercentage
         range: integer
-      displayUrl:
-        propertyTerm: cim.displayUrl
-        range: string
-      isSellableWithoutPrice:
-        propertyTerm: cim.isSellableWithoutPrice
+      mSRPAmount:
+        propertyTerm: cim.mSRPAmount
+        range: integer
+      isCouponRedemptionAllowed:
+        propertyTerm: cim.isCouponRedemptionAllowed
         range: boolean
         mandatory: true
-      quantityInstallmentCount:
-        propertyTerm: cim.quantityInstallmentCount
-        range: integer
-      validForPeriodCount:
-        propertyTerm: cim.validForPeriodCount
-        range: integer
-      rewardProgramPointsCount:
-        propertyTerm: cim.rewardProgramPointsCount
-        range: integer
-      isInstallable:
-        propertyTerm: cim.isInstallable
+      canUseRevenueSchedule:
+        propertyTerm: cim.canUseRevenueSchedule
         range: boolean
         mandatory: true
-      validToDate:
-        propertyTerm: cim.validToDate
-        range: date
-      revenueInstallmentCount:
-        propertyTerm: cim.revenueInstallmentCount
-        range: integer
-      isReturnable:
-        propertyTerm: cim.isReturnable
+      isBackOrdered:
+        propertyTerm: cim.isBackOrdered
         range: boolean
         mandatory: true
-      allowPartialRefund:
-        propertyTerm: cim.allowPartialRefund
-        range: boolean
-      stockLedgerValuationAmount:
-        propertyTerm: cim.stockLedgerValuationAmount
+      minimumAdvertisementAmount:
+        propertyTerm: cim.minimumAdvertisementAmount
         range: integer
-      revenueInstallmentPeriod:
-        propertyTerm: cim.revenueInstallmentPeriod
-        range: string
-      revenueScheduleType:
-        propertyTerm: cim.revenueScheduleType
-        range: string
+      isIntellectualPropertyProtected:
+        propertyTerm: cim.isIntellectualPropertyProtected
+        range: boolean
+      requiredDepositAmount:
+        propertyTerm: cim.requiredDepositAmount
+        range: integer
       primarySalesChannel:
         propertyTerm: cim.primarySalesChannel
         range: salesorder_eg.SalesChannel
         allowMultiple: true
-      id:
-        propertyTerm: cim.id
-        range: guid
-        unique: true
-        mandatory: true
-      isDynamicBundle:
-        propertyTerm: cim.isDynamicBundle
+      isSerialized:
+        propertyTerm: cim.isSerialized
         range: boolean
         mandatory: true
       isWorkerDiscountAllowed:
         propertyTerm: cim.isWorkerDiscountAllowed
         range: boolean
         mandatory: true
-      validForPeriodUOM:
-        propertyTerm: cim.validForPeriodUOM
-        range: productattribute_eg.ProductValidityTimePeriodUOM
-        allowMultiple: true
-      brand:
-        propertyTerm: cim.brand
-        range: Brand
-        allowMultiple: true
-      canUseRevenueSchedule:
-        propertyTerm: cim.canUseRevenueSchedule
+      quantityInstallmentCount:
+        propertyTerm: cim.quantityInstallmentCount
+        range: integer
+      manufacturerName:
+        propertyTerm: cim.manufacturerName
+        range: string
+      minimumAdvertisementAmountStartDate:
+        propertyTerm: cim.minimumAdvertisementAmountStartDate
+        range: integer
+      isPartnerDiscountAllowed:
+        propertyTerm: cim.isPartnerDiscountAllowed
         range: boolean
         mandatory: true
-      isCouponRedemptionAllowed:
-        propertyTerm: cim.isCouponRedemptionAllowed
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
+      isManualPriceEntryRequired:
+        propertyTerm: cim.isManualPriceEntryRequired
         range: boolean
         mandatory: true
-      masterProduct:
-        propertyTerm: cim.masterProduct
-        range: Product
-        allowMultiple: true
+      revenueScheduleType:
+        propertyTerm: cim.revenueScheduleType
+        range: string
+      isWeightEntryRequired:
+        propertyTerm: cim.isWeightEntryRequired
+        range: boolean
+        mandatory: true
+      modelYear:
+        propertyTerm: cim.modelYear
+        range: integer
+      disposalType:
+        propertyTerm: cim.disposalType
+        range: string
+      versionNumber:
+        propertyTerm: cim.versionNumber
+        range: string
       isAutoProvisionable:
         propertyTerm: cim.isAutoProvisionable
         range: boolean
         mandatory: true
+      isCustomerDiscountAllowed:
+        propertyTerm: cim.isCustomerDiscountAllowed
+        range: boolean
+        mandatory: true
+      primaryProductCategory:
+        propertyTerm: cim.primaryProductCategory
+        range: productcatalog_eg.ProductCategory
+        allowMultiple: true
+      isReturnable:
+        propertyTerm: cim.isReturnable
+        range: boolean
+        mandatory: true
+      glAccountCode:
+        propertyTerm: cim.glAccountCode
+        range: string
+      minimumOrderQuantityCount:
+        propertyTerm: cim.minimumOrderQuantityCount
+        range: integer
+      description:
+        propertyTerm: cim.description
+        range: string
+        mandatory: true
       isPreOrderable:
         propertyTerm: cim.isPreOrderable
+        range: boolean
+        mandatory: true
+      modelNumber:
+        propertyTerm: cim.modelNumber
+        range: string
+      isFoodstampPaymentAllowed:
+        propertyTerm: cim.isFoodstampPaymentAllowed
+        range: boolean
+        mandatory: true
+      priceChargeType:
+        propertyTerm: cim.priceChargeType
+        range: string
+        mandatory: true
+      canUseQuantitySchedule:
+        propertyTerm: cim.canUseQuantitySchedule
+        range: boolean
+        mandatory: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      revenueInstallmentCount:
+        propertyTerm: cim.revenueInstallmentCount
+        range: integer
+      allowCustomerReturn:
+        propertyTerm: cim.allowCustomerReturn
+        range: boolean
+      maximumOrderQuantityCount:
+        propertyTerm: cim.maximumOrderQuantityCount
+        range: integer
+      isSellableWithoutPrice:
+        propertyTerm: cim.isSellableWithoutPrice
+        range: boolean
+        mandatory: true
+      isRainCheckAllowed:
+        propertyTerm: cim.isRainCheckAllowed
+        range: boolean
+        mandatory: true
+      revenueInstallmentPeriod:
+        propertyTerm: cim.revenueInstallmentPeriod
+        range: string
+      rewardProgramPointsCount:
+        propertyTerm: cim.rewardProgramPointsCount
+        range: integer
+      productSKU:
+        propertyTerm: cim.productSKU
+        range: string
+        mandatory: true
+      displayUrl:
+        propertyTerm: cim.displayUrl
+        range: string
+      type:
+        propertyTerm: cim.type
+        range: string
+      isSellable:
+        propertyTerm: cim.isSellable
+        range: boolean
+      allowPartialRefund:
+        propertyTerm: cim.allowPartialRefund
+        range: boolean
+      brandGrade:
+        propertyTerm: cim.brandGrade
+        range: string
+      externalSourceRecord:
+        propertyTerm: cim.externalSourceRecord
+        range: string
+      brand:
+        propertyTerm: cim.brand
+        range: Brand
+        allowMultiple: true
+      quantityScheduleType:
+        propertyTerm: cim.quantityScheduleType
+        range: string
+      standardWarrantyLengthMonth:
+        propertyTerm: cim.standardWarrantyLengthMonth
+        range: integer
+      lotIdentifier:
+        propertyTerm: cim.lotIdentifier
+        range: string
+      isQuantityEntryRequired:
+        propertyTerm: cim.isQuantityEntryRequired
+        range: boolean
+        mandatory: true
+      isSellableIndependently:
+        propertyTerm: cim.isSellableIndependently
+        range: boolean
+        mandatory: true
+      validForPeriodCount:
+        propertyTerm: cim.validForPeriodCount
+        range: integer
+      isMultipleCouponsAllowed:
+        propertyTerm: cim.isMultipleCouponsAllowed
+        range: boolean
+        mandatory: true
+      validFromDate:
+        propertyTerm: cim.validFromDate
+        range: date
+      isDynamicBundle:
+        propertyTerm: cim.isDynamicBundle
+        range: boolean
+        mandatory: true
+      stockLedgerValuationAmount:
+        propertyTerm: cim.stockLedgerValuationAmount
+        range: integer
+      productStatus:
+        propertyTerm: cim.productStatus
+        range: string
+        mandatory: true
+      longDescription:
+        propertyTerm: cim.longDescription
+        range: string
+        mandatory: true
+      validForPeriodUOM:
+        propertyTerm: cim.validForPeriodUOM
+        range: productattribute_eg.ProductValidityTimePeriodUOM
+        allowMultiple: true
+      requiresInvididualUnitPricing:
+        propertyTerm: cim.requiresInvididualUnitPricing
         range: boolean
         mandatory: true
       quantityInstallmentPeriod:
@@ -424,162 +552,34 @@ nodeMappings:
         propertyTerm: cim.isQualityVerificationRequired
         range: boolean
         mandatory: true
-      requiredDepositAmount:
-        propertyTerm: cim.requiredDepositAmount
-        range: integer
-      quantityScheduleType:
-        propertyTerm: cim.quantityScheduleType
-        range: string
-      type:
-        propertyTerm: cim.type
-        range: string
-      disposalType:
-        propertyTerm: cim.disposalType
-        range: string
-      validFromDate:
-        propertyTerm: cim.validFromDate
-        range: date
-      versionNumber:
-        propertyTerm: cim.versionNumber
-        range: string
-      isSellable:
-        propertyTerm: cim.isSellable
-        range: boolean
-      minimumAdvertisementAmount:
-        propertyTerm: cim.minimumAdvertisementAmount
-        range: integer
-      modelYear:
-        propertyTerm: cim.modelYear
-        range: integer
-      isIntellectualPropertyProtected:
-        propertyTerm: cim.isIntellectualPropertyProtected
-        range: boolean
-      isPartnerDiscountAllowed:
-        propertyTerm: cim.isPartnerDiscountAllowed
-        range: boolean
-        mandatory: true
-      mSRPAmount:
-        propertyTerm: cim.mSRPAmount
-        range: integer
-      isManualPriceEntryRequired:
-        propertyTerm: cim.isManualPriceEntryRequired
-        range: boolean
-        mandatory: true
-      description:
-        propertyTerm: cim.description
-        range: string
-        mandatory: true
-      productSKU:
-        propertyTerm: cim.productSKU
-        range: string
-        mandatory: true
-      lotIdentifier:
-        propertyTerm: cim.lotIdentifier
-        range: string
-      isRainCheckAllowed:
-        propertyTerm: cim.isRainCheckAllowed
-        range: boolean
-        mandatory: true
-      longDescription:
-        propertyTerm: cim.longDescription
-        range: string
-        mandatory: true
-      canUseQuantitySchedule:
-        propertyTerm: cim.canUseQuantitySchedule
-        range: boolean
-        mandatory: true
-      isMultipleCouponsAllowed:
-        propertyTerm: cim.isMultipleCouponsAllowed
-        range: boolean
-        mandatory: true
-      maximumOrderQuantityCount:
-        propertyTerm: cim.maximumOrderQuantityCount
-        range: integer
-      standardWarrantyLengthMonth:
-        propertyTerm: cim.standardWarrantyLengthMonth
-        range: integer
-      isBackOrdered:
-        propertyTerm: cim.isBackOrdered
-        range: boolean
-        mandatory: true
-      brandGrade:
-        propertyTerm: cim.brandGrade
-        range: string
-      modelNumber:
-        propertyTerm: cim.modelNumber
-        range: string
-      manufacturerName:
-        propertyTerm: cim.manufacturerName
-        range: string
-      isCustomerDiscountAllowed:
-        propertyTerm: cim.isCustomerDiscountAllowed
-        range: boolean
-        mandatory: true
-      externalSourceRecord:
-        propertyTerm: cim.externalSourceRecord
-        range: string
-      isSerialized:
-        propertyTerm: cim.isSerialized
-        range: boolean
-        mandatory: true
-      requiredDepositPercentage:
-        propertyTerm: cim.requiredDepositPercentage
-        range: integer
-      primaryProductCategory:
-        propertyTerm: cim.primaryProductCategory
-        range: productcatalog_eg.ProductCategory
+      masterProduct:
+        propertyTerm: cim.masterProduct
+        range: Product
         allowMultiple: true
-      isSellableIndependently:
-        propertyTerm: cim.isSellableIndependently
-        range: boolean
-        mandatory: true
-      glAccountCode:
-        propertyTerm: cim.glAccountCode
-        range: string
-      isWeightEntryRequired:
-        propertyTerm: cim.isWeightEntryRequired
-        range: boolean
-        mandatory: true
-      productStatus:
-        propertyTerm: cim.productStatus
-        range: string
-        mandatory: true
-      name:
-        propertyTerm: cim.name
-        range: string
-        mandatory: true
-      isFoodstampPaymentAllowed:
-        propertyTerm: cim.isFoodstampPaymentAllowed
-        range: boolean
-        mandatory: true
-      minimumAdvertisementAmountStartDate:
-        propertyTerm: cim.minimumAdvertisementAmountStartDate
-        range: integer
-      isQuantityEntryRequired:
-        propertyTerm: cim.isQuantityEntryRequired
-        range: boolean
-        mandatory: true
-      requiresInvididualUnitPricing:
-        propertyTerm: cim.requiresInvididualUnitPricing
+      validToDate:
+        propertyTerm: cim.validToDate
+        range: date
+      isInstallable:
+        propertyTerm: cim.isInstallable
         range: boolean
         mandatory: true
   ProductImageTranslation:
     classTerm: cim.ProductImageTranslation
     mapping:
-      productImage:
-        propertyTerm: cim.productImage
-        range: ProductImage
+      translatedName:
+        propertyTerm: cim.translatedName
+        range: string
         mandatory: true
-        allowMultiple: true
       id:
         propertyTerm: cim.id
         range: guid
         unique: true
         mandatory: true
-      translatedName:
-        propertyTerm: cim.translatedName
-        range: string
+      productImage:
+        propertyTerm: cim.productImage
+        range: ProductImage
         mandatory: true
+        allowMultiple: true
 external:
   cim: http://cloudinformationmodel.org/model/
 dialect: ProductEntityGroup

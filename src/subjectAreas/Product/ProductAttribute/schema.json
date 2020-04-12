@@ -180,17 +180,17 @@
       "type": "object",
       "required": [
         "id",
-        "translatedName",
-        "attributeSet"
+        "attributeSet",
+        "translatedName"
       ],
       "properties": {
         "id": {
           "type": "string"
         },
-        "translatedName": {
+        "attributeSet": {
           "type": "string"
         },
-        "attributeSet": {
+        "translatedName": {
           "type": "string"
         }
       }

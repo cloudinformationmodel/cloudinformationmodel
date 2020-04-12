@@ -128,9 +128,9 @@ types:
     properties:
       id:
         type: string
-      paymentTreatmentMethodName:
-        type: string
       paymentTreatmentMethodCode:
+        type: string
+      paymentTreatmentMethodName:
         type: string
       paymentTreatmentMethodDescription:
         type: string
@@ -298,10 +298,10 @@ types:
   PaymentCreditMemoAllocation:
     type: PaymentAllocation
     properties:
-      id:
-        type: string
       appliedAmount:
         type: integer
+      id:
+        type: string
       name?:
         type: string
   PaymentTreatment:
@@ -454,7 +454,7 @@ types:
       paymentGatewayDate:
         type: date-only
 uses:
-  salesorder_eg: ../../SalesOrder/SalesOrder/schema.yaml
   party_eg: ../../Party/Party/schema.yaml
-  paymentmethod_eg: ../../PaymentMethod/PaymentMethod/schema.yaml
+  salesorder_eg: ../../SalesOrder/SalesOrder/schema.yaml
   account_eg: ../../Party/Account/schema.yaml
+  paymentmethod_eg: ../../PaymentMethod/PaymentMethod/schema.yaml

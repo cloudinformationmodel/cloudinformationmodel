@@ -166,6 +166,24 @@
                 <span>Description: </span><span>Information about a party playing role of seller e.g. customer satisfaction score</span>
               </p>
 
+                <h3>Related entities</h3>
+                <div class="table-responsive">
+                    <table id="related-entities-schemas-table">
+                        <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Description</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="Party-schemas-tr">
+                                  <td class="name-td"> Party</td>
+                                  <td class="description-td">A unified, in system, definition of who you are dealing with e.g. John Doe, Northern Trail Outfitters and can be of different types e.g. individual, business, affiliation group.</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
             
               <div class="table-responsive">
@@ -464,7 +482,39 @@
                 </table>
               </div>
 
-            <p>No Link Properties</p>
+            
+              <div class="table-responsive">
+                <h3>Link Properties</h3>
+                <table id="seller-lprops-table">
+                  <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Details</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                    <tr id="party-link-tr">
+                      <td>party</td>
+                      <td>
+                        <ul>
+                          <li class="lprop-term-id">Term URI: http:&#x2F;&#x2F;cloudinformationmodel.org&#x2F;model&#x2F;party</li>
+                          <li class="lprop-range">
+                            <span class="lprop-range-list-title">Range:</span>
+                            <ul class="lprop-range-list">
+                                <li class="lprop-range-list-item">
+                                    Party
+                                </li>
+                            </ul>
+                          </li>
+                            <li class="lprop-description">Description: Reference to the parent Party e.g. Individual, Business, Affiliation Group</li>
+                            <li class="lprop-constraint">mandatory: true</li>
+                            <li class="lprop-constraint">allowMultiple: true</li>
+                        </ul>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
           </div>
         </div>
       </div>

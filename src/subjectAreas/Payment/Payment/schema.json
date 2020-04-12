@@ -381,18 +381,18 @@
       "type": "object",
       "required": [
         "id",
-        "paymentTreatmentMethodName",
         "paymentTreatmentMethodCode",
+        "paymentTreatmentMethodName",
         "paymentTreatmentMethodDescription"
       ],
       "properties": {
         "id": {
           "type": "string"
         },
-        "paymentTreatmentMethodName": {
+        "paymentTreatmentMethodCode": {
           "type": "string"
         },
-        "paymentTreatmentMethodCode": {
+        "paymentTreatmentMethodName": {
           "type": "string"
         },
         "paymentTreatmentMethodDescription": {
@@ -819,15 +819,15 @@
         {
           "type": "object",
           "required": [
-            "id",
-            "appliedAmount"
+            "appliedAmount",
+            "id"
           ],
           "properties": {
-            "id": {
-              "type": "string"
-            },
             "appliedAmount": {
               "type": "integer"
+            },
+            "id": {
+              "type": "string"
             },
             "name": {
               "type": "string"
