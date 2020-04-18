@@ -11,6 +11,8 @@
     "classConcepts": "cim:classes",
     "propertyConcepts": "cim:properties",
     "schemas": "cim:schemas",
+    "subjectAreas": "cim:subjectArea",
+    "propertyGroups": "cim:propertyGroups",
 
     "name": "rdfs:label",
     "description": "rdfs:comment",
@@ -56,4 +58,3 @@
     },
     "Shape": "sh:Shape"
 }
-
