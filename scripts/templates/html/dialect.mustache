@@ -89,7 +89,7 @@
                 <ul>
                 {{#navData.dialects}}
                   <li class="dialects-nav-item {{^active}}in{{/active}}active-nav-item">
-                    <a href="{{htmlName}}" title="{{label}}">{{label}}</a>
+                    <a href="{{{pageName}}}.html" title="{{label}}">{{label}}</a>
                   </li>
                 {{/navData.dialects}}
                 </ul>
@@ -99,7 +99,7 @@
                 <ul>
                 {{#navData.nodeMappings}}
                   <li class="schemas-nav-item {{^active}}in{{/active}}active-nav-item">
-                    <a href="{{htmlName}}" title="{{label}}">{{label}}</a>
+                    <a href="{{{pageName}}}.html" title="{{label}}">{{label}}</a>
                   </li>
                 {{/navData.nodeMappings}}
                 </ul>
@@ -140,8 +140,8 @@
                       </thead>
                       <tbody>
                       {{#nodeMappings}}
-                          <tr id="{{htmlName}}-schemas-tr">
-                              <td class="name-td"><a href="{{htmlName}}">{{label}}</a></td>
+                          <tr id="{{pageName}}-schemas-tr">
+                              <td class="name-td"><a href="{{{pageName}}}.html">{{label}}</a></td>
                               <td class="description-td">{{description}}</td>
                           </tr>
                       {{/nodeMappings}}

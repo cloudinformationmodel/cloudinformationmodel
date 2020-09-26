@@ -10,5 +10,5 @@ const globalLinks = function() {
 
 // render the about template
 
-utils.renderTemplate(globalLinks(), "./templates/about.mustache", "../html/about.html");
-utils.renderTemplate(globalLinks(), "./templates/documentation.mustache", "../html/documentation.html");
+utils.renderTemplate(globalLinks(), "./templates/html/about.mustache", "../html/about.html");
+utils.renderTemplate(globalLinks(), "./templates/html/documentation.mustache", "../html/documentation.html");

@@ -1,5 +1,5 @@
 /**
- * Generates the HTML document for the different subject areas using the template at `templates/subject_areas.mustache`.
+ * Generates the HTML document for the different subject areas using the template at `templates/html/subject_areas.mustache`.
  * It goes through the different subject areas JSON-LD documents, process them and generates the HTML document with
  * the right links.
  * We need to do this in a different step because aml2html does not support the notion of a subject area grouping
@@ -71,9 +71,9 @@ cfg.subjectAreas = utils.walkSync("../src/subjectAreas", function(path) {
 cfg.subjectAreas = cfg.subjectAreas.sort(utils.nameSorter);
 
 // render all the subject areas
-utils.renderTemplate(cfg, "./templates/subject_areas.mustache", "../html/subject_areas.html");
+utils.renderTemplate(cfg, "./templates/html/subject_areas.mustache", "../html/subject_areas.html");
 
 // render the individual subject areas
 cfg.subjectAreas.forEach((sa) => {
-    utils.renderTemplate(sa, "./templates/individual_subject_areas.mustache", "../html/" + sa.slug + ".html");
+    utils.renderTemplate(sa, "./templates/html/individual_subject_areas.mustache", "../html/" + sa.slug + ".html");
 });
