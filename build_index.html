@@ -8,6 +8,8 @@ npm run aml2html -- ../../../../html-index -d ../../../../src -g ../../../cfg.js
 popd
 cp -rf ./scripts/templates/*  ./html-index/
 rm -rf ./html-index/*.mustache
+mkdir -p html
+mkdir -p html/images/partners
 cp ./html-index/index.html ./html/index.html
 cp ./html-index/images/partners/* ./html/images/partners/
 
