@@ -1,5 +1,6 @@
 {
     "@base": "http://cloudinformationmodel.org/model/",
+    "@vocab": "",
 
     "cim": "http://cloudinformationmodel.org/model/",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
