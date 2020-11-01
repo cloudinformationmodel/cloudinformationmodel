@@ -979,10 +979,10 @@
       "rr:predicateObjectMap" : [
         {
           "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/description"
+            "@id" : "http://cloudinformationmodel.org/model/noteText"
           },
           "rr:objectMap" : {
-            "rr:column" : "DESCRIPTION",
+            "rr:column" : "NOTE_TEXT",
             "rr:datatype" : {
               "@id" : "http://www.w3.org/2001/XMLSchema#string"
             }
@@ -990,10 +990,10 @@
         },
         {
           "rr:predicate" : {
-            "@id" : "http://cloudinformationmodel.org/model/noteText"
+            "@id" : "http://cloudinformationmodel.org/model/description"
           },
           "rr:objectMap" : {
-            "rr:column" : "NOTE_TEXT",
+            "rr:column" : "DESCRIPTION",
             "rr:datatype" : {
               "@id" : "http://www.w3.org/2001/XMLSchema#string"
             }

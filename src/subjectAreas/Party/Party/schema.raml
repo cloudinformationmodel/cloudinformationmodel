@@ -15,12 +15,12 @@ types:
         type: string
   PersonLanguage:
     properties:
+      individual:
+        items: Individual
       spokenProficiencyLevel?:
         type: string
       id:
         type: string
-      individual:
-        items: Individual
       writtenProficiencyLevel?:
         type: string
   PersonEducation:
@@ -311,10 +311,10 @@ types:
         type: date-only
   PersonLifeEvent:
     properties:
-      individual:
-        items: Individual
       id:
         type: string
+      individual:
+        items: Individual
       personLifeEventDateTime:
         type: time-only
       personLifeEventType:
@@ -343,6 +343,6 @@ types:
       name:
         type: string
 uses:
-  contactpoint_eg: ../ContactPoint/schema.yaml
   partyrole_eg: ../PartyRole/schema.yaml
   account_eg: ../Account/schema.yaml
+  contactpoint_eg: ../ContactPoint/schema.yaml

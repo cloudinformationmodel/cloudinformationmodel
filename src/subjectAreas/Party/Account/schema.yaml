@@ -1,14 +1,19 @@
 #%Dialect 1.0
 uses:
-  salesorder_eg: ../../SalesOrder/SalesOrder/schema.yaml
-  contactpoint_eg: ../ContactPoint/schema.yaml
-  partyrole_eg: ../PartyRole/schema.yaml
   party_eg: ../Party/schema.yaml
+  salesorder_eg: ../../SalesOrder/SalesOrder/schema.yaml
+  partyrole_eg: ../PartyRole/schema.yaml
+  contactpoint_eg: ../ContactPoint/schema.yaml
   paymentmethod_eg: ../../PaymentMethod/PaymentMethod/schema.yaml
 nodeMappings:
   AccountPartner:
     classTerm: cim.AccountPartner
     mapping:
+      partnerAccount:
+        propertyTerm: cim.partnerAccount
+        range: Account
+        mandatory: true
+        allowMultiple: true
       account:
         propertyTerm: cim.account
         range: Account
@@ -19,161 +24,152 @@ nodeMappings:
         range: guid
         unique: true
         mandatory: true
-      partnerAccount:
-        propertyTerm: cim.partnerAccount
-        range: Account
-        mandatory: true
-        allowMultiple: true
   Account:
     classTerm: cim.Account
     mapping:
-      billDeliveryMethod:
-        propertyTerm: cim.billDeliveryMethod
-        range: string
-      autoPaymentAmount:
-        propertyTerm: cim.autoPaymentAmount
-        range: integer
-      useAsBillingAccount:
-        propertyTerm: cim.useAsBillingAccount
-        range: boolean
-        mandatory: true
-      balanceAmountLimit:
-        propertyTerm: cim.balanceAmountLimit
-        range: integer
-      shippingContact:
-        propertyTerm: cim.shippingContact
-        range: AccountContact
-        allowMultiple: true
-      party:
-        propertyTerm: cim.party
-        range: party_eg.Party
-        allowMultiple: true
-      defaultFreightTerms:
-        propertyTerm: cim.defaultFreightTerms
-        range: string
-      parentAccount:
-        propertyTerm: cim.parentAccount
-        range: Account
-        allowMultiple: true
-      ninetyDayBalanceAmount:
-        propertyTerm: cim.ninetyDayBalanceAmount
-        range: integer
-      primarySalesContactPoint:
-        propertyTerm: cim.primarySalesContactPoint
-        range: contactpoint_eg.ContactPoint
-        allowMultiple: true
-      assignTerritoryFlag:
-        propertyTerm: cim.assignTerritoryFlag
-        range: boolean
-      autoPaymentMethod:
-        propertyTerm: cim.autoPaymentMethod
-        range: paymentmethod_eg.PaymentMethod
-        allowMultiple: true
-      description:
-        propertyTerm: cim.description
-        range: string
-      balanceAmount:
-        propertyTerm: cim.balanceAmount
-        range: integer
-      sLAExpirationDate:
-        propertyTerm: cim.sLAExpirationDate
-        range: date
-      name:
-        propertyTerm: cim.name
-        range: string
-        mandatory: true
-      shippingAddress:
-        propertyTerm: cim.shippingAddress
-        range: contactpoint_eg.ContactPointAddress
-        allowMultiple: true
-      lastActivityDate:
-        propertyTerm: cim.lastActivityDate
-        range: date
-      billFrequency:
-        propertyTerm: cim.billFrequency
-        range: BillingFrequency
-        allowMultiple: true
-      useAsShippingAccount:
-        propertyTerm: cim.useAsShippingAccount
-        range: boolean
-        mandatory: true
-      shippingPhoneid:
-        propertyTerm: cim.shippingPhoneid
-        range: contactpoint_eg.ContactPointPhone
-        allowMultiple: true
-      useAsServiceAccount:
-        propertyTerm: cim.useAsServiceAccount
-        range: boolean
-        mandatory: true
-      paymentTerm:
-        propertyTerm: cim.paymentTerm
-        range: string
-        mandatory: true
-      sLAType:
-        propertyTerm: cim.sLAType
-        range: string
-      number:
-        propertyTerm: cim.number
-        range: string
-        mandatory: true
-      useAsSalesAccount:
-        propertyTerm: cim.useAsSalesAccount
-        range: boolean
-        mandatory: true
       sixtyDayBalanceAmount:
         propertyTerm: cim.sixtyDayBalanceAmount
         range: integer
-      shippingEmail:
-        propertyTerm: cim.shippingEmail
-        range: contactpoint_eg.ContactPointEmail
-        allowMultiple: true
-      autoPayEnabledFlag:
-        propertyTerm: cim.autoPayEnabledFlag
-        range: boolean
-      accountType:
-        propertyTerm: cim.accountType
-        range: string
-      billContactAddress:
-        propertyTerm: cim.billContactAddress
-        range: contactpoint_eg.ContactPointAddress
-        allowMultiple: true
-      partyRole:
-        propertyTerm: cim.partyRole
-        range: partyrole_eg.PartyRole
-        allowMultiple: true
-      generalLedgerAccount:
-        propertyTerm: cim.generalLedgerAccount
-        range: string
-      thirtyDayBalanceAmount:
-        propertyTerm: cim.thirtyDayBalanceAmount
+      balanceAmount:
+        propertyTerm: cim.balanceAmount
         range: integer
-      faxPhone:
-        propertyTerm: cim.faxPhone
-        range: contactpoint_eg.ContactPointPhone
-        allowMultiple: true
-      orderDeliveryMethod:
-        propertyTerm: cim.orderDeliveryMethod
-        range: salesorder_eg.OrderDeliveryMethod
+      balanceAmountLimit:
+        propertyTerm: cim.balanceAmountLimit
+        range: integer
+      description:
+        propertyTerm: cim.description
+        range: string
+      party:
+        propertyTerm: cim.party
+        range: party_eg.Party
         allowMultiple: true
       id:
         propertyTerm: cim.id
         range: guid
         unique: true
         mandatory: true
+      accountType:
+        propertyTerm: cim.accountType
+        range: string
+      parentAccount:
+        propertyTerm: cim.parentAccount
+        range: Account
+        allowMultiple: true
+      useAsBillingAccount:
+        propertyTerm: cim.useAsBillingAccount
+        range: boolean
+        mandatory: true
+      shippingEmail:
+        propertyTerm: cim.shippingEmail
+        range: contactpoint_eg.ContactPointEmail
+        allowMultiple: true
+      useAsServiceAccount:
+        propertyTerm: cim.useAsServiceAccount
+        range: boolean
+        mandatory: true
+      useAsShippingAccount:
+        propertyTerm: cim.useAsShippingAccount
+        range: boolean
+        mandatory: true
+      orderDeliveryMethod:
+        propertyTerm: cim.orderDeliveryMethod
+        range: salesorder_eg.OrderDeliveryMethod
+        allowMultiple: true
+      assignTerritoryFlag:
+        propertyTerm: cim.assignTerritoryFlag
+        range: boolean
+      paymentTerm:
+        propertyTerm: cim.paymentTerm
+        range: string
+        mandatory: true
+      shippingAddress:
+        propertyTerm: cim.shippingAddress
+        range: contactpoint_eg.ContactPointAddress
+        allowMultiple: true
+      autoPaymentMethod:
+        propertyTerm: cim.autoPaymentMethod
+        range: paymentmethod_eg.PaymentMethod
+        allowMultiple: true
+      shippingContact:
+        propertyTerm: cim.shippingContact
+        range: AccountContact
+        allowMultiple: true
+      thirtyDayBalanceAmount:
+        propertyTerm: cim.thirtyDayBalanceAmount
+        range: integer
       holdStatusReason:
         propertyTerm: cim.holdStatusReason
         range: string
+      faxPhone:
+        propertyTerm: cim.faxPhone
+        range: contactpoint_eg.ContactPointPhone
+        allowMultiple: true
+      autoPayEnabledFlag:
+        propertyTerm: cim.autoPayEnabledFlag
+        range: boolean
+      shippingPhoneid:
+        propertyTerm: cim.shippingPhoneid
+        range: contactpoint_eg.ContactPointPhone
+        allowMultiple: true
       salesPhone:
         propertyTerm: cim.salesPhone
         range: contactpoint_eg.ContactPointPhone
         allowMultiple: true
-  BillingFrequency:
-    classTerm: cim.BillingFrequency
-    mapping:
+      defaultFreightTerms:
+        propertyTerm: cim.defaultFreightTerms
+        range: string
+      lastActivityDate:
+        propertyTerm: cim.lastActivityDate
+        range: date
+      number:
+        propertyTerm: cim.number
+        range: string
+        mandatory: true
+      generalLedgerAccount:
+        propertyTerm: cim.generalLedgerAccount
+        range: string
       name:
         propertyTerm: cim.name
         range: string
         mandatory: true
+      autoPaymentAmount:
+        propertyTerm: cim.autoPaymentAmount
+        range: integer
+      billContactAddress:
+        propertyTerm: cim.billContactAddress
+        range: contactpoint_eg.ContactPointAddress
+        allowMultiple: true
+      ninetyDayBalanceAmount:
+        propertyTerm: cim.ninetyDayBalanceAmount
+        range: integer
+      sLAType:
+        propertyTerm: cim.sLAType
+        range: string
+      useAsSalesAccount:
+        propertyTerm: cim.useAsSalesAccount
+        range: boolean
+        mandatory: true
+      billDeliveryMethod:
+        propertyTerm: cim.billDeliveryMethod
+        range: string
+      partyRole:
+        propertyTerm: cim.partyRole
+        range: partyrole_eg.PartyRole
+        allowMultiple: true
+      billFrequency:
+        propertyTerm: cim.billFrequency
+        range: BillingFrequency
+        allowMultiple: true
+      primarySalesContactPoint:
+        propertyTerm: cim.primarySalesContactPoint
+        range: contactpoint_eg.ContactPoint
+        allowMultiple: true
+      sLAExpirationDate:
+        propertyTerm: cim.sLAExpirationDate
+        range: date
+  BillingFrequency:
+    classTerm: cim.BillingFrequency
+    mapping:
       billingFrequencyName:
         propertyTerm: cim.billingFrequencyName
         range: string
@@ -183,9 +179,29 @@ nodeMappings:
         range: guid
         unique: true
         mandatory: true
+      name:
+        propertyTerm: cim.name
+        range: string
+        mandatory: true
   AccountContact:
     classTerm: cim.AccountContact
     mapping:
+      mailingAddress:
+        propertyTerm: cim.mailingAddress
+        range: contactpoint_eg.ContactPointAddress
+        allowMultiple: true
+      homePhone:
+        propertyTerm: cim.homePhone
+        range: contactpoint_eg.ContactPointPhone
+        allowMultiple: true
+      account:
+        propertyTerm: cim.account
+        range: Account
+        mandatory: true
+        allowMultiple: true
+      departmentName:
+        propertyTerm: cim.departmentName
+        range: string
       assistantPhone:
         propertyTerm: cim.assistantPhone
         range: string
@@ -193,32 +209,6 @@ nodeMappings:
         propertyTerm: cim.businessPhone
         range: contactpoint_eg.ContactPointPhone
         allowMultiple: true
-      contactNote:
-        propertyTerm: cim.contactNote
-        range: string
-      id:
-        propertyTerm: cim.id
-        range: guid
-        unique: true
-        mandatory: true
-      otherContactAddress:
-        propertyTerm: cim.otherContactAddress
-        range: contactpoint_eg.ContactPointAddress
-        allowMultiple: true
-      homePhone:
-        propertyTerm: cim.homePhone
-        range: contactpoint_eg.ContactPointPhone
-        allowMultiple: true
-      departmentName:
-        propertyTerm: cim.departmentName
-        range: string
-      faxPhone:
-        propertyTerm: cim.faxPhone
-        range: contactpoint_eg.ContactPointPhone
-        allowMultiple: true
-      lastActivityDate:
-        propertyTerm: cim.lastActivityDate
-        range: date
       indirectRelationAccountContact:
         propertyTerm: cim.indirectRelationAccountContact
         range: AccountContact
@@ -226,6 +216,21 @@ nodeMappings:
       reportsToAccountContact:
         propertyTerm: cim.reportsToAccountContact
         range: AccountContact
+        allowMultiple: true
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
+      assistantName:
+        propertyTerm: cim.assistantName
+        range: string
+      lastActivityDate:
+        propertyTerm: cim.lastActivityDate
+        range: date
+      faxPhone:
+        propertyTerm: cim.faxPhone
+        range: contactpoint_eg.ContactPointPhone
         allowMultiple: true
       contactEmail:
         propertyTerm: cim.contactEmail
@@ -236,36 +241,26 @@ nodeMappings:
         range: party_eg.Individual
         mandatory: true
         allowMultiple: true
+      contactNote:
+        propertyTerm: cim.contactNote
+        range: string
       title:
         propertyTerm: cim.title
-        range: string
-      assistantName:
-        propertyTerm: cim.assistantName
         range: string
       mobilePhone:
         propertyTerm: cim.mobilePhone
         range: contactpoint_eg.ContactPointPhone
         allowMultiple: true
-      account:
-        propertyTerm: cim.account
-        range: Account
-        mandatory: true
-        allowMultiple: true
-      mailingAddress:
-        propertyTerm: cim.mailingAddress
+      otherContactAddress:
+        propertyTerm: cim.otherContactAddress
         range: contactpoint_eg.ContactPointAddress
         allowMultiple: true
   AccountContactRole:
     classTerm: cim.AccountContactRole
     mapping:
-      id:
-        propertyTerm: cim.id
-        range: guid
-        unique: true
-        mandatory: true
-      activeToDate:
-        propertyTerm: cim.activeToDate
-        range: date
+      accountContactRoleType:
+        propertyTerm: cim.accountContactRoleType
+        range: string
       accountContact:
         propertyTerm: cim.accountContact
         range: AccountContact
@@ -273,9 +268,14 @@ nodeMappings:
       activeFromDate:
         propertyTerm: cim.activeFromDate
         range: date
-      accountContactRoleType:
-        propertyTerm: cim.accountContactRoleType
-        range: string
+      activeToDate:
+        propertyTerm: cim.activeToDate
+        range: date
+      id:
+        propertyTerm: cim.id
+        range: guid
+        unique: true
+        mandatory: true
 external:
   cim: http://cloudinformationmodel.org/model/
 dialect: AccountEntityGroup

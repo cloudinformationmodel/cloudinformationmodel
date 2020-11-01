@@ -23,12 +23,12 @@ types:
         type: string
   PersonLanguage:
     properties:
+      individual:
+        items: Individual
       spokenProficiencyLevel?:
         type: string
       id:
         type: string
-      individual:
-        items: Individual
       writtenProficiencyLevel?:
         type: string
   ProductRelatedProduct:
@@ -493,9 +493,9 @@ types:
     properties:
       id:
         type: string
-      description?:
-        type: string
       noteText:
+        type: string
+      description?:
         type: string
   ProductCatalog:
     properties:
@@ -905,9 +905,9 @@ types:
     properties:
       id:
         type: string
-      paymentTreatmentMethodName:
-        type: string
       paymentTreatmentMethodCode:
+        type: string
+      paymentTreatmentMethodName:
         type: string
       paymentTreatmentMethodDescription:
         type: string
@@ -1806,10 +1806,10 @@ types:
   PaymentCreditMemoAllocation:
     type: PaymentAllocation
     properties:
-      id:
-        type: string
       appliedAmount:
         type: integer
+      id:
+        type: string
       name?:
         type: string
   ContactPointSocial:
@@ -1963,10 +1963,10 @@ types:
         type: integer
   ProductCatalogTranslation:
     properties:
-      productCatalog:
-        items: ProductCatalog
       id:
         type: string
+      productCatalog:
+        items: ProductCatalog
       translatedName:
         type: string
   ProductCategoryProduct:
@@ -2125,9 +2125,9 @@ types:
     properties:
       id:
         type: string
-      translatedName:
-        type: string
       attributeSet:
+        type: string
+      translatedName:
         type: string
   PaymentAuthorization:
     properties:
@@ -2380,10 +2380,10 @@ types:
         type: string
   PersonLifeEvent:
     properties:
-      individual:
-        items: Individual
       id:
         type: string
+      individual:
+        items: Individual
       personLifeEventDateTime:
         type: time-only
       personLifeEventType:

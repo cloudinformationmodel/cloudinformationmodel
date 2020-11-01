@@ -129,19 +129,19 @@
     "ProductCatalogTranslation": {
       "type": "object",
       "required": [
-        "productCatalog",
         "id",
+        "productCatalog",
         "translatedName"
       ],
       "properties": {
+        "id": {
+          "type": "string"
+        },
         "productCatalog": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/ProductCatalog"
           }
-        },
-        "id": {
-          "type": "string"
         },
         "translatedName": {
           "type": "string"

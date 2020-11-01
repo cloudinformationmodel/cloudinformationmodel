@@ -77,21 +77,21 @@
     "PersonLanguage": {
       "type": "object",
       "required": [
-        "id",
-        "individual"
+        "individual",
+        "id"
       ],
       "properties": {
-        "spokenProficiencyLevel": {
-          "type": "string"
-        },
-        "id": {
-          "type": "string"
-        },
         "individual": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/Individual"
           }
+        },
+        "spokenProficiencyLevel": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
         },
         "writtenProficiencyLevel": {
           "type": "string"
@@ -666,20 +666,20 @@
     "PersonLifeEvent": {
       "type": "object",
       "required": [
-        "individual",
         "id",
+        "individual",
         "personLifeEventDateTime",
         "personLifeEventType"
       ],
       "properties": {
+        "id": {
+          "type": "string"
+        },
         "individual": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/Individual"
           }
-        },
-        "id": {
-          "type": "string"
         },
         "personLifeEventDateTime": {
           "type": "string",

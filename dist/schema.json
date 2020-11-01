@@ -438,21 +438,21 @@
     "PersonLanguage": {
       "type": "object",
       "required": [
-        "id",
-        "individual"
+        "individual",
+        "id"
       ],
       "properties": {
-        "spokenProficiencyLevel": {
-          "type": "string"
-        },
-        "id": {
-          "type": "string"
-        },
         "individual": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/Individual"
           }
+        },
+        "spokenProficiencyLevel": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
         },
         "writtenProficiencyLevel": {
           "type": "string"
@@ -1538,10 +1538,10 @@
         "id": {
           "type": "string"
         },
-        "description": {
+        "noteText": {
           "type": "string"
         },
-        "noteText": {
+        "description": {
           "type": "string"
         }
       }
@@ -2332,18 +2332,18 @@
       "type": "object",
       "required": [
         "id",
-        "paymentTreatmentMethodName",
         "paymentTreatmentMethodCode",
+        "paymentTreatmentMethodName",
         "paymentTreatmentMethodDescription"
       ],
       "properties": {
         "id": {
           "type": "string"
         },
-        "paymentTreatmentMethodName": {
+        "paymentTreatmentMethodCode": {
           "type": "string"
         },
-        "paymentTreatmentMethodCode": {
+        "paymentTreatmentMethodName": {
           "type": "string"
         },
         "paymentTreatmentMethodDescription": {
@@ -4403,15 +4403,15 @@
         {
           "type": "object",
           "required": [
-            "id",
-            "appliedAmount"
+            "appliedAmount",
+            "id"
           ],
           "properties": {
-            "id": {
-              "type": "string"
-            },
             "appliedAmount": {
               "type": "integer"
+            },
+            "id": {
+              "type": "string"
             },
             "name": {
               "type": "string"
@@ -4771,19 +4771,19 @@
     "ProductCatalogTranslation": {
       "type": "object",
       "required": [
-        "productCatalog",
         "id",
+        "productCatalog",
         "translatedName"
       ],
       "properties": {
+        "id": {
+          "type": "string"
+        },
         "productCatalog": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/ProductCatalog"
           }
-        },
-        "id": {
-          "type": "string"
         },
         "translatedName": {
           "type": "string"
@@ -5089,17 +5089,17 @@
       "type": "object",
       "required": [
         "id",
-        "translatedName",
-        "attributeSet"
+        "attributeSet",
+        "translatedName"
       ],
       "properties": {
         "id": {
           "type": "string"
         },
-        "translatedName": {
+        "attributeSet": {
           "type": "string"
         },
-        "attributeSet": {
+        "translatedName": {
           "type": "string"
         }
       }
@@ -5681,20 +5681,20 @@
     "PersonLifeEvent": {
       "type": "object",
       "required": [
-        "individual",
         "id",
+        "individual",
         "personLifeEventDateTime",
         "personLifeEventType"
       ],
       "properties": {
+        "id": {
+          "type": "string"
+        },
         "individual": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/Individual"
           }
-        },
-        "id": {
-          "type": "string"
         },
         "personLifeEventDateTime": {
           "type": "string",

@@ -590,10 +590,10 @@
         "id": {
           "type": "string"
         },
-        "description": {
+        "noteText": {
           "type": "string"
         },
-        "noteText": {
+        "description": {
           "type": "string"
         }
       }
