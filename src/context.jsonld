@@ -1,20 +1,28 @@
 {
+    "@vocab": "http://cloudinformationmodel.org/model/",
     "@base": "http://cloudinformationmodel.org/model/",
+<<<<<<< HEAD
     "@vocab": "",
 
+=======
+>>>>>>> 27ff1a1 (CIM 1.0.0)
     "cim": "http://cloudinformationmodel.org/model/",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "sh": "http://www.w3.org/ns/shacl#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
-
     "version": "cim:version",
+    "guid": "cim:guid",
     "classConcepts": "cim:classes",
     "propertyConcepts": "cim:properties",
     "schemas": "cim:schemas",
     "subjectAreas": "cim:subjectArea",
+    "entityGroups": "cim:entityGroup",
     "propertyGroups": "cim:propertyGroups",
-
+    "targetClass": {
+	     "@id": "sh:targetClass",
+	     "@type": "@id"
+    },
     "name": "rdfs:label",
     "description": "rdfs:comment",
     "Class": "rdfs:Class",
@@ -48,6 +56,10 @@
     },
     "and": {
       "@id": "sh:and",
+      "@container": "@list"
+    },
+    "xor": {
+      "@id": "sh:xone",
       "@container": "@list"
     },
     "in": "sh:in",

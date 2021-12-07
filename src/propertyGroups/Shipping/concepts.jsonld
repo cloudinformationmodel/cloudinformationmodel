@@ -1,65 +1,57 @@
 {
-  "@context": "http://cloudinformationmodel.org/context.jsonld",
-  "@id": "ShippingPropertyGroup",
-  "name": "Shipping Property Group",
-  "@type": "PropertyGroup",
-  "version": "0.1",
-  "propertyConcepts": [
-    {
-      "@id": "shippingContact",
-      "@type": "Property",
-      "description": "Who is the shipping contact",
-      "name": "Shipping Contact",
-      "range": "AccountContact"
-    },
-    {
-      "@id": "shippingPhoneid",
-      "@type": "Property",
-      "description": "What phone to use for shipping purposes",
-      "name": "Shipping Phone",
-      "range": "ContactPointPhone"
-    },
-    {
-      "@id": "shippingEmail",
-      "@type": "Property",
-      "description": "Email to be used for shipping inquiries",
-      "name": "Shipping Email",
-      "range": "ContactPointEmail"
-    },
-    {
-      "@id": "shippingAddress",
-      "@type": "Property",
-      "description": "Reference to the shipping billing address, if applicable",
-      "name": "Shipping Address",
-      "range": "ContactPointAddress"
-    },
-    {
-      "@id": "orderDeliveryMethod",
-      "@type": "Property",
-      "description": "Unless overridden how will goods be delivered e.g. Bus, Overnight, In Person, Pickup",
-      "name": "Order Delivery Method",
-      "range": "OrderDeliveryMethod"
-    },
-    {
-      "@id": "shipToAddress",
-      "@type": "Property",
-      "description": "Shipping Address",
-      "name": "Ship To Address",
-      "range": "ContactPointAddress"
-    },
-    {
-      "@id": "shipToContact",
-      "@type": "Property",
-      "description": "ID of the contact the order will be shipped to.",
-      "name": "Ship To Contact",
-      "range": "AccountContact"
-    },
-    {
-      "@id": "shipToEmail",
-      "@type": "Property",
-      "description": "Email to shiop to contact",
-      "name": "Ship To Email",
-      "range": "ContactPointEmail"
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "ShippingPropertyGroup",
+    "name": "Shipping Property Group",
+    "@type": "PropertyGroup",
+    "propertyConcepts": [
+{
+        "@id": "shipToAddressId",
+        "@type": "Property",
+        "description": "Shipping Address",
+        "name": "Ship To Address",
+        "range": "ContactPointAddress"
+    },{
+        "@id": "shipToEmailId",
+        "@type": "Property",
+        "description": "Email to shiop to contact",
+        "name": "Ship To Email",
+        "range": "ContactPointEmail"
+    },{
+        "@id": "totalDeliveryAmountCurrencyId",
+        "@type": "Property",
+        "description": "Currency for Total Delivery Amount",
+        "name": "Total Delivery Amount Currency",
+        "range": "Currency"
+    },{
+        "@id": "totalDeliveryFeeCurrencyId",
+        "@type": "Property",
+        "description": "Currency for Total Delivery Amount",
+        "name": "Total Delivery Fee Currency",
+        "range": "Currency"
+    },{
+        "@id": "orderDeliveryMethodId",
+        "@type": "Property",
+        "description": "Unless overriden how will goods be delivered e.g. Bus, Overnight, In Person, Pickup",
+        "name": "Order Delivery Method",
+        "range": "OrderDeliveryMethod"
+    },{
+        "@id": "shippingAddressId",
+        "@type": "Property",
+        "description": "Reference to the shipping billing address, if applicable",
+        "name": "Shipping Address",
+        "range": "ContactPointAddress"
+    },{
+        "@id": "shippingEmailId",
+        "@type": "Property",
+        "description": "Email to be used for shipping inquiries",
+        "name": "Shipping Email",
+        "range": "ContactPointEmail"
+    },{
+        "@id": "shippingPhoneid",
+        "@type": "Property",
+        "description": "What phone to use for shipping purposes",
+        "name": "Shipping Phone",
+        "range": "ContactPointPhone"
     }
-  ]
+    ]
 }

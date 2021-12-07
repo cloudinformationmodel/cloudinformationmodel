@@ -1,30 +1,27 @@
 {
-  "@context": "http://cloudinformationmodel.org/context.jsonld",
-  "@id": "SalesDisplayPropertyGroup",
-  "name": "SalesDisplay Property Group",
-  "@type": "PropertyGroup",
-  "version": "0.1",
-  "propertyConcepts": [
-    {
-      "@id": "shelfFacingUnitCount",
-      "@type": "Property",
-      "description": "How many units per facing (row) displayed of a product on a shelf",
-      "name": "Shelf Facing Unit Count",
-      "range": "DataType"
-    },
-    {
-      "@id": "maxHoldingDayCount",
-      "@type": "Property",
-      "description": "How long e.g. drug or newspaper can be displayed before removal",
-      "name": "Max Holding Day Count",
-      "range": "DataType"
-    },
-    {
-      "@id": "requiresUnitPriceLabel",
-      "@type": "Property",
-      "description": "Must a label of the price be visible for the product or not",
-      "name": "Requires Unit Price Label",
-      "range": "DataType"
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "SalesDisplayPropertyGroup",
+    "name": "SalesDisplay Property Group",
+    "@type": "PropertyGroup",
+    "propertyConcepts": [
+{
+        "@id": "maxHoldingDayCount",
+        "@type": "Property",
+        "description": "How long e.g. drug or newspaper can be displayed before removal",
+        "name": "Max Holding Day Count",
+        "range": "DataType"
+    },{
+        "@id": "requiresUnitPriceLabel",
+        "@type": "Property",
+        "description": "Must a label of the price be visible for the product or not",
+        "name": "Requires Unit Price Label",
+        "range": "DataType"
+    },{
+        "@id": "shelfFacingUnitCount",
+        "@type": "Property",
+        "description": "How many units per facing (row) displayed of a product on a shelf",
+        "name": "Shelf Facing Unit Count",
+        "range": "DataType"
     }
-  ]
+    ]
 }

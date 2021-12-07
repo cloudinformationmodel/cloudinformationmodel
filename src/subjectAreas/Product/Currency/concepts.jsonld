@@ -1,0 +1,92 @@
+{
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "fdad9085-44b6-3c40-83c7-826b3bc40609",
+    "@type": "EntityGroup",
+    "name": "Currency",
+    "version": "1.0.0",
+    "subjectArea": "fe440b10-667c-39ce-bace-1e463e65282e",
+    "description": "Example Entities included: Currency",
+    "classConcepts": [
+{
+        "@id": "ProductRelatedProduct",
+        "name": "Product Related Product",
+        "@type": "Class",
+        "description": "A grouping of products such as a product bundle"
+    }
+    ],
+    "propertyConcepts": [
+{
+        "@id": "toDate",
+        "@type": "Property",
+        "domain": [
+"ProductRelatedProduct"
+        ]
+    },{
+        "@id": "childRelationshipTypeId",
+        "@type": "Property",
+        "domain": [
+"ProductRelatedProduct"
+        ]
+    },{
+        "@id": "salesOrderProduct1Id",
+        "@type": "Property",
+        "domain": [
+"ProductRelatedProduct"
+        ]
+    },{
+        "@id": "childProductId",
+        "@type": "Property",
+        "domain": [
+"ProductRelatedProduct"
+        ]
+    },{
+        "@id": "id",
+        "@type": "Property",
+        "domain": [
+"ProductRelatedProduct"
+        ]
+    },{
+        "@id": "isDefaultOption",
+        "@type": "Property",
+        "domain": [
+"ProductRelatedProduct"
+        ]
+    },{
+        "@id": "name",
+        "@type": "Property",
+        "domain": [
+"ProductRelatedProduct"
+        ]
+    },{
+        "@id": "fromDate",
+        "@type": "Property",
+        "domain": [
+"ProductRelatedProduct"
+        ]
+    },{
+        "@id": "productRelationshipTypeId",
+        "@type": "Property",
+        "domain": [
+"ProductRelatedProduct"
+        ]
+    },{
+        "@id": "salesOrderProduct2Id",
+        "@type": "Property",
+        "domain": [
+"ProductRelatedProduct"
+        ]
+    },{
+        "@id": "parentRelationshipTypeId",
+        "@type": "Property",
+        "domain": [
+"ProductRelatedProduct"
+        ]
+    },{
+        "@id": "parentProductId",
+        "@type": "Property",
+        "domain": [
+"ProductRelatedProduct"
+        ]
+    }
+    ]
+}

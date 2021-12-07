@@ -1,158 +1,423 @@
 {
-  "@context": "http://cloudinformationmodel.org/context.jsonld",
-  "@id": "LeadEntityGroup",
-  "@type": "EntityGroup",
-  "version": "0.1",
-  "schemas": [
-    {
-      "@type": "Shape",
-      "@id": "Lead",
-      "properties": [
-        {
-          "path": "geoCodeAccuracy",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "geoCodeLongitude",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "partnerAccount",
-          "node": "Account"
-        },
-        {
-          "path": "geoCodeLatitude",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "website",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "leadScore",
-          "datatype": "xsd:integer",
-          "maxCount": "1"
-        },
-        {
-          "path": "leadRating",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "photoURL",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "lastActivityDate",
-          "datatype": "xsd:date",
-          "maxCount": "1"
-        },
-        {
-          "path": "companyName",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "annualRevenue",
-          "datatype": "xsd:integer",
-          "maxCount": "1"
-        },
-        {
-          "path": "faxContactPhone",
-          "node": "ContactPointPhone"
-        },
-        {
-          "path": "mobileContactPhone",
-          "node": "ContactPointPhone"
-        },
-        {
-          "path": "phoneContactPoint",
-          "node": "ContactPointPhone"
-        },
-        {
-          "path": "contactPointEmail",
-          "node": "ContactPointEmail"
-        },
-        {
-          "path": "countryName",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "stateProvinceName",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "streetName",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "emailBouncedReason",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "emailBouncedDate",
-          "datatype": "xsd:time",
-          "maxCount": "1"
-        },
-        {
-          "path": "contactAddress",
-          "node": "ContactPointAddress"
-        },
-        {
-          "path": "convertedToAccountContact",
-          "node": "AccountContact"
-        },
-        {
-          "path": "convertedToAccount",
-          "node": "Account"
-        },
-        {
-          "path": "convertedDate",
-          "datatype": "xsd:date",
-          "maxCount": "1"
-        },
-        {
-          "path": "isConverted",
-          "datatype": "xsd:boolean",
-          "maxCount": "1"
-        },
-        {
-          "path": "description",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "leadStatus",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "leadSource",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "partyRole",
-          "node": "PartyRole",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "5a3343dd-1d48-3c56-8e02-90b1140ff987",
+    "@type": "EntityGroup",
+    "name": "Lead",
+    "version": "1.0.0",
+    "subjectArea": "aeaf98cc-53c1-300a-827f-57f4ce0bf764",
+    "description": "Example Entities included: Lead, Lead Status, Lead Source",
+    "schemas": [
+{
+        "@id": "af4bb343-deab-36fe-859d-83074d805113",
+        "@type": "Shape",
+        "targetClass": "EmailFrequency",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "22b38088-7659-31f2-9b80-e50171b7407a",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "name",
+            "@id": "eb2eba81-9874-35aa-9577-3fc922ace76c",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "f66d4dba-3194-30fc-9e4c-dd759e8ea81e",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "380b21a0-266d-4646-b838-ef2bb860b551",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "a18272e6-2ebc-3473-af12-ba032a3ccbe8",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "eb612646-ed1c-4424-9010-6e018c0a7fcb",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "26f7ac60-a29e-3a8f-8004-f1ded1ed1c07",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "1e626510-2c45-38c0-8e13-82bb548ded9d",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
         }
-      ]
+        ]
+    },{
+        "@id": "26ed855b-dbc6-3ade-8f4a-eb1e2346c540",
+        "@type": "Shape",
+        "targetClass": "Lead",
+        "properties": [
+{
+            "path": "website",
+            "@id": "616225bc-ebf4-34c8-b56a-6a9f5daac8a2",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "systemModstamp",
+            "@id": "2a75fb86-ed15-3b92-9f42-f69a8693502d",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "streetName",
+            "@id": "0f6e2a2b-4fcb-3195-86ae-ac21d6cb21f9",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "stateProvinceName",
+            "@id": "e15a74cc-f4b9-361e-817f-2ce85d8c2d6c",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "photoURL",
+            "@id": "3605f1f0-abe4-3ee0-9fbd-bda94e86c5f4",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "phoneContactPointId",
+            "@id": "bb90f0b6-91ad-313e-a493-0e1f43dc99c8",
+            "node": "ebb7825c-c6c6-3638-9d0b-d61c7a681be3",
+            "maxCount": "1"
+        },{
+            "path": "partyRoleId",
+            "@id": "4a3ece8d-c31f-333e-9105-5a2f19ac543e",
+            "node": "7cb990ba-4eba-3824-abd7-0dfb55f76fb1",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "partnerAccountId",
+            "@id": "d10fb1d1-f04e-39c4-b4d7-9bebb7fdc959",
+            "node": "c3fabe09-9e66-38c7-adb7-022e190e8c4c",
+            "maxCount": "1"
+        },{
+            "path": "mobileContactPhoneId",
+            "@id": "6f0c1aba-0294-38ce-bc81-cf47bfd79e1b",
+            "node": "ebb7825c-c6c6-3638-9d0b-d61c7a681be3",
+            "maxCount": "1"
+        },{
+            "path": "leadStatusId",
+            "@id": "bfe08af6-724a-3e88-8840-348cf28bb203",
+            "node": "3ab83dd2-5c46-381a-b9a6-d8e609e98322",
+            "maxCount": "1"
+        },{
+            "path": "leadSourceId",
+            "@id": "0bdc2e72-c8aa-38d3-aa31-2964c2b0ef29",
+            "node": "8aa02fa0-bbf5-34a2-a36b-49dc81f32706",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "leadScore",
+            "@id": "aa1b27f5-b98c-3c47-b220-9e8a0f39e23f",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "leadRating",
+            "@id": "d1be534d-f585-37ea-a669-4296c956a06c",
+            "node": "8fde03ba-df90-3fd0-8d93-99d869c24fca",
+            "maxCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "dfd36fdc-003f-31d5-aea1-c3c885f77345",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastActivityDate",
+            "@id": "bff5f4b5-99f6-3347-b9ab-e3a919e57c10",
+            "datatype": "xsd:date",
+            "maxCount": "1"
+        },{
+            "path": "isConverted",
+            "@id": "b4e95b9f-7488-3109-aecc-e381257a3ab8",
+            "datatype": "xsd:boolean",
+            "maxCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "0c825c0a-90a6-4757-8909-f06c1506e983",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "380ebc69-7064-3e02-a9ff-8a05737321e4",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "geoCodeLongitude",
+            "@id": "230077c0-ea5b-36f7-a943-589ca7cc0748",
+            "datatype": "xsd:decimal",
+            "maxCount": "1"
+        },{
+            "path": "geoCodeLatitude",
+            "@id": "f65a626a-93ab-3f1b-9d48-4cdf56354684",
+            "datatype": "xsd:decimal",
+            "maxCount": "1"
+        },{
+            "path": "faxContactPhoneId",
+            "@id": "790378ee-a37a-3ada-832d-08a545bf33e1",
+            "node": "ebb7825c-c6c6-3638-9d0b-d61c7a681be3",
+            "maxCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "45a3caed-7d71-4d6d-9212-dc10cdd5e0d0",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "21ca3b1e-924c-3fe3-96b6-e38340e507c9",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "emailBouncedReason",
+            "@id": "3062a0f6-2525-3e1f-971e-7cdcc0a8b5a7",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "emailBouncedDate",
+            "@id": "04e94be6-8126-3527-8d71-f6d0a84eb555",
+            "datatype": "xsd:time",
+            "maxCount": "1"
+        },{
+            "path": "description",
+            "@id": "2866defe-9bf0-3857-8c92-09a96e0a36fa",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "currencyId",
+            "@id": "fa269590-8d18-33bf-b48c-628a656e64da",
+            "node": "6524a5c3-01b2-3a34-9a07-0d5f8faf5130",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "394425e3-2c60-3e1a-95bd-33d79073db9a",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "countryName",
+            "@id": "27356a7e-8ae4-33dd-a71b-7ab6276c0825",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "convertedToAccountId",
+            "@id": "0ca52660-3f69-3a0d-ba43-4ebf3136caa8",
+            "node": "c3fabe09-9e66-38c7-adb7-022e190e8c4c",
+            "maxCount": "1"
+        },{
+            "path": "convertedToAccountContactId",
+            "@id": "283777a9-4742-3d22-9789-5147eb3f8aa1",
+            "node": "0f5c0999-18e5-34e8-87e5-131be51789dc",
+            "maxCount": "1"
+        },{
+            "path": "convertedDate",
+            "@id": "8f33be5b-af72-390b-9aa8-57e9ad281263",
+            "datatype": "xsd:date",
+            "maxCount": "1"
+        },{
+            "path": "contactPointEmailId",
+            "@id": "b60b01ab-8ef7-37ae-99fe-315468661ced",
+            "node": "892a1e9e-fd79-36d3-9aa6-51bffdfaa982",
+            "maxCount": "1"
+        },{
+            "path": "contactAddressId",
+            "@id": "b2e20a10-f88b-39b1-ae2d-72203ffc2ad3",
+            "node": "d4e3c4a5-9cc3-342a-b1f8-09d5bf6f554b",
+            "maxCount": "1"
+        },{
+            "path": "companyName",
+            "@id": "7adc474b-1f9c-33f5-9d45-ba8ac76ef9da",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "city",
+            "@id": "93761cb2-9273-3a95-9b46-e60c80ff7deb",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "annualRevenue",
+            "@id": "93c56228-d356-343c-a16b-efaa2c3d603b",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        }
+        ]
+    },{
+        "@id": "8fde03ba-df90-3fd0-8d93-99d869c24fca",
+        "@type": "Shape",
+        "targetClass": "LeadRating",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "14ad54bb-7c45-3f48-9d80-984f1601800a",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "leadRatingName",
+            "@id": "0dd73427-b2d8-36a2-86cb-b7ca2f84a918",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "0b2d4112-883a-39f9-87f4-d0464b1d0a3b",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "83bf61d9-a29c-43d3-8545-79530c04637f",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "95ef0cee-71f2-357c-9cdd-782097fe5e70",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "5197c971-b4b4-4868-9c9c-24178696ea34",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "f74191b9-dd1e-3cc2-ba2a-cbaf3b44ec68",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "b7ef2edd-768c-3810-8f82-8096aefb9a1b",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        }
+        ]
+    },{
+        "@id": "8aa02fa0-bbf5-34a2-a36b-49dc81f32706",
+        "@type": "Shape",
+        "targetClass": "LeadSource",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "12f4ba29-42c2-32eb-9666-1b5830fa9fd5",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "leadSourceName",
+            "@id": "936cb0f0-959f-389e-94ea-ca87bcd54dc3",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "505cd87a-3453-3f9f-8b46-379ae9bf1a08",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "a89095fc-9a46-4fef-9d1d-3cc0f2229281",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "8bd7d455-40dc-33c3-8093-d49b7caf5e25",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "c13ee47e-3b28-4a9a-92d2-47ea96c40dda",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "54ede97b-62e9-357c-9c48-257971c24c52",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "cd259bad-6c05-3978-b32c-9887bcb445e2",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        }
+        ]
+    },{
+        "@id": "3ab83dd2-5c46-381a-b9a6-d8e609e98322",
+        "@type": "Shape",
+        "targetClass": "LeadStatus",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "dddd4258-129d-309c-906b-8667bd15c5c9",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "leadStatusName",
+            "@id": "99af4752-a64c-3521-be44-0c4360ade57b",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "aabd2d84-d473-39bf-8fb8-5678fc128c98",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "ea239d0c-2b1c-4f5f-bfff-727e65fd0017",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "fc7e89c6-ca14-3310-bbe7-2b47aab13141",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "b313ac01-2f9c-4fbf-9fdf-a083f9fcc86f",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "ca62da3f-a2df-3bd9-a5e9-0c3365939b81",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "11a06491-2001-3fa3-979c-79a95d266286",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        }
+        ]
     }
-  ]
+    ]
 }

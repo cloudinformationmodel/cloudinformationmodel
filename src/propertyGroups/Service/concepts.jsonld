@@ -1,30 +1,27 @@
 {
-  "@context": "http://cloudinformationmodel.org/context.jsonld",
-  "@id": "ServicePropertyGroup",
-  "name": "Service Property Group",
-  "@type": "PropertyGroup",
-  "version": "0.1",
-  "propertyConcepts": [
-    {
-      "@id": "sLAType",
-      "@type": "Property",
-      "description": "What type of Service Level Agreement does this customer have with us",
-      "name": "SLA Type",
-      "range": "DataType"
-    },
-    {
-      "@id": "sLAExpirationDate",
-      "@type": "Property",
-      "description": "When is the Service Level Agreement expiring",
-      "name": "SLA Expiration Date",
-      "range": "DataType"
-    },
-    {
-      "@id": "defaultFreightTerms",
-      "@type": "Property",
-      "description": "Standard freight terms for this customer e.g. Free On Board Shipping Point (FOB)",
-      "name": "Default Freight Terms",
-      "range": "DataType"
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "ServicePropertyGroup",
+    "name": "Service Property Group",
+    "@type": "PropertyGroup",
+    "propertyConcepts": [
+{
+        "@id": "defaultFreightTermsId",
+        "@type": "Property",
+        "description": "Standard freight terms for this customer e.g. Free On Board Shipping Point (FOB)",
+        "name": "Default Freight Terms",
+        "range": "FreightTerms"
+    },{
+        "@id": "sLAExpirationDate",
+        "@type": "Property",
+        "description": "When is the Service Level Agreement expiring",
+        "name": "SLA Expiration Date",
+        "range": "DataType"
+    },{
+        "@id": "sLATypeId",
+        "@type": "Property",
+        "description": "What type of Service Level Agreement does this customer have with us",
+        "name": "SLA Type",
+        "range": "SLAType"
     }
-  ]
+    ]
 }

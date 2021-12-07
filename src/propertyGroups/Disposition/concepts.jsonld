@@ -1,30 +1,27 @@
 {
-  "@context": "http://cloudinformationmodel.org/context.jsonld",
-  "@id": "DispositionPropertyGroup",
-  "name": "Disposition Property Group",
-  "@type": "PropertyGroup",
-  "version": "0.1",
-  "propertyConcepts": [
-    {
-      "@id": "allowCustomerReturn",
-      "@type": "Property",
-      "description": "Can customer return this item or not e.g. no for underwear, swimsuits",
-      "name": "Allow Customer Return",
-      "range": "DataType"
-    },
-    {
-      "@id": "allowPartialRefund",
-      "@type": "Property",
-      "description": "Can customer get partial refund if returning item e.g. half a bag of dog food ok",
-      "name": "Allow Partial Refund",
-      "range": "DataType"
-    },
-    {
-      "@id": "disposalType",
-      "@type": "Property",
-      "description": "How is the product to be disposed of e.g. recycle, return, throw-away",
-      "name": "Disposal Type",
-      "range": "DataType"
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "DispositionPropertyGroup",
+    "name": "Disposition Property Group",
+    "@type": "PropertyGroup",
+    "propertyConcepts": [
+{
+        "@id": "allowCustomerReturn",
+        "@type": "Property",
+        "description": "Can customer return this item or not e.g. no for underwear, swimsuits",
+        "name": "Allow Customer Return",
+        "range": "DataType"
+    },{
+        "@id": "allowPartialRefund",
+        "@type": "Property",
+        "description": "Can customer get partial refund if returning item e.g. half a bag of dog food ok",
+        "name": "Allow Partial Refund",
+        "range": "DataType"
+    },{
+        "@id": "disposalTypeId",
+        "@type": "Property",
+        "description": "How is the product to be disposed of e.g. recycle, return, throw-away",
+        "name": "Disposal Type",
+        "range": "DisposalType"
     }
-  ]
+    ]
 }

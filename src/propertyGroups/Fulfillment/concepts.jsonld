@@ -1,121 +1,63 @@
 {
-  "@context": "http://cloudinformationmodel.org/context.jsonld",
-  "@id": "FulfillmentPropertyGroup",
-  "name": "Fulfillment Property Group",
-  "@type": "PropertyGroup",
-  "version": "0.1",
-  "propertyConcepts": [
-    {
-      "@id": "quantityOrderedUOM",
-      "@type": "Property",
-      "description": "The unit of measure for the quantity ordered. Item, box, palette could be examples.",
-      "name": "Quantity Ordered Unit Of Measure",
-      "range": "DataType"
-    },
-    {
-      "@id": "promisedDate",
-      "@type": "Property",
-      "description": "Start date for the order product",
-      "name": "Promised Date",
-      "range": "DataType"
-    },
-    {
-      "@id": "provisioningDate",
-      "@type": "Property",
-      "description": "The date when the seller expects to provision the service or product.",
-      "name": "Provisioning Date",
-      "range": "DataType"
-    },
-    {
-      "@id": "allocatedQuantity",
-      "@type": "Property",
-      "description": "Quanity allocated for fulfillment",
-      "name": "Allocated Quantity",
-      "range": "DataType"
-    },
-    {
-      "@id": "availableQuantity",
-      "@type": "Property",
-      "description": "Amount of an order product that is available to be reduced. Value must be greater than or equal to 0. An order product is reducible only if AvailableQuantity is greater than 0. Value is always 0 if the order product's parent order is a reduction order.",
-      "name": "Available Quantity",
-      "range": "DataType"
-    },
-    {
-      "@id": "fulfilledQuantity",
-      "@type": "Property",
-      "description": "Quantity actually provided",
-      "name": "FulfilledQuantity",
-      "range": "DataType"
-    },
-    {
-      "@id": "shippingAddress",
-      "@type": "Property",
-      "description": "Shipping address",
-      "name": "Shipping Address Id",
-      "range": "ContactPointAddress"
-    },
-    {
-      "@id": "shippingEmail",
-      "@type": "Property",
-      "description": "Shipping email",
-      "name": "Shipping Email Id",
-      "range": "ContactPointEmail"
-    },
-    {
-      "@id": "shippingPhone",
-      "@type": "Property",
-      "description": "Shipping phone",
-      "name": "Shipping Phone Id",
-      "range": "ContactPointPhone"
-    },
-    {
-      "@id": "endDate",
-      "@type": "Property",
-      "description": "...returned as we have no idea why this is here",
-      "name": "EndDate",
-      "range": "DataType"
-    },
-    {
-      "@id": "allocationGroupName",
-      "@type": "Property",
-      "description": "....not sure what this is so returned",
-      "name": "Allocation Group Name",
-      "range": "DataType"
-    },
-    {
-      "@id": "allocationPartitionName",
-      "@type": "Property",
-      "description": "....not sure what this is so returned",
-      "name": "Allocation Partition",
-      "range": "DataType"
-    },
-    {
-      "@id": "cancelledQuantity",
-      "@type": "Property",
-      "description": "The quantity of items that have been canceled. Does not consider credited or returned items",
-      "name": "Cancelled Quantity",
-      "range": "DataType"
-    },
-    {
-      "@id": "handlingCostAmount",
-      "@type": "Property",
-      "description": "Cost charged to customer for handling the order",
-      "name": "Handling Cost Amount",
-      "range": "DataType"
-    },
-    {
-      "@id": "shippingCostAmount",
-      "@type": "Property",
-      "description": "Shipping cost charged to customer",
-      "name": "Shipping Cost Amount",
-      "range": "DataType"
-    },
-    {
-      "@id": "shippingTaxAmount",
-      "@type": "Property",
-      "description": "Shipping tax charged to customer",
-      "name": "Shipping Tax Amount",
-      "range": "DataType"
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "FulfillmentPropertyGroup",
+    "name": "Fulfillment Property Group",
+    "@type": "PropertyGroup",
+    "propertyConcepts": [
+{
+        "@id": "allocatedQuantity",
+        "@type": "Property",
+        "description": "Quanity allocated for fulfillment",
+        "name": "Allocated Quantity",
+        "range": "DataType"
+    },{
+        "@id": "availableQuantity",
+        "@type": "Property",
+        "description": "Amount of an order product that is available to be reduced. Value must be greater than or equal to 0. An order product is reducible only if AvailableQuantity is greater than 0. Value is always 0 if the order product's parent order is a reduction order.",
+        "name": "Available Quantity",
+        "range": "DataType"
+    },{
+        "@id": "handlingCostAmountCurrency",
+        "@type": "Property",
+        "description": "Currency for Handling Cost Amount",
+        "name": "Handling Cost Amount Currency",
+        "range": "Currency"
+    },{
+        "@id": "promisedDate",
+        "@type": "Property",
+        "description": "Start date for the order product",
+        "name": "Promised Date",
+        "range": "DataType"
+    },{
+        "@id": "provisioningDate",
+        "@type": "Property",
+        "description": "The date when the seller expects to provision the service or product.",
+        "name": "Provisioning Date",
+        "range": "DataType"
+    },{
+        "@id": "quantityFulfilled",
+        "@type": "Property",
+        "description": "Quantity actually provided",
+        "name": "Quantity Fulfilled",
+        "range": "DataType"
+    },{
+        "@id": "quantityOrderedUOMId",
+        "@type": "Property",
+        "description": "The unit of measure for the quantity ordered. Item, box, palette could be examples.",
+        "name": "Quantity Ordered Unit Of Measure",
+        "range": "QuantityUOM"
+    },{
+        "@id": "shippingCostAmountCurrency",
+        "@type": "Property",
+        "description": "Currency for Shipping Cost Amount",
+        "name": "Shipping Cost Amount Currency",
+        "range": "Currency"
+    },{
+        "@id": "shippingTaxAmountCurrency",
+        "@type": "Property",
+        "description": "Currency for Shipping Tax Amount",
+        "name": "Shipping Tax Amount Currency",
+        "range": "Currency"
     }
-  ]
+    ]
 }

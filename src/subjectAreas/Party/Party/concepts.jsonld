@@ -1,1063 +1,2054 @@
 {
-  "@context": "http://cloudinformationmodel.org/context.jsonld",
-  "@id": "PartyEntityGroup",
-  "name": "Party",
-  "@type": "EntityGroup",
-  "version": "0.1",
-  "subjectArea": {
-    "@id": "PartySubjectArea"
-  },
-  "description": "Example Entities included: Organization, Individual, Affiliate Group, Uncategorized",
-  "classConcepts": [
-    {
-      "@id": "Party",
-      "name": "Party",
-      "@type": "Class",
-      "description": "A unified, in system, definition of who you are dealing with e.g. John Doe, Northern Trail Outfitters and can be of different types e.g. individual, business, affiliation group."
-    },
-    {
-      "@id": "Individual",
-      "name": "Individual",
-      "@type": "Class",
-      "subClassOf": "Party",
-      "description": "Represent the person you are, or will be, dealing with using the system"
-    },
-    {
-      "@id": "Household",
-      "name": "Household",
-      "@type": "Class",
-      "subClassOf": "Party",
-      "description": "A combination of people, normally recorded in the system for marketing or service purposes"
-    },
-    {
-      "@id": "InternalBusinessUnit",
-      "name": "Internal Business Unit",
-      "@type": "Class",
-      "subClassOf": "Party",
-      "description": "Defining a part of your own internal organization. May be anything from a holding company, a line of business, a country division, a department and for which you may want to track e.g. if it is a legal entity, default GL Code, profit-and-loss etc against."
-    },
-    {
-      "@id": "UncategorizedParty",
-      "name": "Uncategorized Party",
-      "@type": "Class",
-      "subClassOf": "Party",
-      "description": "A party we may be, or will be, dealing with but we do not know who they are yet e.g. Social Handle 'TrustedNews' which we do not yet know if a person or a business but complain about our company so we want to log a case to investigate further. E.g. an ord"
-    },
-    {
-      "@id": "PartyAdditionalName",
-      "name": "Party Additional Name",
-      "@type": "Class",
-      "description": "Under what name is a person also known as( AKA), under what alternate name is a business doing business as (DBA)"
-    },
-    {
-      "@id": "PersonLanguage",
-      "name": "Person Language",
-      "@type": "Class",
-      "description": "Languages a person can comprehend and level of comprehension"
-    },
-    {
-      "@id": "PartyRelatedParty",
-      "name": "Party Related Party",
-      "@type": "Class",
-      "description": "Relates any two parties together e.g. Jane and John Doe part of The Doe Household"
-    },
-    {
-      "@id": "PartyRelationshipType",
-      "name": "Party Relationship Type",
-      "@type": "Class",
-      "description": "Define name of a relationship and how to read the relationship both ways e.g. household for / household member of"
-    },
-    {
-      "@id": "PartyIdentification",
-      "name": "Party Identification",
-      "@type": "Class",
-      "description": "Set of ways to identify a party e.g. driving license, birth certificate"
-    },
-    {
-      "@id": "PersonEmployment",
-      "name": "Person Employment",
-      "@type": "Class",
-      "description": "Information about an employee"
-    },
-    {
-      "@id": "PersonLifeEvent",
-      "name": "Person Life Event",
-      "@type": "Class",
-      "description": "Major events a person had in their lives e.g. graudation date, marriage date"
-    },
-    {
-      "@id": "PersonEducation",
-      "name": "Person Education",
-      "@type": "Class",
-      "description": "Education a person has e.g. Phd, High School"
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "a590de2e-9a41-38cd-8cdd-cf5747b21906",
+    "@type": "EntityGroup",
+    "name": "Party",
+    "version": "1.0.0",
+    "subjectArea": "aeaf98cc-53c1-300a-827f-57f4ce0bf764",
+    "description": "Example Entities included: Organization, Individual, Affiliate Group, Uncategorized",
+    "classConcepts": [
+{
+        "@id": "AccountScore",
+        "name": "Account Score",
+        "@type": "Class",
+        "subClassOf": "Score",
+        "description": "A value, derived from models and/or data that has been collected, about an Account. Examples could include bronze, platinum and silver, based on past revenue or Low, Medium or High, based on a scoring of attrition risk"
+    },{
+        "@id": "AccountServiceEntitlement",
+        "name": "Account Service Entitlement",
+        "@type": "Class",
+        "subClassOf": "ServiceEntitlement",
+        "description": "Units of customer support which a customer is eligible to consume that are not specific to any product they purchased"
+    },{
+        "@id": "AffiliationGroup",
+        "name": "Affiliation Group",
+        "@type": "Class",
+        "subClassOf": "Party",
+        "description": "An arbitrary, non legal entity, that group a set of parties e.g. The Local Neighborhood Watch Group, the Girl Scout Cookie Selling Group, All Volunteers of Dreamland"
+    },{
+        "@id": "AgeRange",
+        "name": "Age Range",
+        "@type": "Class",
+        "description": "Commonly used age ranges, e.g., 18-49, 50-75"
+    },{
+        "@id": "BankruptcyType",
+        "name": "Bankruptcy Type",
+        "@type": "Class",
+        "description": "What type of bankcruptcy the business ent through e.g. chapter 7, chapter 11"
+    },{
+        "@id": "BusinessActivity",
+        "name": "Business Activity",
+        "@type": "Class",
+        "description": "Main type of business activity e.g. farmer, sales"
+    },{
+        "@id": "BusinessLegalStatus",
+        "name": "Business Legal Status",
+        "@type": "Class",
+        "description": "Legal or tax standing e.g. commercial, non-profit, academic, government"
+    },{
+        "@id": "BusinessOwnership",
+        "name": "Business Ownership",
+        "@type": "Class",
+        "description": "Is the company public or private"
+    },{
+        "@id": "BusinessSizeType",
+        "name": "Business Size Type",
+        "@type": "Class",
+        "description": "How big is the business e.g. small, medium, enterprise"
+    },{
+        "@id": "ContactPointAddress",
+        "name": "Contact Point Address",
+        "@type": "Class",
+        "subClassOf": "ContactPoint",
+        "description": "Mailing address for a party e.g. 123 Main St, Big City, CA12345, USA"
+    },{
+        "@id": "DietaryHabitType",
+        "name": "Dietary Habit Type",
+        "@type": "Class",
+        "description": "Dietary habit e.g. kosher food eater"
+    },{
+        "@id": "DisabilityType",
+        "name": "Disability Type",
+        "@type": "Class",
+        "description": "Disability or Impairment e.g. wheel chair bound"
+    },{
+        "@id": "DoNotProcessReason",
+        "name": "Do Not Process Reason",
+        "@type": "Class",
+        "description": "Why no processing allowed e.g Accuracy Questioned, Processing Unlawful, Legal Prohibit Delete, Data Subject Objection"
+    },{
+        "@id": "EmploymentStatus",
+        "name": "Employment Status",
+        "@type": "Class",
+        "description": "What type of employment status the worker have e.g. full time"
+    },{
+        "@id": "Ethnicity",
+        "name": "Ethnicity",
+        "@type": "Class",
+        "description": "Cultural background e.g. black, white, hispanic, asian, native american, mixed"
+    },{
+        "@id": "Gender",
+        "name": "Gender",
+        "@type": "Class",
+        "description": "Female, Male, Other"
+    },{
+        "@id": "GlobalParty",
+        "name": "Global Party",
+        "@type": "Class",
+        "description": "A unified, cross systems, definition of a Party e.g. John Doe"
+    },{
+        "@id": "HeightUOM",
+        "name": "Height Unit Of Measure",
+        "@type": "Class",
+        "description": "What unit of mesure is used for height e.g. inches, centimeter"
+    },{
+        "@id": "Hobby",
+        "name": "Hobby",
+        "@type": "Class",
+        "description": "What is the primary hobby of the person e.g. skiing, running, swimming"
+    },{
+        "@id": "HousingType",
+        "name": "Housing Type",
+        "@type": "Class",
+        "description": "List of Housing Types e.g. Owned, Rented, Homeless"
+    },{
+        "@id": "IncomeRange",
+        "name": "Income Range",
+        "@type": "Class",
+        "description": "What is the income range the person is part of"
+    },{
+        "@id": "Individual",
+        "name": "Individual",
+        "@type": "Class",
+        "subClassOf": "Party",
+        "description": "Represents a person."
+    },{
+        "@id": "IndividualScore",
+        "name": "Individual Score",
+        "@type": "Class",
+        "subClassOf": "Score",
+        "description": "A value, collected or derived about a person. May be specific to one of their contact points, and may be specific to the analysis of one internal organization within the larger organization. Examples could include how likely to open an email, or buy"
+    },{
+        "@id": "InternalBusinessUnitType",
+        "name": "Internal Business Unit Type",
+        "@type": "Class",
+        "description": "E.g. HQ, Division, Department"
+    },{
+        "@id": "ISICCode",
+        "name": "ISIC Code",
+        "@type": "Class",
+        "description": "United Nations International Standard Industrial Classification of All Economic Activities"
+    },{
+        "@id": "LanguageProficiencyLevel",
+        "name": "Language Proficiency Level",
+        "@type": "Class",
+        "description": "How well an individual can speak, read or write the language e.g. Limited, Good, Excellent"
+    },{
+        "@id": "LegalEntity",
+        "name": "Legal Entity",
+        "@type": "Class",
+        "description": "An organization within the company that has legal standing in the eyes of law, distinct from other organizations."
+    },{
+        "@id": "LegalOrganizationType",
+        "name": "Legal Organization Type",
+        "@type": "Class",
+        "description": "E.g. Sole proprietor, Partnership, Limited Partnereshp, S-Corporation"
+    },{
+        "@id": "LifeAttitudeType",
+        "name": "Life Attitude Type",
+        "@type": "Class",
+        "description": "Life attitude e.g. innovator, believer, achiever, experience, survivor"
+    },{
+        "@id": "LifeStyleType",
+        "name": "Life Style Type",
+        "@type": "Class",
+        "description": "Life style e.g. modern, corporate, suburban, religious, workaholic, outdoors"
+    },{
+        "@id": "MaritalStatus",
+        "name": "Marital Status",
+        "@type": "Class",
+        "description": "E.g. single, married, divorced, widowed, partnership, other"
+    },{
+        "@id": "MilitaryServiceStatus",
+        "name": "MilitaryServiceStatus",
+        "@type": "Class",
+        "description": "Has the person served in the military e.g. unknown, yes, no"
+    },{
+        "@id": "MilitaryStatus",
+        "name": "Military Status",
+        "@type": "Class",
+        "description": "Unknown, no military service, vietnam veteran, other veteran, active reserve, retired, active duty"
+    },{
+        "@id": "NAICSCode",
+        "name": "NAICS Code",
+        "@type": "Class",
+        "description": "6 digit North American Industry Code"
+    },{
+        "@id": "Occupation",
+        "name": "Occupation",
+        "@type": "Class",
+        "description": "Professional, manager, tradesman, technical, military, unskilled, student, home maker, other"
+    },{
+        "@id": "Organization",
+        "name": "Organization",
+        "@type": "Class",
+        "subClassOf": "Party",
+        "description": "A company we intend, or are, doing business with e.g. Northern Trail Outfitters USA. Can also be a lower level business than a company e.g. Northern Trail Outfitters - Calfornia USA. If there some form of a (apply to Americ) DUNS number for it, then it is"
+    },{
+        "@id": "OrganizationMilestone",
+        "name": "Organization Milestone",
+        "@type": "Class",
+        "description": "Events such as revenue and market share metrics that are significant to the Organization and its goals."
+    },{
+        "@id": "Party",
+        "name": "Party",
+        "@type": "Class",
+        "description": "A unified, in a system, definition of who you are dealing with e.g. John Doe, Northern Trail Outfitters and can be of different types e.g. individual, business or unknown (uncategorized)."
+    },{
+        "@id": "PartyAccreditation",
+        "name": "Party Accreditation",
+        "@type": "Class",
+        "description": "Authority or approval that has been granted to a Party."
+    },{
+        "@id": "PartyAdditionalName",
+        "name": "Party Additional Name",
+        "@type": "Class",
+        "description": "Under what name is a person also known as( AKA), under what alternate name is a business doing business as (DBA)"
+    },{
+        "@id": "PartyAdditionalNameType",
+        "name": "Party Additional Name Type",
+        "@type": "Class",
+        "description": "E.g. Also-Known-As(AKA), Doing-Business-As(DBA)"
+    },{
+        "@id": "PartyAward",
+        "name": "Party Award",
+        "@type": "Class",
+        "description": "An accolade that has been bestowed on a Party."
+    },{
+        "@id": "PartyBoardCertification",
+        "name": "Party Board Certification",
+        "@type": "Class",
+        "description": "A designation of achievement that has been bestowed on a Party by a recognized authority."
+    },{
+        "@id": "PartyBusinessLicense",
+        "name": "Party Business License",
+        "@type": "Class",
+        "description": "A legal document that grants a Party the right to operate in a city or other jurisdiction e.g., granted permission to run a gym or a contracting company."
+    },{
+        "@id": "PartyHierarchy",
+        "name": "Party Hierarchy",
+        "@type": "Class",
+        "description": "A grouping of parties into levels, where a Party contains any number of Parties at the level below, and may belong to one Party at the level above. Legal incorporation and Accounting rules are reasons for organizing hierarchies of parties in this way."
+    },{
+        "@id": "PartyHierarchyMember",
+        "name": "Party Hierarchy Member",
+        "@type": "Class",
+        "description": "The participation of a Party in a Party Hierarchy. Any Party could be a member of more than one hierarchy."
+    },{
+        "@id": "PartyIdentification",
+        "name": "Party Identification",
+        "@type": "Class",
+        "description": "Set of ways to identify a party e.g. driving license, birth certificate"
+    },{
+        "@id": "PartyIdentificationType",
+        "name": "Party Identification Type",
+        "@type": "Class",
+        "description": "The type of identification e.g driving license number, birth certificate, rewards membership"
+    },{
+        "@id": "PartyNoMergeReason",
+        "name": "Party No Merge Reason",
+        "@type": "Class",
+        "description": "Why could the party functionally not be merged with another party definition e.g. legal reason, line of business concern"
+    },{
+        "@id": "PartyProfessionalCredential",
+        "name": "Party Professional Credential",
+        "@type": "Class",
+        "description": "A certificate or document attesting to a party's accomplishment or authority, such as holding a license."
+    },{
+        "@id": "PartyRelatedParty",
+        "name": "Party Related Party",
+        "@type": "Class",
+        "description": "Relates any two parties together e.g. Jane and John Doe part of The Doe Household"
+    },{
+        "@id": "PartyRelationshipRole",
+        "name": "Party Relationship Role",
+        "@type": "Class",
+        "description": "What role does a party play in the relationshp e.g. Household of, Household member"
+    },{
+        "@id": "PartyRelationshipType",
+        "name": "Party Relationship Type",
+        "@type": "Class",
+        "description": "Define name of a relationship and how to read the relationship both ways e.g. household for / household member of"
+    },{
+        "@id": "PartyRole",
+        "name": "Party Role",
+        "@type": "Class",
+        "description": "Trading roles a party may play at the same time i.e. Customer, Supplier, Seller, Competitor, Worker"
+    },{
+        "@id": "PartyTaxExemptionCertificate",
+        "name": "Party Tax Exemption Certificate",
+        "@type": "Class",
+        "description": "A document that allows an organization or individual to be excused from paying one or more taxes that would otherwise be applicable."
+    },{
+        "@id": "PartyType",
+        "name": "Party Type",
+        "@type": "Class",
+        "description": "The type of party e.g. organization, individual, group, unknown"
+    },{
+        "@id": "PersonalityType",
+        "name": "Personality Type",
+        "@type": "Class",
+        "description": "Personality e.g. impulsive, compulsive, authoritative, ambitious, introverted"
+    },{
+        "@id": "PersonalValueType",
+        "name": "Personal Value Type",
+        "@type": "Class",
+        "description": "Personal value e.g. family-oriented, materialistic, spiritual, idealistic, careerist"
+    },{
+        "@id": "PersonEducation",
+        "name": "Person Education",
+        "@type": "Class",
+        "description": "Education that a person has completed, e.g. Phd, High School"
+    },{
+        "@id": "PersonEmployment",
+        "name": "Person Employment",
+        "@type": "Class",
+        "description": "Information about an employee"
+    },{
+        "@id": "PersonLanguage",
+        "name": "Person Language",
+        "@type": "Class",
+        "description": "Languages a person can comprehend and level of comprehension"
+    },{
+        "@id": "PersonLifeEvent",
+        "name": "Person Life Event",
+        "@type": "Class",
+        "description": "Major events a person had in their lives e.g. graudation date, marriage date"
+    },{
+        "@id": "PersonLifeEventType",
+        "name": "Person Life Event Type",
+        "@type": "Class",
+        "description": "Type of life event e.g. graduation date, divorce date"
+    },{
+        "@id": "PersonLifeStage",
+        "name": "Person Life Stage",
+        "@type": "Class",
+        "description": "E.g. newborn, infant, child, teen, adolescent, adult, mature, elderly"
+    },{
+        "@id": "PersonName",
+        "name": "Person Name",
+        "@type": "Class",
+        "description": "Variations of a person's name over time. Reasons for name changes include changes in marriage status and adoption."
+    },{
+        "@id": "PersonTraining",
+        "name": "Person Training",
+        "@type": "Class",
+        "description": "Training a person have e.g. work-related training"
+    },{
+        "@id": "PopulationType",
+        "name": "Population Type",
+        "@type": "Class",
+        "description": "List of Population Types e.g. Medical Staff, Patient, Vendor"
+    },{
+        "@id": "Pronoun",
+        "name": "Pronoun",
+        "@type": "Class",
+        "description": "In English grammar, a word such as He, She and They that is used to refer to a specific person"
+    },{
+        "@id": "Religion",
+        "name": "Religion",
+        "@type": "Class",
+        "description": "Religion e.g. Islam, Samaritanism, Syncretic, Christian"
+    },{
+        "@id": "ResidenceCaptureMethod",
+        "name": "Residence Capture Method",
+        "@type": "Class",
+        "description": "How was residence country captured i.e. user provided or derived based on IP address"
+    },{
+        "@id": "SICCode",
+        "name": "SIC Code",
+        "@type": "Class",
+        "description": "4 digit Standard Industry Classification code and a predecessor to using NAICS"
+    },{
+        "@id": "TaxExemptionCertificate",
+        "name": "Tax Exemption Certificate",
+        "@type": "Class",
+        "description": "Documentation that attests that a person or organization is exempt from certain forms of taxation."
+    },{
+        "@id": "UncategorizedParty",
+        "name": "Uncategorized Party",
+        "@type": "Class",
+        "subClassOf": "Party",
+        "description": "A party we may be, or will be, dealing with but we do not know who they are yet e.g. Social Handle 'TrustedNews' which we do not yet know if a person or a business but complain about our company so we want to log a case to investigate further. E.g. an ord"
+    },{
+        "@id": "UncategorizedPartyCreationReason",
+        "name": "Uncategorized Party Creation Reason",
+        "@type": "Class",
+        "description": "Why can party not yet be categorized e.g. was cash buyer, got social handle only"
+    },{
+        "@id": "WeightUnitOfMeasure",
+        "name": "Weight Unit Of Measure",
+        "@type": "Class",
+        "description": "What unit of measure is used for weight e.g. pound, kilogram"
     }
-  ],
-  "propertyConcepts": [
-    {
-      "@id": "writtenProficiencyLevel",
-      "@type": "Property",
-      "domain": [
-        "PersonLanguage"
-      ]
-    },
-    {
-      "@id": "dependentCount",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "identificationNumber",
-      "@type": "Property",
-      "domain": [
-        "PartyIdentification"
-      ]
-    },
-    {
-      "@id": "birthPlace",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "convictionsCount",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "creationReason",
-      "@type": "Property",
-      "domain": [
-        "UncategorizedParty"
-      ]
-    },
-    {
-      "@id": "hasDrugAbuseHistory",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "spokenProficiencyLevel",
-      "@type": "Property",
-      "domain": [
-        "PersonLanguage"
-      ]
-    },
-    {
-      "@id": "ethnicity",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "orderingName",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "relatedToDate",
-      "@type": "Property",
-      "domain": [
-        "PartyRelatedParty"
-      ]
-    },
-    {
-      "@id": "mainDietaryHabitType",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "mothersMaidenName",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "primaryHousehold",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "issuedDate",
-      "@type": "Property",
-      "domain": [
-        "PartyIdentification"
-      ]
-    },
-    {
-      "@id": "primaryAccount",
-      "@type": "Property",
-      "domain": [
-        "Party"
-      ]
-    },
-    {
-      "@id": "primaryHobby",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "mainDisabilityType",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "householdMemberCount",
-      "@type": "Property",
-      "domain": [
-        "Household"
-      ]
-    },
-    {
-      "@id": "yearlyIncome",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "photoURL",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "isDrugConsumer",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "doNotProcessReason",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "surgeriesLast5YearsCount",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "highestEducationLevel",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "employerCityName",
-      "@type": "Property",
-      "domain": [
-        "PersonEmployment"
-      ]
-    },
-    {
-      "@id": "deathPlace",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "militaryStatus",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "deathDate",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "globalParty",
-      "@type": "Property",
-      "domain": [
-        "Party"
-      ]
-    },
-    {
-      "@id": "personLifeStage",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "residenceCountryName",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "id",
-      "@type": "Property",
-      "domain": [
-        "PartyRelationshipType",
-        "UncategorizedParty",
-        "Household",
-        "PersonLanguage",
-        "PersonEmployment",
-        "PartyIdentification",
-        "Party",
-        "PartyAdditionalName",
-        "Individual",
-        "InternalBusinessUnit",
-        "PersonLifeEvent",
-        "PersonEducation",
-        "PartyRelatedParty"
-      ]
-    },
-    {
-      "@id": "yearlyIncomeRange",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "doForgetMeFromUpdateDate",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "personLifeEventDateTime",
-      "@type": "Property",
-      "domain": [
-        "PersonLifeEvent"
-      ]
-    },
-    {
-      "@id": "occupationType",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "occupationText",
-      "@type": "Property",
-      "domain": [
-        "PersonEmployment"
-      ]
-    },
-    {
-      "@id": "mainLifeStyleType",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "currentEmployerName",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "partyRole",
-      "@type": "Property",
-      "domain": [
-        "PartyRelationshipType",
-        "PartyIdentification"
-      ]
-    },
-    {
-      "@id": "salutation",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "residenceCaptureMethod",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "doNotProfileFromUpdateDate",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "graduationDate",
-      "@type": "Property",
-      "domain": [
-        "PersonEducation"
-      ]
-    },
-    {
-      "@id": "officialName",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "employerAddressLine1",
-      "@type": "Property",
-      "domain": [
-        "PersonEmployment"
-      ]
-    },
-    {
-      "@id": "employerAddressLine2",
-      "@type": "Property",
-      "domain": [
-        "PersonEmployment"
-      ]
-    },
-    {
-      "@id": "employerAddressLine3",
-      "@type": "Property",
-      "domain": [
-        "PersonEmployment"
-      ]
-    },
-    {
-      "@id": "employerAddressLine4",
-      "@type": "Property",
-      "domain": [
-        "PersonEmployment"
-      ]
-    },
-    {
-      "@id": "overAgeNumber",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "personWeightUnitOfMeasure",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "taxBracketRange",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "webSiteURL",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "weddingAnniversaryDate",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "minorCitationCount",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "isGoodStudent",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "doNotTrackLocationUpdateDate",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "businessUnitType",
-      "@type": "Property",
-      "domain": [
-        "InternalBusinessUnit"
-      ]
-    },
-    {
-      "@id": "employerPostalCodeText",
-      "@type": "Property",
-      "domain": [
-        "PersonEmployment"
-      ]
-    },
-    {
-      "@id": "firstName",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "doNotProcessFromUpdateDate",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "parentInternalBusinessUnit",
-      "@type": "Property",
-      "domain": [
-        "InternalBusinessUnit"
-      ]
-    },
-    {
-      "@id": "endDate",
-      "@type": "Property",
-      "domain": [
-        "PersonEmployment"
-      ]
-    },
-    {
-      "@id": "secondLastName",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "netWorth",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "occupation",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "relatedPartyRole",
-      "@type": "Property",
-      "domain": [
-        "PartyRelationshipType"
-      ]
-    },
-    {
-      "@id": "gender",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "party",
-      "@type": "Property",
-      "domain": [
-        "PartyAdditionalName",
-        "PartyRelatedParty",
-        "PartyIdentification"
-      ]
-    },
-    {
-      "@id": "mailingName",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "verifiedDate",
-      "@type": "Property",
-      "domain": [
-        "PartyIdentification"
-      ]
-    },
-    {
-      "@id": "uncategorizedPartyLabel",
-      "@type": "Property",
-      "domain": [
-        "UncategorizedParty"
-      ]
-    },
-    {
-      "@id": "partyIdentificationType",
-      "@type": "Property",
-      "domain": [
-        "PartyIdentification"
-      ]
-    },
-    {
-      "@id": "employerName",
-      "@type": "Property",
-      "domain": [
-        "PersonEmployment"
-      ]
-    },
-    {
-      "@id": "householdDissolvedDate",
-      "@type": "Property",
-      "domain": [
-        "Household"
-      ]
-    },
-    {
-      "@id": "expiryDate",
-      "@type": "Property",
-      "domain": [
-        "PartyIdentification"
-      ]
-    },
-    {
-      "@id": "employedSinceDate",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "isTobaccoConsume",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "sendIndividualData",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "isBidirectional",
-      "@type": "Property",
-      "domain": [
-        "PartyRelationshipType"
-      ]
-    },
-    {
-      "@id": "employerPhoneNumber",
-      "@type": "Property",
-      "domain": [
-        "PersonEmployment"
-      ]
-    },
-    {
-      "@id": "consumerCreditScoreProviderName",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "partyType",
-      "@type": "Property",
-      "domain": [
-        "Party"
-      ]
-    },
-    {
-      "@id": "originalSourceRecord",
-      "@type": "Property",
-      "domain": [
-        "UncategorizedParty"
-      ]
-    },
-    {
-      "@id": "name",
-      "@type": "Property",
-      "domain": [
-        "PartyAdditionalName",
-        "Household",
-        "InternalBusinessUnit",
-        "PartyIdentification"
-      ]
-    },
-    {
-      "@id": "educationName",
-      "@type": "Property",
-      "domain": [
-        "PersonEducation"
-      ]
-    },
-    {
-      "@id": "startDate",
-      "@type": "Property",
-      "domain": [
-        "PersonEmployment"
-      ]
-    },
-    {
-      "@id": "relatedParty",
-      "@type": "Property",
-      "domain": [
-        "PartyRelatedParty"
-      ]
-    },
-    {
-      "@id": "doNotTrackUpdateDate",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "militaryService",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "mainPersonalValueType",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "noMergeReason",
-      "@type": "Property",
-      "domain": [
-        "Party"
-      ]
-    },
-    {
-      "@id": "nameSuffix",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "partyRelationshipType",
-      "@type": "Property",
-      "domain": [
-        "PartyRelatedParty"
-      ]
-    },
-    {
-      "@id": "hasAlcoholAbuseHistory",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "individual",
-      "@type": "Property",
-      "domain": [
-        "PersonLanguage",
-        "PersonEmployment",
-        "PersonLifeEvent",
-        "PersonEducation"
-      ]
-    },
-    {
-      "@id": "childrenCount",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "personHeight",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "maritalStatus",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "doNotMarketFromUpdateDate",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "consumerCreditScore",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "hospitalizationsLast5YearsCount",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "isGoodDriver",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "isHighRiskHobby",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "lastName",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "personWeight",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "majorCitationCount",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "birthDate",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "positionText",
-      "@type": "Property",
-      "domain": [
-        "PersonEmployment"
-      ]
-    },
-    {
-      "@id": "personLifeEventType",
-      "@type": "Property",
-      "domain": [
-        "PersonLifeEvent"
-      ]
-    },
-    {
-      "@id": "personHeightUnitOfMeasure",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "issuedAtLocation",
-      "@type": "Property",
-      "domain": [
-        "PartyIdentification"
-      ]
-    },
-    {
-      "@id": "isHighRiskOccupation",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "preferredName",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "employmentStatus",
-      "@type": "Property",
-      "domain": [
-        "PersonEmployment"
-      ]
-    },
-    {
-      "@id": "personName",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "isHomeOwner",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "institutionName",
-      "@type": "Property",
-      "domain": [
-        "PersonEducation"
-      ]
-    },
-    {
-      "@id": "additionalNameType",
-      "@type": "Property",
-      "domain": [
-        "PartyAdditionalName"
-      ]
-    },
-    {
-      "@id": "isAlcoholConsumer",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "employerContactPointAddress",
-      "@type": "Property",
-      "domain": [
-        "PersonEmployment"
-      ]
-    },
-    {
-      "@id": "issuedByAuthority",
-      "@type": "Property",
-      "domain": [
-        "PartyIdentification"
-      ]
-    },
-    {
-      "@id": "mainPersonalityType",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "mainLifeAttitudeType",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "middleName",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "doExtractMyDataUpdateDate",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "householdFormedDate",
-      "@type": "Property",
-      "domain": [
-        "Household"
-      ]
-    },
-    {
-      "@id": "shouldForget",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "relatedFromDate",
-      "@type": "Property",
-      "domain": [
-        "PartyRelatedParty"
-      ]
-    },
-    {
-      "@id": "originalSourceSystem",
-      "@type": "Property",
-      "domain": [
-        "UncategorizedParty"
-      ]
-    },
-    {
-      "@id": "influencerRating",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
-    },
-    {
-      "@id": "educationLevel",
-      "@type": "Property",
-      "domain": [
-        "PersonEducation"
-      ]
-    },
-    {
-      "@id": "annualIncome",
-      "@type": "Property",
-      "domain": [
-        "PersonEmployment"
-      ]
-    },
-    {
-      "@id": "religion",
-      "@type": "Property",
-      "domain": [
-        "Individual"
-      ]
+    ],
+    "propertyConcepts": [
+{
+        "@id": "taxId",
+        "@type": "Property",
+        "domain": [
+"Organization"
+        ]
+    },{
+        "@id": "originalSourceRecordId",
+        "@type": "Property",
+        "domain": [
+"UncategorizedParty"
+        ]
+    },{
+        "@id": "middleName",
+        "@type": "Property",
+        "domain": [
+"Individual","PartyAdditionalName","PersonName"
+        ]
+    },{
+        "@id": "personalValueTypeName",
+        "@type": "Property",
+        "domain": [
+"PersonalValueType"
+        ]
+    },{
+        "@id": "awardIssuerName",
+        "@type": "Property",
+        "domain": [
+"PartyAward"
+        ]
+    },{
+        "@id": "heightUOMName",
+        "@type": "Property",
+        "domain": [
+"HeightUOM"
+        ]
+    },{
+        "@id": "marketCapitalizationAmount",
+        "@type": "Property",
+        "domain": [
+"Organization"
+        ]
+    },{
+        "@id": "doNotProcessFromUpdateDate",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "militaryStatusId",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "primaryAccountId",
+        "@type": "Property",
+        "domain": [
+"Party"
+        ]
+    },{
+        "@id": "religionName",
+        "@type": "Property",
+        "domain": [
+"Religion"
+        ]
+    },{
+        "@id": "partyAdditionalNameTypeId",
+        "@type": "Property",
+        "domain": [
+"PartyAdditionalName"
+        ]
+    },{
+        "@id": "writtenProficiencyLevelId",
+        "@type": "Property",
+        "domain": [
+"PersonLanguage"
+        ]
+    },{
+        "@id": "partyId",
+        "@type": "Property",
+        "domain": [
+"PartyRelatedParty","OrganizationMilestone","Party","PartyAdditionalName","PartyRole","TaxExemptionCertificate","PartyHierarchyMember","PartyIdentification"
+        ]
+    },{
+        "@id": "addressLine1",
+        "@type": "Property",
+        "domain": [
+"ContactPointAddress"
+        ]
+    },{
+        "@id": "shouldForget",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "personName",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "consumerCreditScoreProviderName",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "spokenProficiencyLevelId",
+        "@type": "Property",
+        "domain": [
+"PersonLanguage"
+        ]
+    },{
+        "@id": "legalName",
+        "@type": "Property",
+        "domain": [
+"Organization"
+        ]
+    },{
+        "@id": "childrenCount",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "bankruptcyHistoryFlag",
+        "@type": "Property",
+        "domain": [
+"Organization"
+        ]
+    },{
+        "@id": "primaryCitizenshipCountryId",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "employerAddressLine4",
+        "@type": "Property",
+        "domain": [
+"PersonEmployment"
+        ]
+    },{
+        "@id": "positionText",
+        "@type": "Property",
+        "domain": [
+"PersonEmployment"
+        ]
+    },{
+        "@id": "postalCodeText",
+        "@type": "Property",
+        "domain": [
+"ContactPointAddress"
+        ]
+    },{
+        "@id": "incorporationDate",
+        "@type": "Property",
+        "domain": [
+"Organization"
+        ]
+    },{
+        "@id": "countryRegionId",
+        "@type": "Property",
+        "domain": [
+"ContactPointAddress"
+        ]
+    },{
+        "@id": "individualFullName",
+        "@type": "Property",
+        "domain": [
+"PartyAdditionalName"
+        ]
+    },{
+        "@id": "mainLifeStyleTypeId",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "identifierTypeName",
+        "@type": "Property",
+        "domain": [
+"PartyIdentificationType"
+        ]
+    },{
+        "@id": "partyHierarchyTypeId",
+        "@type": "Property",
+        "domain": [
+"PartyHierarchy"
+        ]
+    },{
+        "@id": "bankruptcyDate",
+        "@type": "Property",
+        "domain": [
+"Organization"
+        ]
+    },{
+        "@id": "partyIdentificationTypeId",
+        "@type": "Property",
+        "domain": [
+"PartyIdentification"
+        ]
+    },{
+        "@id": "militaryStatusName",
+        "@type": "Property",
+        "domain": [
+"MilitaryStatus"
+        ]
+    },{
+        "@id": "personLifeEventTypeId",
+        "@type": "Property",
+        "domain": [
+"PersonLifeEvent"
+        ]
+    },{
+        "@id": "suffixName",
+        "@type": "Property",
+        "domain": [
+"PartyAdditionalName","PersonName"
+        ]
+    },{
+        "@id": "influencerRating",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "employerCountryId",
+        "@type": "Property",
+        "domain": [
+"PersonEmployment"
+        ]
+    },{
+        "@id": "addressLine4",
+        "@type": "Property",
+        "domain": [
+"ContactPointAddress"
+        ]
+    },{
+        "@id": "legalOrganizationTypeId",
+        "@type": "Property",
+        "domain": [
+"Organization"
+        ]
+    },{
+        "@id": "secondLastName",
+        "@type": "Property",
+        "domain": [
+"Individual","PartyAdditionalName","PersonName"
+        ]
+    },{
+        "@id": "hasAlcoholAbuseHistory",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "dUNSNumber",
+        "@type": "Property",
+        "domain": [
+"Organization"
+        ]
+    },{
+        "@id": "isHomeOwner",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "personLifeStageName",
+        "@type": "Property",
+        "domain": [
+"PersonLifeStage"
+        ]
+    },{
+        "@id": "stateProvinceId",
+        "@type": "Property",
+        "domain": [
+"ContactPointAddress"
+        ]
+    },{
+        "@id": "bankruptcyEmergenceDate",
+        "@type": "Property",
+        "domain": [
+"Organization"
+        ]
+    },{
+        "@id": "doNotProcessReasonName",
+        "@type": "Property",
+        "domain": [
+"DoNotProcessReason"
+        ]
+    },{
+        "@id": "measurementSystemId",
+        "@type": "Property",
+        "domain": [
+"HeightUOM","WeightUnitOfMeasure"
+        ]
+    },{
+        "@id": "isHighRiskOccupation",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "addressId",
+        "@type": "Property",
+        "domain": [
+"ContactPointAddress"
+        ]
+    },{
+        "@id": "exemptionCertificateNumber",
+        "@type": "Property",
+        "domain": [
+"TaxExemptionCertificate"
+        ]
+    },{
+        "@id": "minorCitationCount",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "doNotTrackLocationUpdateDate",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "primaryIndustryName",
+        "@type": "Property",
+        "domain": [
+"Organization"
+        ]
+    },{
+        "@id": "employerAddressLine1",
+        "@type": "Property",
+        "domain": [
+"PersonEmployment"
+        ]
+    },{
+        "@id": "nameSuffix",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "externalSourceId",
+        "@type": "Property",
+        "domain": [
+"PartyIdentificationType"
+        ]
+    },{
+        "@id": "isUsedForBilling",
+        "@type": "Property",
+        "domain": [
+"ContactPointAddress"
+        ]
+    },{
+        "@id": "isGoodDriver",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "mainPersonalityTypeId",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "postalCodeId",
+        "@type": "Property",
+        "domain": [
+"ContactPointAddress"
+        ]
+    },{
+        "@id": "originCountryId",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "isBidirectional",
+        "@type": "Property",
+        "domain": [
+"PartyRelationshipType"
+        ]
+    },{
+        "@id": "geoLatitude",
+        "@type": "Property",
+        "domain": [
+"ContactPointAddress"
+        ]
+    },{
+        "@id": "primaryLanguageId",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "relatedToDate",
+        "@type": "Property",
+        "domain": [
+"PartyRelatedParty"
+        ]
+    },{
+        "@id": "partyIdentificationTypeName",
+        "@type": "Property",
+        "domain": [
+"PartyIdentificationType"
+        ]
+    },{
+        "@id": "iSICId",
+        "@type": "Property",
+        "domain": [
+"Organization"
+        ]
+    },{
+        "@id": "annualRevenueAmount",
+        "@type": "Property",
+        "domain": [
+"Organization"
+        ]
+    },{
+        "@id": "yearlyIncomeCurrencyId",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "annualRevenueCurrencyId",
+        "@type": "Property",
+        "domain": [
+"Organization"
+        ]
+    },{
+        "@id": "preferredName",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "terminationDate",
+        "@type": "Property",
+        "domain": [
+"Organization"
+        ]
+    },{
+        "@id": "relatedPartyRoleId",
+        "@type": "Property",
+        "domain": [
+"PartyRelationshipType"
+        ]
+    },{
+        "@id": "hobbyName",
+        "@type": "Property",
+        "domain": [
+"Hobby"
+        ]
+    },{
+        "@id": "taxExemptionStartDate",
+        "@type": "Property",
+        "domain": [
+"PartyTaxExemptionCertificate"
+        ]
+    },{
+        "@id": "overAgeNumber",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "personWeight",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "licenseNumber",
+        "@type": "Property",
+        "domain": [
+"PartyBusinessLicense"
+        ]
+    },{
+        "@id": "canStorePIIElsewhere",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "majorCitationCount",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "contactPhoneId",
+        "@type": "Property",
+        "domain": [
+"ContactPointAddress"
+        ]
+    },{
+        "@id": "legalOrganizationTypeName",
+        "@type": "Property",
+        "domain": [
+"LegalOrganizationType"
+        ]
+    },{
+        "@id": "addressLine3",
+        "@type": "Property",
+        "domain": [
+"ContactPointAddress"
+        ]
+    },{
+        "@id": "officialName",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "lifeAttitudeTypeName",
+        "@type": "Property",
+        "domain": [
+"LifeAttitudeType"
+        ]
+    },{
+        "@id": "annualRevenueAmountCurrency",
+        "@type": "Property",
+        "domain": [
+"Organization"
+        ]
+    },{
+        "@id": "netWorth",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "issuedDate",
+        "@type": "Property",
+        "domain": [
+"PartyIdentification"
+        ]
+    },{
+        "@id": "birthDateMonth",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "isAlcoholConsumer",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "doNotProfileFromUpdateDate",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "birthDate",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "personTrainingId",
+        "@type": "Property",
+        "domain": [
+"PersonTraining"
+        ]
+    },{
+        "@id": "legalIncorporationJurisdiction",
+        "@type": "Property",
+        "domain": [
+"Organization"
+        ]
+    },{
+        "@id": "maritalStatusName",
+        "@type": "Property",
+        "domain": [
+"MaritalStatus"
+        ]
+    },{
+        "@id": "dandBCompanyName",
+        "@type": "Property",
+        "domain": [
+"Organization"
+        ]
+    },{
+        "@id": "weddingAnniversaryDate",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "globalPartyId",
+        "@type": "Property",
+        "domain": [
+"Party"
+        ]
+    },{
+        "@id": "creationReasonId",
+        "@type": "Property",
+        "domain": [
+"UncategorizedParty"
+        ]
+    },{
+        "@id": "licenseIssuedDate",
+        "@type": "Property",
+        "domain": [
+"PartyBusinessLicense"
+        ]
+    },{
+        "@id": "isDrugConsumer",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "hasDrugAbuseHistory",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "surgeriesLast5YearsCount",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "personLifeEventDateTime",
+        "@type": "Property",
+        "domain": [
+"PersonLifeEvent"
+        ]
+    },{
+        "@id": "sICCodeName",
+        "@type": "Property",
+        "domain": [
+"SICCode"
+        ]
+    },{
+        "@id": "identificationNumber",
+        "@type": "Property",
+        "domain": [
+"PartyIdentification"
+        ]
+    },{
+        "@id": "hasOptedOutProcessing",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "ethnicityName",
+        "@type": "Property",
+        "domain": [
+"Ethnicity"
+        ]
+    },{
+        "@id": "employerAddressLine3",
+        "@type": "Property",
+        "domain": [
+"PersonEmployment"
+        ]
+    },{
+        "@id": "implementerType",
+        "@type": "Property",
+        "domain": [
+"PartyIdentificationType"
+        ]
+    },{
+        "@id": "mailingName",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "ownershipId",
+        "@type": "Property",
+        "domain": [
+"Organization"
+        ]
+    },{
+        "@id": "webSiteURL",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "photoURL",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "ethnicityId",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "occupationText",
+        "@type": "Property",
+        "domain": [
+"PersonEmployment"
+        ]
+    },{
+        "@id": "membershipEndDate",
+        "@type": "Property",
+        "domain": [
+"PartyHierarchyMember"
+        ]
+    },{
+        "@id": "isGoodStudent",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "taxExemptionEndDate",
+        "@type": "Property",
+        "domain": [
+"PartyTaxExemptionCertificate"
+        ]
+    },{
+        "@id": "trainingPointTotalNumber",
+        "@type": "Property",
+        "domain": [
+"PersonTraining"
+        ]
+    },{
+        "@id": "endDate",
+        "@type": "Property",
+        "domain": [
+"PersonEmployment"
+        ]
+    },{
+        "@id": "primaryBusinessLanguageId",
+        "@type": "Property",
+        "domain": [
+"Organization"
+        ]
+    },{
+        "@id": "physicalLocationId",
+        "@type": "Property",
+        "domain": [
+"ContactPointAddress"
+        ]
+    },{
+        "@id": "beginEffectiveDate",
+        "@type": "Property",
+        "domain": [
+"PartyAdditionalName","PersonName"
+        ]
+    },{
+        "@id": "countryId",
+        "@type": "Property",
+        "domain": [
+"ContactPointAddress"
+        ]
+    },{
+        "@id": "uncategorizedPartyCreationReasonName",
+        "@type": "Property",
+        "domain": [
+"UncategorizedPartyCreationReason"
+        ]
+    },{
+        "@id": "licenseExpirationDate",
+        "@type": "Property",
+        "domain": [
+"PartyBusinessLicense"
+        ]
+    },{
+        "@id": "highestEducationLevelId",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "geoLongitude",
+        "@type": "Property",
+        "domain": [
+"ContactPointAddress"
+        ]
+    },{
+        "@id": "personHeight",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "employerName",
+        "@type": "Property",
+        "domain": [
+"PersonEmployment"
+        ]
+    },{
+        "@id": "firstName",
+        "@type": "Property",
+        "domain": [
+"Individual","PartyAdditionalName","PersonName"
+        ]
+    },{
+        "@id": "legalStatusId",
+        "@type": "Property",
+        "domain": [
+"Organization"
+        ]
+    },{
+        "@id": "issuerName",
+        "@type": "Property",
+        "domain": [
+"TaxExemptionCertificate"
+        ]
+    },{
+        "@id": "bankcruptcyTypeName",
+        "@type": "Property",
+        "domain": [
+"BankruptcyType"
+        ]
+    },{
+        "@id": "doNotProcessReasonId",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "partyRelationshipRoleName",
+        "@type": "Property",
+        "domain": [
+"PartyRelationshipRole"
+        ]
+    },{
+        "@id": "expiryDate",
+        "@type": "Property",
+        "domain": [
+"PartyIdentification"
+        ]
+    },{
+        "@id": "noMergeReasonId",
+        "@type": "Property",
+        "domain": [
+"Party"
+        ]
+    },{
+        "@id": "uncategorizedPartyLabel",
+        "@type": "Property",
+        "domain": [
+"UncategorizedParty"
+        ]
+    },{
+        "@id": "stockTickerSymbol",
+        "@type": "Property",
+        "domain": [
+"Organization"
+        ]
+    },{
+        "@id": "employerPhoneNumber",
+        "@type": "Property",
+        "domain": [
+"PersonEmployment"
+        ]
+    },{
+        "@id": "lastName",
+        "@type": "Property",
+        "domain": [
+"Individual","PartyAdditionalName","PersonName"
+        ]
+    },{
+        "@id": "yearlyIncomeRangeId",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "issuedByAuthority",
+        "@type": "Property",
+        "domain": [
+"PartyIdentification"
+        ]
+    },{
+        "@id": "internalOrganizationId",
+        "@type": "Property",
+        "domain": [
+"IndividualScore"
+        ]
+    },{
+        "@id": "verifiedByUserId",
+        "@type": "Property",
+        "domain": [
+"PartyIdentification"
+        ]
+    },{
+        "@id": "fromAgeNumber",
+        "@type": "Property",
+        "domain": [
+"AgeRange"
+        ]
+    },{
+        "@id": "personLifeEventTypeName",
+        "@type": "Property",
+        "domain": [
+"PersonLifeEventType"
+        ]
+    },{
+        "@id": "startDate",
+        "@type": "Property",
+        "domain": [
+"PersonEmployment"
+        ]
+    },{
+        "@id": "employerStateProvinceId",
+        "@type": "Property",
+        "domain": [
+"PersonEmployment"
+        ]
+    },{
+        "@id": "genderId",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "accountId",
+        "@type": "Property",
+        "domain": [
+"AccountServiceEntitlement","AccountScore"
+        ]
+    },{
+        "@id": "yearlyIncome",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "doNotMarketFromUpdateDate",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "incomeRangeName",
+        "@type": "Property",
+        "domain": [
+"IncomeRange"
+        ]
+    },{
+        "@id": "toAgeNumber",
+        "@type": "Property",
+        "domain": [
+"AgeRange"
+        ]
+    },{
+        "@id": "bankruptcyTypeId",
+        "@type": "Property",
+        "domain": [
+"Organization"
+        ]
+    },{
+        "@id": "mainLifeAttitudeTypeId",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "employedSinceDate",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "organizationName",
+        "@type": "Property",
+        "domain": [
+"PartyAdditionalName"
+        ]
+    },{
+        "@id": "description",
+        "@type": "Property",
+        "domain": [
+"Organization","OrganizationMilestone","AgeRange","TaxExemptionCertificate","LegalEntity"
+        ]
+    },{
+        "@id": "mainDisabilityTypeId",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "marketCapitalizationAmountCurrency",
+        "@type": "Property",
+        "domain": [
+"Organization"
+        ]
+    },{
+        "@id": "businessSizeTypeName",
+        "@type": "Property",
+        "domain": [
+"BusinessSizeType"
+        ]
+    },{
+        "@id": "institutionName",
+        "@type": "Property",
+        "domain": [
+"PersonEducation"
+        ]
+    },{
+        "@id": "doNotTrackUpdateDate",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "partyHierarchyId",
+        "@type": "Property",
+        "domain": [
+"PartyHierarchyMember"
+        ]
+    },{
+        "@id": "taxExemptionJurisdictionName",
+        "@type": "Property",
+        "domain": [
+"PartyTaxExemptionCertificate"
+        ]
+    },{
+        "@id": "hospitalizationsLast5YearsCount",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "fullName",
+        "@type": "Property",
+        "domain": [
+"PersonName"
+        ]
+    },{
+        "@id": "residenceCaptureMethodId",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "taxBracketRange",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "businessName",
+        "@type": "Property",
+        "domain": [
+"Organization"
+        ]
+    },{
+        "@id": "relatedPartyId",
+        "@type": "Property",
+        "domain": [
+"PartyRelatedParty"
+        ]
+    },{
+        "@id": "relatedFromDate",
+        "@type": "Property",
+        "domain": [
+"PartyRelatedParty"
+        ]
+    },{
+        "@id": "createdDate",
+        "@type": "Property",
+        "domain": [
+"PartyIdentificationType"
+        ]
+    },{
+        "@id": "salutation",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "orderingName",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "pronounId",
+        "@type": "Property",
+        "domain": [
+"Individual","Pronoun"
+        ]
+    },{
+        "@id": "nAICSCodeName",
+        "@type": "Property",
+        "domain": [
+"NAICSCode"
+        ]
+    },{
+        "@id": "nAICSId",
+        "@type": "Property",
+        "domain": [
+"Organization"
+        ]
+    },{
+        "@id": "primaryHouseholdId",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "id",
+        "@type": "Property",
+        "domain": [
+"GlobalParty","PersonLifeStage","PartyAdditionalNameType","Party","NAICSCode","PartyRole","DoNotProcessReason","PartyIdentificationType","PersonEducation","PopulationType","SICCode","MaritalStatus","HeightUOM","WeightUnitOfMeasure","Ethnicity","Organization","BusinessLegalStatus","PartyAccreditation","PartyAdditionalName","ContactPointAddress","PersonEmployment","PartyRelationshipType","Individual","PartyNoMergeReason","BankruptcyType","ISICCode","PersonTraining","Religion","PartyRelationshipRole","AffiliationGroup","Pronoun","PartyHierarchyMember","BusinessOwnership","LegalEntity","Occupation","LanguageProficiencyLevel","PartyHierarchy","TaxExemptionCertificate","DietaryHabitType","EmploymentStatus","PartyProfessionalCredential","DisabilityType","OrganizationMilestone","PersonLifeEvent","PartyTaxExemptionCertificate","IndividualScore","Hobby","PersonalValueType","HousingType","PersonLanguage","MilitaryStatus","UncategorizedParty","LegalOrganizationType","PersonLifeEventType","InternalBusinessUnitType","ResidenceCaptureMethod","LifeAttitudeType","PartyAward","PartyRelatedParty","UncategorizedPartyCreationReason","BusinessActivity","BusinessSizeType","PartyBusinessLicense","AccountScore","PersonalityType","MilitaryServiceStatus","PersonName","LifeStyleType","IncomeRange","PartyBoardCertification","AccountServiceEntitlement","AgeRange","Gender","PartyIdentification","PartyType"
+        ]
+    },{
+        "@id": "issuedAtLocation",
+        "@type": "Property",
+        "domain": [
+"PartyIdentification"
+        ]
+    },{
+        "@id": "addressLine2",
+        "@type": "Property",
+        "domain": [
+"ContactPointAddress"
+        ]
+    },{
+        "@id": "employerContactPointAddressId",
+        "@type": "Property",
+        "domain": [
+"PersonEmployment"
+        ]
+    },{
+        "@id": "schoolDaysMissedNumber",
+        "@type": "Property",
+        "domain": [
+"PersonEducation"
+        ]
+    },{
+        "@id": "hasOptedOutGeoTracking",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "employmentStatusId",
+        "@type": "Property",
+        "domain": [
+"PersonEmployment"
+        ]
+    },{
+        "@id": "companyType",
+        "@type": "Property",
+        "domain": [
+"Organization"
+        ]
+    },{
+        "@id": "employerPostalCodeText",
+        "@type": "Property",
+        "domain": [
+"PersonEmployment"
+        ]
+    },{
+        "@id": "originalSourceSystemId",
+        "@type": "Property",
+        "domain": [
+"UncategorizedParty"
+        ]
+    },{
+        "@id": "countryName",
+        "@type": "Property",
+        "domain": [
+"ContactPointAddress"
+        ]
+    },{
+        "@id": "mainPersonalValueTypeId",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "hasOptedOutTracking",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "deathDate",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "maritalStatusId",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "religionId",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "dietaryHabitTypeName",
+        "@type": "Property",
+        "domain": [
+"DietaryHabitType"
+        ]
+    },{
+        "@id": "birthPlace",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "name",
+        "@type": "Property",
+        "domain": [
+"PartyProfessionalCredential","PartyAdditionalNameType","PartyNoMergeReason","PersonTraining","PartyBusinessLicense","PartyTaxExemptionCertificate","AccountScore","AffiliationGroup","IndividualScore","PartyHierarchyMember","PopulationType","LegalEntity","HousingType","Pronoun","BusinessLegalStatus","InternalBusinessUnitType","AgeRange","Gender","PartyAdditionalName","PartyHierarchy","PartyIdentification","PartyType"
+        ]
+    },{
+        "@id": "annualIncome",
+        "@type": "Property",
+        "domain": [
+"PersonEmployment"
+        ]
+    },{
+        "@id": "taxExemptionCertificateNumber",
+        "@type": "Property",
+        "domain": [
+"PartyTaxExemptionCertificate"
+        ]
+    },{
+        "@id": "endEffectiveDate",
+        "@type": "Property",
+        "domain": [
+"PartyAdditionalName","PersonName"
+        ]
+    },{
+        "@id": "partyHierarchyStartDate",
+        "@type": "Property",
+        "domain": [
+"PartyHierarchy"
+        ]
+    },{
+        "@id": "businessActivityName",
+        "@type": "Property",
+        "domain": [
+"BusinessActivity"
+        ]
+    },{
+        "@id": "secondaryCitizenshipCountryId",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "employerAddressLine2",
+        "@type": "Property",
+        "domain": [
+"PersonEmployment"
+        ]
+    },{
+        "@id": "parentPartyIdentificationTypeId",
+        "@type": "Property",
+        "domain": [
+"PartyIdentificationType"
+        ]
+    },{
+        "@id": "residenceCountryId",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "militaryServiceId",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "birthDateDay",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "disabilityTypeName",
+        "@type": "Property",
+        "domain": [
+"DisabilityType"
+        ]
+    },{
+        "@id": "lifeStyleTypeName",
+        "@type": "Property",
+        "domain": [
+"LifeStyleType"
+        ]
+    },{
+        "@id": "employeeCount",
+        "@type": "Property",
+        "domain": [
+"Organization"
+        ]
+    },{
+        "@id": "trainingTierNm",
+        "@type": "Property",
+        "domain": [
+"PersonTraining"
+        ]
+    },{
+        "@id": "primaryHobbyId",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "convictionsCount",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "iSICCodeName",
+        "@type": "Property",
+        "domain": [
+"ISICCode"
+        ]
+    },{
+        "@id": "personalityTypeName",
+        "@type": "Property",
+        "domain": [
+"PersonalityType"
+        ]
+    },{
+        "@id": "partyHierarchyEndDate",
+        "@type": "Property",
+        "domain": [
+"PartyHierarchy"
+        ]
+    },{
+        "@id": "partyTypeId",
+        "@type": "Property",
+        "domain": [
+"Party"
+        ]
+    },{
+        "@id": "educationName",
+        "@type": "Property",
+        "domain": [
+"PersonEducation"
+        ]
+    },{
+        "@id": "mothersMaidenName",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "hasOptedOutSolicit",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "dunnandBradstreetRating",
+        "@type": "Property",
+        "domain": [
+"Organization"
+        ]
+    },{
+        "@id": "personHeightUnitofMeasureId",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "contactPointId",
+        "@type": "Property",
+        "domain": [
+"IndividualScore"
+        ]
+    },{
+        "@id": "businessSizeTypeId",
+        "@type": "Property",
+        "domain": [
+"Organization"
+        ]
+    },{
+        "@id": "individualId",
+        "@type": "Property",
+        "domain": [
+"PersonLanguage","PersonEmployment","PersonLifeEvent","PersonTraining","PersonEducation","IndividualScore"
+        ]
+    },{
+        "@id": "hasOptedOutProfiling",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "isUsedForShipping",
+        "@type": "Property",
+        "domain": [
+"ContactPointAddress"
+        ]
+    },{
+        "@id": "accreditationIssuerName",
+        "@type": "Property",
+        "domain": [
+"PartyAccreditation"
+        ]
+    },{
+        "@id": "birthDateYear",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "occupationTypeId",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "stockExchangeName",
+        "@type": "Property",
+        "domain": [
+"Organization"
+        ]
+    },{
+        "@id": "doExtractMyDataUpdateDate",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "membershipStartDate",
+        "@type": "Property",
+        "domain": [
+"PartyHierarchyMember"
+        ]
+    },{
+        "@id": "languageId",
+        "@type": "Property",
+        "domain": [
+"PersonLanguage"
+        ]
+    },{
+        "@id": "personLifeStageId",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "personWeightUnitofMeasureId",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "exemptionEndDate",
+        "@type": "Property",
+        "domain": [
+"TaxExemptionCertificate"
+        ]
+    },{
+        "@id": "exemptionBeginDate",
+        "@type": "Property",
+        "domain": [
+"TaxExemptionCertificate"
+        ]
+    },{
+        "@id": "isHighRiskHobby",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "fiscalYearEndMonthDate",
+        "@type": "Property",
+        "domain": [
+"Organization"
+        ]
+    },{
+        "@id": "closedForBusinessDate",
+        "@type": "Property",
+        "domain": [
+"Organization"
+        ]
+    },{
+        "@id": "partyRoleId",
+        "@type": "Property",
+        "domain": [
+"PartyRelationshipType","PartyRole","PartyIdentification"
+        ]
+    },{
+        "@id": "partyProfessionalCredentialTypeId",
+        "@type": "Property",
+        "domain": [
+"PartyProfessionalCredential"
+        ]
+    },{
+        "@id": "dependentCount",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "residenceCountryName",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "verifiedDate",
+        "@type": "Property",
+        "domain": [
+"PartyIdentification"
+        ]
+    },{
+        "@id": "graduationDate",
+        "@type": "Property",
+        "domain": [
+"PersonEducation"
+        ]
+    },{
+        "@id": "stateProvinceName",
+        "@type": "Property",
+        "domain": [
+"ContactPointAddress"
+        ]
+    },{
+        "@id": "employerCityName",
+        "@type": "Property",
+        "domain": [
+"PersonEmployment"
+        ]
+    },{
+        "@id": "sendIndividualData",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "occupation",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "cityName",
+        "@type": "Property",
+        "domain": [
+"ContactPointAddress"
+        ]
+    },{
+        "@id": "sICId",
+        "@type": "Property",
+        "domain": [
+"Organization"
+        ]
+    },{
+        "@id": "organizationLegalName",
+        "@type": "Property",
+        "domain": [
+"PartyAdditionalName"
+        ]
+    },{
+        "@id": "openForBusinessDate",
+        "@type": "Property",
+        "domain": [
+"Organization"
+        ]
+    },{
+        "@id": "weightUOMName",
+        "@type": "Property",
+        "domain": [
+"WeightUnitOfMeasure"
+        ]
+    },{
+        "@id": "cityId",
+        "@type": "Property",
+        "domain": [
+"ContactPointAddress"
+        ]
+    },{
+        "@id": "deathPlace",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "partyRelationshipTypeId",
+        "@type": "Property",
+        "domain": [
+"PartyRelatedParty"
+        ]
+    },{
+        "@id": "mainDietaryHabitTypeId",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "occupationName",
+        "@type": "Property",
+        "domain": [
+"Occupation"
+        ]
+    },{
+        "@id": "yearStarted",
+        "@type": "Property",
+        "domain": [
+"Organization"
+        ]
+    },{
+        "@id": "doForgetMeFromUpdateDate",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "isTobaccoConsume",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "consumerCreditScore",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "currentEmployerName",
+        "@type": "Property",
+        "domain": [
+"Individual"
+        ]
+    },{
+        "@id": "externalRecordId",
+        "@type": "Property",
+        "domain": [
+"PartyIdentificationType"
+        ]
     }
-  ]
+    ]
 }

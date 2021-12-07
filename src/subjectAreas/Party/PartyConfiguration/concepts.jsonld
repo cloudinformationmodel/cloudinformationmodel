@@ -1,0 +1,15 @@
+{
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "e9a6ff42-359c-4fcf-b8b8-20d779961b8b",
+    "@type": "EntityGroup",
+    "name": "PartyConfiguration",
+    "version": "1.0.0",
+    "subjectArea": "aeaf98cc-53c1-300a-827f-57f4ce0bf764",
+    "description": "Example entities include: TBD",
+    "classConcepts": [
+
+    ],
+    "propertyConcepts": [
+
+    ]
+}

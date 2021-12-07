@@ -1,8 +1,0 @@
-#%Vocabulary 1.0
-base: http://cloudinformationmodel.org/model/
-vocabulary: Sales Order Property Group
-propertyTerms:
-  salesOrderProduct:
-    displayName: Sales Order Product
-    description: A Sales Order Product that belongs to the Sales Order Product Group
-    range: SalesOrderProduct

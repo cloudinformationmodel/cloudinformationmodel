@@ -1,30 +1,27 @@
 {
-  "@context": "http://cloudinformationmodel.org/context.jsonld",
-  "@id": "BehaviorPropertyGroup",
-  "name": "Behavior Property Group",
-  "@type": "PropertyGroup",
-  "version": "0.1",
-  "propertyConcepts": [
-    {
-      "@id": "isGoodDriver",
-      "@type": "Property",
-      "description": "Is the individual currently regarded to be a good automobile driver",
-      "name": "Is Good Driver",
-      "range": "DataType"
-    },
-    {
-      "@id": "isGoodStudent",
-      "@type": "Property",
-      "description": "Is the individual currently regarded to be a good school student",
-      "name": "Is Good Student",
-      "range": "DataType"
-    },
-    {
-      "@id": "convictionsCount",
-      "@type": "Property",
-      "description": "How many times the person been convicted of a crime",
-      "name": "Convictions Count",
-      "range": "DataType"
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "BehaviorPropertyGroup",
+    "name": "Behavior Property Group",
+    "@type": "PropertyGroup",
+    "propertyConcepts": [
+{
+        "@id": "convictionsCount",
+        "@type": "Property",
+        "description": "How many times the person been convicted of a crime",
+        "name": "Convictions Count",
+        "range": "DataType"
+    },{
+        "@id": "isGoodDriver",
+        "@type": "Property",
+        "description": "Is the individual currently regarded to be a good automobile driver",
+        "name": "Is Good Driver",
+        "range": "DataType"
+    },{
+        "@id": "isGoodStudent",
+        "@type": "Property",
+        "description": "Is the individual currently regarded to be a good school student",
+        "name": "Is Good Student",
+        "range": "DataType"
     }
-  ]
+    ]
 }

@@ -1,0 +1,109 @@
+{
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "0f3bd6c0-3871-43b3-8c4c-326df7fe8d3d",
+    "@type": "EntityGroup",
+    "name": "AccountSetup",
+    "version": "1.0.0",
+    "subjectArea": "a5b709eb-c627-4dad-8343-85efa0e06087",
+    "description": "Example entities include: Customer Type, Supplier Type, Seller Type",
+    "classConcepts": [
+{
+        "@id": "AccountBalanceUnitOfMeasure",
+        "name": "Account Balance Unit of Measure",
+        "@type": "Class",
+        "description": "What is the unit of measure for current account balance e.g. money, points, miles, visits"
+    },{
+        "@id": "AccountBusinessType",
+        "name": "Account Business Type",
+        "@type": "Class",
+        "description": "The primary business purpose or kinds of transactions for which the Account is used. Examples include Charge Account, Rebate Account and Rental Account."
+    },{
+        "@id": "AccountContactRoleType",
+        "name": "Account Contact Role Type",
+        "@type": "Class",
+        "description": "E.g. decision maker, influencer"
+    },{
+        "@id": "AccountHoldStatusReason",
+        "name": "Account Hold Status Reason",
+        "@type": "Class",
+        "description": "Why the account is in hold status e.g misused, legal request"
+    },{
+        "@id": "AccountType",
+        "name": "Account Type",
+        "@type": "Class",
+        "description": "What type of trade account e.g. loyalty account, business credit account, layaway, short term rental"
+    },{
+        "@id": "BillDeliveryMethod",
+        "name": "Bill Delivery Method",
+        "@type": "Class",
+        "description": "How can a bill be delivered e.g. electronic, mail"
+    },{
+        "@id": "FreightTerms",
+        "name": "Freight Terms",
+        "@type": "Class",
+        "description": "Standard freight term e.g. Free On Board Shipping Point (FOB), CIF"
+    },{
+        "@id": "SLAType",
+        "name": "SLA Type",
+        "@type": "Class",
+        "description": "Types of Service Level Agreement e.g. 24x7, weekdays, work hours"
+    }
+    ],
+    "propertyConcepts": [
+{
+        "@id": "freightTermsName",
+        "@type": "Property",
+        "domain": [
+"FreightTerms"
+        ]
+    },{
+        "@id": "accountBalanceUOMName",
+        "@type": "Property",
+        "domain": [
+"AccountBalanceUnitOfMeasure"
+        ]
+    },{
+        "@id": "accountHoldStatusReasonName",
+        "@type": "Property",
+        "domain": [
+"AccountHoldStatusReason"
+        ]
+    },{
+        "@id": "description",
+        "@type": "Property",
+        "domain": [
+"AccountBusinessType"
+        ]
+    },{
+        "@id": "accountTypeName",
+        "@type": "Property",
+        "domain": [
+"AccountType"
+        ]
+    },{
+        "@id": "id",
+        "@type": "Property",
+        "domain": [
+"AccountType","AccountHoldStatusReason","AccountBalanceUnitOfMeasure","AccountContactRoleType","SLAType","BillDeliveryMethod","FreightTerms"
+        ]
+    },{
+        "@id": "sLATypeName",
+        "@type": "Property",
+        "domain": [
+"SLAType"
+        ]
+    },{
+        "@id": "name",
+        "@type": "Property",
+        "domain": [
+"AccountBusinessType","AccountContactRoleType"
+        ]
+    },{
+        "@id": "billDeliveryMethodName",
+        "@type": "Property",
+        "domain": [
+"BillDeliveryMethod"
+        ]
+    }
+    ]
+}

@@ -1,79 +1,69 @@
 {
-  "@context": "http://cloudinformationmodel.org/context.jsonld",
-  "@id": "IncorporationPropertyGroup",
-  "name": "Incorporation Property Group",
-  "@type": "PropertyGroup",
-  "version": "0.1",
-  "propertyConcepts": [
-    {
-      "@id": "description",
-      "@type": "Property",
-      "description": "Short unstructured narrative that describe the business",
-      "name": "Description",
-      "range": "DataType"
-    },
-    {
-      "@id": "legalStatus",
-      "@type": "Property",
-      "description": "Legal or tax standing e.g. commercial, non-profit, academic, government",
-      "name": "Legal Status",
-      "range": "DataType"
-    },
-    {
-      "@id": "legalIncorporationJurisdiction",
-      "@type": "Property",
-      "description": "Name of the territory or other political subdivision that authoized the incorporation",
-      "name": "Legal Incorporation Jurisdiction",
-      "range": "DataType"
-    },
-    {
-      "@id": "legalOrganizationType",
-      "@type": "Property",
-      "description": "E.g. Sole proprietor, Partnership, Limited Partnereshp, S-Corporation",
-      "name": "Legal Organization Type",
-      "range": "DataType"
-    },
-    {
-      "@id": "ownership",
-      "@type": "Property",
-      "description": "Is the company public or private",
-      "name": "Ownership",
-      "range": "DataType"
-    },
-    {
-      "@id": "incorporationDate",
-      "@type": "Property",
-      "description": "Date the business was legally incorporated",
-      "name": "Incorporation Date",
-      "range": "DataType"
-    },
-    {
-      "@id": "terminationDate",
-      "@type": "Property",
-      "description": "The date the organization ceased to operate and was closed for business",
-      "name": "Termination Date",
-      "range": "DataType"
-    },
-    {
-      "@id": "yearStarted",
-      "@type": "Property",
-      "description": "What year the business started, normally derived from incorporation date",
-      "name": "Year Started",
-      "range": "DataType"
-    },
-    {
-      "@id": "openForBusinessDate",
-      "@type": "Property",
-      "description": "What date others could start to business with the entity",
-      "name": "Open For Business Date",
-      "range": "DataType"
-    },
-    {
-      "@id": "closedForBusinessDate",
-      "@type": "Property",
-      "description": "What date others no longer can do regular business with the entity",
-      "name": "Closed For Business Date",
-      "range": "DataType"
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "IncorporationPropertyGroup",
+    "name": "Incorporation Property Group",
+    "@type": "PropertyGroup",
+    "propertyConcepts": [
+{
+        "@id": "closedForBusinessDate",
+        "@type": "Property",
+        "description": "What date others no longer can do regular business with the entity",
+        "name": "Closed For Business Date",
+        "range": "DataType"
+    },{
+        "@id": "description",
+        "@type": "Property",
+        "description": "Short unstructured narrative that describe the business",
+        "name": "Description",
+        "range": "DataType"
+    },{
+        "@id": "incorporationDate",
+        "@type": "Property",
+        "description": "Date the business was legally incorporated",
+        "name": "Incorporation Date",
+        "range": "DataType"
+    },{
+        "@id": "legalIncorporationJurisdiction",
+        "@type": "Property",
+        "description": "Name of the territory or other political subdivision that authoized the incorporation",
+        "name": "Legal Incorporation Jurisdiction",
+        "range": "DataType"
+    },{
+        "@id": "legalOrganizationTypeId",
+        "@type": "Property",
+        "description": "E.g. Sole proprietor, Partnership, Limited Partnereshp, S-Corporation",
+        "name": "Legal Organization Type",
+        "range": "LegalOrganizationType"
+    },{
+        "@id": "legalStatusId",
+        "@type": "Property",
+        "description": "Legal or tax standing e.g. commercial, non-profit, academic, government",
+        "name": "Legal Status",
+        "range": "BusinessLegalStatus"
+    },{
+        "@id": "openForBusinessDate",
+        "@type": "Property",
+        "description": "What date others could start to business with the entity",
+        "name": "Open For Business Date",
+        "range": "DataType"
+    },{
+        "@id": "ownershipId",
+        "@type": "Property",
+        "description": "Is the company public or private",
+        "name": "Ownership",
+        "range": "BusinessOwnership"
+    },{
+        "@id": "terminationDate",
+        "@type": "Property",
+        "description": "The date the organization ceased to operate and was closed for business",
+        "name": "Termination Date",
+        "range": "DataType"
+    },{
+        "@id": "yearStarted",
+        "@type": "Property",
+        "description": "What year the business started, normally derviced from incorporation date",
+        "name": "Year Started",
+        "range": "DataType"
     }
-  ]
+    ]
 }

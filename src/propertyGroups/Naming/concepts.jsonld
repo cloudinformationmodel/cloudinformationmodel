@@ -1,93 +1,81 @@
 {
-  "@context": "http://cloudinformationmodel.org/context.jsonld",
-  "@id": "NamingPropertyGroup",
-  "name": "Naming Property Group",
-  "@type": "PropertyGroup",
-  "version": "0.1",
-  "propertyConcepts": [
-    {
-      "@id": "personName",
-      "@type": "Property",
-      "description": "The full name of a person e.g. Jane Mary-Ann Doe",
-      "name": "Person Name",
-      "range": "DataType"
-    },
-    {
-      "@id": "salutation",
-      "@type": "Property",
-      "description": "How to greet the person e.g. Mr, Ms",
-      "name": "Salutation",
-      "range": "DataType"
-    },
-    {
-      "@id": "firstName",
-      "@type": "Property",
-      "description": "First name of person e.g. Jane",
-      "name": "First Name",
-      "range": "DataType"
-    },
-    {
-      "@id": "middleName",
-      "@type": "Property",
-      "description": "Middle name of person e.g. Mary-Ann",
-      "name": "Middle Name",
-      "range": "DataType"
-    },
-    {
-      "@id": "lastName",
-      "@type": "Property",
-      "description": "Last/family name (in most cultures the last/sure name) of person e.g. Doe",
-      "name": "Last Name",
-      "range": "DataType"
-    },
-    {
-      "@id": "secondLastName",
-      "@type": "Property",
-      "description": "Second last name e.g. in hispanic may be mothers last name e.g. Roe",
-      "name": "Second Last Name",
-      "range": "DataType"
-    },
-    {
-      "@id": "nameSuffix",
-      "@type": "Property",
-      "description": "Suffix of a name e.g. Jr, Sr, III",
-      "name": "Name Suffix",
-      "range": "DataType"
-    },
-    {
-      "@id": "officialName",
-      "@type": "Property",
-      "description": "The official name used for legal communication e.g. Janet Mary-Ann Doe III",
-      "name": "Official Name",
-      "range": "DataType"
-    },
-    {
-      "@id": "mailingName",
-      "@type": "Property",
-      "description": "The proper combination of name elements to use for contact via mail e.g. Jane Doe",
-      "name": "Mailing Name",
-      "range": "DataType"
-    },
-    {
-      "@id": "orderingName",
-      "@type": "Property",
-      "description": "The name used to sort people in a list e.g. Doe, J",
-      "name": "Ordering Name",
-      "range": "DataType"
-    },
-    {
-      "@id": "preferredName",
-      "@type": "Property",
-      "description": "The name used to address a person in an informal setting e.g. J D",
-      "name": "Preferred Name",
-      "range": "DataType"
-    },
-    {
-      "@id": "mothersMaidenName",
-      "@type": "Property",
-      "description": "Mothers last name as unmarried",
-      "name": "Mothers Maiden Name",
-      "range": "DataType"
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "NamingPropertyGroup",
+    "name": "Naming Property Group",
+    "@type": "PropertyGroup",
+    "propertyConcepts": [
+{
+        "@id": "mailingName",
+        "@type": "Property",
+        "description": "The proper combination of name elements to use for contact via mail e.g. Jane Doe",
+        "name": "Mailing Name",
+        "range": "DataType"
+    },{
+        "@id": "mothersMaidenName",
+        "@type": "Property",
+        "description": "Mothers last name as unmarried",
+        "name": "Mothers Maiden Name",
+        "range": "DataType"
+    },{
+        "@id": "nameSuffix",
+        "@type": "Property",
+        "description": "Suffix of a name e.g. Jr, Sr, III",
+        "name": "Name Suffix",
+        "range": "DataType"
+    },{
+        "@id": "officialName",
+        "@type": "Property",
+        "description": "The official name used for legal communication e.g. Janet Mary-Ann Doe III",
+        "name": "Official Name",
+        "range": "DataType"
+    },{
+        "@id": "orderingName",
+        "@type": "Property",
+        "description": "The name used to sort people in a list e.g. Doe, J",
+        "name": "Ordering Name",
+        "range": "DataType"
+    },{
+        "@id": "personName",
+        "@type": "Property",
+        "description": "The full name of a person e.g. Jane Mary-Ann Doe",
+        "name": "Person Name",
+        "range": "DataType"
+    },{
+        "@id": "preferredName",
+        "@type": "Property",
+        "description": "The name used to address a person in an informal setting e.g. J D",
+        "name": "Preferred Name",
+        "range": "DataType"
+    },{
+        "@id": "salutation",
+        "@type": "Property",
+        "description": "How to greet the person e.g. Mr, Ms",
+        "name": "Salutation",
+        "range": "DataType"
+    },{
+        "@id": "secondLastName",
+        "@type": "Property",
+        "description": "Second last name e.g. in hispanic may be mothers last name e.g. Roe",
+        "name": "Second Last Name",
+        "range": "DataType"
+    },{
+        "@id": "firstName",
+        "@type": "Property",
+        "description": "First name of person e.g. Jane",
+        "name": "First Name",
+        "range": "DataType"
+    },{
+        "@id": "lastName",
+        "@type": "Property",
+        "description": "Last/family name (in most cultures the last/sure name) of person e.g. Doe",
+        "name": "Last Name",
+        "range": "DataType"
+    },{
+        "@id": "middleName",
+        "@type": "Property",
+        "description": "Middle name of person e.g. Mary-Ann",
+        "name": "Middle Name",
+        "range": "DataType"
     }
-  ]
+    ]
 }

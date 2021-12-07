@@ -1,464 +1,412 @@
 {
-  "@context": "http://cloudinformationmodel.org/context.jsonld",
-  "@id": "ContactPointEntityGroup",
-  "name": "Contact Point",
-  "@type": "EntityGroup",
-  "version": "0.1",
-  "subjectArea": {
-    "@id": "PartySubjectArea"
-  },
-  "description": "Example Entities included: Contact Point, Contact Consent, Contact Channel",
-  "classConcepts": [
-    {
-      "@id": "PartyWebAddress",
-      "name": "Party Web Address",
-      "@type": "Class",
-      "subClassOf": "ContactPoint",
-      "description": "What is the Web URL for the Party"
-    },
-    {
-      "@id": "ContactPoint",
-      "name": "Contact Point",
-      "@type": "Class",
-      "description": "All contact points for a party e.g. phone 123-4567, email info@northerntrailoutfitters.com"
-    },
-    {
-      "@id": "ContactPointType",
-      "name": "Contact Point Type",
-      "@type": "Class",
-      "description": "Contain the fixed list of types a contact point can be of e.g. phone, email"
-    },
-    {
-      "@id": "ContactPointPhone",
-      "name": "Contact Point Phone",
-      "@type": "Class",
-      "subClassOf": "ContactPoint",
-      "description": "Phone number for a party e.g. phone 123-4567"
-    },
-    {
-      "@id": "ContactPointEmail",
-      "name": "Contact Point Email",
-      "@type": "Class",
-      "subClassOf": "ContactPoint",
-      "description": "Email address for a party e.g. email info@northerntrailoutfitters.com"
-    },
-    {
-      "@id": "ContactPointSocial",
-      "name": "Contact Point Social",
-      "@type": "Class",
-      "subClassOf": "ContactPoint",
-      "description": "Social handle for a party e.g. trustednews at twitter"
-    },
-    {
-      "@id": "ContactPointAddress",
-      "name": "Contact Point Address",
-      "@type": "Class",
-      "subClassOf": "ContactPoint",
-      "description": "Mailing address for a party e.g. 123 Main St, Big City, CA12345, USA"
-    },
-    {
-      "@id": "ContactPointLocation",
-      "name": "Contact Point Location",
-      "@type": "Class",
-      "subClassOf": "ContactPoint",
-      "description": "Physical location for a party e.g. party Northern Trail Outfitters at Standford Shopping Mall"
-    },
-    {
-      "@id": "ContactPointApp",
-      "name": "Contact Point App",
-      "@type": "Class",
-      "subClassOf": "ContactPoint",
-      "description": "Software Application for a party and optionally on a specific device e.g. John Doe have Strava App on device iPhone123"
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "e27d6099-7332-32f7-b53b-43016847daa2",
+    "@type": "EntityGroup",
+    "name": "ContactPoint",
+    "version": "1.0.0",
+    "subjectArea": "aeaf98cc-53c1-300a-827f-57f4ce0bf764",
+    "description": "Example Entities included: Contact Point, Contact Consent, Contact Channel",
+    "classConcepts": [
+{
+        "@id": "ContactPoint",
+        "name": "Contact Point",
+        "@type": "Class",
+        "description": "All contact points for a party e.g. phone 123-4567, email info@northerntrailoutfitters.com"
+    },{
+        "@id": "ContactPointApp",
+        "name": "Contact Point App",
+        "@type": "Class",
+        "subClassOf": "ContactPoint",
+        "description": "Software Application for a party and optionally on a specific device e.g. John Doe have Strava App on device iPhone123"
+    },{
+        "@id": "ContactPointEmail",
+        "name": "Contact Point Email",
+        "@type": "Class",
+        "subClassOf": "ContactPoint",
+        "description": "Email address for a party e.g. email info@northerntrailoutfitters.com"
+    },{
+        "@id": "ContactPointLocation",
+        "name": "Contact Point Location",
+        "@type": "Class",
+        "subClassOf": "ContactPoint",
+        "description": "Physical location for a party e.g. party Northern Trail Outfitters at Standford Shopping Mall"
+    },{
+        "@id": "ContactPointPhone",
+        "name": "Contact Point Phone",
+        "@type": "Class",
+        "subClassOf": "ContactPoint",
+        "description": "Phone number for a party e.g. phone 123-4567"
+    },{
+        "@id": "ContactPointSocial",
+        "name": "Contact Point Social",
+        "@type": "Class",
+        "subClassOf": "ContactPoint",
+        "description": "Social handle for a party e.g. trustednews at twitter"
+    },{
+        "@id": "ContactPointType",
+        "name": "Contact Point Type",
+        "@type": "Class",
+        "description": "Contain the fixed list of types a contact point can be of e.g. phone, email"
+    },{
+        "@id": "PartyWebAddress",
+        "name": "Party Web Address",
+        "@type": "Class",
+        "subClassOf": "ContactPoint",
+        "description": "What is the Web URL for the Party"
+    },{
+        "@id": "PrimaryPhoneType",
+        "name": "Primary Phone Type",
+        "@type": "Class",
+        "description": "Is it primarily a 'Home', 'Business', 'Fax', 'Mobile' or 'Other' phone"
+    },{
+        "@id": "SocialFanStatus",
+        "name": "Social Fan Status",
+        "@type": "Class",
+        "description": "What is the standing for a social person amongst fans e.g. Newbie, Mega Star"
+    },{
+        "@id": "SocialNetworkProvider",
+        "name": "Social Network Provider",
+        "@type": "Class",
+        "description": "Who provides the service for the social persona e.g. Twitter, Facebook"
     }
-  ],
-  "propertyConcepts": [
-    {
-      "@id": "profilePictureURL",
-      "@type": "Property",
-      "domain": [
-        "ContactPointSocial"
-      ]
-    },
-    {
-      "@id": "geoLongitude",
-      "@type": "Property",
-      "domain": [
-        "ContactPointAddress"
-      ]
-    },
-    {
-      "@id": "isUsedForShipping",
-      "@type": "Property",
-      "domain": [
-        "ContactPointAddress"
-      ]
-    },
-    {
-      "@id": "forPersonalUse",
-      "@type": "Property",
-      "domain": [
-        "ContactPoint"
-      ]
-    },
-    {
-      "@id": "telephoneNumber",
-      "@type": "Property",
-      "domain": [
-        "ContactPointPhone"
-      ]
-    },
-    {
-      "@id": "name",
-      "@type": "Property",
-      "domain": [
-        "ContactPointType"
-      ]
-    },
-    {
-      "@id": "followersCount",
-      "@type": "Property",
-      "domain": [
-        "ContactPointSocial"
-      ]
-    },
-    {
-      "@id": "geoAccuracy",
-      "@type": "Property",
-      "domain": [
-        "ContactPointAddress"
-      ]
-    },
-    {
-      "@id": "isSMSCapable",
-      "@type": "Property",
-      "domain": [
-        "ContactPointPhone"
-      ]
-    },
-    {
-      "@id": "activeToDate",
-      "@type": "Property",
-      "domain": [
-        "ContactPoint"
-      ]
-    },
-    {
-      "@id": "postalCodeText",
-      "@type": "Property",
-      "domain": [
-        "ContactPointAddress"
-      ]
-    },
-    {
-      "@id": "profileOccurrenceCount",
-      "@type": "Property",
-      "domain": [
-        "ContactPoint"
-      ]
-    },
-    {
-      "@id": "emailMailBox",
-      "@type": "Property",
-      "domain": [
-        "ContactPointEmail"
-      ]
-    },
-    {
-      "@id": "geoLatitude",
-      "@type": "Property",
-      "domain": [
-        "ContactPointAddress"
-      ]
-    },
-    {
-      "@id": "isFaxCapable",
-      "@type": "Property",
-      "domain": [
-        "ContactPointPhone"
-      ]
-    },
-    {
-      "@id": "cityName",
-      "@type": "Property",
-      "domain": [
-        "ContactPointAddress"
-      ]
-    },
-    {
-      "@id": "emailAddress",
-      "@type": "Property",
-      "domain": [
-        "ContactPointEmail"
-      ]
-    },
-    {
-      "@id": "addressLine3",
-      "@type": "Property",
-      "domain": [
-        "ContactPointAddress"
-      ]
-    },
-    {
-      "@id": "isUsedForBilling",
-      "@type": "Property",
-      "domain": [
-        "ContactPointAddress"
-      ]
-    },
-    {
-      "@id": "addressLine2",
-      "@type": "Property",
-      "domain": [
-        "ContactPointAddress"
-      ]
-    },
-    {
-      "@id": "addressLine1",
-      "@type": "Property",
-      "domain": [
-        "ContactPointAddress"
-      ]
-    },
-    {
-      "@id": "addressLine4",
-      "@type": "Property",
-      "domain": [
-        "ContactPointAddress"
-      ]
-    },
-    {
-      "@id": "areaCode",
-      "@type": "Property",
-      "domain": [
-        "ContactPointPhone"
-      ]
-    },
-    {
-      "@id": "socialNetworkProvider",
-      "@type": "Property",
-      "domain": [
-        "ContactPointSocial"
-      ]
-    },
-    {
-      "@id": "id",
-      "@type": "Property",
-      "domain": [
-        "ContactPoint",
-        "ContactPointEmail",
-        "PartyWebAddress",
-        "ContactPointAddress",
-        "ContactPointApp",
-        "ContactPointLocation",
-        "ContactPointSocial",
-        "ContactPointPhone",
-        "ContactPointType"
-      ]
-    },
-    {
-      "@id": "formattedNationalPhoneNumber",
-      "@type": "Property",
-      "domain": [
-        "ContactPointPhone"
-      ]
-    },
-    {
-      "@id": "profileLastUpdatedDate",
-      "@type": "Property",
-      "domain": [
-        "ContactPoint"
-      ]
-    },
-    {
-      "@id": "forBusinessUse",
-      "@type": "Property",
-      "domain": [
-        "ContactPoint"
-      ]
-    },
-    {
-      "@id": "socialHandleName",
-      "@type": "Property",
-      "domain": [
-        "ContactPointSocial"
-      ]
-    },
-    {
-      "@id": "primaryFlag",
-      "@type": "Property",
-      "domain": [
-        "ContactPoint"
-      ]
-    },
-    {
-      "@id": "countryName",
-      "@type": "Property",
-      "domain": [
-        "ContactPointAddress",
-        "ContactPointPhone"
-      ]
-    },
-    {
-      "@id": "stateProvinceName",
-      "@type": "Property",
-      "domain": [
-        "ContactPointAddress"
-      ]
-    },
-    {
-      "@id": "contactPointType",
-      "@type": "Property",
-      "domain": [
-        "ContactPoint"
-      ]
-    },
-    {
-      "@id": "formattedE164PhoneNumber",
-      "@type": "Property",
-      "domain": [
-        "ContactPointPhone"
-      ]
-    },
-    {
-      "@id": "emailDomain",
-      "@type": "Property",
-      "domain": [
-        "ContactPointEmail"
-      ]
-    },
-    {
-      "@id": "partyRole",
-      "@type": "Property",
-      "domain": [
-        "ContactPoint"
-      ]
-    },
-    {
-      "@id": "emailLatestBounceReasonText",
-      "@type": "Property",
-      "domain": [
-        "ContactPointEmail"
-      ]
-    },
-    {
-      "@id": "emailLatestBounceDateTime",
-      "@type": "Property",
-      "domain": [
-        "ContactPointEmail"
-      ]
-    },
-    {
-      "@id": "phoneCountryCode",
-      "@type": "Property",
-      "domain": [
-        "ContactPointPhone"
-      ]
-    },
-    {
-      "@id": "contactPhone",
-      "@type": "Property",
-      "domain": [
-        "ContactPointAddress"
-      ]
-    },
-    {
-      "@id": "optInPriority",
-      "@type": "Property",
-      "domain": [
-        "ContactPointType"
-      ]
-    },
-    {
-      "@id": "webSiteURL",
-      "@type": "Property",
-      "domain": [
-        "PartyWebAddress"
-      ]
-    },
-    {
-      "@id": "primaryPhoneType",
-      "@type": "Property",
-      "domain": [
-        "ContactPointPhone"
-      ]
-    },
-    {
-      "@id": "shortCode",
-      "@type": "Property",
-      "domain": [
-        "ContactPointPhone"
-      ]
-    },
-    {
-      "@id": "socialFanStatus",
-      "@type": "Property",
-      "domain": [
-        "ContactPointSocial"
-      ]
-    },
-    {
-      "@id": "bestTimeToContactStartTime",
-      "@type": "Property",
-      "domain": [
-        "ContactPoint"
-      ]
-    },
-    {
-      "@id": "applicationLogin",
-      "@type": "Property",
-      "domain": [
-        "ContactPointApp"
-      ]
-    },
-    {
-      "@id": "formattedInternationalPhoneNumber",
-      "@type": "Property",
-      "domain": [
-        "ContactPointPhone"
-      ]
-    },
-    {
-      "@id": "profileFirstCreatedDate",
-      "@type": "Property",
-      "domain": [
-        "ContactPoint"
-      ]
-    },
-    {
-      "@id": "party",
-      "@type": "Property",
-      "domain": [
-        "ContactPoint",
-        "PartyWebAddress"
-      ]
-    },
-    {
-      "@id": "socialHandle",
-      "@type": "Property",
-      "domain": [
-        "ContactPointSocial"
-      ]
-    },
-    {
-      "@id": "extensionNumber",
-      "@type": "Property",
-      "domain": [
-        "ContactPointPhone"
-      ]
-    },
-    {
-      "@id": "activeFromDate",
-      "@type": "Property",
-      "domain": [
-        "ContactPoint"
-      ]
-    },
-    {
-      "@id": "bestTimeToContactEndTime",
-      "@type": "Property",
-      "domain": [
-        "ContactPoint"
-      ]
+    ],
+    "propertyConcepts": [
+{
+        "@id": "activeFromDate",
+        "@type": "Property",
+        "domain": [
+"ContactPoint"
+        ]
+    },{
+        "@id": "partyId",
+        "@type": "Property",
+        "domain": [
+"ContactPoint","PartyWebAddress"
+        ]
+    },{
+        "@id": "socialNetworkProviderId",
+        "@type": "Property",
+        "domain": [
+"ContactPointSocial"
+        ]
+    },{
+        "@id": "primaryPhoneTypeId",
+        "@type": "Property",
+        "domain": [
+"ContactPointPhone"
+        ]
+    },{
+        "@id": "cookieIdText",
+        "@type": "Property",
+        "domain": [
+"ContactPointApp"
+        ]
+    },{
+        "@id": "profileOccurrenceCount",
+        "@type": "Property",
+        "domain": [
+"ContactPoint"
+        ]
+    },{
+        "@id": "locationTypeId",
+        "@type": "Property",
+        "domain": [
+"ContactPointLocation"
+        ]
+    },{
+        "@id": "socialFanStatusId",
+        "@type": "Property",
+        "domain": [
+"ContactPointSocial"
+        ]
+    },{
+        "@id": "bestTimeToContactEndTime",
+        "@type": "Property",
+        "domain": [
+"ContactPoint"
+        ]
+    },{
+        "@id": "bestTimeToContactTimezoneId",
+        "@type": "Property",
+        "domain": [
+"ContactPoint"
+        ]
+    },{
+        "@id": "applicationLoginId",
+        "@type": "Property",
+        "domain": [
+"ContactPointApp"
+        ]
+    },{
+        "@id": "profilePictureURL",
+        "@type": "Property",
+        "domain": [
+"ContactPointSocial"
+        ]
+    },{
+        "@id": "webSiteURL",
+        "@type": "Property",
+        "domain": [
+"PartyWebAddress"
+        ]
+    },{
+        "@id": "profileLastUpdatedDate",
+        "@type": "Property",
+        "domain": [
+"ContactPoint"
+        ]
+    },{
+        "@id": "bestTimeToContactStartTime",
+        "@type": "Property",
+        "domain": [
+"ContactPoint"
+        ]
+    },{
+        "@id": "countryId",
+        "@type": "Property",
+        "domain": [
+"ContactPointPhone"
+        ]
+    },{
+        "@id": "socialHandleName",
+        "@type": "Property",
+        "domain": [
+"ContactPointSocial"
+        ]
+    },{
+        "@id": "forBusinessUse",
+        "@type": "Property",
+        "domain": [
+"ContactPoint"
+        ]
+    },{
+        "@id": "deviceId",
+        "@type": "Property",
+        "domain": [
+"ContactPointApp","ContactPointPhone"
+        ]
+    },{
+        "@id": "softwareApplicationId",
+        "@type": "Property",
+        "domain": [
+"ContactPointApp"
+        ]
+    },{
+        "@id": "emailLatestBounceReasonText",
+        "@type": "Property",
+        "domain": [
+"ContactPointEmail"
+        ]
+    },{
+        "@id": "isSMSCapable",
+        "@type": "Property",
+        "domain": [
+"ContactPointPhone"
+        ]
+    },{
+        "@id": "isFaxCapable",
+        "@type": "Property",
+        "domain": [
+"ContactPointPhone"
+        ]
+    },{
+        "@id": "formattedE164PhoneNumber",
+        "@type": "Property",
+        "domain": [
+"ContactPointPhone"
+        ]
+    },{
+        "@id": "softwareAppPriorVerName",
+        "@type": "Property",
+        "domain": [
+"ContactPointApp"
+        ]
+    },{
+        "@id": "socialHandleId",
+        "@type": "Property",
+        "domain": [
+"ContactPointSocial"
+        ]
+    },{
+        "@id": "followersCount",
+        "@type": "Property",
+        "domain": [
+"ContactPointSocial"
+        ]
+    },{
+        "@id": "activeToDate",
+        "@type": "Property",
+        "domain": [
+"ContactPoint"
+        ]
+    },{
+        "@id": "forPersonalUse",
+        "@type": "Property",
+        "domain": [
+"ContactPoint"
+        ]
+    },{
+        "@id": "sDKVerName",
+        "@type": "Property",
+        "domain": [
+"ContactPointApp"
+        ]
+    },{
+        "@id": "formattedNationalPhoneNumber",
+        "@type": "Property",
+        "domain": [
+"ContactPointPhone"
+        ]
+    },{
+        "@id": "timezoneCode",
+        "@type": "Property",
+        "domain": [
+"ContactPoint"
+        ]
+    },{
+        "@id": "optInPriority",
+        "@type": "Property",
+        "domain": [
+"ContactPointType"
+        ]
+    },{
+        "@id": "id",
+        "@type": "Property",
+        "domain": [
+"ContactPointApp","ContactPointLocation","ContactPointPhone","ContactPointSocial","ContactPoint","ContactPointEmail","SocialFanStatus","PrimaryPhoneType","ContactPointType","PartyWebAddress","SocialNetworkProvider"
+        ]
+    },{
+        "@id": "deviceEndPointId",
+        "@type": "Property",
+        "domain": [
+"ContactPointApp"
+        ]
+    },{
+        "@id": "telephoneNumber",
+        "@type": "Property",
+        "domain": [
+"ContactPointPhone"
+        ]
+    },{
+        "@id": "areaCode",
+        "@type": "Property",
+        "domain": [
+"ContactPointPhone"
+        ]
+    },{
+        "@id": "softwareAppVerName",
+        "@type": "Property",
+        "domain": [
+"ContactPointApp"
+        ]
+    },{
+        "@id": "countryName",
+        "@type": "Property",
+        "domain": [
+"ContactPointPhone"
+        ]
+    },{
+        "@id": "name",
+        "@type": "Property",
+        "domain": [
+"PrimaryPhoneType","ContactPointType","PartyWebAddress"
+        ]
+    },{
+        "@id": "profileFirstCreatedDate",
+        "@type": "Property",
+        "domain": [
+"ContactPoint"
+        ]
+    },{
+        "@id": "shortCode",
+        "@type": "Property",
+        "domain": [
+"ContactPointPhone"
+        ]
+    },{
+        "@id": "socialNetworkProviderName",
+        "@type": "Property",
+        "domain": [
+"SocialNetworkProvider"
+        ]
+    },{
+        "@id": "formattedInternationalPhoneNumber",
+        "@type": "Property",
+        "domain": [
+"ContactPointPhone"
+        ]
+    },{
+        "@id": "emailAddress",
+        "@type": "Property",
+        "domain": [
+"ContactPointEmail"
+        ]
+    },{
+        "@id": "emailDomain",
+        "@type": "Property",
+        "domain": [
+"ContactPointEmail"
+        ]
+    },{
+        "@id": "primaryFlag",
+        "@type": "Property",
+        "domain": [
+"ContactPoint"
+        ]
+    },{
+        "@id": "emailMailBox",
+        "@type": "Property",
+        "domain": [
+"ContactPointEmail"
+        ]
+    },{
+        "@id": "extensionNumber",
+        "@type": "Property",
+        "domain": [
+"ContactPointPhone"
+        ]
+    },{
+        "@id": "partyRoleId",
+        "@type": "Property",
+        "domain": [
+"ContactPoint"
+        ]
+    },{
+        "@id": "emailLatestBounceDateTime",
+        "@type": "Property",
+        "domain": [
+"ContactPointEmail"
+        ]
+    },{
+        "@id": "socialFanStatusName",
+        "@type": "Property",
+        "domain": [
+"SocialFanStatus"
+        ]
+    },{
+        "@id": "isUndeliverable",
+        "@type": "Property",
+        "domain": [
+"ContactPoint"
+        ]
+    },{
+        "@id": "contactPointTypeId",
+        "@type": "Property",
+        "domain": [
+"ContactPoint"
+        ]
+    },{
+        "@id": "locationId",
+        "@type": "Property",
+        "domain": [
+"ContactPointLocation"
+        ]
+    },{
+        "@id": "phoneCountryCode",
+        "@type": "Property",
+        "domain": [
+"ContactPointPhone"
+        ]
     }
-  ]
+    ]
 }

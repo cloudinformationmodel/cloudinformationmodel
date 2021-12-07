@@ -1,2818 +1,3387 @@
 {
-  "@context": "http://cloudinformationmodel.org/context.jsonld",
-  "@id": "SalesOrderEntityGroup",
-  "@type": "EntityGroup",
-  "version": "0.1",
-  "schemas": [
-    {
-      "@type": "Shape",
-      "@id": "SalesChannel",
-      "properties": [
-        {
-          "path": "externalRecord",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "salesChannelType",
-          "node": "SalesChannelType",
-          "minCount": "1"
-        },
-        {
-          "path": "salesChannelNumber",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "description",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "name",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "externalRecord",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "salesChannelType",
-          "node": "SalesChannelType",
-          "minCount": "1"
-        },
-        {
-          "path": "salesChannelNumber",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "description",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "name",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "388e61c3-9de7-3247-90e9-cc8ed22c9d9e",
+    "@type": "EntityGroup",
+    "name": "SalesOrder",
+    "version": "1.0.0",
+    "subjectArea": "2db50a08-9787-31d5-8df3-ed1de378730c",
+    "description": "Example Entities included: Sales Order, Opportunity, Payment Method",
+    "schemas": [
+{
+        "@id": "b734fc6b-e50d-3066-a5a0-9344dddfd605",
+        "@type": "Shape",
+        "targetClass": "OrderDeliveryMethod",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "724a172f-f410-42f2-a060-8056f72cf4c7",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "productId",
+            "@id": "ec5427c5-91db-46e6-b9b9-3987da149820",
+            "node": "0a14a328-3059-3c24-9c85-ececb74ab456",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "name",
+            "@id": "56ba9f8a-fc71-3876-9983-9f8f881893b9",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "24a8d51b-b7a7-4424-a8a8-0849c1d91991",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "883eab72-e872-47f7-8e4e-0633c7840ad6",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "93489809-ac1f-3d69-835e-d07b6e90da4e",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "4117a4ee-994b-44b4-a323-057756aa0b58",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "a6264af6-07c8-4b0b-b575-ddc2db4d2b6b",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "29d90388-141b-4777-b2f2-9911a646e48f",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
         }
-      ]
-    },
-    {
-      "@type": "Shape",
-      "@id": "SalesChannelType",
-      "properties": [
-        {
-          "path": "name",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "name",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
+        ]
+    },{
+        "@id": "a12498b6-4177-45c5-8fcf-aeef129bd4f9",
+        "@type": "Shape",
+        "targetClass": "OrderReason",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "8deb043f-e818-4bcb-a626-8fc1ca691fa2",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "a530e88d-35ac-4ece-a2a2-8dbc91e3bd67",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "21f2f5b6-02a4-4666-b939-829eedd033cc",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "982b0500-2086-4131-b2f2-981463bc3720",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "66f040d0-a5c2-4434-9b9b-8e4f2af76987",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "550de432-6a45-4b3b-b070-9c4df232aad5",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "443a9935-c27c-4bcb-9191-59749c469fd0",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
         }
-      ]
-    },
-    {
-      "@type": "Shape",
-      "@id": "SalesOrder",
-      "properties": [
-        {
-          "path": "developerStatusCode",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "orderDiscount",
-          "datatype": "xsd:integer",
-          "maxCount": "1"
-        },
-        {
-          "path": "orderInsuranceAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "taxRate",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "iSOCulture",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "cancelDateType",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "isReductionOrder",
-          "datatype": "xsd:boolean",
-          "maxCount": "1"
-        },
-        {
-          "path": "isGiftOrder",
-          "datatype": "xsd:boolean",
-          "maxCount": "1"
-        },
-        {
-          "path": "promiseFulfillmentDate",
-          "datatype": "xsd:date",
-          "maxCount": "1"
-        },
-        {
-          "path": "paidDate",
-          "datatype": "xsd:date",
-          "maxCount": "1"
-        },
-        {
-          "path": "packedDate",
-          "datatype": "xsd:date",
-          "maxCount": "1"
-        },
-        {
-          "path": "fulfilledDate",
-          "datatype": "xsd:date",
-          "maxCount": "1"
-        },
-        {
-          "path": "customerAuthorizedDate",
-          "datatype": "xsd:date",
-          "maxCount": "1"
-        },
-        {
-          "path": "companyAuthorizedDate",
-          "datatype": "xsd:date",
-          "maxCount": "1"
-        },
-        {
-          "path": "checkoutDate",
-          "datatype": "xsd:date",
-          "maxCount": "1"
-        },
-        {
-          "path": "cancelDate",
-          "datatype": "xsd:date",
-          "maxCount": "1"
-        },
-        {
-          "path": "activatedDate",
-          "datatype": "xsd:date",
-          "maxCount": "1"
-        },
-        {
-          "path": "grandTotalAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "adjustedTotalProductAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "adjustedProductTaxAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalTaxAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalProductTaxAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalProductAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalPendingBillingAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalDeliveryTaxAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalDeliveryFeeAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalDeliveryAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalCancelledBillingAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalBookingAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalAdjustmentTaxAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalAdjustmentAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalAdjustedDeliveryTaxAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "paymentMethod",
-          "node": "PaymentMethod",
-          "minCount": "1"
-        },
-        {
-          "path": "renewalUpliftRate",
-          "datatype": "xsd:integer",
-          "maxCount": "1"
-        },
-        {
-          "path": "billingDayOfTheMonth",
-          "datatype": "xsd:integer",
-          "maxCount": "1"
-        },
-        {
-          "path": "purchaseOrderNumber",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "priceCalculationStatusMessageText",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "confirmationRecipientEmailText",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "isTaxExempt",
-          "datatype": "xsd:boolean",
-          "maxCount": "1"
-        },
-        {
-          "path": "isSuspended",
-          "datatype": "xsd:boolean",
-          "maxCount": "1"
-        },
-        {
-          "path": "isHistoricalOnly",
-          "datatype": "xsd:boolean",
-          "maxCount": "1"
-        },
-        {
-          "path": "isContracted",
-          "datatype": "xsd:boolean",
-          "maxCount": "1"
-        },
-        {
-          "path": "isClosed",
-          "datatype": "xsd:boolean",
-          "maxCount": "1"
-        },
-        {
-          "path": "isAnonymous",
-          "datatype": "xsd:boolean",
-          "maxCount": "1"
-        },
-        {
-          "path": "isAlerted",
-          "datatype": "xsd:boolean",
-          "maxCount": "1"
-        },
-        {
-          "path": "canBillNow",
-          "datatype": "xsd:boolean",
-          "maxCount": "1"
-        },
-        {
-          "path": "requestedStartDate",
-          "datatype": "xsd:date",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "purchaseOrderDate",
-          "datatype": "xsd:date",
-          "maxCount": "1"
-        },
-        {
-          "path": "promiseDate",
-          "datatype": "xsd:date",
-          "maxCount": "1"
-        },
-        {
-          "path": "orderStartDate",
-          "datatype": "xsd:date",
-          "maxCount": "1"
-        },
-        {
-          "path": "orderEndDate",
-          "datatype": "xsd:date",
-          "maxCount": "1"
-        },
-        {
-          "path": "filedDate",
-          "datatype": "xsd:date",
-          "maxCount": "1"
-        },
-        {
-          "path": "userDeviceSession",
-          "node": "DeviceUserSession"
-        },
-        {
-          "path": "soldToCustomer",
-          "node": "Customer"
-        },
-        {
-          "path": "shipToEmail",
-          "node": "ContactPointEmail"
-        },
-        {
-          "path": "shipToContact",
-          "node": "AccountContact"
-        },
-        {
-          "path": "shipToAddress",
-          "node": "ContactPointAddress"
-        },
-        {
-          "path": "seller",
-          "node": "Seller"
-        },
-        {
-          "path": "salesOrderType",
-          "node": "SalesOrderType",
-          "minCount": "1"
-        },
-        {
-          "path": "salesOrderSystemStatus",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "salesOrderStatus",
-          "node": "SalesOrderStatus",
-          "minCount": "1"
-        },
-        {
-          "path": "salesOrderConfirmationStatus",
-          "node": "SalesOrderConfirmationStatus",
-          "minCount": "1"
-        },
-        {
-          "path": "salesChannel",
-          "node": "SalesChannel",
-          "minCount": "1"
-        },
-        {
-          "path": "renewalTerm",
-          "node": "RenewalTerm"
-        },
-        {
-          "path": "originalOrder",
-          "node": "SalesOrder"
-        },
-        {
-          "path": "internalBusinessUnit",
-          "node": "InternalBusinessUnit"
-        },
-        {
-          "path": "billToPhoneNumber",
-          "node": "ContactPointPhone"
-        },
-        {
-          "path": "billToEmail",
-          "node": "ContactPointEmail"
-        },
-        {
-          "path": "billToContact",
-          "node": "AccountContact",
-          "minCount": "1"
-        },
-        {
-          "path": "billToAddress",
-          "node": "ContactPointAddress",
-          "minCount": "1"
-        },
-        {
-          "path": "billToAccount",
-          "node": "Account",
-          "minCount": "1"
-        },
-        {
-          "path": "orderNumber",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "description",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "name",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "developerStatusCode",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "orderDiscount",
-          "datatype": "xsd:integer",
-          "maxCount": "1"
-        },
-        {
-          "path": "orderInsuranceAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "taxRate",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "iSOCulture",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "cancelDateType",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "isReductionOrder",
-          "datatype": "xsd:boolean",
-          "maxCount": "1"
-        },
-        {
-          "path": "isGiftOrder",
-          "datatype": "xsd:boolean",
-          "maxCount": "1"
-        },
-        {
-          "path": "promiseFulfillmentDate",
-          "datatype": "xsd:date",
-          "maxCount": "1"
-        },
-        {
-          "path": "paidDate",
-          "datatype": "xsd:date",
-          "maxCount": "1"
-        },
-        {
-          "path": "packedDate",
-          "datatype": "xsd:date",
-          "maxCount": "1"
-        },
-        {
-          "path": "fulfilledDate",
-          "datatype": "xsd:date",
-          "maxCount": "1"
-        },
-        {
-          "path": "customerAuthorizedDate",
-          "datatype": "xsd:date",
-          "maxCount": "1"
-        },
-        {
-          "path": "companyAuthorizedDate",
-          "datatype": "xsd:date",
-          "maxCount": "1"
-        },
-        {
-          "path": "checkoutDate",
-          "datatype": "xsd:date",
-          "maxCount": "1"
-        },
-        {
-          "path": "cancelDate",
-          "datatype": "xsd:date",
-          "maxCount": "1"
-        },
-        {
-          "path": "activatedDate",
-          "datatype": "xsd:date",
-          "maxCount": "1"
-        },
-        {
-          "path": "grandTotalAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "adjustedTotalProductAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "adjustedProductTaxAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalTaxAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalProductTaxAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalProductAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalPendingBillingAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalDeliveryTaxAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalDeliveryFeeAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalDeliveryAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalCancelledBillingAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalBookingAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalAdjustmentTaxAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalAdjustmentAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalAdjustedDeliveryTaxAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "paymentMethod",
-          "node": "PaymentMethod",
-          "minCount": "1"
-        },
-        {
-          "path": "renewalUpliftRate",
-          "datatype": "xsd:integer",
-          "maxCount": "1"
-        },
-        {
-          "path": "billingDayOfTheMonth",
-          "datatype": "xsd:integer",
-          "maxCount": "1"
-        },
-        {
-          "path": "purchaseOrderNumber",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "priceCalculationStatusMessageText",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "confirmationRecipientEmailText",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "isTaxExempt",
-          "datatype": "xsd:boolean",
-          "maxCount": "1"
-        },
-        {
-          "path": "isSuspended",
-          "datatype": "xsd:boolean",
-          "maxCount": "1"
-        },
-        {
-          "path": "isHistoricalOnly",
-          "datatype": "xsd:boolean",
-          "maxCount": "1"
-        },
-        {
-          "path": "isContracted",
-          "datatype": "xsd:boolean",
-          "maxCount": "1"
-        },
-        {
-          "path": "isClosed",
-          "datatype": "xsd:boolean",
-          "maxCount": "1"
-        },
-        {
-          "path": "isAnonymous",
-          "datatype": "xsd:boolean",
-          "maxCount": "1"
-        },
-        {
-          "path": "isAlerted",
-          "datatype": "xsd:boolean",
-          "maxCount": "1"
-        },
-        {
-          "path": "canBillNow",
-          "datatype": "xsd:boolean",
-          "maxCount": "1"
-        },
-        {
-          "path": "requestedStartDate",
-          "datatype": "xsd:date",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "purchaseOrderDate",
-          "datatype": "xsd:date",
-          "maxCount": "1"
-        },
-        {
-          "path": "promiseDate",
-          "datatype": "xsd:date",
-          "maxCount": "1"
-        },
-        {
-          "path": "orderStartDate",
-          "datatype": "xsd:date",
-          "maxCount": "1"
-        },
-        {
-          "path": "orderEndDate",
-          "datatype": "xsd:date",
-          "maxCount": "1"
-        },
-        {
-          "path": "filedDate",
-          "datatype": "xsd:date",
-          "maxCount": "1"
-        },
-        {
-          "path": "userDeviceSession",
-          "node": "DeviceUserSession"
-        },
-        {
-          "path": "soldToCustomer",
-          "node": "Customer"
-        },
-        {
-          "path": "shipToEmail",
-          "node": "ContactPointEmail"
-        },
-        {
-          "path": "shipToContact",
-          "node": "AccountContact"
-        },
-        {
-          "path": "shipToAddress",
-          "node": "ContactPointAddress"
-        },
-        {
-          "path": "seller",
-          "node": "Seller"
-        },
-        {
-          "path": "salesOrderType",
-          "node": "SalesOrderType",
-          "minCount": "1"
-        },
-        {
-          "path": "salesOrderSystemStatus",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "salesOrderStatus",
-          "node": "SalesOrderStatus",
-          "minCount": "1"
-        },
-        {
-          "path": "salesOrderConfirmationStatus",
-          "node": "SalesOrderConfirmationStatus",
-          "minCount": "1"
-        },
-        {
-          "path": "salesChannel",
-          "node": "SalesChannel",
-          "minCount": "1"
-        },
-        {
-          "path": "renewalTerm",
-          "node": "RenewalTerm"
-        },
-        {
-          "path": "originalOrder",
-          "node": "SalesOrder"
-        },
-        {
-          "path": "internalBusinessUnit",
-          "node": "InternalBusinessUnit"
-        },
-        {
-          "path": "billToPhoneNumber",
-          "node": "ContactPointPhone"
-        },
-        {
-          "path": "billToEmail",
-          "node": "ContactPointEmail"
-        },
-        {
-          "path": "billToContact",
-          "node": "AccountContact",
-          "minCount": "1"
-        },
-        {
-          "path": "billToAddress",
-          "node": "ContactPointAddress",
-          "minCount": "1"
-        },
-        {
-          "path": "billToAccount",
-          "node": "Account",
-          "minCount": "1"
-        },
-        {
-          "path": "orderNumber",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "description",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "name",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
+        ]
+    },{
+        "@id": "e6debaf3-c5a8-4d2d-8444-3e27f960e9a1",
+        "@type": "Shape",
+        "targetClass": "PriceAdjustmentGroup",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "1379976a-bf7a-40d0-9515-e9d79fef5bac",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "salesOrderPriceAdjustmentTypeID",
+            "@id": "fd62073a-0cde-4a8a-8f4f-ef1b1add1411",
+            "node": "55ab903c-b415-44a4-8d0d-9ea8b1338290",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "reasonText",
+            "@id": "f147aadf-f5af-4939-8c0c-a1c428f822c8",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "priceAdjustmentMethodId",
+            "@id": "1ff6a76a-e636-4d1d-b5f5-da0da7258ccd",
+            "node": "7ddd73b9-2f0c-4a5a-a9e9-3b3821b6c0f4",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "originalPriceAdjustmentGroupId",
+            "@id": "2c198123-da09-4a4a-9c5c-4cef4861267a",
+            "node": "e6debaf3-c5a8-4d2d-8444-3e27f960e9a1",
+            "maxCount": "1"
+        },{
+            "path": "name",
+            "@id": "7129d1e8-16ab-41e1-95d5-865ebabeb361",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "31a0f87e-2580-4171-8383-6d7a956fb8da",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "isManuallyApplied",
+            "@id": "6bacd9f6-73d6-4979-9b9b-27e13bce8d06",
+            "datatype": "xsd:boolean",
+            "maxCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "59ba3e97-1754-47e7-b3b3-6923f3cba481",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "775b53cc-9278-4828-a363-ffded6a3ea45",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "0d90f173-6922-4525-a121-829aacdf1701",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "d06a7c50-bda9-4c1c-b5f5-7e59278c5282",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "description",
+            "@id": "00a0ca7d-b64f-4020-b979-8c260eec35dc",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "9347ac58-6d50-4a2a-8747-49e6876f3aea",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "couponId",
+            "@id": "b2d68d5f-ac16-4e0e-8808-71bd45661475",
+            "node": "ee988b63-7ce2-47e7-ae2e-240aa4f2c1d5",
+            "maxCount": "1"
+        },{
+            "path": "adjustmentAmount",
+            "@id": "b17f0934-d146-4cbc-a1e1-68c1786c511f",
+            "datatype": "cim:amount",
+            "maxCount": "1"
         }
-      ]
-    },
-    {
-      "@type": "Shape",
-      "@id": "SalesOrderStatus",
-      "properties": [
-        {
-          "path": "name",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "name",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
+        ],
+        "extendedBy": [
+"15744483-7dd0-4080-b131-f8d79d992a9f","7d255f2b-21ec-4e0e-8383-bd08a2f9fe0a"
+        ]
+    },{
+        "@id": "7ddd73b9-2f0c-4a5a-a9e9-3b3821b6c0f4",
+        "@type": "Shape",
+        "targetClass": "PriceAdjustmentMethod",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "99ecaba8-a827-4424-a424-7a3e3068e262",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "name",
+            "@id": "b3f7b20e-9a71-4404-a626-aa369c0600f8",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "3dc86d57-5f85-4303-9717-3f01f271d4aa",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "c875f750-ec2c-4161-9595-08d130458566",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "4eb9d054-d21e-4a2a-9b9b-e3446aab61a4",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "dba3aa00-a996-4222-bf7f-2e2ad202a604",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "dad50e7e-677b-4060-aeae-229965d8cacf",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "267a44d7-0e15-4444-a9e9-b4f29925ab96",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
         }
-      ]
-    },
-    {
-      "@type": "Shape",
-      "@id": "SalesOrderSegment",
-      "properties": [
-        {
-          "path": "name",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "name",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
+        ]
+    },{
+        "@id": "e152647c-6a1f-359d-9f2f-ecf9e138d951",
+        "@type": "Shape",
+        "targetClass": "SalesChannel",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "8e01cc1c-8aa3-3890-96e7-b592bec33c17",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "salesChannelTypeId",
+            "@id": "91f472ce-d6e9-4414-a767-a462d0cd4f29",
+            "node": "5ae0f454-3504-41c1-9a5a-046dc50bf5a4",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "salesChannelNumber",
+            "@id": "3e65790a-8db2-49d9-bbbb-cce85c9f274a",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "name",
+            "@id": "b65d7214-0602-3e2e-8d79-5a6fdd250a93",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "38788aea-80a9-3208-aa6e-924c139ac805",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "34c6b239-fae8-4c7c-9e9e-49bc6a745b5d",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "5fe5f31b-4d5f-3f50-b31f-36a3240436c9",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "1d3e51bf-26fd-4464-b777-c6e441f7e9ef",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "2511298a-31dc-37fb-9924-da4687dc5d90",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "description",
+            "@id": "05fef7ac-f61e-4191-8b0b-462435730805",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "d07628c6-8f20-3f86-a14e-5d1124ef1fcb",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
         }
-      ]
-    },
-    {
-      "@type": "Shape",
-      "@id": "SalesOrderConfirmationStatus",
-      "properties": [
-        {
-          "path": "name",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "name",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
+        ]
+    },{
+        "@id": "5ae0f454-3504-41c1-9a5a-046dc50bf5a4",
+        "@type": "Shape",
+        "targetClass": "SalesChannelType",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "423b7ed1-3a87-4555-baba-b61cf248555d",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "name",
+            "@id": "01eb41ca-dc63-4dad-bd3d-d309d10ba5bc",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "fccf380a-2260-4eee-9595-ba995e7fd8e9",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "4314aee9-2238-4878-97d7-1e5a88c9a330",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "f3b210b7-1b56-4686-a828-3872597613e8",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "738bd758-5674-4cac-9c5c-1d5fc1cf7487",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "2c3b7deb-f9a3-4cbc-a868-3db86d689660",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "106fd167-57f8-4cdc-87c7-a60382489ce8",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
         }
-      ]
-    },
-    {
-      "@type": "Shape",
-      "@id": "SalesOrderType",
-      "properties": [
-        {
-          "path": "name",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "name",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
+        ]
+    },{
+        "@id": "05fbb755-be05-4444-b676-4c1e47625254",
+        "@type": "Shape",
+        "targetClass": "SalesContract",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "aecf1bae-a501-4c5c-a4e4-a6de81b82f1f",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "99f9d10e-81ed-4696-aaaa-73d89ce3e053",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "d9aadad1-75ac-4a1a-a929-bae933f6d2a5",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "f73c60a7-3347-4fef-9999-ac3c5c7a56af",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "541408be-66d0-4838-9959-b8c8301b530f",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "c305caad-8e9b-4c3c-ae6e-ed99fb47b7b6",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "ee5e4424-60e6-4c0c-a0e0-e7a6e675e5d7",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
         }
-      ]
-    },
-    {
-      "@type": "Shape",
-      "@id": "RenewalTerm",
-      "properties": [
-        {
-          "path": "name",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "name",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
+        ]
+    },{
+        "@id": "12a0c973-f594-3605-b886-1a10e4860c37",
+        "@type": "Shape",
+        "targetClass": "SalesOrder",
+        "properties": [
+{
+            "path": "totalTaxAmount",
+            "@id": "1aa4bb41-4431-3df8-9815-5ba31c7f3128",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "totalProductTaxAmountCurrencyId",
+            "@id": "24c62cc5-7ff3-36e2-81c2-4ed9f292b2b4",
+            "node": "6524a5c3-01b2-3a34-9a07-0d5f8faf5130",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "totalProductTaxAmount",
+            "@id": "f8fddb10-1fd3-40a0-89c9-41cfa3c6b80c",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "totalProductAmountCurrencyId",
+            "@id": "505a9a16-3694-344c-a047-360ddb86884e",
+            "node": "6524a5c3-01b2-3a34-9a07-0d5f8faf5130",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "totalProductAmount",
+            "@id": "809e537f-8449-3215-99e0-5da8faf8f28c",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "totalPendingBillingAmount",
+            "@id": "cb2c0d39-fa4c-4b3b-8f8f-181ceb78f75b",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "totalDeliveryTaxAmount",
+            "@id": "3177f5f0-9cb2-4c8c-a828-9fb7f1717444",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "totalDeliveryFeeCurrencyId",
+            "@id": "f62c10a5-dbdc-350d-a015-c7675bae3d98",
+            "node": "6524a5c3-01b2-3a34-9a07-0d5f8faf5130",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "totalDeliveryFeeAmount",
+            "@id": "6f55f88f-5b9f-3597-b350-3a3cbab874ff",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "totalDeliveryAmountCurrencyId",
+            "@id": "d0e678ba-4979-3836-9218-5286ef979b2b",
+            "node": "6524a5c3-01b2-3a34-9a07-0d5f8faf5130",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "totalDeliveryAmount",
+            "@id": "c34f24b1-f23f-321d-823f-75c6a69a4ace",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "totalCancelledBillingAmount",
+            "@id": "c60eee34-32de-4131-a9a9-2a55575a7b6e",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "totalBookingAmount",
+            "@id": "50cfa524-f40e-47d7-9010-47c392719b64",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "totalAmountCurrency",
+            "@id": "759775c4-619b-4999-bdfd-21476b818b65",
+            "node": "6524a5c3-01b2-3a34-9a07-0d5f8faf5130",
+            "maxCount": "1"
+        },{
+            "path": "totalAdjustmentTaxAmount",
+            "@id": "2288a306-a9a7-4f6f-84c4-82bb01276172",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "totalAdjustmentAmount",
+            "@id": "f835863e-311b-4cac-a5e5-870cf17127ff",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "totalAdjustedDeliveryTaxAmount",
+            "@id": "ba3619e7-b1b2-4949-b3f3-968a19403a6f",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "taxationPolicy",
+            "@id": "e04026a7-3e63-4383-abab-2660f8f20134",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "systemModstamp",
+            "@id": "4316d735-900b-34e0-b32b-04c1b68fe22f",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "soldToCustomerId",
+            "@id": "97684e73-a236-4626-a1a1-b8b9a330139d",
+            "node": "9c3da7a2-435b-395a-b031-328314727453",
+            "maxCount": "1"
+        },{
+            "path": "shipToEmailId",
+            "@id": "c84f84ac-bd14-30b4-b43b-dabab330839c",
+            "node": "892a1e9e-fd79-36d3-9aa6-51bffdfaa982",
+            "maxCount": "1"
+        },{
+            "path": "shipToContactId",
+            "@id": "817b128d-f6cb-367e-ab85-b69bffe5ca4a",
+            "node": "cc634de2-8220-4676-b535-1bc70680ff43",
+            "maxCount": "1"
+        },{
+            "path": "shipToAddressId",
+            "@id": "38c7e370-7ec6-3008-a883-1f86910430da",
+            "node": "d4e3c4a5-9cc3-342a-b1f8-09d5bf6f554b",
+            "maxCount": "1"
+        },{
+            "path": "sellerId",
+            "@id": "e56f7048-4c17-4b9b-abab-945ed25edea2",
+            "node": "247da134-f1e6-3a7b-95d2-5c6ba3d373a2",
+            "maxCount": "1"
+        },{
+            "path": "salesOrderTypeId",
+            "@id": "57606edd-4949-3a5d-ab79-3ba03ee0d324",
+            "node": "20c2f338-45ce-3952-a644-b8b26ab49ca9",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "salesOrderSystemStatusId",
+            "@id": "0ca391d4-4c7c-49d9-8343-cefb4e4328d6",
+            "node": "78766015-c012-46c6-9f5f-ca8b51601966",
+            "maxCount": "1"
+        },{
+            "path": "salesOrderStatusId",
+            "@id": "f6c5143d-4ffa-3ac3-b5cc-d9a7cc0e5df7",
+            "node": "55c4e4fd-6219-320c-92ca-07d5a2817cd1",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "salesOrderConfirmationStatusId",
+            "@id": "9ffb8270-9ccc-49f9-a2e2-1274f50565be",
+            "node": "55c4e4fd-6219-320c-92ca-07d5a2817cd1",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "salesChannelId",
+            "@id": "d5dc9811-f4b3-47d7-a929-afcc73546060",
+            "node": "e152647c-6a1f-359d-9f2f-ecf9e138d951",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "requestedStartDate",
+            "@id": "cb288a2d-76a1-4333-8242-94c3dc8787b9",
+            "datatype": "xsd:date",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "renewalUpliftRate",
+            "@id": "4a910369-f50e-48e8-9fdf-4ad253cd7227",
+            "datatype": "cim:percentage",
+            "maxCount": "1"
+        },{
+            "path": "purchaseOrderNumber",
+            "@id": "7aeeaa00-3386-306f-a5ec-2195e21c27b5",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "purchaseOrderDate",
+            "@id": "981ff37c-36ce-3243-b798-04fe190599bd",
+            "datatype": "xsd:date",
+            "maxCount": "1"
+        },{
+            "path": "promiseDate",
+            "@id": "bfd9e4ab-f2a1-37c5-a0d5-1addffc1f15d",
+            "datatype": "xsd:date",
+            "maxCount": "1"
+        },{
+            "path": "priceCalculationStatusMessageText",
+            "@id": "122665ae-6bd5-48a8-bcfc-2596ffe9c99d",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "originalOrderId",
+            "@id": "93360ead-5cce-4262-a1e1-98914c468ac6",
+            "node": "12a0c973-f594-3605-b886-1a10e4860c37",
+            "maxCount": "1"
+        },{
+            "path": "orderStartDate",
+            "@id": "9166b1be-4f32-3bfd-ae4b-a52771e94d21",
+            "datatype": "xsd:date",
+            "maxCount": "1"
+        },{
+            "path": "orderNumber",
+            "@id": "ed178c51-6f49-34bc-a20e-ea5d7953669c",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "orderinsuranceAmountCurrency",
+            "@id": "d249c349-c892-3822-8eb3-1b998737577a",
+            "node": "6524a5c3-01b2-3a34-9a07-0d5f8faf5130",
+            "maxCount": "1"
+        },{
+            "path": "orderEndDate",
+            "@id": "8dfb54e1-b5a8-3998-9c5d-192ad6e1f061",
+            "datatype": "xsd:date",
+            "maxCount": "1"
+        },{
+            "path": "name",
+            "@id": "70264fe6-7c17-3f75-9853-c29422a329dd",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "00a93780-2281-3274-bc41-a495cd4a7ddd",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "isTaxExempt",
+            "@id": "81642a12-515e-4545-b3b3-6e517a5e3fa0",
+            "datatype": "xsd:boolean",
+            "maxCount": "1"
+        },{
+            "path": "isSuspended",
+            "@id": "87f817fe-c84f-48f8-8bcb-6d953ef639f1",
+            "datatype": "xsd:boolean",
+            "maxCount": "1"
+        },{
+            "path": "isHistoricalOnly",
+            "@id": "df9ce295-8a6e-40a0-b232-2c20e78e217a",
+            "datatype": "xsd:boolean",
+            "maxCount": "1"
+        },{
+            "path": "isContracted",
+            "@id": "41e75468-a86d-4313-9d1d-e2945518b23c",
+            "datatype": "xsd:boolean",
+            "maxCount": "1"
+        },{
+            "path": "isClosed",
+            "@id": "dcc44e03-d8ae-4616-8dcd-89f00e1f3751",
+            "datatype": "xsd:boolean",
+            "maxCount": "1"
+        },{
+            "path": "isAnonymous",
+            "@id": "fd277863-a404-45c5-a626-8239db396485",
+            "datatype": "xsd:boolean",
+            "maxCount": "1"
+        },{
+            "path": "isAlerted",
+            "@id": "81acd199-46a2-4444-b6b6-4e280873d7cd",
+            "datatype": "xsd:boolean",
+            "maxCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "d05d331a-ef8f-4181-bb3b-faca450bc09a",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "2011a90c-ad9a-38fd-b132-1bd0cf5d43a6",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "grandTotalAmount",
+            "@id": "1e3dd80e-fae7-3105-8d16-06223781634c",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "filedDate",
+            "@id": "c81cb04b-7c87-34ff-af1f-e598e6fccd1b",
+            "datatype": "xsd:date",
+            "maxCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "2a735746-b2fa-4080-8383-a9fa1564d80f",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "aad3bd4f-4495-374d-81f1-658768be38bd",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "description",
+            "@id": "90b375c4-bd00-3226-a750-58fafa658760",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "currencyCode",
+            "@id": "b805d42d-afed-4131-9858-2fbab87d4387",
+            "node": "6524a5c3-01b2-3a34-9a07-0d5f8faf5130",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "deedd786-fc82-3e48-a9f1-99b77ca06905",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "confirmationRecipientEmailText",
+            "@id": "23fb37f0-f747-4888-9757-0097946108a6",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "canBillNow",
+            "@id": "a29a8e8e-2be7-4dad-a0e0-77893c086190",
+            "datatype": "xsd:boolean",
+            "maxCount": "1"
+        },{
+            "path": "billtoPhoneNumberId",
+            "@id": "c360bfdf-79d3-4747-9e9e-c0f8226dbc2e",
+            "node": "ebb7825c-c6c6-3638-9d0b-d61c7a681be3",
+            "maxCount": "1"
+        },{
+            "path": "billtoEmailId",
+            "@id": "0b64280f-543b-3363-8bdc-84e7c3097fed",
+            "node": "892a1e9e-fd79-36d3-9aa6-51bffdfaa982",
+            "maxCount": "1"
+        },{
+            "path": "billToContactId",
+            "@id": "28952d1c-984d-3344-bb2c-9b819aab051f",
+            "node": "cc634de2-8220-4676-b535-1bc70680ff43",
+            "maxCount": "1"
+        },{
+            "path": "billToAddressId",
+            "@id": "0e2fc2b8-8711-3529-b475-c9ff744d86ff",
+            "node": "d4e3c4a5-9cc3-342a-b1f8-09d5bf6f554b",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "billToAccountId",
+            "@id": "cabb4f0f-0563-3b5d-b46c-fb0e7afbd2b6",
+            "node": "c3fabe09-9e66-38c7-adb7-022e190e8c4c",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "billingDayOfTheMonth",
+            "@id": "ec4fb10f-d438-4363-8707-c29d71647e7b",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "adjustedTotalProductAmount",
+            "@id": "6ad22e95-6920-4a2a-b070-5e46884b4e1f",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "adjustedProductTaxAmount",
+            "@id": "c053a7e7-b04b-4f4f-bf7f-b3e37991c986",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "SalesOrderChangeLogs",
+            "node": "b57450af-61f6-4060-9898-4e1ab922dab9",
+            "minCount": "1"
+        },{
+            "path": "SalesOrderDeliveryGroups",
+            "node": "a749188b-b632-3d84-9ea4-1f106c97518e",
+            "minCount": "1"
+        },{
+            "path": "SalesOrderPaymentSummaries",
+            "node": "8a206d53-8696-42d2-a666-de78ebd6a9a5",
+            "minCount": "1"
+        },{
+            "path": "SalesOrderPriceAdjustments",
+            "node": "15744483-7dd0-4080-b131-f8d79d992a9f",
+            "minCount": "1"
+        },{
+            "path": "SalesOrderProducts",
+            "node": "91bc8ac5-a68a-34e3-b7c9-1097594688f7",
+            "minCount": "1"
         }
-      ]
-    },
-    {
-      "@type": "Shape",
-      "@id": "SalesOrderProduct",
-      "properties": [
-        {
-          "path": "shippingTaxAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "shippingCostAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "handlingCostAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "discountAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "discountPercent",
-          "datatype": "xsd:integer",
-          "maxCount": "1"
-        },
-        {
-          "path": "unitTaxAmount",
-          "datatype": "xsd:integer",
-          "maxCount": "1"
-        },
-        {
-          "path": "cancelledQuantity",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "allocationPartitionName",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "allocationGroupName",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "endDate",
-          "datatype": "xsd:date",
-          "maxCount": "1"
-        },
-        {
-          "path": "shippingPhone",
-          "node": "ContactPointPhone"
-        },
-        {
-          "path": "shippingEmail",
-          "node": "ContactPointEmail"
-        },
-        {
-          "path": "shippingAddress",
-          "node": "ContactPointAddress"
-        },
-        {
-          "path": "unitPriceAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalUnitPriceAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalTaxAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalRecurringPriceAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalProductTaxAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalPriceAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "totalManualAdjustmentAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalListPriceAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalLineAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalLineAdjustmentAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalDistributedTaxAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalDistributedAdjustmentTaxAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalDistributedAdjustmentAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalAdjustmentTaxAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalAdjustmentAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "salesOrderProductAdjustedTaxAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "recurringPriceAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "orderManualAdjustmentSubTotalAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "orderAdjustmentSubTotalAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "listPriceAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "lineAdjustmentSubTotalAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "deliveryTaxAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "adjustedDeliveryTaxAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "segmentIndex",
-          "datatype": "xsd:integer",
-          "maxCount": "1"
-        },
-        {
-          "path": "fulfilledQuantity",
-          "datatype": "xsd:integer",
-          "maxCount": "1"
-        },
-        {
-          "path": "subscriptionTermQuantity",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "subscriptionRenewalMonthQuantity",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "segmentIndexNumber",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "orderedQuantity",
-          "datatype": "xsd:decimal",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "availableQuantity",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "allocatedQuantity",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "giftRecipientTelephoneNumber",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "giftOrderMessageText",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "commentText",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "isGift",
-          "datatype": "xsd:boolean",
-          "maxCount": "1"
-        },
-        {
-          "path": "isBundleRoot",
-          "datatype": "xsd:boolean",
-          "maxCount": "1"
-        },
-        {
-          "path": "isBonusProduct",
-          "datatype": "xsd:boolean",
-          "maxCount": "1"
-        },
-        {
-          "path": "isAutomaticallyRenewed",
-          "datatype": "xsd:boolean",
-          "maxCount": "1"
-        },
-        {
-          "path": "requestedStartDate",
-          "datatype": "xsd:date",
-          "maxCount": "1"
-        },
-        {
-          "path": "requestedEndDate",
-          "datatype": "xsd:date",
-          "maxCount": "1"
-        },
-        {
-          "path": "provisioningDate",
-          "datatype": "xsd:date",
-          "maxCount": "1"
-        },
-        {
-          "path": "promisedDate",
-          "datatype": "xsd:date",
-          "maxCount": "1"
-        },
-        {
-          "path": "quantityOrderedUOM",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "listPriceTermUOM",
-          "node": "ProductValidityTimePeriodUOM"
-        },
-        {
-          "path": "listPriceQuantityUOM",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "subscriptionTermUnit",
-          "node": "ProductValidityTimePeriodUOM"
-        },
-        {
-          "path": "priceBookEntry",
-          "node": "PriceBookEntry",
-          "minCount": "1"
-        },
-        {
-          "path": "sellerAccount",
-          "node": "Account"
-        },
-        {
-          "path": "salesOrderProductStatus",
-          "node": "SalesOrderProductStatus",
-          "minCount": "1"
-        },
-        {
-          "path": "salesOrderProductReason",
-          "node": "SalesOrderProductReason"
-        },
-        {
-          "path": "salesOrderDeliveryGroup",
-          "node": "SalesOrderDeliveryGroup"
-        },
-        {
-          "path": "product",
-          "node": "Product",
-          "minCount": "1"
-        },
-        {
-          "path": "salesOrder",
-          "node": "SalesOrder",
-          "minCount": "1"
-        },
-        {
-          "path": "originalOrderProduct",
-          "node": "SalesOrderProduct"
-        },
-        {
-          "path": "orderProductNumber",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "description",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "shippingTaxAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "shippingCostAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "handlingCostAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "discountAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "discountPercent",
-          "datatype": "xsd:integer",
-          "maxCount": "1"
-        },
-        {
-          "path": "unitTaxAmount",
-          "datatype": "xsd:integer",
-          "maxCount": "1"
-        },
-        {
-          "path": "cancelledQuantity",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "allocationPartitionName",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "allocationGroupName",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "endDate",
-          "datatype": "xsd:date",
-          "maxCount": "1"
-        },
-        {
-          "path": "shippingPhone",
-          "node": "ContactPointPhone"
-        },
-        {
-          "path": "shippingEmail",
-          "node": "ContactPointEmail"
-        },
-        {
-          "path": "shippingAddress",
-          "node": "ContactPointAddress"
-        },
-        {
-          "path": "unitPriceAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalUnitPriceAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalTaxAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalRecurringPriceAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalProductTaxAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalPriceAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "totalManualAdjustmentAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalListPriceAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalLineAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalLineAdjustmentAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalDistributedTaxAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalDistributedAdjustmentTaxAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalDistributedAdjustmentAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalAdjustmentTaxAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalAdjustmentAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "salesOrderProductAdjustedTaxAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "recurringPriceAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "orderManualAdjustmentSubTotalAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "orderAdjustmentSubTotalAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "listPriceAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "lineAdjustmentSubTotalAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "deliveryTaxAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "adjustedDeliveryTaxAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "segmentIndex",
-          "datatype": "xsd:integer",
-          "maxCount": "1"
-        },
-        {
-          "path": "fulfilledQuantity",
-          "datatype": "xsd:integer",
-          "maxCount": "1"
-        },
-        {
-          "path": "subscriptionTermQuantity",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "subscriptionRenewalMonthQuantity",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "segmentIndexNumber",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "orderedQuantity",
-          "datatype": "xsd:decimal",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "availableQuantity",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "allocatedQuantity",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "giftRecipientTelephoneNumber",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "giftOrderMessageText",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "commentText",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "isGift",
-          "datatype": "xsd:boolean",
-          "maxCount": "1"
-        },
-        {
-          "path": "isBundleRoot",
-          "datatype": "xsd:boolean",
-          "maxCount": "1"
-        },
-        {
-          "path": "isBonusProduct",
-          "datatype": "xsd:boolean",
-          "maxCount": "1"
-        },
-        {
-          "path": "isAutomaticallyRenewed",
-          "datatype": "xsd:boolean",
-          "maxCount": "1"
-        },
-        {
-          "path": "requestedStartDate",
-          "datatype": "xsd:date",
-          "maxCount": "1"
-        },
-        {
-          "path": "requestedEndDate",
-          "datatype": "xsd:date",
-          "maxCount": "1"
-        },
-        {
-          "path": "provisioningDate",
-          "datatype": "xsd:date",
-          "maxCount": "1"
-        },
-        {
-          "path": "promisedDate",
-          "datatype": "xsd:date",
-          "maxCount": "1"
-        },
-        {
-          "path": "quantityOrderedUOM",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "listPriceTermUOM",
-          "node": "ProductValidityTimePeriodUOM"
-        },
-        {
-          "path": "listPriceQuantityUOM",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "subscriptionTermUnit",
-          "node": "ProductValidityTimePeriodUOM"
-        },
-        {
-          "path": "priceBookEntry",
-          "node": "PriceBookEntry",
-          "minCount": "1"
-        },
-        {
-          "path": "sellerAccount",
-          "node": "Account"
-        },
-        {
-          "path": "salesOrderProductStatus",
-          "node": "SalesOrderProductStatus",
-          "minCount": "1"
-        },
-        {
-          "path": "salesOrderProductReason",
-          "node": "SalesOrderProductReason"
-        },
-        {
-          "path": "salesOrderDeliveryGroup",
-          "node": "SalesOrderDeliveryGroup"
-        },
-        {
-          "path": "product",
-          "node": "Product",
-          "minCount": "1"
-        },
-        {
-          "path": "salesOrder",
-          "node": "SalesOrder",
-          "minCount": "1"
-        },
-        {
-          "path": "originalOrderProduct",
-          "node": "SalesOrderProduct"
-        },
-        {
-          "path": "orderProductNumber",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "description",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
+        ]
+    },{
+        "@id": "b57450af-61f6-4060-9898-4e1ab922dab9",
+        "@type": "Shape",
+        "targetClass": "SalesOrderChangeLog",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "bb38f79a-8a12-4717-8808-5e5728f17d41",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "relatedSalesOrderProductId",
+            "@id": "81626e1c-82ce-4d0d-a1e1-9b2017ed2214",
+            "node": "91bc8ac5-a68a-34e3-b7c9-1097594688f7",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "relatedSalesOrderId",
+            "@id": "a116f216-5ed1-4a5a-8f4f-a75103713266",
+            "node": "12a0c973-f594-3605-b886-1a10e4860c37",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "name",
+            "@id": "61609e8a-cb8a-4a1a-8242-0121878a9c49",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "73bc955b-76da-4434-b434-8359f4e1dccf",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "5e2f157f-77ef-4575-9ddd-b9092b886874",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "8e4de58f-23b7-4555-8bcb-ea78a0b9eccb",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "c1c37126-d91f-4717-acec-84539c2af297",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "edf37dec-5ee9-49b9-a060-17efda5c15cf",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "130d8560-7493-4595-b8b8-959b8bf8829b",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "changeSalesOrderProductId",
+            "@id": "e521c081-f5df-4f4f-9393-3c89b69be05e",
+            "node": "91bc8ac5-a68a-34e3-b7c9-1097594688f7",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "changeSalesOrderId",
+            "@id": "fe4837a7-9169-4d1d-a8a8-caa9c201f1a4",
+            "node": "12a0c973-f594-3605-b886-1a10e4860c37",
+            "maxCount": "1",
+            "minCount": "1"
         }
-      ]
-    },
-    {
-      "@type": "Shape",
-      "@id": "SalesOrderProductStatus",
-      "properties": [
-        {
-          "path": "name",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "name",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
+        ]
+    },{
+        "@id": "991626f7-c999-4010-8747-ef6d22442681",
+        "@type": "Shape",
+        "targetClass": "SalesOrderChangeType",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "0c27a131-937d-4b6b-b5b5-78185ef62237",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "salesOrderChangeTypeCode",
+            "@id": "3727689e-37bf-44e4-abeb-e8aef585a8f1",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "981b9b94-aee1-4232-b7b7-edebcb73fdcf",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "f48bbe53-029d-45d5-9c1c-e8067d79bb0a",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "7324f9de-258e-4d8d-bafa-86186ecb5169",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "0e1ed823-0853-4777-bfff-bb8d795e7220",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "a21df092-6981-40a0-a626-c97d4450bdda",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "d13f87a0-4def-4858-9696-1479024b3c91",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
         }
-      ]
-    },
-    {
-      "@type": "Shape",
-      "@id": "SalesOrderProductReasonCategory",
-      "properties": [
-        {
-          "path": "name",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "name",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
+        ]
+    },{
+        "@id": "633ff6d6-aed1-4858-8d8d-3556ec8904c3",
+        "@type": "Shape",
+        "targetClass": "SalesOrderConfirmationStatus",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "00aa5838-9687-4fdf-9ddd-1f10a488c1cd",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "name",
+            "@id": "7a9637bc-11de-4515-b2f2-ff30e1283941",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "d05ef1af-b602-4c6c-bc3c-7defbb89cf24",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "ed4b124f-33ef-4979-8686-cb83164445f7",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "a471fb6e-e46a-4cbc-ac2c-6ef3873c9752",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "143372f0-68a5-40d0-a7a7-fbd47e295873",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "9e06ce56-e9bd-4101-9ada-f0d04e1b54c4",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "0d9d4936-fa56-4c8c-83c3-28d8a38f8630",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
         }
-      ]
-    },
-    {
-      "@type": "Shape",
-      "@id": "SalesOrderProductReason",
-      "properties": [
-        {
-          "path": "salesOrderProductReasonCategory",
-          "node": "SalesOrderProductReasonCategory",
-          "minCount": "1"
-        },
-        {
-          "path": "name",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "salesOrderProductReasonCategory",
-          "node": "SalesOrderProductReasonCategory",
-          "minCount": "1"
-        },
-        {
-          "path": "name",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
+        ]
+    },{
+        "@id": "a749188b-b632-3d84-9ea4-1f106c97518e",
+        "@type": "Shape",
+        "targetClass": "SalesOrderDeliveryGroup",
+        "properties": [
+{
+            "path": "totalUnitPriceAmount",
+            "@id": "ce3071a5-372d-45f5-87c7-1fcc3bdcc5e7",
+            "datatype": "cim:amount",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "totalTaxAmount",
+            "@id": "2a538549-bc90-42d2-be3e-5e9b33b39fcd",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "totalProductTaxAmount",
+            "@id": "c3004364-5619-4bab-8000-5b7e9dbc02bc",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "totalPriceAmount",
+            "@id": "badbecd8-dc4f-4b4b-8e0e-68af7695aef4",
+            "datatype": "cim:amount",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "totalDeliveryTaxAmount",
+            "@id": "577eebec-996d-4bdb-9656-020478754ab5",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "totalDeliveryChargeTaxAmount",
+            "@id": "637da983-1a58-4a1a-b2b2-8a6608f65586",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "totalDeliveryChargeAmountCurrencyId",
+            "@id": "7056bc47-2620-4aba-8646-ac025daa9060",
+            "node": "6524a5c3-01b2-3a34-9a07-0d5f8faf5130",
+            "maxCount": "1"
+        },{
+            "path": "totalDeliveryChargeAmount",
+            "@id": "c3d0c7d6-8816-4959-93d3-0da0a7c83ce4",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "totalDeliveryAmountCurrencyId",
+            "@id": "d9b25829-359c-4aca-9050-3d9beef21f44",
+            "node": "6524a5c3-01b2-3a34-9a07-0d5f8faf5130",
+            "maxCount": "1"
+        },{
+            "path": "totalDeliveryAdjustmentTaxAmount",
+            "@id": "5756c75a-b3c8-4929-b1b1-846e0d79de70",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "totalDeliveryAdjustmentAmount",
+            "@id": "c8200548-ce1b-4c4c-bcbc-1f96b868eaa2",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "systemModstamp",
+            "@id": "ccdda799-5e24-4a0a-a161-c90483e44966",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "salesOrderId",
+            "@id": "b5ac1c75-74b1-4b6b-a9a9-12787e8a6e65",
+            "node": "12a0c973-f594-3605-b886-1a10e4860c37",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "salesOrderDeliveryStatusId",
+            "@id": "27598c1d-9a8e-4f0f-b5b5-74ad9aec4097",
+            "node": "9587d03a-f0a1-4a3a-b474-fc5b09580937",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "salesOrderDeliveryGroupNumber",
+            "@id": "3c46c123-0784-4bdb-b070-b3f6dddfc7ec",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "promisedDate",
+            "@id": "9e5360be-c1d2-4919-a8e8-cf02230b6650",
+            "datatype": "xsd:date",
+            "maxCount": "1"
+        },{
+            "path": "originalDeliveryGroupId",
+            "@id": "232b4f6f-87cf-4636-a5e5-a827298b64ab",
+            "node": "a749188b-b632-3d84-9ea4-1f106c97518e",
+            "maxCount": "1"
+        },{
+            "path": "orderDeliveryMethodId",
+            "@id": "53b3402d-efaf-308a-9dba-cee74a4496cb",
+            "node": "b734fc6b-e50d-3066-a5a0-9344dddfd605",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "name",
+            "@id": "ee72ef24-5bf0-4e1e-a868-b3ae256e58df",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "a19cc051-b162-4707-bcfc-267ee6902de0",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "isGift",
+            "@id": "3eb4b29f-c2b5-4bcb-9f5f-347c5119cfad",
+            "datatype": "xsd:boolean",
+            "maxCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "fb78e141-dd84-4171-aded-9f1c4fb8a233",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "df27373d-30bf-4949-8bcb-2f5e19442dda",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "grandTotalDeliveryAmount",
+            "@id": "b782cff8-e8c7-4aaa-b777-d9b6eb939c3c",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "giftMessageText",
+            "@id": "ab3d38a3-c0b2-48d8-8c0c-08650b437d77",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "4cb5b64d-fa04-4c4c-a868-48737ba39bec",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "ab3a736b-60de-4828-a0e0-1f03a4e7d4b9",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "desiredDeliveryDate",
+            "@id": "4ca00f65-f109-43d3-a767-81ed2d2df8b3",
+            "datatype": "xsd:date",
+            "maxCount": "1"
+        },{
+            "path": "description",
+            "@id": "6f23056a-a7bc-4b0b-9a5a-9657516ee691",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "deliveryInstructionsText",
+            "@id": "5655ee13-6d72-41a1-b9f9-99d00623ed13",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "548a3a36-ff90-4656-b373-7b90c5782318",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "contactPointAddressId",
+            "@id": "abbb1feb-6335-4ebe-acac-e563ed77f51b",
+            "node": "d4e3c4a5-9cc3-342a-b1f8-09d5bf6f554b",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "accountContactId",
+            "@id": "ce506924-8fc8-4444-b1f1-0a460894508a",
+            "node": "0f5c0999-18e5-34e8-87e5-131be51789dc",
+            "maxCount": "1",
+            "minCount": "1"
         }
-      ]
-    },
-    {
-      "@type": "Shape",
-      "@id": "SalesOrderPriceAdjustment",
-      "and": [
-        {
-          "@id": "PriceAdjustmentGroup"
-        },
-        {
-          "properties": [
-            {
-              "path": "totalAdjustmentTaxAmount",
-              "datatype": "xsd:decimal",
-              "maxCount": "1"
-            },
-            {
-              "path": "salesOrder",
-              "node": "SalesOrder",
-              "minCount": "1"
-            },
-            {
-              "path": "id",
-              "datatype": "cim:id",
-              "maxCount": "1",
-              "minCount": "1"
-            },
-            {
-              "path": "totalAdjustmentTaxAmount",
-              "datatype": "xsd:decimal",
-              "maxCount": "1"
-            },
-            {
-              "path": "salesOrder",
-              "node": "SalesOrder",
-              "minCount": "1"
-            },
-            {
-              "path": "id",
-              "datatype": "cim:id",
-              "maxCount": "1",
-              "minCount": "1"
-            }
-          ]
+        ]
+    },{
+        "@id": "9587d03a-f0a1-4a3a-b474-fc5b09580937",
+        "@type": "Shape",
+        "targetClass": "SalesOrderDeliveryStatus",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "7937b48c-a321-4c2c-b434-91f5d9b05d3f",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "name",
+            "@id": "272d0d3c-3068-41c1-9616-58b8c2f89ccc",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "5546448f-e937-4838-aaaa-a47fd0d529ae",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "d1aa0e60-b2b8-4b0b-ac6c-110d7fa38a63",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "68c50e4a-a4e6-4a9a-9818-4b0c6d306e13",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "dbb31326-b0ff-43a3-b9f9-fa62bb6892a6",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "418a353f-f33c-4858-baba-a6331eb3d785",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "033f8868-8f67-42d2-8787-96d93a6a6951",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
         }
-      ]
-    },
-    {
-      "@type": "Shape",
-      "@id": "SalesOrderPriceAdjustmentType",
-      "properties": [
-        {
-          "path": "name",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "name",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
+        ]
+    },{
+        "@id": "8a206d53-8696-42d2-a666-de78ebd6a9a5",
+        "@type": "Shape",
+        "targetClass": "SalesOrderPaymentSummary",
+        "properties": [
+{
+            "path": "unappliedAmount",
+            "@id": "34780014-3e8b-4272-9595-9de34e10b714",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "systemModstamp",
+            "@id": "a398fcd2-00c9-42b2-a767-5bc260329007",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "salesOrderId",
+            "@id": "3a994d93-d516-4161-bb3b-c7b122b00aa6",
+            "node": "12a0c973-f594-3605-b886-1a10e4860c37",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "paymentMethodId",
+            "@id": "bfb22775-aaa7-4101-8505-0428814395bd",
+            "node": "d477c570-e6c7-4d1d-9d5d-3e67b718c678",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "paymentAmountCurrency",
+            "@id": "98915f4f-efce-4464-9656-fd45380f3a14",
+            "node": "6524a5c3-01b2-3a34-9a07-0d5f8faf5130",
+            "maxCount": "1"
+        },{
+            "path": "paymentAmount",
+            "@id": "d49a6f72-bc4c-4b4b-80c0-4356cd1e4824",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "name",
+            "@id": "8ae6da66-f891-4717-9898-fc6da87163fe",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "01f67cb1-d88b-4101-a6e6-a15024553576",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "66741a1f-5f10-4f5f-a7e7-4cf1c6cbeb1a",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "708bf226-fd49-4f4f-b8f8-601d94c35626",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "cef9a123-0304-4494-9b9b-5da21e2e25cb",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "16dc8903-3491-4999-abeb-9acc83cc0107",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "b2491d69-039a-45b5-8101-e7e37b73b68d",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "capturedAmount",
+            "@id": "95ab9d02-8a78-4f1f-9a1a-810e7ad9121c",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "availableToApplyBalanceAmount",
+            "@id": "7a63468d-3464-47c7-a8a8-ec85f61a4912",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "authorizationReversalAmount",
+            "@id": "1d2aeb5d-0dda-4262-bfff-ec1aec98dcfd",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "authorizationAmount",
+            "@id": "0b4dc3eb-4f10-4999-80c0-5e65b6a5b5e6",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "appliedAmount",
+            "@id": "702e98f5-612d-4c6c-a363-fbd4f6a70b36",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "PaymentAuthorizations",
+            "node": "ff78bf12-66f1-4b1b-8f4f-d51ac7ec884f",
+            "minCount": "1"
         }
-      ]
-    },
-    {
-      "@type": "Shape",
-      "@id": "PriceAdjustmentMethod",
-      "properties": [
-        {
-          "path": "name",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "name",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
+        ]
+    },{
+        "@id": "15744483-7dd0-4080-b131-f8d79d992a9f",
+        "@type": "Shape",
+        "targetClass": "SalesOrderPriceAdjustment",
+        "properties": [
+{
+            "path": "totalAdjustmentTaxAmount",
+            "@id": "798e449d-cccb-4fcf-bd3d-c1baa1bae042",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "systemModstamp",
+            "@id": "e3860f5a-745c-42f2-9252-7342dbef8ab3",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "salesOrderId",
+            "@id": "d63a1a7a-e3f1-4c7c-a767-d325ef03a778",
+            "node": "12a0c973-f594-3605-b886-1a10e4860c37",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "5d57b438-481f-4333-a2e2-046f36d7bfae",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "b4f44b29-12ab-4424-ad2d-5cd794bb9b71",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "90154aa7-9efa-41b1-8404-66162fc225bc",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "5ef39b76-2c3e-46b6-b131-cb2af69e6e2c",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "f46747d4-71b5-4cac-98d8-5d4330622430",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "962ee50b-114f-4747-8646-f93f2f8b1c18",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
         }
-      ]
-    },
-    {
-      "@type": "Shape",
-      "@id": "SalesOrderProductTax",
-      "and": [
-        {
-          "@id": "SalesOrderTax"
-        },
-        {
-          "properties": [
-            {
-              "path": "taxAmount",
-              "datatype": "xsd:decimal",
-              "maxCount": "1",
-              "minCount": "1"
-            },
-            {
-              "path": "taxEffectiveDate",
-              "datatype": "xsd:date",
-              "maxCount": "1"
-            },
-            {
-              "path": "salesOrderProduct",
-              "node": "SalesOrderProduct",
-              "minCount": "1"
-            },
-            {
-              "path": "originalSalesOrderProductTax",
-              "node": "SalesOrderProductTax"
-            },
-            {
-              "path": "description",
-              "datatype": "xsd:string",
-              "maxCount": "1",
-              "minCount": "1"
-            },
-            {
-              "path": "name",
-              "datatype": "xsd:string",
-              "maxCount": "1",
-              "minCount": "1"
-            },
-            {
-              "path": "id",
-              "datatype": "cim:id",
-              "maxCount": "1",
-              "minCount": "1"
-            },
-            {
-              "path": "taxAmount",
-              "datatype": "xsd:decimal",
-              "maxCount": "1",
-              "minCount": "1"
-            },
-            {
-              "path": "taxEffectiveDate",
-              "datatype": "xsd:date",
-              "maxCount": "1"
-            },
-            {
-              "path": "salesOrderProduct",
-              "node": "SalesOrderProduct",
-              "minCount": "1"
-            },
-            {
-              "path": "originalSalesOrderProductTax",
-              "node": "SalesOrderProductTax"
-            },
-            {
-              "path": "description",
-              "datatype": "xsd:string",
-              "maxCount": "1",
-              "minCount": "1"
-            },
-            {
-              "path": "name",
-              "datatype": "xsd:string",
-              "maxCount": "1",
-              "minCount": "1"
-            },
-            {
-              "path": "id",
-              "datatype": "cim:id",
-              "maxCount": "1",
-              "minCount": "1"
-            }
-          ]
+        ]
+    },{
+        "@id": "55ab903c-b415-44a4-8d0d-9ea8b1338290",
+        "@type": "Shape",
+        "targetClass": "SalesOrderPriceAdjustmentType",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "d4376335-8010-4f0f-bc7c-933e27379da6",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "name",
+            "@id": "36f316e8-d3a8-4171-9ddd-3278469e1824",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "e63038d0-ecc9-45e5-a1a1-6d40aaccc00d",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "ee535482-907e-4e9e-bdbd-bb9b4974325a",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "37554f37-e667-4818-bbfb-469880a0bf73",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "45fb446b-3a61-4d5d-8aca-55a978037c95",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "ee37a0bf-6690-4e9e-a060-b7b7c466e935",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "3b14aa45-9158-45c5-b474-7b9e7e22bde4",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
         }
-      ]
-    },
-    {
-      "@type": "Shape",
-      "@id": "SalesOrderTax",
-      "properties": [
-        {
-          "path": "salesOrderTaxAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "taxRatePercent",
-          "datatype": "xsd:integer",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "taxErrorMessageText",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "taxAddressStreet2Text",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "taxAddressStreet1Text",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "taxAddressCityName",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "name",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "salesOrderTaxAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "taxRatePercent",
-          "datatype": "xsd:integer",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "taxErrorMessageText",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "taxAddressStreet2Text",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "taxAddressStreet1Text",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "taxAddressCityName",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "name",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
+        ]
+    },{
+        "@id": "91bc8ac5-a68a-34e3-b7c9-1097594688f7",
+        "@type": "Shape",
+        "targetClass": "SalesOrderProduct",
+        "properties": [
+{
+            "path": "unitTaxAmountCurrency",
+            "@id": "34f49860-2998-3ade-b671-86cd549cb495",
+            "node": "6524a5c3-01b2-3a34-9a07-0d5f8faf5130",
+            "maxCount": "1"
+        },{
+            "path": "unitPriceAmountCurrency",
+            "@id": "d45e3eb6-7b51-310a-a14f-27654f72f617",
+            "node": "6524a5c3-01b2-3a34-9a07-0d5f8faf5130",
+            "maxCount": "1"
+        },{
+            "path": "unitPriceAmount",
+            "@id": "2b82b46d-bc49-3487-af0a-6c044ea15647",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "totalUnitPriceAmount",
+            "@id": "4ab532be-0324-44d4-8181-fee92c78d6aa",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "totalTaxAmount",
+            "@id": "571bfbeb-b7fa-44d4-b535-33fcd50d7c1f",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "totalRecurringPriceAmount",
+            "@id": "71724914-939c-4020-9f9f-48f021b1faaa",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "totalProductTaxAmount",
+            "@id": "8dd3d863-5743-4fdf-8dcd-41151b082479",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "totalPriceAmount",
+            "@id": "789c9faf-5e8b-4868-ac2c-246c763fa094",
+            "datatype": "cim:amount",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "totalManualAdjustmentAmount",
+            "@id": "a1b3e719-cd55-4454-a8a8-3254c41e87f4",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "totalListPriceAmount",
+            "@id": "668d74ff-830c-4bcb-bdbd-5330e7585819",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "totalLineAmount",
+            "@id": "59dda693-1c19-4cfc-a8e8-14f613bb38ee",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "totalLineAdjustmentAmount",
+            "@id": "e702a770-8ccd-4f9f-85c5-57fda1eab2c9",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "totalDistributedTaxAmount",
+            "@id": "533b7c6e-9086-49d9-a1e1-9d6d517f1fde",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "totalDistributedAdjustmentTaxAmount",
+            "@id": "6a34b209-babb-4626-abab-33b0c578afa7",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "totalDistributedAdjustmentAmount",
+            "@id": "05328aab-3b42-4b8b-9e5e-a963bfecbfbc",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "totalAdjustmentTaxAmount",
+            "@id": "29b55d01-79d3-4515-80c0-245b3b97dfd6",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "totalAdjustmentAmount",
+            "@id": "c8384a7d-552f-4585-afaf-3d80339dabd5",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "systemModstamp",
+            "@id": "301bf4ac-5650-38d1-8caf-ac75f0380927",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "subscriptionTermUnitId",
+            "@id": "d20a1e42-0f04-4454-a1e1-a3756386352a",
+            "node": "277ad160-ac8f-3622-aa33-85c7950e340f",
+            "maxCount": "1"
+        },{
+            "path": "subscriptionTermQuantity",
+            "@id": "fce90752-353a-4080-a4a4-81a37d77633c",
+            "datatype": "xsd:decimal",
+            "maxCount": "1"
+        },{
+            "path": "subscriptionRenewalMonthQuantity",
+            "@id": "be778073-98b0-42c2-8f0f-764196c728f0",
+            "datatype": "xsd:decimal",
+            "maxCount": "1"
+        },{
+            "path": "shippingTaxAmountCurrency",
+            "@id": "42bf3a9c-2466-3b0e-b7a8-4297151d7b07",
+            "node": "6524a5c3-01b2-3a34-9a07-0d5f8faf5130",
+            "maxCount": "1"
+        },{
+            "path": "shippingCostAmountCurrency",
+            "@id": "031e5770-95e8-3728-a078-177f1c0fc5a4",
+            "node": "6524a5c3-01b2-3a34-9a07-0d5f8faf5130",
+            "maxCount": "1"
+        },{
+            "path": "sellerAccountId",
+            "@id": "244abae6-1bbf-40b0-ba3a-5492af1b0510",
+            "node": "c3fabe09-9e66-38c7-adb7-022e190e8c4c",
+            "maxCount": "1"
+        },{
+            "path": "segmentIndexNumber",
+            "@id": "098fb761-f414-4d0d-a363-0d0d02a0bce9",
+            "datatype": "xsd:decimal",
+            "maxCount": "1"
+        },{
+            "path": "segmentIndexId",
+            "@id": "2332c42c-94fe-4efe-a4a4-b6cbafd12fdf",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "salesOrderProductStatusId",
+            "@id": "8b82d3a0-3dd9-373f-8de1-4e7b5fe19934",
+            "node": "e2f084fb-1ae2-3c3b-84a1-54186da19db5",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "salesOrderProductReasonId",
+            "@id": "bf5e421b-1c38-4414-9151-85c3f4c93862",
+            "node": "db79ecd1-bba1-4b5b-ac2c-0cc63ecf6b31",
+            "maxCount": "1"
+        },{
+            "path": "salesOrderProductAdjustedTaxAmount",
+            "@id": "9410098e-3ced-4fff-b1b1-268647a3fc42",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "salesOrderId",
+            "@id": "19dc24f3-8b5b-3bd2-8449-fd32b94551fa",
+            "node": "12a0c973-f594-3605-b886-1a10e4860c37",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "salesOrderDeliveryGroupId",
+            "@id": "789bd7f4-a142-49a9-8a4a-9dc3e1ebca67",
+            "node": "a749188b-b632-3d84-9ea4-1f106c97518e",
+            "maxCount": "1"
+        },{
+            "path": "requestedStartDate",
+            "@id": "0acad2d7-e6c8-4a6a-9454-091b016f027d",
+            "datatype": "xsd:date",
+            "maxCount": "1"
+        },{
+            "path": "requestedEndDate",
+            "@id": "e9440036-ceed-4faf-8949-73e0f70087fe",
+            "datatype": "xsd:date",
+            "maxCount": "1"
+        },{
+            "path": "recurringPriceAmount",
+            "@id": "a272a7a3-2465-4fbf-9ddd-787c57166dba",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "quantityOrderedUOMId",
+            "@id": "8eddf9e5-6b2b-42e2-9696-4cd7ca395d74",
+            "node": "e5804eef-defe-3262-9ca9-a69179d5fad3",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "quantityFulfilled",
+            "@id": "84c1b435-7cf8-3363-a46d-75668dd07b6b",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "provisioningDate",
+            "@id": "1e5615a9-9d38-49a9-ae2e-ed445089bb83",
+            "datatype": "xsd:date",
+            "maxCount": "1"
+        },{
+            "path": "promisedDate",
+            "@id": "72177c55-5929-39b2-b7c5-07d0819f3e9d",
+            "datatype": "xsd:date",
+            "maxCount": "1"
+        },{
+            "path": "productId",
+            "@id": "6971ac8f-5b57-3557-b0d5-4aa68a203054",
+            "node": "0a14a328-3059-3c24-9c85-ececb74ab456",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "originalOrderProductId",
+            "@id": "dba3f3f7-af9f-4707-af2f-8c04692074dc",
+            "node": "91bc8ac5-a68a-34e3-b7c9-1097594688f7",
+            "maxCount": "1"
+        },{
+            "path": "orderProductNumber",
+            "@id": "702a46e6-c8cd-31c8-81e3-9ffc9b997948",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "orderManualAdjustmentSubTotalAmount",
+            "@id": "99e4af80-b9c5-4f6f-b1f1-e4a5ab37cb19",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "orderedQuantity",
+            "@id": "2c945556-6ff5-3772-a266-84f9127a9741",
+            "datatype": "xsd:decimal",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "orderAdjustmentSubTotalAmount",
+            "@id": "652d8b61-a897-4b3b-8545-28c45575f8b6",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "listPriceTermUOMId",
+            "@id": "1806a79c-9496-4666-8ece-8151da5ad485",
+            "node": "277ad160-ac8f-3622-aa33-85c7950e340f",
+            "maxCount": "1"
+        },{
+            "path": "listPriceQuantityUOMId",
+            "@id": "b01ffc2b-f47c-44e4-8a8a-4a9eac3ccc59",
+            "node": "e5804eef-defe-3262-9ca9-a69179d5fad3",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "listPriceAmountCurrency",
+            "@id": "33e6105b-ae62-32ac-8c77-266f686636d3",
+            "node": "6524a5c3-01b2-3a34-9a07-0d5f8faf5130",
+            "maxCount": "1"
+        },{
+            "path": "listPriceAmount",
+            "@id": "d1498eba-6219-3069-aa7f-d8bf7b88ee2d",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "lineAdjustmentSubTotalAmount",
+            "@id": "cb7df6be-17f2-40f0-a3a3-7b1e50adda8d",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "36f41be3-6940-33d8-ab32-07a72d772039",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "isGift",
+            "@id": "f11ebdb0-efd8-4878-b777-dd074b0aeca3",
+            "datatype": "xsd:boolean",
+            "maxCount": "1"
+        },{
+            "path": "isBundleRoot",
+            "@id": "b4e16151-19ff-4353-ba7a-ef3d52e733b5",
+            "datatype": "xsd:boolean",
+            "maxCount": "1"
+        },{
+            "path": "isBonusProduct",
+            "@id": "df2bcbcd-e3f8-41a1-9414-7c974602a1e8",
+            "datatype": "xsd:boolean",
+            "maxCount": "1"
+        },{
+            "path": "isAutomaticallyRenewed",
+            "@id": "5bc1aeba-7607-4000-a6a6-25354ee1a936",
+            "datatype": "xsd:boolean",
+            "maxCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "88805442-4b4b-4a9a-8f0f-59e29ea404ee",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "bb12e26b-2db9-3ea3-9b81-bb0910959bc3",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "handlingCostAmountCurrency",
+            "@id": "46dd44c5-c54a-346e-9c1d-b6911b8f08cc",
+            "node": "6524a5c3-01b2-3a34-9a07-0d5f8faf5130",
+            "maxCount": "1"
+        },{
+            "path": "giftRecipientTelephoneNumber",
+            "@id": "5cb0f2a6-5ebf-42f2-a969-69fd9b438d80",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "giftOrderMessageText",
+            "@id": "b01020bf-1803-4787-96d6-7f2080a80acd",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "7dc0e0b7-0990-4aaa-9c5c-8c1a27ac158c",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "2120eb6c-7073-3ee7-8bef-2a4b12751a3b",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "discountAmountCurrency",
+            "@id": "6059a863-3c16-3f85-9623-a70225185718",
+            "node": "6524a5c3-01b2-3a34-9a07-0d5f8faf5130",
+            "maxCount": "1"
+        },{
+            "path": "description",
+            "@id": "4f71196b-08f7-3977-a9f3-1fd9831e23a6",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "deliveryTaxAmount",
+            "@id": "bb815d1a-f5a8-4cac-ae6e-83c4bc54c33b",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "7643b66e-0f79-36a1-97fb-f396007b3636",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "commentText",
+            "@id": "cdda2302-a587-4d9d-98d8-bd4af7298a91",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "availableQuantity",
+            "@id": "f0450e7d-dc1b-31a2-9765-eb18d15ecbea",
+            "datatype": "xsd:decimal",
+            "maxCount": "1"
+        },{
+            "path": "allocatedQuantity",
+            "@id": "86f28957-14bb-3527-b749-777c7fa2924e",
+            "datatype": "xsd:decimal",
+            "maxCount": "1"
+        },{
+            "path": "adjustedDeliveryTaxAmount",
+            "@id": "b32f17f8-73a2-4f5f-8545-0ee57526184c",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "SalesOrderProductAttributeValues",
+            "node": "7d7e04ad-e125-4707-b5b5-46d4b53d2d4e",
+            "minCount": "1"
+        },{
+            "path": "SalesOrderProductIdentifications",
+            "node": "bac5b306-f0ff-41b1-9e9e-2ed2639f3282",
+            "minCount": "1"
+        },{
+            "path": "SalesOrderProductNotes",
+            "node": "7ec54e1f-369d-4f1f-97d7-5424492e612b",
+            "minCount": "1"
+        },{
+            "path": "SalesOrderProductPriceAdjustments",
+            "node": "7d255f2b-21ec-4e0e-8383-bd08a2f9fe0a",
+            "minCount": "1"
+        },{
+            "path": "SalesOrderProductRelatedProducts",
+            "node": "d4682e1b-8b23-4202-9555-9958a2196a3b",
+            "minCount": "1"
+        },{
+            "path": "SalesOrderProductTaxes",
+            "node": "75c72c59-39c8-4c4c-b333-73f76ced30a1",
+            "minCount": "1"
         }
-      ]
-    },
-    {
-      "@type": "Shape",
-      "@id": "SalesOrderDeliveryGroup",
-      "properties": [
-        {
-          "path": "totalUnitPriceAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "totalTaxAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalProductTaxAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalPriceAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "totalDeliveryTaxAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalDeliveryChargeTaxAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalDeliveryChargeAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalDeliveryAdjustmentTaxAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalDeliveryAdjustmentAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "giftMessageText",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "grandTotalDeliveryAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "deliveryInstructionsText",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "isGift",
-          "datatype": "xsd:boolean",
-          "maxCount": "1"
-        },
-        {
-          "path": "promisedDate",
-          "datatype": "xsd:date",
-          "maxCount": "1"
-        },
-        {
-          "path": "desiredDeliveryDate",
-          "datatype": "xsd:date",
-          "maxCount": "1"
-        },
-        {
-          "path": "salesOrder",
-          "node": "SalesOrder",
-          "minCount": "1"
-        },
-        {
-          "path": "salesOrderDeliveryStatus",
-          "node": "SalesOrderDeliveryStatus",
-          "minCount": "1"
-        },
-        {
-          "path": "originalDeliveryGroup",
-          "node": "SalesOrderDeliveryGroup"
-        },
-        {
-          "path": "orderDeliveryMethod",
-          "node": "OrderDeliveryMethod",
-          "minCount": "1"
-        },
-        {
-          "path": "contactPointAddress",
-          "node": "ContactPointAddress",
-          "minCount": "1"
-        },
-        {
-          "path": "accountContact",
-          "node": "AccountContact",
-          "minCount": "1"
-        },
-        {
-          "path": "salesOrderDeliveryGroupNumber",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "description",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "name",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "totalUnitPriceAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "totalTaxAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalProductTaxAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalPriceAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "totalDeliveryTaxAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalDeliveryChargeTaxAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalDeliveryChargeAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalDeliveryAdjustmentTaxAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "totalDeliveryAdjustmentAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "giftMessageText",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "grandTotalDeliveryAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "deliveryInstructionsText",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "isGift",
-          "datatype": "xsd:boolean",
-          "maxCount": "1"
-        },
-        {
-          "path": "promisedDate",
-          "datatype": "xsd:date",
-          "maxCount": "1"
-        },
-        {
-          "path": "desiredDeliveryDate",
-          "datatype": "xsd:date",
-          "maxCount": "1"
-        },
-        {
-          "path": "salesOrder",
-          "node": "SalesOrder",
-          "minCount": "1"
-        },
-        {
-          "path": "salesOrderDeliveryStatus",
-          "node": "SalesOrderDeliveryStatus",
-          "minCount": "1"
-        },
-        {
-          "path": "originalDeliveryGroup",
-          "node": "SalesOrderDeliveryGroup"
-        },
-        {
-          "path": "orderDeliveryMethod",
-          "node": "OrderDeliveryMethod",
-          "minCount": "1"
-        },
-        {
-          "path": "contactPointAddress",
-          "node": "ContactPointAddress",
-          "minCount": "1"
-        },
-        {
-          "path": "accountContact",
-          "node": "AccountContact",
-          "minCount": "1"
-        },
-        {
-          "path": "salesOrderDeliveryGroupNumber",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "description",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "name",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
+        ]
+    },{
+        "@id": "7d7e04ad-e125-4707-b5b5-46d4b53d2d4e",
+        "@type": "Shape",
+        "targetClass": "SalesOrderProductAttributeValue",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "93c722aa-db7e-4d9d-9111-11c5edfedccf",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "salesOrderProductId",
+            "@id": "b7fb7832-aae3-4636-bd3d-fd0de2cb1927",
+            "node": "91bc8ac5-a68a-34e3-b7c9-1097594688f7",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "productAttributeValueURL",
+            "@id": "c0a07d20-8a74-45d5-b0b0-e1dc3eeb6bed",
+            "datatype": "xsd:decimal",
+            "maxCount": "1"
+        },{
+            "path": "productAttributeValueText",
+            "@id": "d7656606-2453-4595-bfbf-07c061a67c10",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "productAttributeValueNumber",
+            "@id": "57206eb7-ac30-4808-97d7-44e9aa3c4c59",
+            "datatype": "xsd:decimal",
+            "maxCount": "1"
+        },{
+            "path": "productAttributeValueId",
+            "@id": "9d717732-cbfe-4040-9696-7d3fbc783d26",
+            "node": "cde2ab14-aee5-3bcf-babd-a55ecb872f1f",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "productAttributeValueDate",
+            "@id": "53b632df-e507-4101-9cdc-e3c707622eca",
+            "datatype": "xsd:date",
+            "maxCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "5d547661-c023-4a0a-b333-01b3d5caf19b",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "50d0c8bd-d2ef-4c3c-8989-003a12012fa4",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "id",
+            "@id": "3612a220-ed74-4888-b838-69997485e051",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "36d7d33f-4a6d-4404-b5f5-7927246363d3",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "545eef31-bb0f-4222-acec-b80703936a06",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "226a4adb-3caf-4b4b-baba-9818edff1b05",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
         }
-      ]
-    },
-    {
-      "@type": "Shape",
-      "@id": "SalesOrderDeliveryStatus",
-      "properties": [
-        {
-          "path": "name",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "name",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
+        ]
+    },{
+        "@id": "7784c047-fed3-46e6-9898-afb9d189b411",
+        "@type": "Shape",
+        "targetClass": "SalesOrderProductGroup",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "d86a66df-a0f0-4ded-94d4-24f3cbe8c6b3",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "salesOrderProductGroupTypeId",
+            "@id": "54d9c130-33a0-4949-bd3d-3ae2191866c2",
+            "node": "009b424f-225a-44f4-ba3a-2178f1300f73",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "name",
+            "@id": "01652ab6-eb4d-41d1-aaaa-298443e0c042",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "d07dba12-2085-4c8c-9393-a8980591d357",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "078ad4a9-a97a-4181-8e0e-4c92d08ca078",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "6dc6eb6f-284e-47d7-b939-28665a3ec3ea",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "3a6a669a-b7ea-4cec-a8e8-9732db6f367e",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "407692c5-6a88-4444-b3f3-e6ffbc6b363a",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "description",
+            "@id": "ad082cf6-1843-4999-ae6e-394b3fdb1ed2",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "cfb8055b-25f3-4696-9ada-f665553761b9",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "SalesOrderProductGroupAssignments",
+            "node": "a1a86042-a565-43f3-9858-629f24a58784",
+            "minCount": "1"
         }
-      ]
-    },
-    {
-      "@type": "Shape",
-      "@id": "OrderDeliveryMethod",
-      "properties": [
-        {
-          "path": "externalRecord",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "product",
-          "node": "Product",
-          "minCount": "1"
-        },
-        {
-          "path": "name",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "externalRecord",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "product",
-          "node": "Product",
-          "minCount": "1"
-        },
-        {
-          "path": "name",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
+        ]
+    },{
+        "@id": "a1a86042-a565-43f3-9858-629f24a58784",
+        "@type": "Shape",
+        "targetClass": "SalesOrderProductGroupAssignment",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "e43cc3a1-ee1d-4383-b9f9-e3f8bdeeab04",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "salesOrderProductId",
+            "@id": "b0e850bb-7fda-4020-8343-3f025bd53164",
+            "node": "91bc8ac5-a68a-34e3-b7c9-1097594688f7",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "salesOrderProductGroupId",
+            "@id": "af0ebf95-cd41-49f9-a969-4d0d9e5e1d5a",
+            "node": "7784c047-fed3-46e6-9898-afb9d189b411",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "name",
+            "@id": "e2d2a917-2813-4f1f-b0b0-4432b7baab71",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "f60c6e58-16d3-41b1-9e1e-69780f295f0e",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "eeeb615a-c42b-4fdf-a5a5-a8ad65361250",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "3d1c2747-ff4a-4313-b030-ab5a8e4568d0",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "c7132159-d45c-4dfd-8282-4b2f1350fa36",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "46db5922-4b64-46e6-b272-fdfca11dd3fd",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "c709b276-ac3d-4b2b-bd3d-a4343fcd2897",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
         }
-      ]
-    },
-    {
-      "@type": "Shape",
-      "@id": "ProductRelationshipType",
-      "properties": [
-        {
-          "path": "childProductRole",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "parentProductRole",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
+        ]
+    },{
+        "@id": "009b424f-225a-44f4-ba3a-2178f1300f73",
+        "@type": "Shape",
+        "targetClass": "SalesOrderProductGroupType",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "7aa3b4bd-8f9d-40e0-acec-93306fb4960f",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "name",
+            "@id": "9d1354d5-91ab-4cac-b737-76b5d392dea8",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "8d0dc20f-dbaf-4292-a6a6-441e6e7ce91d",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "aecfee80-6341-49c9-8484-1cd4d417d040",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "899ce6fb-9577-44f4-a626-c8170eadeb56",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "4145ee5f-0351-4b5b-8585-5f87584f14e0",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "413485bc-63fd-4f9f-a969-2ace1b8a460a",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "63d07e9b-76f9-4747-ba7a-3f8642a3a1d4",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
         }
-      ]
-    },
-    {
-      "@type": "Shape",
-      "@id": "SalesOrderProductGroup",
-      "properties": [
-        {
-          "path": "salesOrderProductGroupType",
-          "node": "SalesOrderProductGroupType",
-          "minCount": "1"
-        },
-        {
-          "path": "description",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "name",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "salesOrderProductGroupType",
-          "node": "SalesOrderProductGroupType",
-          "minCount": "1"
-        },
-        {
-          "path": "description",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "name",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
+        ]
+    },{
+        "@id": "bac5b306-f0ff-41b1-9e9e-2ed2639f3282",
+        "@type": "Shape",
+        "targetClass": "SalesOrderProductIdentification",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "15dd7d95-c5c0-4bfb-8242-b29dbd5f3c66",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "salesOrderProductId",
+            "@id": "eda8fdf0-337a-4d6d-b434-7c7ade05aed5",
+            "node": "91bc8ac5-a68a-34e3-b7c9-1097594688f7",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "partyIdentificationtId",
+            "@id": "2c327290-1e05-4757-9c9c-58372f99a5f6",
+            "node": "2b917855-5d55-3358-8cba-ee9e73588e0e",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "name",
+            "@id": "fe1f3bef-f9eb-48f8-9a9a-df840aaa15f4",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "1ef131a0-9015-4030-8505-6db930bf38e6",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "3ca75220-3136-4161-bbfb-19db23a3c17e",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "0cb9cf50-8cac-4373-8d8d-c161eb3b3d38",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "33969cb8-f8da-47e7-8989-20c00e5f78a5",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "42c65eca-4431-4b9b-afef-a70d4997b32f",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "c770a23b-55dc-4717-8d0d-56d5f29b8b89",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "contactPointAddressId",
+            "@id": "24164139-e713-4838-b030-de948f7d586f",
+            "node": "d4e3c4a5-9cc3-342a-b1f8-09d5bf6f554b",
+            "maxCount": "1",
+            "minCount": "1"
         }
-      ]
-    },
-    {
-      "@type": "Shape",
-      "@id": "SalesOrderProductGroupType",
-      "properties": [
-        {
-          "path": "name",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "name",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
+        ]
+    },{
+        "@id": "7ec54e1f-369d-4f1f-97d7-5424492e612b",
+        "@type": "Shape",
+        "targetClass": "SalesOrderProductNote",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "0a5131db-2ab0-4cec-bfff-35d82772a4cb",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "salesOrderProduct",
+            "@id": "84cecaf8-5dac-4dfd-94d4-624032eda176",
+            "node": "91bc8ac5-a68a-34e3-b7c9-1097594688f7",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "noteText",
+            "@id": "8bfb05b6-96d8-45d5-9b9b-091b321c1701",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "3decd297-53d1-4414-a969-b5b0ce885cc4",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "b6048c1b-2319-45f5-b5f5-3ec903b3994e",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "5f8abb1d-b824-4696-a565-45ea56ba580c",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "75bc91f7-c312-4686-98d8-3872b6798c12",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "37511939-bd38-4b2b-af2f-249c39ec753e",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "description",
+            "@id": "90e4fff0-e9e1-4343-bfff-496dc1724b44",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "3d4f0bb9-ad98-4414-a161-4579ca43caba",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
         }
-      ]
-    },
-    {
-      "@type": "Shape",
-      "@id": "SalesOrderProductNote",
-      "properties": [
-        {
-          "path": "noteText",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "description",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "noteText",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "description",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
+        ]
+    },{
+        "@id": "7d255f2b-21ec-4e0e-8383-bd08a2f9fe0a",
+        "@type": "Shape",
+        "targetClass": "SalesOrderProductPriceAdjustment",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "500630e9-107a-4e5e-b777-3720ad3e51d6",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "salesOrderProductPriceAdjustmentTypeId",
+            "@id": "b5a19131-c918-44e4-8484-6d834496a45a",
+            "node": "8a9788b9-fcb5-4c6c-8bcb-3a37cb16f018",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "salesOrderProductPriceAdjustmentAmount",
+            "@id": "c8dda98c-3723-4202-a323-8e2bc764e941",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "salesOrderProductId",
+            "@id": "e08806bb-9a91-4515-b4b4-5b90a7fe0cf2",
+            "node": "91bc8ac5-a68a-34e3-b7c9-1097594688f7",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "salesOrderPriceAdjustmentId",
+            "@id": "e71993a3-3080-41a1-9959-b9dbfa1c7dc5",
+            "node": "15744483-7dd0-4080-b131-f8d79d992a9f",
+            "maxCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "714c517c-7188-4c3c-b9b9-22402ab2d952",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "7e0b8f9a-7937-4161-9111-dce5dc72bf00",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "559a4fd1-8ecf-4303-9616-a7dc6a5146c5",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "09050673-71b3-4dcd-a1e1-a116d62bfeba",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "a82aef5d-bc03-4f5f-8707-dba318a3f15f",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "description",
+            "@id": "735d412b-7da4-4bfb-9353-70ab2bacda43",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "b0e65ff6-753d-4000-80c0-832e739da5d1",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "adjustmentTaxAmount",
+            "@id": "2950baae-fe38-4ece-a5e5-dae96de7e80c",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "adjustmentAmount",
+            "@id": "ad1962fc-4d44-47c7-b2f2-5e490c73aa28",
+            "datatype": "cim:amount",
+            "maxCount": "1",
+            "minCount": "1"
         }
-      ]
-    },
-    {
-      "@type": "Shape",
-      "@id": "SalesOrderPaymentSummary",
-      "properties": [
-        {
-          "path": "unappliedAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "paymentAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "capturedAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "availableToApplyBalanceAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "authorizationReversalAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "authorizationAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "appliedAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "salesOrder",
-          "node": "SalesOrder",
-          "minCount": "1"
-        },
-        {
-          "path": "paymentMethod",
-          "node": "PaymentMethod",
-          "minCount": "1"
-        },
-        {
-          "path": "name",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "unappliedAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "paymentAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "capturedAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "availableToApplyBalanceAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "authorizationReversalAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "authorizationAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "appliedAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "salesOrder",
-          "node": "SalesOrder",
-          "minCount": "1"
-        },
-        {
-          "path": "paymentMethod",
-          "node": "PaymentMethod",
-          "minCount": "1"
-        },
-        {
-          "path": "name",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
+        ]
+    },{
+        "@id": "976f32fb-3ff2-4444-99d9-9dc9d39fc8b3",
+        "@type": "Shape",
+        "targetClass": "SalesOrderProductPriceAdjustmentTax",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "653c62c8-7dd9-4000-b333-a8ec8d73bb2b",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "salesOrderProductPriceAdjustmentTaxAmount",
+            "@id": "7acc5427-c0ad-44d4-8d0d-1395d4bf1da4",
+            "datatype": "cim:amount",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "salesOrderProductPriceAdjustmentId",
+            "@id": "f4336ff4-d760-4aca-83c3-117b862a2c7f",
+            "node": "7d255f2b-21ec-4e0e-8383-bd08a2f9fe0a",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "name",
+            "@id": "dc98564c-da96-4f8f-9191-d178ac8fb4ac",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "8b1ee59f-1d02-4ebe-bebe-22871b7fa8e3",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "7a5e1d38-c19b-4b3b-9252-d0b5f4a29a21",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "a6ab3b9c-8433-4191-af6f-19d2591d68a0",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "ef5d5060-6aa6-4f7f-a727-abc936b662d8",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "a763df51-abcc-4b1b-a9a9-325ca1672b14",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "08ca1db5-e833-4787-b1b1-53bcf07bd4df",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "taxRatePercent",
+            "@id": "b48ddbe6-8fdc-4252-a424-2da615c93d32",
+            "datatype": "cim:percentage",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "taxErrorMessageText",
+            "@id": "aa36f343-9e72-41b1-a525-0cbbb261fce7",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "taxAddressStreet2Text",
+            "@id": "af18fe01-d466-49d9-a5a5-916d808a9b5e",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "taxAddressStreet1Text",
+            "@id": "8c7cd417-7b12-4303-9a1a-25399c07ff5f",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "taxAddressCityName",
+            "@id": "2e8558e1-1b93-4f1f-b939-efe2b0a4efc9",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "salesOrderTaxTypeId",
+            "@id": "62035151-b788-4363-9f9f-1e1d9ca6f50e",
+            "node": "4c32e0f6-5ff8-4323-afef-c5e93a9db9db",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "salesOrderTaxAmount",
+            "@id": "ba5618d5-7f8f-4686-9090-df5945948246",
+            "datatype": "cim:amount",
+            "maxCount": "1"
         }
-      ]
-    },
-    {
-      "@type": "Shape",
-      "@id": "SalesOrderChangeLog",
-      "properties": [
-        {
-          "path": "changeSalesOrder",
-          "node": "SalesOrder",
-          "minCount": "1"
-        },
-        {
-          "path": "relatedSalesOrder",
-          "node": "SalesOrder",
-          "minCount": "1"
-        },
-        {
-          "path": "relatedSalesOrderProduct",
-          "node": "SalesOrderProduct",
-          "minCount": "1"
-        },
-        {
-          "path": "changeSalesOrderProduct",
-          "node": "SalesOrderProduct",
-          "minCount": "1"
-        },
-        {
-          "path": "name",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "changeSalesOrder",
-          "node": "SalesOrder",
-          "minCount": "1"
-        },
-        {
-          "path": "relatedSalesOrder",
-          "node": "SalesOrder",
-          "minCount": "1"
-        },
-        {
-          "path": "relatedSalesOrderProduct",
-          "node": "SalesOrderProduct",
-          "minCount": "1"
-        },
-        {
-          "path": "changeSalesOrderProduct",
-          "node": "SalesOrderProduct",
-          "minCount": "1"
-        },
-        {
-          "path": "name",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
+        ]
+    },{
+        "@id": "8a9788b9-fcb5-4c6c-8bcb-3a37cb16f018",
+        "@type": "Shape",
+        "targetClass": "SalesOrderProductPriceAdjuType",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "d19dc7ab-1718-4bbb-9656-fa22db539166",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "salesOrderProductPriceAdjustmentTypeCode",
+            "@id": "2954b0dd-963f-4a3a-a727-bab393f9e6e6",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "fc945719-0011-45e5-8181-fd3263dc1f89",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "6ac826eb-cbdc-4999-9c9c-c89bed63bef4",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "3e3cfb31-e12c-4363-8f0f-c61b629660b3",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "c1ee3ef2-6472-4020-a727-069e4ab7add7",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "ab5b0404-3a51-4f2f-9818-76377742db13",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "00d144f5-a014-4545-bd3d-c416a35e80de",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
         }
-      ]
-    },
-    {
-      "@type": "Shape",
-      "@id": "SalesOrderChangeType",
-      "properties": [
-        {
-          "path": "salesOrderChangeTypeName",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "salesOrderChangeTypeName",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
+        ]
+    },{
+        "@id": "db79ecd1-bba1-4b5b-ac2c-0cc63ecf6b31",
+        "@type": "Shape",
+        "targetClass": "SalesOrderProductReason",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "61974a4d-22cc-4161-83c3-7d635c7ed689",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "salesOrderProductReasonCategoryId",
+            "@id": "4423db98-7fa9-41e1-9858-4260f5f206a1",
+            "node": "6e2e4ed7-29df-4393-be7e-0d2cabf1ce6e",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "name",
+            "@id": "25d66b65-af8e-4cec-ad6d-854bbcfd2eb1",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "52c2200b-bbdb-46c6-b4f4-541824b998bf",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "50b0e473-54b0-4b1b-a060-5599179cfbdf",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "18812010-beab-4d6d-a5a5-2c60170a1022",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "e3597785-129b-4999-9858-198effcb29e0",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "dfdc1cb6-e799-41f1-a2e2-50839aea903c",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "1676ab6d-e1ac-4151-b2b2-516f10d8fcf7",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
         }
-      ]
-    },
-    {
-      "@type": "Shape",
-      "@id": "PriceAdjustmentGroup"
+        ]
+    },{
+        "@id": "6e2e4ed7-29df-4393-be7e-0d2cabf1ce6e",
+        "@type": "Shape",
+        "targetClass": "SalesOrderProductReasonCategory",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "710d904e-0da0-4e0e-b838-c66db30f9380",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "name",
+            "@id": "09b60f51-cf1b-4383-9494-1f92d2778b45",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "5ead972e-588a-4f9f-a5e5-3bf8588fc703",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "51a0da88-d0aa-41c1-ba3a-bd6f5c6031c1",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "8b0d63e9-0353-4242-bf7f-6c7e28c0d0c2",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "ba9a32e8-f791-4d5d-b6f6-808e3e8040d0",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "8f7d58d7-c3ef-4bab-a0a0-dbd132127202",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "c39db760-5b18-4020-8646-09aa0408b6fb",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        }
+        ]
+    },{
+        "@id": "d4682e1b-8b23-4202-9555-9958a2196a3b",
+        "@type": "Shape",
+        "targetClass": "SalesOrderProductRelatedProduct",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "7071ab9a-0d8f-4090-bdfd-932160e49c60",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "salesOrderProduct2Id",
+            "@id": "97ca5ef1-8026-4464-aaaa-1f265b7b471e",
+            "node": "91bc8ac5-a68a-34e3-b7c9-1097594688f7",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "salesOrderProduct1Id",
+            "@id": "7ede8478-d23c-47c7-8585-e159ad170f7f",
+            "node": "91bc8ac5-a68a-34e3-b7c9-1097594688f7",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "parentRelationshipTypeId",
+            "@id": "4c770cf7-16fc-4fbf-bc3c-0225e9595026",
+            "node": "f77b5802-4289-4434-9454-f2fe002e7dc6",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "name",
+            "@id": "dfee47d8-9c39-4282-a9a9-e70024a122f6",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "e5b5caa5-7fb3-49f9-b232-8bb1a471cca1",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "39c97755-3547-41c1-8909-40488788eaab",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "ee44d091-6dbb-4363-baba-7388439fbf6e",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "89b759bf-a1c6-45b5-b676-65666a8cdf30",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "a93fd129-f7ca-4f1f-a525-21515c8bea83",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "43d8f4d0-d62c-4373-97d7-b4b31d2d1e30",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "childRelationshipTypeId",
+            "@id": "aad5fdac-bad9-40e0-8a4a-fd2adc443c85",
+            "node": "f77b5802-4289-4434-9454-f2fe002e7dc6",
+            "maxCount": "1",
+            "minCount": "1"
+        }
+        ]
+    },{
+        "@id": "f77b5802-4289-4434-9454-f2fe002e7dc6",
+        "@type": "Shape",
+        "targetClass": "SalesOrderProductRelationshipType",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "952a2fb2-636d-4e3e-8bcb-4f2318d540f5",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "name",
+            "@id": "4737b085-0d48-4979-ae2e-554bb9f88872",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "0cdfddbf-3394-4161-9313-8b56b8200c57",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "7c536475-2f96-4ebe-9818-63c12acce274",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "47c71807-3397-44a4-8040-f99b2ee5c04f",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "699d7713-d108-4090-8141-39f932a37385",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "dc38ee15-7549-4e5e-8080-e4ad6ba88b67",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "d786b8ac-4778-4292-afef-df87f784408d",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        }
+        ]
+    },{
+        "@id": "e2f084fb-1ae2-3c3b-84a1-54186da19db5",
+        "@type": "Shape",
+        "targetClass": "SalesOrderProductStatus",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "3ae01ee9-f1d7-33f5-bafb-79a174fb268b",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "name",
+            "@id": "a77cb351-98b4-3883-bc60-818c1bd6620c",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "82fbaa40-65c7-332d-ab9f-ba7b284477ad",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "17564e4c-9e45-45f5-a323-f52b1fb8caf5",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "bf772371-7ecc-39d8-999f-22c2a7008c2d",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "597fdc4f-3826-45b5-9656-820808f8aeb0",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "b477801a-d211-37da-bd44-533019fb80a8",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "641e76e8-7d9b-310d-a1d7-7244dbde03a2",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        }
+        ]
+    },{
+        "@id": "75c72c59-39c8-4c4c-b333-73f76ced30a1",
+        "@type": "Shape",
+        "targetClass": "SalesOrderProductTax",
+        "properties": [
+{
+            "path": "taxEffectiveDate",
+            "@id": "9a5958db-ac2e-4d0d-8585-200fe27fd2e2",
+            "datatype": "xsd:date",
+            "maxCount": "1"
+        },{
+            "path": "taxAmount",
+            "@id": "62d5334a-a12f-43a3-a828-8106bb5df2f2",
+            "datatype": "cim:amount",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "systemModstamp",
+            "@id": "7ff022e9-d278-42a2-9fdf-002ec6552487",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "salesOrderTaxTypeId",
+            "@id": "f84187d7-120b-49d9-a222-b540e986cd42",
+            "node": "4c32e0f6-5ff8-4323-afef-c5e93a9db9db",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "salesOrderProductId",
+            "@id": "69896545-94ad-4555-90d0-9c13fedbfe44",
+            "node": "91bc8ac5-a68a-34e3-b7c9-1097594688f7",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "originalSalesOrderProductTaxId",
+            "@id": "c551cdfb-ffe3-42b2-9151-4a7548f0edb4",
+            "node": "75c72c59-39c8-4c4c-b333-73f76ced30a1",
+            "maxCount": "1"
+        },{
+            "path": "name",
+            "@id": "375e416d-0002-4020-98d8-e6b6d5f31965",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "31552eef-2d20-4343-aeae-acb3e6a8daba",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "41e45360-a36f-4636-9e1e-547c18ccd7af",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "d2cf9b73-d1a1-4141-a525-d42d6bfad501",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "b7fd7998-8a36-4747-b070-f22825dec4ca",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "3195f416-9c86-4c1c-88c8-1a0db3a09c4c",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "description",
+            "@id": "390ec60f-cd44-4313-a828-0dbc0a61e8f6",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "2bd7fc09-f5f2-4131-8545-f0d1218dd46c",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "taxRatePercent",
+            "@id": "b48ddbe6-8fdc-4252-a424-2da615c93d32",
+            "datatype": "cim:percentage",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "taxErrorMessageText",
+            "@id": "aa36f343-9e72-41b1-a525-0cbbb261fce7",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "taxAddressStreet2Text",
+            "@id": "af18fe01-d466-49d9-a5a5-916d808a9b5e",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "taxAddressStreet1Text",
+            "@id": "8c7cd417-7b12-4303-9a1a-25399c07ff5f",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "taxAddressCityName",
+            "@id": "2e8558e1-1b93-4f1f-b939-efe2b0a4efc9",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "salesOrderTaxAmount",
+            "@id": "ba5618d5-7f8f-4686-9090-df5945948246",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        }
+        ]
+    },{
+        "@id": "71442465-8a98-4f1f-bafa-e4933c0fd476",
+        "@type": "Shape",
+        "targetClass": "SalesOrderSegment",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "8dc24546-59e7-4a2a-9050-e879b6c8a3b4",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "name",
+            "@id": "e4cc4f95-7276-47f7-8a0a-d6a0cfd7ab42",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "8a6a8b78-9efb-4fbf-a929-95bfee688493",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "18eb8a01-60e0-4383-b1b1-adde5a05bee0",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "b691556b-bf30-4464-8383-043635aee680",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "0df4d550-35b4-4bcb-aaea-604c366e41ee",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "f5e3296c-006c-4c1c-9252-7957ff1da1e2",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "7a8ccd0c-063e-48c8-a8e8-af1bb64ac7a5",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        }
+        ]
+    },{
+        "@id": "55c4e4fd-6219-320c-92ca-07d5a2817cd1",
+        "@type": "Shape",
+        "targetClass": "SalesOrderStatus",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "55138a3a-9d2a-372e-bff6-05f37b4bb4aa",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "name",
+            "@id": "519e7adc-e3a5-4b9b-a5a5-d5290d393108",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "4b24d71d-8b34-3804-bee7-84dfdb0d3fef",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "5de07624-59e5-4b7b-9a9a-37e84676b00c",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "329caf41-12b7-3175-aa7a-264a318d9fa2",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "3d16295c-dd11-4848-be3e-8e879b7d717a",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "35aca8f6-a87b-338e-aeea-51dc098931b6",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "0430c837-90d3-3407-ac8a-7a1ea84a3638",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        }
+        ]
+    },{
+        "@id": "78766015-c012-46c6-9f5f-ca8b51601966",
+        "@type": "Shape",
+        "targetClass": "SalesOrderSystemStatus",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "ba39c0bd-ae0d-4131-9a9a-d237c417ca4e",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "salesOrderSystemStatusCode",
+            "@id": "cd92772e-8345-4252-9999-43e36fc6f8f9",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "name",
+            "@id": "c5871709-4d7c-4858-9353-d4f288a30dfe",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "4dc297bf-7277-4202-bdfd-2a50ade61567",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "0cd78eb6-f458-4242-bc3c-f2cb7cab2347",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "1c329eff-4bcc-4969-8444-08de145c83b7",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "bebed649-c0dd-4c4c-a464-6f9edde30e58",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "43ab9b69-fe92-42e2-b6f6-7d64250ed4c8",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "e94deca3-bb54-4cfc-a8a8-6b4e1fd3db11",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        }
+        ]
+    },{
+        "@id": "20c2f338-45ce-3952-a644-b8b26ab49ca9",
+        "@type": "Shape",
+        "targetClass": "SalesOrderType",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "3c4ba1e1-2b3c-3a89-b4a1-d608378e717f",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "name",
+            "@id": "2fd2e62f-4013-49a9-b030-1b958d7c3e44",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "5a8fe5c6-d208-392f-9ae4-25563a1d29a5",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "d41fd35e-4450-46e6-aeee-37fe95ccd25f",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "e9661183-437d-345e-94d3-c7bca3df7f8b",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "ab2a4439-d1a0-4cdc-b8b8-76ca1b6ec8af",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "b6e7d61e-d333-37f6-b98e-8fe7c1dc4370",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "f44edb37-09ac-3b3a-84a8-34f48a57ccef",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        }
+        ]
+    },{
+        "@id": "fc768184-12bb-49d9-9f5f-ea30815da3ce",
+        "@type": "Shape",
+        "targetClass": "Tax",
+        "properties": [
+{
+            "path": "taxRatePercent",
+            "@id": "b48ddbe6-8fdc-4252-a424-2da615c93d32",
+            "datatype": "cim:percentage",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "taxErrorMessageText",
+            "@id": "aa36f343-9e72-41b1-a525-0cbbb261fce7",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "taxAddressStreet2Text",
+            "@id": "af18fe01-d466-49d9-a5a5-916d808a9b5e",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "taxAddressStreet1Text",
+            "@id": "8c7cd417-7b12-4303-9a1a-25399c07ff5f",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "taxAddressCityName",
+            "@id": "2e8558e1-1b93-4f1f-b939-efe2b0a4efc9",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "systemModstamp",
+            "@id": "523a7bfc-55be-4030-a868-d661fb749a7f",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "salesOrderTaxTypeId",
+            "@id": "62035151-b788-4363-9f9f-1e1d9ca6f50e",
+            "node": "4c32e0f6-5ff8-4323-afef-c5e93a9db9db",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "salesOrderTaxAmount",
+            "@id": "ba5618d5-7f8f-4686-9090-df5945948246",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "name",
+            "@id": "909dd8b9-8eb3-4444-b878-05c5600a42fa",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "0cb9441d-9845-4a5a-bc3c-617ec66b1fb8",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "05595e26-cb07-4a2a-bc3c-3f8c7b5adced",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "f5705d40-c4d9-46a6-8101-93315d035c9f",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "772ccbbd-2da4-4a5a-9090-a309432b9569",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "eda96953-a10f-4636-91d1-9dc4488cf9b1",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "5dbab24b-3554-48e8-b171-4268497fb243",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        }
+        ],
+        "extendedBy": [
+"976f32fb-3ff2-4444-99d9-9dc9d39fc8b3","75c72c59-39c8-4c4c-b333-73f76ced30a1"
+        ]
+    },{
+        "@id": "d7c401dc-3134-44a4-97d7-e3a91167ed98",
+        "@type": "Shape",
+        "targetClass": "TaxationPolicy",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "d316dffd-1c44-4c7c-a2a2-c939f6878208",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "14483ae9-4477-42a2-8101-eb0ab84ad99e",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "25e9f7c9-5728-4a4a-bdbd-0154ac851320",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "b03109d2-bfbb-4d8d-ab2b-41a4f049feec",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "badc55d9-f4d0-4555-b333-6bf3bdf26ea6",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "ae129fa6-2b00-4040-a7e7-8b546f36502e",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "79a0855a-e8ec-4ebe-8787-cfd54ae46d00",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        }
+        ]
+    },{
+        "@id": "4c32e0f6-5ff8-4323-afef-c5e93a9db9db",
+        "@type": "Shape",
+        "targetClass": "TaxType",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "51ff6cd0-cfbe-42c2-a666-e9e11a555592",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "name",
+            "@id": "b859fcb6-6793-4595-8d4d-7a857ebef3f4",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "83aec8f1-5b4c-4e0e-ab6b-aac1a5a9048a",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "c8009621-3efc-4818-acac-3f3878245f11",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "a8f0ef23-6d9c-4070-9656-828a1750e2e1",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "2248a139-fa4c-4808-ad6d-1b4bbdac0440",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "bc132df2-ba19-4aba-a2a2-73b0ea4391a5",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "55ef93b1-526a-4f3f-af2f-afd9cc346f57",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        }
+        ]
+    },{
+        "@id": "a0919917-2a30-3f76-9760-c57c49f17bbe",
+        "@type": "Shape",
+        "targetClass": "WebSite",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "fb4ca61e-5a75-32e6-9760-a2972f03cedf",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "name",
+            "@id": "0578f873-6a81-40b0-a363-150a667ce678",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "3000b485-5f4f-309e-9472-a5995bf188a3",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "29fb7217-9ecc-4cec-8242-1e0f70cfeab5",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "6fb4e11c-7718-38d4-bfbc-c5a9fab72680",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "cbdf897a-23f2-4cfc-9797-eb98dba4b535",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "0d2df23e-47c6-3705-88a2-3926a9cbdb24",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "6ade200e-1a7a-3874-949e-d14a36828d4c",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        }
+        ]
     }
-  ]
+    ]
 }

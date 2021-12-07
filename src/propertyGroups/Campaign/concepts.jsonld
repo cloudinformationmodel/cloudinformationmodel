@@ -1,0 +1,39 @@
+{
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "CampaignPropertyGroup",
+    "name": "Campaign Property Group",
+    "@type": "PropertyGroup",
+    "propertyConcepts": [
+{
+        "@id": "keywordSearchSortingRuleText",
+        "@type": "Property",
+        "description": "The sorting rule logic or explanation",
+        "name": "Keyword Search Sorting Rule",
+        "range": "DataType"
+    },{
+        "@id": "productCategoryId",
+        "@type": "Property",
+        "description": "A grouping of products that are used in Campaigns.",
+        "name": "Product Category",
+        "range": "ProductCategory"
+    },{
+        "@id": "productCategorySortingRuleText",
+        "@type": "Property",
+        "description": "The sorting rule logic or explanation",
+        "name": "Product Category Sorting Rule",
+        "range": "DataType"
+    },{
+        "@id": "description",
+        "@type": "Property",
+        "description": "Description of a Product Sorting Rule",
+        "name": "Description",
+        "range": "DataType"
+    },{
+        "@id": "name",
+        "@type": "Property",
+        "description": "Values of Product Sorting Rule Type may include: Search Ordered Rank, Search Ordered Relevance, and Category Position.",
+        "name": "Name",
+        "range": "DataType"
+    }
+    ]
+}

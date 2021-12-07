@@ -1,0 +1,5181 @@
+syntax = "proto3";
+
+package cloudinformationmodel;
+message Product {
+  repeated OrderDeliveryMethod OrderDeliveryMethods = 1;
+  repeated ProductAttributeSet ProductAttributeSets = 2;
+  repeated ProductAttributeValue ProductAttributeValues = 3;
+  repeated ProductAttribute ProductAttributes = 4;
+  repeated ProductCollateral ProductCollaterals = 5;
+  repeated ProductFeature ProductFeatures = 6;
+  repeated ProductImage ProductImages = 7;
+  repeated ProductRelatedProduct ProductRelatedProducts = 8;
+  repeated ProductRepairCertification ProductRepairCertifications = 9;
+  repeated ProductRepairSkill ProductRepairSkills = 10;
+  repeated ProductServiceCampaign ProductServiceCampaigns = 11;
+  repeated ProductTranslation ProductTranslations = 12;
+  bool allowCustomerReturn = 13;
+  bool allowPartialRefund = 14;
+  bool canUseQuantitySchedule = 15;
+  bool canUseRevenueSchedule = 16;
+  string createdDate = 17;
+  string description = 18;
+  DisposalType disposalTypeId = 19;
+  string externalRecordId = 20;
+  string externalSourceId = 21;
+  string externalSourceRecordId = 22;
+  string id = 23;
+  string implementorType = 24;
+  bool isAutoProvisionable = 25;
+  bool isBackOrdered = 26;
+  bool isCouponRedemptionAllowed = 27;
+  bool isCustomerDiscountAllowed = 28;
+  bool isDynamicBundle = 29;
+  bool isFoodstampPaymentAllowed = 30;
+  bool isInstallable = 31;
+  bool isIntellectualPropertyProtected = 32;
+  bool isManualPriceEntryRequired = 33;
+  bool isMultipleCouponsAllowed = 34;
+  bool isPartnerDiscountAllowed = 35;
+  bool isPreOrderable = 36;
+  bool isQualityVerificationRequired = 37;
+  bool isQuantityEntryRequired = 38;
+  bool isRainCheckAllowed = 39;
+  bool isReturnable = 40;
+  bool isSellable = 41;
+  bool isSellableIndependently = 42;
+  bool isSellableWithoutPrice = 43;
+  bool isSerialized = 44;
+  bool isWeightEntryRequired = 45;
+  bool isWorkerDiscountAllowed = 46;
+  string lastModifiedDate = 47;
+  string lotIdentifier = 48;
+  int32 mSRPAmount = 49;
+  Currency mSRPAmountCurrency = 50;
+  string manufacturerName = 51;
+  Product masterProductId = 52;
+  int32 maximumOrderQuantityCount = 53;
+  int32 minimumAdvertisementAmount = 54;
+  Currency minimumAdvertisementAmountCurrency = 55;
+  int32 minimumAdvertisementAmountStartDate = 56;
+  int32 minimumOrderQuantityCount = 57;
+  string modelNumber = 58;
+  int32 modelYear = 59;
+  string name = 60;
+  PriceChargeType priceChargeTypeId = 61;
+  ProductCategory primaryProductCategoryId = 62;
+  SalesChannel primarySalesChannelId = 63;
+  ProductAssetConversionAction productAssetCvsnActionId = 64;
+  string productSKU = 65;
+  ProductStatus productStatusId = 66;
+  int32 quantityInstallmentCount = 72;
+  QuantityInstallmentPeriod quantityInstallmentPeriodId = 73;
+  QuantityScheduleType quantityScheduleTypeId = 74;
+  int32 requiredDepositAmount = 75;
+  Currency requiredDepositAmountCurrency = 76;
+  int32 requiredDepositPercentage = 77;
+  bool requiresInvididualUnitPricing = 78;
+  int32 revenueInstallmentCount = 79;
+  RevenueInstallmentPeriod revenueInstallmentPeriodId = 80;
+  RevenueScheduleType revenueScheduleTypeId = 81;
+  int32 rewardProgramPointsCount = 82;
+  int32 standardWarrantyLengthMonth = 83;
+  int32 stockLedgerValuationAmount = 84;
+  Currency stockLedgerValuationAmountCurrency = 85;
+  string systemModstamp = 86;
+  int32 validForPeriodCount = 87;
+  ProductValidityTimePeriodUOM validForPeriodUOMId = 88;
+  string validFromDate = 89;
+  string validToDate = 90;
+  string versionNumber = 91;
+  oneof productType {
+    BundleProduct bundleproduct = 68;
+    GoodsProduct goodsproduct = 69;
+    MasterProduct masterproduct = 70;
+    ServiceProduct serviceproduct = 71;
+  }
+}
+message AccountScore {
+  Account accountId = 1;
+  string createdDate = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string name = 8;
+  string systemModstamp = 9;
+}
+message ProductStyle {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message PaymentApplicationType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message AccountBrand {
+  Account accountId = 1;
+  BusinessBrand businessBrandId = 2;
+  string createdDate = 3;
+  string externalRecordId = 4;
+  string externalSourceId = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string systemModstamp = 8;
+}
+message ProductRepairSkill {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string id = 3;
+  string implementorType = 4;
+  string lastModifiedDate = 5;
+  Product productId = 6;
+  string systemModstamp = 7;
+}
+message PaymentGatewayStatus {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string paymentGatewayStatusCode = 7;
+  string systemModstamp = 8;
+}
+message SalesOrderProductPriceAdjuType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string salesOrderProductPriceAdjustmentTypeCode = 7;
+  string systemModstamp = 8;
+}
+message PaymentCreditMemoApplication {
+  string createdDate = 1;
+  CreditMemo creditMemoId = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string name = 8;
+  string systemModstamp = 9;
+}
+message ServiceProduct {
+  bool allowCustomerReturn = 1;
+  bool allowPartialRefund = 2;
+  bool canUseQuantitySchedule = 3;
+  bool canUseRevenueSchedule = 4;
+  string createdDate = 5;
+  string description = 6;
+  DisposalType disposalTypeId = 7;
+  int32 evergreenContractEstimatedChargeAmount = 8;
+  Currency evergreenContractEstimatedChargeAmountCurrency = 9;
+  int32 evergreenContractEstimatedMonthCount = 10;
+  string externalRecordId = 11;
+  string externalSourceId = 12;
+  string externalSourceRecordId = 13;
+  string id = 14;
+  string implementorType = 15;
+  bool isAutoProvisionable = 16;
+  bool isBackOrdered = 17;
+  bool isCouponRedemptionAllowed = 18;
+  bool isCustomerDiscountAllowed = 19;
+  bool isDynamicBundle = 20;
+  bool isFoodstampPaymentAllowed = 21;
+  bool isInstallable = 22;
+  bool isIntellectualPropertyProtected = 23;
+  bool isManualPriceEntryRequired = 24;
+  bool isMultipleCouponsAllowed = 25;
+  bool isPartnerDiscountAllowed = 26;
+  bool isPreOrderable = 27;
+  bool isQualityVerificationRequired = 28;
+  bool isQuantityEntryRequired = 29;
+  bool isRainCheckAllowed = 30;
+  bool isReturnable = 31;
+  bool isSellable = 32;
+  bool isSellableIndependently = 33;
+  bool isSellableWithoutPrice = 34;
+  bool isSerialized = 35;
+  bool isWeightEntryRequired = 36;
+  bool isWorkerDiscountAllowed = 37;
+  string lastModifiedDate = 38;
+  string lotIdentifier = 39;
+  int32 mSRPAmount = 40;
+  Currency mSRPAmountCurrency = 41;
+  string manufacturerName = 42;
+  Product masterProductId = 43;
+  int32 maximumOrderQuantityCount = 44;
+  int32 minimumAdvertisementAmount = 45;
+  Currency minimumAdvertisementAmountCurrency = 46;
+  int32 minimumAdvertisementAmountStartDate = 47;
+  int32 minimumOrderQuantityCount = 48;
+  string modelNumber = 49;
+  int32 modelYear = 50;
+  string name = 51;
+  PriceChargeType priceChargeTypeId = 52;
+  ProductCategory primaryProductCategoryId = 53;
+  SalesChannel primarySalesChannelId = 54;
+  ProductAssetConversionAction productAssetCvsnActionId = 55;
+  string productSKU = 56;
+  ProductStatus productStatusId = 57;
+  int32 quantityInstallmentCount = 63;
+  QuantityInstallmentPeriod quantityInstallmentPeriodId = 64;
+  QuantityScheduleType quantityScheduleTypeId = 65;
+  int32 rentalCleanupFeeAmount = 66;
+  Currency rentalCleanupFeeAmountCurrency = 67;
+  int32 rentalTermViolationPenaltyAmount = 68;
+  Currency rentalTermViolationPenaltyAmountCurrency = 69;
+  int32 requiredDepositAmount = 70;
+  Currency requiredDepositAmountCurrency = 71;
+  int32 requiredDepositPercentage = 72;
+  bool requiresInvididualUnitPricing = 73;
+  int32 revenueInstallmentCount = 74;
+  RevenueInstallmentPeriod revenueInstallmentPeriodId = 75;
+  RevenueScheduleType revenueScheduleTypeId = 76;
+  int32 rewardProgramPointsCount = 77;
+  int32 servicePeriodCount = 78;
+  TimeUOM servicePeriodUOM = 79;
+  Account serviceProviderAccountId = 80;
+  ServiceType serviceTypeId = 81;
+  int32 standardWarrantyLengthMonth = 82;
+  int32 stockLedgerValuationAmount = 83;
+  Currency stockLedgerValuationAmountCurrency = 84;
+  string systemModstamp = 85;
+  int32 validForPeriodCount = 86;
+  ProductValidityTimePeriodUOM validForPeriodUOMId = 87;
+  string validFromDate = 88;
+  string validToDate = 89;
+  string versionNumber = 90;
+  oneof productType {
+    BundleProduct bundleproduct = 59;
+    GoodsProduct goodsproduct = 60;
+    MasterProduct masterproduct = 61;
+    ServiceProduct serviceproduct = 62;
+  }
+}
+message InternalResultCode {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message Image {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string imageAlternateText = 5;
+  string imageTitle = 6;
+  string imageURL = 7;
+  string imageViewType = 8;
+  string implementorType = 9;
+  string lastModifiedDate = 10;
+  string systemModstamp = 11;
+}
+message AccountPartner {
+  Account accountId = 1;
+  string createdDate = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  Account partnerAccountId = 8;
+  string systemModstamp = 9;
+}
+message AccountRelationship {
+  Account account1Id = 1;
+  Account account2Id = 2;
+  AccountRelationshipRole accountRelationshipRole = 3;
+  string createdDate = 4;
+  string externalRecordId = 5;
+  string externalSourceId = 6;
+  string implementorType = 7;
+  string lastModifiedDate = 8;
+  string systemModstamp = 9;
+}
+message PaymentTreatmentMethod {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string paymentTreatmentMethodCode = 7;
+  string paymentTreatmentMethodDescription = 8;
+  string paymentTreatmentMethodName = 9;
+  string systemModstamp = 10;
+}
+message ProductSortingRule {
+  string createdDate = 1;
+  string description = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  ProductSortingRuleType productSortingRuleId = 8;
+  string systemModstamp = 9;
+}
+message AttributeValueTranslation {
+  AttributeValue attributeValueId = 1;
+  string createdDate = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string systemModstamp = 8;
+  string translatedAttributeValue = 9;
+  string translatedAttributeValueDescription = 10;
+}
+message SalesOrderProductReason {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  SalesOrderProductReasonCategory salesOrderProductReasonCategoryId = 8;
+  string systemModstamp = 9;
+}
+message ProductRelatedProduct {
+  Product childProductId = 1;
+  SalesOrderProductRelationshipType childRelationshipTypeId = 2;
+  string createdDate = 3;
+  string externalRecordId = 4;
+  string externalSourceId = 5;
+  string fromDate = 6;
+  string id = 7;
+  string implementorType = 8;
+  bool isDefaultOption = 9;
+  string lastModifiedDate = 10;
+  string name = 11;
+  Product parentProductId = 12;
+  SalesOrderProductRelationshipType parentRelationshipTypeId = 13;
+  ProductRelationshipType productRelationshipTypeId = 14;
+  SalesOrderProduct salesOrderProduct1Id = 15;
+  SalesOrderProduct salesOrderProduct2Id = 16;
+  string systemModstamp = 17;
+  string toDate = 18;
+}
+message PaymentCreditMemoAllocation {
+  float appliedAmount = 1;
+  string createdDate = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string name = 8;
+  string systemModstamp = 9;
+}
+message ShipmentProduct {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  Shipment shipmentId = 7;
+  ShipmentPackage shipmentPackageId = 8;
+  float shipmentProductCount = 9;
+  string systemModstamp = 10;
+}
+message Competitor {
+  string adKeywords = 1;
+  int32 adReachRate = 2;
+  int32 assetReturnRatio = 3;
+  int32 assetTurnoverRatio = 4;
+  int32 cashFlowGrowth = 5;
+  string competitorFromDate = 6;
+  string competitorLeverageOpportunities = 7;
+  string competitorObjectives = 8;
+  string competitorStrengths = 9;
+  string competitorTheats = 10;
+  string competitorToDate = 11;
+  string competitorWeaknesses = 12;
+  string createdDate = 13;
+  int32 currentRatio = 14;
+  string externalRecordId = 15;
+  string externalSourceId = 16;
+  string id = 17;
+  string implementorType = 18;
+  string lastModifiedDate = 19;
+  int32 netProfitMargin = 20;
+  Party partyId = 21;
+  int32 pressMentionsRate = 22;
+  int32 ptoENumber = 23;
+  int32 socialMediaPostRate = 24;
+  string systemModstamp = 25;
+}
+message SocialNetworkProvider {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string socialNetworkProviderName = 7;
+  string systemModstamp = 8;
+}
+message SalesOrderStatus {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message PaymentAuthorizationReversal {
+  repeated PaymentGatewayAuthReversalLog PaymentGatewayAuthReversalLogs = 1;
+  float authorizationReversalAmount = 2;
+  CapturePayment capturePaymentId = 3;
+  string createdDate = 4;
+  string customerAuthorizationReversalEmail = 5;
+  string customerAuthorizationReversalPhone = 6;
+  string externalCreatedDate = 7;
+  string externalRecordId = 8;
+  string externalSourceId = 9;
+  string iPAddress = 10;
+  string id = 11;
+  string implementorType = 12;
+  string lastModifiedDate = 13;
+  string macAddress = 14;
+  PaymentAuthorization paymentAuthorizationId = 15;
+  AuthorizationProcessingMode paymentAuthorizationProcessingModeId = 16;
+  string paymentAuthorizationReversalCommentText = 17;
+  string paymentAuthorizationReversalName = 18;
+  PaymentAuthorizationStatus paymentAuthorizationReversalStatusId = 19;
+  string paymentGatewayDate = 20;
+  string paymentGatewayInternalReferenceNumber = 21;
+  PaymentAuthInternalResultCode paymentGatewayInternalResultCodeId = 22;
+  string paymentGatewayReferenceNumber = 23;
+  PaymentGatewayResultCode paymentGatewayResultId = 24;
+  string requestDate = 25;
+  string systemModstamp = 26;
+}
+message PaymentPolicy {
+  repeated PaymentTreatment PaymentTreatments = 1;
+  string createdDate = 2;
+  string description = 3;
+  string externalRecordId = 4;
+  string externalSourceId = 5;
+  string id = 6;
+  string implementorType = 7;
+  string lastModifiedDate = 8;
+  string name = 9;
+  PaymentPolicyStatus paymentPolicyStatusId = 10;
+  PaymentPolicyTreatmentSelection paymentPolicyTreatmentSelectionId = 11;
+  string systemModstamp = 12;
+}
+message SalesOrderProductPriceAdjustmentTax {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  SalesOrderProductPriceAdjustment salesOrderProductPriceAdjustmentId = 8;
+  float salesOrderProductPriceAdjustmentTaxAmount = 9;
+  float salesOrderTaxAmount = 10;
+  TaxType salesOrderTaxTypeId = 11;
+  string systemModstamp = 12;
+  string taxAddressCityName = 13;
+  string taxAddressStreet1Text = 14;
+  string taxAddressStreet2Text = 15;
+  string taxErrorMessageText = 16;
+  float taxRatePercent = 17;
+}
+message LanguageProficiencyLevel {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string systemModstamp = 7;
+}
+message AccountContact {
+  Account accountId = 1;
+  string assistantName = 2;
+  string assistantPhone = 3;
+  ContactPointPhone businessPhoneId = 4;
+  ContactPointEmail contactEmailId = 5;
+  string contactNote = 6;
+  string createdDate = 7;
+  string departmentName = 8;
+  string externalRecordId = 9;
+  string externalSourceId = 10;
+  ContactPointPhone faxPhoneId = 11;
+  ContactPointPhone homePhoneId = 12;
+  string id = 13;
+  string implementorType = 14;
+  AccountContact indirectRelationAccountContactId = 15;
+  Individual individualId = 16;
+  string lastActivityDate = 17;
+  string lastModifiedDate = 18;
+  ContactPointAddress mailingAddressId = 19;
+  ContactPointPhone mobilePhoneId = 20;
+  ContactPointAddress otherContactAddressId = 21;
+  AccountContact reportsToAccountContactId = 22;
+  string systemModstamp = 23;
+  string title = 24;
+}
+message OwnershipVerificationType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string systemModstamp = 7;
+}
+message PersonalityType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string personalityTypeName = 7;
+  string systemModstamp = 8;
+}
+message DigitalWallet {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string systemModstamp = 7;
+}
+message BankType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string systemModstamp = 7;
+}
+message PersonEducation {
+  string createdDate = 1;
+  string educationName = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string graduationDate = 5;
+  string id = 6;
+  string implementorType = 7;
+  Individual individualId = 8;
+  string institutionName = 9;
+  string lastModifiedDate = 10;
+  int32 schoolDaysMissedNumber = 11;
+  string systemModstamp = 12;
+}
+message AccountBalanceUnitOfMeasure {
+  string accountBalanceUOMName = 1;
+  string createdDate = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string systemModstamp = 8;
+}
+message SupplierType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string supplierTypeName = 7;
+  string systemModstamp = 8;
+}
+message TaxationPolicy {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string systemModstamp = 7;
+}
+message EntitlementPolicy {
+  repeated EntitlementProduct EntitlementProducts = 1;
+  string createdDate = 2;
+  string description = 3;
+  string externalRecordId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string name = 8;
+  string systemModstamp = 9;
+}
+message PersonLifeStage {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string personLifeStageName = 7;
+  string systemModstamp = 8;
+}
+message SalesOrderPaymentSummary {
+  repeated PaymentAuthorization PaymentAuthorizations = 1;
+  float appliedAmount = 2;
+  float authorizationAmount = 3;
+  float authorizationReversalAmount = 4;
+  float availableToApplyBalanceAmount = 5;
+  float capturedAmount = 6;
+  string createdDate = 7;
+  string externalRecordId = 8;
+  string externalSourceId = 9;
+  string id = 10;
+  string implementorType = 11;
+  string lastModifiedDate = 12;
+  string name = 13;
+  float paymentAmount = 14;
+  Currency paymentAmountCurrency = 15;
+  PaymentMethod paymentMethodId = 16;
+  SalesOrder salesOrderId = 17;
+  string systemModstamp = 18;
+  float unappliedAmount = 19;
+}
+message ContactPoint {
+  string activeFromDate = 1;
+  string activeToDate = 2;
+  string bestTimeToContactEndTime = 3;
+  string bestTimeToContactStartTime = 4;
+  string createdDate = 13;
+  string externalRecordId = 14;
+  string externalSourceId = 15;
+  bool forBusinessUse = 16;
+  bool forPersonalUse = 17;
+  string id = 18;
+  string implementorType = 19;
+  bool isUndeliverable = 20;
+  string lastModifiedDate = 21;
+  Party partyId = 22;
+  PartyRole partyRoleId = 23;
+  bool primaryFlag = 24;
+  string profileFirstCreatedDate = 25;
+  string profileLastUpdatedDate = 26;
+  int32 profileOccurrenceCount = 27;
+  string systemModstamp = 28;
+  oneof contactPointTypeId {
+    ContactPointApp contactpointapp = 6;
+    ContactPointEmail contactpointemail = 7;
+    ContactPointLocation contactpointlocation = 8;
+    ContactPointPhone contactpointphone = 9;
+    ContactPointSocial contactpointsocial = 10;
+    PartyWebAddress partywebaddress = 11;
+    ContactPointAddress contactpointaddress = 12;
+  }
+}
+message DisposalType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string systemModstamp = 7;
+}
+message Household {
+  BusinessAccount businessAccountId = 1;
+  string createdDate = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string householdDissolvedDate = 5;
+  string householdFormedDate = 6;
+  int32 householdMemberCount = 7;
+  string id = 8;
+  string implementorType = 9;
+  string lastModifiedDate = 10;
+  string name = 11;
+  string systemModstamp = 12;
+}
+message SalesOrderProductRelatedProduct {
+  SalesOrderProductRelationshipType childRelationshipTypeId = 1;
+  string createdDate = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string name = 8;
+  SalesOrderProductRelationshipType parentRelationshipTypeId = 9;
+  SalesOrderProduct salesOrderProduct1Id = 10;
+  SalesOrderProduct salesOrderProduct2Id = 11;
+  string systemModstamp = 12;
+}
+message AffiliationGroup {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  GlobalParty globalPartyId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string name = 8;
+  PartyNoMergeReason noMergeReasonId = 9;
+  Party partyId = 10;
+  Account primaryAccountId = 16;
+  string systemModstamp = 17;
+  oneof partyTypeId {
+    AffiliationGroup affiliationgroup = 12;
+    Individual individual = 13;
+    Organization organization = 14;
+    UncategorizedParty uncategorizedparty = 15;
+  }
+}
+message CustomerStatus {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message MasterProduct {
+  bool allowCustomerReturn = 1;
+  bool allowPartialRefund = 2;
+  bool canUseQuantitySchedule = 3;
+  bool canUseRevenueSchedule = 4;
+  string createdDate = 5;
+  string description = 6;
+  DisposalType disposalTypeId = 7;
+  string externalRecordId = 8;
+  string externalSourceId = 9;
+  string externalSourceRecordId = 10;
+  string id = 11;
+  string implementorType = 12;
+  bool isAutoProvisionable = 13;
+  bool isBackOrdered = 14;
+  bool isCouponRedemptionAllowed = 15;
+  bool isCustomerDiscountAllowed = 16;
+  bool isDynamicBundle = 17;
+  bool isFoodstampPaymentAllowed = 18;
+  bool isInstallable = 19;
+  bool isIntellectualPropertyProtected = 20;
+  bool isManualPriceEntryRequired = 21;
+  bool isMultipleCouponsAllowed = 22;
+  bool isPartnerDiscountAllowed = 23;
+  bool isPreOrderable = 24;
+  bool isQualityVerificationRequired = 25;
+  bool isQuantityEntryRequired = 26;
+  bool isRainCheckAllowed = 27;
+  bool isReturnable = 28;
+  bool isSellable = 29;
+  bool isSellableIndependently = 30;
+  bool isSellableWithoutPrice = 31;
+  bool isSerialized = 32;
+  bool isWeightEntryRequired = 33;
+  bool isWorkerDiscountAllowed = 34;
+  string lastModifiedDate = 35;
+  string lotIdentifier = 36;
+  int32 mSRPAmount = 37;
+  Currency mSRPAmountCurrency = 38;
+  string manufacturerName = 39;
+  Product masterProductId = 40;
+  int32 maximumOrderQuantityCount = 41;
+  int32 minimumAdvertisementAmount = 42;
+  Currency minimumAdvertisementAmountCurrency = 43;
+  int32 minimumAdvertisementAmountStartDate = 44;
+  int32 minimumOrderQuantityCount = 45;
+  string modelNumber = 46;
+  int32 modelYear = 47;
+  string name = 48;
+  PriceChargeType priceChargeTypeId = 49;
+  ProductCategory primaryProductCategoryId = 50;
+  SalesChannel primarySalesChannelId = 51;
+  ProductAssetConversionAction productAssetCvsnActionId = 52;
+  string productSKU = 53;
+  ProductStatus productStatusId = 54;
+  int32 quantityInstallmentCount = 60;
+  QuantityInstallmentPeriod quantityInstallmentPeriodId = 61;
+  QuantityScheduleType quantityScheduleTypeId = 62;
+  int32 requiredDepositAmount = 63;
+  Currency requiredDepositAmountCurrency = 64;
+  int32 requiredDepositPercentage = 65;
+  bool requiresInvididualUnitPricing = 66;
+  int32 revenueInstallmentCount = 67;
+  RevenueInstallmentPeriod revenueInstallmentPeriodId = 68;
+  RevenueScheduleType revenueScheduleTypeId = 69;
+  int32 rewardProgramPointsCount = 70;
+  int32 standardWarrantyLengthMonth = 71;
+  int32 stockLedgerValuationAmount = 72;
+  Currency stockLedgerValuationAmountCurrency = 73;
+  string systemModstamp = 74;
+  int32 validForPeriodCount = 75;
+  ProductValidityTimePeriodUOM validForPeriodUOMId = 76;
+  string validFromDate = 77;
+  string validToDate = 78;
+  string versionNumber = 79;
+  oneof productType {
+    BundleProduct bundleproduct = 56;
+    GoodsProduct goodsproduct = 57;
+    MasterProduct masterproduct = 58;
+    ServiceProduct serviceproduct = 59;
+  }
+}
+message LegalEntity {
+  string createdDate = 1;
+  string description = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string name = 8;
+  string systemModstamp = 9;
+}
+message ShipmentStatus {
+  string createdDate = 1;
+  string description = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string name = 8;
+  string systemModstamp = 9;
+}
+message ContactPointType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string lastModifiedDate = 5;
+  string name = 6;
+  int32 optInPriority = 7;
+  string systemModstamp = 8;
+}
+message MilitaryStatus {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string militaryStatusName = 7;
+  string systemModstamp = 8;
+}
+message AccountBusinessType {
+  string createdDate = 1;
+  string description = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message VoucherDefinition {
+  repeated Voucher Vouchers = 1;
+  string createdDate = 2;
+  string description = 3;
+  float discountPercent = 4;
+  string effectiveDate = 5;
+  string expirationDate = 6;
+  int32 expirationPeriodNumber = 7;
+  TimeUOM expirationPeriodUOM = 8;
+  string externalRecordId = 9;
+  string externalSourceId = 10;
+  float faceValueAmount = 11;
+  string id = 12;
+  string implementorType = 13;
+  bool isActive = 14;
+  string lastModifiedDate = 15;
+  string name = 16;
+  Account partnerAccountId = 17;
+  Product productId = 18;
+  string systemModstamp = 19;
+  VoucherExpirationType voucherExpirationTypeId = 20;
+  VoucherStatus voucherStatusId = 21;
+  VoucherType voucherTypeId = 22;
+}
+message PersonEmployment {
+  int32 annualIncome = 1;
+  string createdDate = 2;
+  string employerAddressLine1 = 3;
+  string employerAddressLine2 = 4;
+  string employerAddressLine3 = 5;
+  string employerAddressLine4 = 6;
+  string employerCityName = 7;
+  ContactPointAddress employerContactPointAddressId = 8;
+  string employerName = 9;
+  string employerPhoneNumber = 10;
+  string employerPostalCodeText = 11;
+  EmploymentStatus employmentStatusId = 12;
+  string endDate = 13;
+  string externalRecordId = 14;
+  string externalSourceId = 15;
+  string id = 16;
+  string implementorType = 17;
+  Individual individualId = 18;
+  string lastModifiedDate = 19;
+  string occupationText = 20;
+  string positionText = 21;
+  string startDate = 22;
+  string systemModstamp = 23;
+}
+message ShipmentProductPriceAdjustment {
+  float adjustmentAmount = 1;
+  float adjustmentTaxAmount = 2;
+  string createdDate = 3;
+  string description = 4;
+  string externalRecordId = 5;
+  string externalSourceId = 6;
+  string id = 7;
+  string implementorType = 8;
+  string lastModifiedDate = 9;
+  float shipmentProductPriceAdjustmentAmount = 10;
+  string systemModstamp = 11;
+}
+message QuantityInstallmentPeriod {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string systemModstamp = 7;
+}
+message LeadRating {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string leadRatingName = 7;
+  string systemModstamp = 8;
+}
+message Lead {
+  int32 annualRevenue = 1;
+  string city = 2;
+  string companyName = 3;
+  ContactPointAddress contactAddressId = 4;
+  ContactPointEmail contactPointEmailId = 5;
+  string convertedDate = 6;
+  AccountContact convertedToAccountContactId = 7;
+  Account convertedToAccountId = 8;
+  string countryName = 9;
+  string createdDate = 10;
+  Currency currencyId = 11;
+  string description = 12;
+  string emailBouncedDate = 13;
+  string emailBouncedReason = 14;
+  string externalRecordId = 15;
+  string externalSourceId = 16;
+  ContactPointPhone faxContactPhoneId = 17;
+  int32 geoCodeLatitude = 18;
+  int32 geoCodeLongitude = 19;
+  string id = 20;
+  string implementorType = 21;
+  bool isConverted = 22;
+  string lastActivityDate = 23;
+  string lastModifiedDate = 24;
+  LeadRating leadRating = 25;
+  int32 leadScore = 26;
+  LeadSource leadSourceId = 27;
+  LeadStatus leadStatusId = 28;
+  ContactPointPhone mobileContactPhoneId = 29;
+  Account partnerAccountId = 30;
+  PartyRole partyRoleId = 31;
+  ContactPointPhone phoneContactPointId = 32;
+  string photoURL = 33;
+  string stateProvinceName = 34;
+  string streetName = 35;
+  string systemModstamp = 36;
+  string website = 37;
+}
+message Currency {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string iSOCurrencyCodeAlphanumericText = 4;
+  int32 iSOCurrencyCodeNumber = 5;
+  string id = 6;
+  string implementorType = 7;
+  string lastModifiedDate = 8;
+  string name = 9;
+  string systemModstamp = 10;
+}
+message SettlementType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string settlementTypeCode = 7;
+  string systemModstamp = 8;
+}
+message EntitlementProduct {
+  string createdDate = 1;
+  EntitlementPolicy entitlementPolicyId = 2;
+  string externalRecordId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  Product productId = 7;
+  string systemModstamp = 8;
+}
+message PaymentCardType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string paymentCardTypeName = 7;
+  string systemModstamp = 8;
+}
+message ISICCode {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string iSICCodeName = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string systemModstamp = 8;
+}
+message PrepaidCard {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string systemModstamp = 7;
+}
+message AttributeSetTranslation {
+  AttributeSet attributeSetId = 1;
+  string createdDate = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string systemModstamp = 8;
+  string translatedName = 9;
+}
+message SocialFanStatus {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string socialFanStatusName = 7;
+  string systemModstamp = 8;
+}
+message PartyProfessionalCredential {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  PartyProfessionalCredentialType partyProfessionalCredentialTypeId = 8;
+  string systemModstamp = 9;
+}
+message ProductCategorySortingRule {
+  string externalRecordId = 1;
+  string externalSourceId = 2;
+  string id = 3;
+  string implementorType = 4;
+  string lastModifiedDate = 5;
+  ProductCategory productCategoryId = 6;
+  string productCategorySortingRuleText = 7;
+}
+message ContactPointApp {
+  string applicationLoginId = 1;
+  string cookieIdText = 2;
+  string createdDate = 3;
+  string externalRecordId = 4;
+  string externalSourceId = 5;
+  string id = 6;
+  string implementorType = 7;
+  string lastModifiedDate = 8;
+  string sDKVerName = 9;
+  string softwareAppPriorVerName = 10;
+  string softwareAppVerName = 11;
+  string systemModstamp = 12;
+}
+message ProductCategory {
+  repeated ProductCategoryAttributeSet ProductCategoryAttributeSets = 1;
+  repeated ProductCategoryTranslation ProductCategoryTranslations = 2;
+  string activeFromDate = 3;
+  string activeToDate = 4;
+  string createdDate = 5;
+  string externalRecordId = 6;
+  string externalSourceId = 7;
+  string id = 8;
+  string implementorType = 9;
+  string lastModifiedDate = 10;
+  string name = 11;
+  ProductCategory parentCategoryId = 12;
+  ProductCatalog productCatalogId = 13;
+  string systemModstamp = 14;
+}
+message ProductAttribute {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  Product productId = 7;
+  string systemModstamp = 8;
+}
+message LifeStyleType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string lifeStyleTypeName = 7;
+  string systemModstamp = 8;
+}
+message BundleType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string id = 3;
+  string implementorType = 4;
+  string lastModifiedDate = 5;
+  string name = 6;
+  string systemModstamp = 7;
+}
+message RefundPaymentAllocation {
+  CapturePayment capturePaymentId = 1;
+  string createdDate = 2;
+  float creditMemoBalanceAmount = 3;
+  string externalRecordId = 4;
+  string externalSourceId = 5;
+  string id = 6;
+  string implementorType = 7;
+  string lastModifiedDate = 8;
+  float paymentBalanceAmount = 9;
+  string refundAllocationCommentText = 10;
+  string refundAllocationCommentsDate = 11;
+  string refundPaymentAllocationName = 12;
+  string systemModstamp = 13;
+}
+message BusinessSizeType {
+  string businessSizeTypeName = 1;
+  string createdDate = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string systemModstamp = 8;
+}
+message PersonLifeEvent {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  Individual individualId = 6;
+  string lastModifiedDate = 7;
+  string personLifeEventDateTime = 8;
+  PersonLifeEventType personLifeEventTypeId = 9;
+  string systemModstamp = 10;
+}
+message BusinessActivity {
+  string businessActivityName = 1;
+  string createdDate = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string systemModstamp = 8;
+}
+message ProductType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string implementorType = 4;
+  string lastModifiedDate = 5;
+  string systemModstamp = 6;
+}
+message SalesOrderType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message ProductCollateral {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  Product productId = 7;
+  string systemModstamp = 8;
+  string uRL = 9;
+}
+message CashTender {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string systemModstamp = 7;
+}
+message ContactPointPhone {
+  string areaCode = 1;
+  string countryName = 2;
+  string createdDate = 3;
+  string extensionNumber = 4;
+  string externalRecordId = 5;
+  string externalSourceId = 6;
+  string formattedE164PhoneNumber = 7;
+  string formattedInternationalPhoneNumber = 8;
+  string formattedNationalPhoneNumber = 9;
+  string id = 10;
+  string implementorType = 11;
+  bool isFaxCapable = 12;
+  bool isSMSCapable = 13;
+  string lastModifiedDate = 14;
+  string phoneCountryCode = 15;
+  PrimaryPhoneType primaryPhoneTypeId = 16;
+  int32 shortCode = 17;
+  string systemModstamp = 18;
+  string telephoneNumber = 19;
+}
+message ContactRole {
+  string createdDate = 1;
+  string description = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message ProductRepairCertification {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string id = 3;
+  string implementorType = 4;
+  string lastModifiedDate = 5;
+  Product productId = 6;
+  string systemModstamp = 7;
+}
+message PaymentCardCategory {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string paymentCardCategoryName = 7;
+  string systemModstamp = 8;
+}
+message AssetProductCampaign {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string id = 3;
+  string implementorType = 4;
+  string lastModifiedDate = 5;
+  string name = 6;
+  string systemModstamp = 7;
+}
+message Pronoun {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  Pronoun pronounId = 8;
+  string systemModstamp = 9;
+}
+message StoreAssortment {
+  Assortment assortmentId = 1;
+  string createdDate = 2;
+  string externalRecordId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message PartyHierarchy {
+  repeated PartyHierarchyMember PartyHierarchyMembers = 1;
+  string createdDate = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string name = 8;
+  string partyHierarchyEndDate = 9;
+  string partyHierarchyStartDate = 10;
+  PartyHierarchyType partyHierarchyTypeId = 11;
+  string systemModstamp = 12;
+}
+message ProductPattern {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message HeightUOM {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string heightUOMName = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  MeasurementSystem measurementSystemId = 8;
+  string systemModstamp = 9;
+}
+message BankruptcyType {
+  string bankcruptcyTypeName = 1;
+  string createdDate = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string systemModstamp = 8;
+}
+message SizeUOM {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  MeasurementSystem measurementSystemId = 7;
+  string name = 8;
+  string systemModstamp = 9;
+}
+message SubscriptionPricingMethod {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message SLAType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string sLATypeName = 7;
+  string systemModstamp = 8;
+}
+message FreightTerms {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string freightTermsName = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string systemModstamp = 8;
+}
+message SalesOrderProductTax {
+  string createdDate = 1;
+  string description = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string name = 8;
+  SalesOrderProductTax originalSalesOrderProductTaxId = 9;
+  SalesOrderProduct salesOrderProductId = 10;
+  float salesOrderTaxAmount = 11;
+  TaxType salesOrderTaxTypeId = 12;
+  string systemModstamp = 13;
+  string taxAddressCityName = 14;
+  string taxAddressStreet1Text = 15;
+  string taxAddressStreet2Text = 16;
+  float taxAmount = 17;
+  string taxEffectiveDate = 18;
+  string taxErrorMessageText = 19;
+  float taxRatePercent = 20;
+}
+message ProductWarrantyTerm {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string id = 3;
+  string implementorType = 4;
+  string lastModifiedDate = 5;
+  string name = 6;
+  Product productId = 7;
+  string systemModstamp = 8;
+}
+message ResidenceCaptureMethod {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string systemModstamp = 7;
+}
+message PaymentGatewayInteractionLog {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string internalReferenceNumber = 6;
+  InternalResultCode internalResultCodeId = 7;
+  string lastModifiedDate = 8;
+  string paymentGatewayAVSCode = 9;
+  string paymentGatewayAuthorizationCode = 10;
+  string paymentGatewayDate = 11;
+  string paymentGatewayInteractionLogName = 12;
+  PaymentGatewayInteractionStatus paymentGatewayInteractionStatusId = 13;
+  PaymentGatewayInteractionType paymentGatewayInteractionTypeId = 14;
+  string paymentGatewayMessageText = 15;
+  string paymentGatewayReferenceNumber = 16;
+  PaymentGatewayResultCode paymentGatewayResultId = 17;
+  string systemModstamp = 18;
+}
+message PartyProfessionalCredentialType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message LifeAttitudeType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string lifeAttitudeTypeName = 7;
+  string systemModstamp = 8;
+}
+message Contact {
+  repeated ContactAccountRelationship ContactAccountRelationships = 1;
+  repeated ContactContactRelationship ContactContactRelationships = 2;
+  string createdDate = 3;
+  string externalRecordId = 4;
+  string externalSourceId = 5;
+  string firstName = 6;
+  string implementorType = 7;
+  Individual individualId = 8;
+  string lastModifiedDate = 9;
+  string lastName = 10;
+  string middleName = 11;
+  ContactPointAddress otherMailingAddress = 12;
+  string personName = 13;
+  ContactPointPhone primaryBusinessPhoneNumber = 14;
+  ContactPointPhone primaryFaxPhoneNumber = 15;
+  ContactPointPhone primaryHomePhone = 16;
+  ContactPointAddress primaryMailingAddress = 17;
+  ContactPointPhone primaryMobilePhoneNumber = 18;
+  string systemModstamp = 19;
+}
+message Shipment {
+  repeated ShipmentDocument ShipmentDocuments = 1;
+  repeated ShipmentPackage ShipmentPackages = 2;
+  repeated ShipmentProduct ShipmentProducts = 3;
+  string actualDeliveryDateTime = 4;
+  BusinessAccount carrierId = 5;
+  string carrierTrackingNumber = 6;
+  string createdDate = 7;
+  string estimatedDeliveryDateTime = 8;
+  string externalRecordId = 9;
+  string externalSourceId = 10;
+  string giftMessageText = 11;
+  string id = 12;
+  string implementorType = 13;
+  bool isGift = 14;
+  string lastModifiedDate = 15;
+  SalesOrderDeliveryGroup salesOrderDeliveryGroupId = 16;
+  SalesOrder salesOrderId = 17;
+  string scheduledDeliveryDateTime = 18;
+  ContactPointAddress shipToAddressId = 19;
+  string shipmentDate = 20;
+  string shipmentNumber = 21;
+  ShipmentStatus shipmentStatusId = 22;
+  ShippingMethod shippingMethodId = 23;
+  string specialInstructionsText = 24;
+  string systemModstamp = 25;
+}
+message GoodsProduct {
+  ProductAge ageId = 1;
+  bool allowCustomerReturn = 2;
+  bool allowPartialRefund = 3;
+  bool canUseQuantitySchedule = 4;
+  bool canUseRevenueSchedule = 5;
+  Color colorId = 6;
+  string createdDate = 7;
+  int32 depth = 8;
+  string description = 9;
+  int32 diameter = 10;
+  DisposalType disposalTypeId = 11;
+  int32 drainedWeight = 12;
+  ProductEnvironmentRequirement environmentRequirementId = 13;
+  string externalRecordId = 14;
+  string externalSourceId = 15;
+  string externalSourceRecordId = 16;
+  ProductFabric fabricId = 17;
+  ProductGender genderId = 18;
+  int32 grossWeight = 19;
+  int32 height = 20;
+  string id = 21;
+  string implementorType = 22;
+  bool isAutoProvisionable = 23;
+  bool isBackOrdered = 24;
+  bool isCouponRedemptionAllowed = 25;
+  bool isCustomerDiscountAllowed = 26;
+  bool isDynamicBundle = 27;
+  bool isFoodstampPaymentAllowed = 28;
+  bool isInstallable = 29;
+  bool isIntellectualPropertyProtected = 30;
+  bool isMadeToOrder = 31;
+  bool isManualPriceEntryRequired = 32;
+  bool isMultipleCouponsAllowed = 33;
+  bool isPartnerDiscountAllowed = 34;
+  bool isPerishable = 35;
+  bool isPreOrderable = 36;
+  bool isQualityVerificationRequired = 37;
+  bool isQuantityEntryRequired = 38;
+  bool isRainCheckAllowed = 39;
+  bool isReturnable = 40;
+  bool isSellable = 41;
+  bool isSellableIndependently = 42;
+  bool isSellableWithoutPrice = 43;
+  bool isSerialized = 44;
+  bool isWeightEntryRequired = 45;
+  bool isWorkerDiscountAllowed = 46;
+  string lastModifiedDate = 47;
+  string lotIdentifier = 48;
+  int32 mSRPAmount = 49;
+  Currency mSRPAmountCurrency = 50;
+  string manufacturerName = 51;
+  Product masterProductId = 52;
+  int32 maxHoldingDayCount = 53;
+  int32 maximumOrderQuantityCount = 54;
+  int32 minimumAdvertisementAmount = 55;
+  Currency minimumAdvertisementAmountCurrency = 56;
+  int32 minimumAdvertisementAmountStartDate = 57;
+  int32 minimumOrderQuantityCount = 58;
+  string modelNumber = 59;
+  int32 modelYear = 60;
+  string name = 61;
+  int32 netWeight = 62;
+  ProductPattern patternId = 63;
+  PriceChargeType priceChargeTypeId = 64;
+  ProductCategory primaryProductCategoryId = 65;
+  SalesChannel primarySalesChannelId = 66;
+  ProductAssetConversionAction productAssetCvsnActionId = 67;
+  bool productMayExpand = 68;
+  string productSKU = 69;
+  ProductSecurityRequirement productSecurityRequirementId = 70;
+  ProductStatus productStatusId = 71;
+  int32 quantityInstallmentCount = 77;
+  QuantityInstallmentPeriod quantityInstallmentPeriodId = 78;
+  QuantityScheduleType quantityScheduleTypeId = 79;
+  ProductCleanupProcess requiredCleanupProcessId = 80;
+  int32 requiredDepositAmount = 81;
+  Currency requiredDepositAmountCurrency = 82;
+  int32 requiredDepositPercentage = 83;
+  int32 requiredHumidityPercentage = 84;
+  int32 requiredTemperatureHighestNumber = 85;
+  int32 requiredTemperatureLowestNumber = 86;
+  TemperatureUOM requiredTemperatureUOMId = 87;
+  bool requiresInvididualUnitPricing = 88;
+  bool requiresUnitPriceLabel = 89;
+  int32 revenueInstallmentCount = 90;
+  RevenueInstallmentPeriod revenueInstallmentPeriodId = 91;
+  RevenueScheduleType revenueScheduleTypeId = 92;
+  int32 rewardProgramPointsCount = 93;
+  ProductSeason seasonId = 94;
+  int32 shelfFacingUnitCount = 95;
+  SizeUOM sizeUOMId = 96;
+  int32 standardWarrantyLengthMonth = 97;
+  int32 stockLedgerValuationAmount = 98;
+  Currency stockLedgerValuationAmountCurrency = 99;
+  ProductStyle styleId = 100;
+  string systemModstamp = 101;
+  int32 tareWeight = 102;
+  int32 validForPeriodCount = 103;
+  ProductValidityTimePeriodUOM validForPeriodUOMId = 104;
+  string validFromDate = 105;
+  string validToDate = 106;
+  string versionNumber = 107;
+  WeightUnitOfMeasure weightUOMId = 108;
+  int32 width = 109;
+  oneof productType {
+    BundleProduct bundleproduct = 73;
+    GoodsProduct goodsproduct = 74;
+    MasterProduct masterproduct = 75;
+    ServiceProduct serviceproduct = 76;
+  }
+}
+message SalesOrderDeliveryGroup {
+  AccountContact accountContactId = 1;
+  ContactPointAddress contactPointAddressId = 2;
+  string createdDate = 3;
+  string deliveryInstructionsText = 4;
+  string description = 5;
+  string desiredDeliveryDate = 6;
+  string externalRecordId = 7;
+  string externalSourceId = 8;
+  string giftMessageText = 9;
+  float grandTotalDeliveryAmount = 10;
+  string id = 11;
+  string implementorType = 12;
+  bool isGift = 13;
+  string lastModifiedDate = 14;
+  string name = 15;
+  OrderDeliveryMethod orderDeliveryMethodId = 16;
+  SalesOrderDeliveryGroup originalDeliveryGroupId = 17;
+  string promisedDate = 18;
+  string salesOrderDeliveryGroupNumber = 19;
+  SalesOrderDeliveryStatus salesOrderDeliveryStatusId = 20;
+  SalesOrder salesOrderId = 21;
+  string systemModstamp = 22;
+  float totalDeliveryAdjustmentAmount = 23;
+  float totalDeliveryAdjustmentTaxAmount = 24;
+  Currency totalDeliveryAmountCurrencyId = 25;
+  float totalDeliveryChargeAmount = 26;
+  Currency totalDeliveryChargeAmountCurrencyId = 27;
+  float totalDeliveryChargeTaxAmount = 28;
+  float totalDeliveryTaxAmount = 29;
+  float totalPriceAmount = 30;
+  float totalProductTaxAmount = 31;
+  float totalTaxAmount = 32;
+  float totalUnitPriceAmount = 33;
+}
+message SellerType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string sellerTypeName = 7;
+  string systemModstamp = 8;
+}
+message ProductRelationshipType {
+  ProductRole childProductRoleId = 1;
+  string createdDate = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  ProductRole parentProductRoleId = 8;
+  string systemModstamp = 9;
+}
+message PaymentAuthorization {
+  repeated CapturePayment CapturePayments = 1;
+  repeated PaymentAuthorizationReversal PaymentAuthorizationReversals = 2;
+  repeated PaymentGatewayAuthorizationLog PaymentGatewayAuthorizationLogs = 3;
+  float authorizationAmount = 4;
+  float availableBalanceAmount = 5;
+  string createdDate = 6;
+  string expirationDate = 7;
+  string externalCreatedDate = 8;
+  string externalRecordId = 9;
+  string externalSourceId = 10;
+  string gatewayAuthorizationCode = 11;
+  string gatewayReferenceDetailsText = 12;
+  string gatewayResultCodeDescription = 13;
+  string iPAddress = 14;
+  string id = 15;
+  string implementorType = 16;
+  string lastModifiedDate = 17;
+  string macAddress = 18;
+  string paymentAuthorizationCommentText = 19;
+  string paymentAuthorizationNumber = 20;
+  AuthorizationProcessingMode paymentAuthorizationProcessingModeId = 21;
+  PaymentAuthorizationStatus paymentAuthorizationStatusId = 22;
+  string paymentGatewayDate = 23;
+  PaymentGateway paymentGatewayId = 24;
+  string paymentGatewayInternalReferenceNumber = 25;
+  PaymentAuthInternalResultCode paymentGatewayInternalResultCodeId = 26;
+  string paymentGatewayReferenceNumber = 27;
+  PaymentGatewayResultCode paymentGatewayResultId = 28;
+  PaymentGroup paymentGroupId = 29;
+  PaymentMethod paymentMethodID = 30;
+  string requestDate = 31;
+  SalesOrderPaymentSummary salesOrderPaymentSummaryId = 32;
+  string systemModstamp = 33;
+  float totalAuthorizationReversalAmount = 34;
+  float totalPaymentCaptureAmount = 35;
+}
+message PartyBusinessLicense {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string licenseExpirationDate = 7;
+  string licenseIssuedDate = 8;
+  string licenseNumber = 9;
+  string name = 10;
+  string systemModstamp = 11;
+}
+message LeadSource {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string leadSourceName = 7;
+  string systemModstamp = 8;
+}
+message Organization {
+  int32 annualRevenueAmount = 1;
+  Currency annualRevenueAmountCurrency = 2;
+  Currency annualRevenueCurrencyId = 3;
+  string bankruptcyDate = 4;
+  string bankruptcyEmergenceDate = 5;
+  bool bankruptcyHistoryFlag = 6;
+  BankruptcyType bankruptcyTypeId = 7;
+  string businessName = 8;
+  BusinessSizeType businessSizeTypeId = 9;
+  string closedForBusinessDate = 10;
+  string companyType = 11;
+  string createdDate = 12;
+  string dUNSNumber = 13;
+  string dandBCompanyName = 14;
+  string description = 15;
+  int32 dunnandBradstreetRating = 16;
+  int32 employeeCount = 17;
+  string externalRecordId = 18;
+  string externalSourceId = 19;
+  string fiscalYearEndMonthDate = 20;
+  GlobalParty globalPartyId = 21;
+  ISICCode iSICId = 22;
+  string id = 23;
+  string implementorType = 24;
+  string incorporationDate = 25;
+  string lastModifiedDate = 26;
+  string legalIncorporationJurisdiction = 27;
+  string legalName = 28;
+  LegalOrganizationType legalOrganizationTypeId = 29;
+  BusinessLegalStatus legalStatusId = 30;
+  int32 marketCapitalizationAmount = 31;
+  Currency marketCapitalizationAmountCurrency = 32;
+  NAICSCode nAICSId = 33;
+  PartyNoMergeReason noMergeReasonId = 34;
+  string openForBusinessDate = 35;
+  BusinessOwnership ownershipId = 36;
+  Party partyId = 37;
+  Account primaryAccountId = 43;
+  string primaryIndustryName = 44;
+  SICCode sICId = 45;
+  string stockExchangeName = 46;
+  string stockTickerSymbol = 47;
+  string systemModstamp = 48;
+  string taxId = 49;
+  string terminationDate = 50;
+  int32 yearStarted = 51;
+  oneof partyTypeId {
+    AffiliationGroup affiliationgroup = 39;
+    Individual individual = 40;
+    Organization organization = 41;
+    UncategorizedParty uncategorizedparty = 42;
+  }
+}
+message SalesOrderProductAttributeValue {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string productAttributeValueDate = 7;
+  ProductAttributeValue productAttributeValueId = 8;
+  int32 productAttributeValueNumber = 9;
+  string productAttributeValueText = 10;
+  int32 productAttributeValueURL = 11;
+  SalesOrderProduct salesOrderProductId = 12;
+  string systemModstamp = 13;
+}
+message BusinessOwnership {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string systemModstamp = 7;
+}
+message PartyRelatedParty {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  Party partyId = 7;
+  PartyRelationshipType partyRelationshipTypeId = 8;
+  string relatedFromDate = 9;
+  Party relatedPartyId = 10;
+  string relatedToDate = 11;
+  string systemModstamp = 12;
+}
+message SalesOrderProductGroupType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message PaymentAllocation {
+  string createdDate = 1;
+  string externalCreatedDate = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string paymentAllocationName = 8;
+  PaymentAllocation relatedPaymentAllocationId = 9;
+  string systemModstamp = 10;
+}
+message ProductImageTranslation {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  ProductImage productImageId = 7;
+  string systemModstamp = 8;
+  string translatedName = 9;
+}
+message ProductRelatedMaterial {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string systemModstamp = 7;
+}
+message PartyIdentificationType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string identifierTypeName = 5;
+  string implementerType = 6;
+  string lastModifiedDate = 7;
+  PartyIdentificationType parentPartyIdentificationTypeId = 8;
+  string partyIdentificationTypeName = 9;
+  string systemModstamp = 10;
+}
+message PaymentInvoiceAllocation {
+  float appliedAmount = 1;
+  string createdDate = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  float invoiceBalanceAmount = 7;
+  string lastModifiedDate = 8;
+  string paymentInvoiceAllocationName = 9;
+  PaymentInvoiceApplication paymentInvoiceApplicationId = 10;
+  string systemModstamp = 11;
+}
+message SalesOrderProductGroup {
+  repeated SalesOrderProductGroupAssignment SalesOrderProductGroupAssignments = 1;
+  string createdDate = 2;
+  string description = 3;
+  string externalRecordId = 4;
+  string externalSourceId = 5;
+  string id = 6;
+  string implementorType = 7;
+  string lastModifiedDate = 8;
+  string name = 9;
+  SalesOrderProductGroupType salesOrderProductGroupTypeId = 10;
+  string systemModstamp = 11;
+}
+message SalesContract {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string systemModstamp = 7;
+}
+message ProductTranslation {
+  string createdDate = 1;
+  string description = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string longDescription = 8;
+  string name = 9;
+  Product productId = 10;
+  string systemModstamp = 11;
+}
+message CapturePayment {
+  Account accountId = 1;
+  Currency amountCurrency = 2;
+  AuthorizationProcessingMode authorizationProcessingModeId = 3;
+  float balanceAmount = 4;
+  SettlementType capturePaymentTypeId = 5;
+  string commentText = 6;
+  string createdDate = 7;
+  string customerEmailAddress = 8;
+  string customerPhoneNumber = 9;
+  string externalCreatedDate = 10;
+  string externalRecordId = 11;
+  string externalSourceId = 12;
+  float handlingFeeAmount = 13;
+  string iPAddress = 14;
+  string id = 15;
+  string implementorType = 16;
+  bool isFinalCapture = 17;
+  string lastModifiedDate = 18;
+  string latestGatewayDate = 19;
+  string latestGatewayInternalReferenceNumber = 20;
+  InternalResultCode latestGatewayInternalResultId = 21;
+  string latestGatewayReferenceNumber = 22;
+  PaymentGatewayResultCode latestGatewayResultCodeId = 23;
+  string latestPaymentGatewayMessageText = 24;
+  LegalEntity legalEntityId = 25;
+  string macAddress = 26;
+  string name = 27;
+  float netAppliedAmount = 28;
+  float paymentAmount = 29;
+  PaymentAuthorization paymentAuthorizationId = 30;
+  string paymentCancellationDate = 31;
+  string paymentEffectiveDate = 32;
+  PaymentGateway paymentGatewayId = 33;
+  PaymentGroup paymentGroupId = 34;
+  PaymentMethod paymentMethodId = 35;
+  string paymentNumber = 36;
+  PaymentStatus paymentStatusId = 37;
+  PaymentTreatment paymentTreatmentId = 38;
+  SalesOrderPaymentSummary salesOrderPaymentSummaryId = 42;
+  string systemModstamp = 43;
+  float totalAppliedAmount = 44;
+  float totalUnappliedAmount = 45;
+  oneof paymentType {
+    CapturePayment capturepayment = 40;
+    RefundPayment refundpayment = 41;
+  }
+}
+message OrganizationMilestone {
+  string createdDate = 1;
+  string description = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  Party partyId = 8;
+  string systemModstamp = 9;
+}
+message PartyHierarchyType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message AttributeSet {
+  repeated AttributeSetTranslation AttributeSetTranslations = 1;
+  repeated ProductAttributeValue ProductAttributeValues = 2;
+  string createdDate = 3;
+  string externalRecordId = 4;
+  string externalSourceId = 5;
+  string id = 6;
+  string implementorType = 7;
+  string lastModifiedDate = 8;
+  string name = 9;
+  string systemModstamp = 10;
+}
+message Individual {
+  repeated PersonEducation PersonEducations = 1;
+  repeated PersonEmployment PersonEmployments = 2;
+  repeated PersonLanguage PersonLanguages = 3;
+  repeated PersonLifeEvent PersonLifeEvents = 4;
+  repeated PersonTraining PersonTrainings = 5;
+  string birthDate = 6;
+  int32 birthDateDay = 7;
+  int32 birthDateMonth = 8;
+  int32 birthDateYear = 9;
+  string birthPlace = 10;
+  int32 childrenCount = 11;
+  int32 consumerCreditScore = 12;
+  string consumerCreditScoreProviderName = 13;
+  int32 convictionsCount = 14;
+  string createdDate = 15;
+  string currentEmployerName = 16;
+  string deathDate = 17;
+  string deathPlace = 18;
+  int32 dependentCount = 19;
+  string doExtractMyDataUpdateDate = 20;
+  string doForgetMeFromUpdateDate = 21;
+  string doNotMarketFromUpdateDate = 22;
+  string doNotProcessFromUpdateDate = 23;
+  DoNotProcessReason doNotProcessReasonId = 24;
+  string doNotProfileFromUpdateDate = 25;
+  string doNotTrackLocationUpdateDate = 26;
+  string doNotTrackUpdateDate = 27;
+  string employedSinceDate = 28;
+  Ethnicity ethnicityId = 29;
+  string externalRecordId = 30;
+  string externalSourceId = 31;
+  string firstName = 32;
+  Gender genderId = 33;
+  GlobalParty globalPartyId = 34;
+  bool hasAlcoholAbuseHistory = 35;
+  bool hasDrugAbuseHistory = 36;
+  int32 hospitalizationsLast5YearsCount = 37;
+  string id = 38;
+  string implementorType = 39;
+  int32 influencerRating = 40;
+  bool isAlcoholConsumer = 41;
+  bool isDrugConsumer = 42;
+  bool isGoodDriver = 43;
+  bool isGoodStudent = 44;
+  bool isHighRiskHobby = 45;
+  bool isHighRiskOccupation = 46;
+  bool isHomeOwner = 47;
+  bool isTobaccoConsume = 48;
+  string lastModifiedDate = 49;
+  string lastName = 50;
+  string mailingName = 51;
+  DietaryHabitType mainDietaryHabitTypeId = 52;
+  DisabilityType mainDisabilityTypeId = 53;
+  LifeAttitudeType mainLifeAttitudeTypeId = 54;
+  LifeStyleType mainLifeStyleTypeId = 55;
+  PersonalValueType mainPersonalValueTypeId = 56;
+  PersonalityType mainPersonalityTypeId = 57;
+  int32 majorCitationCount = 58;
+  MaritalStatus maritalStatusId = 59;
+  string middleName = 60;
+  MilitaryServiceStatus militaryServiceId = 61;
+  MilitaryStatus militaryStatusId = 62;
+  int32 minorCitationCount = 63;
+  string mothersMaidenName = 64;
+  string nameSuffix = 65;
+  int32 netWorth = 66;
+  PartyNoMergeReason noMergeReasonId = 67;
+  string occupation = 68;
+  Occupation occupationTypeId = 69;
+  string officialName = 70;
+  string orderingName = 71;
+  int32 overAgeNumber = 72;
+  Party partyId = 73;
+  int32 personHeight = 79;
+  HeightUOM personHeightUnitofMeasureId = 80;
+  PersonLifeStage personLifeStageId = 81;
+  string personName = 82;
+  int32 personWeight = 83;
+  WeightUnitOfMeasure personWeightUnitofMeasureId = 84;
+  string photoURL = 85;
+  string preferredName = 86;
+  Account primaryAccountId = 87;
+  Hobby primaryHobbyId = 88;
+  Household primaryHouseholdId = 89;
+  Pronoun pronounId = 90;
+  Religion religionId = 91;
+  ResidenceCaptureMethod residenceCaptureMethodId = 92;
+  string residenceCountryName = 93;
+  string salutation = 94;
+  string secondLastName = 95;
+  bool sendIndividualData = 96;
+  bool shouldForget = 97;
+  int32 surgeriesLast5YearsCount = 98;
+  string systemModstamp = 99;
+  string taxBracketRange = 100;
+  string webSiteURL = 101;
+  string weddingAnniversaryDate = 102;
+  int32 yearlyIncome = 103;
+  Currency yearlyIncomeCurrencyId = 104;
+  IncomeRange yearlyIncomeRangeId = 105;
+  oneof partyTypeId {
+    AffiliationGroup affiliationgroup = 75;
+    Individual individual = 76;
+    Organization organization = 77;
+    UncategorizedParty uncategorizedparty = 78;
+  }
+}
+message ContactPointSocial {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  int32 followersCount = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string profilePictureURL = 8;
+  SocialFanStatus socialFanStatusId = 9;
+  string socialHandleId = 10;
+  string socialHandleName = 11;
+  SocialNetworkProvider socialNetworkProviderId = 12;
+  string systemModstamp = 13;
+}
+message AccountRole {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string implementorType = 4;
+  string lastModifiedDate = 5;
+  string systemModstamp = 6;
+}
+message AgeRange {
+  string createdDate = 1;
+  string description = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  int32 fromAgeNumber = 5;
+  string id = 6;
+  string implementerTypeName = 7;
+  string lastModifiedDate = 8;
+  string name = 9;
+  string systemModstamp = 10;
+  int32 toAgeNumber = 11;
+}
+message PersonalAccountOwner {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string firstName = 4;
+  string implementorType = 5;
+  Individual individualId = 6;
+  string lastModifiedDate = 7;
+  string lastName = 8;
+  string middleName = 9;
+  ContactPointAddress otherMailingAddress = 10;
+  string personName = 11;
+  PersonalAccount personalAccountId = 12;
+  ContactPointPhone primaryBusinessPhoneNumber = 13;
+  ContactPointPhone primaryFaxPhoneNumber = 14;
+  ContactPointPhone primaryHomePhone = 15;
+  ContactPointAddress primaryMailingAddress = 16;
+  ContactPointPhone primaryMobilePhoneNumber = 17;
+  string systemModstamp = 18;
+}
+message PartyRole {
+  repeated Lead Leads = 1;
+  string createdDate = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  Party partyId = 8;
+  PartyRole partyRoleId = 9;
+  string systemModstamp = 10;
+}
+message Ethnicity {
+  string createdDate = 1;
+  string ethnicityName = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string systemModstamp = 8;
+}
+message Religion {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string religionName = 7;
+  string systemModstamp = 8;
+}
+message AttributeValue {
+  repeated AttributeValueTranslation AttributeValueTranslations = 1;
+  string createdDate = 2;
+  Image defaultImageId = 3;
+  string externalRecordId = 4;
+  string externalSourceId = 5;
+  string id = 6;
+  string implementorType = 7;
+  string lastModifiedDate = 8;
+  string systemModstamp = 9;
+}
+message PartyRelationshipRole {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string partyRelationshipRoleName = 7;
+  string systemModstamp = 8;
+}
+message PaymentScheduleItem {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string id = 3;
+  string implementorType = 4;
+  string lastModifiedDate = 5;
+  Payment paymentId = 6;
+  string paymentScheduleStatus = 7;
+  string systemModstamp = 8;
+}
+message PaymentInvoiceApplicationType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string systemModstamp = 7;
+}
+message ProductAttributeSet {
+  AttributeSet attributeSetId = 1;
+  string createdDate = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  Product productId = 8;
+  string systemModstamp = 9;
+}
+message InventoryProductCampaign {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string id = 3;
+  string implementorType = 4;
+  string lastModifiedDate = 5;
+  string name = 6;
+  string systemModstamp = 7;
+}
+message BusinessAccount {
+  repeated AffiliateGroup AffiliateGroups = 1;
+  repeated Household Households = 2;
+  AccountBusinessType accountBusinessTypeId = 3;
+  string accountNumber = 4;
+  bool assignTerritoryFlag = 5;
+  bool autoPayEnabledFlag = 6;
+  int32 autoPaymentAmount = 7;
+  Currency autoPaymentAmountCurrency = 8;
+  PaymentMethod autoPaymentMethodId = 9;
+  int32 balanceAmount = 10;
+  Currency balanceAmountCurrency = 11;
+  int32 balanceAmountLimit = 12;
+  Currency balanceAmountLimitCurrency = 13;
+  Currency balanceUnitOfMeasureCurrencyId = 14;
+  AccountBalanceUnitOfMeasure balanceUnitOfMeasureId = 15;
+  ContactPointAddress billContactAddressId = 16;
+  BillDeliveryMethod billDeliveryMethodId = 17;
+  ContactPointLocation contactPointLocation = 18;
+  string createdDate = 19;
+  FreightTerms defaultFreightTermsId = 20;
+  string description = 21;
+  string externalRecordId = 22;
+  string externalSourceId = 23;
+  ContactPointPhone faxPhoneId = 24;
+  AccountHoldStatusReason holdStatusReasonId = 25;
+  string id = 26;
+  string implementorType = 27;
+  string lastActivityDate = 28;
+  string lastModifiedDate = 29;
+  string name = 30;
+  int32 ninetyDayBalanceAmount = 31;
+  Currency ninetyDayBalanceAmountCurrency = 32;
+  OrderDeliveryMethod orderDeliveryMethodId = 33;
+  Account parentAccountId = 34;
+  Party partyId = 35;
+  PartyRole partyRoleId = 36;
+  ContactPoint primarySalesContactPointId = 37;
+  string sLAExpirationDate = 38;
+  SLAType sLATypeId = 39;
+  ContactPointPhone salesPhoneId = 40;
+  ContactPointAddress shippingAddressId = 41;
+  ContactPointEmail shippingEmailId = 42;
+  ContactPointPhone shippingPhoneid = 43;
+  int32 sixtyDayBalanceAmount = 44;
+  Currency sixtyDayBalanceAmountCurrency = 45;
+  string systemModstamp = 46;
+  int32 thirtyDayBalanceAmount = 47;
+  Currency thirtyDayBalanceAmountCurrency = 48;
+  bool useAsBillingAccount = 49;
+  bool useAsSalesAccount = 50;
+  bool useAsServiceAccount = 51;
+  bool useAsShippingAccount = 52;
+}
+message PaymentMethodStatus {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string paymentMethodStatusName = 7;
+  string systemModstamp = 8;
+}
+message NAICSCode {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string nAICSCodeName = 7;
+  string systemModstamp = 8;
+}
+message MaritalStatus {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string maritalStatusName = 7;
+  string systemModstamp = 8;
+}
+message PaymentCard {
+  string billToCity = 1;
+  string billToFirstName = 2;
+  string billToLastName = 3;
+  string billToStreet = 4;
+  string billToStreet2 = 5;
+  string cardHolderName = 6;
+  string cardToken = 7;
+  string companyName = 8;
+  string createdDate = 9;
+  bool creditCardExpired = 10;
+  string derivedCardTypeCode = 11;
+  string expirationMonth = 12;
+  string expirationYear = 13;
+  string externalRecordId = 14;
+  string externalSourceId = 15;
+  string id = 16;
+  string implementorType = 17;
+  string issueNumber = 18;
+  string lastModifiedDate = 19;
+  string maskedNumber = 20;
+  string name = 21;
+  string numberLastDigits = 22;
+  PaymentCardType paymentCardTypeId = 23;
+  string systemModstamp = 24;
+}
+message PaymentApplication {
+  float appliedAmount = 1;
+  string appliedDate = 2;
+  string commentText = 3;
+  string createdDate = 4;
+  string effectiveDate = 5;
+  string externalCreatedDate = 6;
+  string externalRecordId = 7;
+  string externalSourceId = 8;
+  bool hasBeenUnapplied = 9;
+  string id = 10;
+  string implementorType = 11;
+  string lastModifiedDate = 12;
+  string name = 13;
+  float paymentBalanceAmount = 17;
+  Payment paymentId = 18;
+  string systemModstamp = 19;
+  string unappliedDate = 20;
+  oneof paymentApplicationTypeId {
+    PaymentCreditMemoApplication paymentcreditmemoapplication = 15;
+    PaymentInvoiceApplication paymentinvoiceapplication = 16;
+  }
+}
+message PaymentGateway {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string paymentGatewayCommentText = 8;
+  PaymentGatewayProvider paymentGatewayProviderId = 9;
+  PaymentGatewayStatus paymentGatewayStatusId = 10;
+  SystemCredential systemCredentialId = 11;
+  string systemModstamp = 12;
+}
+message PartyBoardCertification {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string systemModstamp = 7;
+}
+message PaymentGatewayPaymentLog {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  Payment paymentId = 8;
+  string systemModstamp = 9;
+}
+message Supplier {
+  string activeFromDate = 1;
+  string activeToDate = 2;
+  int32 competitiveCostAvoidanceRank = 3;
+  int32 competitiveMarketingRank = 4;
+  int32 competitiveProductPriceRank = 5;
+  int32 competitiveWarrantyRank = 6;
+  float competitiveWeightPercent = 7;
+  int32 competitiveWeightScore = 8;
+  int32 contractBudgetCostRate = 9;
+  int32 contractDeliveryCorrectnessRate = 10;
+  float contractInvoiceAccuracyRate = 11;
+  int32 contractOnTimeDeliveryRate = 12;
+  int32 contractProductQualityRate = 13;
+  int32 contractProductReturnRate = 14;
+  int32 contractSLAIssueRate = 15;
+  int32 contractSourcingCycleDays = 16;
+  float contractWeightPercent = 17;
+  int32 contractWeightScore = 18;
+  string createdDate = 19;
+  string externalRecordId = 20;
+  string externalSourceId = 21;
+  string id = 22;
+  string implementorType = 23;
+  bool isCarrier = 24;
+  string lastModifiedDate = 25;
+  Party partyId = 26;
+  int32 satisfactionCustomerServiceRank = 27;
+  int32 satisfactionEthicsRank = 28;
+  int32 satisfactionTechnicalSupportRank = 29;
+  float satisfactionWeightPercent = 30;
+  int32 satisfactionWeightScore = 31;
+  int32 supplierScore = 32;
+  int32 supplierSpend = 33;
+  SupplierType supplierType = 34;
+  string systemModstamp = 35;
+}
+message GatewayProviderPaymentMethodType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string id = 3;
+  string implementorType = 4;
+  string lastModifiedDate = 5;
+  string name = 6;
+  PaymentGatewayProvider paymentGatewayProviderId = 7;
+  string systemModstamp = 20;
+  oneof paymentMethodTypeId {
+    AlternatePayment alternatepayment = 9;
+    BankTransferTender banktransfertender = 10;
+    CashTender cashtender = 11;
+    CheckTender checktender = 12;
+    Coupon coupon = 13;
+    CreditTender credittender = 14;
+    DigitalWallet digitalwallet = 15;
+    PaymentCard paymentcard = 16;
+    PrepaidCard prepaidcard = 17;
+    TradeInTender tradeintender = 18;
+    Voucher voucher = 19;
+  }
+}
+message ProductCategoryTranslation {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  ProductCategory productCategoryId = 7;
+  string systemModstamp = 8;
+  string translatedName = 9;
+}
+message PaymentInvoiceApplication {
+  repeated PaymentInvoiceAllocation PaymentInvoiceAllocations = 1;
+  string createdDate = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  float invoiceBalanceAmount = 7;
+  string lastModifiedDate = 8;
+  string paymentInvoiceApplicationName = 9;
+  PaymentInvoiceApplicationType paymentInvoiceApplicationTypeId = 10;
+  string systemModstamp = 11;
+}
+message ProductCleanupProcess {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message ProductAssetConversionAction {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string id = 3;
+  string implementorType = 4;
+  string lastModifiedDate = 5;
+  string name = 6;
+  string systemModstamp = 7;
+}
+message ContactPointLocation {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string systemModstamp = 7;
+}
+message PartyWebAddress {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  Party partyId = 8;
+  string systemModstamp = 9;
+  string webSiteURL = 10;
+}
+message ProductServiceCampaign {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string id = 3;
+  string implementorType = 4;
+  string lastModifiedDate = 5;
+  Product productId = 6;
+  string systemModstamp = 7;
+}
+message ContactAccountRelationship {
+  repeated ContactAccountRelationshipRole ContactAccountRelationshipRoles = 1;
+  Account accountId = 2;
+  Contact contactId = 3;
+  string createdDate = 4;
+  string externalRecordId = 5;
+  string externalSourceId = 6;
+  string implementorType = 7;
+  string lastModifiedDate = 8;
+  string systemModstamp = 9;
+}
+message DisabilityType {
+  string createdDate = 1;
+  string disabilityTypeName = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string systemModstamp = 8;
+}
+message Hobby {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string hobbyName = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string systemModstamp = 8;
+}
+message PaymentStatus {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message ProductImage {
+  repeated ProductImageTranslation ProductImageTranslations = 1;
+  string createdDate = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  ImageGroup imageGroupId = 6;
+  Image imageId = 7;
+  string imageViewType = 8;
+  string implementorType = 9;
+  bool isDefaultImage = 10;
+  string lastModifiedDate = 11;
+  Product productId = 12;
+  string systemModstamp = 13;
+}
+message SalesOrderPriceAdjustment {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  SalesOrder salesOrderId = 7;
+  string systemModstamp = 8;
+  float totalAdjustmentTaxAmount = 9;
+}
+message EmailFrequency {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message BankAccountType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string systemModstamp = 7;
+}
+message Coupon {
+  string couponCode = 1;
+  CouponDefinition couponDefinitionId = 2;
+  CouponStatus couponStatusId = 3;
+  string createdDate = 4;
+  Party customerId = 5;
+  int32 discountAmount = 6;
+  int32 discountPercentage = 7;
+  string externalRecordId = 8;
+  string externalSourceId = 9;
+  string id = 10;
+  string implementorType = 11;
+  bool isReturnCoupon = 12;
+  bool isValid = 13;
+  string lastModifiedDate = 14;
+  string primaryScanCodeLabel = 15;
+  string returnCouponReason = 16;
+  string scanCode = 17;
+  string secondaryScanCodeLabel = 18;
+  string systemModstamp = 19;
+}
+message SalesOrderProductNote {
+  string createdDate = 1;
+  string description = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string noteText = 8;
+  SalesOrderProduct salesOrderProduct = 9;
+  string systemModstamp = 10;
+}
+message AccountRelationshipRole {
+  string createdDate = 1;
+  string description = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message SalesChannel {
+  string createdDate = 1;
+  string description = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string name = 8;
+  string salesChannelNumber = 9;
+  SalesChannelType salesChannelTypeId = 10;
+  string systemModstamp = 11;
+}
+message PersonTraining {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  Individual individualId = 6;
+  string lastModifiedDate = 7;
+  string name = 8;
+  PersonTraining personTrainingId = 9;
+  string systemModstamp = 10;
+  int32 trainingPointTotalNumber = 11;
+  string trainingTierNm = 12;
+}
+message ShippingMethod {
+  string createdDate = 1;
+  string description = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string name = 8;
+  Product productId = 9;
+  string systemModstamp = 10;
+}
+message SystemCredential {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message SalesOrderProduct {
+  repeated SalesOrderProductAttributeValue SalesOrderProductAttributeValues = 1;
+  repeated SalesOrderProductIdentification SalesOrderProductIdentifications = 2;
+  repeated SalesOrderProductNote SalesOrderProductNotes = 3;
+  repeated SalesOrderProductPriceAdjustment SalesOrderProductPriceAdjustments = 4;
+  repeated SalesOrderProductRelatedProduct SalesOrderProductRelatedProducts = 5;
+  repeated SalesOrderProductTax SalesOrderProductTaxes = 6;
+  float adjustedDeliveryTaxAmount = 7;
+  int32 allocatedQuantity = 8;
+  int32 availableQuantity = 9;
+  string commentText = 10;
+  string createdDate = 11;
+  float deliveryTaxAmount = 12;
+  string description = 13;
+  Currency discountAmountCurrency = 14;
+  string externalRecordId = 15;
+  string externalSourceId = 16;
+  string giftOrderMessageText = 17;
+  string giftRecipientTelephoneNumber = 18;
+  Currency handlingCostAmountCurrency = 19;
+  string id = 20;
+  string implementorType = 21;
+  bool isAutomaticallyRenewed = 22;
+  bool isBonusProduct = 23;
+  bool isBundleRoot = 24;
+  bool isGift = 25;
+  string lastModifiedDate = 26;
+  float lineAdjustmentSubTotalAmount = 27;
+  float listPriceAmount = 28;
+  Currency listPriceAmountCurrency = 29;
+  QuantityUOM listPriceQuantityUOMId = 30;
+  ProductValidityTimePeriodUOM listPriceTermUOMId = 31;
+  float orderAdjustmentSubTotalAmount = 32;
+  float orderManualAdjustmentSubTotalAmount = 33;
+  string orderProductNumber = 34;
+  int32 orderedQuantity = 35;
+  SalesOrderProduct originalOrderProductId = 36;
+  Product productId = 37;
+  string promisedDate = 38;
+  string provisioningDate = 39;
+  int32 quantityFulfilled = 40;
+  QuantityUOM quantityOrderedUOMId = 41;
+  float recurringPriceAmount = 42;
+  string requestedEndDate = 43;
+  string requestedStartDate = 44;
+  SalesOrderDeliveryGroup salesOrderDeliveryGroupId = 45;
+  SalesOrder salesOrderId = 46;
+  float salesOrderProductAdjustedTaxAmount = 47;
+  SalesOrderProductReason salesOrderProductReasonId = 48;
+  SalesOrderProductStatus salesOrderProductStatusId = 49;
+  int32 segmentIndexId = 50;
+  int32 segmentIndexNumber = 51;
+  Account sellerAccountId = 52;
+  Currency shippingCostAmountCurrency = 53;
+  Currency shippingTaxAmountCurrency = 54;
+  int32 subscriptionRenewalMonthQuantity = 55;
+  int32 subscriptionTermQuantity = 56;
+  ProductValidityTimePeriodUOM subscriptionTermUnitId = 57;
+  string systemModstamp = 58;
+  float totalAdjustmentAmount = 59;
+  float totalAdjustmentTaxAmount = 60;
+  float totalDistributedAdjustmentAmount = 61;
+  float totalDistributedAdjustmentTaxAmount = 62;
+  float totalDistributedTaxAmount = 63;
+  float totalLineAdjustmentAmount = 64;
+  float totalLineAmount = 65;
+  float totalListPriceAmount = 66;
+  float totalManualAdjustmentAmount = 67;
+  float totalPriceAmount = 68;
+  float totalProductTaxAmount = 69;
+  float totalRecurringPriceAmount = 70;
+  float totalTaxAmount = 71;
+  float totalUnitPriceAmount = 72;
+  float unitPriceAmount = 73;
+  Currency unitPriceAmountCurrency = 74;
+  Currency unitTaxAmountCurrency = 75;
+}
+message Party {
+  repeated Competitor Competitors = 1;
+  repeated ContactPoint ContactPoints = 2;
+  repeated Customer Customers = 3;
+  repeated OrganizationMilestone OrganizationMilestones = 4;
+  repeated PartyAdditionalName PartyAdditionalNames = 5;
+  repeated PartyIdentification PartyIdentifications = 6;
+  repeated PartyRole PartyRoles = 7;
+  repeated PartyWebAddress PartyWebAddresses = 8;
+  repeated Seller Sellers = 9;
+  repeated Supplier Suppliers = 10;
+  repeated TaxExemptionCertificate TaxExemptionCertificates = 11;
+  string createdDate = 12;
+  string externalRecordId = 13;
+  string externalSourceId = 14;
+  GlobalParty globalPartyId = 15;
+  string id = 16;
+  string implementorType = 17;
+  string lastModifiedDate = 18;
+  PartyNoMergeReason noMergeReasonId = 19;
+  Party partyId = 20;
+  Account primaryAccountId = 26;
+  string systemModstamp = 27;
+  oneof partyTypeId {
+    AffiliationGroup affiliationgroup = 22;
+    Individual individual = 23;
+    Organization organization = 24;
+    UncategorizedParty uncategorizedparty = 25;
+  }
+}
+message SalesModel {
+  repeated ProductSalesModel ProductSalesModels = 1;
+  string createdDate = 2;
+  string description = 3;
+  string externalRecordId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string name = 8;
+  string systemModstamp = 9;
+}
+message PaymentGatewayAuthReversalLog {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  PaymentAuthorizationReversal paymentAuthorizationReversalId = 8;
+  string systemModstamp = 9;
+}
+message PrepaidCardType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string systemModstamp = 7;
+}
+message AttributeTranslation {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string systemModstamp = 7;
+  string translatedName = 8;
+}
+message KeywordSearchSortingRule {
+  string createdDate = 1;
+  string id = 2;
+  string keywordSearchSortingRuleText = 3;
+  string systemModstamp = 4;
+}
+message ContactAccountRelationshipRole {
+  ContactAccountRelationship contactAccountRelationshipId = 1;
+  ContactRole contactRoleId = 2;
+  string createdDate = 3;
+  string externalRecordId = 4;
+  string externalSourceId = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string systemModstamp = 8;
+}
+message Customer {
+  repeated CustomerStatusHistory CustomerStatusHistories = 1;
+  int32 churnScore = 2;
+  string createdDate = 3;
+  string customerNumber = 4;
+  int32 customerSatisfactionScore = 5;
+  CustomerStatus customerStatusId = 6;
+  string externalRecordId = 7;
+  string externalSourceId = 8;
+  string id = 9;
+  string implementorType = 10;
+  int32 last12MonthsNewRevenueAmount = 11;
+  Currency last12MonthsNewRevenueAmountCurrency = 12;
+  int32 last12MonthsSupportCallCount = 13;
+  int32 last24MonthsNewRevenueAmount = 14;
+  Currency last24MonthsNewRevenueAmountCurrency = 15;
+  string lastModifiedDate = 16;
+  float marketingEmailResponseRate = 17;
+  int32 netPromoterScore = 18;
+  string originatingCustomerSource = 19;
+  Party partyId = 20;
+  ProspectRating prospectRatingId = 21;
+  string systemModstamp = 22;
+  int32 totalBookingsAmount = 23;
+  Currency totalBookingsAmountCurrency = 24;
+  int32 totalContractedAmount = 25;
+  Currency totalContractedAmountCurrency = 26;
+  float totalLifeTimeValue = 27;
+  int32 totalProfitContributionAmount = 28;
+  Currency totalProfitContributionAmountCurrency = 29;
+}
+message ProductSortingRuleType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message AttributeSetAttribute {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string systemModstamp = 7;
+}
+message UncategorizedPartyCreationReason {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string systemModstamp = 7;
+  string uncategorizedPartyCreationReasonName = 8;
+}
+message CreditTender {
+  Account accountId = 1;
+  string createdDate = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string systemModstamp = 8;
+}
+message PersonalAccount {
+  repeated PersonalAccountOwner PersonalAccountOwners = 1;
+  AccountBusinessType accountBusinessTypeId = 2;
+  string accountNumber = 3;
+  bool assignTerritoryFlag = 4;
+  bool autoPayEnabledFlag = 5;
+  int32 autoPaymentAmount = 6;
+  Currency autoPaymentAmountCurrency = 7;
+  PaymentMethod autoPaymentMethodId = 8;
+  int32 balanceAmount = 9;
+  Currency balanceAmountCurrency = 10;
+  int32 balanceAmountLimit = 11;
+  Currency balanceAmountLimitCurrency = 12;
+  Currency balanceUnitOfMeasureCurrencyId = 13;
+  AccountBalanceUnitOfMeasure balanceUnitOfMeasureId = 14;
+  ContactPointAddress billContactAddressId = 15;
+  BillDeliveryMethod billDeliveryMethodId = 16;
+  ContactPointLocation contactPointLocation = 17;
+  string createdDate = 18;
+  FreightTerms defaultFreightTermsId = 19;
+  string description = 20;
+  string externalRecordId = 21;
+  string externalSourceId = 22;
+  ContactPointPhone faxPhoneId = 23;
+  AccountHoldStatusReason holdStatusReasonId = 24;
+  string id = 25;
+  string implementorType = 26;
+  string lastActivityDate = 27;
+  string lastModifiedDate = 28;
+  string name = 29;
+  int32 ninetyDayBalanceAmount = 30;
+  Currency ninetyDayBalanceAmountCurrency = 31;
+  OrderDeliveryMethod orderDeliveryMethodId = 32;
+  Account parentAccountId = 33;
+  Party partyId = 34;
+  PartyRole partyRoleId = 35;
+  ContactPoint primarySalesContactPointId = 36;
+  string sLAExpirationDate = 37;
+  SLAType sLATypeId = 38;
+  ContactPointPhone salesPhoneId = 39;
+  ContactPointAddress shippingAddressId = 40;
+  ContactPointEmail shippingEmailId = 41;
+  ContactPointPhone shippingPhoneid = 42;
+  int32 sixtyDayBalanceAmount = 43;
+  Currency sixtyDayBalanceAmountCurrency = 44;
+  string systemModstamp = 45;
+  int32 thirtyDayBalanceAmount = 46;
+  Currency thirtyDayBalanceAmountCurrency = 47;
+  bool useAsBillingAccount = 48;
+  bool useAsSalesAccount = 49;
+  bool useAsServiceAccount = 50;
+  bool useAsShippingAccount = 51;
+}
+message PaymentApplicationLevel {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message PersonLifeEventType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string personLifeEventTypeName = 7;
+  string systemModstamp = 8;
+}
+message ServiceRelatedProduct {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string systemModstamp = 7;
+}
+message PrimaryPhoneType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message PaymentScheduleStatus {
+  string commentsText = 1;
+  string createdDate = 2;
+  Currency currencyId = 3;
+  int32 declinedPaymentCount = 4;
+  string externalRecordId = 5;
+  string id = 6;
+  string implementorType = 7;
+  string lastModifiedDate = 8;
+  string name = 9;
+  Account paymentAccountId = 10;
+  PaymentGatewayPaymentLog paymentGatewayPaymentLogId = 11;
+  Payment paymentId = 12;
+  PaymentMethod paymentMethodId = 13;
+  string paymentProcessingMessageText = 14;
+  PaymentSchedule paymentScheduleId = 15;
+  PaymentScheduleItem paymentScheduleItemId = 16;
+  string paymentTriggerName = 17;
+  float processedAmount = 18;
+  float requestedAmount = 19;
+  int32 retryCount = 20;
+  int32 retryIntervalInDaysNumber = 21;
+  string retryIntervalTime = 22;
+  string systemModstamp = 23;
+  string targetPaymentDate = 24;
+}
+message PaymentPolicyStatus {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message ProductEnvironmentRequirement {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message QuantityUOM {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message RefundCreditMemoAllocation {
+  string createdDate = 1;
+  CreditMemo creditMemoId = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string name = 8;
+  string systemModstamp = 9;
+}
+message OrderReason {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string systemModstamp = 7;
+}
+message CreditTenderType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string systemModstamp = 7;
+}
+message SalesOrderProductStatus {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message ShipmentDocument {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  Shipment shipmentId = 7;
+  string systemModstamp = 8;
+}
+message MeasurementSystem {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message PriceAdjustmentGroup {
+  float adjustmentAmount = 1;
+  Coupon couponId = 2;
+  string createdDate = 3;
+  string description = 4;
+  string externalRecordId = 5;
+  string externalSourceId = 6;
+  string id = 7;
+  string implementorType = 8;
+  bool isManuallyApplied = 9;
+  string lastModifiedDate = 10;
+  string name = 11;
+  PriceAdjustmentGroup originalPriceAdjustmentGroupId = 12;
+  PriceAdjustmentMethod priceAdjustmentMethodId = 13;
+  string reasonText = 14;
+  SalesOrderPriceAdjustmentType salesOrderPriceAdjustmentTypeID = 15;
+  string systemModstamp = 16;
+}
+message ProductAdverseEffect {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string implementorType = 4;
+  string lastModifiedDate = 5;
+  string systemModstamp = 6;
+}
+message CheckTender {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string systemModstamp = 7;
+}
+message SalesOrderProductGroupAssignment {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  SalesOrderProductGroup salesOrderProductGroupId = 8;
+  SalesOrderProduct salesOrderProductId = 9;
+  string systemModstamp = 10;
+}
+message PrivateContact {
+  Account accountId = 1;
+  string createdDate = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string firstName = 5;
+  string implementorType = 6;
+  Individual individualId = 7;
+  string lastModifiedDate = 8;
+  string lastName = 9;
+  string middleName = 10;
+  ContactPointAddress otherMailingAddress = 11;
+  string personName = 12;
+  ContactPointPhone primaryBusinessPhoneNumber = 13;
+  ContactPointPhone primaryFaxPhoneNumber = 14;
+  ContactPointPhone primaryHomePhone = 15;
+  ContactPointAddress primaryMailingAddress = 16;
+  ContactPointPhone primaryMobilePhoneNumber = 17;
+  string systemModstamp = 18;
+}
+message SalesOrderSystemStatus {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string salesOrderSystemStatusCode = 8;
+  string systemModstamp = 9;
+}
+message BundleProduct {
+  bool allowCustomerReturn = 1;
+  bool allowPartialRefund = 2;
+  BundleType bundleTypeId = 3;
+  bool bundledProductsDecidedAtUse = 4;
+  bool bundledProductsDecidesAvailability = 5;
+  bool bundledProductsSoldTogether = 6;
+  bool bundledProductsSubstitutional = 7;
+  bool canUseQuantitySchedule = 8;
+  bool canUseRevenueSchedule = 9;
+  string createdDate = 10;
+  string description = 11;
+  DisposalType disposalTypeId = 12;
+  int32 expectedWasteCount = 13;
+  string externalRecordId = 14;
+  string externalSourceId = 15;
+  string externalSourceRecordId = 16;
+  string id = 17;
+  string implementorType = 18;
+  bool isAutoProvisionable = 19;
+  bool isBackOrdered = 20;
+  bool isCouponRedemptionAllowed = 21;
+  bool isCustomerDiscountAllowed = 22;
+  bool isDynamicBundle = 23;
+  bool isFoodstampPaymentAllowed = 24;
+  bool isInstallable = 25;
+  bool isIntellectualPropertyProtected = 26;
+  bool isManualPriceEntryRequired = 27;
+  bool isMultipleCouponsAllowed = 28;
+  bool isPartnerDiscountAllowed = 29;
+  bool isPreOrderable = 30;
+  bool isQualityVerificationRequired = 31;
+  bool isQuantityEntryRequired = 32;
+  bool isRainCheckAllowed = 33;
+  bool isReturnable = 34;
+  bool isSellable = 35;
+  bool isSellableIndependently = 36;
+  bool isSellableWithoutPrice = 37;
+  bool isSerialized = 38;
+  bool isWeightEntryRequired = 39;
+  bool isWorkerDiscountAllowed = 40;
+  string lastModifiedDate = 41;
+  string lotIdentifier = 42;
+  int32 mSRPAmount = 43;
+  Currency mSRPAmountCurrency = 44;
+  string manufacturerName = 45;
+  Product masterProductId = 46;
+  int32 maximumOrderQuantityCount = 47;
+  int32 minimumAdvertisementAmount = 48;
+  Currency minimumAdvertisementAmountCurrency = 49;
+  int32 minimumAdvertisementAmountStartDate = 50;
+  int32 minimumOrderQuantityCount = 51;
+  string modelNumber = 52;
+  int32 modelYear = 53;
+  string name = 54;
+  PriceChargeType priceChargeTypeId = 55;
+  ProductCategory primaryProductCategoryId = 56;
+  SalesChannel primarySalesChannelId = 57;
+  ProductAssetConversionAction productAssetCvsnActionId = 58;
+  string productSKU = 59;
+  ProductStatus productStatusId = 60;
+  int32 quantityCount = 66;
+  int32 quantityInstallmentCount = 67;
+  QuantityInstallmentPeriod quantityInstallmentPeriodId = 68;
+  QuantityScheduleType quantityScheduleTypeId = 69;
+  QuantityUOM quantityUnitOfMeasureId = 70;
+  int32 requiredDepositAmount = 71;
+  Currency requiredDepositAmountCurrency = 72;
+  int32 requiredDepositPercentage = 73;
+  bool requiresInvididualUnitPricing = 74;
+  int32 revenueInstallmentCount = 75;
+  RevenueInstallmentPeriod revenueInstallmentPeriodId = 76;
+  RevenueScheduleType revenueScheduleTypeId = 77;
+  int32 rewardProgramPointsCount = 78;
+  int32 standardWarrantyLengthMonth = 79;
+  int32 stockLedgerValuationAmount = 80;
+  Currency stockLedgerValuationAmountCurrency = 81;
+  string systemModstamp = 82;
+  int32 tareWeight = 83;
+  int32 validForPeriodCount = 84;
+  ProductValidityTimePeriodUOM validForPeriodUOMId = 85;
+  string validFromDate = 86;
+  string validToDate = 87;
+  string versionNumber = 88;
+  WeightUnitOfMeasure weightUOMId = 89;
+  oneof productType {
+    BundleProduct bundleproduct = 62;
+    GoodsProduct goodsproduct = 63;
+    MasterProduct masterproduct = 64;
+    ServiceProduct serviceproduct = 65;
+  }
+}
+message IncomeRange {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string incomeRangeName = 6;
+  string lastModifiedDate = 7;
+  string systemModstamp = 8;
+}
+message SalesChannelType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message SalesOrderConfirmationStatus {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message ServiceType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message SalesOrderProductIdentification {
+  ContactPointAddress contactPointAddressId = 1;
+  string createdDate = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string name = 8;
+  PartyIdentification partyIdentificationtId = 9;
+  SalesOrderProduct salesOrderProductId = 10;
+  string systemModstamp = 11;
+}
+message AccountTerritory {
+  string createdDate = 1;
+  string description = 2;
+  string endEffectiveDate = 3;
+  string externalRecordId = 4;
+  string externalSourceId = 5;
+  string firstEffectiveDate = 6;
+  string id = 7;
+  string implementorType = 8;
+  string lastModifiedDate = 9;
+  string systemModstamp = 10;
+}
+message PriceAdjustmentMethod {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message PartyAdditionalNameType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message Voucher {
+  string createdDate = 1;
+  float discountPercent = 2;
+  string effectiveDate = 3;
+  string expirationDate = 4;
+  string externalRecordId = 5;
+  string externalSourceId = 6;
+  float faceValueAmount = 7;
+  string id = 8;
+  string implementorType = 9;
+  string lastModifiedDate = 10;
+  string name = 11;
+  string notesText = 12;
+  string systemModstamp = 13;
+  string usedDate = 14;
+  string voucherCodeText = 15;
+  VoucherDefinition voucherDefinitionId = 16;
+  VoucherStatus voucherStatusId = 17;
+  VoucherType voucherTypeId = 18;
+}
+message CustomerStatusHistory {
+  string createdDate = 1;
+  Customer customerId = 2;
+  CustomerStatus customerStatusId = 3;
+  string endDateTIme = 4;
+  string externalRecordId = 5;
+  string externalSourceId = 6;
+  string id = 7;
+  string implementorType = 8;
+  string lastModifiedDate = 9;
+  string startDateTime = 10;
+  string systemModstamp = 11;
+}
+message PaymentGatewayInteractionType {
+  string createdDate = 1;
+  string description = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string name = 8;
+  string systemModstamp = 9;
+}
+message Account {
+  repeated AccountBrand AccountBrands = 1;
+  repeated AccountContact AccountContacts = 2;
+  repeated AccountRelationship AccountRelationships = 3;
+  repeated AccountServiceEntitlement AccountServiceEntitlements = 4;
+  repeated PaymentMethod PaymentMethods = 5;
+  AccountBusinessType accountBusinessTypeId = 6;
+  string accountNumber = 7;
+  bool assignTerritoryFlag = 8;
+  bool autoPayEnabledFlag = 9;
+  int32 autoPaymentAmount = 10;
+  Currency autoPaymentAmountCurrency = 11;
+  PaymentMethod autoPaymentMethodId = 12;
+  int32 balanceAmount = 13;
+  Currency balanceAmountCurrency = 14;
+  int32 balanceAmountLimit = 15;
+  Currency balanceAmountLimitCurrency = 16;
+  Currency balanceUnitOfMeasureCurrencyId = 17;
+  AccountBalanceUnitOfMeasure balanceUnitOfMeasureId = 18;
+  ContactPointAddress billContactAddressId = 19;
+  BillDeliveryMethod billDeliveryMethodId = 20;
+  ContactPointLocation contactPointLocation = 21;
+  string createdDate = 22;
+  FreightTerms defaultFreightTermsId = 23;
+  string description = 24;
+  string externalRecordId = 25;
+  string externalSourceId = 26;
+  ContactPointPhone faxPhoneId = 27;
+  AccountHoldStatusReason holdStatusReasonId = 28;
+  string id = 29;
+  string implementorType = 30;
+  string lastActivityDate = 31;
+  string lastModifiedDate = 32;
+  string name = 33;
+  int32 ninetyDayBalanceAmount = 34;
+  Currency ninetyDayBalanceAmountCurrency = 35;
+  OrderDeliveryMethod orderDeliveryMethodId = 36;
+  Account parentAccountId = 37;
+  Party partyId = 38;
+  PartyRole partyRoleId = 39;
+  ContactPoint primarySalesContactPointId = 40;
+  string sLAExpirationDate = 41;
+  SLAType sLATypeId = 42;
+  ContactPointPhone salesPhoneId = 43;
+  ContactPointAddress shippingAddressId = 44;
+  ContactPointEmail shippingEmailId = 45;
+  ContactPointPhone shippingPhoneid = 46;
+  int32 sixtyDayBalanceAmount = 47;
+  Currency sixtyDayBalanceAmountCurrency = 48;
+  string systemModstamp = 49;
+  int32 thirtyDayBalanceAmount = 50;
+  Currency thirtyDayBalanceAmountCurrency = 51;
+  bool useAsBillingAccount = 52;
+  bool useAsSalesAccount = 53;
+  bool useAsServiceAccount = 54;
+  bool useAsShippingAccount = 55;
+}
+message AssortmentProduct {
+  Assortment assortmentId = 1;
+  string createdDate = 2;
+  string externalRecordId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  Product productId = 7;
+  string systemModstamp = 8;
+}
+message PaymentTreatment {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  LegalEntity internalBusinessUnitLegalEntityId = 6;
+  string lastModifiedDate = 7;
+  PaymentPolicy paymentPolicyId = 8;
+  PaymentTreatmentMethod paymentTreatmentMethodId = 9;
+  string paymentTreatmentName = 10;
+  PaymentTreatmentStatus paymentTreatmentStatusId = 11;
+  string systemModstamp = 12;
+}
+message TaxType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message HousingType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message PaymentAuthorizationStatus {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message PartyAdditionalName {
+  string beginEffectiveDate = 1;
+  string createdDate = 2;
+  string endEffectiveDate = 3;
+  string externalRecordId = 4;
+  string externalSourceId = 5;
+  string firstName = 6;
+  string id = 7;
+  string implementorType = 8;
+  string individualFullName = 9;
+  string lastModifiedDate = 10;
+  string lastName = 11;
+  string middleName = 12;
+  string name = 13;
+  string organizationLegalName = 14;
+  string organizationName = 15;
+  PartyAdditionalNameType partyAdditionalNameTypeId = 16;
+  Party partyId = 17;
+  string secondLastName = 18;
+  string suffixName = 19;
+  string systemModstamp = 20;
+}
+message DigitalWalletType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string systemModstamp = 7;
+}
+message AccountServiceEntitlement {
+  Account accountId = 1;
+  string createdDate = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string systemModstamp = 8;
+}
+message PaymentGatewayResultCode {
+  string createdDate = 1;
+  string description = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string name = 8;
+  string systemModstamp = 9;
+}
+message SalesOrderProductRelationshipType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message PaymentTreatmentStatus {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message SalesOrderDeliveryStatus {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message PartyHierarchyMember {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string membershipEndDate = 7;
+  string membershipStartDate = 8;
+  string name = 9;
+  PartyHierarchy partyHierarchyId = 10;
+  Party partyId = 11;
+  string systemModstamp = 12;
+}
+message CouponUseType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message ProductStatus {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message ContactContactRelationship {
+  Contact contact1Id = 1;
+  Contact contact2Id = 2;
+  string createdDate = 3;
+  string externalRecordId = 4;
+  string externalSourceId = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string systemModstamp = 8;
+}
+message PersonName {
+  string beginEffectiveDate = 1;
+  string createdDate = 2;
+  string endEffectiveDate = 3;
+  string externalRecordId = 4;
+  string externalSourceId = 5;
+  string firstName = 6;
+  string fullName = 7;
+  string id = 8;
+  string implementorType = 9;
+  string lastModifiedDate = 10;
+  string lastName = 11;
+  string middleName = 12;
+  string secondLastName = 13;
+  string suffixName = 14;
+  string systemModstamp = 15;
+}
+message RefundAllocationType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message PersonLanguage {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  Individual individualId = 6;
+  string lastModifiedDate = 7;
+  LanguageProficiencyLevel spokenProficiencyLevelId = 8;
+  string systemModstamp = 9;
+  LanguageProficiencyLevel writtenProficiencyLevelId = 10;
+}
+message ProductAge {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message SalesOrderSegment {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message GlobalParty {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string systemModstamp = 7;
+}
+message DoNotProcessReason {
+  string createdDate = 1;
+  string doNotProcessReasonName = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string systemModstamp = 8;
+}
+message ProductCategoryAttributeSet {
+  AttributeSet attributeSetId = 1;
+  string createdDate = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  ProductCategory productCategoryId = 8;
+  string systemModstamp = 9;
+}
+message PartyNoMergeReason {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message CouponDefinition {
+  repeated Coupon Coupons = 1;
+  int32 couponCount = 2;
+  CouponUseType couponUseTypeId = 3;
+  string createdDate = 4;
+  string expirationDate = 5;
+  string externalRecordId = 6;
+  string externalSourceId = 7;
+  bool hasCaseSensitiveCode = 8;
+  string id = 9;
+  string implementorType = 10;
+  bool isCustomerSpecific = 11;
+  bool isProductSpecific = 12;
+  string lastModifiedDate = 13;
+  int32 maxRedmPerCodeCount = 14;
+  int32 maxRedmPerCustCount = 15;
+  int32 maxRedmPerTimePeriodCount = 16;
+  string name = 17;
+  Party partyId = 18;
+  Product productId = 19;
+  int32 redmTimePeriodCount = 20;
+  string systemModstamp = 21;
+  string validFromDateTime = 22;
+  string validToDateTime = 23;
+}
+message SalesOrderPriceAdjustmentType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message RefundAllocation {
+  float allocatedAmount = 1;
+  string appliedDate = 2;
+  string createdDate = 3;
+  string effectiveDate = 4;
+  string externalCreatedDate = 5;
+  string externalRecordId = 6;
+  string externalSourceId = 7;
+  bool hasBeenUnapplied = 8;
+  string id = 9;
+  string implementorType = 10;
+  string lastModifiedDate = 11;
+  string refundAllocationName = 12;
+  float refundBalanceAmount = 16;
+  RefundPayment refundPaymentId = 17;
+  RefundAllocation relatedRefundAllocationId = 18;
+  string systemModstamp = 19;
+  string unappliedDate = 20;
+  oneof refundAllocationTypeId {
+    RefundCreditMemoAllocation refundcreditmemoallocation = 14;
+    RefundPaymentAllocation refundpaymentallocation = 15;
+  }
+}
+message PaymentPolicyTreatmentSelection {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string systemModstamp = 7;
+}
+message ProductRole {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message PaymentGatewayProvider {
+  repeated GatewayProviderPaymentMethodType GatewayProviderPaymentMethodTypes = 1;
+  string apexAdapterClassName = 2;
+  string createdDate = 3;
+  string developerName = 4;
+  string externalRecordId = 5;
+  string externalSourceId = 6;
+  string id = 7;
+  string implementorType = 8;
+  string lastModifiedDate = 9;
+  string namespacePrefixText = 10;
+  string paymentGatewayProviderCommentText = 11;
+  string paymentGatewayProviderName = 12;
+  string systemModstamp = 13;
+}
+message MarketingRelatedProduct {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string systemModstamp = 7;
+}
+message WebSite {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message ProductSecurityRequirement {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message AccountHoldStatusReason {
+  string accountHoldStatusReasonName = 1;
+  string createdDate = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string systemModstamp = 8;
+}
+message AuthorizationProcessingMode {
+  repeated AlternatePayment AlternatePayments = 1;
+  string createdDate = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string name = 8;
+  string systemModstamp = 9;
+}
+message TaxExemptionCertificate {
+  string createdDate = 1;
+  string description = 2;
+  string exemptionBeginDate = 3;
+  string exemptionCertificateNumber = 4;
+  string exemptionEndDate = 5;
+  string externalRecordId = 6;
+  string externalSourceId = 7;
+  string id = 8;
+  string implementorType = 9;
+  string issuerName = 10;
+  string lastModifiedDate = 11;
+  Party partyId = 12;
+  string systemModstamp = 13;
+}
+message Color {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message ProductFabric {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message BillDeliveryMethod {
+  string billDeliveryMethodName = 1;
+  string createdDate = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string systemModstamp = 8;
+}
+message IndividualScore {
+  ContactPoint contactPointId = 1;
+  string createdDate = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  Individual individualId = 7;
+  string lastModifiedDate = 8;
+  string name = 9;
+  string systemModstamp = 10;
+}
+message ProductGender {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message ProductCatalog {
+  repeated ProductCatalogTranslation ProductCatalogTranslations = 1;
+  repeated ProductCategory ProductCategories = 2;
+  string activeFromDate = 3;
+  string activeToDate = 4;
+  string createdDate = 5;
+  string externalRecordId = 6;
+  string externalSourceId = 7;
+  string id = 8;
+  string implementorType = 9;
+  string lastModifiedDate = 10;
+  string name = 11;
+  string systemModstamp = 12;
+}
+message InternalBusinessUnitType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message CouponStatus {
+  string couponStatusName = 1;
+  string createdDate = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string systemModstamp = 8;
+}
+message VoucherExpirationType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message Seller {
+  string activeFromDate = 1;
+  string activeToDate = 2;
+  int32 averageConvertedLeadAmount = 3;
+  Currency averageConvertedLeadAmountCurrency = 4;
+  int32 communityParticipationCount = 5;
+  string createdDate = 6;
+  int32 creditRating = 7;
+  int32 customerSatisfactionScore = 8;
+  int32 demonstationsGivenCount = 9;
+  int32 documentationDownloadCount = 10;
+  float estimatedPartnerGrossMargin = 11;
+  int32 eventParticipationCount = 12;
+  string externalRecordId = 13;
+  string externalSourceId = 14;
+  string id = 15;
+  string implementorType = 16;
+  int32 inventoryValueAmount = 17;
+  Currency inventoryValueAmountCurrency = 18;
+  bool jointBusinessPlanExist = 19;
+  string lastModifiedDate = 20;
+  int32 leadGenerationCount = 21;
+  bool majorPostSaleSupportNeeded = 22;
+  int32 marketingDevelopmentAmount = 23;
+  Currency marketingDevelopmentAmountCurrency = 24;
+  int32 newCustomerAcquisitionCount = 25;
+  int32 opportunityInvolvementCount = 26;
+  float opportunityWinRate = 27;
+  Party partyId = 28;
+  float productReturnRate = 29;
+  int32 salesAmount = 30;
+  Currency salesAmountCurrency = 31;
+  int32 satisfactionScore = 32;
+  SellerTier sellerTierId = 33;
+  SellerType sellerTypeId = 34;
+  int32 successStoryCount = 35;
+  int32 systemLoginCount = 36;
+  string systemModstamp = 37;
+  int32 trainingCertificactionCount = 38;
+  int32 trainingParticipationCount = 39;
+  int32 trialParticipationCount = 40;
+}
+message ProductCategoryProduct {
+  string activeFromDateTime = 1;
+  string activeToDateTime = 2;
+  string createdDate = 3;
+  string externalRecordId = 4;
+  string externalSourceId = 5;
+  string id = 6;
+  string implementorType = 7;
+  string lastModifiedDate = 8;
+  ProductCategory productCategoryId = 9;
+  Product productId = 10;
+  string systemModstamp = 11;
+}
+message BankTransferTender {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message VoucherType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message ProductFeature {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string id = 3;
+  string implementorType = 4;
+  string lastModifiedDate = 5;
+  int32 maximumOptionCount = 6;
+  int32 minimumOptionCount = 7;
+  string name = 8;
+  ProductCategory productCategoryId = 9;
+  Product productId = 10;
+  string systemModstamp = 11;
+}
+message PartyAward {
+  string awardIssuerName = 1;
+  string createdDate = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string systemModstamp = 8;
+}
+message ProductServiceCampaignItem {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string id = 3;
+  string implementorType = 4;
+  string lastModifiedDate = 5;
+  string name = 6;
+  ProductServiceCampaign productServiceCampaignId = 7;
+  string systemModstamp = 8;
+}
+message AccountParticipantRole {
+  string createdDate = 1;
+  string description = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message Payment {
+  repeated PaymentApplication PaymentApplications = 1;
+  repeated PaymentGatewayPaymentLog PaymentGatewayPaymentLogs = 2;
+  Account accountId = 3;
+  Currency amountCurrency = 4;
+  AuthorizationProcessingMode authorizationProcessingModeId = 5;
+  float balanceAmount = 6;
+  string commentText = 7;
+  string createdDate = 8;
+  string customerEmailAddress = 9;
+  string customerPhoneNumber = 10;
+  string externalCreatedDate = 11;
+  string externalRecordId = 12;
+  string externalSourceId = 13;
+  string iPAddress = 14;
+  string id = 15;
+  string implementorType = 16;
+  string lastModifiedDate = 17;
+  string latestGatewayDate = 18;
+  string latestGatewayInternalReferenceNumber = 19;
+  InternalResultCode latestGatewayInternalResultId = 20;
+  string latestGatewayReferenceNumber = 21;
+  PaymentGatewayResultCode latestGatewayResultCodeId = 22;
+  string latestPaymentGatewayMessageText = 23;
+  LegalEntity legalEntityId = 24;
+  string macAddress = 25;
+  string name = 26;
+  float netAppliedAmount = 27;
+  float paymentAmount = 28;
+  string paymentCancellationDate = 29;
+  string paymentEffectiveDate = 30;
+  PaymentGateway paymentGatewayId = 31;
+  PaymentGroup paymentGroupId = 32;
+  PaymentMethod paymentMethodId = 33;
+  string paymentNumber = 34;
+  PaymentStatus paymentStatusId = 35;
+  PaymentTreatment paymentTreatmentId = 36;
+  SalesOrderPaymentSummary salesOrderPaymentSummaryId = 40;
+  string systemModstamp = 41;
+  float totalAppliedAmount = 42;
+  float totalUnappliedAmount = 43;
+  oneof paymentType {
+    CapturePayment capturepayment = 38;
+    RefundPayment refundpayment = 39;
+  }
+}
+message AlternatePayment {
+  AuthorizationProcessingMode authorizationProcessingModeId = 1;
+  string createdDate = 2;
+  string emailAddress = 3;
+  string externalRecordId = 4;
+  string externalSourceId = 5;
+  string id = 6;
+  string implementorType = 7;
+  string lastModifiedDate = 8;
+  string name = 9;
+  string paymentGatewayTokenText = 10;
+  string systemModstamp = 11;
+}
+message PopulationType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message SalesOrder {
+  repeated SalesOrderChangeLog SalesOrderChangeLogs = 1;
+  repeated SalesOrderDeliveryGroup SalesOrderDeliveryGroups = 2;
+  repeated SalesOrderPaymentSummary SalesOrderPaymentSummaries = 3;
+  repeated SalesOrderPriceAdjustment SalesOrderPriceAdjustments = 4;
+  repeated SalesOrderProduct SalesOrderProducts = 5;
+  float adjustedProductTaxAmount = 6;
+  float adjustedTotalProductAmount = 7;
+  Account billToAccountId = 8;
+  ContactPointAddress billToAddressId = 9;
+  Contact billToContactId = 10;
+  int32 billingDayOfTheMonth = 11;
+  ContactPointEmail billtoEmailId = 12;
+  ContactPointPhone billtoPhoneNumberId = 13;
+  bool canBillNow = 14;
+  string confirmationRecipientEmailText = 15;
+  string createdDate = 16;
+  Currency currencyCode = 17;
+  string description = 18;
+  string externalRecordId = 19;
+  string externalSourceId = 20;
+  string filedDate = 21;
+  float grandTotalAmount = 22;
+  string id = 23;
+  string implementorType = 24;
+  bool isAlerted = 25;
+  bool isAnonymous = 26;
+  bool isClosed = 27;
+  bool isContracted = 28;
+  bool isHistoricalOnly = 29;
+  bool isSuspended = 30;
+  bool isTaxExempt = 31;
+  string lastModifiedDate = 32;
+  string name = 33;
+  string orderEndDate = 34;
+  string orderNumber = 35;
+  string orderStartDate = 36;
+  Currency orderinsuranceAmountCurrency = 37;
+  SalesOrder originalOrderId = 38;
+  string priceCalculationStatusMessageText = 39;
+  string promiseDate = 40;
+  string purchaseOrderDate = 41;
+  string purchaseOrderNumber = 42;
+  float renewalUpliftRate = 43;
+  string requestedStartDate = 44;
+  SalesChannel salesChannelId = 45;
+  SalesOrderStatus salesOrderConfirmationStatusId = 46;
+  SalesOrderStatus salesOrderStatusId = 47;
+  SalesOrderSystemStatus salesOrderSystemStatusId = 48;
+  SalesOrderType salesOrderTypeId = 49;
+  Seller sellerId = 50;
+  ContactPointAddress shipToAddressId = 51;
+  Contact shipToContactId = 52;
+  ContactPointEmail shipToEmailId = 53;
+  Customer soldToCustomerId = 54;
+  string systemModstamp = 55;
+  string taxationPolicy = 56;
+  float totalAdjustedDeliveryTaxAmount = 57;
+  float totalAdjustmentAmount = 58;
+  float totalAdjustmentTaxAmount = 59;
+  Currency totalAmountCurrency = 60;
+  float totalBookingAmount = 61;
+  float totalCancelledBillingAmount = 62;
+  float totalDeliveryAmount = 63;
+  Currency totalDeliveryAmountCurrencyId = 64;
+  float totalDeliveryFeeAmount = 65;
+  Currency totalDeliveryFeeCurrencyId = 66;
+  float totalDeliveryTaxAmount = 67;
+  float totalPendingBillingAmount = 68;
+  float totalProductAmount = 69;
+  Currency totalProductAmountCurrencyId = 70;
+  float totalProductTaxAmount = 71;
+  Currency totalProductTaxAmountCurrencyId = 72;
+  float totalTaxAmount = 73;
+}
+message SellerTier {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message VoucherStatus {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message RevenueScheduleType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string systemModstamp = 7;
+}
+message ProductAttributeValue {
+  AttributeSet attributeSetId = 1;
+  AttributeValue attributeValueId = 2;
+  string createdDate = 3;
+  string customAttributeValue = 4;
+  string externalRecordId = 5;
+  string externalSourceId = 6;
+  string id = 7;
+  string implementorType = 8;
+  string lastModifiedDate = 9;
+  string name = 10;
+  Product productId = 11;
+  string systemModstamp = 12;
+}
+message ProductServiceCampaignItemType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string id = 3;
+  string implementorType = 4;
+  string lastModifiedDate = 5;
+  string name = 6;
+  string systemModstamp = 7;
+}
+message RefundPayment {
+  repeated RefundAllocation RefundAllocations = 1;
+  Account accountId = 2;
+  Currency amountCurrency = 3;
+  AuthorizationProcessingMode authorizationProcessingModeId = 4;
+  float balanceAmount = 5;
+  string commentText = 6;
+  string createdDate = 7;
+  string customerEmailAddress = 8;
+  string customerPhoneNumber = 9;
+  string externalCreatedDate = 10;
+  string externalRecordId = 11;
+  string externalSourceId = 12;
+  string iPAddress = 13;
+  string id = 14;
+  string implementorType = 15;
+  string lastModifiedDate = 16;
+  string latestGatewayDate = 17;
+  string latestGatewayInternalReferenceNumber = 18;
+  InternalResultCode latestGatewayInternalResultId = 19;
+  string latestGatewayReferenceNumber = 20;
+  PaymentGatewayResultCode latestGatewayResultCodeId = 21;
+  string latestPaymentGatewayMessageText = 22;
+  LegalEntity legalEntityId = 23;
+  string macAddress = 24;
+  string name = 25;
+  float netAppliedAmount = 26;
+  float paymentAmount = 27;
+  string paymentCancellationDate = 28;
+  string paymentEffectiveDate = 29;
+  PaymentGateway paymentGatewayId = 30;
+  PaymentGroup paymentGroupId = 31;
+  PaymentMethod paymentMethodId = 32;
+  string paymentNumber = 33;
+  PaymentStatus paymentStatusId = 34;
+  PaymentTreatment paymentTreatmentId = 35;
+  SalesOrderPaymentSummary salesOrderPaymentSummaryId = 39;
+  string systemModstamp = 40;
+  float totalAppliedAmount = 41;
+  float totalUnappliedAmount = 42;
+  oneof paymentType {
+    CapturePayment capturepayment = 37;
+    RefundPayment refundpayment = 38;
+  }
+}
+message SICCode {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string sICCodeName = 7;
+  string systemModstamp = 8;
+}
+message PaymentMethod {
+  Account accountID = 1;
+  string createdDate = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  Party partyId = 8;
+  PaymentMethodStatus paymentMethodStatus = 9;
+  string systemModstamp = 22;
+  oneof paymentMethodType {
+    AlternatePayment alternatepayment = 11;
+    BankTransferTender banktransfertender = 12;
+    CashTender cashtender = 13;
+    CheckTender checktender = 14;
+    Coupon coupon = 15;
+    CreditTender credittender = 16;
+    DigitalWallet digitalwallet = 17;
+    PaymentCard paymentcard = 18;
+    PrepaidCard prepaidcard = 19;
+    TradeInTender tradeintender = 20;
+    Voucher voucher = 21;
+  }
+}
+message OrderDeliveryMethod {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  Product productId = 8;
+  string systemModstamp = 9;
+}
+message SalesOrderProductReasonCategory {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message PartyTaxExemptionCertificate {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+  string taxExemptionCertificateNumber = 9;
+  string taxExemptionEndDate = 10;
+  string taxExemptionJurisdictionName = 11;
+  string taxExemptionStartDate = 12;
+}
+message ProductCatalogTranslation {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  ProductCatalog productCatalogId = 7;
+  string systemModstamp = 8;
+  string translatedName = 9;
+}
+message EmploymentStatus {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string systemModstamp = 7;
+}
+message ShipmentPackage {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  Shipment shipmentId = 7;
+  int32 shipmentProductCount = 8;
+  string shipmentProductDescription = 9;
+  string systemModstamp = 10;
+}
+message CreditMemo {
+  string createdDate = 1;
+  string creditMemoEffectiveDate = 2;
+  string creditMemoName = 3;
+  string externalRecordId = 4;
+  string externalSourceId = 5;
+  string id = 6;
+  string implementorType = 7;
+  string lastModifiedDate = 8;
+  string systemModstamp = 9;
+}
+message PartyRelationshipType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  bool isBidirectional = 6;
+  string lastModifiedDate = 7;
+  PartyRelationshipRole partyRoleId = 8;
+  PartyRelationshipRole relatedPartyRoleId = 9;
+  string systemModstamp = 10;
+}
+message PriceChargeType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string systemModstamp = 7;
+}
+message BrandGrade {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message PaymentType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message SalesOrderProductPriceAdjustment {
+  float adjustmentAmount = 1;
+  float adjustmentTaxAmount = 2;
+  string createdDate = 3;
+  string description = 4;
+  string externalRecordId = 5;
+  string externalSourceId = 6;
+  string id = 7;
+  string implementorType = 8;
+  string lastModifiedDate = 9;
+  SalesOrderPriceAdjustment salesOrderPriceAdjustmentId = 10;
+  SalesOrderProduct salesOrderProductId = 11;
+  float salesOrderProductPriceAdjustmentAmount = 12;
+  SalesOrderProductPriceAdjuType salesOrderProductPriceAdjustmentTypeId = 13;
+  string systemModstamp = 14;
+}
+message Occupation {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string occupationName = 7;
+  string systemModstamp = 8;
+}
+message BusinessBrand {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string implementorType = 4;
+  string lastModifiedDate = 5;
+  string systemModstamp = 6;
+}
+message AccountContactRoleType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message CustomerType {
+  string createdDate = 1;
+  string customerTypeName = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string systemModstamp = 8;
+}
+message PaymentGatewayInteractionStatus {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message ProspectRating {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string prospectRatingName = 7;
+  string systemModstamp = 8;
+}
+message ProductSalesModel {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string id = 3;
+  string implementorType = 4;
+  string lastModifiedDate = 5;
+  Product productId = 6;
+  SalesModel salesModelId = 7;
+  string systemModstamp = 8;
+}
+message AccountType {
+  string accountTypeName = 1;
+  string createdDate = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string systemModstamp = 8;
+}
+message ContactPointEmail {
+  string createdDate = 1;
+  string emailAddress = 2;
+  string emailDomain = 3;
+  string emailLatestBounceDateTime = 4;
+  string emailLatestBounceReasonText = 5;
+  string emailMailBox = 6;
+  string externalRecordId = 7;
+  string externalSourceId = 8;
+  string id = 9;
+  string implementorType = 10;
+  string lastModifiedDate = 11;
+  string systemModstamp = 12;
+}
+message UncategorizedParty {
+  string createdDate = 1;
+  UncategorizedPartyCreationReason creationReasonId = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  GlobalParty globalPartyId = 5;
+  string id = 6;
+  string implementorType = 7;
+  string lastModifiedDate = 8;
+  PartyNoMergeReason noMergeReasonId = 9;
+  string originalSourceRecordId = 10;
+  string originalSourceSystemId = 11;
+  Party partyId = 12;
+  Account primaryAccountId = 18;
+  string systemModstamp = 19;
+  string uncategorizedPartyLabel = 20;
+  oneof partyTypeId {
+    AffiliationGroup affiliationgroup = 14;
+    Individual individual = 15;
+    Organization organization = 16;
+    UncategorizedParty uncategorizedparty = 17;
+  }
+}
+message TradeInTender {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string systemModstamp = 7;
+}
+message DietaryHabitType {
+  string createdDate = 1;
+  string dietaryHabitTypeName = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string systemModstamp = 8;
+}
+message ProductValidityTimePeriodUOM {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string pluralName = 8;
+  string systemModstamp = 9;
+}
+message ShipmentProductPriceAdjustmentTax {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  ShipmentProductPriceAdjustment shipmentProductPriceAdjustmentId = 8;
+  string systemModstamp = 9;
+}
+message Gender {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message TradeInProductType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string systemModstamp = 7;
+}
+message BusinessLegalStatus {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message PaymentSchedule {
+  repeated PaymentScheduleStatus PaymentScheduleStatuses = 1;
+  float availableRequestedAmount = 2;
+  float canceledAmount = 3;
+  string commentsText = 4;
+  string createdDate = 5;
+  Currency currencyId = 6;
+  Account defaultPaymentAccountId = 7;
+  PaymentMethod defaultPaymentMethodId = 8;
+  string externalRecordId = 9;
+  string id = 10;
+  string implementorType = 11;
+  string lastModifiedDate = 12;
+  PaymentScheduleStatus paymentScheduleStatusId = 13;
+  float remainingToBeProcessedAmount = 14;
+  SalesOrder salesOrderId = 15;
+  string systemModstamp = 16;
+  float totalLineRequestedAmount = 17;
+  float totalProcessedAmount = 18;
+  float totalRequestedAmount = 19;
+}
+message ProductSeason {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message QuantityScheduleType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string systemModstamp = 7;
+}
+message SalesOrderChangeLog {
+  SalesOrder changeSalesOrderId = 1;
+  SalesOrderProduct changeSalesOrderProductId = 2;
+  string createdDate = 3;
+  string externalRecordId = 4;
+  string externalSourceId = 5;
+  string id = 6;
+  string implementorType = 7;
+  string lastModifiedDate = 8;
+  string name = 9;
+  SalesOrder relatedSalesOrderId = 10;
+  SalesOrderProduct relatedSalesOrderProductId = 11;
+  string systemModstamp = 12;
+}
+message Assortment {
+  repeated AssortmentProduct AssortmentProducts = 1;
+  string createdDate = 2;
+  string description = 3;
+  string externalRecordId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string name = 8;
+  string systemModstamp = 9;
+}
+message ImageGroup {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message AccountParticipant {
+  AccountParticipantRole accountParticipantRoleId = 1;
+  string createdDate = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string systemModstamp = 7;
+}
+message SalesStoreProduct {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string implementorType = 3;
+  string lastModifiedDate = 4;
+  string systemModstamp = 5;
+}
+message RevenueInstallmentPeriod {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string systemModstamp = 7;
+}
+message PartyIdentification {
+  string createdDate = 1;
+  string expiryDate = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string identificationNumber = 6;
+  string implementorType = 7;
+  string issuedAtLocation = 8;
+  string issuedByAuthority = 9;
+  string issuedDate = 10;
+  string lastModifiedDate = 11;
+  string name = 12;
+  Party partyId = 13;
+  PartyIdentificationType partyIdentificationTypeId = 14;
+  PartyRole partyRoleId = 15;
+  string systemModstamp = 16;
+  string verifiedDate = 17;
+}
+message MilitaryServiceStatus {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string systemModstamp = 7;
+}
+message PaymentAuthInternalResultCode {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message ProductRelatedComponent {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string systemModstamp = 7;
+}
+message AffiliateGroup {
+  BusinessAccount businessAccountId = 1;
+  string createdDate = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string systemModstamp = 7;
+}
+message TemperatureUOM {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  MeasurementSystem measurementSystemId = 7;
+  string systemModstamp = 8;
+}
+message PaymentGroup {
+  repeated PaymentAuthorization PaymentAuthorizations = 1;
+  string createdDate = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string paymentGroupNumber = 8;
+  string systemModstamp = 9;
+  float totalAuthorizationAmount = 10;
+  float totalPaymentAmount = 11;
+  float totalReversalAmount = 12;
+}
+message Tax {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  float salesOrderTaxAmount = 8;
+  TaxType salesOrderTaxTypeId = 9;
+  string systemModstamp = 10;
+  string taxAddressCityName = 11;
+  string taxAddressStreet1Text = 12;
+  string taxAddressStreet2Text = 13;
+  string taxErrorMessageText = 14;
+  float taxRatePercent = 15;
+}
+message SalesOrderChangeType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string salesOrderChangeTypeCode = 7;
+  string systemModstamp = 8;
+}
+message WeightUnitOfMeasure {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  MeasurementSystem measurementSystemId = 7;
+  string systemModstamp = 8;
+  string weightUOMName = 9;
+}
+message PartyType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message TimeUOM {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  string systemModstamp = 8;
+}
+message BankCheckType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string systemModstamp = 7;
+}
+message PaymentGatewayAuthorizationLog {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string name = 7;
+  PaymentAuthorization paymentAuthorizationId = 8;
+  string systemModstamp = 9;
+}
+message PersonalValueType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string personalValueTypeName = 7;
+  string systemModstamp = 8;
+}
+message LegalOrganizationType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string legalOrganizationTypeName = 7;
+  string systemModstamp = 8;
+}
+message PartyAccreditation {
+  string accreditationIssuerName = 1;
+  string createdDate = 2;
+  string externalRecordId = 3;
+  string externalSourceId = 4;
+  string id = 5;
+  string implementorType = 6;
+  string lastModifiedDate = 7;
+  string systemModstamp = 8;
+}
+message PaymentMethodType {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  float maxPerPeriodAmount = 7;
+  Currency maxPerPeriodAmountCurrency = 8;
+  int32 maxPerPeriodTransactionCount = 9;
+  float maxTransactionAmount = 10;
+  string mediaType = 11;
+  string name = 12;
+  string systemModstamp = 13;
+  string typeDescription = 14;
+  string typeRequiredIdentification = 15;
+  int32 useMinimumAgeYear = 16;
+}
+message ContactPointAddress {
+  string addressLine1 = 1;
+  string addressLine2 = 2;
+  string addressLine3 = 3;
+  string addressLine4 = 4;
+  string cityName = 5;
+  ContactPointPhone contactPhoneId = 6;
+  string countryName = 7;
+  string createdDate = 8;
+  string externalRecordId = 9;
+  string externalSourceId = 10;
+  int32 geoLatitude = 11;
+  int32 geoLongitude = 12;
+  string id = 13;
+  string implementorType = 14;
+  bool isUsedForBilling = 15;
+  bool isUsedForShipping = 16;
+  string lastModifiedDate = 17;
+  string postalCodeText = 18;
+  string stateProvinceName = 19;
+  string systemModstamp = 20;
+}
+message LeadStatus {
+  string createdDate = 1;
+  string externalRecordId = 2;
+  string externalSourceId = 3;
+  string id = 4;
+  string implementorType = 5;
+  string lastModifiedDate = 6;
+  string leadStatusName = 7;
+  string systemModstamp = 8;
+}

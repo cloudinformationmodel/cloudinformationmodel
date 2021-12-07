@@ -1,226 +1,166 @@
 {
-  "@context": "http://cloudinformationmodel.org/context.jsonld",
-  "@id": "ProductAttributeEntityGroup",
-  "name": "Product Attribute",
-  "@type": "EntityGroup",
-  "version": "0.1",
-  "subjectArea": {
-    "@id": "ProductSubjectArea"
-  },
-  "description": "Example Entities included: Attribute Set, Attribute Set Attribute",
-  "classConcepts": [
-    {
-      "@id": "ProductValidityTimePeriodUOM",
-      "name": "Product Validity Time Period UOM",
-      "@type": "Class",
-      "description": "Standard units of measure for time, for example minute, second, hour and day"
-    },
-    {
-      "@id": "ProductCollateral",
-      "name": "Product Collateral",
-      "@type": "Class",
-      "description": "Collateral for a product e.g. link to brochure one"
-    },
-    {
-      "@id": "AttributeSetTranslation",
-      "name": "Attribute Set Translation",
-      "@type": "Class",
-      "description": "Translated attributes for an attribute set"
-    },
-    {
-      "@id": "AttributeTranslation",
-      "name": "Attribute Translation",
-      "@type": "Class",
-      "description": "Translated attributes for an attribute"
-    },
-    {
-      "@id": "AttributeValue",
-      "name": "Attribute Value",
-      "@type": "Class",
-      "description": "A predefine set of values for a product attribute e.g. shoe lace length 10, 12, 14 centimeter"
-    },
-    {
-      "@id": "AttributeValueTranslation",
-      "name": "Attribute Value Translation",
-      "@type": "Class",
-      "description": "Translated attributes for an attribute value"
-    },
-    {
-      "@id": "ProductAttributeValue",
-      "name": "Product Attribute Value",
-      "@type": "Class",
-      "description": "Assignment of an attribute value to a product e.g. shoe lace"
-    },
-    {
-      "@id": "ProductAttributeSet",
-      "name": "Product Attribute Set",
-      "@type": "Class",
-      "description": "A set of attributes e.g. shoe attributes that are assigned to a particular instance of Product"
-    },
-    {
-      "@id": "PriceBookEntry",
-      "name": "Price Book Entry",
-      "@type": "Class",
-      "description": "A list of products and their prices."
-    },
-    {
-      "@id": "DeviceUserSession",
-      "name": "Device User Session",
-      "@type": "Class",
-      "description": "A time-bound period when a person used a website or other service, also known as a Visit"
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "2d9305b0-6e3e-3f6c-88f6-af0a04e51ab1",
+    "@type": "EntityGroup",
+    "name": "ProductAttribute",
+    "version": "1.0.0",
+    "subjectArea": "fe440b10-667c-39ce-bace-1e463e65282e",
+    "description": "Example Entities included: Attribute Set, Attribute Set Attribute",
+    "classConcepts": [
+{
+        "@id": "AttributeSet",
+        "name": "Attribute Set",
+        "@type": "Class",
+        "description": "A set of attributes e.g. an attribute set for shoes, another for shirts"
+    },{
+        "@id": "AttributeSetAttribute",
+        "name": "Attribute Set Attribute",
+        "@type": "Class",
+        "description": "Defines a set of extension attributes that comprise the Attribute Set"
+    },{
+        "@id": "AttributeSetTranslation",
+        "name": "Attribute Set Translation",
+        "@type": "Class",
+        "description": "Translated attributes for an attribute set"
+    },{
+        "@id": "AttributeTranslation",
+        "name": "Attribute Translation",
+        "@type": "Class",
+        "description": "Translated attributes for an attribute"
+    },{
+        "@id": "AttributeValue",
+        "name": "Attribute Value",
+        "@type": "Class",
+        "description": "A predefine set of values for a product attribute e.g. shoe lace length 10, 12, 14 centimeter"
+    },{
+        "@id": "AttributeValueTranslation",
+        "name": "Attribute Value Translation",
+        "@type": "Class",
+        "description": "Translated attributes for an attribute value"
+    },{
+        "@id": "ProductAttribute",
+        "name": "Product Attribute",
+        "@type": "Class",
+        "subClassOf": "DataAttribute",
+        "description": "An attribute defined part of a product e.g. show lace length for product Snike"
+    },{
+        "@id": "ProductAttributeSet",
+        "name": "Product Attribute Set",
+        "@type": "Class",
+        "description": "A set of attributes e.g. shoe attributes that are assigned to a particular instance of Product"
+    },{
+        "@id": "ProductAttributeValue",
+        "name": "Product Attribute Value",
+        "@type": "Class",
+        "subClassOf": "DataAttribute",
+        "description": "Assignment of an attribute value to a product e.g. shoe lace"
+    },{
+        "@id": "ProductCollateral",
+        "name": "Product Collateral",
+        "@type": "Class",
+        "description": "Collateral for a product e.g. link to brochure one"
+    },{
+        "@id": "ProductValidityTimePeriodUOM",
+        "name": "Product Validity Time Period UOM",
+        "@type": "Class",
+        "description": "Standard units of measure for time, for example minute, second, hour and day"
+    },{
+        "@id": "QuantityUOM",
+        "name": "Quantity UOM",
+        "@type": "Class",
+        "description": "Quantities available to select from e.g. each, dozen, pair"
+    },{
+        "@id": "SubscriptionPricingMethod",
+        "name": "Subscription Pricing Method",
+        "@type": "Class",
+        "description": "A code that defines terms of a payment structure that allows a customer to purchase a sellers goods or services for a certain price, for a certain period of time"
     }
-  ],
-  "propertyConcepts": [
-    {
-      "@id": "attributeValue",
-      "@type": "Property",
-      "domain": [
-        "AttributeValue"
-      ]
-    },
-    {
-      "@id": "isActive",
-      "@type": "Property",
-      "domain": [
-        "PriceBookEntry"
-      ]
-    },
-    {
-      "@id": "product",
-      "@type": "Property",
-      "domain": [
-        "PriceBookEntry",
-        "ProductAttributeSet",
-        "ProductCollateral",
-        "ProductAttributeValue"
-      ]
-    },
-    {
-      "@id": "minRequiredOrderValue",
-      "@type": "Property",
-      "domain": [
-        "PriceBookEntry"
-      ]
-    },
-    {
-      "@id": "minRequiredQuantity",
-      "@type": "Property",
-      "domain": [
-        "PriceBookEntry"
-      ]
-    },
-    {
-      "@id": "uRL",
-      "@type": "Property",
-      "domain": [
-        "ProductCollateral"
-      ]
-    },
-    {
-      "@id": "name",
-      "@type": "Property",
-      "domain": [
-        "DeviceUserSession",
-        "ProductValidityTimePeriodUOM",
-        "ProductAttributeValue"
-      ]
-    },
-    {
-      "@id": "translatedAttributeValueDescription",
-      "@type": "Property",
-      "domain": [
-        "AttributeValueTranslation"
-      ]
-    },
-    {
-      "@id": "pluralName",
-      "@type": "Property",
-      "domain": [
-        "ProductValidityTimePeriodUOM"
-      ]
-    },
-    {
-      "@id": "translatedName",
-      "@type": "Property",
-      "domain": [
-        "AttributeTranslation",
-        "AttributeSetTranslation"
-      ]
-    },
-    {
-      "@id": "unitListPrice",
-      "@type": "Property",
-      "domain": [
-        "PriceBookEntry"
-      ]
-    },
-    {
-      "@id": "customAttributeValue",
-      "@type": "Property",
-      "domain": [
-        "ProductAttributeValue"
-      ]
-    },
-    {
-      "@id": "maxRequiredOrderValue",
-      "@type": "Property",
-      "domain": [
-        "PriceBookEntry"
-      ]
-    },
-    {
-      "@id": "useStandardPrice",
-      "@type": "Property",
-      "domain": [
-        "PriceBookEntry"
-      ]
-    },
-    {
-      "@id": "translatedAttributeValue",
-      "@type": "Property",
-      "domain": [
-        "AttributeValueTranslation"
-      ]
-    },
-    {
-      "@id": "attributeSet",
-      "@type": "Property",
-      "domain": [
-        "ProductAttributeSet",
-        "ProductAttributeValue",
-        "AttributeSetTranslation"
-      ]
-    },
-    {
-      "@id": "attributeValue",
-      "@type": "Property",
-      "domain": [
-        "AttributeValueTranslation",
-        "ProductAttributeValue"
-      ]
-    },
-    {
-      "@id": "id",
-      "@type": "Property",
-      "domain": [
-        "PriceBookEntry",
-        "AttributeValueTranslation",
-        "AttributeValue",
-        "ProductAttributeSet",
-        "ProductCollateral",
-        "DeviceUserSession",
-        "AttributeTranslation",
-        "ProductValidityTimePeriodUOM",
-        "ProductAttributeValue",
-        "AttributeSetTranslation"
-      ]
-    },
-    {
-      "@id": "servicePeriodCount",
-      "@type": "Property",
-      "domain": [
-        "PriceBookEntry"
-      ]
+    ],
+    "propertyConcepts": [
+{
+        "@id": "pluralName",
+        "@type": "Property",
+        "domain": [
+"ProductValidityTimePeriodUOM"
+        ]
+    },{
+        "@id": "attributeValueId",
+        "@type": "Property",
+        "domain": [
+"ProductAttributeValue","AttributeValueTranslation"
+        ]
+    },{
+        "@id": "attributeId",
+        "@type": "Property",
+        "domain": [
+"ProductAttributeValue","AttributeValue","AttributeTranslation"
+        ]
+    },{
+        "@id": "customAttributeValue",
+        "@type": "Property",
+        "domain": [
+"ProductAttributeValue"
+        ]
+    },{
+        "@id": "translatedAttributeValue",
+        "@type": "Property",
+        "domain": [
+"AttributeValueTranslation"
+        ]
+    },{
+        "@id": "localeId",
+        "@type": "Property",
+        "domain": [
+"AttributeValueTranslation","AttributeSetTranslation","AttributeTranslation"
+        ]
+    },{
+        "@id": "translatedAttributeValueDescription",
+        "@type": "Property",
+        "domain": [
+"AttributeValueTranslation"
+        ]
+    },{
+        "@id": "defaultImageId",
+        "@type": "Property",
+        "domain": [
+"AttributeValue"
+        ]
+    },{
+        "@id": "productId",
+        "@type": "Property",
+        "domain": [
+"ProductAttributeValue","ProductAttributeSet","ProductAttribute","ProductCollateral"
+        ]
+    },{
+        "@id": "id",
+        "@type": "Property",
+        "domain": [
+"ProductAttributeValue","QuantityUOM","ProductAttributeSet","AttributeSetAttribute","ProductAttribute","ProductCollateral","SubscriptionPricingMethod","AttributeValue","AttributeValueTranslation","AttributeSetTranslation","ProductValidityTimePeriodUOM","AttributeSet","AttributeTranslation"
+        ]
+    },{
+        "@id": "uRL",
+        "@type": "Property",
+        "domain": [
+"ProductCollateral"
+        ]
+    },{
+        "@id": "translatedName",
+        "@type": "Property",
+        "domain": [
+"AttributeSetTranslation","AttributeTranslation"
+        ]
+    },{
+        "@id": "name",
+        "@type": "Property",
+        "domain": [
+"ProductAttributeValue","QuantityUOM","SubscriptionPricingMethod","ProductValidityTimePeriodUOM","AttributeSet"
+        ]
+    },{
+        "@id": "attributeSetId",
+        "@type": "Property",
+        "domain": [
+"ProductAttributeValue","ProductAttributeSet","AttributeSetTranslation"
+        ]
     }
-  ]
+    ]
 }

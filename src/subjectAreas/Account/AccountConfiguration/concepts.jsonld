@@ -1,0 +1,64 @@
+{
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "76e36e48-45e0-4656-a8a8-9d616296b9f3",
+    "@type": "EntityGroup",
+    "name": "AccountConfiguration",
+    "version": "1.0.0",
+    "subjectArea": "a5b709eb-c627-4dad-8343-85efa0e06087",
+    "description": "Example entities include: Account Participant Role, Account Relationship Role, Contact Role",
+    "classConcepts": [
+{
+        "@id": "AccountParticipantRole",
+        "name": "Account Participant Role",
+        "@type": "Class",
+        "description": "Jobs or tasks that a system user may play with respect to one or more Accounts. For example Account Owner, Account Viewer or Account Servicer"
+    },{
+        "@id": "AccountRelationshipRole",
+        "name": "Account Relationship Role",
+        "@type": "Class",
+        "description": "Reasons for associating two accounts via Account Relationship include: Implementation Partner, and Sales Partner"
+    },{
+        "@id": "AccountRole",
+        "name": "Account Role",
+        "@type": "Class",
+        "description": "An Account is created to facilitate a business relationship, and Account Role stores data specific to a certain type of business relationship, for example Employee, Patient, Healthcare Provider or Household"
+    },{
+        "@id": "ContactAccountRelationshipRole",
+        "name": "Contact Account Relationship Role",
+        "@type": "Class",
+        "description": "When a Contact is associated with an Account, there can be multiple reasons for this, which are defined as Contact Account Relationship Roles."
+    },{
+        "@id": "ContactRole",
+        "name": "Contact Role",
+        "@type": "Class",
+        "description": "Responsibilities that a Contact can have with respect to something, such as the relationship of a Contact to an Account. For example Decision Maker, or Advisor"
+    }
+    ],
+    "propertyConcepts": [
+{
+        "@id": "contactRoleId",
+        "@type": "Property",
+        "domain": [
+"ContactAccountRelationshipRole"
+        ]
+    },{
+        "@id": "description",
+        "@type": "Property",
+        "domain": [
+"AccountRelationshipRole","AccountParticipantRole","ContactRole"
+        ]
+    },{
+        "@id": "name",
+        "@type": "Property",
+        "domain": [
+"AccountRelationshipRole","AccountParticipantRole","ContactRole"
+        ]
+    },{
+        "@id": "contactAccountRelationshipId",
+        "@type": "Property",
+        "domain": [
+"ContactAccountRelationshipRole"
+        ]
+    }
+    ]
+}

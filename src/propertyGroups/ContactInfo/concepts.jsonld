@@ -1,72 +1,63 @@
 {
-  "@context": "http://cloudinformationmodel.org/context.jsonld",
-  "@id": "ContactInfoPropertyGroup",
-  "name": "ContactInfo Property Group",
-  "@type": "PropertyGroup",
-  "version": "0.1",
-  "propertyConcepts": [
-    {
-      "@id": "emailBouncedDate",
-      "@type": "Property",
-      "description": "If email sent to the lead bounced, the date and time the bounce occurred.",
-      "name": "EmailBouncedDate",
-      "range": "DataType"
-    },
-    {
-      "@id": "emailBouncedReason",
-      "@type": "Property",
-      "description": "If email sent to the lead bounced, the reason the bounce occurred.",
-      "name": "EmailBouncedReason",
-      "range": "DataType"
-    },
-    {
-      "@id": "streetName",
-      "@type": "Property",
-      "description": "Street number and name for the address of the lead.",
-      "name": "Street Name",
-      "range": "DataType"
-    },
-    {
-      "@id": "city",
-      "@type": "Property",
-      "description": "City for the address of the lead.",
-      "name": "City",
-      "range": "DataType"
-    },
-    {
-      "@id": "stateProvinceName",
-      "@type": "Property",
-      "description": "Geographical State Province for the address of the lead.",
-      "name": "State Province Name",
-      "range": "DataType"
-    },
-    {
-      "@id": "contactPointEmail",
-      "@type": "Property",
-      "description": "Email address for the lead.",
-      "name": "Contact Point Email",
-      "range": "ContactPointEmail"
-    },
-    {
-      "@id": "phoneContactPoint",
-      "@type": "Property",
-      "description": "Phone number for the lead.",
-      "name": "Phone Contact Point",
-      "range": "ContactPointPhone"
-    },
-    {
-      "@id": "mobileContactPhone",
-      "@type": "Property",
-      "description": "Reference to mobile phone number for the lead.",
-      "name": "Mobile Contact Phone",
-      "range": "ContactPointPhone"
-    },
-    {
-      "@id": "faxContactPhone",
-      "@type": "Property",
-      "description": "Fax number for the lead.",
-      "name": "Fax Contact Phone",
-      "range": "ContactPointPhone"
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "ContactInfoPropertyGroup",
+    "name": "ContactInfo Property Group",
+    "@type": "PropertyGroup",
+    "propertyConcepts": [
+{
+        "@id": "city",
+        "@type": "Property",
+        "description": "City for the address of the lead.",
+        "name": "City",
+        "range": "DataType"
+    },{
+        "@id": "contactPointEmailId",
+        "@type": "Property",
+        "description": "Email address for the lead.",
+        "name": "Contact Point Email",
+        "range": "ContactPointEmail"
+    },{
+        "@id": "emailBouncedDate",
+        "@type": "Property",
+        "description": "If email sent to the lead bounced, the date and time the bounce occurred.",
+        "name": "EmailBouncedDate",
+        "range": "DataType"
+    },{
+        "@id": "emailBouncedReason",
+        "@type": "Property",
+        "description": "If email sent to the lead bounced, the reason the bounce occurred.",
+        "name": "EmailBouncedReason",
+        "range": "DataType"
+    },{
+        "@id": "faxContactPhoneId",
+        "@type": "Property",
+        "description": "Fax number for the lead.",
+        "name": "Fax Contact Phone",
+        "range": "ContactPointPhone"
+    },{
+        "@id": "mobileContactPhoneId",
+        "@type": "Property",
+        "description": "Reference to mobile phone number for the lead.",
+        "name": "Mobile Contact Phone",
+        "range": "ContactPointPhone"
+    },{
+        "@id": "phoneContactPointId",
+        "@type": "Property",
+        "description": "Phone number for the lead.",
+        "name": "Phone Contact Point",
+        "range": "ContactPointPhone"
+    },{
+        "@id": "stateProvinceName",
+        "@type": "Property",
+        "description": "Goegraphical State Province for the address of the lead.",
+        "name": "State Province Name",
+        "range": "DataType"
+    },{
+        "@id": "streetName",
+        "@type": "Property",
+        "description": "Street number and name for the address of the lead.",
+        "name": "Street Name",
+        "range": "DataType"
     }
-  ]
+    ]
 }

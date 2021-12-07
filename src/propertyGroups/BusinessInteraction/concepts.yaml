@@ -1,8 +1,0 @@
-#%Vocabulary 1.0
-base: http://cloudinformationmodel.org/model/
-vocabulary: Business Interaction Property Group
-propertyTerms:
-  influencerRating:
-    displayName: Influencer Rating
-    description: No matter how we do business with this person, how influential is the person
-    range: any

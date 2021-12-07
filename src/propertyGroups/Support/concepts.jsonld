@@ -1,16 +1,15 @@
 {
-  "@context": "http://cloudinformationmodel.org/context.jsonld",
-  "@id": "SupportPropertyGroup",
-  "name": "Support Property Group",
-  "@type": "PropertyGroup",
-  "version": "0.1",
-  "propertyConcepts": [
-    {
-      "@id": "last12MonthsSupportCallCount",
-      "@type": "Property",
-      "description": "How many support calls been made between customer and us in last 12 months",
-      "name": "Last 12 Months Support Call Count",
-      "range": "DataType"
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "SupportPropertyGroup",
+    "name": "Support Property Group",
+    "@type": "PropertyGroup",
+    "propertyConcepts": [
+{
+        "@id": "last12MonthsSupportCallCount",
+        "@type": "Property",
+        "description": "How many support calls been made between customer and us in last 12 months",
+        "name": "Last 12 Months Support Call Count",
+        "range": "DataType"
     }
-  ]
+    ]
 }

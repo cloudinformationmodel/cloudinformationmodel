@@ -1,44 +1,105 @@
 {
-  "@context": "http://cloudinformationmodel.org/context.jsonld",
-  "@id": "ProductPropertyGroup",
-  "name": "Product Property Group",
-  "@type": "PropertyGroup",
-  "version": "0.1",
-  "propertyConcepts": [
-    {
-      "@id": "product",
-      "@type": "Property",
-      "description": "The service, product or charge associated with this SalesOrderProduct.",
-      "name": "Product",
-      "range": "Product"
-    },
-    {
-      "@id": "subscriptionTermUnit",
-      "@type": "Property",
-      "description": "The unit of Measure for the Subscription Term",
-      "name": "Subscription Term Unit of Measure",
-      "range": "ProductValidityTimePeriodUOM"
-    },
-    {
-      "@id": "isBundleRoot",
-      "@type": "Property",
-      "description": "Is the product the root-level of a bundled product?",
-      "name": "Is Bundle Root",
-      "range": "DataType"
-    },
-    {
-      "@id": "segmentIndexNumber",
-      "@type": "Property",
-      "description": "Used for pricing subscriptions, where sub-periods of the overall subscription are priced differently, and the pricing changes in a structured way over a series of segments, which are identified by numerically increasing Segment Numbers",
-      "name": "Segment Index Number",
-      "range": "DataType"
-    },
-    {
-      "@id": "subscriptionTermQuantity",
-      "@type": "Property",
-      "description": "Quantity of the Subscription Unit Term Unit of Measure",
-      "name": "Subscription Term Quantity",
-      "range": "DataType"
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "ProductPropertyGroup",
+    "name": "Product Property Group",
+    "@type": "PropertyGroup",
+    "propertyConcepts": [
+{
+        "@id": "bundleTypeId",
+        "@type": "Property",
+        "description": "Types of product bundles include: Sold as One Unit, Changeable/Configurable, and Sold Only as a Sub-Bundle",
+        "name": "Bundle Type",
+        "range": "BundleType"
+    },{
+        "@id": "entitlementPolicyId",
+        "@type": "Property",
+        "description": "Product entitlements often relate to service and support, for example Web Support, Phone Support or Parts Replacement",
+        "name": "Entitlement Policy",
+        "range": "EntitlementPolicy"
+    },{
+        "@id": "productAssetCvsnActionId",
+        "@type": "Property",
+        "description": "When the sale of a product converts it into an Asset for the customer, Product Asset Conversion Action defines how this will be done. Examples include: one per Sales Order Line Item that ordered it, and one per all order instances.",
+        "name": "Product Asset Conversion Action",
+        "range": "ProductAssetConversionAction"
+    },{
+        "@id": "maximumOptionCount",
+        "@type": "Property",
+        "description": "The maximum number of the feature that a product configuration can utilize.",
+        "name": "Maximum Option Count",
+        "range": "DataType"
+    },{
+        "@id": "minimumOptionCount",
+        "@type": "Property",
+        "description": "The minimum number of the feature that a product configuration requires",
+        "name": "Minimum Option Count",
+        "range": "DataType"
+    },{
+        "@id": "productCategoryId",
+        "@type": "Property",
+        "description": "A catalog consist of many categories e.g. shoes, tshirts",
+        "name": "Product Category",
+        "range": "ProductCategory"
+    },{
+        "@id": "salesModelId",
+        "@type": "Property",
+        "description": "Sales Model defines standard ways of repeating sales, if that is applicable. Standard sales models are One-Time, Evergreen (automatic renewal) and Termed Subscription.",
+        "name": "Sales Model",
+        "range": "SalesModel"
+    },{
+        "@id": "productServiceCampaignId",
+        "@type": "Property",
+        "description": "A customer messaging plan related to repairs that a specific product requires",
+        "name": "Product Service Campaign",
+        "range": "ProductServiceCampaign"
+    },{
+        "@id": "description",
+        "@type": "Property",
+        "description": "Description of a Sales Model",
+        "name": "Description",
+        "range": "DataType"
+    },{
+        "@id": "assortmentId",
+        "@type": "Property",
+        "description": "An array of products that are presented together.",
+        "name": "Assortment",
+        "range": "Assortment"
+    },{
+        "@id": "name",
+        "@type": "Property",
+        "description": "Name of the assignment of an Assortment to a Sales Store. For example, carbonated beverages at Lucky Convience Mart",
+        "name": "Name",
+        "range": "DataType"
+    },{
+        "@id": "isBundleRoot",
+        "@type": "Property",
+        "description": "Is the product the root-level of a bundled product?",
+        "name": "Is Bundle Root",
+        "range": "DataType"
+    },{
+        "@id": "productId",
+        "@type": "Property",
+        "description": "The service, product or charge associated with this SalesOrderProduct.",
+        "name": "Product",
+        "range": "Product"
+    },{
+        "@id": "segmentIndexNumber",
+        "@type": "Property",
+        "description": "Used for pricing subscriptions, where sub-periods of the overall subscription are priced differently, and the pricing changes in a structured way over a series of segments, which are identified by numerically increasing Segment Numbers",
+        "name": "Segment Index Number",
+        "range": "DataType"
+    },{
+        "@id": "subscriptionTermQuantity",
+        "@type": "Property",
+        "description": "Quantity of the Subscription Unit Term Unit of Measure",
+        "name": "Subscription Term Quantity",
+        "range": "DataType"
+    },{
+        "@id": "subscriptionTermUnitId",
+        "@type": "Property",
+        "description": "The unit of Measure for the Subscription Term",
+        "name": "Subscription Term Unit of Measure",
+        "range": "ProductValidityTimePeriodUOM"
     }
-  ]
+    ]
 }

@@ -1,14 +1,15 @@
 {
-  "@context": "http://cloudinformationmodel.org/context.jsonld",
-  "@id": "PaymentSubjectArea",
-  "@type": "SubjectArea",
-  "version": "0.1",
-  "name": "Payment",
-  "description": "A submitted payment. Includes information about whether a submitted payment was successfully processed or not.",
-  "entityGroups": [
-    {
-      "@id": "PaymentEntityGroup",
-      "name": "Payment"
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "6c582cb9-5195-3f6e-9019-42fb5b2725a3",
+    "@type": "SubjectArea",
+    "version": "1.0.0",
+    "name": "Payment",
+    "description": "A submitted payment. Includes information about whether a submitted payment was successfully processed or not.",
+    "entityGroups": [
+{
+        "@id": "a020a262-26b6-3db8-bcfe-75bdfa556559",
+        "name": "Payment",
+        "description": "Example Entities included: Payment, Payment Group, Payment Authorization, Payment Gateway"
     }
-  ]
+    ]
 }

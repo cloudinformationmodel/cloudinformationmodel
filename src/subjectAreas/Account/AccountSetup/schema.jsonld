@@ -1,0 +1,434 @@
+{
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "0f3bd6c0-3871-43b3-8c4c-326df7fe8d3d",
+    "@type": "EntityGroup",
+    "name": "AccountSetup",
+    "version": "1.0.0",
+    "subjectArea": "a5b709eb-c627-4dad-8343-85efa0e06087",
+    "description": "Example entities include: Customer Type, Supplier Type, Seller Type",
+    "schemas": [
+{
+        "@id": "d5436d5a-229b-3440-8489-119417471d42",
+        "@type": "Shape",
+        "targetClass": "AccountBalanceUnitOfMeasure",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "bbede1c3-0916-3c44-9dee-138cdb22200c",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "d1634c74-0bdf-30cf-8062-17df6beaccb7",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "d5eb8678-4dc8-4010-9999-32bceb121771",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "e66396fd-0d6f-3251-b237-96e7a28ffcf5",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "ac428bc0-61c0-47f7-8585-95e70872c403",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "30d29cd7-5022-368c-9d11-328f6b93a85c",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "e8ad3e51-b473-3f72-9e68-8850d3c85bf1",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "accountBalanceUOMName",
+            "@id": "d54315db-c37f-3db2-97e7-e2ca29c58901",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        }
+        ]
+    },{
+        "@id": "58a7bb0c-1865-4ada-a0a0-949a66dcdbdc",
+        "@type": "Shape",
+        "targetClass": "AccountBusinessType",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "0f24a116-aebb-48b8-bb7b-933e1ebdde98",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "name",
+            "@id": "f809f62b-480f-4878-b333-a550ed53e8e6",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "67914ac6-904f-4949-ad6d-87ed75311b2d",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "3da0b273-476f-47f7-a8a8-c162eac1af64",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "35815295-d586-40d0-a5e5-1cc85a1817fa",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "1aa17aa9-bc27-4373-90d0-591359abdb2e",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "description",
+            "@id": "026a8373-6196-4cac-bbbb-d5c66caa359e",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "292463ba-c2ee-4484-aded-181a78bce3be",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        }
+        ]
+    },{
+        "@id": "fab69370-7328-3fee-83fe-87106d5ec438",
+        "@type": "Shape",
+        "targetClass": "AccountContactRoleType",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "a1fd1a36-36d3-49d9-8404-b3f82af50466",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "name",
+            "@id": "2dbe0dc2-0db1-3803-bc12-b5b71e821d74",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "92f128c0-c446-43d3-a4a4-d1795db561ff",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "33341541-a3cf-47c7-bb3b-d9262b9fcabc",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "701315d2-2193-305d-90a8-f637c65dbe77",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "4a718b7a-8c6c-4494-9353-18cfe5bfcac7",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "ba39c4e6-ce8c-4cfc-a868-0f465773dd42",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "27c85ce3-6427-47c7-a424-f461a5737188",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        }
+        ]
+    },{
+        "@id": "41c0ac46-ef4c-36a8-a0cc-3538adfba5cb",
+        "@type": "Shape",
+        "targetClass": "AccountHoldStatusReason",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "23540f90-a9ee-39d8-b4e5-980cee37bb2a",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "0e0eb32b-db6f-37cf-9e51-a86a614eed6d",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "77078fce-9671-4e2e-9f1f-6549d65b07b0",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "b2de1218-b202-3406-8e5f-2921e3b616e6",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "f186ebfb-f13e-49c9-9353-47b6c2fb7741",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "760f4fe6-e211-3381-9224-4f4820d1f511",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "5980982d-986b-3072-84cd-a0d8895c63be",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "accountHoldStatusReasonName",
+            "@id": "ec6585bd-c5a9-3543-8072-993cc5b02af1",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        }
+        ]
+    },{
+        "@id": "2a2aae1e-d305-3ce7-bfa5-bdafd396532e",
+        "@type": "Shape",
+        "targetClass": "AccountType",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "6e4538c9-aa00-4f8f-99d9-3e9694df26a8",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "25a5dc4f-9521-4050-bb7b-c65d981a73dd",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "b2db6dca-0ef0-4767-8a4a-c412df62451b",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "1026e8c8-ce5c-3c0d-aade-2b33e5fd54d7",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "9610f4b4-b6b3-4c0c-a323-4f93921dcd51",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "16ec8b31-d31b-43c3-9797-bcbadcbe3ef3",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "7f093202-1b8d-4808-bafa-740349773a40",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "accountTypeName",
+            "@id": "18127a95-2de7-3e33-afa7-5e8bcf5a09c7",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        }
+        ]
+    },{
+        "@id": "653bc3b7-46bc-3b19-95c6-6f6ba739e45a",
+        "@type": "Shape",
+        "targetClass": "BillDeliveryMethod",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "a9790443-2700-39f3-a651-d887e6bda640",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "43f0899d-bf66-360c-a6fa-d617a2993f42",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "b0c202cd-be0a-4999-b3f3-6ddf3114d60b",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "4011ddc9-a122-39f8-913e-c342cb43f404",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "980b0bba-5b15-4dfd-b9b9-048468d62611",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "1d4718cb-a78b-3d16-aff8-132503a20e25",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "a00e1010-e4be-3e2a-8b0c-6892893c2de1",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "billDeliveryMethodName",
+            "@id": "720d13a0-fd46-3091-8ed0-88bee4fa483d",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        }
+        ]
+    },{
+        "@id": "afd6fedf-0684-380a-b7bb-c1c26638145e",
+        "@type": "Shape",
+        "targetClass": "FreightTerms",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "150fd785-1739-366a-961e-803464e58a7e",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "ba44fd99-d284-37da-a28b-2fe0243ab3a7",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "8ebcb71b-5a88-4f2f-9959-ebcae9cc97a8",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "1006cecf-80bf-3e47-ace4-d8c3c92e5d8d",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "freightTermsName",
+            "@id": "691c8317-6091-332a-a563-d21c4fd1d2bf",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "ca2f854e-a0ab-4909-b2b2-f9d060b83b66",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "badd8774-bf51-37ee-999b-eef5bfba5d27",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "42cf4785-e86c-3d95-836c-67757be57f2d",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        }
+        ]
+    },{
+        "@id": "4c1f90e6-12bf-368c-8de0-065e18226263",
+        "@type": "Shape",
+        "targetClass": "SLAType",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "be95427b-1e4b-357b-8b2c-f3c0718b7297",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "sLATypeName",
+            "@id": "7f93495a-4850-3ee2-a414-f8e673030983",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "79419f95-1dcd-3209-a501-23e519a82384",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "dcc95a9b-cff8-4888-b9f9-6328dac31efb",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "87311a8d-808d-3957-87f0-694148dd6045",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "31aafed4-d795-4727-a0a0-aa1ad7a76ccd",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "ed1fad0b-596e-3598-a2cb-4f5722ad0e13",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "6d87ff17-1db2-3aa4-971c-0c9c28e152b6",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        }
+        ]
+    }
+    ]
+}

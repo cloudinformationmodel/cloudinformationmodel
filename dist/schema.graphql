@@ -1,0 +1,5089 @@
+type Product {
+  minimumAdvertisementAmount : Int
+  masterProductId : Product
+  ProductTranslations : [ProductTranslation!]!
+  systemModstamp : String!
+  ProductFeatures : [ProductFeature!]!
+  priceChargeTypeId : PriceChargeType!
+  isBackOrdered : Boolean!
+  validForPeriodCount : Int
+  isWorkerDiscountAllowed : Boolean!
+  ProductRepairCertifications : [ProductRepairCertification!]!
+  allowPartialRefund : Boolean
+  isWeightEntryRequired : Boolean!
+  validForPeriodUOMId : ProductValidityTimePeriodUOM
+  isQuantityEntryRequired : Boolean!
+  productStatusId : ProductStatus!
+  isSerialized : Boolean!
+  rewardProgramPointsCount : Int
+  ProductServiceCampaigns : [ProductServiceCampaign!]!
+  lastModifiedDate : String!
+  description : String!
+  id : String!
+  externalSourceRecordId : String
+  quantityInstallmentPeriodId : QuantityInstallmentPeriod
+  revenueScheduleTypeId : RevenueScheduleType
+  name : String!
+  disposalTypeId : DisposalType
+  primaryProductCategoryId : ProductCategory
+  ProductAttributes : [ProductAttribute!]!
+  isAutoProvisionable : Boolean!
+  isCouponRedemptionAllowed : Boolean!
+  isSellableIndependently : Boolean!
+  canUseRevenueSchedule : Boolean!
+  manufacturerName : String
+  isIntellectualPropertyProtected : Boolean
+  modelYear : Int
+  ProductRelatedProducts : [ProductRelatedProduct!]!
+  isCustomerDiscountAllowed : Boolean!
+  ProductAttributeValues : [ProductAttributeValue!]!
+  OrderDeliveryMethods : [OrderDeliveryMethod!]!
+  quantityInstallmentCount : Int
+  requiredDepositAmount : Int
+  externalSourceId : String
+  isPreOrderable : Boolean!
+  requiresInvididualUnitPricing : Boolean!
+  standardWarrantyLengthMonth : Int
+  canUseQuantitySchedule : Boolean!
+  isInstallable : Boolean!
+  isRainCheckAllowed : Boolean!
+  productAssetCvsnActionId : ProductAssetConversionAction!
+  productType : ProductType
+  ProductImages : [ProductImage!]!
+  minimumAdvertisementAmountStartDate : Int
+  maximumOrderQuantityCount : Int
+  isMultipleCouponsAllowed : Boolean!
+  ProductAttributeSets : [ProductAttributeSet!]!
+  allowCustomerReturn : Boolean
+  stockLedgerValuationAmountCurrency : Currency
+  modelNumber : String
+  mSRPAmount : Int
+  isSellable : Boolean
+  validToDate : String
+  quantityScheduleTypeId : QuantityScheduleType
+  ProductRepairSkills : [ProductRepairSkill!]!
+  isPartnerDiscountAllowed : Boolean!
+  revenueInstallmentCount : Int
+  productSKU : String!
+  externalRecordId : String
+  minimumAdvertisementAmountCurrency : Currency
+  ProductCollaterals : [ProductCollateral!]!
+  createdDate : String!
+  isManualPriceEntryRequired : Boolean!
+  isSellableWithoutPrice : Boolean!
+  revenueInstallmentPeriodId : RevenueInstallmentPeriod
+  mSRPAmountCurrency : Currency
+  isReturnable : Boolean!
+  versionNumber : String
+  lotIdentifier : String
+  validFromDate : String
+  stockLedgerValuationAmount : Int
+  implementorType : String!
+  isDynamicBundle : Boolean!
+  isQualityVerificationRequired : Boolean!
+  requiredDepositAmountCurrency : Currency
+  requiredDepositPercentage : Int
+  primarySalesChannelId : SalesChannel
+  isFoodstampPaymentAllowed : Boolean!
+  minimumOrderQuantityCount : Int
+}
+type AccountScore {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String
+  externalSourceId : String!
+  accountId : Account!
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type ProductStyle {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type PaymentApplicationType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type AccountBrand {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  businessBrandId : BusinessBrand!
+  externalSourceId : String!
+  accountId : Account
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type ProductRepairSkill {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  productId : Product!
+  id : String!
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type PaymentGatewayStatus {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  paymentGatewayStatusCode : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type SalesOrderProductPriceAdjuType {
+  systemModstamp : String!
+  salesOrderProductPriceAdjustmentTypeCode : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type PaymentCreditMemoApplication {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  creditMemoId : CreditMemo!
+  implementorType : String!
+}
+type ServiceProduct {
+  rentalTermViolationPenaltyAmount : Int
+  minimumAdvertisementAmount : Int
+  masterProductId : Product
+  systemModstamp : String!
+  priceChargeTypeId : PriceChargeType!
+  isBackOrdered : Boolean!
+  validForPeriodCount : Int
+  isWorkerDiscountAllowed : Boolean!
+  allowPartialRefund : Boolean
+  isWeightEntryRequired : Boolean!
+  validForPeriodUOMId : ProductValidityTimePeriodUOM
+  evergreenContractEstimatedMonthCount : Int
+  isQuantityEntryRequired : Boolean!
+  productStatusId : ProductStatus!
+  isSerialized : Boolean!
+  rewardProgramPointsCount : Int
+  lastModifiedDate : String!
+  description : String!
+  id : String!
+  externalSourceRecordId : String
+  serviceTypeId : ServiceType!
+  quantityInstallmentPeriodId : QuantityInstallmentPeriod
+  revenueScheduleTypeId : RevenueScheduleType
+  name : String!
+  disposalTypeId : DisposalType
+  primaryProductCategoryId : ProductCategory
+  isAutoProvisionable : Boolean!
+  rentalTermViolationPenaltyAmountCurrency : Currency
+  isCouponRedemptionAllowed : Boolean!
+  evergreenContractEstimatedChargeAmount : Int
+  isSellableIndependently : Boolean!
+  serviceProviderAccountId : Account
+  canUseRevenueSchedule : Boolean!
+  manufacturerName : String
+  isIntellectualPropertyProtected : Boolean
+  modelYear : Int
+  isCustomerDiscountAllowed : Boolean!
+  quantityInstallmentCount : Int
+  requiredDepositAmount : Int
+  externalSourceId : String
+  isPreOrderable : Boolean!
+  requiresInvididualUnitPricing : Boolean!
+  evergreenContractEstimatedChargeAmountCurrency : Currency
+  standardWarrantyLengthMonth : Int
+  canUseQuantitySchedule : Boolean!
+  isInstallable : Boolean!
+  isRainCheckAllowed : Boolean!
+  productAssetCvsnActionId : ProductAssetConversionAction!
+  productType : ProductType
+  minimumAdvertisementAmountStartDate : Int
+  maximumOrderQuantityCount : Int
+  isMultipleCouponsAllowed : Boolean!
+  allowCustomerReturn : Boolean
+  stockLedgerValuationAmountCurrency : Currency
+  modelNumber : String
+  mSRPAmount : Int
+  isSellable : Boolean
+  validToDate : String
+  quantityScheduleTypeId : QuantityScheduleType
+  isPartnerDiscountAllowed : Boolean!
+  revenueInstallmentCount : Int
+  productSKU : String!
+  externalRecordId : String
+  minimumAdvertisementAmountCurrency : Currency
+  rentalCleanupFeeAmountCurrency : Currency
+  createdDate : String!
+  servicePeriodUOM : TimeUOM
+  isManualPriceEntryRequired : Boolean!
+  isSellableWithoutPrice : Boolean!
+  revenueInstallmentPeriodId : RevenueInstallmentPeriod
+  mSRPAmountCurrency : Currency
+  isReturnable : Boolean!
+  versionNumber : String
+  servicePeriodCount : Int
+  lotIdentifier : String
+  rentalCleanupFeeAmount : Int
+  validFromDate : String
+  stockLedgerValuationAmount : Int
+  implementorType : String!
+  isDynamicBundle : Boolean!
+  isQualityVerificationRequired : Boolean!
+  requiredDepositAmountCurrency : Currency
+  requiredDepositPercentage : Int
+  primarySalesChannelId : SalesChannel
+  isFoodstampPaymentAllowed : Boolean!
+  minimumOrderQuantityCount : Int
+}
+type InternalResultCode {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type Image {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  imageTitle : String!
+  imageViewType : String
+  imageURL : String!
+  externalRecordId : String
+  createdDate : String!
+  imageAlternateText : String
+  implementorType : String!
+}
+type AccountPartner {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  accountId : Account!
+  externalRecordId : String
+  partnerAccountId : Account!
+  createdDate : String!
+  implementorType : String!
+}
+type AccountRelationship {
+  account1Id : Account
+  systemModstamp : String!
+  lastModifiedDate : String!
+  externalSourceId : String!
+  accountRelationshipRole : AccountRelationshipRole!
+  externalRecordId : String!
+  createdDate : String!
+  account2Id : Account!
+  implementorType : String
+}
+type PaymentTreatmentMethod {
+  systemModstamp : String!
+  paymentTreatmentMethodName : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  paymentTreatmentMethodCode : String!
+  paymentTreatmentMethodDescription : String!
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type ProductSortingRule {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  description : String
+  productSortingRuleId : ProductSortingRuleType!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type AttributeValueTranslation {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  translatedAttributeValue : String!
+  createdDate : String!
+  implementorType : String!
+  translatedAttributeValueDescription : String
+  attributeValueId : AttributeValue!
+}
+type SalesOrderProductReason {
+  salesOrderProductReasonCategoryId : SalesOrderProductReasonCategory!
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type ProductRelatedProduct {
+  childRelationshipTypeId : SalesOrderProductRelationshipType!
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  salesOrderProduct1Id : SalesOrderProduct!
+  productRelationshipTypeId : ProductRelationshipType!
+  isDefaultOption : Boolean!
+  fromDate : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  toDate : String
+  childProductId : Product!
+  salesOrderProduct2Id : SalesOrderProduct!
+  parentRelationshipTypeId : SalesOrderProductRelationshipType!
+  implementorType : String!
+  parentProductId : Product!
+}
+type PaymentCreditMemoAllocation {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String
+  appliedAmount : Float!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type ShipmentProduct {
+  systemModstamp : String!
+  shipmentPackageId : ShipmentPackage!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  shipmentId : Shipment!
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+  shipmentProductCount : Float!
+}
+type Competitor {
+  partyId : Party
+  competitorStrengths : String
+  competitorFromDate : String!
+  socialMediaPostRate : Int
+  systemModstamp : String!
+  currentRatio : Int
+  lastModifiedDate : String!
+  cashFlowGrowth : Int
+  competitorObjectives : String
+  netProfitMargin : Int
+  id : String!
+  competitorWeaknesses : String
+  pressMentionsRate : Int
+  competitorTheats : String
+  externalSourceId : String
+  assetTurnoverRatio : Int
+  competitorToDate : String
+  externalRecordId : String
+  competitorLeverageOpportunities : String
+  createdDate : String!
+  assetReturnRatio : Int
+  implementorType : String!
+  ptoENumber : Int
+  adKeywords : String
+  adReachRate : Int
+}
+type SocialNetworkProvider {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  socialNetworkProviderName : String!
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type SalesOrderStatus {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type PaymentAuthorizationReversal {
+  paymentGatewayReferenceNumber : String!
+  authorizationReversalAmount : Float!
+  customerAuthorizationReversalPhone : String
+  systemModstamp : String!
+  iPAddress : String
+  paymentAuthorizationReversalStatusId : PaymentAuthorizationStatus!
+  PaymentGatewayAuthReversalLogs : [PaymentGatewayAuthReversalLog!]!
+  lastModifiedDate : String!
+  id : String!
+  paymentGatewayResultId : PaymentGatewayResultCode!
+  paymentAuthorizationId : PaymentAuthorization!
+  paymentGatewayInternalReferenceNumber : String!
+  capturePaymentId : CapturePayment
+  paymentGatewayInternalResultCodeId : PaymentAuthInternalResultCode!
+  paymentAuthorizationReversalName : String
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  externalCreatedDate : String!
+  paymentAuthorizationProcessingModeId : AuthorizationProcessingMode!
+  requestDate : String!
+  paymentAuthorizationReversalCommentText : String
+  macAddress : String
+  implementorType : String!
+  customerAuthorizationReversalEmail : String
+  paymentGatewayDate : String!
+}
+type PaymentPolicy {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  description : String!
+  paymentPolicyStatusId : PaymentPolicyStatus!
+  id : String!
+  name : String!
+  externalSourceId : String
+  paymentPolicyTreatmentSelectionId : PaymentPolicyTreatmentSelection!
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+  PaymentTreatments : [PaymentTreatment!]!
+}
+type SalesOrderProductPriceAdjustmentTax {
+  systemModstamp : String!
+  salesOrderProductPriceAdjustmentTaxAmount : Float!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  salesOrderTaxAmount : Float
+  externalSourceId : String
+  taxAddressCityName : String
+  externalRecordId : String
+  createdDate : String!
+  salesOrderProductPriceAdjustmentId : SalesOrderProductPriceAdjustment!
+  taxErrorMessageText : String
+  taxAddressStreet1Text : String
+  salesOrderTaxTypeId : TaxType!
+  implementorType : String!
+  taxRatePercent : Float!
+  taxAddressStreet2Text : String
+}
+type LanguageProficiencyLevel {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type AccountContact {
+  homePhoneId : ContactPointPhone
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  departmentName : String
+  contactEmailId : ContactPointEmail
+  externalSourceId : String
+  businessPhoneId : ContactPointPhone
+  accountId : Account!
+  otherContactAddressId : ContactPointAddress
+  mailingAddressId : ContactPointAddress
+  faxPhoneId : ContactPointPhone
+  indirectRelationAccountContactId : AccountContact
+  externalRecordId : String
+  assistantPhone : String
+  createdDate : String!
+  reportsToAccountContactId : AccountContact
+  mobilePhoneId : ContactPointPhone
+  title : String
+  lastActivityDate : String
+  contactNote : String
+  assistantName : String
+  implementorType : String!
+  individualId : Individual!
+}
+type OwnershipVerificationType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type PersonalityType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  personalityTypeName : String!
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type DigitalWallet {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type BankType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type PersonEducation {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  educationName : String!
+  externalSourceId : String
+  graduationDate : String!
+  externalRecordId : String
+  createdDate : String!
+  schoolDaysMissedNumber : Int!
+  implementorType : String!
+  individualId : Individual!
+  institutionName : String!
+}
+type AccountBalanceUnitOfMeasure {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  accountBalanceUOMName : String!
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type SupplierType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  supplierTypeName : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type TaxationPolicy {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type EntitlementPolicy {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  description : String!
+  id : String!
+  name : String!
+  externalRecordId : String!
+  createdDate : String!
+  EntitlementProducts : [EntitlementProduct!]!
+  implementorType : String
+}
+type PersonLifeStage {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+  personLifeStageName : String!
+}
+type SalesOrderPaymentSummary {
+  authorizationReversalAmount : Float
+  systemModstamp : String!
+  authorizationAmount : Float
+  unappliedAmount : Float
+  lastModifiedDate : String!
+  paymentAmount : Float
+  id : String!
+  salesOrderId : SalesOrder!
+  name : String!
+  paymentAmountCurrency : Currency
+  PaymentAuthorizations : [PaymentAuthorization!]!
+  appliedAmount : Float
+  externalSourceId : String
+  availableToApplyBalanceAmount : Float
+  capturedAmount : Float
+  externalRecordId : String
+  createdDate : String!
+  paymentMethodId : PaymentMethod!
+  implementorType : String!
+}
+type ContactPoint {
+  partyId : Party
+  primaryFlag : Boolean
+  bestTimeToContactStartTime : String
+  systemModstamp : String!
+  partyRoleId : PartyRole
+  profileLastUpdatedDate : String
+  lastModifiedDate : String!
+  id : String!
+  activeFromDate : String!
+  activeToDate : String
+  profileOccurrenceCount : Int
+  externalSourceId : String
+  profileFirstCreatedDate : String
+  bestTimeToContactEndTime : String
+  externalRecordId : String
+  createdDate : String!
+  forBusinessUse : Boolean!
+  contactPointTypeId : ContactPointTypeId!
+  implementorType : String!
+  isUndeliverable : Boolean
+  forPersonalUse : Boolean!
+}
+type DisposalType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type Household {
+  systemModstamp : String!
+  householdMemberCount : Int
+  businessAccountId : BusinessAccount
+  householdFormedDate : String
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  householdDissolvedDate : String
+  implementorType : String!
+}
+type SalesOrderProductRelatedProduct {
+  childRelationshipTypeId : SalesOrderProductRelationshipType!
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  salesOrderProduct1Id : SalesOrderProduct!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  salesOrderProduct2Id : SalesOrderProduct!
+  parentRelationshipTypeId : SalesOrderProductRelationshipType!
+  implementorType : String!
+}
+type AffiliationGroup {
+  partyId : Party
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  partyTypeId : PartyTypeId!
+  createdDate : String!
+  globalPartyId : GlobalParty
+  noMergeReasonId : PartyNoMergeReason
+  primaryAccountId : Account
+  implementorType : String!
+}
+type CustomerStatus {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type MasterProduct {
+  minimumAdvertisementAmount : Int
+  masterProductId : Product
+  systemModstamp : String!
+  priceChargeTypeId : PriceChargeType!
+  isBackOrdered : Boolean!
+  validForPeriodCount : Int
+  isWorkerDiscountAllowed : Boolean!
+  allowPartialRefund : Boolean
+  isWeightEntryRequired : Boolean!
+  validForPeriodUOMId : ProductValidityTimePeriodUOM
+  isQuantityEntryRequired : Boolean!
+  productStatusId : ProductStatus!
+  isSerialized : Boolean!
+  rewardProgramPointsCount : Int
+  lastModifiedDate : String!
+  description : String!
+  id : String!
+  externalSourceRecordId : String
+  quantityInstallmentPeriodId : QuantityInstallmentPeriod
+  revenueScheduleTypeId : RevenueScheduleType
+  name : String!
+  disposalTypeId : DisposalType
+  primaryProductCategoryId : ProductCategory
+  isAutoProvisionable : Boolean!
+  isCouponRedemptionAllowed : Boolean!
+  isSellableIndependently : Boolean!
+  canUseRevenueSchedule : Boolean!
+  manufacturerName : String
+  isIntellectualPropertyProtected : Boolean
+  modelYear : Int
+  isCustomerDiscountAllowed : Boolean!
+  quantityInstallmentCount : Int
+  requiredDepositAmount : Int
+  externalSourceId : String
+  isPreOrderable : Boolean!
+  requiresInvididualUnitPricing : Boolean!
+  standardWarrantyLengthMonth : Int
+  canUseQuantitySchedule : Boolean!
+  isInstallable : Boolean!
+  isRainCheckAllowed : Boolean!
+  productAssetCvsnActionId : ProductAssetConversionAction!
+  productType : ProductType
+  minimumAdvertisementAmountStartDate : Int
+  maximumOrderQuantityCount : Int
+  isMultipleCouponsAllowed : Boolean!
+  allowCustomerReturn : Boolean
+  stockLedgerValuationAmountCurrency : Currency
+  modelNumber : String
+  mSRPAmount : Int
+  isSellable : Boolean
+  validToDate : String
+  quantityScheduleTypeId : QuantityScheduleType
+  isPartnerDiscountAllowed : Boolean!
+  revenueInstallmentCount : Int
+  productSKU : String!
+  externalRecordId : String
+  minimumAdvertisementAmountCurrency : Currency
+  createdDate : String!
+  isManualPriceEntryRequired : Boolean!
+  isSellableWithoutPrice : Boolean!
+  revenueInstallmentPeriodId : RevenueInstallmentPeriod
+  mSRPAmountCurrency : Currency
+  isReturnable : Boolean!
+  versionNumber : String
+  lotIdentifier : String
+  validFromDate : String
+  stockLedgerValuationAmount : Int
+  implementorType : String!
+  isDynamicBundle : Boolean!
+  isQualityVerificationRequired : Boolean!
+  requiredDepositAmountCurrency : Currency
+  requiredDepositPercentage : Int
+  primarySalesChannelId : SalesChannel
+  isFoodstampPaymentAllowed : Boolean!
+  minimumOrderQuantityCount : Int
+}
+type LegalEntity {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  description : String
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type ShipmentStatus {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  description : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type ContactPointType {
+  systemModstamp : String!
+  optInPriority : Int!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+}
+type MilitaryStatus {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+  militaryStatusName : String!
+}
+type AccountBusinessType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  description : String
+  name : String
+  externalSourceId : String!
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type VoucherDefinition {
+  effectiveDate : String
+  systemModstamp : String!
+  Vouchers : [Voucher!]!
+  expirationDate : String
+  lastModifiedDate : String!
+  description : String
+  productId : Product
+  isActive : Boolean
+  id : String!
+  name : String
+  voucherStatusId : VoucherStatus!
+  expirationPeriodNumber : Int
+  externalSourceId : String!
+  voucherExpirationTypeId : VoucherExpirationType!
+  externalRecordId : String!
+  partnerAccountId : Account
+  createdDate : String!
+  expirationPeriodUOM : TimeUOM
+  faceValueAmount : Float
+  implementorType : String
+  voucherTypeId : VoucherType!
+  discountPercent : Float
+}
+type PersonEmployment {
+  positionText : String!
+  systemModstamp : String!
+  employerAddressLine3 : String
+  endDate : String!
+  startDate : String!
+  lastModifiedDate : String!
+  occupationText : String!
+  id : String!
+  employerName : String!
+  employmentStatusId : EmploymentStatus!
+  employerAddressLine4 : String
+  externalSourceId : String
+  employerAddressLine1 : String!
+  annualIncome : Int!
+  externalRecordId : String
+  createdDate : String!
+  employerCityName : String
+  employerAddressLine2 : String
+  implementorType : String!
+  employerPostalCodeText : String
+  employerContactPointAddressId : ContactPointAddress
+  employerPhoneNumber : String!
+  individualId : Individual!
+}
+type ShipmentProductPriceAdjustment {
+  systemModstamp : String!
+  adjustmentAmount : Float!
+  shipmentProductPriceAdjustmentAmount : Float
+  lastModifiedDate : String!
+  description : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+  adjustmentTaxAmount : Float
+}
+type QuantityInstallmentPeriod {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type LeadRating {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  leadRatingName : String!
+  implementorType : String!
+}
+type Lead {
+  leadStatusId : LeadStatus
+  convertedToAccountId : Account
+  systemModstamp : String!
+  stateProvinceName : String
+  contactPointEmailId : ContactPointEmail
+  photoURL : String
+  faxContactPhoneId : ContactPointPhone
+  partyRoleId : PartyRole!
+  countryName : String
+  convertedDate : String
+  lastModifiedDate : String!
+  description : String
+  phoneContactPointId : ContactPointPhone
+  id : String!
+  convertedToAccountContactId : AccountContact
+  companyName : String
+  mobileContactPhoneId : ContactPointPhone
+  streetName : String
+  leadScore : Int
+  externalSourceId : String
+  city : String
+  geoCodeLatitude : Int
+  leadRating : LeadRating
+  geoCodeLongitude : Int
+  emailBouncedDate : String
+  currencyId : Currency
+  externalRecordId : String
+  partnerAccountId : Account
+  createdDate : String!
+  leadSourceId : LeadSource!
+  lastActivityDate : String
+  annualRevenue : Int
+  emailBouncedReason : String
+  website : String
+  contactAddressId : ContactPointAddress
+  implementorType : String!
+  isConverted : Boolean
+}
+type Currency {
+  systemModstamp : String!
+  iSOCurrencyCodeNumber : Int
+  lastModifiedDate : String!
+  iSOCurrencyCodeAlphanumericText : String
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type SettlementType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  settlementTypeCode : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type EntitlementProduct {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  productId : Product!
+  id : String!
+  entitlementPolicyId : EntitlementPolicy!
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type PaymentCardType {
+  systemModstamp : String!
+  paymentCardTypeName : String
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type ISICCode {
+  iSICCodeName : String!
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type PrepaidCard {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type AttributeSetTranslation {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  attributeSetId : AttributeSet!
+  translatedName : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type SocialFanStatus {
+  systemModstamp : String!
+  socialFanStatusName : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type PartyProfessionalCredential {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String
+  name : String
+  partyProfessionalCredentialTypeId : PartyProfessionalCredentialType
+  externalSourceId : String!
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type ProductCategorySortingRule {
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  productCategorySortingRuleText : String!
+  productCategoryId : ProductCategory!
+  implementorType : String!
+}
+type ContactPointApp {
+  systemModstamp : String!
+  cookieIdText : String
+  lastModifiedDate : String!
+  id : String!
+  softwareAppPriorVerName : String!
+  externalSourceId : String
+  softwareAppVerName : String!
+  externalRecordId : String
+  sDKVerName : String!
+  applicationLoginId : String
+  createdDate : String!
+  implementorType : String!
+}
+type ProductCategory {
+  ProductCategoryAttributeSets : [ProductCategoryAttributeSet!]!
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  activeFromDate : String!
+  activeToDate : String
+  name : String!
+  productCatalogId : ProductCatalog!
+  externalSourceId : String
+  ProductCategoryTranslations : [ProductCategoryTranslation!]!
+  externalRecordId : String
+  createdDate : String!
+  parentCategoryId : ProductCategory
+  implementorType : String!
+}
+type ProductAttribute {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  productId : Product!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type LifeStyleType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  lifeStyleTypeName : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type BundleType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type RefundPaymentAllocation {
+  refundAllocationCommentsDate : String!
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  capturePaymentId : CapturePayment!
+  externalSourceId : String
+  paymentBalanceAmount : Float!
+  refundAllocationCommentText : String
+  externalRecordId : String
+  creditMemoBalanceAmount : Float!
+  refundPaymentAllocationName : String
+  createdDate : String!
+  implementorType : String!
+}
+type BusinessSizeType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  businessSizeTypeName : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type PersonLifeEvent {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  personLifeEventDateTime : String!
+  externalRecordId : String
+  createdDate : String!
+  personLifeEventTypeId : PersonLifeEventType!
+  implementorType : String!
+  individualId : Individual!
+}
+type BusinessActivity {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+  businessActivityName : String!
+}
+type ProductType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type SalesOrderType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type ProductCollateral {
+  systemModstamp : String!
+  uRL : String!
+  lastModifiedDate : String!
+  productId : Product!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type CashTender {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type ContactPointPhone {
+  systemModstamp : String!
+  extensionNumber : String
+  phoneCountryCode : String
+  countryName : String
+  lastModifiedDate : String!
+  id : String!
+  areaCode : String
+  isSMSCapable : Boolean!
+  shortCode : Int
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  primaryPhoneTypeId : PrimaryPhoneType!
+  formattedInternationalPhoneNumber : String!
+  isFaxCapable : Boolean!
+  implementorType : String!
+  formattedE164PhoneNumber : String
+  formattedNationalPhoneNumber : String!
+  telephoneNumber : String!
+}
+type ContactRole {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  description : String
+  name : String!
+  externalSourceId : String!
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type ProductRepairCertification {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  productId : Product!
+  id : String!
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type PaymentCardCategory {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  paymentCardCategoryName : String
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type AssetProductCampaign {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type Pronoun {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+  pronounId : Pronoun
+}
+type StoreAssortment {
+  systemModstamp : String!
+  assortmentId : Assortment!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type PartyHierarchy {
+  systemModstamp : String!
+  partyHierarchyStartDate : String
+  partyHierarchyTypeId : PartyHierarchyType
+  lastModifiedDate : String!
+  id : String
+  name : String
+  externalSourceId : String!
+  externalRecordId : String!
+  createdDate : String!
+  partyHierarchyEndDate : String
+  implementorType : String
+  PartyHierarchyMembers : [PartyHierarchyMember!]!
+}
+type ProductPattern {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type HeightUOM {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  heightUOMName : String!
+  externalSourceId : String
+  externalRecordId : String
+  measurementSystemId : MeasurementSystem
+  createdDate : String!
+  implementorType : String!
+}
+type BankruptcyType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  bankcruptcyTypeName : String!
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type SizeUOM {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  measurementSystemId : MeasurementSystem
+  createdDate : String!
+  implementorType : String!
+}
+type SubscriptionPricingMethod {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type SLAType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  sLATypeName : String!
+  implementorType : String!
+}
+type FreightTerms {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  freightTermsName : String!
+  implementorType : String!
+}
+type SalesOrderProductTax {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  salesOrderProductId : SalesOrderProduct!
+  description : String!
+  id : String!
+  name : String!
+  salesOrderTaxAmount : Float
+  originalSalesOrderProductTaxId : SalesOrderProductTax
+  externalSourceId : String
+  taxEffectiveDate : String
+  taxAddressCityName : String
+  taxAmount : Float!
+  externalRecordId : String
+  createdDate : String!
+  taxErrorMessageText : String
+  taxAddressStreet1Text : String
+  salesOrderTaxTypeId : TaxType!
+  implementorType : String!
+  taxRatePercent : Float!
+  taxAddressStreet2Text : String
+}
+type ProductWarrantyTerm {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  productId : Product!
+  id : String!
+  name : String
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type ResidenceCaptureMethod {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type PaymentGatewayInteractionLog {
+  paymentGatewayInteractionStatusId : PaymentGatewayInteractionStatus!
+  paymentGatewayReferenceNumber : String!
+  paymentGatewayMessageText : String
+  systemModstamp : String!
+  paymentGatewayAuthorizationCode : String!
+  lastModifiedDate : String!
+  paymentGatewayAVSCode : String!
+  id : String!
+  internalResultCodeId : InternalResultCode!
+  paymentGatewayResultId : PaymentGatewayResultCode!
+  internalReferenceNumber : String!
+  externalSourceId : String
+  paymentGatewayInteractionTypeId : PaymentGatewayInteractionType!
+  externalRecordId : String
+  createdDate : String!
+  paymentGatewayInteractionLogName : String!
+  implementorType : String!
+  paymentGatewayDate : String!
+}
+type PartyProfessionalCredentialType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String
+  name : String
+  externalSourceId : String!
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type LifeAttitudeType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  lifeAttitudeTypeName : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type Contact {
+  ContactAccountRelationships : [ContactAccountRelationship!]!
+  systemModstamp : String!
+  firstName : String
+  personName : String!
+  lastModifiedDate : String!
+  externalSourceId : String!
+  primaryMobilePhoneNumber : ContactPointPhone
+  primaryFaxPhoneNumber : ContactPointPhone
+  externalRecordId : String!
+  primaryMailingAddress : ContactPointAddress
+  createdDate : String!
+  primaryBusinessPhoneNumber : ContactPointPhone
+  otherMailingAddress : ContactPointAddress
+  primaryHomePhone : ContactPointPhone
+  ContactContactRelationships : [ContactContactRelationship!]!
+  implementorType : String
+  middleName : String
+  lastName : String
+  individualId : Individual
+}
+type Shipment {
+  systemModstamp : String!
+  giftMessageText : String
+  ShipmentPackages : [ShipmentPackage!]!
+  lastModifiedDate : String!
+  shipmentNumber : String
+  id : String!
+  salesOrderId : SalesOrder
+  isGift : Boolean
+  actualDeliveryDateTime : String
+  salesOrderDeliveryGroupId : SalesOrderDeliveryGroup
+  specialInstructionsText : String
+  externalSourceId : String
+  ShipmentProducts : [ShipmentProduct!]!
+  carrierTrackingNumber : String
+  ShipmentDocuments : [ShipmentDocument!]!
+  externalRecordId : String
+  estimatedDeliveryDateTime : String
+  shipToAddressId : ContactPointAddress
+  createdDate : String!
+  shipmentStatusId : ShipmentStatus
+  carrierId : BusinessAccount
+  implementorType : String!
+  scheduledDeliveryDateTime : String
+  shipmentDate : String!
+  shippingMethodId : ShippingMethod
+}
+type GoodsProduct {
+  minimumAdvertisementAmount : Int
+  masterProductId : Product
+  isMadeToOrder : Boolean!
+  systemModstamp : String!
+  seasonId : ProductSeason
+  weightUOMId : WeightUnitOfMeasure
+  priceChargeTypeId : PriceChargeType!
+  isBackOrdered : Boolean!
+  height : Int
+  validForPeriodCount : Int
+  isWorkerDiscountAllowed : Boolean!
+  allowPartialRefund : Boolean
+  isWeightEntryRequired : Boolean!
+  patternId : ProductPattern
+  requiredCleanupProcessId : ProductCleanupProcess
+  fabricId : ProductFabric
+  validForPeriodUOMId : ProductValidityTimePeriodUOM
+  shelfFacingUnitCount : Int
+  isQuantityEntryRequired : Boolean!
+  requiredHumidityPercentage : Int
+  productStatusId : ProductStatus!
+  isSerialized : Boolean!
+  rewardProgramPointsCount : Int
+  lastModifiedDate : String!
+  description : String!
+  id : String!
+  externalSourceRecordId : String
+  ageId : ProductAge
+  quantityInstallmentPeriodId : QuantityInstallmentPeriod
+  revenueScheduleTypeId : RevenueScheduleType
+  grossWeight : Int
+  name : String!
+  disposalTypeId : DisposalType
+  primaryProductCategoryId : ProductCategory
+  isAutoProvisionable : Boolean!
+  isCouponRedemptionAllowed : Boolean!
+  genderId : ProductGender
+  isSellableIndependently : Boolean!
+  tareWeight : Int
+  canUseRevenueSchedule : Boolean!
+  manufacturerName : String
+  isIntellectualPropertyProtected : Boolean
+  modelYear : Int
+  isCustomerDiscountAllowed : Boolean!
+  colorId : Color
+  quantityInstallmentCount : Int
+  sizeUOMId : SizeUOM
+  requiredDepositAmount : Int
+  externalSourceId : String
+  isPreOrderable : Boolean!
+  requiresInvididualUnitPricing : Boolean!
+  standardWarrantyLengthMonth : Int
+  canUseQuantitySchedule : Boolean!
+  isInstallable : Boolean!
+  depth : Int
+  isRainCheckAllowed : Boolean!
+  productAssetCvsnActionId : ProductAssetConversionAction!
+  requiredTemperatureLowestNumber : Int
+  productType : ProductType
+  minimumAdvertisementAmountStartDate : Int
+  maxHoldingDayCount : Int
+  diameter : Int
+  maximumOrderQuantityCount : Int
+  isMultipleCouponsAllowed : Boolean!
+  isPerishable : Boolean!
+  allowCustomerReturn : Boolean
+  stockLedgerValuationAmountCurrency : Currency
+  modelNumber : String
+  mSRPAmount : Int
+  requiredTemperatureUOMId : TemperatureUOM
+  isSellable : Boolean
+  validToDate : String
+  quantityScheduleTypeId : QuantityScheduleType
+  isPartnerDiscountAllowed : Boolean!
+  revenueInstallmentCount : Int
+  productSKU : String!
+  requiredTemperatureHighestNumber : Int
+  externalRecordId : String
+  minimumAdvertisementAmountCurrency : Currency
+  createdDate : String!
+  netWeight : Int
+  styleId : ProductStyle
+  isManualPriceEntryRequired : Boolean!
+  isSellableWithoutPrice : Boolean!
+  revenueInstallmentPeriodId : RevenueInstallmentPeriod
+  drainedWeight : Int
+  mSRPAmountCurrency : Currency
+  isReturnable : Boolean!
+  versionNumber : String
+  lotIdentifier : String
+  productSecurityRequirementId : ProductSecurityRequirement
+  width : Int
+  environmentRequirementId : ProductEnvironmentRequirement
+  validFromDate : String
+  stockLedgerValuationAmount : Int
+  implementorType : String!
+  isDynamicBundle : Boolean!
+  isQualityVerificationRequired : Boolean!
+  requiresUnitPriceLabel : Boolean!
+  productMayExpand : Boolean!
+  requiredDepositAmountCurrency : Currency
+  requiredDepositPercentage : Int
+  primarySalesChannelId : SalesChannel
+  isFoodstampPaymentAllowed : Boolean!
+  minimumOrderQuantityCount : Int
+}
+type SalesOrderDeliveryGroup {
+  totalPriceAmount : Float!
+  totalDeliveryAdjustmentTaxAmount : Float
+  promisedDate : String
+  systemModstamp : String!
+  giftMessageText : String
+  deliveryInstructionsText : String
+  totalProductTaxAmount : Float
+  totalDeliveryChargeAmount : Float
+  totalDeliveryChargeAmountCurrencyId : Currency
+  lastModifiedDate : String!
+  description : String!
+  originalDeliveryGroupId : SalesOrderDeliveryGroup
+  salesOrderDeliveryStatusId : SalesOrderDeliveryStatus!
+  grandTotalDeliveryAmount : Float
+  id : String!
+  salesOrderId : SalesOrder!
+  name : String!
+  isGift : Boolean
+  externalSourceId : String
+  totalDeliveryAdjustmentAmount : Float
+  totalDeliveryTaxAmount : Float
+  totalTaxAmount : Float
+  totalDeliveryChargeTaxAmount : Float
+  orderDeliveryMethodId : OrderDeliveryMethod!
+  salesOrderDeliveryGroupNumber : String!
+  externalRecordId : String
+  createdDate : String!
+  desiredDeliveryDate : String
+  totalUnitPriceAmount : Float!
+  contactPointAddressId : ContactPointAddress!
+  implementorType : String!
+  totalDeliveryAmountCurrencyId : Currency
+  accountContactId : AccountContact!
+}
+type SellerType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+  sellerTypeName : String!
+}
+type ProductRelationshipType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  parentProductRoleId : ProductRole!
+  externalSourceId : String
+  externalRecordId : String
+  childProductRoleId : ProductRole!
+  createdDate : String!
+  implementorType : String!
+}
+type PaymentAuthorization {
+  paymentGatewayReferenceNumber : String!
+  systemModstamp : String!
+  paymentGatewayId : PaymentGateway!
+  iPAddress : String
+  totalPaymentCaptureAmount : Float!
+  authorizationAmount : Float!
+  expirationDate : String!
+  lastModifiedDate : String!
+  PaymentGatewayAuthorizationLogs : [PaymentGatewayAuthorizationLog!]!
+  id : String!
+  paymentGatewayResultId : PaymentGatewayResultCode!
+  paymentGatewayInternalReferenceNumber : String!
+  salesOrderPaymentSummaryId : SalesOrderPaymentSummary!
+  paymentGatewayInternalResultCodeId : PaymentAuthInternalResultCode!
+  gatewayReferenceDetailsText : String!
+  externalSourceId : String
+  paymentGroupId : PaymentGroup!
+  totalAuthorizationReversalAmount : Float!
+  paymentAuthorizationCommentText : String
+  externalRecordId : String
+  CapturePayments : [CapturePayment!]!
+  createdDate : String!
+  PaymentAuthorizationReversals : [PaymentAuthorizationReversal!]!
+  externalCreatedDate : String!
+  paymentAuthorizationProcessingModeId : AuthorizationProcessingMode!
+  paymentAuthorizationNumber : String!
+  requestDate : String!
+  paymentAuthorizationStatusId : PaymentAuthorizationStatus!
+  availableBalanceAmount : Float!
+  paymentMethodID : PaymentMethod!
+  gatewayResultCodeDescription : String
+  macAddress : String
+  implementorType : String!
+  gatewayAuthorizationCode : String!
+  paymentGatewayDate : String!
+}
+type PartyBusinessLicense {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String
+  name : String
+  licenseExpirationDate : String
+  licenseNumber : String
+  externalSourceId : String!
+  licenseIssuedDate : String
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type LeadSource {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  leadSourceName : String!
+  implementorType : String!
+}
+type Organization {
+  partyId : Party
+  primaryIndustryName : String
+  bankruptcyDate : String
+  sICId : SICCode
+  legalIncorporationJurisdiction : String
+  bankruptcyTypeId : BankruptcyType
+  iSICId : ISICCode
+  legalOrganizationTypeId : LegalOrganizationType
+  legalStatusId : BusinessLegalStatus
+  dunnandBradstreetRating : Int
+  systemModstamp : String!
+  businessSizeTypeId : BusinessSizeType
+  annualRevenueAmount : Int
+  yearStarted : Int
+  openForBusinessDate : String
+  marketCapitalizationAmountCurrency : Currency
+  stockExchangeName : String
+  closedForBusinessDate : String
+  businessName : String!
+  lastModifiedDate : String!
+  description : String
+  id : String!
+  bankruptcyEmergenceDate : String
+  bankruptcyHistoryFlag : Boolean
+  taxId : String
+  dandBCompanyName : String
+  externalSourceId : String
+  annualRevenueAmountCurrency : Currency
+  legalName : String
+  stockTickerSymbol : String
+  fiscalYearEndMonthDate : String
+  marketCapitalizationAmount : Int
+  externalRecordId : String
+  dUNSNumber : String
+  partyTypeId : PartyTypeId!
+  incorporationDate : String
+  companyType : String
+  createdDate : String!
+  ownershipId : BusinessOwnership
+  employeeCount : Int
+  terminationDate : String
+  globalPartyId : GlobalParty
+  noMergeReasonId : PartyNoMergeReason
+  primaryAccountId : Account
+  nAICSId : NAICSCode
+  implementorType : String!
+  annualRevenueCurrencyId : Currency
+}
+type SalesOrderProductAttributeValue {
+  productAttributeValueText : String!
+  systemModstamp : String!
+  productAttributeValueId : ProductAttributeValue!
+  lastModifiedDate : String!
+  salesOrderProductId : SalesOrderProduct!
+  id : String!
+  externalSourceId : String!
+  productAttributeValueURL : Int
+  externalRecordId : String!
+  createdDate : String!
+  productAttributeValueNumber : Int
+  productAttributeValueDate : String
+  implementorType : String
+}
+type BusinessOwnership {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type PartyRelatedParty {
+  partyId : Party!
+  relatedFromDate : String!
+  systemModstamp : String!
+  relatedPartyId : Party!
+  lastModifiedDate : String!
+  partyRelationshipTypeId : PartyRelationshipType!
+  id : String!
+  externalSourceId : String
+  relatedToDate : String!
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type SalesOrderProductGroupType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type PaymentAllocation {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  paymentAllocationName : String
+  externalRecordId : String
+  createdDate : String!
+  externalCreatedDate : String!
+  relatedPaymentAllocationId : PaymentAllocation!
+  implementorType : String!
+}
+type ProductImageTranslation {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  translatedName : String!
+  externalSourceId : String
+  productImageId : ProductImage!
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type ProductRelatedMaterial {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type PartyIdentificationType {
+  implementerType : String
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  identifierTypeName : String!
+  externalSourceId : String
+  parentPartyIdentificationTypeId : PartyIdentificationType
+  externalRecordId : String
+  createdDate : String!
+  partyIdentificationTypeName : String!
+}
+type PaymentInvoiceAllocation {
+  systemModstamp : String!
+  paymentInvoiceAllocationName : String
+  lastModifiedDate : String!
+  id : String!
+  appliedAmount : Float!
+  externalSourceId : String
+  paymentInvoiceApplicationId : PaymentInvoiceApplication
+  invoiceBalanceAmount : Float!
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type SalesOrderProductGroup {
+  salesOrderProductGroupTypeId : SalesOrderProductGroupType!
+  systemModstamp : String!
+  lastModifiedDate : String!
+  description : String!
+  id : String!
+  name : String!
+  SalesOrderProductGroupAssignments : [SalesOrderProductGroupAssignment!]!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type SalesContract {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type ProductTranslation {
+  longDescription : String
+  systemModstamp : String!
+  lastModifiedDate : String!
+  description : String
+  productId : Product!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type CapturePayment {
+  legalEntityId : LegalEntity
+  systemModstamp : String!
+  paymentGatewayId : PaymentGateway!
+  iPAddress : String
+  commentText : String!
+  paymentNumber : String!
+  capturePaymentTypeId : SettlementType!
+  lastModifiedDate : String!
+  paymentAmount : Float!
+  id : String!
+  customerEmailAddress : String
+  paymentAuthorizationId : PaymentAuthorization!
+  name : String!
+  salesOrderPaymentSummaryId : SalesOrderPaymentSummary!
+  latestGatewayReferenceNumber : String!
+  latestGatewayDate : String!
+  balanceAmount : Float!
+  paymentType : PaymentType!
+  externalSourceId : String
+  paymentGroupId : PaymentGroup!
+  amountCurrency : Currency!
+  authorizationProcessingModeId : AuthorizationProcessingMode!
+  customerPhoneNumber : String
+  handlingFeeAmount : Float
+  accountId : Account
+  latestPaymentGatewayMessageText : String
+  paymentEffectiveDate : String!
+  externalRecordId : String
+  paymentTreatmentId : PaymentTreatment!
+  paymentStatusId : PaymentStatus!
+  createdDate : String!
+  externalCreatedDate : String!
+  latestGatewayResultCodeId : PaymentGatewayResultCode!
+  paymentCancellationDate : String!
+  macAddress : String
+  paymentMethodId : PaymentMethod!
+  totalAppliedAmount : Float!
+  latestGatewayInternalResultId : InternalResultCode!
+  netAppliedAmount : Float!
+  implementorType : String!
+  totalUnappliedAmount : Float!
+  isFinalCapture : Boolean
+  latestGatewayInternalReferenceNumber : String!
+}
+type OrganizationMilestone {
+  partyId : Party!
+  systemModstamp : String!
+  lastModifiedDate : String!
+  description : String
+  id : String!
+  externalSourceId : String!
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type PartyHierarchyType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String
+  name : String
+  externalSourceId : String!
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type AttributeSet {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  ProductAttributeValues : [ProductAttributeValue!]!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  AttributeSetTranslations : [AttributeSetTranslation!]!
+  implementorType : String!
+}
+type Individual {
+  partyId : Party
+  hasAlcoholAbuseHistory : Boolean
+  militaryServiceId : MilitaryServiceStatus
+  mainLifeAttitudeTypeId : LifeAttitudeType
+  personHeight : Int
+  mailingName : String
+  surgeriesLast5YearsCount : Int
+  PersonLanguages : [PersonLanguage!]!
+  primaryHobbyId : Hobby
+  doNotTrackUpdateDate : String
+  weddingAnniversaryDate : String
+  systemModstamp : String!
+  minorCitationCount : Int
+  mainDietaryHabitTypeId : DietaryHabitType
+  birthDateDay : Int
+  primaryHouseholdId : Household
+  firstName : String
+  personName : String!
+  photoURL : String
+  isHighRiskHobby : Boolean
+  birthDateMonth : Int
+  doNotProcessFromUpdateDate : String
+  lastModifiedDate : String!
+  doNotMarketFromUpdateDate : String
+  mainPersonalityTypeId : PersonalityType
+  shouldForget : Boolean
+  id : String!
+  consumerCreditScoreProviderName : String
+  genderId : Gender
+  isTobaccoConsume : Boolean
+  webSiteURL : String
+  secondLastName : String
+  orderingName : String
+  hospitalizationsLast5YearsCount : Int
+  dependentCount : Int
+  convictionsCount : Int
+  isGoodDriver : Boolean
+  mainPersonalValueTypeId : PersonalValueType
+  isAlcoholConsumer : Boolean
+  taxBracketRange : String
+  yearlyIncomeRangeId : IncomeRange
+  militaryStatusId : MilitaryStatus
+  childrenCount : Int
+  isGoodStudent : Boolean
+  netWorth : Int
+  personWeight : Int
+  personLifeStageId : PersonLifeStage
+  mainDisabilityTypeId : DisabilityType
+  externalSourceId : String
+  birthDate : String
+  sendIndividualData : Boolean
+  deathDate : String
+  ethnicityId : Ethnicity
+  maritalStatusId : MaritalStatus
+  doExtractMyDataUpdateDate : String
+  birthPlace : String
+  overAgeNumber : Int
+  doForgetMeFromUpdateDate : String
+  mainLifeStyleTypeId : LifeStyleType
+  residenceCaptureMethodId : ResidenceCaptureMethod
+  birthDateYear : Int
+  hasDrugAbuseHistory : Boolean
+  PersonEducations : [PersonEducation!]!
+  personWeightUnitofMeasureId : WeightUnitOfMeasure
+  salutation : String
+  mothersMaidenName : String
+  doNotTrackLocationUpdateDate : String
+  employedSinceDate : String
+  officialName : String
+  isHighRiskOccupation : Boolean
+  externalRecordId : String
+  doNotProfileFromUpdateDate : String
+  PersonEmployments : [PersonEmployment!]!
+  partyTypeId : PartyTypeId!
+  nameSuffix : String
+  createdDate : String!
+  isDrugConsumer : Boolean
+  isHomeOwner : Boolean
+  globalPartyId : GlobalParty
+  religionId : Religion
+  deathPlace : String
+  influencerRating : Int
+  yearlyIncomeCurrencyId : Currency
+  noMergeReasonId : PartyNoMergeReason
+  primaryAccountId : Account
+  consumerCreditScore : Int
+  yearlyIncome : Int
+  PersonLifeEvents : [PersonLifeEvent!]!
+  preferredName : String
+  personHeightUnitofMeasureId : HeightUOM
+  occupationTypeId : Occupation
+  doNotProcessReasonId : DoNotProcessReason
+  implementorType : String!
+  pronounId : Pronoun
+  majorCitationCount : Int
+  middleName : String
+  residenceCountryName : String
+  lastName : String
+  PersonTrainings : [PersonTraining!]!
+  occupation : String
+  currentEmployerName : String
+}
+type ContactPointSocial {
+  socialFanStatusId : SocialFanStatus!
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  profilePictureURL : String!
+  externalSourceId : String
+  followersCount : Int!
+  socialHandleId : String!
+  externalRecordId : String
+  socialHandleName : String!
+  createdDate : String!
+  socialNetworkProviderId : SocialNetworkProvider!
+  implementorType : String!
+}
+type AccountRole {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  externalSourceId : String!
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type AgeRange {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  description : String
+  id : String!
+  name : String!
+  fromAgeNumber : Int
+  toAgeNumber : Int
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementerTypeName : String
+}
+type PersonalAccountOwner {
+  systemModstamp : String!
+  firstName : String
+  personName : String!
+  lastModifiedDate : String!
+  externalSourceId : String!
+  primaryMobilePhoneNumber : ContactPointPhone
+  primaryFaxPhoneNumber : ContactPointPhone
+  externalRecordId : String!
+  primaryMailingAddress : ContactPointAddress
+  createdDate : String!
+  primaryBusinessPhoneNumber : ContactPointPhone
+  otherMailingAddress : ContactPointAddress
+  primaryHomePhone : ContactPointPhone
+  implementorType : String
+  personalAccountId : PersonalAccount
+  middleName : String
+  lastName : String
+  individualId : Individual
+}
+type PartyRole {
+  partyId : Party!
+  systemModstamp : String!
+  Leads : [Lead!]!
+  partyRoleId : PartyRole
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type Ethnicity {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  ethnicityName : String!
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type Religion {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  religionName : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type AttributeValue {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  defaultImageId : Image
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+  AttributeValueTranslations : [AttributeValueTranslation!]!
+}
+type PartyRelationshipRole {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  partyRelationshipRoleName : String!
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type PaymentScheduleItem {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  paymentId : Payment!
+  id : String!
+  externalRecordId : String!
+  createdDate : String!
+  paymentScheduleStatus : String
+  implementorType : String
+}
+type PaymentInvoiceApplicationType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type ProductAttributeSet {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  productId : Product!
+  id : String!
+  attributeSetId : AttributeSet!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type InventoryProductCampaign {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type BusinessAccount {
+  partyId : Party
+  parentAccountId : Account
+  ninetyDayBalanceAmountCurrency : Currency
+  salesPhoneId : ContactPointPhone
+  systemModstamp : String!
+  useAsSalesAccount : Boolean!
+  balanceAmountLimitCurrency : Currency
+  assignTerritoryFlag : Boolean
+  defaultFreightTermsId : FreightTerms
+  autoPayEnabledFlag : Boolean
+  autoPaymentAmount : Int
+  partyRoleId : PartyRole
+  useAsServiceAccount : Boolean!
+  useAsBillingAccount : Boolean!
+  lastModifiedDate : String!
+  description : String
+  autoPaymentMethodId : PaymentMethod
+  id : String!
+  balanceUnitOfMeasureCurrencyId : Currency
+  sLAExpirationDate : String
+  name : String!
+  autoPaymentAmountCurrency : Currency
+  balanceAmount : Int
+  Households : [Household!]!
+  billContactAddressId : ContactPointAddress
+  externalSourceId : String!
+  balanceAmountCurrency : Currency
+  thirtyDayBalanceAmount : Int
+  sixtyDayBalanceAmount : Int
+  shippingAddressId : ContactPointAddress
+  useAsShippingAccount : Boolean!
+  sixtyDayBalanceAmountCurrency : Currency
+  orderDeliveryMethodId : OrderDeliveryMethod
+  faxPhoneId : ContactPointPhone
+  externalRecordId : String!
+  balanceUnitOfMeasureId : AccountBalanceUnitOfMeasure
+  balanceAmountLimit : Int
+  holdStatusReasonId : AccountHoldStatusReason
+  createdDate : String!
+  shippingPhoneid : ContactPointPhone
+  primarySalesContactPointId : ContactPoint
+  lastActivityDate : String
+  sLATypeId : SLAType
+  shippingEmailId : ContactPointEmail
+  accountBusinessTypeId : AccountBusinessType!
+  AffiliateGroups : [AffiliateGroup!]!
+  contactPointLocation : ContactPointLocation
+  implementorType : String
+  thirtyDayBalanceAmountCurrency : Currency
+  billDeliveryMethodId : BillDeliveryMethod
+  accountNumber : String!
+  ninetyDayBalanceAmount : Int
+}
+type PaymentMethodStatus {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  paymentMethodStatusName : String
+  implementorType : String!
+}
+type NAICSCode {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  nAICSCodeName : String!
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type MaritalStatus {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  maritalStatusName : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type PaymentCard {
+  creditCardExpired : Boolean!
+  systemModstamp : String!
+  cardToken : String!
+  issueNumber : String!
+  billToCity : String
+  lastModifiedDate : String!
+  paymentCardTypeId : PaymentCardType!
+  id : String!
+  maskedNumber : String!
+  name : String!
+  companyName : String
+  cardHolderName : String!
+  externalSourceId : String
+  numberLastDigits : String!
+  externalRecordId : String
+  derivedCardTypeCode : String
+  createdDate : String!
+  billToFirstName : String
+  billToStreet : String
+  expirationYear : String!
+  billToStreet2 : String
+  implementorType : String!
+  expirationMonth : String!
+  billToLastName : String
+}
+type PaymentApplication {
+  effectiveDate : String!
+  systemModstamp : String!
+  commentText : String
+  hasBeenUnapplied : Boolean
+  lastModifiedDate : String!
+  paymentId : Payment!
+  id : String!
+  name : String!
+  appliedAmount : Float!
+  externalSourceId : String
+  paymentBalanceAmount : Float!
+  appliedDate : String!
+  externalRecordId : String
+  createdDate : String!
+  externalCreatedDate : String!
+  unappliedDate : String!
+  implementorType : String!
+  paymentApplicationTypeId : PaymentApplicationTypeId!
+}
+type PaymentGateway {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  paymentGatewayProviderId : PaymentGatewayProvider!
+  externalSourceId : String
+  paymentGatewayCommentText : String
+  paymentGatewayStatusId : PaymentGatewayStatus!
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+  systemCredentialId : SystemCredential
+}
+type PartyBoardCertification {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String
+  externalSourceId : String!
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type PaymentGatewayPaymentLog {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  paymentId : Payment!
+  id : String!
+  name : String
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type Supplier {
+  partyId : Party
+  satisfactionEthicsRank : Int
+  systemModstamp : String!
+  contractInvoiceAccuracyRate : Float
+  satisfactionWeightPercent : Float
+  contractOnTimeDeliveryRate : Int
+  lastModifiedDate : String!
+  id : String!
+  activeFromDate : String!
+  activeToDate : String
+  competitiveWarrantyRank : Int
+  competitiveMarketingRank : Int
+  contractDeliveryCorrectnessRate : Int
+  competitiveWeightScore : Int
+  contractSLAIssueRate : Int
+  competitiveWeightPercent : Float
+  supplierScore : Int
+  externalSourceId : String
+  competitiveProductPriceRank : Int
+  contractWeightPercent : Float
+  supplierSpend : Int
+  externalRecordId : String
+  createdDate : String!
+  satisfactionTechnicalSupportRank : Int
+  contractWeightScore : Int
+  satisfactionCustomerServiceRank : Int
+  satisfactionWeightScore : Int
+  contractSourcingCycleDays : Int
+  supplierType : SupplierType
+  isCarrier : Boolean
+  implementorType : String!
+  contractProductReturnRate : Int
+  competitiveCostAvoidanceRank : Int
+  contractProductQualityRate : Int
+  contractBudgetCostRate : Int
+}
+type GatewayProviderPaymentMethodType {
+  paymentMethodTypeId : PaymentMethodTypeId!
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String
+  paymentGatewayProviderId : PaymentGatewayProvider!
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type ProductCategoryTranslation {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  translatedName : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  productCategoryId : ProductCategory!
+  implementorType : String!
+}
+type PaymentInvoiceApplication {
+  paymentInvoiceApplicationTypeId : PaymentInvoiceApplicationType
+  systemModstamp : String!
+  PaymentInvoiceAllocations : [PaymentInvoiceAllocation!]!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  invoiceBalanceAmount : Float!
+  externalRecordId : String
+  createdDate : String!
+  paymentInvoiceApplicationName : String
+  implementorType : String!
+}
+type ProductCleanupProcess {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type ProductAssetConversionAction {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type ContactPointLocation {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type PartyWebAddress {
+  partyId : Party!
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String
+  webSiteURL : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type ProductServiceCampaign {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  productId : Product!
+  id : String!
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type ContactAccountRelationship {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  externalSourceId : String!
+  contactId : Contact
+  ContactAccountRelationshipRoles : [ContactAccountRelationshipRole!]!
+  accountId : Account!
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type DisabilityType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  disabilityTypeName : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type Hobby {
+  systemModstamp : String!
+  hobbyName : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type PaymentStatus {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type ProductImage {
+  systemModstamp : String!
+  imageGroupId : ImageGroup
+  isDefaultImage : Boolean!
+  lastModifiedDate : String!
+  productId : Product!
+  id : String!
+  externalSourceId : String
+  ProductImageTranslations : [ProductImageTranslation!]!
+  imageId : Image!
+  imageViewType : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type SalesOrderPriceAdjustment {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  salesOrderId : SalesOrder!
+  externalSourceId : String
+  totalAdjustmentTaxAmount : Float
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type EmailFrequency {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type BankAccountType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type Coupon {
+  systemModstamp : String!
+  primaryScanCodeLabel : String
+  isReturnCoupon : Boolean
+  customerId : Party
+  lastModifiedDate : String!
+  id : String!
+  couponDefinitionId : CouponDefinition
+  secondaryScanCodeLabel : String
+  couponStatusId : CouponStatus
+  scanCode : String
+  externalSourceId : String
+  couponCode : String
+  returnCouponReason : String
+  externalRecordId : String
+  discountAmount : Int
+  createdDate : String!
+  isValid : Boolean
+  implementorType : String!
+  discountPercentage : Int
+}
+type SalesOrderProductNote {
+  systemModstamp : String!
+  noteText : String!
+  lastModifiedDate : String!
+  description : String
+  id : String!
+  externalSourceId : String
+  salesOrderProduct : SalesOrderProduct!
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type AccountRelationshipRole {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  description : String
+  name : String!
+  externalSourceId : String!
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type SalesChannel {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  description : String!
+  id : String!
+  name : String!
+  salesChannelTypeId : SalesChannelType!
+  externalSourceId : String!
+  salesChannelNumber : String!
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String!
+}
+type PersonTraining {
+  systemModstamp : String!
+  personTrainingId : PersonTraining
+  lastModifiedDate : String!
+  id : String!
+  name : String
+  externalSourceId : String
+  trainingTierNm : String!
+  trainingPointTotalNumber : Int!
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+  individualId : Individual!
+}
+type ShippingMethod {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  description : String!
+  productId : Product!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type SystemCredential {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type SalesOrderProduct {
+  totalRecurringPriceAmount : Float
+  SalesOrderProductIdentifications : [SalesOrderProductIdentification!]!
+  totalLineAdjustmentAmount : Float
+  totalPriceAmount : Float!
+  provisioningDate : String
+  listPriceAmountCurrency : Currency
+  totalLineAmount : Float
+  promisedDate : String
+  systemModstamp : String!
+  recurringPriceAmount : Float
+  giftOrderMessageText : String
+  totalProductTaxAmount : Float
+  shippingTaxAmountCurrency : Currency
+  lineAdjustmentSubTotalAmount : Float
+  originalOrderProductId : SalesOrderProduct
+  commentText : String
+  orderProductNumber : String!
+  salesOrderProductReasonId : SalesOrderProductReason
+  quantityOrderedUOMId : QuantityUOM!
+  lastModifiedDate : String!
+  description : String!
+  orderedQuantity : Int!
+  productId : Product!
+  SalesOrderProductNotes : [SalesOrderProductNote!]!
+  unitPriceAmount : Float
+  segmentIndexId : Int
+  requestedStartDate : String
+  id : String!
+  subscriptionRenewalMonthQuantity : Int
+  salesOrderId : SalesOrder!
+  orderManualAdjustmentSubTotalAmount : Float
+  allocatedQuantity : Int
+  isGift : Boolean
+  subscriptionTermUnitId : ProductValidityTimePeriodUOM
+  deliveryTaxAmount : Float
+  SalesOrderProductPriceAdjustments : [SalesOrderProductPriceAdjustment!]!
+  isBonusProduct : Boolean
+  SalesOrderProductAttributeValues : [SalesOrderProductAttributeValue!]!
+  salesOrderProductAdjustedTaxAmount : Float
+  salesOrderDeliveryGroupId : SalesOrderDeliveryGroup
+  totalAdjustmentAmount : Float
+  SalesOrderProductRelatedProducts : [SalesOrderProductRelatedProduct!]!
+  totalListPriceAmount : Float
+  salesOrderProductStatusId : SalesOrderProductStatus!
+  quantityFulfilled : Int
+  externalSourceId : String
+  totalAdjustmentTaxAmount : Float
+  orderAdjustmentSubTotalAmount : Float
+  subscriptionTermQuantity : Int
+  totalDistributedAdjustmentTaxAmount : Float
+  totalDistributedTaxAmount : Float
+  totalTaxAmount : Float
+  adjustedDeliveryTaxAmount : Float
+  listPriceAmount : Float
+  externalRecordId : String
+  isBundleRoot : Boolean
+  unitTaxAmountCurrency : Currency
+  sellerAccountId : Account
+  createdDate : String!
+  listPriceQuantityUOMId : QuantityUOM!
+  totalDistributedAdjustmentAmount : Float
+  handlingCostAmountCurrency : Currency
+  segmentIndexNumber : Int
+  totalUnitPriceAmount : Float
+  unitPriceAmountCurrency : Currency
+  listPriceTermUOMId : ProductValidityTimePeriodUOM
+  SalesOrderProductTaxes : [SalesOrderProductTax!]!
+  availableQuantity : Int
+  requestedEndDate : String
+  implementorType : String!
+  giftRecipientTelephoneNumber : String
+  discountAmountCurrency : Currency
+  isAutomaticallyRenewed : Boolean
+  totalManualAdjustmentAmount : Float
+  shippingCostAmountCurrency : Currency
+}
+type Party {
+  partyId : Party
+  Sellers : [Seller!]!
+  systemModstamp : String!
+  lastModifiedDate : String!
+  PartyIdentifications : [PartyIdentification!]!
+  id : String!
+  OrganizationMilestones : [OrganizationMilestone!]!
+  externalSourceId : String
+  ContactPoints : [ContactPoint!]!
+  Competitors : [Competitor!]!
+  externalRecordId : String
+  partyTypeId : PartyTypeId!
+  createdDate : String!
+  PartyAdditionalNames : [PartyAdditionalName!]!
+  PartyRoles : [PartyRole!]!
+  globalPartyId : GlobalParty
+  TaxExemptionCertificates : [TaxExemptionCertificate!]!
+  Customers : [Customer!]!
+  PartyWebAddresses : [PartyWebAddress!]!
+  Suppliers : [Supplier!]!
+  noMergeReasonId : PartyNoMergeReason
+  primaryAccountId : Account
+  implementorType : String!
+}
+type SalesModel {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  description : String!
+  id : String!
+  name : String!
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+  ProductSalesModels : [ProductSalesModel!]!
+}
+type PaymentGatewayAuthReversalLog {
+  systemModstamp : String!
+  paymentAuthorizationReversalId : PaymentAuthorizationReversal
+  lastModifiedDate : String!
+  id : String!
+  name : String
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type PrepaidCardType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type AttributeTranslation {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  translatedName : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type KeywordSearchSortingRule {
+  id : String!
+  createdDate : String!
+  keywordSearchSortingRuleText : String!
+  systemModstamp : String!
+}
+type ContactAccountRelationshipRole {
+  systemModstamp : String!
+  contactAccountRelationshipId : ContactAccountRelationship
+  lastModifiedDate : String!
+  contactRoleId : ContactRole!
+  externalSourceId : String!
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type Customer {
+  partyId : Party
+  systemModstamp : String!
+  netPromoterScore : Int
+  customerSatisfactionScore : Int
+  prospectRatingId : ProspectRating
+  totalBookingsAmountCurrency : Currency
+  totalProfitContributionAmountCurrency : Currency
+  lastModifiedDate : String!
+  CustomerStatusHistories : [CustomerStatusHistory!]!
+  id : String!
+  marketingEmailResponseRate : Float
+  externalSourceId : String
+  totalContractedAmount : Int
+  totalProfitContributionAmount : Int
+  customerNumber : String
+  externalRecordId : String
+  createdDate : String!
+  last24MonthsNewRevenueAmountCurrency : Currency
+  churnScore : Int
+  originatingCustomerSource : String
+  totalContractedAmountCurrency : Currency
+  customerStatusId : CustomerStatus!
+  totalLifeTimeValue : Float
+  totalBookingsAmount : Int
+  implementorType : String!
+  last24MonthsNewRevenueAmount : Int
+  last12MonthsNewRevenueAmount : Int
+  last12MonthsSupportCallCount : Int
+  last12MonthsNewRevenueAmountCurrency : Currency
+}
+type ProductSortingRuleType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type AttributeSetAttribute {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type UncategorizedPartyCreationReason {
+  systemModstamp : String!
+  uncategorizedPartyCreationReasonName : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type CreditTender {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  accountId : Account
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type PersonalAccount {
+  partyId : Party
+  parentAccountId : Account
+  ninetyDayBalanceAmountCurrency : Currency
+  salesPhoneId : ContactPointPhone
+  systemModstamp : String!
+  useAsSalesAccount : Boolean!
+  balanceAmountLimitCurrency : Currency
+  assignTerritoryFlag : Boolean
+  defaultFreightTermsId : FreightTerms
+  autoPayEnabledFlag : Boolean
+  autoPaymentAmount : Int
+  partyRoleId : PartyRole
+  useAsServiceAccount : Boolean!
+  useAsBillingAccount : Boolean!
+  lastModifiedDate : String!
+  description : String
+  autoPaymentMethodId : PaymentMethod
+  id : String!
+  balanceUnitOfMeasureCurrencyId : Currency
+  sLAExpirationDate : String
+  name : String!
+  autoPaymentAmountCurrency : Currency
+  balanceAmount : Int
+  billContactAddressId : ContactPointAddress
+  PersonalAccountOwners : [PersonalAccountOwner!]!
+  externalSourceId : String!
+  balanceAmountCurrency : Currency
+  thirtyDayBalanceAmount : Int
+  sixtyDayBalanceAmount : Int
+  shippingAddressId : ContactPointAddress
+  useAsShippingAccount : Boolean!
+  sixtyDayBalanceAmountCurrency : Currency
+  orderDeliveryMethodId : OrderDeliveryMethod
+  faxPhoneId : ContactPointPhone
+  externalRecordId : String!
+  balanceUnitOfMeasureId : AccountBalanceUnitOfMeasure
+  balanceAmountLimit : Int
+  holdStatusReasonId : AccountHoldStatusReason
+  createdDate : String!
+  shippingPhoneid : ContactPointPhone
+  primarySalesContactPointId : ContactPoint
+  lastActivityDate : String
+  sLATypeId : SLAType
+  shippingEmailId : ContactPointEmail
+  accountBusinessTypeId : AccountBusinessType!
+  contactPointLocation : ContactPointLocation
+  implementorType : String
+  thirtyDayBalanceAmountCurrency : Currency
+  billDeliveryMethodId : BillDeliveryMethod
+  accountNumber : String!
+  ninetyDayBalanceAmount : Int
+}
+type PaymentApplicationLevel {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type PersonLifeEventType {
+  systemModstamp : String!
+  personLifeEventTypeName : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type ServiceRelatedProduct {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type PrimaryPhoneType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type PaymentScheduleStatus {
+  retryCount : Int
+  paymentTriggerName : String
+  systemModstamp : String!
+  processedAmount : Float
+  lastModifiedDate : String!
+  paymentId : Payment!
+  paymentScheduleId : PaymentSchedule
+  id : String!
+  name : String
+  requestedAmount : Float
+  paymentGatewayPaymentLogId : PaymentGatewayPaymentLog
+  paymentScheduleItemId : PaymentScheduleItem
+  targetPaymentDate : String
+  retryIntervalInDaysNumber : Int
+  currencyId : Currency
+  commentsText : String
+  retryIntervalTime : String
+  externalRecordId : String!
+  createdDate : String!
+  paymentProcessingMessageText : String
+  paymentMethodId : PaymentMethod
+  paymentAccountId : Account
+  implementorType : String
+  declinedPaymentCount : Int
+}
+type PaymentPolicyStatus {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type ProductEnvironmentRequirement {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type QuantityUOM {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type RefundCreditMemoAllocation {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  creditMemoId : CreditMemo!
+  implementorType : String!
+}
+type OrderReason {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type CreditTenderType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type SalesOrderProductStatus {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type ShipmentDocument {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  shipmentId : Shipment!
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type MeasurementSystem {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String!
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type PriceAdjustmentGroup {
+  systemModstamp : String!
+  adjustmentAmount : Float
+  isManuallyApplied : Boolean
+  lastModifiedDate : String!
+  description : String
+  originalPriceAdjustmentGroupId : PriceAdjustmentGroup
+  reasonText : String
+  id : String!
+  name : String!
+  couponId : Coupon
+  externalSourceId : String
+  salesOrderPriceAdjustmentTypeID : SalesOrderPriceAdjustmentType!
+  externalRecordId : String
+  createdDate : String!
+  priceAdjustmentMethodId : PriceAdjustmentMethod!
+  implementorType : String!
+}
+type ProductAdverseEffect {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  externalSourceId : String!
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type CheckTender {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type SalesOrderProductGroupAssignment {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  salesOrderProductId : SalesOrderProduct!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  salesOrderProductGroupId : SalesOrderProductGroup!
+  implementorType : String!
+}
+type PrivateContact {
+  systemModstamp : String!
+  firstName : String
+  personName : String!
+  lastModifiedDate : String!
+  externalSourceId : String!
+  primaryMobilePhoneNumber : ContactPointPhone
+  primaryFaxPhoneNumber : ContactPointPhone
+  accountId : Account!
+  externalRecordId : String!
+  primaryMailingAddress : ContactPointAddress
+  createdDate : String!
+  primaryBusinessPhoneNumber : ContactPointPhone
+  otherMailingAddress : ContactPointAddress
+  primaryHomePhone : ContactPointPhone
+  implementorType : String
+  middleName : String
+  lastName : String
+  individualId : Individual
+}
+type SalesOrderSystemStatus {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  salesOrderSystemStatusCode : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type BundleProduct {
+  minimumAdvertisementAmount : Int
+  masterProductId : Product
+  systemModstamp : String!
+  weightUOMId : WeightUnitOfMeasure
+  priceChargeTypeId : PriceChargeType!
+  isBackOrdered : Boolean!
+  validForPeriodCount : Int
+  isWorkerDiscountAllowed : Boolean!
+  allowPartialRefund : Boolean
+  isWeightEntryRequired : Boolean!
+  validForPeriodUOMId : ProductValidityTimePeriodUOM
+  isQuantityEntryRequired : Boolean!
+  productStatusId : ProductStatus!
+  isSerialized : Boolean!
+  expectedWasteCount : Int
+  quantityCount : Int
+  rewardProgramPointsCount : Int
+  lastModifiedDate : String!
+  description : String!
+  id : String!
+  externalSourceRecordId : String
+  quantityInstallmentPeriodId : QuantityInstallmentPeriod
+  revenueScheduleTypeId : RevenueScheduleType
+  name : String!
+  disposalTypeId : DisposalType
+  primaryProductCategoryId : ProductCategory
+  isAutoProvisionable : Boolean!
+  isCouponRedemptionAllowed : Boolean!
+  quantityUnitOfMeasureId : QuantityUOM
+  isSellableIndependently : Boolean!
+  tareWeight : Int
+  bundledProductsSubstitutional : Boolean!
+  canUseRevenueSchedule : Boolean!
+  bundledProductsDecidedAtUse : Boolean
+  manufacturerName : String
+  isIntellectualPropertyProtected : Boolean
+  modelYear : Int
+  isCustomerDiscountAllowed : Boolean!
+  bundleTypeId : BundleType!
+  quantityInstallmentCount : Int
+  requiredDepositAmount : Int
+  externalSourceId : String
+  isPreOrderable : Boolean!
+  requiresInvididualUnitPricing : Boolean!
+  standardWarrantyLengthMonth : Int
+  canUseQuantitySchedule : Boolean!
+  isInstallable : Boolean!
+  isRainCheckAllowed : Boolean!
+  productAssetCvsnActionId : ProductAssetConversionAction!
+  productType : ProductType
+  minimumAdvertisementAmountStartDate : Int
+  maximumOrderQuantityCount : Int
+  isMultipleCouponsAllowed : Boolean!
+  bundledProductsDecidesAvailability : Boolean
+  allowCustomerReturn : Boolean
+  stockLedgerValuationAmountCurrency : Currency
+  modelNumber : String
+  mSRPAmount : Int
+  isSellable : Boolean
+  validToDate : String
+  quantityScheduleTypeId : QuantityScheduleType
+  isPartnerDiscountAllowed : Boolean!
+  revenueInstallmentCount : Int
+  productSKU : String!
+  externalRecordId : String
+  minimumAdvertisementAmountCurrency : Currency
+  createdDate : String!
+  isManualPriceEntryRequired : Boolean!
+  isSellableWithoutPrice : Boolean!
+  revenueInstallmentPeriodId : RevenueInstallmentPeriod
+  mSRPAmountCurrency : Currency
+  isReturnable : Boolean!
+  versionNumber : String
+  bundledProductsSoldTogether : Boolean!
+  lotIdentifier : String
+  validFromDate : String
+  stockLedgerValuationAmount : Int
+  implementorType : String!
+  isDynamicBundle : Boolean!
+  isQualityVerificationRequired : Boolean!
+  requiredDepositAmountCurrency : Currency
+  requiredDepositPercentage : Int
+  primarySalesChannelId : SalesChannel
+  isFoodstampPaymentAllowed : Boolean!
+  minimumOrderQuantityCount : Int
+}
+type IncomeRange {
+  systemModstamp : String!
+  incomeRangeName : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type SalesChannelType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type SalesOrderConfirmationStatus {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type ServiceType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type SalesOrderProductIdentification {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  salesOrderProductId : SalesOrderProduct!
+  id : String!
+  name : String!
+  externalSourceId : String
+  partyIdentificationtId : PartyIdentification!
+  externalRecordId : String
+  createdDate : String!
+  contactPointAddressId : ContactPointAddress!
+  implementorType : String!
+}
+type AccountTerritory {
+  systemModstamp : String!
+  endEffectiveDate : String!
+  firstEffectiveDate : String!
+  lastModifiedDate : String!
+  description : String
+  id : String!
+  externalSourceId : String!
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type PriceAdjustmentMethod {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type PartyAdditionalNameType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type Voucher {
+  effectiveDate : String
+  systemModstamp : String!
+  expirationDate : String
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  voucherStatusId : VoucherStatus!
+  externalSourceId : String!
+  notesText : String
+  voucherDefinitionId : VoucherDefinition!
+  externalRecordId : String!
+  createdDate : String!
+  faceValueAmount : Float
+  implementorType : String
+  voucherTypeId : VoucherType!
+  usedDate : String
+  discountPercent : Float
+  voucherCodeText : String
+}
+type CustomerStatusHistory {
+  startDateTime : String!
+  systemModstamp : String!
+  customerId : Customer
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  endDateTIme : String!
+  createdDate : String!
+  customerStatusId : CustomerStatus!
+  implementorType : String!
+}
+type PaymentGatewayInteractionType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  description : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type Account {
+  partyId : Party
+  parentAccountId : Account
+  ninetyDayBalanceAmountCurrency : Currency
+  salesPhoneId : ContactPointPhone
+  systemModstamp : String!
+  useAsSalesAccount : Boolean!
+  balanceAmountLimitCurrency : Currency
+  assignTerritoryFlag : Boolean
+  defaultFreightTermsId : FreightTerms
+  autoPayEnabledFlag : Boolean
+  autoPaymentAmount : Int
+  partyRoleId : PartyRole
+  useAsServiceAccount : Boolean!
+  useAsBillingAccount : Boolean!
+  lastModifiedDate : String!
+  description : String
+  autoPaymentMethodId : PaymentMethod
+  AccountServiceEntitlements : [AccountServiceEntitlement!]!
+  AccountRelationships : [AccountRelationship!]!
+  id : String!
+  balanceUnitOfMeasureCurrencyId : Currency
+  sLAExpirationDate : String
+  name : String!
+  AccountContacts : [AccountContact!]!
+  autoPaymentAmountCurrency : Currency
+  PaymentMethods : [PaymentMethod!]!
+  balanceAmount : Int
+  billContactAddressId : ContactPointAddress
+  externalSourceId : String
+  balanceAmountCurrency : Currency
+  thirtyDayBalanceAmount : Int
+  sixtyDayBalanceAmount : Int
+  shippingAddressId : ContactPointAddress
+  useAsShippingAccount : Boolean!
+  sixtyDayBalanceAmountCurrency : Currency
+  orderDeliveryMethodId : OrderDeliveryMethod
+  faxPhoneId : ContactPointPhone
+  externalRecordId : String
+  balanceUnitOfMeasureId : AccountBalanceUnitOfMeasure
+  balanceAmountLimit : Int
+  holdStatusReasonId : AccountHoldStatusReason
+  createdDate : String!
+  shippingPhoneid : ContactPointPhone
+  primarySalesContactPointId : ContactPoint
+  lastActivityDate : String
+  sLATypeId : SLAType
+  shippingEmailId : ContactPointEmail
+  accountBusinessTypeId : AccountBusinessType!
+  contactPointLocation : ContactPointLocation
+  implementorType : String!
+  thirtyDayBalanceAmountCurrency : Currency
+  billDeliveryMethodId : BillDeliveryMethod
+  accountNumber : String!
+  ninetyDayBalanceAmount : Int
+  AccountBrands : [AccountBrand!]!
+}
+type AssortmentProduct {
+  systemModstamp : String!
+  assortmentId : Assortment!
+  lastModifiedDate : String!
+  productId : Product!
+  id : String!
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type PaymentTreatment {
+  paymentTreatmentStatusId : PaymentTreatmentStatus!
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  paymentPolicyId : PaymentPolicy!
+  paymentTreatmentMethodId : PaymentTreatmentMethod!
+  externalRecordId : String
+  createdDate : String!
+  internalBusinessUnitLegalEntityId : LegalEntity!
+  paymentTreatmentName : String
+  implementorType : String!
+}
+type TaxType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type HousingType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String!
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type PaymentAuthorizationStatus {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type PartyAdditionalName {
+  partyId : Party!
+  systemModstamp : String!
+  organizationName : String
+  endEffectiveDate : String
+  suffixName : String
+  firstName : String
+  individualFullName : String
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  secondLastName : String
+  partyAdditionalNameTypeId : PartyAdditionalNameType!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  beginEffectiveDate : String
+  implementorType : String!
+  middleName : String
+  organizationLegalName : String
+  lastName : String
+}
+type DigitalWalletType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type AccountServiceEntitlement {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String!
+  accountId : Account!
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type PaymentGatewayResultCode {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  description : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type SalesOrderProductRelationshipType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type PaymentTreatmentStatus {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type SalesOrderDeliveryStatus {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type PartyHierarchyMember {
+  partyId : Party
+  systemModstamp : String!
+  lastModifiedDate : String!
+  membershipStartDate : String
+  id : String
+  name : String
+  externalSourceId : String!
+  partyHierarchyId : PartyHierarchy
+  membershipEndDate : String
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type CouponUseType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String!
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type ProductStatus {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type ContactContactRelationship {
+  contact2Id : Contact!
+  systemModstamp : String!
+  lastModifiedDate : String!
+  externalSourceId : String!
+  contact1Id : Contact
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type PersonName {
+  systemModstamp : String!
+  endEffectiveDate : String
+  suffixName : String
+  firstName : String
+  lastModifiedDate : String!
+  id : String!
+  secondLastName : String
+  externalSourceId : String!
+  fullName : String
+  externalRecordId : String!
+  createdDate : String!
+  beginEffectiveDate : String
+  implementorType : String
+  middleName : String
+  lastName : String
+}
+type RefundAllocationType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type PersonLanguage {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  spokenProficiencyLevelId : LanguageProficiencyLevel
+  externalRecordId : String
+  createdDate : String!
+  writtenProficiencyLevelId : LanguageProficiencyLevel
+  implementorType : String!
+  individualId : Individual!
+}
+type ProductAge {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type SalesOrderSegment {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type GlobalParty {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type DoNotProcessReason {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  doNotProcessReasonName : String!
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type ProductCategoryAttributeSet {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  attributeSetId : AttributeSet!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  productCategoryId : ProductCategory!
+  implementorType : String!
+}
+type PartyNoMergeReason {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type CouponDefinition {
+  redmTimePeriodCount : Int
+  partyId : Party
+  validFromDateTime : String
+  systemModstamp : String!
+  expirationDate : String
+  lastModifiedDate : String!
+  productId : Product
+  id : String!
+  name : String
+  maxRedmPerTimePeriodCount : Int
+  Coupons : [Coupon!]!
+  validToDateTime : String
+  isCustomerSpecific : Boolean
+  externalSourceId : String
+  isProductSpecific : Boolean
+  maxRedmPerCodeCount : Int
+  maxRedmPerCustCount : Int
+  externalRecordId : String
+  couponUseTypeId : CouponUseType!
+  createdDate : String!
+  hasCaseSensitiveCode : Boolean
+  implementorType : String!
+  couponCount : Int
+}
+type SalesOrderPriceAdjustmentType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type RefundAllocation {
+  effectiveDate : String!
+  systemModstamp : String!
+  hasBeenUnapplied : Boolean
+  lastModifiedDate : String!
+  id : String!
+  allocatedAmount : Float!
+  refundBalanceAmount : Float!
+  refundAllocationName : String
+  externalSourceId : String
+  relatedRefundAllocationId : RefundAllocation!
+  appliedDate : String!
+  refundPaymentId : RefundPayment!
+  externalRecordId : String
+  createdDate : String!
+  externalCreatedDate : String!
+  unappliedDate : String!
+  implementorType : String!
+  refundAllocationTypeId : RefundAllocationTypeId!
+}
+type PaymentPolicyTreatmentSelection {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type ProductRole {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type PaymentGatewayProvider {
+  GatewayProviderPaymentMethodTypes : [GatewayProviderPaymentMethodType!]!
+  systemModstamp : String!
+  apexAdapterClassName : String!
+  lastModifiedDate : String!
+  id : String!
+  paymentGatewayProviderCommentText : String
+  externalSourceId : String
+  paymentGatewayProviderName : String!
+  developerName : String!
+  externalRecordId : String
+  createdDate : String!
+  namespacePrefixText : String!
+  implementorType : String!
+}
+type MarketingRelatedProduct {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type WebSite {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type ProductSecurityRequirement {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type AccountHoldStatusReason {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  accountHoldStatusReasonName : String!
+  implementorType : String!
+}
+type AuthorizationProcessingMode {
+  AlternatePayments : [AlternatePayment!]!
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type TaxExemptionCertificate {
+  partyId : Party!
+  exemptionBeginDate : String!
+  systemModstamp : String!
+  exemptionCertificateNumber : String!
+  lastModifiedDate : String!
+  description : String
+  id : String!
+  issuerName : String!
+  externalSourceId : String!
+  externalRecordId : String!
+  createdDate : String!
+  exemptionEndDate : String!
+  implementorType : String
+}
+type Color {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type ProductFabric {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type BillDeliveryMethod {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  billDeliveryMethodName : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type IndividualScore {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String
+  externalSourceId : String!
+  contactPointId : ContactPoint
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+  individualId : Individual!
+}
+type ProductGender {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type ProductCatalog {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  ProductCatalogTranslations : [ProductCatalogTranslation!]!
+  id : String!
+  activeFromDate : String!
+  activeToDate : String
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  ProductCategories : [ProductCategory!]!
+  createdDate : String!
+  implementorType : String!
+}
+type InternalBusinessUnitType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type CouponStatus {
+  systemModstamp : String!
+  couponStatusName : String
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type VoucherExpirationType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String!
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type Seller {
+  partyId : Party
+  communityParticipationCount : Int
+  sellerTypeId : SellerType
+  systemModstamp : String!
+  eventParticipationCount : Int
+  customerSatisfactionScore : Int
+  trainingCertificactionCount : Int
+  opportunityInvolvementCount : Int
+  marketingDevelopmentAmountCurrency : Currency
+  marketingDevelopmentAmount : Int
+  lastModifiedDate : String!
+  salesAmountCurrency : Currency
+  documentationDownloadCount : Int
+  id : String!
+  activeFromDate : String!
+  activeToDate : String
+  trialParticipationCount : Int
+  creditRating : Int
+  inventoryValueAmountCurrency : Currency
+  satisfactionScore : Int
+  sellerTierId : SellerTier
+  salesAmount : Int
+  externalSourceId : String
+  opportunityWinRate : Float
+  productReturnRate : Float
+  leadGenerationCount : Int
+  demonstationsGivenCount : Int
+  averageConvertedLeadAmountCurrency : Currency
+  inventoryValueAmount : Int
+  externalRecordId : String
+  createdDate : String!
+  majorPostSaleSupportNeeded : Boolean
+  trainingParticipationCount : Int
+  newCustomerAcquisitionCount : Int
+  successStoryCount : Int
+  systemLoginCount : Int
+  implementorType : String!
+  jointBusinessPlanExist : Boolean
+  averageConvertedLeadAmount : Int
+  estimatedPartnerGrossMargin : Float
+}
+type ProductCategoryProduct {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  productId : Product!
+  id : String!
+  activeFromDateTime : String!
+  externalSourceId : String
+  externalRecordId : String
+  activeToDateTime : String
+  createdDate : String!
+  productCategoryId : ProductCategory!
+  implementorType : String!
+}
+type BankTransferTender {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type VoucherType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String!
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type ProductFeature {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  productId : Product!
+  id : String!
+  name : String!
+  maximumOptionCount : Int
+  externalRecordId : String!
+  createdDate : String!
+  productCategoryId : ProductCategory
+  minimumOptionCount : Int
+  implementorType : String
+}
+type PartyAward {
+  awardIssuerName : String
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String
+  externalSourceId : String!
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type ProductServiceCampaignItem {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  productServiceCampaignId : ProductServiceCampaign!
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type AccountParticipantRole {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  description : String
+  name : String!
+  externalSourceId : String!
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type Payment {
+  legalEntityId : LegalEntity
+  systemModstamp : String!
+  paymentGatewayId : PaymentGateway!
+  iPAddress : String
+  commentText : String!
+  PaymentApplications : [PaymentApplication!]!
+  paymentNumber : String!
+  lastModifiedDate : String!
+  paymentAmount : Float!
+  id : String!
+  customerEmailAddress : String
+  name : String!
+  salesOrderPaymentSummaryId : SalesOrderPaymentSummary!
+  latestGatewayReferenceNumber : String!
+  latestGatewayDate : String!
+  balanceAmount : Float!
+  paymentType : PaymentType!
+  externalSourceId : String
+  paymentGroupId : PaymentGroup!
+  amountCurrency : Currency!
+  authorizationProcessingModeId : AuthorizationProcessingMode!
+  customerPhoneNumber : String
+  accountId : Account
+  PaymentGatewayPaymentLogs : [PaymentGatewayPaymentLog!]!
+  latestPaymentGatewayMessageText : String
+  paymentEffectiveDate : String!
+  externalRecordId : String
+  paymentTreatmentId : PaymentTreatment!
+  paymentStatusId : PaymentStatus!
+  createdDate : String!
+  externalCreatedDate : String!
+  latestGatewayResultCodeId : PaymentGatewayResultCode!
+  paymentCancellationDate : String!
+  macAddress : String
+  paymentMethodId : PaymentMethod!
+  totalAppliedAmount : Float!
+  latestGatewayInternalResultId : InternalResultCode!
+  netAppliedAmount : Float!
+  implementorType : String!
+  totalUnappliedAmount : Float!
+  latestGatewayInternalReferenceNumber : String!
+}
+type AlternatePayment {
+  systemModstamp : String!
+  paymentGatewayTokenText : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String!
+  authorizationProcessingModeId : AuthorizationProcessingMode
+  externalRecordId : String!
+  createdDate : String!
+  emailAddress : String!
+  implementorType : String
+}
+type PopulationType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String!
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type SalesOrder {
+  totalPendingBillingAmount : Float
+  shipToEmailId : ContactPointEmail
+  salesOrderStatusId : SalesOrderStatus!
+  salesOrderTypeId : SalesOrderType!
+  systemModstamp : String!
+  sellerId : Seller
+  priceCalculationStatusMessageText : String
+  confirmationRecipientEmailText : String!
+  originalOrderId : SalesOrder
+  orderEndDate : String
+  isTaxExempt : Boolean
+  SalesOrderDeliveryGroups : [SalesOrderDeliveryGroup!]!
+  totalProductTaxAmount : Float
+  isAlerted : Boolean
+  isAnonymous : Boolean
+  lastModifiedDate : String!
+  description : String!
+  totalProductAmountCurrencyId : Currency!
+  requestedStartDate : String!
+  id : String!
+  name : String!
+  isClosed : Boolean
+  totalDeliveryAmount : Float
+  SalesOrderChangeLogs : [SalesOrderChangeLog!]!
+  billToAccountId : Account!
+  totalCancelledBillingAmount : Float
+  totalAdjustedDeliveryTaxAmount : Float
+  shipToContactId : Contact
+  totalDeliveryFeeCurrencyId : Currency!
+  totalAdjustmentAmount : Float
+  renewalUpliftRate : Float
+  totalProductAmount : Float
+  totalAmountCurrency : Currency
+  externalSourceId : String
+  totalAdjustmentTaxAmount : Float
+  filedDate : String
+  soldToCustomerId : Customer
+  purchaseOrderNumber : String
+  totalDeliveryFeeAmount : Float
+  orderinsuranceAmountCurrency : Currency
+  totalDeliveryTaxAmount : Float
+  totalTaxAmount : Float
+  salesChannelId : SalesChannel!
+  orderNumber : String!
+  billtoEmailId : ContactPointEmail
+  totalBookingAmount : Float
+  adjustedProductTaxAmount : Float
+  SalesOrderPaymentSummaries : [SalesOrderPaymentSummary!]!
+  promiseDate : String
+  totalProductTaxAmountCurrencyId : Currency!
+  currencyCode : Currency!
+  externalRecordId : String
+  taxationPolicy : String!
+  billToContactId : Contact
+  isHistoricalOnly : Boolean
+  shipToAddressId : ContactPointAddress
+  createdDate : String!
+  billToAddressId : ContactPointAddress!
+  grandTotalAmount : Float
+  isContracted : Boolean
+  canBillNow : Boolean
+  SalesOrderProducts : [SalesOrderProduct!]!
+  adjustedTotalProductAmount : Float
+  billtoPhoneNumberId : ContactPointPhone
+  orderStartDate : String
+  isSuspended : Boolean
+  purchaseOrderDate : String
+  salesOrderSystemStatusId : SalesOrderSystemStatus
+  SalesOrderPriceAdjustments : [SalesOrderPriceAdjustment!]!
+  implementorType : String!
+  salesOrderConfirmationStatusId : SalesOrderStatus!
+  totalDeliveryAmountCurrencyId : Currency!
+  billingDayOfTheMonth : Int
+}
+type SellerTier {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String
+  externalSourceId : String!
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type VoucherStatus {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String!
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type RevenueScheduleType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type ProductAttributeValue {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  productId : Product!
+  id : String!
+  customAttributeValue : String
+  name : String!
+  attributeSetId : AttributeSet!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+  attributeValueId : AttributeValue
+}
+type ProductServiceCampaignItemType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type RefundPayment {
+  legalEntityId : LegalEntity
+  systemModstamp : String!
+  paymentGatewayId : PaymentGateway!
+  iPAddress : String
+  commentText : String!
+  paymentNumber : String!
+  lastModifiedDate : String!
+  paymentAmount : Float!
+  id : String!
+  customerEmailAddress : String
+  name : String!
+  salesOrderPaymentSummaryId : SalesOrderPaymentSummary!
+  latestGatewayReferenceNumber : String!
+  latestGatewayDate : String!
+  balanceAmount : Float!
+  paymentType : PaymentType!
+  externalSourceId : String
+  paymentGroupId : PaymentGroup!
+  amountCurrency : Currency!
+  authorizationProcessingModeId : AuthorizationProcessingMode!
+  customerPhoneNumber : String
+  accountId : Account
+  latestPaymentGatewayMessageText : String
+  paymentEffectiveDate : String!
+  externalRecordId : String
+  paymentTreatmentId : PaymentTreatment!
+  paymentStatusId : PaymentStatus!
+  createdDate : String!
+  RefundAllocations : [RefundAllocation!]!
+  externalCreatedDate : String!
+  latestGatewayResultCodeId : PaymentGatewayResultCode!
+  paymentCancellationDate : String!
+  macAddress : String
+  paymentMethodId : PaymentMethod!
+  totalAppliedAmount : Float!
+  latestGatewayInternalResultId : InternalResultCode!
+  netAppliedAmount : Float!
+  implementorType : String!
+  totalUnappliedAmount : Float!
+  latestGatewayInternalReferenceNumber : String!
+}
+type SICCode {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  sICCodeName : String!
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type PaymentMethod {
+  partyId : Party
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  paymentMethodType : PaymentMethodType!
+  externalSourceId : String
+  paymentMethodStatus : PaymentMethodStatus!
+  accountID : Account!
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type OrderDeliveryMethod {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  productId : Product!
+  id : String!
+  name : String!
+  externalSourceId : String!
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String!
+}
+type SalesOrderProductReasonCategory {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type PartyTaxExemptionCertificate {
+  systemModstamp : String!
+  taxExemptionEndDate : String
+  lastModifiedDate : String!
+  id : String
+  taxExemptionStartDate : String
+  name : String
+  taxExemptionJurisdictionName : String
+  externalSourceId : String!
+  taxExemptionCertificateNumber : String
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type ProductCatalogTranslation {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  productCatalogId : ProductCatalog!
+  translatedName : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type EmploymentStatus {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type ShipmentPackage {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  shipmentId : Shipment!
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+  shipmentProductDescription : String!
+  shipmentProductCount : Int!
+}
+type CreditMemo {
+  creditMemoEffectiveDate : String!
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  creditMemoName : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type PartyRelationshipType {
+  systemModstamp : String!
+  isBidirectional : Boolean!
+  partyRoleId : PartyRelationshipRole!
+  lastModifiedDate : String!
+  id : String!
+  relatedPartyRoleId : PartyRelationshipRole!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type PriceChargeType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type BrandGrade {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type PaymentType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type SalesOrderProductPriceAdjustment {
+  systemModstamp : String!
+  adjustmentAmount : Float!
+  salesOrderPriceAdjustmentId : SalesOrderPriceAdjustment
+  salesOrderProductPriceAdjustmentTypeId : SalesOrderProductPriceAdjuType!
+  lastModifiedDate : String!
+  salesOrderProductId : SalesOrderProduct!
+  description : String!
+  id : String!
+  salesOrderProductPriceAdjustmentAmount : Float
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+  adjustmentTaxAmount : Float
+}
+type Occupation {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+  occupationName : String!
+}
+type BusinessBrand {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  externalSourceId : String!
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type AccountContactRoleType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type CustomerType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  customerTypeName : String!
+  implementorType : String!
+}
+type PaymentGatewayInteractionStatus {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type ProspectRating {
+  prospectRatingName : String!
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type ProductSalesModel {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  productId : Product!
+  id : String!
+  salesModelId : SalesModel!
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type AccountType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  accountTypeName : String!
+  implementorType : String!
+}
+type ContactPointEmail {
+  emailLatestBounceReasonText : String!
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  emailMailBox : String!
+  emailDomain : String!
+  emailAddress : String!
+  implementorType : String!
+  emailLatestBounceDateTime : String!
+}
+type UncategorizedParty {
+  partyId : Party
+  systemModstamp : String!
+  originalSourceSystemId : String
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  uncategorizedPartyLabel : String!
+  externalRecordId : String
+  originalSourceRecordId : String
+  partyTypeId : PartyTypeId!
+  createdDate : String!
+  globalPartyId : GlobalParty
+  noMergeReasonId : PartyNoMergeReason
+  primaryAccountId : Account
+  implementorType : String!
+  creationReasonId : UncategorizedPartyCreationReason
+}
+type TradeInTender {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type DietaryHabitType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  dietaryHabitTypeName : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type ProductValidityTimePeriodUOM {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  pluralName : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type ShipmentProductPriceAdjustmentTax {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  shipmentProductPriceAdjustmentId : ShipmentProductPriceAdjustment!
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type Gender {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type TradeInProductType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type BusinessLegalStatus {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type PaymentSchedule {
+  canceledAmount : Float
+  totalRequestedAmount : Float
+  systemModstamp : String!
+  availableRequestedAmount : Float
+  PaymentScheduleStatuses : [PaymentScheduleStatus!]!
+  lastModifiedDate : String!
+  id : String!
+  salesOrderId : SalesOrder
+  currencyId : Currency
+  paymentScheduleStatusId : PaymentScheduleStatus
+  commentsText : String
+  defaultPaymentAccountId : Account
+  externalRecordId : String!
+  defaultPaymentMethodId : PaymentMethod
+  createdDate : String!
+  totalProcessedAmount : Float
+  remainingToBeProcessedAmount : Float
+  implementorType : String
+  totalLineRequestedAmount : Float
+}
+type ProductSeason {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type QuantityScheduleType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type SalesOrderChangeLog {
+  systemModstamp : String!
+  changeSalesOrderProductId : SalesOrderProduct!
+  lastModifiedDate : String!
+  relatedSalesOrderId : SalesOrder!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  changeSalesOrderId : SalesOrder!
+  createdDate : String!
+  implementorType : String!
+  relatedSalesOrderProductId : SalesOrderProduct!
+}
+type Assortment {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  description : String!
+  id : String!
+  name : String!
+  externalRecordId : String!
+  createdDate : String!
+  AssortmentProducts : [AssortmentProduct!]!
+  implementorType : String
+}
+type ImageGroup {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type AccountParticipant {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  externalSourceId : String!
+  externalRecordId : String!
+  createdDate : String!
+  accountParticipantRoleId : AccountParticipantRole!
+  implementorType : String
+}
+type SalesStoreProduct {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type RevenueInstallmentPeriod {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type PartyIdentification {
+  partyId : Party!
+  expiryDate : String
+  verifiedDate : String
+  systemModstamp : String!
+  issuedByAuthority : String
+  partyRoleId : PartyRole
+  issuedAtLocation : String
+  issuedDate : String
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  identificationNumber : String!
+  externalRecordId : String
+  partyIdentificationTypeId : PartyIdentificationType!
+  createdDate : String!
+  implementorType : String!
+}
+type MilitaryServiceStatus {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type PaymentAuthInternalResultCode {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type ProductRelatedComponent {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type AffiliateGroup {
+  systemModstamp : String!
+  businessAccountId : BusinessAccount
+  lastModifiedDate : String!
+  externalSourceId : String!
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+}
+type TemperatureUOM {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  measurementSystemId : MeasurementSystem
+  createdDate : String!
+  implementorType : String!
+}
+type PaymentGroup {
+  systemModstamp : String!
+  totalReversalAmount : Float!
+  totalAuthorizationAmount : Float!
+  lastModifiedDate : String!
+  id : String!
+  PaymentAuthorizations : [PaymentAuthorization!]!
+  externalSourceId : String
+  totalPaymentAmount : Float!
+  externalRecordId : String
+  paymentGroupNumber : String!
+  createdDate : String!
+  implementorType : String!
+}
+type Tax {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  salesOrderTaxAmount : Float
+  externalSourceId : String
+  taxAddressCityName : String
+  externalRecordId : String
+  createdDate : String!
+  taxErrorMessageText : String
+  taxAddressStreet1Text : String
+  salesOrderTaxTypeId : TaxType!
+  implementorType : String!
+  taxRatePercent : Float!
+  taxAddressStreet2Text : String
+}
+type SalesOrderChangeType {
+  systemModstamp : String!
+  salesOrderChangeTypeCode : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type WeightUnitOfMeasure {
+  systemModstamp : String!
+  weightUOMName : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  measurementSystemId : MeasurementSystem
+  createdDate : String!
+  implementorType : String!
+}
+type PartyType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type TimeUOM {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  name : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type BankCheckType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type PaymentGatewayAuthorizationLog {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  paymentAuthorizationId : PaymentAuthorization!
+  name : String
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type PersonalValueType {
+  systemModstamp : String!
+  personalValueTypeName : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type LegalOrganizationType {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String!
+  legalOrganizationTypeName : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+type PartyAccreditation {
+  systemModstamp : String!
+  lastModifiedDate : String!
+  id : String
+  externalSourceId : String!
+  externalRecordId : String!
+  createdDate : String!
+  implementorType : String
+  accreditationIssuerName : String
+}
+type PaymentMethodType {
+  systemModstamp : String!
+  typeDescription : String
+  maxPerPeriodAmountCurrency : Currency
+  mediaType : String
+  lastModifiedDate : String!
+  maxPerPeriodAmount : Float
+  typeRequiredIdentification : String
+  id : String!
+  name : String
+  externalSourceId : String
+  useMinimumAgeYear : Int
+  externalRecordId : String
+  maxTransactionAmount : Float
+  createdDate : String!
+  maxPerPeriodTransactionCount : Int
+  implementorType : String!
+}
+type ContactPointAddress {
+  isUsedForShipping : Boolean
+  systemModstamp : String!
+  stateProvinceName : String
+  addressLine3 : String
+  countryName : String
+  postalCodeText : String
+  lastModifiedDate : String!
+  id : String!
+  contactPhoneId : ContactPointPhone
+  geoLatitude : Int
+  addressLine2 : String
+  externalSourceId : String
+  addressLine4 : String
+  geoLongitude : Int
+  externalRecordId : String
+  createdDate : String!
+  addressLine1 : String
+  cityName : String
+  implementorType : String!
+  isUsedForBilling : Boolean
+}
+type LeadStatus {
+  systemModstamp : String!
+  leadStatusName : String!
+  lastModifiedDate : String!
+  id : String!
+  externalSourceId : String
+  externalRecordId : String
+  createdDate : String!
+  implementorType : String!
+}
+union RefundAllocationTypeId = RefundCreditMemoAllocation | RefundPaymentAllocation
+union PaymentType = CapturePayment | RefundPayment
+union PaymentApplicationTypeId = PaymentCreditMemoApplication | PaymentInvoiceApplication
+union ProductType = BundleProduct | GoodsProduct | MasterProduct | ServiceProduct
+union PaymentMethodType = AlternatePayment | BankTransferTender | CashTender | CheckTender | Coupon | CreditTender | DigitalWallet | PaymentCard | PrepaidCard | TradeInTender | Voucher
+union PaymentMethodTypeId = AlternatePayment | BankTransferTender | CashTender | CheckTender | Coupon | CreditTender | DigitalWallet | PaymentCard | PrepaidCard | TradeInTender | Voucher
+union PartyTypeId = AffiliationGroup | Individual | Organization | UncategorizedParty
+union ContactPointTypeId = ContactPointApp | ContactPointEmail | ContactPointLocation | ContactPointPhone | ContactPointSocial | PartyWebAddress | ContactPointAddress

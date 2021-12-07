@@ -1,30 +1,35 @@
 {
-  "@context": "http://cloudinformationmodel.org/context.jsonld",
-  "@id": "PartySubjectArea",
-  "@type": "SubjectArea",
-  "version": "0.1",
-  "name": "Party",
-  "description": "This defines who you have trading relationships with and how. For example: customer & supplier along with their phone number and email.",
-  "entityGroups": [
-    {
-      "@id": "AccountEntityGroup",
-      "name": "Account"
-    },
-    {
-      "@id": "ContactPointEntityGroup",
-      "name": "Contact Point"
-    },
-    {
-      "@id": "PartyRoleEntityGroup",
-      "name": "Party Role"
-    },
-    {
-      "@id": "LeadEntityGroup",
-      "name": "Lead"
-    },
-    {
-      "@id": "PartyEntityGroup",
-      "name": "Party"
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "aeaf98cc-53c1-300a-827f-57f4ce0bf764",
+    "@type": "SubjectArea",
+    "version": "1.0.0",
+    "name": "Party",
+    "description": "This defines who you have trading relationships with and how. For example: customer & supplier along with their phone number and email.",
+    "entityGroups": [
+{
+        "@id": "c259430a-f8e6-4424-90d0-4ebaea1eb4e5",
+        "name": "Party Setup",
+        "description": "Example entities include: Party Type, Party Hierarchy Type, and Party Role Type"
+    },{
+        "@id": "6680f1ae-f989-3ea5-b45d-56523b974aaf",
+        "name": "Party Role",
+        "description": "Example Entities included: Party Role, Buyer Role, Actor Role, Customer Role"
+    },{
+        "@id": "e9a6ff42-359c-4fcf-b8b8-20d779961b8b",
+        "name": "Party Configuration",
+        "description": "Example entities include: TBD"
+    },{
+        "@id": "a590de2e-9a41-38cd-8cdd-cf5747b21906",
+        "name": "Party",
+        "description": "Example Entities included: Organization, Individual, Affiliate Group, Uncategorized"
+    },{
+        "@id": "5a3343dd-1d48-3c56-8e02-90b1140ff987",
+        "name": "Lead",
+        "description": "Example Entities included: Lead, Lead Status, Lead Source"
+    },{
+        "@id": "e27d6099-7332-32f7-b53b-43016847daa2",
+        "name": "Contact Point",
+        "description": "Example Entities included: Contact Point, Contact Consent, Contact Channel"
     }
-  ]
+    ]
 }

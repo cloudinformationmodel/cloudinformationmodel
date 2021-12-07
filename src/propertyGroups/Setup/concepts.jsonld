@@ -1,37 +1,33 @@
 {
-  "@context": "http://cloudinformationmodel.org/context.jsonld",
-  "@id": "SetupPropertyGroup",
-  "name": "Setup Property Group",
-  "@type": "PropertyGroup",
-  "version": "0.1",
-  "propertyConcepts": [
-    {
-      "@id": "useAsSalesAccount",
-      "@type": "Property",
-      "description": "Should this account be used for sales purposes",
-      "name": "Use As Sales Account",
-      "range": "DataType"
-    },
-    {
-      "@id": "useAsBillingAccount",
-      "@type": "Property",
-      "description": "Should this account be used for billing purposes",
-      "name": "Use As Billing Account",
-      "range": "DataType"
-    },
-    {
-      "@id": "useAsShippingAccount",
-      "@type": "Property",
-      "description": "Should this account be used for shipping purposes",
-      "name": "Use As Shipping Account",
-      "range": "DataType"
-    },
-    {
-      "@id": "useAsServiceAccount",
-      "@type": "Property",
-      "description": "Should this account be used for service purposes",
-      "name": "Use As Service Account",
-      "range": "DataType"
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "SetupPropertyGroup",
+    "name": "Setup Property Group",
+    "@type": "PropertyGroup",
+    "propertyConcepts": [
+{
+        "@id": "useAsBillingAccount",
+        "@type": "Property",
+        "description": "Should this account be used for billing purposes",
+        "name": "Use As Billing Account",
+        "range": "DataType"
+    },{
+        "@id": "useAsSalesAccount",
+        "@type": "Property",
+        "description": "Should this account be used for sales purposes",
+        "name": "Use As Sales Account",
+        "range": "DataType"
+    },{
+        "@id": "useAsServiceAccount",
+        "@type": "Property",
+        "description": "Should this account be used for service purposes",
+        "name": "Use As Service Account",
+        "range": "DataType"
+    },{
+        "@id": "useAsShippingAccount",
+        "@type": "Property",
+        "description": "Should this account be used for shipping purposes",
+        "name": "Use As Shipping Account",
+        "range": "DataType"
     }
-  ]
+    ]
 }

@@ -1,16 +1,15 @@
 {
-  "@context": "http://cloudinformationmodel.org/context.jsonld",
-  "@id": "UsagePropertyGroup",
-  "name": "Usage Property Group",
-  "@type": "PropertyGroup",
-  "version": "0.1",
-  "propertyConcepts": [
-    {
-      "@id": "isIntellectualPropertyProtected",
-      "@type": "Property",
-      "description": "Is knowledge about the products intellectual property sensitive or not",
-      "name": "Is Intellectual Property Protected",
-      "range": "DataType"
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "UsagePropertyGroup",
+    "name": "Usage Property Group",
+    "@type": "PropertyGroup",
+    "propertyConcepts": [
+{
+        "@id": "isIntellectualPropertyProtected",
+        "@type": "Property",
+        "description": "Is knowledge about the products intellectual property sensitive or not",
+        "name": "Is Intellectual Property Protected",
+        "range": "DataType"
     }
-  ]
+    ]
 }

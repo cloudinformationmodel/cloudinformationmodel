@@ -1,0 +1,33 @@
+{
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "ContactPropertyGroup",
+    "name": "Contact Property Group",
+    "@type": "PropertyGroup",
+    "propertyConcepts": [
+{
+        "@id": "personName",
+        "@type": "Property",
+        "description": "The full name of a person e.g. Jane Mary-Ann Doe  Extra Type Info",
+        "name": "Person Name",
+        "range": "DataType"
+    },{
+        "@id": "contact1Id",
+        "@type": "Property",
+        "description": "The first of two contacts in a relationship",
+        "name": "Contact 1",
+        "range": "Contact"
+    },{
+        "@id": "contact2Id",
+        "@type": "Property",
+        "description": "The second of two contacts in a relationship",
+        "name": "Contact 2",
+        "range": "Contact"
+    },{
+        "@id": "personalAccountId",
+        "@type": "Property",
+        "description": "The Personal Account which is owned by the person described by the Personal Account Owner record",
+        "name": "Personal Account",
+        "range": "PersonalAccount"
+    }
+    ]
+}

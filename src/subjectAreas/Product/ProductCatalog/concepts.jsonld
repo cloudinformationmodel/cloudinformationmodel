@@ -1,147 +1,123 @@
 {
-  "@context": "http://cloudinformationmodel.org/context.jsonld",
-  "@id": "ProductCatalogEntityGroup",
-  "name": "Product Catalog",
-  "@type": "EntityGroup",
-  "version": "0.1",
-  "subjectArea": {
-    "@id": "ProductSubjectArea"
-  },
-  "description": "Example Entities included: Product Catalog, Product Catalog Category, Product Catalog Assignment",
-  "classConcepts": [
-    {
-      "@id": "ProductCatalog",
-      "name": "Product Catalog",
-      "@type": "Class",
-      "description": "A catalog used for a certain business process e.g. inventory, merchandizing"
-    },
-    {
-      "@id": "ProductCatalogTranslation",
-      "name": "Product Catalog Translation",
-      "@type": "Class",
-      "description": "Translated attributes for a product catalog"
-    },
-    {
-      "@id": "ProductCategory",
-      "name": "Product Category",
-      "@type": "Class",
-      "description": "A product may consist of many categories e.g. shoes, tshirts"
-    },
-    {
-      "@id": "ProductCategoryTranslation",
-      "name": "Product Category Translation",
-      "@type": "Class",
-      "description": "Translated attributes for a product category"
-    },
-    {
-      "@id": "ProductCategoryProduct",
-      "name": "Product Category Product",
-      "@type": "Class",
-      "description": "Assignment of product to categories e.g. the Nikedas shoe assigned to shoe and running categories"
-    },
-    {
-      "@id": "ProductCategoryAttributeSet",
-      "name": "Product Category Attribute Set",
-      "@type": "Class",
-      "description": "Assignment of an Attribute Set to a Product Category e.g. the Shoe attribute set assigned to the Shoes category"
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "a64560e2-3d84-3d23-b739-9671c5234a9b",
+    "@type": "EntityGroup",
+    "name": "ProductCatalog",
+    "version": "1.0.0",
+    "subjectArea": "fe440b10-667c-39ce-bace-1e463e65282e",
+    "description": "Example Entities included: Product Catalog, Product Catalog Category, Product Catalog Assignment",
+    "classConcepts": [
+{
+        "@id": "ProductCatalog",
+        "name": "Product Catalog",
+        "@type": "Class",
+        "description": "A catalog used for a certain business process e.g. inventory, merchandising"
+    },{
+        "@id": "ProductCatalogTranslation",
+        "name": "Product Catalog Translation",
+        "@type": "Class",
+        "description": "Translated attributes for a product catalog"
+    },{
+        "@id": "ProductCategory",
+        "name": "Product Category",
+        "@type": "Class",
+        "description": "A catalog consist of many categories e.g. shoes, tshirts"
+    },{
+        "@id": "ProductCategoryAttributeSet",
+        "name": "Product Category Attribute Set",
+        "@type": "Class",
+        "description": "Assignment of an Attribute Set to a Product Category e.g. the Shoe attribute set assigned to the Shoes category"
+    },{
+        "@id": "ProductCategoryProduct",
+        "name": "Product Category Product",
+        "@type": "Class",
+        "description": "Assignment of product to categories e.g. the Nikedas shoe assigned to shoe and running categories"
+    },{
+        "@id": "ProductCategoryTranslation",
+        "name": "Product Category Translation",
+        "@type": "Class",
+        "description": "Translated attributes for a product category"
     }
-  ],
-  "propertyConcepts": [
-    {
-      "@id": "productCatalog",
-      "@type": "Property",
-      "domain": [
-        "ProductCatalogTranslation",
-        "ProductCategory"
-      ]
-    },
-    {
-      "@id": "activeToDateTime",
-      "@type": "Property",
-      "domain": [
-        "ProductCategoryProduct"
-      ]
-    },
-    {
-      "@id": "product",
-      "@type": "Property",
-      "domain": [
-        "ProductCategoryProduct"
-      ]
-    },
-    {
-      "@id": "name",
-      "@type": "Property",
-      "domain": [
-        "ProductCatalog",
-        "ProductCategory"
-      ]
-    },
-    {
-      "@id": "attributeSet",
-      "@type": "Property",
-      "domain": [
-        "ProductCategoryAttributeSet"
-      ]
-    },
-    {
-      "@id": "activeFromDateTime",
-      "@type": "Property",
-      "domain": [
-        "ProductCategoryProduct"
-      ]
-    },
-    {
-      "@id": "translatedName",
-      "@type": "Property",
-      "domain": [
-        "ProductCategoryTranslation",
-        "ProductCatalogTranslation"
-      ]
-    },
-    {
-      "@id": "productCategory",
-      "@type": "Property",
-      "domain": [
-        "ProductCategoryTranslation",
-        "ProductCategoryProduct",
-        "ProductCategoryAttributeSet"
-      ]
-    },
-    {
-      "@id": "activeToDate",
-      "@type": "Property",
-      "domain": [
-        "ProductCatalog",
-        "ProductCategory"
-      ]
-    },
-    {
-      "@id": "activeFromDate",
-      "@type": "Property",
-      "domain": [
-        "ProductCatalog",
-        "ProductCategory"
-      ]
-    },
-    {
-      "@id": "id",
-      "@type": "Property",
-      "domain": [
-        "ProductCatalog",
-        "ProductCategoryTranslation",
-        "ProductCatalogTranslation",
-        "ProductCategory",
-        "ProductCategoryProduct",
-        "ProductCategoryAttributeSet"
-      ]
-    },
-    {
-      "@id": "parentCategory",
-      "@type": "Property",
-      "domain": [
-        "ProductCategory"
-      ]
+    ],
+    "propertyConcepts": [
+{
+        "@id": "activeFromDate",
+        "@type": "Property",
+        "domain": [
+"ProductCategory","ProductCatalog"
+        ]
+    },{
+        "@id": "activeFromDateTime",
+        "@type": "Property",
+        "domain": [
+"ProductCategoryProduct"
+        ]
+    },{
+        "@id": "activeToDateTime",
+        "@type": "Property",
+        "domain": [
+"ProductCategoryProduct"
+        ]
+    },{
+        "@id": "localeId",
+        "@type": "Property",
+        "domain": [
+"ProductCatalogTranslation","ProductCategoryTranslation"
+        ]
+    },{
+        "@id": "activeToDate",
+        "@type": "Property",
+        "domain": [
+"ProductCategory","ProductCatalog"
+        ]
+    },{
+        "@id": "productId",
+        "@type": "Property",
+        "domain": [
+"ProductCategoryProduct"
+        ]
+    },{
+        "@id": "id",
+        "@type": "Property",
+        "domain": [
+"ProductCategoryAttributeSet","ProductCatalogTranslation","ProductCategoryTranslation","ProductCategory","ProductCatalog","ProductCategoryProduct"
+        ]
+    },{
+        "@id": "translatedName",
+        "@type": "Property",
+        "domain": [
+"ProductCatalogTranslation","ProductCategoryTranslation"
+        ]
+    },{
+        "@id": "parentCategoryId",
+        "@type": "Property",
+        "domain": [
+"ProductCategory"
+        ]
+    },{
+        "@id": "name",
+        "@type": "Property",
+        "domain": [
+"ProductCategory","ProductCatalog"
+        ]
+    },{
+        "@id": "productCategoryId",
+        "@type": "Property",
+        "domain": [
+"ProductCategoryAttributeSet","ProductCategoryTranslation","ProductCategoryProduct"
+        ]
+    },{
+        "@id": "attributeSetId",
+        "@type": "Property",
+        "domain": [
+"ProductCategoryAttributeSet"
+        ]
+    },{
+        "@id": "productCatalogId",
+        "@type": "Property",
+        "domain": [
+"ProductCatalogTranslation","ProductCategory"
+        ]
     }
-  ]
+    ]
 }
