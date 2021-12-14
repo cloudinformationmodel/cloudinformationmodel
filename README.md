@@ -25,12 +25,12 @@ Each property group has a single JSON-LD file:
 - `concepts.jsonld`: conceptual ontology describing the business model properties in the property group.
 
 
-Additionally, each entity group has the following mappings:
-
-- `schema.json`: [JSON schema](https://json-schema.org/) generated from the canonical schema
-- `schema.raml`: [RAML datatypes](https://github.com/raml-org/raml-spec/blob/master/versions/raml-10/raml-10.md#defining-types) generated from teh canonical schema
-
 ## Global files
 
+The following set of files contain a summary with the whole model as a single file and in different formats:
+
 - The full model can be downloaded as a single JSON-LD file at `dist/model.jsonld`.
-- Global RAML types and JSON Schema files can be found at: `dist/schema.raml` and `dist/schema.json`.
+- `schema.json`: [OAS 3](https://spec.openapis.org/oas/v3.0.3) generated from the canonical schema
+- `schema.raml`: [RAML 1.0](https://github.com/raml-org/raml-spec/blob/master/versions/raml-10/raml-10.md) generated from teh canonical schema
+- `schema.proto`: [gRPC](https://grpc.io/) generated from teh canonical schema
+- `schema.graphql`: [GraphQL](https://graphql.org/) generated from the canonical schema
