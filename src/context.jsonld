@@ -1,11 +1,6 @@
 {
     "@vocab": "http://cloudinformationmodel.org/model/",
     "@base": "http://cloudinformationmodel.org/model/",
-<<<<<<< HEAD
-    "@vocab": "",
-
-=======
->>>>>>> 27ff1a1 (CIM 1.0.0)
     "cim": "http://cloudinformationmodel.org/model/",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
