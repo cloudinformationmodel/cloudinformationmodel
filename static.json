@@ -1,9 +1,0 @@
-{
-  "root": "html/",
-  "https_only": true,
-  "clean_urls": true,
-  "routes": {
-    "/robots.txt": "robots.txt",
-    "/**": "index.html"
-  }
-}

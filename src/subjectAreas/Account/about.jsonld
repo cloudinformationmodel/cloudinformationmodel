@@ -1,0 +1,23 @@
+{
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "a5b709eb-c627-4dad-8343-85efa0e06087",
+    "@type": "SubjectArea",
+    "version": "1.0.0",
+    "name": "Account",
+    "description": "How one trade with someone e.g., an Individual may have multiple relationships/accounts (customer, seller, supplier) with different parts of the company serving them",
+    "entityGroups": [
+{
+        "@id": "0f3bd6c0-3871-43b3-8c4c-326df7fe8d3d",
+        "name": "Account Setup",
+        "description": "Example entities include: Customer Type, Supplier Type, Seller Type"
+    },{
+        "@id": "76e36e48-45e0-4656-a8a8-9d616296b9f3",
+        "name": "Account Configuration",
+        "description": "Example entities include: Account Participant Role, Account Relationship Role, Contact Role"
+    },{
+        "@id": "058125c2-2412-3e5e-be1c-74c0fb72d50c",
+        "name": "Account",
+        "description": "Example Entities included: Account, Account Contact, Bill Frequency"
+    }
+    ]
+}

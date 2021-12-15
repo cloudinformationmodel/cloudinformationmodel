@@ -1,51 +1,45 @@
 {
-  "@context": "http://cloudinformationmodel.org/context.jsonld",
-  "@id": "SizingPropertyGroup",
-  "name": "Sizing Property Group",
-  "@type": "PropertyGroup",
-  "version": "0.1",
-  "propertyConcepts": [
-    {
-      "@id": "depth",
-      "@type": "Property",
-      "description": "What is the depth size of the product",
-      "name": "Depth",
-      "range": "DataType"
-    },
-    {
-      "@id": "width",
-      "@type": "Property",
-      "description": "What is the wdth(length) size of the product",
-      "name": "Width",
-      "range": "DataType"
-    },
-    {
-      "@id": "height",
-      "@type": "Property",
-      "description": "What is the height size of the product",
-      "name": "Height",
-      "range": "DataType"
-    },
-    {
-      "@id": "diameter",
-      "@type": "Property",
-      "description": "What is the diameter size of the cylindracal product",
-      "name": "Diameter",
-      "range": "DataType"
-    },
-    {
-      "@id": "sizeUOM",
-      "@type": "Property",
-      "description": "What is the unit of measure for stating the size of the product",
-      "name": "Size UOM",
-      "range": "DataType"
-    },
-    {
-      "@id": "productMayExpand",
-      "@type": "Property",
-      "description": "Indicates product may become bigger under certain circumstances e.g. heat",
-      "name": "Product May Expand",
-      "range": "DataType"
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "SizingPropertyGroup",
+    "name": "Sizing Property Group",
+    "@type": "PropertyGroup",
+    "propertyConcepts": [
+{
+        "@id": "depth",
+        "@type": "Property",
+        "description": "What is the depth size of the product",
+        "name": "Depth",
+        "range": "DataType"
+    },{
+        "@id": "diameter",
+        "@type": "Property",
+        "description": "What is the diameter size of the cylindracal product",
+        "name": "Diameter",
+        "range": "DataType"
+    },{
+        "@id": "height",
+        "@type": "Property",
+        "description": "What is the height size of the product",
+        "name": "Height",
+        "range": "DataType"
+    },{
+        "@id": "productMayExpand",
+        "@type": "Property",
+        "description": "Indicates product may become bigger under certain circumstances e.g. heat",
+        "name": "Product May Expand",
+        "range": "DataType"
+    },{
+        "@id": "sizeUOMId",
+        "@type": "Property",
+        "description": "What is the unit of measure for stating the size of the product",
+        "name": "Size UOM",
+        "range": "SizeUOM"
+    },{
+        "@id": "width",
+        "@type": "Property",
+        "description": "What is the wdth(length) size of the product",
+        "name": "Width",
+        "range": "DataType"
     }
-  ]
+    ]
 }

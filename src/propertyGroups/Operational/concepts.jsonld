@@ -1,44 +1,51 @@
 {
-  "@context": "http://cloudinformationmodel.org/context.jsonld",
-  "@id": "OperationalPropertyGroup",
-  "name": "Operational Property Group",
-  "@type": "PropertyGroup",
-  "version": "0.1",
-  "propertyConcepts": [
-    {
-      "@id": "marketingDevelopmentAmount",
-      "@type": "Property",
-      "description": "How much money have we funded to seller for marketing development activities",
-      "name": "Marketing Development Amount",
-      "range": "DataType"
-    },
-    {
-      "@id": "inventoryValueAmount",
-      "@type": "Property",
-      "description": "The value of the inventory of our products the seller hold",
-      "name": "Inventory Value Amount",
-      "range": "DataType"
-    },
-    {
-      "@id": "productReturnRate",
-      "@type": "Property",
-      "description": "How many products are returned as percentage of all products ordered",
-      "name": "Product Return Rate",
-      "range": "DataType"
-    },
-    {
-      "@id": "majorPostSaleSupportNeeded",
-      "@type": "Property",
-      "description": "Does the seller require significant resources from us post sale",
-      "name": "Major Post Sale Support Needed",
-      "range": "DataType"
-    },
-    {
-      "@id": "creditRating",
-      "@type": "Property",
-      "description": "In how good standing is the seller so we know they should receive more goods from us",
-      "name": "Credit Rating",
-      "range": "DataType"
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "OperationalPropertyGroup",
+    "name": "Operational Property Group",
+    "@type": "PropertyGroup",
+    "propertyConcepts": [
+{
+        "@id": "creditRating",
+        "@type": "Property",
+        "description": "In how good standing is the seller so we know they should receive more goods from us",
+        "name": "Credit Rating",
+        "range": "DataType"
+    },{
+        "@id": "inventoryValueAmount",
+        "@type": "Property",
+        "description": "The value of the inventory of our products the seller hold",
+        "name": "Inventory Value Amount",
+        "range": "DataType"
+    },{
+        "@id": "inventoryValueAmountCurrency",
+        "@type": "Property",
+        "description": "Currency for Inventory Value Amount",
+        "name": "Inventory Value Amount Currency",
+        "range": "Currency"
+    },{
+        "@id": "majorPostSaleSupportNeeded",
+        "@type": "Property",
+        "description": "Does the seller require significant resources from us post sale",
+        "name": "Major Post Sale Support Needed",
+        "range": "DataType"
+    },{
+        "@id": "marketingDevelopmentAmount",
+        "@type": "Property",
+        "description": "How much money have we funded to seller for marketing development activities",
+        "name": "Marketing Development Amount",
+        "range": "DataType"
+    },{
+        "@id": "marketingDevelopmentAmountCurrency",
+        "@type": "Property",
+        "description": "Currency for Marketing Development Amount",
+        "name": "Marketing Development Amount Currency",
+        "range": "Currency"
+    },{
+        "@id": "productReturnRate",
+        "@type": "Property",
+        "description": "How many products are returned as percentage of all products ordered",
+        "name": "Product Return Rate",
+        "range": "DataType"
     }
-  ]
+    ]
 }

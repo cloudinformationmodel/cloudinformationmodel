@@ -1,37 +1,33 @@
 {
-  "@context": "http://cloudinformationmodel.org/context.jsonld",
-  "@id": "RatingCompetitivePropertyGroup",
-  "name": "Rating - Competitive Property Group",
-  "@type": "PropertyGroup",
-  "version": "0.1",
-  "propertyConcepts": [
-    {
-      "@id": "competitiveProductPriceRank",
-      "@type": "Property",
-      "description": "Degree of chance received first prices or can receive/better prices over lifetime",
-      "name": "Competitive Product Price Rank",
-      "range": "DataType"
-    },
-    {
-      "@id": "competitiveCostAvoidanceRank",
-      "@type": "Property",
-      "description": "Free training, delivery etc. possible",
-      "name": "Competitive Cost Avoidance Rank",
-      "range": "DataType"
-    },
-    {
-      "@id": "competitiveWarrantyRank",
-      "@type": "Property",
-      "description": "Degree of warranty provided relative to other suppliers",
-      "name": "Competitive Warranty Rank",
-      "range": "DataType"
-    },
-    {
-      "@id": "competitiveMarketingRank",
-      "@type": "Property",
-      "description": "Degree of goodwill associated with the supplier",
-      "name": "Competitive Marketing Rank",
-      "range": "DataType"
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "RatingCompetitivePropertyGroup",
+    "name": "Rating - Competitive Property Group",
+    "@type": "PropertyGroup",
+    "propertyConcepts": [
+{
+        "@id": "competitiveCostAvoidanceRank",
+        "@type": "Property",
+        "description": "Free training, delivery etc. possible",
+        "name": "Competitive Cost Avoidance Rank",
+        "range": "DataType"
+    },{
+        "@id": "competitiveMarketingRank",
+        "@type": "Property",
+        "description": "Degree of goodwill associated with the supplier",
+        "name": "Competitive Marketing Rank",
+        "range": "DataType"
+    },{
+        "@id": "competitiveProductPriceRank",
+        "@type": "Property",
+        "description": "Degree of chance received first prices or can receive/better prices over lifetime",
+        "name": "Competitive Product Price Rank",
+        "range": "DataType"
+    },{
+        "@id": "competitiveWarrantyRank",
+        "@type": "Property",
+        "description": "Degree of warranty provided relative to other suppliers",
+        "name": "Competitive Warranty Rank",
+        "range": "DataType"
     }
-  ]
+    ]
 }

@@ -1,0 +1,15 @@
+{
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "CreditMemoPropertyGroup",
+    "name": "Credit Memo Property Group",
+    "@type": "PropertyGroup",
+    "propertyConcepts": [
+{
+        "@id": "creditMemoEffectiveDate",
+        "@type": "Property",
+        "description": "The date on which the credit amount will be applied to the account.",
+        "name": "Credit Memo Effective Date",
+        "range": "DataType"
+    }
+    ]
+}

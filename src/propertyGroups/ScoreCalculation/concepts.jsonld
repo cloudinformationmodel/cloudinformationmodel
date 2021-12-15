@@ -1,51 +1,45 @@
 {
-  "@context": "http://cloudinformationmodel.org/context.jsonld",
-  "@id": "ScoreCalculationPropertyGroup",
-  "name": "Score Calculation Property Group",
-  "@type": "PropertyGroup",
-  "version": "0.1",
-  "propertyConcepts": [
-    {
-      "@id": "contractWeightPercent",
-      "@type": "Property",
-      "description": "How big impact contract measures should have on overall supplier score",
-      "name": "Contract Weight Percent",
-      "range": "DataType"
-    },
-    {
-      "@id": "contractWeightScore",
-      "@type": "Property",
-      "description": "The assigned score after all contract measures analyzed",
-      "name": "Contract Weight Score",
-      "range": "DataType"
-    },
-    {
-      "@id": "satisfactionWeightPercent",
-      "@type": "Property",
-      "description": "How big impact satisfaction measures should have on overall supplier score",
-      "name": "Satisfaction Weight Percent",
-      "range": "DataType"
-    },
-    {
-      "@id": "satisfactionWeightScore",
-      "@type": "Property",
-      "description": "The assigned score after all satisfaction measures analyzed",
-      "name": "Satisfaction Weight Score",
-      "range": "DataType"
-    },
-    {
-      "@id": "competitiveWeightPercent",
-      "@type": "Property",
-      "description": "How big impact competitive measures should have on overall supplier score",
-      "name": "Competitive Weight Percent",
-      "range": "DataType"
-    },
-    {
-      "@id": "competitiveWeightScore",
-      "@type": "Property",
-      "description": "The assigned score after all competitive measures analyzed",
-      "name": "Competitive Weight Score",
-      "range": "DataType"
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "ScoreCalculationPropertyGroup",
+    "name": "Score Calculation Property Group",
+    "@type": "PropertyGroup",
+    "propertyConcepts": [
+{
+        "@id": "competitiveWeightPercent",
+        "@type": "Property",
+        "description": "How big impact competitive measures should have on overall supplier score",
+        "name": "Competitive Weight Percent",
+        "range": "DataType"
+    },{
+        "@id": "competitiveWeightScore",
+        "@type": "Property",
+        "description": "The assigned score after all competitive measures analyzed",
+        "name": "Competitive Weight Score",
+        "range": "DataType"
+    },{
+        "@id": "contractWeightPercent",
+        "@type": "Property",
+        "description": "How big impact contract measures should have on overall supplier score",
+        "name": "Contract Weight Percent",
+        "range": "DataType"
+    },{
+        "@id": "contractWeightScore",
+        "@type": "Property",
+        "description": "The assigned score after all contract measures analyzed",
+        "name": "Contract Weight Score",
+        "range": "DataType"
+    },{
+        "@id": "satisfactionWeightPercent",
+        "@type": "Property",
+        "description": "How big impact satisfaction measures should have on overall supplier score",
+        "name": "Satisfaction Weight Percent",
+        "range": "DataType"
+    },{
+        "@id": "satisfactionWeightScore",
+        "@type": "Property",
+        "description": "The assigned score after all satisfaction measures analyzed",
+        "name": "Satisfaction Weight Score",
+        "range": "DataType"
     }
-  ]
+    ]
 }

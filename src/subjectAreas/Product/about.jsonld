@@ -1,22 +1,27 @@
 {
-  "@context": "http://cloudinformationmodel.org/context.jsonld",
-  "@id": "ProductSubjectArea",
-  "@type": "SubjectArea",
-  "version": "0.1",
-  "name": "Product",
-  "description": "Anything you plan to sell or any part of a product that needs to be tracked for service purposes. For example, you are selling a green tractor.",
-  "entityGroups": [
-    {
-      "@id": "ProductEntityGroup",
-      "name": "Product"
-    },
-    {
-      "@id": "ProductAttributeEntityGroup",
-      "name": "Product Attribute"
-    },
-    {
-      "@id": "ProductCatalogEntityGroup",
-      "name": "Product Catalog"
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "fe440b10-667c-39ce-bace-1e463e65282e",
+    "@type": "SubjectArea",
+    "version": "1.0.0",
+    "name": "Product",
+    "description": "Anything you plan to sell or any part of a product that needs to be tracked   for service purpose. For example: you are selling a green tractor.",
+    "entityGroups": [
+{
+        "@id": "a64560e2-3d84-3d23-b739-9671c5234a9b",
+        "name": "Product Catalog",
+        "description": "Example Entities included: Product Catalog, Product Catalog Category, Product Catalog Assignment"
+    },{
+        "@id": "2d9305b0-6e3e-3f6c-88f6-af0a04e51ab1",
+        "name": "Product Attribute",
+        "description": "Example Entities included: Attribute Set, Attribute Set Attribute"
+    },{
+        "@id": "fc3de8e8-b7f3-3d08-bdb8-e086f94c807e",
+        "name": "Product",
+        "description": "Example Entities included: Product Type, Product Item, Product Attribute, Product Relation"
+    },{
+        "@id": "fdad9085-44b6-3c40-83c7-826b3bc40609",
+        "name": "Currency",
+        "description": "Example Entities included: Currency"
     }
-  ]
+    ]
 }

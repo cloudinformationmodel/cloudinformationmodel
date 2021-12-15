@@ -1,0 +1,147 @@
+{
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "AccountPropertyGroup",
+    "name": "Account Property Group",
+    "@type": "PropertyGroup",
+    "propertyConcepts": [
+{
+        "@id": "accountBusinessTypeId",
+        "@type": "Property",
+        "description": "The primary business purpose or kinds of transactions for which the Account is used. Examples include Charge Account, Rebate Account and Rental Account.",
+        "name": "Account Business Type",
+        "range": "AccountBusinessType"
+    },{
+        "@id": "contactPointLocation",
+        "@type": "Property",
+        "description": "The primary location associated with the Account",
+        "name": "Contact Point Location",
+        "range": "ContactPointLocation"
+    },{
+        "@id": "businessBrandId",
+        "@type": "Property",
+        "description": "A name under which products are marketed, often 1-1 with an Internal Organization. Business Brands may exist in a hierarchy, for Pottery Barn Kids is a child or brand Pottery Barn.",
+        "name": "Business Brand",
+        "range": "BusinessBrand"
+    },{
+        "@id": "accountParticipantRoleId",
+        "@type": "Property",
+        "description": "Jobs or tasks that a system user may play with respect to one or more Accounts. For example Account Owner, Account Viewer or Account Servicer",
+        "name": "Account Participant Role",
+        "range": "AccountParticipantRole"
+    },{
+        "@id": "account1Id",
+        "@type": "Property",
+        "description": "The first of two Accounts that are associated via Account Relationship.",
+        "name": "Account 1",
+        "range": "Account"
+    },{
+        "@id": "account2Id",
+        "@type": "Property",
+        "description": "The second of two accounts associated via Account Relationship",
+        "name": "Account 2",
+        "range": "Account"
+    },{
+        "@id": "accountRelationshipRole",
+        "@type": "Property",
+        "description": "Reasons for associating two accounts via Account Relationship include: Implementation Partner, and Sales Partner",
+        "name": "Account Relationship Role",
+        "range": "AccountRelationshipRole"
+    },{
+        "@id": "endEffectiveDate",
+        "@type": "Property",
+        "description": "The last date when the Trade Account belonged to this Work Territory.",
+        "name": "End Effective Date",
+        "range": "DataType"
+    },{
+        "@id": "firstEffectiveDate",
+        "@type": "Property",
+        "description": "The first date when the Trade Account belonged to this Work Territory.",
+        "name": "First Effective Date",
+        "range": "DataType"
+    },{
+        "@id": "individualId",
+        "@type": "Property",
+        "description": "Represents the person you are, or will be, dealing with using the system",
+        "name": "Individual",
+        "range": "Individual"
+    },{
+        "@id": "otherMailingAddress",
+        "@type": "Property",
+        "description": "A secondary address where the account receives mail.",
+        "name": "Other Mailing Address",
+        "range": "ContactPointAddress"
+    },{
+        "@id": "primaryBusinessPhoneNumber",
+        "@type": "Property",
+        "description": "The Contact's main phone number for business",
+        "name": "Primary Business Phone Number",
+        "range": "ContactPointPhone"
+    },{
+        "@id": "primaryFaxPhoneNumber",
+        "@type": "Property",
+        "description": "The Contact's primary number for FAX communication",
+        "name": "Primary Fax Phone Number",
+        "range": "ContactPointPhone"
+    },{
+        "@id": "primaryHomePhone",
+        "@type": "Property",
+        "description": "The Contact's primary phone number at home",
+        "name": "Primary Home Phone",
+        "range": "ContactPointPhone"
+    },{
+        "@id": "primaryMailingAddress",
+        "@type": "Property",
+        "description": "The main address for the account, which receives mailings",
+        "name": "Primary Mailing Address",
+        "range": "ContactPointAddress"
+    },{
+        "@id": "primaryMobilePhoneNumber",
+        "@type": "Property",
+        "description": "The contact's primary phone number for mobile communication",
+        "name": "Primary Mobile Phone Number",
+        "range": "ContactPointPhone"
+    },{
+        "@id": "contactId",
+        "@type": "Property",
+        "description": "Represents a person who is associated with an Account. Contacts may be associated with additional accounts besides the one with which they are primarily associated.",
+        "name": "Contact",
+        "range": "Contact"
+    },{
+        "@id": "businessAccountId",
+        "@type": "Property",
+        "description": "Used in trading relationships with an organization; a way of recording and aggregating transactions",
+        "name": "Business Account",
+        "range": "BusinessAccount"
+    },{
+        "@id": "accountId",
+        "@type": "Property",
+        "description": "How the party want to interact with your enterprise e.g. have multiple billing accounts",
+        "name": "Account",
+        "range": "Account"
+    },{
+        "@id": "contactAccountRelationshipId",
+        "@type": "Property",
+        "description": "The association of a Contact to an Account. For example, the association of an Account Contact (person within a Business Account) to an additional Business Account.",
+        "name": "Contact Account Relationship",
+        "range": "ContactAccountRelationship"
+    },{
+        "@id": "contactRoleId",
+        "@type": "Property",
+        "description": "Responsibilities that a Contact can have with respect to something, such as the relationship of a Contact to an Account. For example Decision Maker, or Advisor",
+        "name": "Contact Role",
+        "range": "ContactRole"
+    },{
+        "@id": "description",
+        "@type": "Property",
+        "description": "An explanation of a value of Account Business Type found in the Name field. For example an explanation of what Charge Account means.",
+        "name": "Description",
+        "range": "DataType"
+    },{
+        "@id": "name",
+        "@type": "Property",
+        "description": "Values of Account Business Type may include: Charge Account, Rebate Account and Rental Account.",
+        "name": "Name",
+        "range": "DataType"
+    }
+    ]
+}

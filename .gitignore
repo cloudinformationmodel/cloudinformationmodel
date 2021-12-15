@@ -11,3 +11,4 @@ scripts/node_modules
 *.jar
 target
 prs
+.DS_Store

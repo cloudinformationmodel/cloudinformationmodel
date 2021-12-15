@@ -1,0 +1,116 @@
+{
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "c259430a-f8e6-4424-90d0-4ebaea1eb4e5",
+    "@type": "EntityGroup",
+    "name": "PartySetup",
+    "version": "1.0.0",
+    "subjectArea": "aeaf98cc-53c1-300a-827f-57f4ce0bf764",
+    "description": "Example entities include: Party Type, Party Hierarchy Type, and Party Role Type",
+    "schemas": [
+{
+        "@id": "a95a8410-534d-4c8c-85c5-c1a0ac1ad4f1",
+        "@type": "Shape",
+        "targetClass": "PartyHierarchyType",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "637ac9a0-9965-4cac-8989-0a359c0193e9",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "name",
+            "@id": "d1494638-bb19-48b8-9454-e40b5da61149",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "cfb2ab2d-f867-4717-9d5d-400011164f2d",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "5f403863-61d2-4b3b-9f5f-633687b7f50c",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "id",
+            "@id": "9f15b46c-8333-4747-9313-e168b9c08cea",
+            "datatype": "cim:id",
+            "maxCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "bcb14274-f8d7-4c4c-8ece-9cdee8a87798",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "e73da629-46d5-46e6-be3e-a6369ffe4ae8",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "f2cfdb26-4448-48c8-85c5-b8bbf1484bab",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        }
+        ]
+    },{
+        "@id": "a7d70868-68ac-4f9f-a5e5-f93d223348af",
+        "@type": "Shape",
+        "targetClass": "PartyProfessionalCredentialType",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "5d03cb0b-6f0f-4585-befe-02a0e6a2134b",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "name",
+            "@id": "f575228f-56c9-4818-9414-5ab50711a49b",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "5457cd27-0378-4ede-8444-c91ca6693426",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "d2bcbeac-9673-4161-88c8-261262f6ccac",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "id",
+            "@id": "65708a05-93cb-40b0-b5b5-9125dfa6eec5",
+            "datatype": "cim:id",
+            "maxCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "39d7a1ba-1623-4dfd-b434-0be77b223eed",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "21571f61-9090-4151-a8a8-637454d2990b",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "f503e5a0-47ab-4757-bb7b-b470a1d0c11d",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        }
+        ]
+    }
+    ]
+}

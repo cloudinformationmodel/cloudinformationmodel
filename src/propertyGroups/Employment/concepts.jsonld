@@ -1,23 +1,21 @@
 {
-  "@context": "http://cloudinformationmodel.org/context.jsonld",
-  "@id": "EmploymentPropertyGroup",
-  "name": "Employment Property Group",
-  "@type": "PropertyGroup",
-  "version": "0.1",
-  "propertyConcepts": [
-    {
-      "@id": "currentEmployerName",
-      "@type": "Property",
-      "description": "Name of current employer",
-      "name": "Current Employer Name",
-      "range": "DataType"
-    },
-    {
-      "@id": "employedSinceDate",
-      "@type": "Property",
-      "description": "From what date is individual employed at current employer",
-      "name": "Employed Since Date",
-      "range": "DataType"
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "EmploymentPropertyGroup",
+    "name": "Employment Property Group",
+    "@type": "PropertyGroup",
+    "propertyConcepts": [
+{
+        "@id": "currentEmployerName",
+        "@type": "Property",
+        "description": "Name of current employer",
+        "name": "Current Employer Name",
+        "range": "DataType"
+    },{
+        "@id": "employedSinceDate",
+        "@type": "Property",
+        "description": "From what date is individual employed at current employer",
+        "name": "Employed Since Date",
+        "range": "DataType"
     }
-  ]
+    ]
 }

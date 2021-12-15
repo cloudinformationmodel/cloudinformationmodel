@@ -1,0 +1,243 @@
+{
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "PartyPropertyGroup",
+    "name": "Party Property Group",
+    "@type": "PropertyGroup",
+    "propertyConcepts": [
+{
+        "@id": "sDKVerName",
+        "@type": "Property",
+        "description": "The version of the software development kit that is currently installed on the user's device.",
+        "name": "SDK Version Name",
+        "range": "DataType"
+    },{
+        "@id": "softwareAppPriorVerName",
+        "@type": "Property",
+        "description": "The version of the Softwrare Application that was installed on the user's device prior to the version that is currently installed.",
+        "name": "Software Application Prior Version",
+        "range": "DataType"
+    },{
+        "@id": "softwareAppVerName",
+        "@type": "Property",
+        "description": "The version of the Software Application currently installed on the user's computing device.",
+        "name": "Software Application Version",
+        "range": "DataType"
+    },{
+        "@id": "webSiteURL",
+        "@type": "Property",
+        "description": "The Web Site for the party",
+        "name": "Web Site URL",
+        "range": "DataType"
+    },{
+        "@id": "accreditationIssuerName",
+        "@type": "Property",
+        "description": "The name of the organization that issued the accreditation",
+        "name": "Accreditation Issuer Name",
+        "range": "DataType"
+    },{
+        "@id": "individualFullName",
+        "@type": "Property",
+        "description": "The full name of a person e.g. Jane Mary-Ann Doe",
+        "name": "Individual Full Name",
+        "range": "DataType"
+    },{
+        "@id": "organizationLegalName",
+        "@type": "Property",
+        "description": "The registered legal name of the business",
+        "name": "Organization Legal Name",
+        "range": "DataType"
+    },{
+        "@id": "organizationName",
+        "@type": "Property",
+        "description": "Alternative name under which the Organization is known to the general public",
+        "name": "Organization Name",
+        "range": "DataType"
+    },{
+        "@id": "partyAdditionalNameTypeId",
+        "@type": "Property",
+        "description": "Reference to type of trade name e.g. also known as, doing business as",
+        "name": "Party Additional Name Type",
+        "range": "PartyAdditionalNameType"
+    },{
+        "@id": "awardIssuerName",
+        "@type": "Property",
+        "description": "The name of the the organization that issued the award.",
+        "name": "Award Issuer Name",
+        "range": "DataType"
+    },{
+        "@id": "licenseExpirationDate",
+        "@type": "Property",
+        "description": "The date the license expired",
+        "name": "License Expiration Date",
+        "range": "DataType"
+    },{
+        "@id": "licenseIssuedDate",
+        "@type": "Property",
+        "description": "The date the license was issued",
+        "name": "License Issued Date",
+        "range": "DataType"
+    },{
+        "@id": "licenseNumber",
+        "@type": "Property",
+        "description": "An ID or number associated with the license",
+        "name": "License Number",
+        "range": "DataType"
+    },{
+        "@id": "partyHierarchyEndDate",
+        "@type": "Property",
+        "description": "The last date of the party hierarchy.",
+        "name": "Party Hierarchy End Date",
+        "range": "DataType"
+    },{
+        "@id": "partyHierarchyStartDate",
+        "@type": "Property",
+        "description": "The date the party hierarchy was established.",
+        "name": "Party Hierarchy Start Date",
+        "range": "DataType"
+    },{
+        "@id": "partyHierarchyTypeId",
+        "@type": "Property",
+        "description": "Values of Party Hierarchy Type include: Legal and Accounting.",
+        "name": "Party Hierarchy Type",
+        "range": "PartyHierarchyType"
+    },{
+        "@id": "membershipEndDate",
+        "@type": "Property",
+        "description": "The last date the party belonged to this hierarchy",
+        "name": "Membership End Date",
+        "range": "DataType"
+    },{
+        "@id": "membershipStartDate",
+        "@type": "Property",
+        "description": "The first date the party belonged to this hierarchy",
+        "name": "Membership Start Date",
+        "range": "DataType"
+    },{
+        "@id": "partyHierarchyId",
+        "@type": "Property",
+        "description": "A hierarchy to which the party member belongs.",
+        "name": "Party Hierarchy",
+        "range": "PartyHierarchy"
+    },{
+        "@id": "parentPartyIdentificationTypeId",
+        "@type": "Property",
+        "description": "Provides a way to group together more than one Party Identification Type. For example groupinig Driving License and Tax Id together as 'Government-issued Identification'.",
+        "name": "Parent Party Identification Type",
+        "range": "PartyIdentificationType"
+    },{
+        "@id": "partyProfessionalCredentialTypeId",
+        "@type": "Property",
+        "description": "Types of Party Professional Credentials are: Business License, Award, Board Certification, and Accreditation",
+        "name": "Party Professional Credential Type",
+        "range": "PartyProfessionalCredentialType"
+    },{
+        "@id": "taxExemptionCertificateNumber",
+        "@type": "Property",
+        "description": "An ID or number associated with the tax exemption certificate",
+        "name": "Tax Exemption Certificate Number",
+        "range": "DataType"
+    },{
+        "@id": "taxExemptionEndDate",
+        "@type": "Property",
+        "description": "The date the tax exemption expires",
+        "name": "Tax Exemption End Date",
+        "range": "DataType"
+    },{
+        "@id": "taxExemptionJurisdictionName",
+        "@type": "Property",
+        "description": "Name of the city, state, country or other area where the party has been granted tax exemption.",
+        "name": "Tax Exemption Jurisdiction",
+        "range": "DataType"
+    },{
+        "@id": "taxExemptionStartDate",
+        "@type": "Property",
+        "description": "The date the tax exemption status begiins",
+        "name": "Tax Exemption Start Date",
+        "range": "DataType"
+    },{
+        "@id": "beginEffectiveDate",
+        "@type": "Property",
+        "description": "The first date when this name was active for the Individual",
+        "name": "Begin Effective Date",
+        "range": "DataType"
+    },{
+        "@id": "endEffectiveDate",
+        "@type": "Property",
+        "description": "The last date when this name was active for the Individual",
+        "name": "End Effective Date",
+        "range": "DataType"
+    },{
+        "@id": "firstName",
+        "@type": "Property",
+        "description": "First name of person e.g. Jane",
+        "name": "First Name",
+        "range": "DataType"
+    },{
+        "@id": "fullName",
+        "@type": "Property",
+        "description": "The full name of a person e.g. Jane Mary-Ann Doe",
+        "name": "Full Name",
+        "range": "DataType"
+    },{
+        "@id": "lastName",
+        "@type": "Property",
+        "description": "Last/family name (in most cultures the last/sure name) of person e.g. Doe",
+        "name": "Last Name",
+        "range": "DataType"
+    },{
+        "@id": "middleName",
+        "@type": "Property",
+        "description": "Middle name of person e.g. Mary-Ann",
+        "name": "Middle Name",
+        "range": "DataType"
+    },{
+        "@id": "secondLastName",
+        "@type": "Property",
+        "description": "Second last name e.g. in hispanic may be mothers last name e.g. Roe",
+        "name": "Second Last Name",
+        "range": "DataType"
+    },{
+        "@id": "suffixName",
+        "@type": "Property",
+        "description": "Suffix of a name e.g. Jr, Sr, III",
+        "name": "Suffix",
+        "range": "DataType"
+    },{
+        "@id": "trainingPointTotalNumber",
+        "@type": "Property",
+        "description": "The total number of accrued training poins",
+        "name": "Training Point Total",
+        "range": "DataType"
+    },{
+        "@id": "trainingTierNm",
+        "@type": "Property",
+        "description": "The award or tier level, for example Ranger or Explorer",
+        "name": "Training Tier Name",
+        "range": "DataType"
+    },{
+        "@id": "customerId",
+        "@type": "Property",
+        "description": "Information about a party playing role of customer e.g. life time value, life cycle status",
+        "name": "Customer",
+        "range": "Customer"
+    },{
+        "@id": "customerStatusId",
+        "@type": "Property",
+        "description": "Information about a party playing role of customer e.g. life time value, life cycle status",
+        "name": "Customer Status",
+        "range": "CustomerStatus"
+    },{
+        "@id": "partyId",
+        "@type": "Property",
+        "description": "A unified, in system, definition of who you are dealing with e.g. John Doe, Northern Trail Outfitters and can be of different types e.g. individual, or business.",
+        "name": "Party",
+        "range": "Party"
+    },{
+        "@id": "name",
+        "@type": "Property",
+        "description": "Types of Party Professional Credentials are: Business License, Award, Board Certification, and Accreditation",
+        "name": "Name",
+        "range": "DataType"
+    }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "PartyRolePropertyGroup",
+    "name": "PartyRole Property Group",
+    "@type": "PropertyGroup",
+    "propertyConcepts": [
+{
+        "@id": "sellerTierId",
+        "@type": "Property",
+        "description": "Levels in a hierarchy that describe the importance of a Seller, for example Gold, Silver, Bronze.",
+        "name": "Seler Tier",
+        "range": "SellerTier"
+    }
+    ]
+}

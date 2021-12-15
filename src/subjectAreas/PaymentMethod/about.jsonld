@@ -1,14 +1,15 @@
 {
-  "@context": "http://cloudinformationmodel.org/context.jsonld",
-  "@id": "PaymentMethodSubjectArea",
-  "@type": "SubjectArea",
-  "version": "0.1",
-  "name": "Payment Method",
-  "description": "A method of paying for a product or service, like a credit card or check.",
-  "entityGroups": [
-    {
-      "@id": "PaymentMethodEntityGroup",
-      "name": "Payment Method"
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "32d47b23-6a3f-3362-a44c-e13ee509df9e",
+    "@type": "SubjectArea",
+    "version": "1.0.0",
+    "name": "Payment Method",
+    "description": "A method of paying for a product or service, like a credit card or check.",
+    "entityGroups": [
+{
+        "@id": "2b46a3c2-aa88-4bab-8a0a-5c2b44aa94c0",
+        "name": "Payment Method",
+        "description": "Example Entities included: Payment Method Type, Payment Card Tender, Digital Wallet Tender"
     }
-  ]
+    ]
 }

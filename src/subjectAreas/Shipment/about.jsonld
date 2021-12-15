@@ -1,14 +1,15 @@
 {
-  "@context": "http://cloudinformationmodel.org/context.jsonld",
-  "@id": "ShipmentSubjectArea",
-  "@type": "SubjectArea",
-  "version": "0.1",
-  "name": "Shipment",
-  "description": "Tracking the physical packages actually shipped for an order.",
-  "entityGroups": [
-    {
-      "@id": "ShipmentEntityGroup",
-      "name": "Shipment"
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "60ba53a5-b32f-3baa-aae1-1c0c0b6680cf",
+    "@type": "SubjectArea",
+    "version": "1.0.0",
+    "name": "Shipment",
+    "description": "Tracking the physical packages shipped for an order, which are grouped into Shipments and may have packages slips or other documentation.",
+    "entityGroups": [
+{
+        "@id": "61c0a965-46c0-3188-965d-7af6a2e2be02",
+        "name": "Shipment",
+        "description": "Example Entities included: Shipment, Shipment Package, Shipment Document, Shipment Product"
     }
-  ]
+    ]
 }

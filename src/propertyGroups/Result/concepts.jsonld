@@ -1,51 +1,45 @@
 {
-  "@context": "http://cloudinformationmodel.org/context.jsonld",
-  "@id": "ResultPropertyGroup",
-  "name": "Result Property Group",
-  "@type": "PropertyGroup",
-  "version": "0.1",
-  "propertyConcepts": [
-    {
-      "@id": "ptoENumber",
-      "@type": "Property",
-      "description": "Price to Earnings",
-      "name": "P/E Number",
-      "range": "DataType"
-    },
-    {
-      "@id": "netProfitMargin",
-      "@type": "Property",
-      "description": "How much profit the competitor makes per dollar in revenue",
-      "name": "Net Profit Margin",
-      "range": "DataType"
-    },
-    {
-      "@id": "cashFlowGrowth",
-      "@type": "Property",
-      "description": "Current year - last year cash flow / last year cash flow",
-      "name": "Cash Flow Growth",
-      "range": "DataType"
-    },
-    {
-      "@id": "currentRatio",
-      "@type": "Property",
-      "description": "Competitors ability to pay outstanding short or long term obligations",
-      "name": "Current Ratio",
-      "range": "DataType"
-    },
-    {
-      "@id": "assetReturnRatio",
-      "@type": "Property",
-      "description": "How efficient the competitor is in using assets to produce profit",
-      "name": "Asset Return Ratio",
-      "range": "DataType"
-    },
-    {
-      "@id": "assetTurnoverRatio",
-      "@type": "Property",
-      "description": "How many times inventory turned into cash in given period",
-      "name": "Asset Turnover Ratio",
-      "range": "DataType"
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "ResultPropertyGroup",
+    "name": "Result Property Group",
+    "@type": "PropertyGroup",
+    "propertyConcepts": [
+{
+        "@id": "assetReturnRatio",
+        "@type": "Property",
+        "description": "How efficient the competitor is in using assets to produce profit",
+        "name": "Asset Return Ratio",
+        "range": "DataType"
+    },{
+        "@id": "assetTurnoverRatio",
+        "@type": "Property",
+        "description": "How many times inventory turned into cash in given period",
+        "name": "Asset Turnover Ratio",
+        "range": "DataType"
+    },{
+        "@id": "cashFlowGrowth",
+        "@type": "Property",
+        "description": "Current year - last year cash flow / last year cash flow",
+        "name": "Cash Flow Growth",
+        "range": "DataType"
+    },{
+        "@id": "currentRatio",
+        "@type": "Property",
+        "description": "Competitors ability to pay outstanding short or long term obligations",
+        "name": "Current Ratio",
+        "range": "DataType"
+    },{
+        "@id": "netProfitMargin",
+        "@type": "Property",
+        "description": "How much profit the competitor makes per dollar in revenue",
+        "name": "Net Profit Margin",
+        "range": "DataType"
+    },{
+        "@id": "ptoENumber",
+        "@type": "Property",
+        "description": "Price to Earnings",
+        "name": "P/E Number",
+        "range": "DataType"
     }
-  ]
+    ]
 }

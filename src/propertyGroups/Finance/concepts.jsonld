@@ -1,23 +1,21 @@
 {
-  "@context": "http://cloudinformationmodel.org/context.jsonld",
-  "@id": "FinancePropertyGroup",
-  "name": "Finance Property Group",
-  "@type": "PropertyGroup",
-  "version": "0.1",
-  "propertyConcepts": [
-    {
-      "@id": "glAccountCode",
-      "@type": "Property",
-      "description": "How are instances of this product accounted for e.g. as consumable, live stock, merchandize",
-      "name": "GL Account Code",
-      "range": "DataType"
-    },
-    {
-      "@id": "stockLedgerValuationAmount",
-      "@type": "Property",
-      "description": "What is the total value of this goods as we hold it in stock",
-      "name": "Stock Ledger Valuation Amount",
-      "range": "DataType"
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "FinancePropertyGroup",
+    "name": "Finance Property Group",
+    "@type": "PropertyGroup",
+    "propertyConcepts": [
+{
+        "@id": "stockLedgerValuationAmount",
+        "@type": "Property",
+        "description": "What is the total value of this goods as we hold it in stock",
+        "name": "Stock Ledger Valuation Amount",
+        "range": "DataType"
+    },{
+        "@id": "stockLedgerValuationAmountCurrency",
+        "@type": "Property",
+        "description": "Currency for Stock Ledger Valuation Amount",
+        "name": "Stock Ledger Valuation Amount Currency",
+        "range": "Currency"
     }
-  ]
+    ]
 }

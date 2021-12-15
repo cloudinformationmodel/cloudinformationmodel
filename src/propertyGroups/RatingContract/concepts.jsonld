@@ -1,65 +1,57 @@
 {
-  "@context": "http://cloudinformationmodel.org/context.jsonld",
-  "@id": "RatingContractPropertyGroup",
-  "name": "Rating - Contract Property Group",
-  "@type": "PropertyGroup",
-  "version": "0.1",
-  "propertyConcepts": [
-    {
-      "@id": "contractSourcingCycleDays",
-      "@type": "Property",
-      "description": "Days from sourcing process started to contract signed",
-      "name": "Contract Sourcing Cycle Days",
-      "range": "DataType"
-    },
-    {
-      "@id": "contractOnTimeDeliveryRate",
-      "@type": "Property",
-      "description": "Number of on-time deliveries for on-promise dates / total number of deliveries",
-      "name": "Contract On Time Delivery Rate",
-      "range": "DataType"
-    },
-    {
-      "@id": "contractDeliveryCorrectnessRate",
-      "@type": "Property",
-      "description": "Number of deliveries with correct quantity / total number of deliveries",
-      "name": "Contract Delivery Correctness Rate",
-      "range": "DataType"
-    },
-    {
-      "@id": "contractProductQualityRate",
-      "@type": "Property",
-      "description": "Percentage of products with defects",
-      "name": "Contract Product Quality Rate",
-      "range": "DataType"
-    },
-    {
-      "@id": "contractProductReturnRate",
-      "@type": "Property",
-      "description": "Percentage of products that had to be returned",
-      "name": "Contract Product Return Rate",
-      "range": "DataType"
-    },
-    {
-      "@id": "contractBudgetCostRate",
-      "@type": "Property",
-      "description": "Percentage unit cost variance higher than agreed purchase order price",
-      "name": "Contract Budget Cost Rate",
-      "range": "DataType"
-    },
-    {
-      "@id": "contractSLAIssueRate",
-      "@type": "Property",
-      "description": "How many times SLA broken in last 12 months",
-      "name": "Contract SLA Issue Rate",
-      "range": "DataType"
-    },
-    {
-      "@id": "contractInvoiceAccuracyRate",
-      "@type": "Property",
-      "description": "How many times Invoice not correct in last 12 months",
-      "name": "Contract Invoice Accuracy Rate",
-      "range": "DataType"
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "RatingContractPropertyGroup",
+    "name": "Rating - Contract Property Group",
+    "@type": "PropertyGroup",
+    "propertyConcepts": [
+{
+        "@id": "contractBudgetCostRate",
+        "@type": "Property",
+        "description": "Percentage unit cost variance higher than agreed purchase order price",
+        "name": "Contract Budget Cost Rate",
+        "range": "DataType"
+    },{
+        "@id": "contractDeliveryCorrectnessRate",
+        "@type": "Property",
+        "description": "Number of deliveries with correct quantity / total number of deliveries",
+        "name": "Contract Delivery Correctness Rate",
+        "range": "DataType"
+    },{
+        "@id": "contractInvoiceAccuracyRate",
+        "@type": "Property",
+        "description": "How many times Invoice not correct in last 12 months",
+        "name": "Contract Invoice Accuracy Rate",
+        "range": "DataType"
+    },{
+        "@id": "contractOnTimeDeliveryRate",
+        "@type": "Property",
+        "description": "Number of on-time deliveries for on-promise dates / total number of deliveries",
+        "name": "Contract On Time Delivery Rate",
+        "range": "DataType"
+    },{
+        "@id": "contractProductQualityRate",
+        "@type": "Property",
+        "description": "Percentage of products with defects",
+        "name": "Contract Product Quality Rate",
+        "range": "DataType"
+    },{
+        "@id": "contractProductReturnRate",
+        "@type": "Property",
+        "description": "Percentage of products that had to be returned",
+        "name": "Contract Product Return Rate",
+        "range": "DataType"
+    },{
+        "@id": "contractSLAIssueRate",
+        "@type": "Property",
+        "description": "How many times SLA broken in last 12 months",
+        "name": "Contract SLA Issue Rate",
+        "range": "DataType"
+    },{
+        "@id": "contractSourcingCycleDays",
+        "@type": "Property",
+        "description": "Days from sourcing process started to contract signed",
+        "name": "Contract Sourcing Cycle Days",
+        "range": "DataType"
     }
-  ]
+    ]
 }

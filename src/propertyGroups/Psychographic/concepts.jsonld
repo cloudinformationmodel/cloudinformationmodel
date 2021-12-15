@@ -1,37 +1,33 @@
 {
-  "@context": "http://cloudinformationmodel.org/context.jsonld",
-  "@id": "PsychographicPropertyGroup",
-  "name": "Psychographic Property Group",
-  "@type": "PropertyGroup",
-  "version": "0.1",
-  "propertyConcepts": [
-    {
-      "@id": "mainPersonalityType",
-      "@type": "Property",
-      "description": "Personality e.g. impulsive, compulsive, authoritative, ambitious, introverted",
-      "name": "Main Personality Type",
-      "range": "DataType"
-    },
-    {
-      "@id": "mainPersonalValueType",
-      "@type": "Property",
-      "description": "Personal value e.g. family-oriented, materialistic, spiritual, idealistic, careerist",
-      "name": "Main Personal Value Type",
-      "range": "DataType"
-    },
-    {
-      "@id": "mainLifeStyleType",
-      "@type": "Property",
-      "description": "Life style e.g. modern, corporate, suburban, religious, workaholic, outdoors",
-      "name": "Main Life Style Type",
-      "range": "DataType"
-    },
-    {
-      "@id": "mainLifeAttitudeType",
-      "@type": "Property",
-      "description": "Life attitude e.g. innovator, believer, achiever, experience, survivor",
-      "name": "Main Life Attitude Type",
-      "range": "DataType"
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "PsychographicPropertyGroup",
+    "name": "Psychographic Property Group",
+    "@type": "PropertyGroup",
+    "propertyConcepts": [
+{
+        "@id": "mainLifeAttitudeTypeId",
+        "@type": "Property",
+        "description": "Life attitude e.g. innovator, believer, achiever, experience, survivor",
+        "name": "Main Life Attitude Type",
+        "range": "LifeAttitudeType"
+    },{
+        "@id": "mainLifeStyleTypeId",
+        "@type": "Property",
+        "description": "Life style e.g. modern, corporate, suburban, religious, workaholic, outdoors",
+        "name": "Main Life Style Type",
+        "range": "LifeStyleType"
+    },{
+        "@id": "mainPersonalityTypeId",
+        "@type": "Property",
+        "description": "Personality e.g. impulsive, compulsive, authoritative, ambitious, introverted",
+        "name": "Main Personality Type",
+        "range": "PersonalityType"
+    },{
+        "@id": "mainPersonalValueTypeId",
+        "@type": "Property",
+        "description": "Personal value e.g. family-oriented, materialistic, spiritual, idealistic, careerist",
+        "name": "Main Personal Value Type",
+        "range": "PersonalValueType"
     }
-  ]
+    ]
 }

@@ -1,0 +1,27 @@
+{
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "TrainingPropertyGroup",
+    "name": "Training Property Group",
+    "@type": "PropertyGroup",
+    "propertyConcepts": [
+{
+        "@id": "partyId",
+        "@type": "Property",
+        "description": "An orgnization (Party) that provides the degree defined by Education.",
+        "name": "Educational Institution",
+        "range": "Party"
+    },{
+        "@id": "individualId",
+        "@type": "Property",
+        "description": "A person who has records of taking training.",
+        "name": "Individual",
+        "range": "Individual"
+    },{
+        "@id": "personTrainingId",
+        "@type": "Property",
+        "description": "Training a person have e.g. work-related training",
+        "name": "Person Training",
+        "range": "PersonTraining"
+    }
+    ]
+}

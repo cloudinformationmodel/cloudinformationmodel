@@ -1,281 +1,582 @@
 {
-  "@context": "http://cloudinformationmodel.org/context.jsonld",
-  "@id": "ShipmentEntityGroup",
-  "@type": "EntityGroup",
-  "version": "0.1",
-  "schemas": [
-    {
-      "@type": "Shape",
-      "@id": "Shipment",
-      "properties": [
-        {
-          "path": "giftMessageText",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "specialInstructionsText",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "isGift",
-          "datatype": "xsd:boolean",
-          "maxCount": "1"
-        },
-        {
-          "path": "estimatedDeliveryDateTime",
-          "datatype": "xsd:time",
-          "maxCount": "1"
-        },
-        {
-          "path": "scheduledDeliveryDateTime",
-          "datatype": "xsd:time",
-          "maxCount": "1"
-        },
-        {
-          "path": "actualDeliveryDateTime",
-          "datatype": "xsd:time",
-          "maxCount": "1"
-        },
-        {
-          "path": "shipmentDate",
-          "datatype": "xsd:date",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "shipToAddress",
-          "node": "ContactPointAddress"
-        },
-        {
-          "path": "shipmentStatus",
-          "node": "ShipmentStatus"
-        },
-        {
-          "path": "salesOrderDeliveryGroup",
-          "node": "SalesOrderDeliveryGroup"
-        },
-        {
-          "path": "salesOrder",
-          "node": "SalesOrder"
-        },
-        {
-          "path": "carrierTrackingNumber",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "shipmentNumber",
-          "datatype": "xsd:string",
-          "maxCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "61c0a965-46c0-3188-965d-7af6a2e2be02",
+    "@type": "EntityGroup",
+    "name": "Shipment",
+    "version": "1.0.0",
+    "subjectArea": "60ba53a5-b32f-3baa-aae1-1c0c0b6680cf",
+    "description": "Example Entities included: Shipment, Shipment Package, Shipment Document, Shipment Product",
+    "schemas": [
+{
+        "@id": "e3947343-1f21-3573-8b27-d3f8e03ccb80",
+        "@type": "Shape",
+        "targetClass": "Shipment",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "30232c68-c34a-3d28-b7ee-0d64313664e7",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "specialInstructionsText",
+            "@id": "3badfd90-3bee-4d6d-9292-e983eb67c96e",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "shipToAddressId",
+            "@id": "4c967357-3b5f-42c2-8a8a-b6e2fec5e5ed",
+            "node": "d4e3c4a5-9cc3-342a-b1f8-09d5bf6f554b",
+            "maxCount": "1"
+        },{
+            "path": "shippingMethodId",
+            "@id": "f64261ad-dbe6-4f5f-9898-d2670231e374",
+            "node": "beb8f1e4-e2bc-4151-a464-7d29c9be52c2",
+            "maxCount": "1"
+        },{
+            "path": "shipmentStatusId",
+            "@id": "8bb33a58-a26e-4c9c-9c5c-7a2ad56228f2",
+            "node": "c471dbe1-ab61-4787-b3f3-0602612d3e5e",
+            "maxCount": "1"
+        },{
+            "path": "shipmentNumber",
+            "@id": "36532cd9-d43f-4b7b-acec-6af8a51c2e6d",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "shipmentDate",
+            "@id": "ef00e26d-180c-3d08-a0ff-a1fdeadab087",
+            "datatype": "xsd:date",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "scheduledDeliveryDateTime",
+            "@id": "f40a40f1-960a-4b3b-8686-060a306c1814",
+            "datatype": "xsd:time",
+            "maxCount": "1"
+        },{
+            "path": "salesOrderId",
+            "@id": "fa5e2fd0-a714-4c4c-a9e9-1e2f329b9ff2",
+            "node": "12a0c973-f594-3605-b886-1a10e4860c37",
+            "maxCount": "1"
+        },{
+            "path": "salesOrderDeliveryGroupId",
+            "@id": "c241c3d6-981f-4a1a-b6f6-586768e1670a",
+            "node": "a749188b-b632-3d84-9ea4-1f106c97518e",
+            "maxCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "6fe3fd00-4b53-3c8a-9559-261468113c00",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "isGift",
+            "@id": "279a1126-3a4b-4f3f-a868-bfffdae3d09b",
+            "datatype": "xsd:boolean",
+            "maxCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "fb1e5a64-3ce6-4050-96d6-4d58735282b8",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "7dc6b6cc-9b84-38b9-94ab-36632f46577a",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "giftMessageText",
+            "@id": "5442ac91-bbfe-4575-97d7-a5304ae94aea",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "9e91aaaa-cfc6-4060-9191-d42318819a25",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "054d49d1-4b51-3508-adbf-787a36037213",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "estimatedDeliveryDateTime",
+            "@id": "db8b312a-99e2-4121-baba-61828362a7e5",
+            "datatype": "xsd:time",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "20d3b1d7-ccb9-3c7a-be29-890ece4fa0ee",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "carrierTrackingNumber",
+            "@id": "9c50bd0b-e0a5-4484-bafa-86ad815c3a0c",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "carrierId",
+            "@id": "5c3d1c1f-f7d6-4161-9c9c-6042d64e677a",
+            "node": "2f08c250-9ea0-45f5-b070-63932470b7cb",
+            "maxCount": "1"
+        },{
+            "path": "actualDeliveryDateTime",
+            "@id": "000cfe3b-3b27-4090-a565-870ad6be3f68",
+            "datatype": "xsd:time",
+            "maxCount": "1"
+        },{
+            "path": "ShipmentDocuments",
+            "node": "02af4700-50e1-45a5-9a5a-5fa41b5260d9",
+            "minCount": "1"
+        },{
+            "path": "ShipmentPackages",
+            "node": "f5e74a74-c37e-4aea-b070-5c0760b25df4",
+            "minCount": "1"
+        },{
+            "path": "ShipmentProducts",
+            "node": "f425fa0d-5458-325b-8279-d846dc37dc3e",
+            "minCount": "1"
         }
-      ]
-    },
-    {
-      "@type": "Shape",
-      "@id": "ShipmentStatus",
-      "properties": [
-        {
-          "path": "description",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "name",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
+        ]
+    },{
+        "@id": "02af4700-50e1-45a5-9a5a-5fa41b5260d9",
+        "@type": "Shape",
+        "targetClass": "ShipmentDocument",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "4cde8d89-b86e-4beb-8686-1ee0c13fce30",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "shipmentId",
+            "@id": "6b8db3d9-6c47-48d8-81c1-410691c516c5",
+            "node": "e3947343-1f21-3573-8b27-d3f8e03ccb80",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "01d96145-63b0-4e9e-afef-d62e4dbccf80",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "d7615a1c-b9cb-4050-a525-3e6e95a3d5d2",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "72bb7a3c-651b-43d3-b575-2bff4adec326",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "ac1c6435-ad0b-4fdf-a161-a2b187bcd5ed",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "e19dab7a-137e-4c8c-8787-36bb5fb03bba",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "cd80cdf3-b487-42a2-8383-4420309b5a9a",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
         }
-      ]
-    },
-    {
-      "@type": "Shape",
-      "@id": "ShippingMethod",
-      "properties": [
-        {
-          "path": "product",
-          "node": "Product",
-          "minCount": "1"
-        },
-        {
-          "path": "description",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "name",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
+        ]
+    },{
+        "@id": "f5e74a74-c37e-4aea-b070-5c0760b25df4",
+        "@type": "Shape",
+        "targetClass": "ShipmentPackage",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "cb6db2b1-58d6-43c3-8000-2b05f65d853e",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "shipmentProductDescription",
+            "@id": "68a46d50-087b-4e8e-b6b6-ce75f1b13240",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "shipmentProductCount",
+            "@id": "80919298-6efe-48f8-8848-b7b7c51eb2ba",
+            "datatype": "xsd:decimal",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "shipmentId",
+            "@id": "00e31929-3165-47e7-99d9-a6d4feb67e20",
+            "node": "e3947343-1f21-3573-8b27-d3f8e03ccb80",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "00f888b8-4798-4292-b3f3-31050c0fcb1f",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "ff9992e6-02f5-4a5a-8646-fc5af71516f2",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "0a588ce2-db43-4d6d-baba-816e0488da4d",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "b28dbc0d-389b-4434-a5e5-13e66c7c537b",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "e59dfe32-4c87-4646-96d6-5e28341973a6",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "dd3839e7-7b80-4ded-9c9c-a6f3dbec5735",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
         }
-      ]
-    },
-    {
-      "@type": "Shape",
-      "@id": "ShipmentProduct",
-      "properties": [
-        {
-          "path": "shipmentProductCount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "shipment",
-          "node": "Shipment",
-          "minCount": "1"
-        },
-        {
-          "path": "product",
-          "node": "Product",
-          "minCount": "1"
-        },
-        {
-          "path": "shipmentPackage",
-          "node": "ShipmentPackage",
-          "minCount": "1"
-        },
-        {
-          "path": "salesOrderProduct",
-          "node": "SalesOrderProduct",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
+        ]
+    },{
+        "@id": "f425fa0d-5458-325b-8279-d846dc37dc3e",
+        "@type": "Shape",
+        "targetClass": "ShipmentProduct",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "9f1500ce-05e7-3034-bd27-25287f95f790",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "shipmentProductCount",
+            "@id": "3b04241a-56df-3472-8888-addd22e3cd6f",
+            "datatype": "cim:amount",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "shipmentPackageId",
+            "@id": "5416809a-5605-4202-a7e7-fe7f8646be49",
+            "node": "f5e74a74-c37e-4aea-b070-5c0760b25df4",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "shipmentId",
+            "@id": "86cfacff-abbf-33d2-abe2-83473a00ba49",
+            "node": "e3947343-1f21-3573-8b27-d3f8e03ccb80",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "1bb75d37-39f9-397a-b225-6e5b66011b8e",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "93bb368e-da8d-4cbc-b6b6-f2a1e42626f8",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "6d10c4b5-b6de-3a83-8f43-556e19ed5682",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "bf1aa2a8-e3a8-4b2b-b3b3-3aeb96666507",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "3746832d-c10e-3d08-9606-2bd19581847a",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "8015d246-14b7-3a7f-be47-871f33d26554",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
         }
-      ]
-    },
-    {
-      "@type": "Shape",
-      "@id": "ShipmentDocument",
-      "properties": [
-        {
-          "path": "shipment",
-          "node": "Shipment",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
+        ]
+    },{
+        "@id": "ea1dc2fb-8c4e-4101-9c1c-c4b97228f63f",
+        "@type": "Shape",
+        "targetClass": "ShipmentProductPriceAdjustment",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "1dbd081b-8c50-4050-b5b5-079591272adb",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "shipmentProductPriceAdjustmentAmount",
+            "@id": "9f961166-ab42-4909-a020-7f855f33979b",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "a1ae7a81-0302-49b9-8747-5065f647b92e",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "5856ee60-715f-4666-b8b8-1c7302f30f50",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "ae31d86d-8485-4eae-ac6c-5bcc75c365a9",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "6081e075-ff57-4e1e-ab6b-6ddd97813af6",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "15ac0482-9e31-48c8-ae2e-6672cb247f4e",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "description",
+            "@id": "862cae73-2ec3-4c1c-8ccc-35769b4507e3",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "620ab7da-e654-44a4-9858-52ac635460af",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "adjustmentTaxAmount",
+            "@id": "273d8d78-5222-4848-9919-86f10ff05702",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "adjustmentAmount",
+            "@id": "ac3ebb3e-4844-4030-80c0-8b5bb6d518e9",
+            "datatype": "cim:amount",
+            "maxCount": "1",
+            "minCount": "1"
         }
-      ]
-    },
-    {
-      "@type": "Shape",
-      "@id": "ShipmentPackage",
-      "properties": [
-        {
-          "path": "shipmentProductCount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "shipmentProductDescription",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "shipment",
-          "node": "Shipment",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
+        ]
+    },{
+        "@id": "f9578695-49e4-47c7-a969-457d617ac758",
+        "@type": "Shape",
+        "targetClass": "ShipmentProductPriceAdjustmentTax",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "72837e61-7712-4e5e-8909-157feccbcfdc",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "shipmentProductPriceAdjustmentId",
+            "@id": "3c9b4e33-cbdd-4e9e-b030-112a9372834a",
+            "node": "ea1dc2fb-8c4e-4101-9c1c-c4b97228f63f",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "name",
+            "@id": "6eddef69-bce6-4555-abeb-7451fa28233c",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "ae556761-fc87-4080-a626-560c9ad90d72",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "74fc3968-787d-4fff-a121-91f69c404ac2",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "f704f785-4ded-4afa-9fdf-e6042560cf17",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "dcfbe1a5-5161-4545-9e9e-f437d9ea021a",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "629805b2-5710-46c6-ad2d-6f3e346a2e49",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "c3ffb579-c54f-4161-9151-358c6476e46d",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
         }
-      ]
-    },
-    {
-      "@type": "Shape",
-      "@id": "ShipmentProductPriceAdjustmentTax",
-      "properties": [
-        {
-          "path": "shipmentProductPriceAdjustment",
-          "node": "ShipmentProductPriceAdjustment",
-          "minCount": "1"
-        },
-        {
-          "path": "name",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
+        ]
+    },{
+        "@id": "c471dbe1-ab61-4787-b3f3-0602612d3e5e",
+        "@type": "Shape",
+        "targetClass": "ShipmentStatus",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "29b5b5b1-a1d0-4090-ba3a-2dc14513f58c",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "name",
+            "@id": "beeec93c-c72b-43f3-9f9f-374b5fc2195a",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "7c023308-d01d-4f3f-a5e5-2f1b9345a39d",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "074120e9-3f76-4c2c-b8f8-1bf99ca1f795",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "42ab4d51-df91-45b5-9ddd-f5b77f06705c",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "d33366ee-4372-4a0a-a8e8-5b1a3b2e2e86",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "a64f0858-53d9-4969-8d8d-5ed7a2fbcceb",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "description",
+            "@id": "b27f0be9-19c9-4676-9353-204cb5b7dcd0",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "653c4ae0-e3b9-4a8a-a6a6-f8e9109c9757",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
         }
-      ]
-    },
-    {
-      "@type": "Shape",
-      "@id": "ShipmentProductPriceAdjustment",
-      "properties": [
-        {
-          "path": "adjustmentAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "adjustmentTaxAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "shipmentProductPriceAdjustmentAmount",
-          "datatype": "xsd:decimal",
-          "maxCount": "1"
-        },
-        {
-          "path": "description",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "shipmentProduct",
-          "node": "ShipmentProduct",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
+        ]
+    },{
+        "@id": "beb8f1e4-e2bc-4151-a464-7d29c9be52c2",
+        "@type": "Shape",
+        "targetClass": "ShippingMethod",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "d4c9efb8-4bf4-47d7-8c8c-6746bde95e14",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "productId",
+            "@id": "c450a7f2-e5d2-4efe-a020-75311ae89902",
+            "node": "0a14a328-3059-3c24-9c85-ececb74ab456",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "name",
+            "@id": "ad1b8d12-78ad-4e3e-bfbf-bd8593144c7d",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "1bd8257f-4941-4202-9919-6d59e3309e96",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "94f66751-4b04-4e2e-8141-9caec284d841",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "775466cb-fc4f-389e-9501-5a4219aaa5ca",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "24a66ed6-cdd4-4484-a6e6-f8c171a7a592",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "251725d6-59ff-3b08-8d06-765840a7aa7b",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "description",
+            "@id": "2e60b63f-e0d6-4f7f-9151-7131fdbeb5ee",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "a3cd2397-1ade-4e8e-af6f-4ee3d963c4e9",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
         }
-      ]
+        ]
     }
-  ]
+    ]
 }

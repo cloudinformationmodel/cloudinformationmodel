@@ -1,163 +1,141 @@
 {
-  "@context": "http://cloudinformationmodel.org/context.jsonld",
-  "@id": "DescriptivePropertyGroup",
-  "name": "Descriptive Property Group",
-  "@type": "PropertyGroup",
-  "version": "0.1",
-  "propertyConcepts": [
-    {
-      "@id": "primaryProductCategory",
-      "@type": "Property",
-      "description": "Name of the primary product category e.g. family associated with this record.",
-      "name": "Primary Product Category",
-      "range": "ProductCategory"
-    },
-    {
-      "@id": "isSerialized",
-      "@type": "Property",
-      "description": "Does each item of the product have a unique serial number",
-      "name": "Is Serialized",
-      "range": "DataType"
-    },
-    {
-      "@id": "isDynamicBundle",
-      "@type": "Property",
-      "description": "Is actual content of the product bunde derived at point of use or not",
-      "name": "Is Dynamic Bundle",
-      "range": "DataType"
-    },
-    {
-      "@id": "displayUrl",
-      "@type": "Property",
-      "description": "...returned as we have a separate child entity to hold many product pictures/URLs",
-      "name": "Display URL",
-      "range": "DataType"
-    },
-    {
-      "@id": "longDescription",
-      "@type": "Property",
-      "description": "General longer description of the product",
-      "name": "Product Long Description",
-      "range": "DataType"
-    },
-    {
-      "@id": "description",
-      "@type": "Property",
-      "description": "General description of the product",
-      "name": "Product Description",
-      "range": "DataType"
-    },
-    {
-      "@id": "brandGrade",
-      "@type": "Property",
-      "description": "What is the value of the brand e.g. premium, regular, value",
-      "name": "Brand Grade Id",
-      "range": "DataType"
-    },
-    {
-      "@id": "serviceType",
-      "@type": "Property",
-      "description": "What type of service is this e.g. rental, subscription, labor",
-      "name": "Service Type",
-      "range": "DataType"
-    },
-    {
-      "@id": "servicePeriodCount",
-      "@type": "Property",
-      "description": "How long the service period is valid for e.g. 1,2,3",
-      "name": "Service Period Count",
-      "range": "DataType"
-    },
-    {
-      "@id": "servicePeriodUOM",
-      "@type": "Property",
-      "description": "Time product available e.g. minutes, hours, days, weeks, years",
-      "name": "Service Period UOM",
-      "range": "DataType"
-    },
-    {
-      "@id": "rentalTermViolationPenaltyAmount",
-      "@type": "Property",
-      "description": "If terms not honored by customer what is the penalty amount",
-      "name": "Rental Term Violation Penalty Amount",
-      "range": "DataType"
-    },
-    {
-      "@id": "rentalCleanupFeeAmount",
-      "@type": "Property",
-      "description": "If cleanup of rental post use required what is the cost",
-      "name": "Rental Cleanup Fee Amount",
-      "range": "DataType"
-    },
-    {
-      "@id": "serviceProviderAccount",
-      "@type": "Property",
-      "description": "The account of the party of type supplier that provides the service",
-      "name": "Service Provider Account",
-      "range": "Account"
-    },
-    {
-      "@id": "evergreenContractEstimatedMonthCount",
-      "@type": "Property",
-      "description": "For contracts that are auto renewed what is the expected number of month, used for revenue estimation",
-      "name": "Evergreen Contract Estimated Month Count",
-      "range": "DataType"
-    },
-    {
-      "@id": "evergreenContractEstimatedChargeAmount",
-      "@type": "Property",
-      "description": "For contracts that are auto renewed what is the expected charge per month, used for revenue estimation",
-      "name": "Evergreen Contract Estimated Charge Amount",
-      "range": "DataType"
-    },
-    {
-      "@id": "bundledProductsSoldTogether",
-      "@type": "Property",
-      "description": "Can products in a bundle be partly chosen or all sold together as one unit e.g. mobile phone bundle consist of phone, call plan, data plan and goes together",
-      "name": "Bundled Products Sold Together",
-      "range": "DataType"
-    },
-    {
-      "@id": "bundledProductsSubstitutional",
-      "@type": "Property",
-      "description": "Can products in a bundle be substituted by other products e.g. for mobile phone bundle customer can select other call plan (without it being declared as another bundle)",
-      "name": "Bundled Products Substitutional",
-      "range": "DataType"
-    },
-    {
-      "@id": "bundledProductsDecidesAvailability",
-      "@type": "Property",
-      "description": "Is the bundled inventoried on its' own or is the availability based on bundled products availability",
-      "name": "Bundled Products Decides Availability",
-      "range": "DataType"
-    },
-    {
-      "@id": "bundledProductsDecidedAtUse",
-      "@type": "Property",
-      "description": "Is the content of a bundle only decided, dynamically, at point of bundle use or not",
-      "name": "Bundled Products Decided At Use",
-      "range": "DataType"
-    },
-    {
-      "@id": "quantityCount",
-      "@type": "Property",
-      "description": "Amount of Item in the package e.g. 10 bottles of water = 10 ea",
-      "name": "Quantity Count",
-      "range": "DataType"
-    },
-    {
-      "@id": "quantityUnitOfMeasure",
-      "@type": "Property",
-      "description": "What is the unit of measure for stating the weight of the product e.g. ea.",
-      "name": "Quantity Unit Of Measure",
-      "range": "DataType"
-    },
-    {
-      "@id": "expectedWasteCount",
-      "@type": "Property",
-      "description": "How many products in the bundle is expected to be wasted e.g. 1 of 1000 cans spoil",
-      "name": "Expected Waste Count",
-      "range": "DataType"
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "DescriptivePropertyGroup",
+    "name": "Descriptive Property Group",
+    "@type": "PropertyGroup",
+    "propertyConcepts": [
+{
+        "@id": "bundledProductsDecidedAtUse",
+        "@type": "Property",
+        "description": "Is the content of a bundle only decided, dynamically, at point of bundle use or not",
+        "name": "Bundled Products Decided At Use",
+        "range": "DataType"
+    },{
+        "@id": "bundledProductsDecidesAvailability",
+        "@type": "Property",
+        "description": "Is the bundled inventoried on its' own or is the availability based on bundled products availability",
+        "name": "Bundled Products Decides Availability",
+        "range": "DataType"
+    },{
+        "@id": "bundledProductsSoldTogether",
+        "@type": "Property",
+        "description": "Can products in a bundle be partly chosen or all sold together as one unit e.g. mobile phone bundle consist of phone, call plan, data plan and goes together",
+        "name": "Bundled Products Sold Together",
+        "range": "DataType"
+    },{
+        "@id": "bundledProductsSubstitutional",
+        "@type": "Property",
+        "description": "Can products in a bundle be substituted by other products e.g. for mobile phone bundle customer can select other call plan (without it being declared as another bundle)",
+        "name": "Bundled Products Substitutional",
+        "range": "DataType"
+    },{
+        "@id": "expectedWasteCount",
+        "@type": "Property",
+        "description": "How many products in the bundle is expected to be wasted e.g. 1 of 1000 cans spoil",
+        "name": "Expected Waste Count",
+        "range": "DataType"
+    },{
+        "@id": "quantityCount",
+        "@type": "Property",
+        "description": "Amount of Item in the package e.g. 10 bottles of water = 10 ea",
+        "name": "Quantity Count",
+        "range": "DataType"
+    },{
+        "@id": "quantityUnitOfMeasureId",
+        "@type": "Property",
+        "description": "What is the unit of measure for stating the weight of the product e.g. ea.",
+        "name": "Quantity Unit Of Measure",
+        "range": "QuantityUOM"
+    },{
+        "@id": "description",
+        "@type": "Property",
+        "description": "General description of the product",
+        "name": "Product Description",
+        "range": "DataType"
+    },{
+        "@id": "isDynamicBundle",
+        "@type": "Property",
+        "description": "Is actual content of the product bunde derived at point of use or not",
+        "name": "Is Dynamic Bundle",
+        "range": "DataType"
+    },{
+        "@id": "isSerialized",
+        "@type": "Property",
+        "description": "Does each item of the product have a unique serial number",
+        "name": "Is Serialized",
+        "range": "DataType"
+    },{
+        "@id": "primaryProductCategoryId",
+        "@type": "Property",
+        "description": "Name of the primary product category e.g. family associated with this record.",
+        "name": "Primary Product Category",
+        "range": "ProductCategory"
+    },{
+        "@id": "evergreenContractEstimatedChargeAmount",
+        "@type": "Property",
+        "description": "For contracts that are auto renewed what is the expected charge per month, used for revenue estimation",
+        "name": "Evergreen Contract Estimated Charge Amount",
+        "range": "DataType"
+    },{
+        "@id": "evergreenContractEstimatedChargeAmountCurrency",
+        "@type": "Property",
+        "description": "Currency for Evergreen Contract Estimated Charge Amount",
+        "name": "Evergreen Contract Estimated Charge Amount Currency",
+        "range": "Currency"
+    },{
+        "@id": "evergreenContractEstimatedMonthCount",
+        "@type": "Property",
+        "description": "For contracts that are auto renewed what is the expected number of month, used for revenue estimation",
+        "name": "Evergreen Contract Estimated Month Count",
+        "range": "DataType"
+    },{
+        "@id": "rentalCleanupFeeAmount",
+        "@type": "Property",
+        "description": "If cleanup of rental post use required what is the cost",
+        "name": "Rental Cleanup Fee Amount",
+        "range": "DataType"
+    },{
+        "@id": "rentalCleanupFeeAmountCurrency",
+        "@type": "Property",
+        "description": "Currency for Rental Cleanup Fee Amount",
+        "name": "Rental Cleanup Fee Amount Currency",
+        "range": "Currency"
+    },{
+        "@id": "rentalTermViolationPenaltyAmount",
+        "@type": "Property",
+        "description": "If terms not honored by customer what is the penalty amount",
+        "name": "Rental Term Violation Penalty Amount",
+        "range": "DataType"
+    },{
+        "@id": "rentalTermViolationPenaltyAmountCurrency",
+        "@type": "Property",
+        "description": "Currency for Rental Term Violation Penalty Amount",
+        "name": "Rental Term Violation Penalty Amount Currency",
+        "range": "Currency"
+    },{
+        "@id": "servicePeriodCount",
+        "@type": "Property",
+        "description": "How long the service period is valid for e.g. 1,2,3",
+        "name": "Service Period Count",
+        "range": "DataType"
+    },{
+        "@id": "servicePeriodUOM",
+        "@type": "Property",
+        "description": "Time product available e.g. minutes, hours, days, weeks, years",
+        "name": "Service Period UOM",
+        "range": "TimeUOM"
+    },{
+        "@id": "serviceProviderAccountId",
+        "@type": "Property",
+        "description": "The account of the party of type supplier that provides the service",
+        "name": "Service Provider Account",
+        "range": "Account"
+    },{
+        "@id": "serviceTypeId",
+        "@type": "Property",
+        "description": "What type of service is this e.g. rental, subscription, labor",
+        "name": "Service Type",
+        "range": "ServiceType"
     }
-  ]
+    ]
 }

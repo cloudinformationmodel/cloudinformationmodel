@@ -1,0 +1,9 @@
+{
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "LeadPropertyGroup",
+    "name": "Lead Property Group",
+    "@type": "PropertyGroup",
+    "propertyConcepts": [
+
+    ]
+}

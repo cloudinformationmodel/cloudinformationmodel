@@ -1,1097 +1,1196 @@
 {
-  "@context": "http://cloudinformationmodel.org/context.jsonld",
-  "@id": "PaymentEntityGroup",
-  "name": "Payment",
-  "@type": "EntityGroup",
-  "version": "0.1",
-  "subjectArea": {
-    "@id": "PaymentSubjectArea"
-  },
-  "description": "Example Entities included: Payment, Payment Group, Payment Authorization, Payment Gateway",
-  "classConcepts": [
-    {
-      "@id": "Payment",
-      "name": "Payment",
-      "@type": "Class",
-      "description": "An amount of currency paid."
-    },
-    {
-      "@id": "CapturePayment",
-      "name": "Capture Payment",
-      "@type": "Class",
-      "subClassOf": "Payment",
-      "description": "The transfer of money from the customer's account to the merchant's account."
-    },
-    {
-      "@id": "RefundPayment",
-      "name": "Refund Payment",
-      "@type": "Class",
-      "subClassOf": "Payment",
-      "description": "Represents a repayment made, typically to a customer who isn’t satisfied with the goods or services purchased. Refunds are typically made after a payment has already been received from customers"
-    },
-    {
-      "@id": "PaymentPolicy",
-      "name": "Payment Policy",
-      "@type": "Class",
-      "description": "This entity stores policy information for an org or an account which can be used to automate the process of payment application to invoice based on business needs."
-    },
-    {
-      "@id": "RefundCreditMemoAllocation",
-      "name": "Refund Credit Memo Allocation",
-      "@type": "Class",
-      "subClassOf": "RefundAllocation",
-      "description": "Facilitates applying/unapplying refund balance to a credit memo."
-    },
-    {
-      "@id": "PaymentGroup",
-      "name": "Payment Group",
-      "@type": "Class",
-      "description": "Payment Group provides a way to associate payments and payment gateway events, where the payment is not associated with a Sales Order."
-    },
-    {
-      "@id": "PaymentTreatmentMethod",
-      "name": "Payment Treatment Method",
-      "@type": "Class",
-      "description": "Represents a specific algorithm or method to apply. For example - pay for taxes first, pay for charges first, pay for oldest due invoice first etc. It can also point to a rule based on which application can be done. Treatment has a method."
-    },
-    {
-      "@id": "PaymentTreatment",
-      "name": "Payment Treatment",
-      "@type": "Class",
-      "description": "This entity has the information which controls the way in which payment can be applied based on a legal entity or workflow. A policy has multiple treatments associated."
-    },
-    {
-      "@id": "PaymentAuthorization",
-      "name": "Payment Authorization",
-      "@type": "Class",
-      "description": "An approval from the issuer of a payment instrument (usually a card), that the customer has sufficient funds to cover the cost of the transaction."
-    },
-    {
-      "@id": "PaymentGatewayAuthReversalLog",
-      "name": "Payment Gateway Authorization Reversal Log",
-      "@type": "Class",
-      "subClassOf": "PaymentGatewayInteractionLog",
-      "description": "A log record of all requests made to financial institutions, made via the payment gateway, to cancel payment authorizations."
-    },
-    {
-      "@id": "PaymentGatewayPaymentLog",
-      "name": "Payment Gateway Payment Log",
-      "@type": "Class",
-      "subClassOf": "PaymentGatewayInteractionLog",
-      "description": "A log record of all messages originating with financial institutions that previously provided payment authorizations, that payments have been deducted from customers' accounts."
-    },
-    {
-      "@id": "PaymentGatewayAuthorizationLog",
-      "name": "Payment Gateway Authorization Log",
-      "@type": "Class",
-      "subClassOf": "PaymentGatewayInteractionLog",
-      "description": "A log record of all requests made to financial institutions, made via the payment gateway, to authorize payments."
-    },
-    {
-      "@id": "PaymentGatewayInteractionType",
-      "name": "Payment Gateway Interaction Type",
-      "@type": "Class",
-      "description": "Reasons for accessing the Payment Gateway, including authorization, Sale and Void."
-    },
-    {
-      "@id": "PaymentGateway",
-      "name": "Payment Gateway",
-      "@type": "Class",
-      "description": "Holds the payment gateway merchant details which are used to interact external payment systems."
-    },
-    {
-      "@id": "PaymentGatewayProvider",
-      "name": "Payment Gateway Provider",
-      "@type": "Class",
-      "description": "Stores class details needed for maintaining Apex adapter."
-    },
-    {
-      "@id": "PaymentGatewayInteractionLog",
-      "name": "Payment Gateway Interaction Log",
-      "@type": "Class",
-      "description": "A log record of all messages exchanged with merchants made via the payment gateway, for authorizations and payments."
-    },
-    {
-      "@id": "PaymentGatewayResultCode",
-      "name": "Payment Gateway Result Code",
-      "@type": "Class",
-      "description": "The response from the Payment Gateway."
-    },
-    {
-      "@id": "PaymentApplication",
-      "name": "Payment Application",
-      "@type": "Class",
-      "description": "The designation of part or all of a Payment to satisfy a claim on the payment funds."
-    },
-    {
-      "@id": "PaymentInvoiceApplication",
-      "name": "Payment Invoice Application",
-      "@type": "Class",
-      "subClassOf": "PaymentApplication",
-      "description": "Facilitates applying/unapplying payment balance to an Invoice."
-    },
-    {
-      "@id": "PaymentAllocation",
-      "name": "Payment Allocation",
-      "@type": "Class",
-      "description": "A Payment Application may be further broken down, to allocate payment funds to one or more line items within an Invoice or Credit Memo"
-    },
-    {
-      "@id": "PaymentCreditMemoApplication",
-      "name": "Payment Credit Memo Application",
-      "@type": "Class",
-      "subClassOf": "PaymentApplication",
-      "description": "Facilitates applying/unapplying payment balance to a credit memo."
-    },
-    {
-      "@id": "PaymentCreditMemoAllocation",
-      "name": "Payment Credit Memo Allocation",
-      "@type": "Class",
-      "subClassOf": "PaymentAllocation",
-      "description": "Facilitates applying a Payment Application to the line items of a Credit Memo."
-    },
-    {
-      "@id": "PaymentInvoiceAllocation",
-      "name": "Payment Invoice Allocation",
-      "@type": "Class",
-      "subClassOf": "PaymentAllocation",
-      "description": "Facilitates applying a Payment Application to the line items of an Invoice."
-    },
-    {
-      "@id": "RefundPaymentAllocation",
-      "name": "Refund Payment Allocation",
-      "@type": "Class",
-      "subClassOf": "RefundAllocation",
-      "description": "Facilitates applying/unapplying refund balance to a payment."
-    },
-    {
-      "@id": "RefundAllocation",
-      "name": "Refund Allocation",
-      "@type": "Class",
-      "description": "Facilitates applying/unapplying a capture payment, or a credit memo to a Refund Payment."
-    },
-    {
-      "@id": "PaymentAuthorizationReversal",
-      "name": "Payment Authorization Reversal",
-      "@type": "Class",
-      "description": "An authorization reversal is a message that alerts the issuer that part or all of a sale has been cancelled and the authorization hold should be rescinded."
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "a020a262-26b6-3db8-bcfe-75bdfa556559",
+    "@type": "EntityGroup",
+    "name": "Payment",
+    "version": "1.0.0",
+    "subjectArea": "6c582cb9-5195-3f6e-9019-42fb5b2725a3",
+    "description": "Example Entities included: Payment, Payment Group, Payment Authorization, Payment Gateway",
+    "classConcepts": [
+{
+        "@id": "AuthorizationProcessingMode",
+        "name": "Authorization Processing Mode",
+        "@type": "Class",
+        "description": "Mode to determine if the payment is processed by Salesforce Payment Platform or is an external authorization that is being recorded in our platform."
+    },{
+        "@id": "CapturePayment",
+        "name": "Capture Payment",
+        "@type": "Class",
+        "subClassOf": "Payment",
+        "description": "The transfer of money from the customer's account to the merchant's account."
+    },{
+        "@id": "CreditMemo",
+        "name": "Credit Memo",
+        "@type": "Class",
+        "description": "A Credit Memo is a document used to adjust or rectify errors made in an invoice which has already been processed and sent to a customer."
+    },{
+        "@id": "GatewayProviderPaymentMethodType",
+        "name": "Gateway Provider Payment Method Type",
+        "@type": "Class",
+        "description": "This setup entity maintains gateway supported payment methods and respective implementations."
+    },{
+        "@id": "InternalResultCode",
+        "name": "Internal Result Code",
+        "@type": "Class",
+        "description": "Salesforce internal result code. Maps to one or more gateway result code values."
+    },{
+        "@id": "Payment",
+        "name": "Payment",
+        "@type": "Class",
+        "description": "An amount of currency paid."
+    },{
+        "@id": "PaymentAllocation",
+        "name": "Payment Allocation",
+        "@type": "Class",
+        "description": "A Payment Application may be further broken down, to allocate payment funds to one or more line items within an Invoice or Credit Memo"
+    },{
+        "@id": "PaymentApplication",
+        "name": "Payment Application",
+        "@type": "Class",
+        "description": "The designation of part or all of a Payment to satisfy a claim on the payment funds."
+    },{
+        "@id": "PaymentApplicationLevel",
+        "name": "Payment Application Level",
+        "@type": "Class",
+        "description": "Determines if application is at header level or line level."
+    },{
+        "@id": "PaymentApplicationType",
+        "name": "Payment Application Type",
+        "@type": "Class",
+        "description": "Payments can be applied to invoices or credit memos, and they may also be reversed. This code identifies the status of application or reversal ."
+    },{
+        "@id": "PaymentAuthInternalResultCode",
+        "name": "Payment Authorization Internal Result Code",
+        "@type": "Class",
+        "description": "Codes used by the internal system to identify the state of a Payment Gateway Authorization request. Maps to one or more gateway result codes"
+    },{
+        "@id": "PaymentAuthorization",
+        "name": "Payment Authorization",
+        "@type": "Class",
+        "description": "An approval from the issuer of a payment instrument (usually a card), that the customer has sufficient funds to cover the cost of the transaction."
+    },{
+        "@id": "PaymentAuthorizationReversal",
+        "name": "Payment Authorization Reversal",
+        "@type": "Class",
+        "description": "An authorization reversal is a message that alerts the issuer that part or all of a sale has been cancelled and the authorization hold should be rescinded."
+    },{
+        "@id": "PaymentAuthorizationStatus",
+        "name": "Payment Authorization Status",
+        "@type": "Class",
+        "description": "-"
+    },{
+        "@id": "PaymentCreditMemoAllocation",
+        "name": "Payment Credit Memo Allocation",
+        "@type": "Class",
+        "subClassOf": "PaymentAllocation",
+        "description": "Facilitates applying a Payment Application to the line items of a Credit Memo."
+    },{
+        "@id": "PaymentCreditMemoApplication",
+        "name": "Payment Credit Memo Application",
+        "@type": "Class",
+        "subClassOf": "PaymentApplication",
+        "description": "Facilitates applying/unapplying payment balance to a credit memo."
+    },{
+        "@id": "PaymentGateway",
+        "name": "Payment Gateway",
+        "@type": "Class",
+        "description": "Holds the payment gateway merchant details which are used to interact external payment systems."
+    },{
+        "@id": "PaymentGatewayAuthorizationLog",
+        "name": "Payment Gateway Authorization Log",
+        "@type": "Class",
+        "subClassOf": "PaymentGatewayInteractionLog",
+        "description": "A log record of all requests made to financial institutions, made via the payment gateway, to authorize payments."
+    },{
+        "@id": "PaymentGatewayAuthReversalLog",
+        "name": "Payment Gateway Authorization Reversal Log",
+        "@type": "Class",
+        "subClassOf": "PaymentGatewayInteractionLog",
+        "description": "A log record of all requests made to financial institutions, made via the payment gateway, to cancel payment authorizations."
+    },{
+        "@id": "PaymentGatewayInteractionLog",
+        "name": "Payment Gateway Interaction Log",
+        "@type": "Class",
+        "description": "A log record of all messages exchanged with merchants made via the payment gateway, for authorizations and payments."
+    },{
+        "@id": "PaymentGatewayInteractionStatus",
+        "name": "Payment Gateway Interaction Status",
+        "@type": "Class",
+        "description": "Internal Code for tracking the status of a Gateway request."
+    },{
+        "@id": "PaymentGatewayInteractionType",
+        "name": "Payment Gateway Interaction Type",
+        "@type": "Class",
+        "description": "Reasons for accessing the Payment Gateway, including authorization, Sale and Void."
+    },{
+        "@id": "PaymentGatewayPaymentLog",
+        "name": "Payment Gateway Payment Log",
+        "@type": "Class",
+        "subClassOf": "PaymentGatewayInteractionLog",
+        "description": "A log record of all messages originating with financial institutions that previously provided payment authorizations, that payments have been deducted from customers' accounts."
+    },{
+        "@id": "PaymentGatewayProvider",
+        "name": "Payment Gateway Provider",
+        "@type": "Class",
+        "description": "Stores class details needed for maintaining Apex adapter."
+    },{
+        "@id": "PaymentGatewayResultCode",
+        "name": "Payment Gateway Result Code",
+        "@type": "Class",
+        "description": "The response from the Payment Gateway."
+    },{
+        "@id": "PaymentGatewayStatus",
+        "name": "Payment Gateway Status",
+        "@type": "Class",
+        "description": "A summary-level result code for an access to the Payment Gateway: success, failure or timeout"
+    },{
+        "@id": "PaymentGroup",
+        "name": "Payment Group",
+        "@type": "Class",
+        "description": "Payment Group provides a way to associate payments and payment gateway events, where the payment is not associated with a Sales Order."
+    },{
+        "@id": "PaymentInvoiceAllocation",
+        "name": "Payment Invoice Allocation",
+        "@type": "Class",
+        "subClassOf": "PaymentAllocation",
+        "description": "Facilitates applying a Payment Application to the line items of an Invoice."
+    },{
+        "@id": "PaymentInvoiceApplication",
+        "name": "Payment Invoice Application",
+        "@type": "Class",
+        "subClassOf": "PaymentApplication",
+        "description": "Facilitates applying/unapplying payment balance to an Invoice."
+    },{
+        "@id": "PaymentInvoiceApplicationType",
+        "name": "Payment Invoice Application Type",
+        "@type": "Class",
+        "description": "Payments are either applied, or un-applied to invoices."
+    },{
+        "@id": "PaymentPolicy",
+        "name": "Payment Policy",
+        "@type": "Class",
+        "description": "This entity stores policy information for an org or an account which can be used to automate the process of payment application to invoice based on business needs."
+    },{
+        "@id": "PaymentPolicyStatus",
+        "name": "Payment Policy Status",
+        "@type": "Class",
+        "description": "The state of readiness or availability of a Payment Policy to be used in payment transactions. Enum values are: Active, Inactive"
+    },{
+        "@id": "PaymentPolicyTreatmentSelection",
+        "name": "Payment Policy Treatment Selection",
+        "@type": "Class",
+        "description": "Determines how to select one treatment out of many."
+    },{
+        "@id": "PaymentSchedule",
+        "name": "Payment Schedule",
+        "@type": "Class",
+        "description": "A payment schedule represents a collection of different payments that a customer wants to collect at different times."
+    },{
+        "@id": "PaymentScheduleItem",
+        "name": "Payment Schedule Item",
+        "@type": "Class",
+        "description": "Each payment schedule line represents one payment that needs to be processed."
+    },{
+        "@id": "PaymentScheduleStatus",
+        "name": "Payment Schedule Status",
+        "@type": "Class",
+        "description": "The status of Payment Schedule may be Open, Closed or Cancelled."
+    },{
+        "@id": "PaymentStatus",
+        "name": "Payment Status",
+        "@type": "Class",
+        "description": "The state of a Payment: Draft, Processed, or Cancelled."
+    },{
+        "@id": "PaymentTreatment",
+        "name": "Payment Treatment",
+        "@type": "Class",
+        "description": "This entity has the information which controls the way in which payment can be applied based on a legal entity or workflow. A policy has multiple treatments associated."
+    },{
+        "@id": "PaymentTreatmentMethod",
+        "name": "Payment Treatment Method",
+        "@type": "Class",
+        "description": "Represents a specific algorithm or method to apply. For example - pay for taxes first, pay for charges first, pay for oldest due invoice first etc. It can also point to a rule based on which application can be done. Treatment has a method."
+    },{
+        "@id": "PaymentTreatmentStatus",
+        "name": "Payment Treatment Status",
+        "@type": "Class",
+        "description": "A payment treatment status is either Active or Inactive."
+    },{
+        "@id": "PaymentType",
+        "name": "Payment Type",
+        "@type": "Class",
+        "description": "Idnetifies the Payment as either a Capture Payment or Refund Payment"
+    },{
+        "@id": "RefundAllocation",
+        "name": "Refund Allocation",
+        "@type": "Class",
+        "description": "Facilitates applying/unapplying a capture payment, or a credit memo to a Refund Payment."
+    },{
+        "@id": "RefundAllocationType",
+        "name": "Refund Allocation Type",
+        "@type": "Class",
+        "description": "Each Refund Allocation is either a Refund Payment Allocation, or a Refund Credit Memo Allocation"
+    },{
+        "@id": "RefundCreditMemoAllocation",
+        "name": "Refund Credit Memo Allocation",
+        "@type": "Class",
+        "subClassOf": "RefundAllocation",
+        "description": "Facilitates applying/unapplying refund balance to a credit memo."
+    },{
+        "@id": "RefundPayment",
+        "name": "Refund Payment",
+        "@type": "Class",
+        "subClassOf": "Payment",
+        "description": "Represents a repayment made, typically to a customer who isn‚Äôt satisfied with the goods or services purchased. Refunds are typically made after a payment has already been received from customers"
+    },{
+        "@id": "RefundPaymentAllocation",
+        "name": "Refund Payment Allocation",
+        "@type": "Class",
+        "subClassOf": "RefundAllocation",
+        "description": "Facilitates applying/unapplying refund balance to a payment."
+    },{
+        "@id": "SettlementType",
+        "name": "Settlement Type",
+        "@type": "Class",
+        "description": "Types of settlements: Payment, Refund, Payment Cancellation, Refund Cancellation"
+    },{
+        "@id": "SystemCredential",
+        "name": "System Credential",
+        "@type": "Class",
+        "description": "Contains the authentication information about how to connect to a merchant's remote site: Merchant Id, password, gateway endpoint, authentication settings  using NamedCredentail entity."
     }
-  ],
-  "propertyConcepts": [
-    {
-      "@id": "paymentTreatmentMethodCode",
-      "@type": "Property",
-      "domain": [
-        "PaymentTreatmentMethod"
-      ]
-    },
-    {
-      "@id": "invoiceBalanceAmount",
-      "@type": "Property",
-      "domain": [
-        "PaymentInvoiceAllocation",
-        "PaymentInvoiceApplication"
-      ]
-    },
-    {
-      "@id": "paymentTreatmentName",
-      "@type": "Property",
-      "domain": [
-        "PaymentTreatment"
-      ]
-    },
-    {
-      "@id": "paymentGatewayProviderCommentText",
-      "@type": "Property",
-      "domain": [
-        "PaymentGatewayProvider"
-      ]
-    },
-    {
-      "@id": "creditMemoBalanceAmount",
-      "@type": "Property",
-      "domain": [
-        "RefundPaymentAllocation"
-      ]
-    },
-    {
-      "@id": "paymentGatewayProviderName",
-      "@type": "Property",
-      "domain": [
-        "PaymentGatewayProvider"
-      ]
-    },
-    {
-      "@id": "refundAllocationName",
-      "@type": "Property",
-      "domain": [
-        "RefundAllocation"
-      ]
-    },
-    {
-      "@id": "paymentAmount",
-      "@type": "Property",
-      "domain": [
-        "Payment"
-      ]
-    },
-    {
-      "@id": "paymentAuthorizationStatus",
-      "@type": "Property",
-      "domain": [
-        "PaymentAuthorization"
-      ]
-    },
-    {
-      "@id": "gatewayResultCodeDescription",
-      "@type": "Property",
-      "domain": [
-        "PaymentAuthorization"
-      ]
-    },
-    {
-      "@id": "developerName",
-      "@type": "Property",
-      "domain": [
-        "PaymentGatewayProvider"
-      ]
-    },
-    {
-      "@id": "totalPaymentAmount",
-      "@type": "Property",
-      "domain": [
-        "PaymentGroup"
-      ]
-    },
-    {
-      "@id": "allocatedAmount",
-      "@type": "Property",
-      "domain": [
-        "RefundAllocation"
-      ]
-    },
-    {
-      "@id": "appliedDate",
-      "@type": "Property",
-      "domain": [
-        "PaymentApplication",
-        "RefundAllocation"
-      ]
-    },
-    {
-      "@id": "customerPhoneNumber",
-      "@type": "Property",
-      "domain": [
-        "Payment"
-      ]
-    },
-    {
-      "@id": "paymentTreatmentMethodDescription",
-      "@type": "Property",
-      "domain": [
-        "PaymentTreatmentMethod"
-      ]
-    },
-    {
-      "@id": "paymentTreatment",
-      "@type": "Property",
-      "domain": [
-        "Payment"
-      ]
-    },
-    {
-      "@id": "macAddress",
-      "@type": "Property",
-      "domain": [
-        "Payment",
-        "PaymentAuthorizationReversal",
-        "PaymentAuthorization"
-      ]
-    },
-    {
-      "@id": "latestGatewayResultCode",
-      "@type": "Property",
-      "domain": [
-        "Payment"
-      ]
-    },
-    {
-      "@id": "paymentInvoiceApplication",
-      "@type": "Property",
-      "domain": [
-        "PaymentInvoiceAllocation"
-      ]
-    },
-    {
-      "@id": "paymentGroupNumber",
-      "@type": "Property",
-      "domain": [
-        "PaymentGroup"
-      ]
-    },
-    {
-      "@id": "latestGatewayReferenceNumber",
-      "@type": "Property",
-      "domain": [
-        "Payment"
-      ]
-    },
-    {
-      "@id": "paymentGatewayAuthorizationCode",
-      "@type": "Property",
-      "domain": [
-        "PaymentGatewayInteractionLog"
-      ]
-    },
-    {
-      "@id": "authorizationAmount",
-      "@type": "Property",
-      "domain": [
-        "PaymentAuthorization"
-      ]
-    },
-    {
-      "@id": "capturePayment",
-      "@type": "Property",
-      "domain": [
-        "PaymentAuthorizationReversal",
-        "RefundPaymentAllocation"
-      ]
-    },
-    {
-      "@id": "hasBeenUnapplied",
-      "@type": "Property",
-      "domain": [
-        "PaymentApplication",
-        "RefundAllocation"
-      ]
-    },
-    {
-      "@id": "id",
-      "@type": "Property",
-      "domain": [
-        "CapturePayment",
-        "PaymentGatewayAuthReversalLog",
-        "PaymentGatewayAuthorizationLog",
-        "PaymentInvoiceApplication",
-        "PaymentGatewayProvider",
-        "RefundAllocation",
-        "PaymentGatewayResultCode",
-        "PaymentAuthorizationReversal",
-        "PaymentTreatment",
-        "PaymentInvoiceAllocation",
-        "PaymentGateway",
-        "RefundCreditMemoAllocation",
-        "PaymentAllocation",
-        "PaymentGroup",
-        "PaymentApplication",
-        "PaymentGatewayInteractionLog",
-        "PaymentTreatmentMethod",
-        "PaymentGatewayPaymentLog",
-        "Payment",
-        "PaymentGatewayInteractionType",
-        "RefundPaymentAllocation",
-        "PaymentAuthorization",
-        "PaymentCreditMemoAllocation",
-        "PaymentPolicy",
-        "PaymentCreditMemoApplication",
-        "RefundPayment"
-      ]
-    },
-    {
-      "@id": "latestGatewayInternalReferenceNumber",
-      "@type": "Property",
-      "domain": [
-        "Payment"
-      ]
-    },
-    {
-      "@id": "totalAppliedAmount",
-      "@type": "Property",
-      "domain": [
-        "Payment"
-      ]
-    },
-    {
-      "@id": "paymentGatewayDate",
-      "@type": "Property",
-      "domain": [
-        "PaymentAuthorizationReversal",
-        "PaymentGatewayInteractionLog",
-        "PaymentAuthorization"
-      ]
-    },
-    {
-      "@id": "description",
-      "@type": "Property",
-      "domain": [
-        "PaymentGatewayResultCode",
-        "PaymentGatewayInteractionType",
-        "PaymentPolicy"
-      ]
-    },
-    {
-      "@id": "paymentCancellationDate",
-      "@type": "Property",
-      "domain": [
-        "Payment"
-      ]
-    },
-    {
-      "@id": "isFinalCapture",
-      "@type": "Property",
-      "domain": [
-        "CapturePayment"
-      ]
-    },
-    {
-      "@id": "systemCredential",
-      "@type": "Property",
-      "domain": [
-        "PaymentGateway"
-      ]
-    },
-    {
-      "@id": "paymentEffectiveDate",
-      "@type": "Property",
-      "domain": [
-        "Payment"
-      ]
-    },
-    {
-      "@id": "refundPaymentAllocationName",
-      "@type": "Property",
-      "domain": [
-        "RefundPaymentAllocation"
-      ]
-    },
-    {
-      "@id": "paymentInvoiceApplicationName",
-      "@type": "Property",
-      "domain": [
-        "PaymentInvoiceApplication"
-      ]
-    },
-    {
-      "@id": "externalCreatedDate",
-      "@type": "Property",
-      "domain": [
-        "PaymentApplication",
-        "RefundAllocation",
-        "Payment",
-        "PaymentAuthorizationReversal",
-        "PaymentAuthorization",
-        "PaymentAllocation",
-        "RefundPayment"
-      ]
-    },
-    {
-      "@id": "namespacePrefixText",
-      "@type": "Property",
-      "domain": [
-        "PaymentGatewayProvider"
-      ]
-    },
-    {
-      "@id": "requestDate",
-      "@type": "Property",
-      "domain": [
-        "PaymentAuthorizationReversal",
-        "PaymentAuthorization"
-      ]
-    },
-    {
-      "@id": "paymentGatewayInternalReferenceNumber",
-      "@type": "Property",
-      "domain": [
-        "PaymentAuthorizationReversal",
-        "PaymentAuthorization"
-      ]
-    },
-    {
-      "@id": "paymentAuthorizationReversalStatus",
-      "@type": "Property",
-      "domain": [
-        "PaymentAuthorizationReversal"
-      ]
-    },
-    {
-      "@id": "paymentInvoiceAllocationName",
-      "@type": "Property",
-      "domain": [
-        "PaymentInvoiceAllocation"
-      ]
-    },
-    {
-      "@id": "totalReversalAmount",
-      "@type": "Property",
-      "domain": [
-        "PaymentGroup"
-      ]
-    },
-    {
-      "@id": "paymentGroup",
-      "@type": "Property",
-      "domain": [
-        "Payment",
-        "PaymentAuthorization"
-      ]
-    },
-    {
-      "@id": "paymentGatewayInteractionLogName",
-      "@type": "Property",
-      "domain": [
-        "PaymentGatewayInteractionLog"
-      ]
-    },
-    {
-      "@id": "paymentApplicationType",
-      "@type": "Property",
-      "domain": [
-        "PaymentApplication"
-      ]
-    },
-    {
-      "@id": "salesOrderPaymentSummary",
-      "@type": "Property",
-      "domain": [
-        "Payment",
-        "PaymentAuthorization"
-      ]
-    },
-    {
-      "@id": "refundPayment",
-      "@type": "Property",
-      "domain": [
-        "RefundAllocation"
-      ]
-    },
-    {
-      "@id": "customerAuthorizationReversalPhone",
-      "@type": "Property",
-      "domain": [
-        "PaymentAuthorizationReversal"
-      ]
-    },
-    {
-      "@id": "capturePaymentType",
-      "@type": "Property",
-      "domain": [
-        "CapturePayment"
-      ]
-    },
-    {
-      "@id": "expirationDate",
-      "@type": "Property",
-      "domain": [
-        "PaymentAuthorization"
-      ]
-    },
-    {
-      "@id": "paymentPolicyStatus",
-      "@type": "Property",
-      "domain": [
-        "PaymentPolicy"
-      ]
-    },
-    {
-      "@id": "paymentGatewayProvider",
-      "@type": "Property",
-      "domain": [
-        "PaymentGateway"
-      ]
-    },
-    {
-      "@id": "paymentGatewayInteractionStatus",
-      "@type": "Property",
-      "domain": [
-        "PaymentGatewayInteractionLog"
-      ]
-    },
-    {
-      "@id": "availableBalanceAmount",
-      "@type": "Property",
-      "domain": [
-        "PaymentAuthorization"
-      ]
-    },
-    {
-      "@id": "iPAddress",
-      "@type": "Property",
-      "domain": [
-        "Payment",
-        "PaymentAuthorizationReversal",
-        "PaymentAuthorization"
-      ]
-    },
-    {
-      "@id": "totalPaymentCaptureAmount",
-      "@type": "Property",
-      "domain": [
-        "PaymentAuthorization"
-      ]
-    },
-    {
-      "@id": "shouldAutoInvoice",
-      "@type": "Property",
-      "domain": [
-        "PaymentTreatment"
-      ]
-    },
-    {
-      "@id": "latestPaymentGatewayMessageText",
-      "@type": "Property",
-      "domain": [
-        "Payment"
-      ]
-    },
-    {
-      "@id": "paymentTreatmentMethod",
-      "@type": "Property",
-      "domain": [
-        "PaymentTreatment"
-      ]
-    },
-    {
-      "@id": "paymentAuthorizationProcessingMode",
-      "@type": "Property",
-      "domain": [
-        "PaymentAuthorizationReversal",
-        "PaymentAuthorization"
-      ]
-    },
-    {
-      "@id": "latestGatewayDate",
-      "@type": "Property",
-      "domain": [
-        "Payment"
-      ]
-    },
-    {
-      "@id": "account",
-      "@type": "Property",
-      "domain": [
-        "Payment"
-      ]
-    },
-    {
-      "@id": "paymentMethod",
-      "@type": "Property",
-      "domain": [
-        "Payment"
-      ]
-    },
-    {
-      "@id": "authorizationProcessingMode",
-      "@type": "Property",
-      "domain": [
-        "Payment"
-      ]
-    },
-    {
-      "@id": "unappliedDate",
-      "@type": "Property",
-      "domain": [
-        "PaymentApplication",
-        "RefundAllocation"
-      ]
-    },
-    {
-      "@id": "name",
-      "@type": "Property",
-      "domain": [
-        "CapturePayment",
-        "PaymentApplication",
-        "PaymentGatewayPaymentLog",
-        "PaymentGatewayAuthReversalLog",
-        "PaymentGatewayAuthorizationLog",
-        "PaymentGatewayResultCode",
-        "Payment",
-        "PaymentGatewayInteractionType",
-        "PaymentGateway",
-        "PaymentCreditMemoAllocation",
-        "RefundCreditMemoAllocation",
-        "PaymentPolicy",
-        "PaymentCreditMemoApplication",
-        "RefundPayment"
-      ]
-    },
-    {
-      "@id": "paymentAuthorizationCommentText",
-      "@type": "Property",
-      "domain": [
-        "PaymentAuthorization"
-      ]
-    },
-    {
-      "@id": "paymentGatewayInteractionType",
-      "@type": "Property",
-      "domain": [
-        "PaymentGatewayInteractionLog"
-      ]
-    },
-    {
-      "@id": "totalAuthorizationAmount",
-      "@type": "Property",
-      "domain": [
-        "PaymentGroup"
-      ]
-    },
-    {
-      "@id": "latestGatewayInternalResult",
-      "@type": "Property",
-      "domain": [
-        "Payment"
-      ]
-    },
-    {
-      "@id": "paymentGateway",
-      "@type": "Property",
-      "domain": [
-        "Payment",
-        "PaymentAuthorization"
-      ]
-    },
-    {
-      "@id": "handlingFeeAmount",
-      "@type": "Property",
-      "domain": [
-        "CapturePayment"
-      ]
-    },
-    {
-      "@id": "internalBusinessUnit",
-      "@type": "Property",
-      "domain": [
-        "Payment"
-      ]
-    },
-    {
-      "@id": "paymentPolicy",
-      "@type": "Property",
-      "domain": [
-        "PaymentTreatment"
-      ]
-    },
-    {
-      "@id": "paymentBalanceAmount",
-      "@type": "Property",
-      "domain": [
-        "PaymentApplication",
-        "RefundPaymentAllocation"
-      ]
-    },
-    {
-      "@id": "paymentTreatmentMethodName",
-      "@type": "Property",
-      "domain": [
-        "PaymentTreatmentMethod"
-      ]
-    },
-    {
-      "@id": "relatedRefundAllocation",
-      "@type": "Property",
-      "domain": [
-        "RefundAllocation"
-      ]
-    },
-    {
-      "@id": "refundBalanceAmount",
-      "@type": "Property",
-      "domain": [
-        "RefundAllocation"
-      ]
-    },
-    {
-      "@id": "refundAllocationCommentsDate",
-      "@type": "Property",
-      "domain": [
-        "RefundPaymentAllocation"
-      ]
-    },
-    {
-      "@id": "paymentMethodID",
-      "@type": "Property",
-      "domain": [
-        "PaymentAuthorization"
-      ]
-    },
-    {
-      "@id": "paymentGatewayAVSCode",
-      "@type": "Property",
-      "domain": [
-        "PaymentGatewayInteractionLog"
-      ]
-    },
-    {
-      "@id": "refundAllocationType",
-      "@type": "Property",
-      "domain": [
-        "RefundAllocation"
-      ]
-    },
-    {
-      "@id": "paymentTreatmentStatus",
-      "@type": "Property",
-      "domain": [
-        "PaymentTreatment"
-      ]
-    },
-    {
-      "@id": "paymentGatewayResult",
-      "@type": "Property",
-      "domain": [
-        "PaymentAuthorizationReversal",
-        "PaymentGatewayInteractionLog",
-        "PaymentAuthorization"
-      ]
-    },
-    {
-      "@id": "gatewayAuthorizationCode",
-      "@type": "Property",
-      "domain": [
-        "PaymentAuthorization"
-      ]
-    },
-    {
-      "@id": "paymentApplicationLevel",
-      "@type": "Property",
-      "domain": [
-        "PaymentTreatment"
-      ]
-    },
-    {
-      "@id": "paymentAuthorizationReversalName",
-      "@type": "Property",
-      "domain": [
-        "PaymentAuthorizationReversal"
-      ]
-    },
-    {
-      "@id": "paymentPolicyTreatmentSelection",
-      "@type": "Property",
-      "domain": [
-        "PaymentPolicy"
-      ]
-    },
-    {
-      "@id": "paymentAuthorizationReversalCommentText",
-      "@type": "Property",
-      "domain": [
-        "PaymentAuthorizationReversal"
-      ]
-    },
-    {
-      "@id": "internalResultCode",
-      "@type": "Property",
-      "domain": [
-        "PaymentGatewayInteractionLog"
-      ]
-    },
-    {
-      "@id": "paymentNumber",
-      "@type": "Property",
-      "domain": [
-        "Payment"
-      ]
-    },
-    {
-      "@id": "apexAdapterClassName",
-      "@type": "Property",
-      "domain": [
-        "PaymentGatewayProvider"
-      ]
-    },
-    {
-      "@id": "netAppliedAmount",
-      "@type": "Property",
-      "domain": [
-        "Payment"
-      ]
-    },
-    {
-      "@id": "commentText",
-      "@type": "Property",
-      "domain": [
-        "PaymentApplication",
-        "Payment"
-      ]
-    },
-    {
-      "@id": "refundAllocationCommentText",
-      "@type": "Property",
-      "domain": [
-        "RefundPaymentAllocation"
-      ]
-    },
-    {
-      "@id": "paymentGatewayMessageText",
-      "@type": "Property",
-      "domain": [
-        "PaymentGatewayInteractionLog"
-      ]
-    },
-    {
-      "@id": "paymentInvoiceApplicationType",
-      "@type": "Property",
-      "domain": [
-        "PaymentInvoiceApplication"
-      ]
-    },
-    {
-      "@id": "totalAuthorizationReversalAmount",
-      "@type": "Property",
-      "domain": [
-        "PaymentAuthorization"
-      ]
-    },
-    {
-      "@id": "paymentStatus",
-      "@type": "Property",
-      "domain": [
-        "Payment"
-      ]
-    },
-    {
-      "@id": "paymentType",
-      "@type": "Property",
-      "domain": [
-        "Payment"
-      ]
-    },
-    {
-      "@id": "paymentAuthorization",
-      "@type": "Property",
-      "domain": [
-        "CapturePayment",
-        "PaymentAuthorizationReversal",
-        "PaymentGatewayAuthorizationLog"
-      ]
-    },
-    {
-      "@id": "relatedPaymentAllocation",
-      "@type": "Property",
-      "domain": [
-        "PaymentAllocation"
-      ]
-    },
-    {
-      "@id": "customerEmailAddress",
-      "@type": "Property",
-      "domain": [
-        "Payment"
-      ]
-    },
-    {
-      "@id": "balanceAmount",
-      "@type": "Property",
-      "domain": [
-        "Payment"
-      ]
-    },
-    {
-      "@id": "appliedAmount",
-      "@type": "Property",
-      "domain": [
-        "PaymentApplication",
-        "PaymentInvoiceAllocation",
-        "PaymentCreditMemoAllocation"
-      ]
-    },
-    {
-      "@id": "payment",
-      "@type": "Property",
-      "domain": [
-        "PaymentApplication",
-        "PaymentGatewayPaymentLog"
-      ]
-    },
-    {
-      "@id": "paymentGatewayCommentText",
-      "@type": "Property",
-      "domain": [
-        "PaymentGateway"
-      ]
-    },
-    {
-      "@id": "paymentAllocationName",
-      "@type": "Property",
-      "domain": [
-        "PaymentAllocation"
-      ]
-    },
-    {
-      "@id": "gatewayReferenceDetailsText",
-      "@type": "Property",
-      "domain": [
-        "PaymentAuthorization"
-      ]
-    },
-    {
-      "@id": "authorizationReversalAmount",
-      "@type": "Property",
-      "domain": [
-        "PaymentAuthorizationReversal"
-      ]
-    },
-    {
-      "@id": "paymentGatewayReferenceNumber",
-      "@type": "Property",
-      "domain": [
-        "PaymentAuthorizationReversal",
-        "PaymentGatewayInteractionLog",
-        "PaymentAuthorization"
-      ]
-    },
-    {
-      "@id": "paymentAuthorizationNumber",
-      "@type": "Property",
-      "domain": [
-        "PaymentAuthorization"
-      ]
-    },
-    {
-      "@id": "totalUnappliedAmount",
-      "@type": "Property",
-      "domain": [
-        "Payment"
-      ]
-    },
-    {
-      "@id": "customerAuthorizationReversalEmail",
-      "@type": "Property",
-      "domain": [
-        "PaymentAuthorizationReversal"
-      ]
-    },
-    {
-      "@id": "internalReferenceNumber",
-      "@type": "Property",
-      "domain": [
-        "PaymentGatewayInteractionLog"
-      ]
-    },
-    {
-      "@id": "paymentAuthorizationReversal",
-      "@type": "Property",
-      "domain": [
-        "PaymentGatewayAuthReversalLog"
-      ]
-    },
-    {
-      "@id": "paymentGatewayStatus",
-      "@type": "Property",
-      "domain": [
-        "PaymentGateway"
-      ]
-    },
-    {
-      "@id": "effectiveDate",
-      "@type": "Property",
-      "domain": [
-        "PaymentApplication",
-        "RefundAllocation"
-      ]
+    ],
+    "propertyConcepts": [
+{
+        "@id": "paymentEffectiveDate",
+        "@type": "Property",
+        "domain": [
+"Payment"
+        ]
+    },{
+        "@id": "customerAuthorizationReversalPhone",
+        "@type": "Property",
+        "domain": [
+"PaymentAuthorizationReversal"
+        ]
+    },{
+        "@id": "paymentPolicyId",
+        "@type": "Property",
+        "domain": [
+"PaymentTreatment"
+        ]
+    },{
+        "@id": "commentsText",
+        "@type": "Property",
+        "domain": [
+"PaymentScheduleStatus","PaymentSchedule"
+        ]
+    },{
+        "@id": "latestPaymentGatewayMessageText",
+        "@type": "Property",
+        "domain": [
+"Payment"
+        ]
+    },{
+        "@id": "customerPhoneNumber",
+        "@type": "Property",
+        "domain": [
+"Payment"
+        ]
+    },{
+        "@id": "netAppliedAmount",
+        "@type": "Property",
+        "domain": [
+"Payment"
+        ]
+    },{
+        "@id": "customerEmailAddress",
+        "@type": "Property",
+        "domain": [
+"Payment"
+        ]
+    },{
+        "@id": "totalAppliedAmount",
+        "@type": "Property",
+        "domain": [
+"Payment"
+        ]
+    },{
+        "@id": "paymentAuthorizationReversalStatusId",
+        "@type": "Property",
+        "domain": [
+"PaymentAuthorizationReversal"
+        ]
+    },{
+        "@id": "totalAuthorizationAmount",
+        "@type": "Property",
+        "domain": [
+"PaymentGroup"
+        ]
+    },{
+        "@id": "paymentGatewayMessageText",
+        "@type": "Property",
+        "domain": [
+"PaymentGatewayInteractionLog"
+        ]
+    },{
+        "@id": "paymentGatewayInteractionTypeId",
+        "@type": "Property",
+        "domain": [
+"PaymentGatewayInteractionLog"
+        ]
+    },{
+        "@id": "capturePaymentTypeId",
+        "@type": "Property",
+        "domain": [
+"CapturePayment"
+        ]
+    },{
+        "@id": "expirationDate",
+        "@type": "Property",
+        "domain": [
+"PaymentAuthorization"
+        ]
+    },{
+        "@id": "paymentInvoiceApplicationId",
+        "@type": "Property",
+        "domain": [
+"PaymentInvoiceAllocation"
+        ]
+    },{
+        "@id": "authorizationReversalAmount",
+        "@type": "Property",
+        "domain": [
+"PaymentAuthorizationReversal"
+        ]
+    },{
+        "@id": "refundAllocationName",
+        "@type": "Property",
+        "domain": [
+"RefundAllocation"
+        ]
+    },{
+        "@id": "creditMemoName",
+        "@type": "Property",
+        "domain": [
+"CreditMemo"
+        ]
+    },{
+        "@id": "allocatedAmount",
+        "@type": "Property",
+        "domain": [
+"RefundAllocation"
+        ]
+    },{
+        "@id": "paymentGatewayInteractionLogName",
+        "@type": "Property",
+        "domain": [
+"PaymentGatewayInteractionLog"
+        ]
+    },{
+        "@id": "paymentInvoiceApplicationTypeId",
+        "@type": "Property",
+        "domain": [
+"PaymentInvoiceApplication"
+        ]
+    },{
+        "@id": "retryCount",
+        "@type": "Property",
+        "domain": [
+"PaymentScheduleStatus"
+        ]
+    },{
+        "@id": "paymentAllocationName",
+        "@type": "Property",
+        "domain": [
+"PaymentAllocation"
+        ]
+    },{
+        "@id": "externalCreatedDate",
+        "@type": "Property",
+        "domain": [
+"PaymentAuthorizationReversal","RefundPayment","PaymentAuthorization","Payment","PaymentApplication","PaymentAllocation","RefundAllocation"
+        ]
+    },{
+        "@id": "paymentGatewayResultId",
+        "@type": "Property",
+        "domain": [
+"PaymentAuthorizationReversal","PaymentAuthorization","PaymentGatewayInteractionLog"
+        ]
+    },{
+        "@id": "apexAdapterClassName",
+        "@type": "Property",
+        "domain": [
+"PaymentGatewayProvider"
+        ]
+    },{
+        "@id": "processedAmount",
+        "@type": "Property",
+        "domain": [
+"PaymentScheduleStatus"
+        ]
+    },{
+        "@id": "paymentPolicyStatusId",
+        "@type": "Property",
+        "domain": [
+"PaymentPolicy"
+        ]
+    },{
+        "@id": "paymentAuthorizationProcessingModeId",
+        "@type": "Property",
+        "domain": [
+"PaymentAuthorizationReversal","PaymentAuthorization"
+        ]
+    },{
+        "@id": "paymentGatewayInternalResultCodeId",
+        "@type": "Property",
+        "domain": [
+"PaymentAuthorizationReversal","PaymentAuthorization"
+        ]
+    },{
+        "@id": "refundPaymentId",
+        "@type": "Property",
+        "domain": [
+"RefundAllocation"
+        ]
+    },{
+        "@id": "relatedPaymentAllocationId",
+        "@type": "Property",
+        "domain": [
+"PaymentAllocation"
+        ]
+    },{
+        "@id": "paymentAuthorizationNumber",
+        "@type": "Property",
+        "domain": [
+"PaymentAuthorization"
+        ]
+    },{
+        "@id": "paymentTreatmentMethodId",
+        "@type": "Property",
+        "domain": [
+"PaymentTreatment"
+        ]
+    },{
+        "@id": "totalRequestedAmount",
+        "@type": "Property",
+        "domain": [
+"PaymentSchedule"
+        ]
+    },{
+        "@id": "paymentGatewayCommentText",
+        "@type": "Property",
+        "domain": [
+"PaymentGateway"
+        ]
+    },{
+        "@id": "retryIntervalTime",
+        "@type": "Property",
+        "domain": [
+"PaymentScheduleStatus"
+        ]
+    },{
+        "@id": "refundAllocationTypeId",
+        "@type": "Property",
+        "domain": [
+"RefundAllocation"
+        ]
+    },{
+        "@id": "salesOrderId",
+        "@type": "Property",
+        "domain": [
+"PaymentSchedule"
+        ]
+    },{
+        "@id": "gatewayReferenceDetailsText",
+        "@type": "Property",
+        "domain": [
+"PaymentAuthorization"
+        ]
+    },{
+        "@id": "paymentInvoiceAllocationName",
+        "@type": "Property",
+        "domain": [
+"PaymentInvoiceAllocation"
+        ]
+    },{
+        "@id": "canceledAmount",
+        "@type": "Property",
+        "domain": [
+"PaymentSchedule"
+        ]
+    },{
+        "@id": "paymentBalanceAmount",
+        "@type": "Property",
+        "domain": [
+"PaymentApplication","RefundPaymentAllocation"
+        ]
+    },{
+        "@id": "defaultPaymentMethodId",
+        "@type": "Property",
+        "domain": [
+"PaymentSchedule"
+        ]
+    },{
+        "@id": "paymentType",
+        "@type": "Property",
+        "domain": [
+"Payment"
+        ]
+    },{
+        "@id": "availableRequestedAmount",
+        "@type": "Property",
+        "domain": [
+"PaymentSchedule"
+        ]
+    },{
+        "@id": "paymentGatewayInternalReferenceNumber",
+        "@type": "Property",
+        "domain": [
+"PaymentAuthorizationReversal","PaymentAuthorization"
+        ]
+    },{
+        "@id": "defaultPaymentAccountId",
+        "@type": "Property",
+        "domain": [
+"PaymentSchedule"
+        ]
+    },{
+        "@id": "latestGatewayInternalReferenceNumber",
+        "@type": "Property",
+        "domain": [
+"Payment"
+        ]
+    },{
+        "@id": "paymentScheduleStatusId",
+        "@type": "Property",
+        "domain": [
+"PaymentSchedule"
+        ]
+    },{
+        "@id": "paymentGroupNumber",
+        "@type": "Property",
+        "domain": [
+"PaymentGroup"
+        ]
+    },{
+        "@id": "latestGatewayInternalResultId",
+        "@type": "Property",
+        "domain": [
+"Payment"
+        ]
+    },{
+        "@id": "appliedDate",
+        "@type": "Property",
+        "domain": [
+"PaymentApplication","RefundAllocation"
+        ]
+    },{
+        "@id": "declinedPaymentCount",
+        "@type": "Property",
+        "domain": [
+"PaymentScheduleStatus"
+        ]
+    },{
+        "@id": "internalReferenceNumber",
+        "@type": "Property",
+        "domain": [
+"PaymentGatewayInteractionLog"
+        ]
+    },{
+        "@id": "creditMemoEffectiveDate",
+        "@type": "Property",
+        "domain": [
+"CreditMemo"
+        ]
+    },{
+        "@id": "internalResultCodeId",
+        "@type": "Property",
+        "domain": [
+"PaymentGatewayInteractionLog"
+        ]
+    },{
+        "@id": "remainingToBeProcessedAmount",
+        "@type": "Property",
+        "domain": [
+"PaymentSchedule"
+        ]
+    },{
+        "@id": "capturePaymentId",
+        "@type": "Property",
+        "domain": [
+"PaymentAuthorizationReversal","RefundPaymentAllocation"
+        ]
+    },{
+        "@id": "macAddress",
+        "@type": "Property",
+        "domain": [
+"PaymentAuthorizationReversal","PaymentAuthorization","Payment"
+        ]
+    },{
+        "@id": "paymentApplicationTypeId",
+        "@type": "Property",
+        "domain": [
+"PaymentApplication"
+        ]
+    },{
+        "@id": "targetPaymentDate",
+        "@type": "Property",
+        "domain": [
+"PaymentScheduleStatus"
+        ]
+    },{
+        "@id": "iPAddress",
+        "@type": "Property",
+        "domain": [
+"PaymentAuthorizationReversal","PaymentAuthorization","Payment"
+        ]
+    },{
+        "@id": "paymentGroupId",
+        "@type": "Property",
+        "domain": [
+"PaymentAuthorization","Payment"
+        ]
+    },{
+        "@id": "namespacePrefixText",
+        "@type": "Property",
+        "domain": [
+"PaymentGatewayProvider"
+        ]
+    },{
+        "@id": "paymentCancellationDate",
+        "@type": "Property",
+        "domain": [
+"Payment"
+        ]
+    },{
+        "@id": "refundAllocationCommentsDate",
+        "@type": "Property",
+        "domain": [
+"RefundPaymentAllocation"
+        ]
+    },{
+        "@id": "requestedAmount",
+        "@type": "Property",
+        "domain": [
+"PaymentScheduleStatus"
+        ]
+    },{
+        "@id": "paymentTreatmentName",
+        "@type": "Property",
+        "domain": [
+"PaymentTreatment"
+        ]
+    },{
+        "@id": "paymentGatewayDate",
+        "@type": "Property",
+        "domain": [
+"PaymentAuthorizationReversal","PaymentAuthorization","PaymentGatewayInteractionLog"
+        ]
+    },{
+        "@id": "systemCredentialId",
+        "@type": "Property",
+        "domain": [
+"PaymentGateway"
+        ]
+    },{
+        "@id": "relatedRefundAllocationId",
+        "@type": "Property",
+        "domain": [
+"RefundAllocation"
+        ]
+    },{
+        "@id": "paymentId",
+        "@type": "Property",
+        "domain": [
+"PaymentScheduleStatus","PaymentGatewayPaymentLog","PaymentApplication","PaymentScheduleItem"
+        ]
+    },{
+        "@id": "paymentStatusId",
+        "@type": "Property",
+        "domain": [
+"Payment"
+        ]
+    },{
+        "@id": "totalReversalAmount",
+        "@type": "Property",
+        "domain": [
+"PaymentGroup"
+        ]
+    },{
+        "@id": "internalOrganizationId",
+        "@type": "Property",
+        "domain": [
+"Payment"
+        ]
+    },{
+        "@id": "latestGatewayResultCodeId",
+        "@type": "Property",
+        "domain": [
+"Payment"
+        ]
+    },{
+        "@id": "salesOrderPaymentSummaryId",
+        "@type": "Property",
+        "domain": [
+"PaymentAuthorization","Payment"
+        ]
+    },{
+        "@id": "totalPaymentCaptureAmount",
+        "@type": "Property",
+        "domain": [
+"PaymentAuthorization"
+        ]
+    },{
+        "@id": "invoiceBalanceAmount",
+        "@type": "Property",
+        "domain": [
+"PaymentInvoiceApplication","PaymentInvoiceAllocation"
+        ]
+    },{
+        "@id": "accountId",
+        "@type": "Property",
+        "domain": [
+"Payment"
+        ]
+    },{
+        "@id": "totalAuthorizationReversalAmount",
+        "@type": "Property",
+        "domain": [
+"PaymentAuthorization"
+        ]
+    },{
+        "@id": "paymentScheduleItemId",
+        "@type": "Property",
+        "domain": [
+"PaymentScheduleStatus"
+        ]
+    },{
+        "@id": "paymentNumber",
+        "@type": "Property",
+        "domain": [
+"Payment"
+        ]
+    },{
+        "@id": "totalUnappliedAmount",
+        "@type": "Property",
+        "domain": [
+"Payment"
+        ]
+    },{
+        "@id": "gatewayResultCodeDescription",
+        "@type": "Property",
+        "domain": [
+"PaymentAuthorization"
+        ]
+    },{
+        "@id": "description",
+        "@type": "Property",
+        "domain": [
+"PaymentGatewayInteractionType","PaymentPolicy","PaymentGatewayResultCode"
+        ]
+    },{
+        "@id": "paymentTreatmentId",
+        "@type": "Property",
+        "domain": [
+"Payment"
+        ]
+    },{
+        "@id": "paymentGatewayAVSCode",
+        "@type": "Property",
+        "domain": [
+"PaymentGatewayInteractionLog"
+        ]
+    },{
+        "@id": "latestGatewayReferenceNumber",
+        "@type": "Property",
+        "domain": [
+"Payment"
+        ]
+    },{
+        "@id": "paymentMethodID",
+        "@type": "Property",
+        "domain": [
+"PaymentAuthorization"
+        ]
+    },{
+        "@id": "retryIntervalInDaysNumber",
+        "@type": "Property",
+        "domain": [
+"PaymentScheduleStatus"
+        ]
+    },{
+        "@id": "currencyId",
+        "@type": "Property",
+        "domain": [
+"PaymentScheduleStatus","PaymentSchedule"
+        ]
+    },{
+        "@id": "paymentTreatmentMethodName",
+        "@type": "Property",
+        "domain": [
+"PaymentTreatmentMethod"
+        ]
+    },{
+        "@id": "paymentGatewayProviderId",
+        "@type": "Property",
+        "domain": [
+"PaymentGateway","GatewayProviderPaymentMethodType"
+        ]
+    },{
+        "@id": "creditMemoBalanceAmount",
+        "@type": "Property",
+        "domain": [
+"RefundPaymentAllocation"
+        ]
+    },{
+        "@id": "paymentTreatmentMethodDescription",
+        "@type": "Property",
+        "domain": [
+"PaymentTreatmentMethod"
+        ]
+    },{
+        "@id": "legalEntityId",
+        "@type": "Property",
+        "domain": [
+"Payment"
+        ]
+    },{
+        "@id": "paymentAuthorizationReversalName",
+        "@type": "Property",
+        "domain": [
+"PaymentAuthorizationReversal"
+        ]
+    },{
+        "@id": "unappliedDate",
+        "@type": "Property",
+        "domain": [
+"PaymentApplication","RefundAllocation"
+        ]
+    },{
+        "@id": "paymentAmount",
+        "@type": "Property",
+        "domain": [
+"Payment"
+        ]
+    },{
+        "@id": "developerName",
+        "@type": "Property",
+        "domain": [
+"PaymentGatewayProvider"
+        ]
+    },{
+        "@id": "paymentAuthorizationCommentText",
+        "@type": "Property",
+        "domain": [
+"PaymentAuthorization"
+        ]
+    },{
+        "@id": "effectiveDate",
+        "@type": "Property",
+        "domain": [
+"PaymentApplication","RefundAllocation"
+        ]
+    },{
+        "@id": "internalBusinessUnitLegalEntityId",
+        "@type": "Property",
+        "domain": [
+"PaymentTreatment"
+        ]
+    },{
+        "@id": "id",
+        "@type": "Property",
+        "domain": [
+"SystemCredential","PaymentTreatment","PaymentCreditMemoApplication","RefundPayment","GatewayProviderPaymentMethodType","InternalResultCode","PaymentApplication","PaymentSchedule","PaymentTreatmentMethod","PaymentType","PaymentApplicationLevel","RefundAllocationType","PaymentAuthorizationStatus","PaymentGateway","PaymentGatewayInteractionStatus","PaymentStatus","PaymentPolicy","PaymentGatewayAuthorizationLog","PaymentGatewayInteractionLog","PaymentGatewayAuthReversalLog","PaymentAllocation","PaymentAuthInternalResultCode","PaymentInvoiceApplicationType","PaymentGatewayStatus","PaymentTreatmentStatus","RefundCreditMemoAllocation","RefundPaymentAllocation","SettlementType","PaymentGroup","PaymentAuthorization","PaymentGatewayPaymentLog","CreditMemo","Payment","PaymentPolicyTreatmentSelection","AuthorizationProcessingMode","PaymentGatewayResultCode","RefundAllocation","PaymentPolicyStatus","PaymentApplicationType","PaymentScheduleStatus","PaymentAuthorizationReversal","PaymentGatewayInteractionType","CapturePayment","PaymentInvoiceApplication","PaymentCreditMemoAllocation","PaymentGatewayProvider","PaymentInvoiceAllocation","PaymentScheduleItem"
+        ]
+    },{
+        "@id": "paymentGatewayReferenceNumber",
+        "@type": "Property",
+        "domain": [
+"PaymentAuthorizationReversal","PaymentAuthorization","PaymentGatewayInteractionLog"
+        ]
+    },{
+        "@id": "paymentGatewayStatusId",
+        "@type": "Property",
+        "domain": [
+"PaymentGateway"
+        ]
+    },{
+        "@id": "requestDate",
+        "@type": "Property",
+        "domain": [
+"PaymentAuthorizationReversal","PaymentAuthorization"
+        ]
+    },{
+        "@id": "isFinalCapture",
+        "@type": "Property",
+        "domain": [
+"CapturePayment"
+        ]
+    },{
+        "@id": "authorizationAmount",
+        "@type": "Property",
+        "domain": [
+"PaymentAuthorization"
+        ]
+    },{
+        "@id": "paymentGatewayStatusCode",
+        "@type": "Property",
+        "domain": [
+"PaymentGatewayStatus"
+        ]
+    },{
+        "@id": "paymentAuthorizationReversalCommentText",
+        "@type": "Property",
+        "domain": [
+"PaymentAuthorizationReversal"
+        ]
+    },{
+        "@id": "paymentGatewayProviderName",
+        "@type": "Property",
+        "domain": [
+"PaymentGatewayProvider"
+        ]
+    },{
+        "@id": "settlementTypeCode",
+        "@type": "Property",
+        "domain": [
+"SettlementType"
+        ]
+    },{
+        "@id": "availableBalanceAmount",
+        "@type": "Property",
+        "domain": [
+"PaymentAuthorization"
+        ]
+    },{
+        "@id": "hasBeenUnapplied",
+        "@type": "Property",
+        "domain": [
+"PaymentApplication","RefundAllocation"
+        ]
+    },{
+        "@id": "paymentGatewayId",
+        "@type": "Property",
+        "domain": [
+"PaymentAuthorization","Payment"
+        ]
+    },{
+        "@id": "invoiceId",
+        "@type": "Property",
+        "domain": [
+"PaymentInvoiceApplication","PaymentSchedule"
+        ]
+    },{
+        "@id": "name",
+        "@type": "Property",
+        "domain": [
+"SystemCredential","PaymentCreditMemoApplication","RefundPayment","GatewayProviderPaymentMethodType","InternalResultCode","PaymentApplication","PaymentType","PaymentApplicationLevel","RefundAllocationType","PaymentAuthorizationStatus","PaymentGateway","PaymentGatewayInteractionStatus","PaymentStatus","PaymentPolicy","PaymentGatewayAuthorizationLog","PaymentGatewayAuthReversalLog","PaymentAuthInternalResultCode","RefundCreditMemoAllocation","PaymentTreatmentStatus","PaymentGatewayPaymentLog","Payment","AuthorizationProcessingMode","PaymentGatewayResultCode","PaymentPolicyStatus","PaymentApplicationType","PaymentScheduleStatus","PaymentGatewayInteractionType","CapturePayment","PaymentCreditMemoAllocation"
+        ]
+    },{
+        "@id": "paymentTreatmentMethodCode",
+        "@type": "Property",
+        "domain": [
+"PaymentTreatmentMethod"
+        ]
+    },{
+        "@id": "paymentGatewayInteractionStatusId",
+        "@type": "Property",
+        "domain": [
+"PaymentGatewayInteractionLog"
+        ]
+    },{
+        "@id": "gatewayAuthorizationCode",
+        "@type": "Property",
+        "domain": [
+"PaymentAuthorization"
+        ]
+    },{
+        "@id": "paymentInvoiceApplicationName",
+        "@type": "Property",
+        "domain": [
+"PaymentInvoiceApplication"
+        ]
+    },{
+        "@id": "paymentMethodTypeId",
+        "@type": "Property",
+        "domain": [
+"GatewayProviderPaymentMethodType"
+        ]
+    },{
+        "@id": "paymentTreatmentStatusId",
+        "@type": "Property",
+        "domain": [
+"PaymentTreatment"
+        ]
+    },{
+        "@id": "totalPaymentAmount",
+        "@type": "Property",
+        "domain": [
+"PaymentGroup"
+        ]
+    },{
+        "@id": "paymentScheduleId",
+        "@type": "Property",
+        "domain": [
+"PaymentScheduleStatus"
+        ]
+    },{
+        "@id": "commentText",
+        "@type": "Property",
+        "domain": [
+"Payment","PaymentApplication"
+        ]
+    },{
+        "@id": "paymentAuthorizationStatusId",
+        "@type": "Property",
+        "domain": [
+"PaymentAuthorization"
+        ]
+    },{
+        "@id": "customerAuthorizationReversalEmail",
+        "@type": "Property",
+        "domain": [
+"PaymentAuthorizationReversal"
+        ]
+    },{
+        "@id": "creditMemoId",
+        "@type": "Property",
+        "domain": [
+"PaymentCreditMemoApplication","RefundCreditMemoAllocation"
+        ]
+    },{
+        "@id": "refundPaymentAllocationName",
+        "@type": "Property",
+        "domain": [
+"RefundPaymentAllocation"
+        ]
+    },{
+        "@id": "paymentGatewayPaymentLogId",
+        "@type": "Property",
+        "domain": [
+"PaymentScheduleStatus"
+        ]
+    },{
+        "@id": "refundBalanceAmount",
+        "@type": "Property",
+        "domain": [
+"RefundAllocation"
+        ]
+    },{
+        "@id": "amountCurrency",
+        "@type": "Property",
+        "domain": [
+"Payment"
+        ]
+    },{
+        "@id": "paymentAuthorizationId",
+        "@type": "Property",
+        "domain": [
+"PaymentAuthorizationReversal","CapturePayment","PaymentGatewayAuthorizationLog"
+        ]
+    },{
+        "@id": "paymentTriggerName",
+        "@type": "Property",
+        "domain": [
+"PaymentScheduleStatus"
+        ]
+    },{
+        "@id": "paymentGatewayAuthorizationCode",
+        "@type": "Property",
+        "domain": [
+"PaymentGatewayInteractionLog"
+        ]
+    },{
+        "@id": "authorizationProcessingModeId",
+        "@type": "Property",
+        "domain": [
+"Payment"
+        ]
+    },{
+        "@id": "totalProcessedAmount",
+        "@type": "Property",
+        "domain": [
+"PaymentSchedule"
+        ]
+    },{
+        "@id": "balanceAmount",
+        "@type": "Property",
+        "domain": [
+"Payment"
+        ]
+    },{
+        "@id": "paymentScheduleStatus",
+        "@type": "Property",
+        "domain": [
+"PaymentScheduleItem"
+        ]
+    },{
+        "@id": "appliedAmount",
+        "@type": "Property",
+        "domain": [
+"PaymentCreditMemoAllocation","PaymentApplication","PaymentInvoiceAllocation"
+        ]
+    },{
+        "@id": "latestGatewayDate",
+        "@type": "Property",
+        "domain": [
+"Payment"
+        ]
+    },{
+        "@id": "paymentGatewayProviderCommentText",
+        "@type": "Property",
+        "domain": [
+"PaymentGatewayProvider"
+        ]
+    },{
+        "@id": "paymentMethodId",
+        "@type": "Property",
+        "domain": [
+"PaymentScheduleStatus","Payment"
+        ]
+    },{
+        "@id": "paymentProcessingMessageText",
+        "@type": "Property",
+        "domain": [
+"PaymentScheduleStatus"
+        ]
+    },{
+        "@id": "handlingFeeAmount",
+        "@type": "Property",
+        "domain": [
+"CapturePayment"
+        ]
+    },{
+        "@id": "refundAllocationCommentText",
+        "@type": "Property",
+        "domain": [
+"RefundPaymentAllocation"
+        ]
+    },{
+        "@id": "paymentAccountId",
+        "@type": "Property",
+        "domain": [
+"PaymentScheduleStatus"
+        ]
+    },{
+        "@id": "paymentPolicyTreatmentSelectionId",
+        "@type": "Property",
+        "domain": [
+"PaymentPolicy"
+        ]
+    },{
+        "@id": "paymentAuthorizationReversalId",
+        "@type": "Property",
+        "domain": [
+"PaymentGatewayAuthReversalLog"
+        ]
+    },{
+        "@id": "totalLineRequestedAmount",
+        "@type": "Property",
+        "domain": [
+"PaymentSchedule"
+        ]
     }
-  ]
+    ]
 }

@@ -1,231 +1,286 @@
 {
-  "@context": "http://cloudinformationmodel.org/context.jsonld",
-  "@id": "LeadEntityGroup",
-  "name": "Lead",
-  "@type": "EntityGroup",
-  "version": "0.1",
-  "subjectArea": {
-    "@id": "PartySubjectArea"
-  },
-  "description": "Example Entities included: Lead, Lead Status, Lead Source",
-  "classConcepts": [
-    {
-      "@id": "Lead",
-      "name": "Lead",
-      "@type": "Class",
-      "description": "A person or company that showed interest in the company's products"
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "5a3343dd-1d48-3c56-8e02-90b1140ff987",
+    "@type": "EntityGroup",
+    "name": "Lead",
+    "version": "1.0.0",
+    "subjectArea": "aeaf98cc-53c1-300a-827f-57f4ce0bf764",
+    "description": "Example Entities included: Lead, Lead Status, Lead Source",
+    "classConcepts": [
+{
+        "@id": "EmailFrequency",
+        "name": "Email Frequency",
+        "@type": "Class",
+        "description": "The frequency at which the system sends a user a personal email digest e.g. daily, weekly"
+    },{
+        "@id": "Lead",
+        "name": "Lead",
+        "@type": "Class",
+        "description": "A person or company that showed interest in the company's products"
+    },{
+        "@id": "LeadRating",
+        "name": "Lead Rating",
+        "@type": "Class",
+        "description": "Rating of the lead e.g. warm, cold"
+    },{
+        "@id": "LeadSource",
+        "name": "Lead Source",
+        "@type": "Class",
+        "description": "Source from which the lead was obtained e.g. sales partner Western Outfitters Inc"
+    },{
+        "@id": "LeadStatus",
+        "name": "Lead Status",
+        "@type": "Class",
+        "description": "Status code for this converted lead e.g. open, worked, closed"
     }
-  ],
-  "propertyConcepts": [
-    {
-      "@id": "streetName",
-      "@type": "Property",
-      "domain": [
-        "Lead"
-      ]
-    },
-    {
-      "@id": "emailBouncedDate",
-      "@type": "Property",
-      "domain": [
-        "Lead"
-      ]
-    },
-    {
-      "@id": "geoCodeLatitude",
-      "@type": "Property",
-      "domain": [
-        "Lead"
-      ]
-    },
-    {
-      "@id": "description",
-      "@type": "Property",
-      "domain": [
-        "Lead"
-      ]
-    },
-    {
-      "@id": "convertedDate",
-      "@type": "Property",
-      "domain": [
-        "Lead"
-      ]
-    },
-    {
-      "@id": "countryName",
-      "@type": "Property",
-      "domain": [
-        "Lead"
-      ]
-    },
-    {
-      "@id": "stateProvinceName",
-      "@type": "Property",
-      "domain": [
-        "Lead"
-      ]
-    },
-    {
-      "@id": "mobileContactPhone",
-      "@type": "Property",
-      "domain": [
-        "Lead"
-      ]
-    },
-    {
-      "@id": "website",
-      "@type": "Property",
-      "domain": [
-        "Lead"
-      ]
-    },
-    {
-      "@id": "leadSource",
-      "@type": "Property",
-      "domain": [
-        "Lead"
-      ]
-    },
-    {
-      "@id": "partnerAccount",
-      "@type": "Property",
-      "domain": [
-        "Lead"
-      ]
-    },
-    {
-      "@id": "partyRole",
-      "@type": "Property",
-      "domain": [
-        "Lead"
-      ]
-    },
-    {
-      "@id": "contactPointEmail",
-      "@type": "Property",
-      "domain": [
-        "Lead"
-      ]
-    },
-    {
-      "@id": "companyName",
-      "@type": "Property",
-      "domain": [
-        "Lead"
-      ]
-    },
-    {
-      "@id": "contactAddress",
-      "@type": "Property",
-      "domain": [
-        "Lead"
-      ]
-    },
-    {
-      "@id": "geoCodeAccuracy",
-      "@type": "Property",
-      "domain": [
-        "Lead"
-      ]
-    },
-    {
-      "@id": "photoURL",
-      "@type": "Property",
-      "domain": [
-        "Lead"
-      ]
-    },
-    {
-      "@id": "phoneContactPoint",
-      "@type": "Property",
-      "domain": [
-        "Lead"
-      ]
-    },
-    {
-      "@id": "emailBouncedReason",
-      "@type": "Property",
-      "domain": [
-        "Lead"
-      ]
-    },
-    {
-      "@id": "geoCodeLongitude",
-      "@type": "Property",
-      "domain": [
-        "Lead"
-      ]
-    },
-    {
-      "@id": "isConverted",
-      "@type": "Property",
-      "domain": [
-        "Lead"
-      ]
-    },
-    {
-      "@id": "convertedToAccount",
-      "@type": "Property",
-      "domain": [
-        "Lead"
-      ]
-    },
-    {
-      "@id": "leadRating",
-      "@type": "Property",
-      "domain": [
-        "Lead"
-      ]
-    },
-    {
-      "@id": "leadStatus",
-      "@type": "Property",
-      "domain": [
-        "Lead"
-      ]
-    },
-    {
-      "@id": "faxContactPhone",
-      "@type": "Property",
-      "domain": [
-        "Lead"
-      ]
-    },
-    {
-      "@id": "convertedToAccountContact",
-      "@type": "Property",
-      "domain": [
-        "Lead"
-      ]
-    },
-    {
-      "@id": "lastActivityDate",
-      "@type": "Property",
-      "domain": [
-        "Lead"
-      ]
-    },
-    {
-      "@id": "id",
-      "@type": "Property",
-      "domain": [
-        "Lead"
-      ]
-    },
-    {
-      "@id": "annualRevenue",
-      "@type": "Property",
-      "domain": [
-        "Lead"
-      ]
-    },
-    {
-      "@id": "leadScore",
-      "@type": "Property",
-      "domain": [
-        "Lead"
-      ]
+    ],
+    "propertyConcepts": [
+{
+        "@id": "promotionId",
+        "@type": "Property",
+        "domain": [
+"Lead"
+        ]
+    },{
+        "@id": "companyName",
+        "@type": "Property",
+        "domain": [
+"Lead"
+        ]
+    },{
+        "@id": "convertedToOpportunityId",
+        "@type": "Property",
+        "domain": [
+"Lead"
+        ]
+    },{
+        "@id": "industryId",
+        "@type": "Property",
+        "domain": [
+"Lead"
+        ]
+    },{
+        "@id": "leadStatusId",
+        "@type": "Property",
+        "domain": [
+"Lead"
+        ]
+    },{
+        "@id": "stateProvinceId",
+        "@type": "Property",
+        "domain": [
+"Lead"
+        ]
+    },{
+        "@id": "streetName",
+        "@type": "Property",
+        "domain": [
+"Lead"
+        ]
+    },{
+        "@id": "website",
+        "@type": "Property",
+        "domain": [
+"Lead"
+        ]
+    },{
+        "@id": "convertedDate",
+        "@type": "Property",
+        "domain": [
+"Lead"
+        ]
+    },{
+        "@id": "mobileContactPhoneId",
+        "@type": "Property",
+        "domain": [
+"Lead"
+        ]
+    },{
+        "@id": "postalCodeId",
+        "@type": "Property",
+        "domain": [
+"Lead"
+        ]
+    },{
+        "@id": "geoCodeLongitude",
+        "@type": "Property",
+        "domain": [
+"Lead"
+        ]
+    },{
+        "@id": "leadStatusName",
+        "@type": "Property",
+        "domain": [
+"LeadStatus"
+        ]
+    },{
+        "@id": "city",
+        "@type": "Property",
+        "domain": [
+"Lead"
+        ]
+    },{
+        "@id": "lastActivityDate",
+        "@type": "Property",
+        "domain": [
+"Lead"
+        ]
+    },{
+        "@id": "photoURL",
+        "@type": "Property",
+        "domain": [
+"Lead"
+        ]
+    },{
+        "@id": "annualRevenue",
+        "@type": "Property",
+        "domain": [
+"Lead"
+        ]
+    },{
+        "@id": "leadRating",
+        "@type": "Property",
+        "domain": [
+"Lead"
+        ]
+    },{
+        "@id": "countryId",
+        "@type": "Property",
+        "domain": [
+"Lead"
+        ]
+    },{
+        "@id": "contactAddressId",
+        "@type": "Property",
+        "domain": [
+"Lead"
+        ]
+    },{
+        "@id": "contactPointEmailId",
+        "@type": "Property",
+        "domain": [
+"Lead"
+        ]
+    },{
+        "@id": "leadRatingName",
+        "@type": "Property",
+        "domain": [
+"LeadRating"
+        ]
+    },{
+        "@id": "phoneContactPointId",
+        "@type": "Property",
+        "domain": [
+"Lead"
+        ]
+    },{
+        "@id": "description",
+        "@type": "Property",
+        "domain": [
+"Lead"
+        ]
+    },{
+        "@id": "partnerAccountId",
+        "@type": "Property",
+        "domain": [
+"Lead"
+        ]
+    },{
+        "@id": "leadSourceId",
+        "@type": "Property",
+        "domain": [
+"Lead"
+        ]
+    },{
+        "@id": "currencyId",
+        "@type": "Property",
+        "domain": [
+"Lead"
+        ]
+    },{
+        "@id": "emailBouncedDate",
+        "@type": "Property",
+        "domain": [
+"Lead"
+        ]
+    },{
+        "@id": "id",
+        "@type": "Property",
+        "domain": [
+"LeadSource","LeadStatus","EmailFrequency","LeadRating","Lead"
+        ]
+    },{
+        "@id": "leadScore",
+        "@type": "Property",
+        "domain": [
+"Lead"
+        ]
+    },{
+        "@id": "convertedToAccountContactId",
+        "@type": "Property",
+        "domain": [
+"Lead"
+        ]
+    },{
+        "@id": "faxContactPhoneId",
+        "@type": "Property",
+        "domain": [
+"Lead"
+        ]
+    },{
+        "@id": "countryName",
+        "@type": "Property",
+        "domain": [
+"Lead"
+        ]
+    },{
+        "@id": "name",
+        "@type": "Property",
+        "domain": [
+"EmailFrequency"
+        ]
+    },{
+        "@id": "geoCodeLatitude",
+        "@type": "Property",
+        "domain": [
+"Lead"
+        ]
+    },{
+        "@id": "isConverted",
+        "@type": "Property",
+        "domain": [
+"Lead"
+        ]
+    },{
+        "@id": "leadSourceName",
+        "@type": "Property",
+        "domain": [
+"LeadSource"
+        ]
+    },{
+        "@id": "partyRoleId",
+        "@type": "Property",
+        "domain": [
+"Lead"
+        ]
+    },{
+        "@id": "stateProvinceName",
+        "@type": "Property",
+        "domain": [
+"Lead"
+        ]
+    },{
+        "@id": "emailBouncedReason",
+        "@type": "Property",
+        "domain": [
+"Lead"
+        ]
+    },{
+        "@id": "convertedToAccountId",
+        "@type": "Property",
+        "domain": [
+"Lead"
+        ]
     }
-  ]
+    ]
 }

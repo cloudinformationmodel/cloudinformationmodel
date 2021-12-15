@@ -1,0 +1,15 @@
+{
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "EmployeePropertyGroup",
+    "name": "Employee Property Group",
+    "@type": "PropertyGroup",
+    "propertyConcepts": [
+{
+        "@id": "partyRoleId",
+        "@type": "Property",
+        "description": "Trading roles a party may play at the same time i.e. Customer, Supplier, Seller, Competitor, Worker",
+        "name": "Party Role",
+        "range": "PartyRole"
+    }
+    ]
+}

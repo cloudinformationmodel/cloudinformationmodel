@@ -1,999 +1,1284 @@
 {
-  "@context": "http://cloudinformationmodel.org/context.jsonld",
-  "@id": "ProductEntityGroup",
-  "name": "Product",
-  "@type": "EntityGroup",
-  "version": "0.1",
-  "subjectArea": {
-    "@id": "ProductSubjectArea"
-  },
-  "description": "Example Entities included: Product Type, Product Item, Product Attribute, Product Relation",
-  "classConcepts": [
-    {
-      "@id": "Product",
-      "name": "Product",
-      "@type": "Class",
-      "description": "What is intended to be sold e.g. goods, services, bundles, made to order products."
-    },
-    {
-      "@id": "GoodsProduct",
-      "name": "Goods Product",
-      "@type": "Class",
-      "subClassOf": "Product",
-      "description": "Products you can touch e.g. cart of milk, pallet of coffee, mobile phone x model 1"
-    },
-    {
-      "@id": "ServiceProduct",
-      "name": "Service Product",
-      "@type": "Class",
-      "subClassOf": "Product",
-      "description": "Products that are intangible e.g. labor, software subscription"
-    },
-    {
-      "@id": "BundleProduct",
-      "name": "Bundle Product",
-      "@type": "Class",
-      "subClassOf": "Product",
-      "description": "Product groups e.g. mobile phone package include phone, call plan and charger"
-    },
-    {
-      "@id": "ProductTranslation",
-      "name": "Product Translation",
-      "@type": "Class",
-      "description": "Translated attributes for a product"
-    },
-    {
-      "@id": "ProductRelatedProduct",
-      "name": "Product Related Product",
-      "@type": "Class",
-      "description": "A grouping of products such as a product bundle"
-    },
-    {
-      "@id": "ProductRelationshipType",
-      "name": "Product Relationship Type",
-      "@type": "Class",
-      "description": "What are the types of relationships available e.g. bundled with/bundled in, substitute for/substitute of"
-    },
-    {
-      "@id": "ProductImage",
-      "name": "Product Image",
-      "@type": "Class",
-      "description": "Images of a product"
-    },
-    {
-      "@id": "ProductImageTranslation",
-      "name": "Product Image Translation",
-      "@type": "Class",
-      "description": "Translated attributes for a product image"
-    },
-    {
-      "@id": "Brand",
-      "name": "Brand",
-      "@type": "Class",
-      "description": "What is the brand of the product e.g. Snike shoes"
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "fc3de8e8-b7f3-3d08-bdb8-e086f94c807e",
+    "@type": "EntityGroup",
+    "name": "Product",
+    "version": "1.0.0",
+    "subjectArea": "fe440b10-667c-39ce-bace-1e463e65282e",
+    "description": "Example Entities included: Product Type, Product Item, Product Attribute, Product Relation",
+    "classConcepts": [
+{
+        "@id": "AssetProductCampaign",
+        "name": "Asset Product Campaign",
+        "@type": "Class",
+        "subClassOf": "ProductServiceCampaignItem",
+        "description": "The issues addressed by a Product Service Campaign may include multiple Assets"
+    },{
+        "@id": "Assortment",
+        "name": "Assortment",
+        "@type": "Class",
+        "description": "An array of products that are presented together."
+    },{
+        "@id": "AssortmentProduct",
+        "name": "Assortment Product",
+        "@type": "Class",
+        "description": "The association of a Product with an Assortment"
+    },{
+        "@id": "BrandGrade",
+        "name": "Brand Grade",
+        "@type": "Class",
+        "description": "What is the value of the brand e.g. premium, regular, value"
+    },{
+        "@id": "BundleProduct",
+        "name": "Bundle Product",
+        "@type": "Class",
+        "subClassOf": "Product",
+        "description": "Product groups e.g. mobile phone package include phone, call plan and charger"
+    },{
+        "@id": "BundleType",
+        "name": "Bundle Type",
+        "@type": "Class",
+        "description": "Types of product bundles include: Sold as One Unit, Changeable/Configurable, and Sold Only as a Sub-Bundle"
+    },{
+        "@id": "Color",
+        "name": "Color",
+        "@type": "Class",
+        "description": "Colors available to select from e.g. blue, yellow"
+    },{
+        "@id": "Currency",
+        "name": "Currency",
+        "@type": "Class",
+        "description": "A system of money in general use in a particular country."
+    },{
+        "@id": "DisposalType",
+        "name": "Disposal Type",
+        "@type": "Class",
+        "description": "How is the product to be disposed of e.g. recycle, return, throw-away"
+    },{
+        "@id": "EntitlementPolicy",
+        "name": "Entitlement Policy",
+        "@type": "Class",
+        "description": "Product entitlements often relate to service and support, for example Web Support, Phone Support or Parts Replacement"
+    },{
+        "@id": "EntitlementProduct",
+        "name": "Entitlement Product",
+        "@type": "Class",
+        "description": "The association of a Product with an Entitlement Policy"
+    },{
+        "@id": "GoodsProduct",
+        "name": "Goods Product",
+        "@type": "Class",
+        "subClassOf": "Product",
+        "description": "Products you can touch e.g. cart of milk, pallet of coffee, mobile phone x model 1"
+    },{
+        "@id": "Image",
+        "name": "Image",
+        "@type": "Class",
+        "description": "Entity that holds Images"
+    },{
+        "@id": "ImageGroup",
+        "name": "Image Group",
+        "@type": "Class",
+        "description": "A grouping of images"
+    },{
+        "@id": "InventoryProductCampaign",
+        "name": "Inventory Product Campaign",
+        "@type": "Class",
+        "subClassOf": "ProductServiceCampaignItem",
+        "description": "The issues addressed by a Product Service Campaign may include multiple Inventory Products"
+    },{
+        "@id": "KeywordSearchSortingRule",
+        "name": "Keyword Search Sorting Rule",
+        "@type": "Class",
+        "subClassOf": "ProductSortingRule",
+        "description": "Product display rules that are based on keyword search searches that have led a user to a campaign."
+    },{
+        "@id": "MarketingRelatedProduct",
+        "name": "Marketing Related Product",
+        "@type": "Class",
+        "description": "Association of two products using only the Product Relationship Types which are valid for Marketing-type products."
+    },{
+        "@id": "MasterProduct",
+        "name": "Master Product",
+        "@type": "Class",
+        "subClassOf": "Product",
+        "description": "Product without specifics so not sold e.g. green shirt"
+    },{
+        "@id": "MeasurementSystem",
+        "name": "Measurement System",
+        "@type": "Class",
+        "description": "A collection of units of measurement and rules relating them to each other. Systems of measurement in use today include the International System of Units (Metric system), the British imperial system, and the United States customary system."
+    },{
+        "@id": "PriceChargeType",
+        "name": "Price Charge Type",
+        "@type": "Class",
+        "description": "Is the item to be sold based on weight, by units or by usage"
+    },{
+        "@id": "Product",
+        "name": "Product",
+        "@type": "Class",
+        "description": "What is intended to be sold e.g. goods, services, bundles, made to order products."
+    },{
+        "@id": "ProductAdverseEffect",
+        "name": "Product Adverse Effect",
+        "@type": "Class",
+        "description": "Did use of the product have any adverse effects e.g., allergy, breathing problem."
+    },{
+        "@id": "ProductAge",
+        "name": "Product Age",
+        "@type": "Class",
+        "description": "Is product intended for e.g. newborns, teenagers"
+    },{
+        "@id": "ProductAssetConversionAction",
+        "name": "Product Asset Conversion Action",
+        "@type": "Class",
+        "description": "When the sale of a product converts it into an Asset for the customer, Product Asset Conversion Action defines how this will be done. Examples include: one per Sales Order Line Item that ordered it, and one per all order instances."
+    },{
+        "@id": "ProductCategorySortingRule",
+        "name": "Product Category Sorting Rule",
+        "@type": "Class",
+        "subClassOf": "ProductSortingRule",
+        "description": "Product display rules that are based on the category or categories to which various products belong, and how these are ranked"
+    },{
+        "@id": "ProductCleanupProcess",
+        "name": "Product Cleanup Process",
+        "@type": "Class",
+        "description": "If product is e.g. spilled are there special cleanup process required"
+    },{
+        "@id": "ProductEnvironmentRequirement",
+        "name": "Product Environment Requirement",
+        "@type": "Class",
+        "description": "Does the product need to be stored e.g. in freezer, in hot water"
+    },{
+        "@id": "ProductFabric",
+        "name": "Product Fabric",
+        "@type": "Class",
+        "description": "Is product mainly in one fabric e.g. cotton, leather"
+    },{
+        "@id": "ProductFeature",
+        "name": "Product Feature",
+        "@type": "Class",
+        "description": "An element or component of a product."
+    },{
+        "@id": "ProductGender",
+        "name": "Product Gender",
+        "@type": "Class",
+        "description": "Is product intended for e.g. females, unisex"
+    },{
+        "@id": "ProductImage",
+        "name": "Product Image",
+        "@type": "Class",
+        "description": "Images of a product"
+    },{
+        "@id": "ProductImageTranslation",
+        "name": "Product Image Translation",
+        "@type": "Class",
+        "description": "Translated attributes for a product image"
+    },{
+        "@id": "ProductPattern",
+        "name": "Product Pattern",
+        "@type": "Class",
+        "description": "Is product in a certain pattern e.g. checkered, striped"
+    },{
+        "@id": "ProductRelatedComponent",
+        "name": "Product Related Component",
+        "@type": "Class",
+        "description": "Association of two products using only the Product Relationship Types which are valid for Sales-type products. Two products associated in this way may form a component used within a larger product."
+    },{
+        "@id": "ProductRelatedMaterial",
+        "name": "Product Related Material",
+        "@type": "Class",
+        "description": "Association of two products that together form a component, which is not classified as Sales, Service or Marketing related. Often a Bill of Material used to manufacture another Product."
+    },{
+        "@id": "ProductRelationshipType",
+        "name": "Product Relationship Type",
+        "@type": "Class",
+        "description": "What are the types of relationships available e.g. bundled with/bundled in, substitute for/substitute of"
+    },{
+        "@id": "ProductRepairCertification",
+        "name": "Product Repair Certification",
+        "@type": "Class",
+        "description": "A credential that is required to make approved repairs on a product"
+    },{
+        "@id": "ProductRepairSkill",
+        "name": "Product Repair Skill",
+        "@type": "Class",
+        "description": "A proficiency that is required to fix or adjust a product"
+    },{
+        "@id": "ProductRole",
+        "name": "Product Role",
+        "@type": "Class",
+        "description": "Product Role is what role a product plays in product-to-product relationships e.g. Bundled with, Bundles"
+    },{
+        "@id": "ProductSalesModel",
+        "name": "Product Sales Model",
+        "@type": "Class",
+        "description": "A product may have more than one Sales Model."
+    },{
+        "@id": "ProductSeason",
+        "name": "Product Season",
+        "@type": "Class",
+        "description": "Is product intended for e.g. winter, summer"
+    },{
+        "@id": "ProductSecurityRequirement",
+        "name": "Product Security Requirement",
+        "@type": "Class",
+        "description": "Any special security required for handling or selling e.g. need security guards"
+    },{
+        "@id": "ProductServiceCampaign",
+        "name": "Product Service Campaign",
+        "@type": "Class",
+        "description": "A customer messaging plan related to repairs that a specific product requires"
+    },{
+        "@id": "ProductServiceCampaignItem",
+        "name": "Product Service Campaign Item",
+        "@type": "Class",
+        "description": "A purpose of Product Service Campaign may be to inform customers about multiple issues, which could relate to either Inventory Products or Product Assets."
+    },{
+        "@id": "ProductServiceCampaignItemType",
+        "name": "Product Service Campaign Item Type",
+        "@type": "Class",
+        "description": "Product Service Campaign Item Types are: Inventory Product Campaign and Asset Product Campaign."
+    },{
+        "@id": "ProductSortingRule",
+        "name": "Product Sorting Rule",
+        "@type": "Class",
+        "description": "Rules for displaying of products within a Campaign, that are based on factors such as keyword searches done by campaign members, or rankings of product categories."
+    },{
+        "@id": "ProductSortingRuleType",
+        "name": "Product Sorting Rule Type",
+        "@type": "Class",
+        "description": "Multiple products may be displayed in a digital campaign. The order of presentation can be determined in various ways, including keyword searchs that drove a person to the campaign, or pre-defined categories that are associated with products."
+    },{
+        "@id": "ProductStatus",
+        "name": "Product Status",
+        "@type": "Class",
+        "description": "Is the product In Design, In Test, Active or Inactive"
+    },{
+        "@id": "ProductStyle",
+        "name": "Product Style",
+        "@type": "Class",
+        "description": "Is product generally deemed e.g. slim, regular"
+    },{
+        "@id": "ProductTranslation",
+        "name": "Product Translation",
+        "@type": "Class",
+        "description": "Translated attributes for a product"
+    },{
+        "@id": "ProductType",
+        "name": "Product Type",
+        "@type": "Class",
+        "description": "Product Type e.g. Goods Product, Service Product, Bundle Product, Master Product"
+    },{
+        "@id": "ProductWarrantyTerm",
+        "name": "Product Warranty Term",
+        "@type": "Class",
+        "description": "A limitation or boudary of a product warranty"
+    },{
+        "@id": "QuantityInstallmentPeriod",
+        "name": "Quantity Installment Period",
+        "@type": "Class",
+        "description": "If the product has a quantity schedule, the amount of time covered by the schedule."
+    },{
+        "@id": "QuantityScheduleType",
+        "name": "Quantity Schedule Type",
+        "@type": "Class",
+        "description": "The type of the quantity schedule, if the product has one i.e. Divide, Repeat"
+    },{
+        "@id": "RevenueInstallmentPeriod",
+        "name": "Revenue Installment Period",
+        "@type": "Class",
+        "description": "The period of time covered by the schedule i.e. Daily, Weekly, Monthly, Quarterly, Yearly"
+    },{
+        "@id": "RevenueScheduleType",
+        "name": "Revenue Schedule Type",
+        "@type": "Class",
+        "description": "The type of the revenue schedule, if the product has one i.e. Divide, Repeat"
+    },{
+        "@id": "SalesModel",
+        "name": "Sales Model",
+        "@type": "Class",
+        "description": "Sales Model defines standard ways of repeating sales, if that is applicable. Standard sales models are One-Time, Evergreen (automatic renewal) and Termed Subscription."
+    },{
+        "@id": "SalesStoreProduct",
+        "name": "Sales Store Product",
+        "@type": "Class",
+        "description": "The association of a Product with a Sales Store"
+    },{
+        "@id": "ServiceProduct",
+        "name": "Service Product",
+        "@type": "Class",
+        "subClassOf": "Product",
+        "description": "Products that are intangible e.g. labor, software subscription"
+    },{
+        "@id": "ServiceRelatedProduct",
+        "name": "Service Related Product",
+        "@type": "Class",
+        "description": "Association of two products using only the Product Relationship Types which are valid for Service-related products."
+    },{
+        "@id": "ServiceType",
+        "name": "Service Type",
+        "@type": "Class",
+        "description": "What type of service is this e.g. rental, subscription, labor"
+    },{
+        "@id": "SizeUOM",
+        "name": "Size UOM",
+        "@type": "Class",
+        "description": "Sizes available to select e.g. XS, S, M, L, XL"
+    },{
+        "@id": "StoreAssortment",
+        "name": "Store Assortment",
+        "@type": "Class",
+        "description": "The assignment of an Assortment to a particular Sales Store."
+    },{
+        "@id": "TemperatureUOM",
+        "name": "Temperature UOM",
+        "@type": "Class",
+        "description": "Unit of Measure for temperature e.g. Celcius, Fahrenheit"
+    },{
+        "@id": "TimeUOM",
+        "name": "Time UOM",
+        "@type": "Class",
+        "description": "Time duration e.g. days, weeks, years"
     }
-  ],
-  "propertyConcepts": [
-    {
-      "@id": "salesOrderProduct2",
-      "@type": "Property",
-      "domain": [
-        "ProductRelatedProduct"
-      ]
-    },
-    {
-      "@id": "maximumOrderQuantityCount",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "isMultipleCouponsAllowed",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "isIntellectualPropertyProtected",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "isBackOrdered",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "pattern",
-      "@type": "Property",
-      "domain": [
-        "GoodsProduct"
-      ]
-    },
-    {
-      "@id": "validForPeriodUOM",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "parentProductRole",
-      "@type": "Property",
-      "domain": [
-        "ProductRelationshipType"
-      ]
-    },
-    {
-      "@id": "masterProduct",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "displayUrl",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "requiresInvididualUnitPricing",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "manufacturerName",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "grossWeight",
-      "@type": "Property",
-      "domain": [
-        "GoodsProduct"
-      ]
-    },
-    {
-      "@id": "externalSourceRecord",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "canUseRevenueSchedule",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "allowCustomerReturn",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "isPerishable",
-      "@type": "Property",
-      "domain": [
-        "GoodsProduct"
-      ]
-    },
-    {
-      "@id": "requiresUnitPriceLabel",
-      "@type": "Property",
-      "domain": [
-        "GoodsProduct"
-      ]
-    },
-    {
-      "@id": "validFromDate",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "fromDate",
-      "@type": "Property",
-      "domain": [
-        "ProductRelatedProduct"
-      ]
-    },
-    {
-      "@id": "id",
-      "@type": "Property",
-      "domain": [
-        "Brand",
-        "ProductRelationshipType",
-        "BundleProduct",
-        "GoodsProduct",
-        "ProductImage",
-        "ProductRelatedProduct",
-        "ProductTranslation",
-        "ServiceProduct",
-        "Product",
-        "ProductImageTranslation"
-      ]
-    },
-    {
-      "@id": "servicePeriodCount",
-      "@type": "Property",
-      "domain": [
-        "ServiceProduct"
-      ]
-    },
-    {
-      "@id": "salesOrderProduct1",
-      "@type": "Property",
-      "domain": [
-        "ProductRelatedProduct"
-      ]
-    },
-    {
-      "@id": "isDefaultOption",
-      "@type": "Property",
-      "domain": [
-        "ProductRelatedProduct"
-      ]
-    },
-    {
-      "@id": "glAccountCode",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "productRelationshipType",
-      "@type": "Property",
-      "domain": [
-        "ProductRelatedProduct"
-      ]
-    },
-    {
-      "@id": "isPreOrderable",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "revenueInstallmentPeriod",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "tareWeight",
-      "@type": "Property",
-      "domain": [
-        "BundleProduct",
-        "GoodsProduct"
-      ]
-    },
-    {
-      "@id": "rewardProgramPointsCount",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "fabric",
-      "@type": "Property",
-      "domain": [
-        "GoodsProduct"
-      ]
-    },
-    {
-      "@id": "description",
-      "@type": "Property",
-      "domain": [
-        "ProductTranslation",
-        "Product"
-      ]
-    },
-    {
-      "@id": "priceChargeType",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "standardWarrantyLengthMonth",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "productImage",
-      "@type": "Property",
-      "domain": [
-        "ProductImageTranslation"
-      ]
-    },
-    {
-      "@id": "quantityInstallmentPeriod",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "depth",
-      "@type": "Property",
-      "domain": [
-        "GoodsProduct"
-      ]
-    },
-    {
-      "@id": "bundledProductsDecidedAtUse",
-      "@type": "Property",
-      "domain": [
-        "BundleProduct"
-      ]
-    },
-    {
-      "@id": "lotIdentifier",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "brandGrade",
-      "@type": "Property",
-      "domain": [
-        "Brand",
-        "Product"
-      ]
-    },
-    {
-      "@id": "width",
-      "@type": "Property",
-      "domain": [
-        "GoodsProduct"
-      ]
-    },
-    {
-      "@id": "isQualityVerificationRequired",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "diameter",
-      "@type": "Property",
-      "domain": [
-        "GoodsProduct"
-      ]
-    },
-    {
-      "@id": "evergreenContractEstimatedMonthCount",
-      "@type": "Property",
-      "domain": [
-        "ServiceProduct"
-      ]
-    },
-    {
-      "@id": "isSellableWithoutPrice",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "bundledProductsDecidesAvailability",
-      "@type": "Property",
-      "domain": [
-        "BundleProduct"
-      ]
-    },
-    {
-      "@id": "isSellableIndependently",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "isWeightEntryRequired",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "netWeight",
-      "@type": "Property",
-      "domain": [
-        "GoodsProduct"
-      ]
-    },
-    {
-      "@id": "environmentRequirement",
-      "@type": "Property",
-      "domain": [
-        "GoodsProduct"
-      ]
-    },
-    {
-      "@id": "childProductRole",
-      "@type": "Property",
-      "domain": [
-        "ProductRelationshipType"
-      ]
-    },
-    {
-      "@id": "versionNumber",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "quantityInstallmentCount",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "color",
-      "@type": "Property",
-      "domain": [
-        "GoodsProduct"
-      ]
-    },
-    {
-      "@id": "isPartnerDiscountAllowed",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "productStatus",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "type",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "expectedWasteCount",
-      "@type": "Property",
-      "domain": [
-        "BundleProduct"
-      ]
-    },
-    {
-      "@id": "gender",
-      "@type": "Property",
-      "domain": [
-        "GoodsProduct"
-      ]
-    },
-    {
-      "@id": "longDescription",
-      "@type": "Property",
-      "domain": [
-        "ProductTranslation",
-        "Product"
-      ]
-    },
-    {
-      "@id": "rentalTermViolationPenaltyAmount",
-      "@type": "Property",
-      "domain": [
-        "ServiceProduct"
-      ]
-    },
-    {
-      "@id": "isRainCheckAllowed",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "toDate",
-      "@type": "Property",
-      "domain": [
-        "ProductRelatedProduct"
-      ]
-    },
-    {
-      "@id": "modelYear",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "primarySalesChannel",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "weightUOM",
-      "@type": "Property",
-      "domain": [
-        "BundleProduct",
-        "GoodsProduct"
-      ]
-    },
-    {
-      "@id": "revenueInstallmentCount",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "bundledProductsSoldTogether",
-      "@type": "Property",
-      "domain": [
-        "BundleProduct"
-      ]
-    },
-    {
-      "@id": "productSKU",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "sizeUOM",
-      "@type": "Property",
-      "domain": [
-        "GoodsProduct"
-      ]
-    },
-    {
-      "@id": "productMayExpand",
-      "@type": "Property",
-      "domain": [
-        "GoodsProduct"
-      ]
-    },
-    {
-      "@id": "isReturnable",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "canUseQuantitySchedule",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "product",
-      "@type": "Property",
-      "domain": [
-        "ProductImage",
-        "ProductTranslation"
-      ]
-    },
-    {
-      "@id": "imageViewType",
-      "@type": "Property",
-      "domain": [
-        "ProductImage"
-      ]
-    },
-    {
-      "@id": "brand",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "name",
-      "@type": "Property",
-      "domain": [
-        "Brand",
-        "ProductRelatedProduct",
-        "ProductTranslation",
-        "Product"
-      ]
-    },
-    {
-      "@id": "isWorkerDiscountAllowed",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "isManualPriceEntryRequired",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "minimumAdvertisementAmount",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "translatedName",
-      "@type": "Property",
-      "domain": [
-        "ProductImageTranslation"
-      ]
-    },
-    {
-      "@id": "parentProduct",
-      "@type": "Property",
-      "domain": [
-        "ProductRelatedProduct"
-      ]
-    },
-    {
-      "@id": "isInstallable",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "serviceType",
-      "@type": "Property",
-      "domain": [
-        "ServiceProduct"
-      ]
-    },
-    {
-      "@id": "season",
-      "@type": "Property",
-      "domain": [
-        "GoodsProduct"
-      ]
-    },
-    {
-      "@id": "age",
-      "@type": "Property",
-      "domain": [
-        "GoodsProduct"
-      ]
-    },
-    {
-      "@id": "modelNumber",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "rentalCleanupFeeAmount",
-      "@type": "Property",
-      "domain": [
-        "ServiceProduct"
-      ]
-    },
-    {
-      "@id": "validToDate",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "isQuantityEntryRequired",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "mSRPAmount",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "revenueScheduleType",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "validForPeriodCount",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "isDynamicBundle",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "maxHoldingDayCount",
-      "@type": "Property",
-      "domain": [
-        "GoodsProduct"
-      ]
-    },
-    {
-      "@id": "minimumAdvertisementAmountStartDate",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "requiredTemperatureLowestNumber",
-      "@type": "Property",
-      "domain": [
-        "GoodsProduct"
-      ]
-    },
-    {
-      "@id": "evergreenContractEstimatedChargeAmount",
-      "@type": "Property",
-      "domain": [
-        "ServiceProduct"
-      ]
-    },
-    {
-      "@id": "quantityScheduleType",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "isCouponRedemptionAllowed",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "quantityUnitOfMeasure",
-      "@type": "Property",
-      "domain": [
-        "BundleProduct"
-      ]
-    },
-    {
-      "@id": "allowPartialRefund",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "requiredCleanupProcess",
-      "@type": "Property",
-      "domain": [
-        "GoodsProduct"
-      ]
-    },
-    {
-      "@id": "stockLedgerValuationAmount",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "childProduct",
-      "@type": "Property",
-      "domain": [
-        "ProductRelatedProduct"
-      ]
-    },
-    {
-      "@id": "isAutoProvisionable",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "isMadeToOrder",
-      "@type": "Property",
-      "domain": [
-        "GoodsProduct"
-      ]
-    },
-    {
-      "@id": "isCustomerDiscountAllowed",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "requiredHumidityPercentage",
-      "@type": "Property",
-      "domain": [
-        "GoodsProduct"
-      ]
-    },
-    {
-      "@id": "primaryProductCategory",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "quantityCount",
-      "@type": "Property",
-      "domain": [
-        "BundleProduct"
-      ]
-    },
-    {
-      "@id": "requiredTemperatureHighestNumber",
-      "@type": "Property",
-      "domain": [
-        "GoodsProduct"
-      ]
-    },
-    {
-      "@id": "height",
-      "@type": "Property",
-      "domain": [
-        "GoodsProduct"
-      ]
-    },
-    {
-      "@id": "serviceProviderAccount",
-      "@type": "Property",
-      "domain": [
-        "ServiceProduct"
-      ]
-    },
-    {
-      "@id": "isFoodstampPaymentAllowed",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "drainedWeight",
-      "@type": "Property",
-      "domain": [
-        "GoodsProduct"
-      ]
-    },
-    {
-      "@id": "requiredTemperatureUOM",
-      "@type": "Property",
-      "domain": [
-        "GoodsProduct"
-      ]
-    },
-    {
-      "@id": "shelfFacingUnitCount",
-      "@type": "Property",
-      "domain": [
-        "GoodsProduct"
-      ]
-    },
-    {
-      "@id": "isSellable",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "disposalType",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "isDefaultImage",
-      "@type": "Property",
-      "domain": [
-        "ProductImage"
-      ]
-    },
-    {
-      "@id": "requiredDepositPercentage",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "productSecurityRequirement",
-      "@type": "Property",
-      "domain": [
-        "GoodsProduct"
-      ]
-    },
-    {
-      "@id": "requiredDepositAmount",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "servicePeriodUOM",
-      "@type": "Property",
-      "domain": [
-        "ServiceProduct"
-      ]
-    },
-    {
-      "@id": "bundledProductsSubstitutional",
-      "@type": "Property",
-      "domain": [
-        "BundleProduct"
-      ]
-    },
-    {
-      "@id": "minimumOrderQuantityCount",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
-    },
-    {
-      "@id": "style",
-      "@type": "Property",
-      "domain": [
-        "GoodsProduct"
-      ]
-    },
-    {
-      "@id": "isSerialized",
-      "@type": "Property",
-      "domain": [
-        "Product"
-      ]
+    ],
+    "propertyConcepts": [
+{
+        "@id": "isQuantityEntryRequired",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "isSellableWithoutPrice",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "skillId",
+        "@type": "Property",
+        "domain": [
+"ProductRepairSkill"
+        ]
+    },{
+        "@id": "rentalCleanupFeeAmountCurrency",
+        "@type": "Property",
+        "domain": [
+"ServiceProduct"
+        ]
+    },{
+        "@id": "isRainCheckAllowed",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "isSellableIndependently",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "imageId",
+        "@type": "Property",
+        "domain": [
+"ProductImage"
+        ]
+    },{
+        "@id": "promotionId",
+        "@type": "Property",
+        "domain": [
+"ProductServiceCampaign"
+        ]
+    },{
+        "@id": "grossWeight",
+        "@type": "Property",
+        "domain": [
+"GoodsProduct"
+        ]
+    },{
+        "@id": "isWorkerDiscountAllowed",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "versionNumber",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "requiredDepositPercentage",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "isManualPriceEntryRequired",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "requiredTemperatureLowestNumber",
+        "@type": "Property",
+        "domain": [
+"GoodsProduct"
+        ]
+    },{
+        "@id": "imageAlternateText",
+        "@type": "Property",
+        "domain": [
+"Image"
+        ]
+    },{
+        "@id": "parentProductRoleId",
+        "@type": "Property",
+        "domain": [
+"ProductRelationshipType"
+        ]
+    },{
+        "@id": "modelYear",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "canUseRevenueSchedule",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "weightUOMId",
+        "@type": "Property",
+        "domain": [
+"BundleProduct","GoodsProduct"
+        ]
+    },{
+        "@id": "measurementSystemId",
+        "@type": "Property",
+        "domain": [
+"SizeUOM","TemperatureUOM"
+        ]
+    },{
+        "@id": "assortmentId",
+        "@type": "Property",
+        "domain": [
+"StoreAssortment","AssortmentProduct"
+        ]
+    },{
+        "@id": "salesStoreId",
+        "@type": "Property",
+        "domain": [
+"StoreAssortment"
+        ]
+    },{
+        "@id": "evergreenContractEstimatedChargeAmountCurrency",
+        "@type": "Property",
+        "domain": [
+"ServiceProduct"
+        ]
+    },{
+        "@id": "patternId",
+        "@type": "Property",
+        "domain": [
+"GoodsProduct"
+        ]
+    },{
+        "@id": "expectedWasteCount",
+        "@type": "Property",
+        "domain": [
+"BundleProduct"
+        ]
+    },{
+        "@id": "quantityCount",
+        "@type": "Property",
+        "domain": [
+"BundleProduct"
+        ]
+    },{
+        "@id": "serviceProviderAccountId",
+        "@type": "Property",
+        "domain": [
+"ServiceProduct"
+        ]
+    },{
+        "@id": "isIntellectualPropertyProtected",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "disposalTypeId",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "isMadeToOrder",
+        "@type": "Property",
+        "domain": [
+"GoodsProduct"
+        ]
+    },{
+        "@id": "serviceTypeId",
+        "@type": "Property",
+        "domain": [
+"ServiceProduct"
+        ]
+    },{
+        "@id": "assetId",
+        "@type": "Property",
+        "domain": [
+"AssetProductCampaign"
+        ]
+    },{
+        "@id": "requiredHumidityPercentage",
+        "@type": "Property",
+        "domain": [
+"GoodsProduct"
+        ]
+    },{
+        "@id": "styleId",
+        "@type": "Property",
+        "domain": [
+"GoodsProduct"
+        ]
+    },{
+        "@id": "minimumAdvertisementAmountCurrency",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "primaryProductCategoryId",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "isBackOrdered",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "revenueInstallmentCount",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "salesModelId",
+        "@type": "Property",
+        "domain": [
+"ProductSalesModel"
+        ]
+    },{
+        "@id": "isDefaultImage",
+        "@type": "Property",
+        "domain": [
+"ProductImage"
+        ]
+    },{
+        "@id": "isMultipleCouponsAllowed",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "sizeUOMId",
+        "@type": "Property",
+        "domain": [
+"GoodsProduct"
+        ]
+    },{
+        "@id": "iSOCurrencyCodeNumber",
+        "@type": "Property",
+        "domain": [
+"Currency"
+        ]
+    },{
+        "@id": "isWeightEntryRequired",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "manufacturerName",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "glAccountCode",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "imageViewType",
+        "@type": "Property",
+        "domain": [
+"ProductImage","Image"
+        ]
+    },{
+        "@id": "productAssetCvsnActionId",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "bundledProductsDecidesAvailability",
+        "@type": "Property",
+        "domain": [
+"BundleProduct"
+        ]
+    },{
+        "@id": "minimumAdvertisementAmountStartDate",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "revenueScheduleTypeId",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "depth",
+        "@type": "Property",
+        "domain": [
+"GoodsProduct"
+        ]
+    },{
+        "@id": "revenueInstallmentPeriodId",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "bundledProductsDecidedAtUse",
+        "@type": "Property",
+        "domain": [
+"BundleProduct"
+        ]
+    },{
+        "@id": "validForPeriodUOMId",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "packagedInCountry",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "tareWeight",
+        "@type": "Property",
+        "domain": [
+"BundleProduct","GoodsProduct"
+        ]
+    },{
+        "@id": "isQualityVerificationRequired",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "stockLedgerValuationAmount",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "entitlementPolicyId",
+        "@type": "Property",
+        "domain": [
+"EntitlementProduct"
+        ]
+    },{
+        "@id": "isAutoProvisionable",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "ageId",
+        "@type": "Property",
+        "domain": [
+"GoodsProduct"
+        ]
+    },{
+        "@id": "minimumAdvertisementAmount",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "validFromDate",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "minimumOrderQuantityCount",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "localeId",
+        "@type": "Property",
+        "domain": [
+"ProductImageTranslation","ProductTranslation"
+        ]
+    },{
+        "@id": "mSRPAmount",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "fabricId",
+        "@type": "Property",
+        "domain": [
+"GoodsProduct"
+        ]
+    },{
+        "@id": "productType",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "isFoodstampPaymentAllowed",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "diameter",
+        "@type": "Property",
+        "domain": [
+"GoodsProduct"
+        ]
+    },{
+        "@id": "isCustomerDiscountAllowed",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "longDescription",
+        "@type": "Property",
+        "domain": [
+"ProductTranslation"
+        ]
+    },{
+        "@id": "shelfFacingUnitCount",
+        "@type": "Property",
+        "domain": [
+"GoodsProduct"
+        ]
+    },{
+        "@id": "productStatusId",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "isPreOrderable",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "seasonId",
+        "@type": "Property",
+        "domain": [
+"GoodsProduct"
+        ]
+    },{
+        "@id": "returnOrderItemId",
+        "@type": "Property",
+        "domain": [
+"ProductServiceCampaignItem"
+        ]
+    },{
+        "@id": "quantityInstallmentPeriodId",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "childProductRoleId",
+        "@type": "Property",
+        "domain": [
+"ProductRelationshipType"
+        ]
+    },{
+        "@id": "genderId",
+        "@type": "Property",
+        "domain": [
+"GoodsProduct"
+        ]
+    },{
+        "@id": "imageTitle",
+        "@type": "Property",
+        "domain": [
+"Image"
+        ]
+    },{
+        "@id": "evergreenContractEstimatedMonthCount",
+        "@type": "Property",
+        "domain": [
+"ServiceProduct"
+        ]
+    },{
+        "@id": "requiredTemperatureUOMId",
+        "@type": "Property",
+        "domain": [
+"GoodsProduct"
+        ]
+    },{
+        "@id": "rentalTermViolationPenaltyAmountCurrency",
+        "@type": "Property",
+        "domain": [
+"ServiceProduct"
+        ]
+    },{
+        "@id": "isPartnerDiscountAllowed",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "width",
+        "@type": "Property",
+        "domain": [
+"GoodsProduct"
+        ]
+    },{
+        "@id": "description",
+        "@type": "Property",
+        "domain": [
+"Product","SalesModel","Assortment","EntitlementPolicy","ProductSortingRule","ProductTranslation"
+        ]
+    },{
+        "@id": "stockLedgerValuationAmountCurrency",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "allowPartialRefund",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "canUseQuantitySchedule",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "rentalCleanupFeeAmount",
+        "@type": "Property",
+        "domain": [
+"ServiceProduct"
+        ]
+    },{
+        "@id": "imageGroupId",
+        "@type": "Property",
+        "domain": [
+"ProductImage"
+        ]
+    },{
+        "@id": "productImageId",
+        "@type": "Property",
+        "domain": [
+"ProductImageTranslation"
+        ]
+    },{
+        "@id": "bundleTypeId",
+        "@type": "Property",
+        "domain": [
+"BundleProduct"
+        ]
+    },{
+        "@id": "drainedWeight",
+        "@type": "Property",
+        "domain": [
+"GoodsProduct"
+        ]
+    },{
+        "@id": "productId",
+        "@type": "Property",
+        "domain": [
+"ProductRepairSkill","ProductRepairCertification","ProductImage","ProductServiceCampaign","ProductSalesModel","ProductTranslation","ProductFeature","ProductWarrantyTerm","EntitlementProduct","AssortmentProduct"
+        ]
+    },{
+        "@id": "requiredTemperatureHighestNumber",
+        "@type": "Property",
+        "domain": [
+"GoodsProduct"
+        ]
+    },{
+        "@id": "lotIdentifier",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "colorId",
+        "@type": "Property",
+        "domain": [
+"GoodsProduct"
+        ]
+    },{
+        "@id": "requiredDepositAmount",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "id",
+        "@type": "Property",
+        "domain": [
+"AssetProductCampaign","MarketingRelatedProduct","SizeUOM","BundleProduct","GoodsProduct","ProductServiceCampaignItemType","BundleType","ProductImage","DisposalType","ProductEnvironmentRequirement","StoreAssortment","AssortmentProduct","ProductRepairSkill","ProductAssetConversionAction","ProductSalesModel","ProductSeason","Assortment","ProductWarrantyTerm","ProductAge","ProductRole","ServiceProduct","Image","MeasurementSystem","ProductFabric","ProductServiceCampaignItem","InventoryProductCampaign","ProductTranslation","ProductStyle","ProductRelationshipType","ProductSecurityRequirement","ProductSortingRuleType","ServiceType","TimeUOM","ProductRelatedMaterial","KeywordSearchSortingRule","QuantityInstallmentPeriod","ProductCleanupProcess","ProductRepairCertification","ProductServiceCampaign","RevenueInstallmentPeriod","PriceChargeType","EntitlementProduct","BrandGrade","MasterProduct","Product","ProductImageTranslation","ProductStatus","QuantityScheduleType","RevenueScheduleType","ProductCategorySortingRule","ProductGender","EntitlementPolicy","ProductFeature","ProductPattern","TemperatureUOM","Color","Currency","SalesModel","ServiceRelatedProduct","ProductSortingRule","ProductRelatedComponent","ImageGroup"
+        ]
+    },{
+        "@id": "imageURL",
+        "@type": "Property",
+        "domain": [
+"Image"
+        ]
+    },{
+        "@id": "productSortingRuleId",
+        "@type": "Property",
+        "domain": [
+"ProductSortingRule"
+        ]
+    },{
+        "@id": "requiresUnitPriceLabel",
+        "@type": "Property",
+        "domain": [
+"GoodsProduct"
+        ]
+    },{
+        "@id": "quantityScheduleTypeId",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "isCouponRedemptionAllowed",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "productCategorySortingRuleText",
+        "@type": "Property",
+        "domain": [
+"ProductCategorySortingRule"
+        ]
+    },{
+        "@id": "isDynamicBundle",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "translatedName",
+        "@type": "Property",
+        "domain": [
+"ProductImageTranslation"
+        ]
+    },{
+        "@id": "rewardProgramPointsCount",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "height",
+        "@type": "Property",
+        "domain": [
+"GoodsProduct"
+        ]
+    },{
+        "@id": "keywordSearchSortingRuleText",
+        "@type": "Property",
+        "domain": [
+"KeywordSearchSortingRule"
+        ]
+    },{
+        "@id": "evergreenContractEstimatedChargeAmount",
+        "@type": "Property",
+        "domain": [
+"ServiceProduct"
+        ]
+    },{
+        "@id": "productServiceCampaignId",
+        "@type": "Property",
+        "domain": [
+"ProductServiceCampaignItem"
+        ]
+    },{
+        "@id": "requiredCleanupProcessId",
+        "@type": "Property",
+        "domain": [
+"GoodsProduct"
+        ]
+    },{
+        "@id": "masterProductId",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "servicePeriodCount",
+        "@type": "Property",
+        "domain": [
+"ServiceProduct"
+        ]
+    },{
+        "@id": "mSRPAmountCurrency",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "productSecurityRequirementId",
+        "@type": "Property",
+        "domain": [
+"GoodsProduct"
+        ]
+    },{
+        "@id": "minimumOptionCount",
+        "@type": "Property",
+        "domain": [
+"ProductFeature"
+        ]
+    },{
+        "@id": "name",
+        "@type": "Property",
+        "domain": [
+"ProductSortingRuleType","AssetProductCampaign","ServiceType","TimeUOM","SizeUOM","ProductServiceCampaignItemType","ProductCleanupProcess","BundleType","ProductEnvironmentRequirement","StoreAssortment","BrandGrade","Product","ProductStatus","ProductAssetConversionAction","ProductSeason","Assortment","ProductGender","EntitlementPolicy","ProductFeature","ProductWarrantyTerm","ProductAge","ProductRole","ProductPattern","Color","Currency","SalesModel","MeasurementSystem","ProductFabric","ProductServiceCampaignItem","InventoryProductCampaign","ProductTranslation","ProductStyle","ProductSecurityRequirement","ImageGroup"
+        ]
+    },{
+        "@id": "priceChargeTypeId",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "productCategoryId",
+        "@type": "Property",
+        "domain": [
+"ProductCategorySortingRule","ProductFeature"
+        ]
+    },{
+        "@id": "serviceEntitlementTemplateId",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "allowCustomerReturn",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "iSOCurrencyCodeAlphanumericText",
+        "@type": "Property",
+        "domain": [
+"Currency"
+        ]
+    },{
+        "@id": "maximumOrderQuantityCount",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "primarySalesChannelId",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "productMayExpand",
+        "@type": "Property",
+        "domain": [
+"GoodsProduct"
+        ]
+    },{
+        "@id": "maxHoldingDayCount",
+        "@type": "Property",
+        "domain": [
+"GoodsProduct"
+        ]
+    },{
+        "@id": "requiredDepositAmountCurrency",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "externalSourceRecordId",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "warrantyTermId",
+        "@type": "Property",
+        "domain": [
+"ProductWarrantyTerm"
+        ]
+    },{
+        "@id": "producedInCountry",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "quantityUnitOfMeasureId",
+        "@type": "Property",
+        "domain": [
+"BundleProduct"
+        ]
+    },{
+        "@id": "servicePeriodUOM",
+        "@type": "Property",
+        "domain": [
+"ServiceProduct"
+        ]
+    },{
+        "@id": "isPerishable",
+        "@type": "Property",
+        "domain": [
+"GoodsProduct"
+        ]
+    },{
+        "@id": "isSerialized",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "quantityInstallmentCount",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "bundledProductsSubstitutional",
+        "@type": "Property",
+        "domain": [
+"BundleProduct"
+        ]
+    },{
+        "@id": "isInstallable",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "netWeight",
+        "@type": "Property",
+        "domain": [
+"GoodsProduct"
+        ]
+    },{
+        "@id": "isReturnable",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "validToDate",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "maximumOptionCount",
+        "@type": "Property",
+        "domain": [
+"ProductFeature"
+        ]
+    },{
+        "@id": "brandId",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "isSellable",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "bundledProductsSoldTogether",
+        "@type": "Property",
+        "domain": [
+"BundleProduct"
+        ]
+    },{
+        "@id": "productSKU",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "rentalTermViolationPenaltyAmount",
+        "@type": "Property",
+        "domain": [
+"ServiceProduct"
+        ]
+    },{
+        "@id": "environmentRequirementId",
+        "@type": "Property",
+        "domain": [
+"GoodsProduct"
+        ]
+    },{
+        "@id": "requiresInvididualUnitPricing",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "validForPeriodCount",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "standardWarrantyLengthMonth",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
+    },{
+        "@id": "modelNumber",
+        "@type": "Property",
+        "domain": [
+"Product"
+        ]
     }
-  ]
+    ]
 }

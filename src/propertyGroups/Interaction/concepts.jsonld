@@ -1,79 +1,69 @@
 {
-  "@context": "http://cloudinformationmodel.org/context.jsonld",
-  "@id": "InteractionPropertyGroup",
-  "name": "Interaction Property Group",
-  "@type": "PropertyGroup",
-  "version": "0.1",
-  "propertyConcepts": [
-    {
-      "@id": "contactEmail",
-      "@type": "Property",
-      "description": "Reference to email address for the contact.",
-      "name": "Contact Email",
-      "range": "ContactPointEmail"
-    },
-    {
-      "@id": "homePhone",
-      "@type": "Property",
-      "description": "Reference to home telephone number for the contact.",
-      "name": "Home Phone",
-      "range": "ContactPointPhone"
-    },
-    {
-      "@id": "businessPhone",
-      "@type": "Property",
-      "description": "Reference to telephone number for the contact",
-      "name": "Business Phone",
-      "range": "ContactPointPhone"
-    },
-    {
-      "@id": "faxPhone",
-      "@type": "Property",
-      "description": "Reference to fax number for the contact",
-      "name": "Fax Phone",
-      "range": "ContactPointPhone"
-    },
-    {
-      "@id": "mobilePhone",
-      "@type": "Property",
-      "description": "Reference to Contacts' mobile phone number.",
-      "name": "Mobile Phone",
-      "range": "ContactPointPhone"
-    },
-    {
-      "@id": "mailingAddress",
-      "@type": "Property",
-      "description": "Reference to Mailing address",
-      "name": "Mailing Address",
-      "range": "ContactPointAddress"
-    },
-    {
-      "@id": "otherContactAddress",
-      "@type": "Property",
-      "description": "Reference to Other address",
-      "name": "Other Contact Address",
-      "range": "ContactPointAddress"
-    },
-    {
-      "@id": "reportsToAccountContact",
-      "@type": "Property",
-      "description": "Who does the contact report to",
-      "name": "Reports To Account Contact",
-      "range": "AccountContact"
-    },
-    {
-      "@id": "lastActivityDate",
-      "@type": "Property",
-      "description": "Either due date of the most recent event logged or of the most recently closed task",
-      "name": "Last Activity Date",
-      "range": "DataType"
-    },
-    {
-      "@id": "indirectRelationAccountContact",
-      "@type": "Property",
-      "description": "If the Account Contact Relationship is an indirect relationship this reference state in what direct relationship/context those are valid in",
-      "name": "Indirect Relation Account Contact",
-      "range": "AccountContact"
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "InteractionPropertyGroup",
+    "name": "Interaction Property Group",
+    "@type": "PropertyGroup",
+    "propertyConcepts": [
+{
+        "@id": "businessPhoneId",
+        "@type": "Property",
+        "description": "Reference to telephone number for the contact",
+        "name": "Business Phone",
+        "range": "ContactPointPhone"
+    },{
+        "@id": "contactEmailId",
+        "@type": "Property",
+        "description": "Reference to email address for the contact.",
+        "name": "Contact Email",
+        "range": "ContactPointEmail"
+    },{
+        "@id": "faxPhoneId",
+        "@type": "Property",
+        "description": "Reference to fax number for the contact",
+        "name": "Fax Phone",
+        "range": "ContactPointPhone"
+    },{
+        "@id": "homePhoneId",
+        "@type": "Property",
+        "description": "Reference to home telephone number for the contact.",
+        "name": "Home Phone",
+        "range": "ContactPointPhone"
+    },{
+        "@id": "indirectRelationAccountContactId",
+        "@type": "Property",
+        "description": "If the Account Contact Relationship is an indirect relationship this reference state in what direct relationship/context those are valid in",
+        "name": "Indirect Relation Account Contact",
+        "range": "AccountContact"
+    },{
+        "@id": "lastActivityDate",
+        "@type": "Property",
+        "description": "Either due date of the most recent event logged or of the most recently closed task",
+        "name": "Last Activity Date",
+        "range": "DataType"
+    },{
+        "@id": "mailingAddressId",
+        "@type": "Property",
+        "description": "Reference to Mailing address",
+        "name": "Mailing Address",
+        "range": "ContactPointAddress"
+    },{
+        "@id": "mobilePhoneId",
+        "@type": "Property",
+        "description": "Reference to Contacts' mobile phone number.",
+        "name": "Mobile Phone",
+        "range": "ContactPointPhone"
+    },{
+        "@id": "otherContactAddressId",
+        "@type": "Property",
+        "description": "Reference to Other address",
+        "name": "Other Contact Address",
+        "range": "ContactPointAddress"
+    },{
+        "@id": "reportsToAccountContactId",
+        "@type": "Property",
+        "description": "Who does the contact report to",
+        "name": "Reports To Account Contact",
+        "range": "AccountContact"
     }
-  ]
+    ]
 }

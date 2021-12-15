@@ -1,0 +1,111 @@
+{
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "PropertyGroup",
+    "name": " Property Group",
+    "@type": "PropertyGroup",
+    "propertyConcepts": [
+{
+        "@id": "iSOCurrencyCodeNumber",
+        "@type": "Property",
+        "description": "An ISO 4217 numeric currency code, e.g. 578 for the Norwegian Krone",
+        "name": "ISO Currency Code Number",
+        "range": "DataType"
+    },{
+        "@id": "imageAlternateText",
+        "@type": "Property",
+        "description": "Alternate Text for the image",
+        "name": "Image Alternate Text",
+        "range": "DataType"
+    },{
+        "@id": "imageTitle",
+        "@type": "Property",
+        "description": "Title specifies extra information about an Image",
+        "name": "Image Title",
+        "range": "DataType"
+    },{
+        "@id": "imageURL",
+        "@type": "Property",
+        "description": "URL",
+        "name": "Image URL",
+        "range": "DataType"
+    },{
+        "@id": "imageViewType",
+        "@type": "Property",
+        "description": "View types may indicate size e.g. 'small' 'large' or usage e.g. 'swatch' or any other image classifications.",
+        "name": "Image View Type",
+        "range": "DataType"
+    },{
+        "@id": "birthDateMonth",
+        "@type": "Property",
+        "description": "A component of the complete Birth Date, the Month (as a number, 1-12) within a calendar year on which the Individual was born.",
+        "name": "Birth Date Month",
+        "range": "DataType"
+    },{
+        "@id": "name",
+        "@type": "Property",
+        "description": "Values of Account Participant Role may include: Account Owner, Account Viewer, and Account Maintainer.",
+        "name": "Name",
+        "range": "DataType"
+    },{
+        "@id": "couponStatusId",
+        "@type": "Property",
+        "description": "Reference code for coupon status values",
+        "name": "Coupon Status Id",
+        "range": "CouponStatus"
+    },{
+        "@id": "customerId",
+        "@type": "Property",
+        "description": "The customer who has been given the coupon",
+        "name": "Customer",
+        "range": "Party"
+    },{
+        "@id": "discountAmount",
+        "@type": "Property",
+        "description": "The amount of price reduction from the standard price, expressed as a fixed amount e.g., $2.00",
+        "name": "Discount Amount",
+        "range": "DataType"
+    },{
+        "@id": "discountPercentage",
+        "@type": "Property",
+        "description": "The amount of price reduction from the standard price, expressed as a decimal fraction, e.g. .10 for 10% off",
+        "name": "Discount Percentage",
+        "range": "DataType"
+    },{
+        "@id": "isReturnCoupon",
+        "@type": "Property",
+        "description": "TBD",
+        "name": "Is Return Coupon",
+        "range": "DataType"
+    },{
+        "@id": "isValid",
+        "@type": "Property",
+        "description": "True if the coupon is valid and unexpired",
+        "name": "Is Valid",
+        "range": "DataType"
+    },{
+        "@id": "primaryScanCodeLabel",
+        "@type": "Property",
+        "description": "The verbiage on the coupon used to identify the primary scan code.",
+        "name": "Primary Scan Code Label",
+        "range": "DataType"
+    },{
+        "@id": "returnCouponReason",
+        "@type": "Property",
+        "description": "e.g. out of date, out of stock",
+        "name": "Return Coupon Reason",
+        "range": "DataType"
+    },{
+        "@id": "secondaryScanCodeLabel",
+        "@type": "Property",
+        "description": "The verbiage on the coupon used to identify the secondary scan code.",
+        "name": "Secondary Scan Code Label",
+        "range": "DataType"
+    },{
+        "@id": "id",
+        "@type": "Property",
+        "description": "Primary Key",
+        "name": "Trade In Tender Id",
+        "range": "DataType"
+    }
+    ]
+}

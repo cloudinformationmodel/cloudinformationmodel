@@ -1,23 +1,45 @@
 {
-  "@context": "http://cloudinformationmodel.org/context.jsonld",
-  "@id": "TaxationPropertyGroup",
-  "name": "Taxation Property Group",
-  "@type": "PropertyGroup",
-  "version": "0.1",
-  "propertyConcepts": [
-    {
-      "@id": "originalSalesOrderProductTax",
-      "@type": "Property",
-      "description": "A tax item on an earlier version of the Sales Order Product",
-      "name": "Original Sales Order Product Tax Id",
-      "range": "SalesOrderProductTax"
-    },
-    {
-      "@id": "taxRatePercent",
-      "@type": "Property",
-      "description": "The percentage rate that will be applied to another amount such as Product Total to calculate the tax.",
-      "name": "Tax Rate Percent",
-      "range": "DataType"
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "TaxationPropertyGroup",
+    "name": "Taxation Property Group",
+    "@type": "PropertyGroup",
+    "propertyConcepts": [
+{
+        "@id": "originalSalesOrderProductTaxId",
+        "@type": "Property",
+        "description": "A tax item on an earlier version of the Sales Order Product",
+        "name": "Original Sales Order Product Tax Id",
+        "range": "SalesOrderProductTax"
+    },{
+        "@id": "taxRatePercent",
+        "@type": "Property",
+        "description": "The percentage rate that will be applied to another amount such as Product Total to calculate the tax.",
+        "name": "Tax Rate Percent",
+        "range": "DataType"
+    },{
+        "@id": "exemptionBeginDate",
+        "@type": "Property",
+        "description": "The first date the tax exemption is in effect",
+        "name": "Exemption Begin Date",
+        "range": "DataType"
+    },{
+        "@id": "exemptionCertificateNumber",
+        "@type": "Property",
+        "description": "An Identifier for the certificate, assigned by the issuer.",
+        "name": "Exemption Certificate Number",
+        "range": "DataType"
+    },{
+        "@id": "exemptionEndDate",
+        "@type": "Property",
+        "description": "The last date the tax exemption is in effect",
+        "name": "Exemption End Date",
+        "range": "DataType"
+    },{
+        "@id": "issuerName",
+        "@type": "Property",
+        "description": "Name of the entity that issued the tax exeption",
+        "name": "Issuer",
+        "range": "DataType"
     }
-  ]
+    ]
 }

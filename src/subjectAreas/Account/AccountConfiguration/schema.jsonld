@@ -1,0 +1,269 @@
+{
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "76e36e48-45e0-4656-a8a8-9d616296b9f3",
+    "@type": "EntityGroup",
+    "name": "AccountConfiguration",
+    "version": "1.0.0",
+    "subjectArea": "a5b709eb-c627-4dad-8343-85efa0e06087",
+    "description": "Example entities include: Account Participant Role, Account Relationship Role, Contact Role",
+    "schemas": [
+{
+        "@id": "edd86c1f-a211-4eae-bdfd-42a515783052",
+        "@type": "Shape",
+        "targetClass": "AccountParticipantRole",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "7f4c2c14-9896-4424-bc7c-f50f5358d41b",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "name",
+            "@id": "97573dbf-f85e-4d2d-b3b3-685bb73c549b",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "500b44ca-2dd2-41c1-b474-b137da11ffdd",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "3dc1d5f3-0cc7-4aca-8c8c-ec2aef99c306",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "669ff3ca-882d-4bcb-8f8f-b63857026ff2",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "590bb634-54d3-49e9-b1f1-23a50785c5ca",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "description",
+            "@id": "8032fb02-44e5-4c3c-a363-39b88a8f725d",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "f5585898-d994-4777-ab2b-6a2d986fd71f",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        }
+        ]
+    },{
+        "@id": "03f975bb-828e-4696-96d6-fcb120ff8cec",
+        "@type": "Shape",
+        "targetClass": "AccountRelationshipRole",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "3e5985e6-5447-4252-90d0-65f99092a08c",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "name",
+            "@id": "3edb5a9a-5d11-4e8e-ac6c-a208ea65ed1e",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "729ebf7a-bea2-4ccc-8a4a-91189c69c69b",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "0644300a-0aee-4dfd-9656-282e82aa42e7",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "a1f140cf-0d02-4e1e-bb7b-258cd2dfc24d",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "0ab8ac6c-bc3e-4d1d-a9a9-263097d6a0e7",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "description",
+            "@id": "346b1998-dab4-4b4b-bd7d-3eb5c64a4b14",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "e794208d-b48e-4080-9bdb-d027c01803dd",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        }
+        ]
+    },{
+        "@id": "2754b2e8-417c-4ebe-af6f-eed41689f33d",
+        "@type": "Shape",
+        "targetClass": "AccountRole",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "5bd022de-2efa-45d5-baba-5a7c7990358d",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "03b0848d-cc36-49b9-acec-0046e6ee8e3f",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "ba650e8f-94e0-4636-8a4a-9283faafd95c",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "692d7f12-4d21-4818-b636-5fb1a1fd98fb",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "d001f7d8-e078-4d9d-a8e8-e379478c2343",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "fb1e2b2c-c061-4bdb-90d0-1c7c226c29f4",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        }
+        ],
+        "extendedBy": [
+"3dad5712-ad32-4e6e-a767-705124c54b62","152429ca-a556-344b-8b00-82479f4caa8d"
+        ]
+    },{
+        "@id": "b7031a6b-36ad-4020-b434-0451099272be",
+        "@type": "Shape",
+        "targetClass": "ContactAccountRelationshipRole",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "fc90dce1-6616-45a5-bdbd-606185af8490",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "7400e94f-f21f-4c1c-b838-8822076d511e",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "5db1232d-49d0-41e1-8ece-530d727ce552",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "1456aae3-b369-4464-9e1e-70ec51befe2c",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "e30b0e44-28f5-4888-a868-c11fd19b7912",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "39ef91e4-9502-4efe-a9a9-d849dca43be5",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "contactRoleId",
+            "@id": "4a78a9aa-ce95-42e2-b030-10b3d020cff2",
+            "node": "3e0c1d7d-abf4-4383-bc3c-977221762b65",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "contactAccountRelationshipId",
+            "@id": "e96c2629-d3af-4e4e-b9b9-ffc80e1ffb7b",
+            "node": "15df5cab-2acd-4e0e-8585-3271f144f3f5",
+            "maxCount": "1"
+        }
+        ]
+    },{
+        "@id": "3e0c1d7d-abf4-4383-bc3c-977221762b65",
+        "@type": "Shape",
+        "targetClass": "ContactRole",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "25335be8-a78d-4313-9d1d-5a3db94f5a9b",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "name",
+            "@id": "2f08ed56-7f29-4252-ae2e-a83c17f1a4cf",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "77092ef7-f2b0-4606-9d9d-9deb03af3d59",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "43dcefa3-2e9c-4ada-af2f-1a81c8f8ac2e",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "487e0243-89a4-4515-8686-0b0210707e74",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "1a332c68-af92-4f7f-ba7a-bc31b13ab42b",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "description",
+            "@id": "7a925769-808f-4a6a-8383-47ae01db9f12",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "265938e1-cbf0-4464-9b1b-9a2095d437f5",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        }
+        ]
+    }
+    ]
+}

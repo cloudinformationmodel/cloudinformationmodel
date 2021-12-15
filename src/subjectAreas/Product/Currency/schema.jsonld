@@ -1,0 +1,124 @@
+{
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "fdad9085-44b6-3c40-83c7-826b3bc40609",
+    "@type": "EntityGroup",
+    "name": "Currency",
+    "version": "1.0.0",
+    "subjectArea": "fe440b10-667c-39ce-bace-1e463e65282e",
+    "description": "Example Entities included: Currency",
+    "schemas": [
+{
+        "@id": "6876b428-030e-36d1-ae8a-da950d0fe686",
+        "@type": "Shape",
+        "targetClass": "ProductRelatedProduct",
+        "properties": [
+{
+            "path": "toDate",
+            "@id": "149ae4de-efef-34fb-bba0-71261fb6a9b8",
+            "datatype": "xsd:date",
+            "maxCount": "1"
+        },{
+            "path": "systemModstamp",
+            "@id": "ffb5941a-7004-378c-9c86-f70287752fdd",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "salesOrderProduct2Id",
+            "@id": "899ede24-817d-49f9-b676-d45cb8ca4e97",
+            "node": "91bc8ac5-a68a-34e3-b7c9-1097594688f7",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "salesOrderProduct1Id",
+            "@id": "0fa8d26d-917d-4616-89c9-dcf568391bc6",
+            "node": "91bc8ac5-a68a-34e3-b7c9-1097594688f7",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "productRelationshipTypeId",
+            "@id": "ab06baf4-6666-31eb-9fcc-f2ec659bc9d8",
+            "node": "788d6faa-7dd7-3a4a-b985-4b4cad8f379d",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "parentRelationshipTypeId",
+            "@id": "54c1f3e8-41a2-4585-8787-4c752007f211",
+            "node": "f77b5802-4289-4434-9454-f2fe002e7dc6",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "parentProductId",
+            "@id": "3bdf7729-f57d-330e-8f6a-79d4a5e4bf3d",
+            "node": "0a14a328-3059-3c24-9c85-ececb74ab456",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "name",
+            "@id": "2d01be9e-d53c-4111-a626-f33f8c356b5f",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "2ff9fed2-7d47-37f9-a87f-39fd4b4819f8",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "isDefaultOption",
+            "@id": "b234fede-b812-3784-9ada-fd2b9f726f50",
+            "datatype": "xsd:boolean",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "daa94207-578b-45a5-9797-c65a9ec223f2",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "5101ed4b-20ec-3a27-a53d-cec869117baa",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "fromDate",
+            "@id": "b9cae476-b898-39ae-a601-5a8bc003d5e8",
+            "datatype": "xsd:date",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "1faa99fa-653c-45e5-a161-275c29065867",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "50bd681a-cc66-3fe3-9765-867e123fbfa2",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "8e15670a-62b8-32e2-85b3-ad4b8fea9487",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "childRelationshipTypeId",
+            "@id": "a6cfdc02-6e62-4606-b1b1-ac44c1deb22e",
+            "node": "f77b5802-4289-4434-9454-f2fe002e7dc6",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "childProductId",
+            "@id": "21ddb980-53fc-365d-be04-163e75f206d3",
+            "node": "0a14a328-3059-3c24-9c85-ececb74ab456",
+            "maxCount": "1",
+            "minCount": "1"
+        }
+        ]
+    }
+    ]
+}

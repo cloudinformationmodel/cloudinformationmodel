@@ -1,267 +1,229 @@
 {
-  "@context": "http://cloudinformationmodel.org/context.jsonld",
-  "@id": "ShipmentEntityGroup",
-  "name": "Shipment",
-  "@type": "EntityGroup",
-  "version": "0.1",
-  "subjectArea": {
-    "@id": "ShipmentSubjectArea"
-  },
-  "description": "Example Entities included: Shipment, Shipment Package, Shipment Document, Shipment Product",
-  "classConcepts": [
-    {
-      "@id": "Shipment",
-      "name": "Shipment",
-      "@type": "Class",
-      "description": "A quantity of goods sent together to a place, or the act of sending them"
-    },
-    {
-      "@id": "ShipmentStatus",
-      "name": "Shipment Status",
-      "@type": "Class",
-      "description": "The stage of a shipment. Possible values could be pre-transit, in transit, delayed, delivered"
-    },
-    {
-      "@id": "ShippingMethod",
-      "name": "Shipping Method",
-      "@type": "Class",
-      "description": "A parcel of one or more items bundled together, so that they arrive at the customer's address as a single unit."
-    },
-    {
-      "@id": "ShipmentProduct",
-      "name": "Shipment Product",
-      "@type": "Class",
-      "description": "An item on a list of one or more that comprises a shipment."
-    },
-    {
-      "@id": "ShipmentDocument",
-      "name": "Shipment Document",
-      "@type": "Class",
-      "description": "A receipt, bill of lading or other document that is delivered with the shipment to explain the purchase or shipment contents."
-    },
-    {
-      "@id": "ShipmentPackage",
-      "name": "Shipment Package",
-      "@type": "Class",
-      "description": "A parcel of one or more items bundled together, so that they arrive at the customer's address as a single unit."
-    },
-    {
-      "@id": "ShipmentProductPriceAdjustmentTax",
-      "name": "Shipment Product Price Adjustment Tax",
-      "@type": "Class",
-      "description": "A tax on the price of a Sales Order Product."
-    },
-    {
-      "@id": "ShipmentProductPriceAdjustment",
-      "name": "Shipment Product Price Adjustment",
-      "@type": "Class",
-      "description": "A change to the price of an ordered product or service that is made after Fulfillment."
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "61c0a965-46c0-3188-965d-7af6a2e2be02",
+    "@type": "EntityGroup",
+    "name": "Shipment",
+    "version": "1.0.0",
+    "subjectArea": "60ba53a5-b32f-3baa-aae1-1c0c0b6680cf",
+    "description": "Example Entities included: Shipment, Shipment Package, Shipment Document, Shipment Product",
+    "classConcepts": [
+{
+        "@id": "Shipment",
+        "name": "Shipment",
+        "@type": "Class",
+        "description": "A quantity of goods sent together to a place, or the act of sending them"
+    },{
+        "@id": "ShipmentDocument",
+        "name": "Shipment Document",
+        "@type": "Class",
+        "description": "A receipt, bill of lading or other document that is delivered with the shipment to explain the purchase or shipment contents."
+    },{
+        "@id": "ShipmentPackage",
+        "name": "Shipment Package",
+        "@type": "Class",
+        "description": "A parcel of one or more items bundled together, so that they arrive at the customer's address as a single unit."
+    },{
+        "@id": "ShipmentProduct",
+        "name": "Shipment Product",
+        "@type": "Class",
+        "description": "An item on a list of one or more that comprises a shipment."
+    },{
+        "@id": "ShipmentProductPriceAdjustment",
+        "name": "Shipment Product Price Adjustment",
+        "@type": "Class",
+        "description": "A change to the price of an ordered product or service that is made after Fulfillment."
+    },{
+        "@id": "ShipmentProductPriceAdjustmentTax",
+        "name": "Shipment Product Price Adjustment Tax",
+        "@type": "Class",
+        "description": "A tax on the price of a Sales Order Product."
+    },{
+        "@id": "ShipmentStatus",
+        "name": "Shipment Status",
+        "@type": "Class",
+        "description": "The stage of a shipment. Possible values could be pre-transit, in transit, delayed, delivered"
+    },{
+        "@id": "ShippingMethod",
+        "name": "Shipping Method",
+        "@type": "Class",
+        "description": "A parcel of one or more items bundled together, so that they arrive at the customer's address as a single unit."
     }
-  ],
-  "propertyConcepts": [
-    {
-      "@id": "actualDeliveryDateTime",
-      "@type": "Property",
-      "domain": [
-        "Shipment"
-      ]
-    },
-    {
-      "@id": "shipment",
-      "@type": "Property",
-      "domain": [
-        "ShipmentPackage",
-        "ShipmentProduct",
-        "ShipmentDocument"
-      ]
-    },
-    {
-      "@id": "giftMessageText",
-      "@type": "Property",
-      "domain": [
-        "Shipment"
-      ]
-    },
-    {
-      "@id": "description",
-      "@type": "Property",
-      "domain": [
-        "ShippingMethod",
-        "ShipmentProductPriceAdjustment",
-        "ShipmentStatus"
-      ]
-    },
-    {
-      "@id": "shipmentPackage",
-      "@type": "Property",
-      "domain": [
-        "ShipmentProduct"
-      ]
-    },
-    {
-      "@id": "shipmentNumber",
-      "@type": "Property",
-      "domain": [
-        "Shipment"
-      ]
-    },
-    {
-      "@id": "specialInstructionsText",
-      "@type": "Property",
-      "domain": [
-        "Shipment"
-      ]
-    },
-    {
-      "@id": "product",
-      "@type": "Property",
-      "domain": [
-        "ShippingMethod",
-        "ShipmentProduct"
-      ]
-    },
-    {
-      "@id": "name",
-      "@type": "Property",
-      "domain": [
-        "ShippingMethod",
-        "ShipmentStatus",
-        "ShipmentProductPriceAdjustmentTax"
-      ]
-    },
-    {
-      "@id": "shipToAddress",
-      "@type": "Property",
-      "domain": [
-        "Shipment"
-      ]
-    },
-    {
-      "@id": "isGift",
-      "@type": "Property",
-      "domain": [
-        "Shipment"
-      ]
-    },
-    {
-      "@id": "salesOrder",
-      "@type": "Property",
-      "domain": [
-        "Shipment"
-      ]
-    },
-    {
-      "@id": "shipmentProduct",
-      "@type": "Property",
-      "domain": [
-        "ShipmentProductPriceAdjustment"
-      ]
-    },
-    {
-      "@id": "adjustmentAmount",
-      "@type": "Property",
-      "domain": [
-        "ShipmentProductPriceAdjustment"
-      ]
-    },
-    {
-      "@id": "adjustmentTaxAmount",
-      "@type": "Property",
-      "domain": [
-        "ShipmentProductPriceAdjustment"
-      ]
-    },
-    {
-      "@id": "shipmentStatus",
-      "@type": "Property",
-      "domain": [
-        "Shipment"
-      ]
-    },
-    {
-      "@id": "shipmentProductCount",
-      "@type": "Property",
-      "domain": [
-        "ShipmentPackage",
-        "ShipmentProduct"
-      ]
-    },
-    {
-      "@id": "salesOrderDeliveryGroup",
-      "@type": "Property",
-      "domain": [
-        "Shipment"
-      ]
-    },
-    {
-      "@id": "shipmentProductPriceAdjustment",
-      "@type": "Property",
-      "domain": [
-        "ShipmentProductPriceAdjustmentTax"
-      ]
-    },
-    {
-      "@id": "salesOrderProduct",
-      "@type": "Property",
-      "domain": [
-        "ShipmentProduct"
-      ]
-    },
-    {
-      "@id": "shipmentProductDescription",
-      "@type": "Property",
-      "domain": [
-        "ShipmentPackage"
-      ]
-    },
-    {
-      "@id": "estimatedDeliveryDateTime",
-      "@type": "Property",
-      "domain": [
-        "Shipment"
-      ]
-    },
-    {
-      "@id": "shipmentProductPriceAdjustmentAmount",
-      "@type": "Property",
-      "domain": [
-        "ShipmentProductPriceAdjustment"
-      ]
-    },
-    {
-      "@id": "shipmentDate",
-      "@type": "Property",
-      "domain": [
-        "Shipment"
-      ]
-    },
-    {
-      "@id": "scheduledDeliveryDateTime",
-      "@type": "Property",
-      "domain": [
-        "Shipment"
-      ]
-    },
-    {
-      "@id": "id",
-      "@type": "Property",
-      "domain": [
-        "ShippingMethod",
-        "ShipmentProductPriceAdjustment",
-        "ShipmentStatus",
-        "ShipmentPackage",
-        "ShipmentProduct",
-        "Shipment",
-        "ShipmentDocument",
-        "ShipmentProductPriceAdjustmentTax"
-      ]
-    },
-    {
-      "@id": "carrierTrackingNumber",
-      "@type": "Property",
-      "domain": [
-        "Shipment"
-      ]
+    ],
+    "propertyConcepts": [
+{
+        "@id": "adjustmentAmount",
+        "@type": "Property",
+        "domain": [
+"ShipmentProductPriceAdjustment"
+        ]
+    },{
+        "@id": "estimatedDeliveryDateTime",
+        "@type": "Property",
+        "domain": [
+"Shipment"
+        ]
+    },{
+        "@id": "shipToAddressId",
+        "@type": "Property",
+        "domain": [
+"Shipment"
+        ]
+    },{
+        "@id": "shipmentStatusId",
+        "@type": "Property",
+        "domain": [
+"Shipment"
+        ]
+    },{
+        "@id": "shipmentProductCount",
+        "@type": "Property",
+        "domain": [
+"ShipmentProduct","ShipmentPackage"
+        ]
+    },{
+        "@id": "specialInstructionsText",
+        "@type": "Property",
+        "domain": [
+"Shipment"
+        ]
+    },{
+        "@id": "shipmentProductDescription",
+        "@type": "Property",
+        "domain": [
+"ShipmentPackage"
+        ]
+    },{
+        "@id": "giftMessageText",
+        "@type": "Property",
+        "domain": [
+"Shipment"
+        ]
+    },{
+        "@id": "salesOrderId",
+        "@type": "Property",
+        "domain": [
+"Shipment"
+        ]
+    },{
+        "@id": "carrierTrackingNumber",
+        "@type": "Property",
+        "domain": [
+"Shipment"
+        ]
+    },{
+        "@id": "shipmentPackageId",
+        "@type": "Property",
+        "domain": [
+"ShipmentProduct"
+        ]
+    },{
+        "@id": "carrierId",
+        "@type": "Property",
+        "domain": [
+"Shipment"
+        ]
+    },{
+        "@id": "adjustmentTaxAmount",
+        "@type": "Property",
+        "domain": [
+"ShipmentProductPriceAdjustment"
+        ]
+    },{
+        "@id": "deliveryTaskId",
+        "@type": "Property",
+        "domain": [
+"Shipment"
+        ]
+    },{
+        "@id": "description",
+        "@type": "Property",
+        "domain": [
+"ShippingMethod","ShipmentProductPriceAdjustment","ShipmentStatus"
+        ]
+    },{
+        "@id": "shipmentProductPriceAdjustmentId",
+        "@type": "Property",
+        "domain": [
+"ShipmentProductPriceAdjustmentTax"
+        ]
+    },{
+        "@id": "productId",
+        "@type": "Property",
+        "domain": [
+"ShippingMethod"
+        ]
+    },{
+        "@id": "shippingMethodId",
+        "@type": "Property",
+        "domain": [
+"Shipment"
+        ]
+    },{
+        "@id": "shipmentId",
+        "@type": "Property",
+        "domain": [
+"ShipmentProduct","ShipmentDocument","ShipmentPackage"
+        ]
+    },{
+        "@id": "id",
+        "@type": "Property",
+        "domain": [
+"ShipmentProduct","ShipmentDocument","ShippingMethod","Shipment","ShipmentPackage","ShipmentProductPriceAdjustmentTax","ShipmentProductPriceAdjustment","ShipmentStatus"
+        ]
+    },{
+        "@id": "shipmentNumber",
+        "@type": "Property",
+        "domain": [
+"Shipment"
+        ]
+    },{
+        "@id": "scheduledDeliveryDateTime",
+        "@type": "Property",
+        "domain": [
+"Shipment"
+        ]
+    },{
+        "@id": "shipmentProductPriceAdjustmentAmount",
+        "@type": "Property",
+        "domain": [
+"ShipmentProductPriceAdjustment"
+        ]
+    },{
+        "@id": "name",
+        "@type": "Property",
+        "domain": [
+"ShippingMethod","ShipmentProductPriceAdjustmentTax","ShipmentStatus"
+        ]
+    },{
+        "@id": "salesOrderDeliveryGroupId",
+        "@type": "Property",
+        "domain": [
+"Shipment"
+        ]
+    },{
+        "@id": "shipmentDate",
+        "@type": "Property",
+        "domain": [
+"Shipment"
+        ]
+    },{
+        "@id": "actualDeliveryDateTime",
+        "@type": "Property",
+        "domain": [
+"Shipment"
+        ]
+    },{
+        "@id": "fulfillmentOrderId",
+        "@type": "Property",
+        "domain": [
+"Shipment"
+        ]
+    },{
+        "@id": "isGift",
+        "@type": "Property",
+        "domain": [
+"Shipment"
+        ]
     }
-  ]
+    ]
 }

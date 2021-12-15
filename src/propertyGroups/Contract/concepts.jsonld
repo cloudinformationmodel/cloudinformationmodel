@@ -1,0 +1,33 @@
+{
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "ContractPropertyGroup",
+    "name": "Contract Property Group",
+    "@type": "PropertyGroup",
+    "propertyConcepts": [
+{
+        "@id": "name",
+        "@type": "Property",
+        "description": "A user-facing ID that is may be set using auto-number",
+        "name": "Name",
+        "range": "DataType"
+    },{
+        "@id": "accountId",
+        "@type": "Property",
+        "description": "A component of a Contract that identifies a product or service that will be sold to the customer",
+        "name": "Account",
+        "range": "Account"
+    },{
+        "@id": "partnerAccountId",
+        "@type": "Property",
+        "description": "The account of an organization that partners in offering the voucher",
+        "name": "Partner Account",
+        "range": "Account"
+    },{
+        "@id": "productId",
+        "@type": "Property",
+        "description": "What is intended to be sold e.g. goods, services, bundles, made to order products.",
+        "name": "Product",
+        "range": "Product"
+    }
+    ]
+}

@@ -1,16 +1,39 @@
 {
-  "@context": "http://cloudinformationmodel.org/context.jsonld",
-  "@id": "SalesOrderPropertyGroup",
-  "name": "Sales Order Property Group",
-  "@type": "PropertyGroup",
-  "version": "0.1",
-  "propertyConcepts": [
-    {
-      "@id": "salesOrderProduct",
-      "@type": "Property",
-      "description": "A Sales Order Product that belongs to the Sales Order Product Group",
-      "name": "Sales Order Product",
-      "range": "SalesOrderProduct"
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "SalesOrderPropertyGroup",
+    "name": "Sales Order Property Group",
+    "@type": "PropertyGroup",
+    "propertyConcepts": [
+{
+        "@id": "billToContactId",
+        "@type": "Property",
+        "description": "Reference to the contact that the order will be billed to.",
+        "name": "Bill To Contact",
+        "range": "Contact"
+    },{
+        "@id": "shipToContactId",
+        "@type": "Property",
+        "description": "ID of the contact the order will be shipped to.",
+        "name": "Ship To Contact",
+        "range": "Contact"
+    },{
+        "@id": "salesOrderProductId",
+        "@type": "Property",
+        "description": "A Sales Order Product that belongs to the Sales Order Product Group",
+        "name": "Sales Order Product",
+        "range": "SalesOrderProduct"
+    },{
+        "@id": "childRelationshipTypeId",
+        "@type": "Property",
+        "description": "Relationship type for the child product",
+        "name": "Child Relationship Type",
+        "range": "SalesOrderProductRelationshipType"
+    },{
+        "@id": "parentRelationshipTypeId",
+        "@type": "Property",
+        "description": "Relationship type for the parent product",
+        "name": "Parent Relationship Type",
+        "range": "SalesOrderProductRelationshipType"
     }
-  ]
+    ]
 }

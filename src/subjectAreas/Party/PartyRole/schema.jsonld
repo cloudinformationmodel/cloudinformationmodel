@@ -1,570 +1,1043 @@
 {
-  "@context": "http://cloudinformationmodel.org/context.jsonld",
-  "@id": "PartyRoleEntityGroup",
-  "@type": "EntityGroup",
-  "version": "0.1",
-  "schemas": [
-    {
-      "@type": "Shape",
-      "@id": "PartyRole",
-      "properties": [
-        {
-          "path": "party",
-          "node": "Party",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "6680f1ae-f989-3ea5-b45d-56523b974aaf",
+    "@type": "EntityGroup",
+    "name": "PartyRole",
+    "version": "1.0.0",
+    "subjectArea": "aeaf98cc-53c1-300a-827f-57f4ce0bf764",
+    "description": "Example Entities included: Party Role, Buyer Role, Actor Role, Customer Role",
+    "schemas": [
+{
+        "@id": "13094444-d191-3ac8-aac8-7b5e4ea7f276",
+        "@type": "Shape",
+        "targetClass": "Competitor",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "8b513732-669e-4737-9d1d-5d1ea2f2695b",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "socialMediaPostRate",
+            "@id": "bd7ec576-6657-38cc-b94d-325f575cab4e",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "ptoENumber",
+            "@id": "74f4a6e6-3ed6-35b4-9610-107619237c24",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "pressMentionsRate",
+            "@id": "7894d263-b83a-3404-9718-08efcec0b258",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "partyId",
+            "@id": "47936ef7-3560-4434-bbbb-b44f6de21962",
+            "node": "665dd0a2-7dd8-3082-8350-3678847b8c52",
+            "maxCount": "1"
+        },{
+            "path": "netProfitMargin",
+            "@id": "a255f648-1698-3537-b126-f7f7e3d7527a",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "4176cd19-bcf2-41f1-88c8-d0a643518b57",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "b657ebda-891c-4e8e-9f5f-f79cf897f5be",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "9df19746-296e-3fd4-8120-50cabb83d0b8",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "2451f223-fc7a-4151-a565-2bfad57fb046",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "03e9bc4b-b108-41e1-91d1-dd7f205d63a8",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "currentRatio",
+            "@id": "f5ba7fb0-5e5d-3a97-8d68-420fcd1f3316",
+            "datatype": "xsd:decimal",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "2cbaebef-21b3-4767-8383-edccc4c46794",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "competitorWeaknesses",
+            "@id": "1b3e6fc0-a3c8-3c96-9ebd-1ba9a3b5fcab",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "competitorToDate",
+            "@id": "a5de778e-850e-3c11-a2c8-f64c81cecd70",
+            "datatype": "xsd:date",
+            "maxCount": "1"
+        },{
+            "path": "competitorTheats",
+            "@id": "e1f1424e-abcb-4c3c-bb7b-be43c4c829af",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "competitorStrengths",
+            "@id": "07e6fbfd-5c07-3f73-9fcd-a8199aa1cd35",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "competitorObjectives",
+            "@id": "469e82ba-96c1-35c5-87cc-a7d0f9ffcb91",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "competitorLeverageOpportunities",
+            "@id": "3609e7d4-f41f-3a49-bcc5-cceb3e15883d",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "competitorFromDate",
+            "@id": "85204bc0-13c2-32d6-92f6-5746acb6076b",
+            "datatype": "xsd:date",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "cashFlowGrowth",
+            "@id": "bcf4370d-f3f9-3f41-a8cd-f1c68318dec4",
+            "datatype": "xsd:decimal",
+            "maxCount": "1"
+        },{
+            "path": "assetTurnoverRatio",
+            "@id": "be8ab084-dcf4-344a-9b25-f4fe84f52f64",
+            "datatype": "xsd:decimal",
+            "maxCount": "1"
+        },{
+            "path": "assetReturnRatio",
+            "@id": "897ff34b-c4fb-3d0c-a2f6-777ffb5b2b05",
+            "datatype": "xsd:decimal",
+            "maxCount": "1"
+        },{
+            "path": "adReachRate",
+            "@id": "f6e8a609-6a11-32c5-9c65-ab6a27dcf8b0",
+            "datatype": "xsd:decimal",
+            "maxCount": "1"
+        },{
+            "path": "adKeywords",
+            "@id": "408d3abb-dc18-397e-9889-111ef8e1df1f",
+            "datatype": "xsd:string",
+            "maxCount": "1"
         }
-      ]
-    },
-    {
-      "@type": "Shape",
-      "@id": "Customer",
-      "and": [
-        {
-          "@id": "PartyRole"
-        },
-        {
-          "properties": [
-            {
-              "path": "customerSatisfactionScore",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "churnScore",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "netPromoterScore",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "last12MonthsSupportCallCount",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "last24MonthsNewRevenueAmount",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "last12MonthsNewRevenueAmount",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "totalProfitContributionAmount",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "totalContractedAmount",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "totalBookingsAmount",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "totalLifeTimeValue",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "marketingEmailResponseRate",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "originatingCustomerSource",
-              "datatype": "xsd:string",
-              "maxCount": "1"
-            },
-            {
-              "path": "prospectRating",
-              "datatype": "xsd:string",
-              "maxCount": "1"
-            },
-            {
-              "path": "customerStatus",
-              "datatype": "xsd:string",
-              "maxCount": "1",
-              "minCount": "1"
-            },
-            {
-              "path": "customerNumber",
-              "datatype": "xsd:string",
-              "maxCount": "1"
-            },
-            {
-              "path": "id",
-              "datatype": "cim:id",
-              "maxCount": "1",
-              "minCount": "1"
-            }
-          ]
+        ]
+    },{
+        "@id": "9c3da7a2-435b-395a-b031-328314727453",
+        "@type": "Shape",
+        "targetClass": "Customer",
+        "properties": [
+{
+            "path": "totalProfitContributionAmountCurrency",
+            "@id": "2138713f-2faa-3e33-91ed-a97b98baa694",
+            "node": "6524a5c3-01b2-3a34-9a07-0d5f8faf5130",
+            "maxCount": "1"
+        },{
+            "path": "totalProfitContributionAmount",
+            "@id": "1259f92e-adb1-3d43-a8a7-425b82572b02",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "totalLifeTimeValue",
+            "@id": "b1b3331c-9ba2-36b2-ab15-a2e1e758464c",
+            "datatype": "cim:amount",
+            "maxCount": "1"
+        },{
+            "path": "totalContractedAmountCurrency",
+            "@id": "37a194ac-5c79-36b0-bc04-1d09206f1c0c",
+            "node": "6524a5c3-01b2-3a34-9a07-0d5f8faf5130",
+            "maxCount": "1"
+        },{
+            "path": "totalContractedAmount",
+            "@id": "a34340d9-a309-38a5-a901-b1b870a9409d",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "totalBookingsAmountCurrency",
+            "@id": "2a3c949b-31c6-34e4-ac4c-f058427db8d2",
+            "node": "6524a5c3-01b2-3a34-9a07-0d5f8faf5130",
+            "maxCount": "1"
+        },{
+            "path": "totalBookingsAmount",
+            "@id": "6804c910-ebfc-3485-8efd-c3b6f5038d6f",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "systemModstamp",
+            "@id": "9b7ad006-eb60-39dc-ba1c-03983c21505a",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "prospectRatingId",
+            "@id": "fe652414-8377-31e4-a363-b57ec54f24fc",
+            "node": "b250d23a-3ea3-3561-979d-2af558c3579b",
+            "maxCount": "1"
+        },{
+            "path": "partyId",
+            "@id": "086b2f57-19b4-48e8-97d7-282ac1beef61",
+            "node": "665dd0a2-7dd8-3082-8350-3678847b8c52",
+            "maxCount": "1"
+        },{
+            "path": "originatingCustomerSource",
+            "@id": "f1b90fd1-9dd0-30af-9aae-f27ff3c46b70",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "netPromoterScore",
+            "@id": "44c8adbf-13d6-3edb-9a35-c4d3691ed6e0",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "marketingEmailResponseRate",
+            "@id": "e8b0a46b-5a6b-3e06-b597-84a6ab0cee65",
+            "datatype": "cim:percentage",
+            "maxCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "6ae00663-f4cf-36f3-aa7c-fd8307925938",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "last24MonthsNewRevenueAmountCurrency",
+            "@id": "dab48d26-6cfc-3bef-aeb4-203da56421c8",
+            "node": "6524a5c3-01b2-3a34-9a07-0d5f8faf5130",
+            "maxCount": "1"
+        },{
+            "path": "last24MonthsNewRevenueAmount",
+            "@id": "68ce35a3-e023-36dd-9c67-e08f4e486861",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "last12MonthsSupportCallCount",
+            "@id": "96f3d0b9-2345-3f39-8910-0b5a28a00b50",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "last12MonthsNewRevenueAmountCurrency",
+            "@id": "ac3679c5-9b8b-3cdb-8fa9-d522312ce12a",
+            "node": "6524a5c3-01b2-3a34-9a07-0d5f8faf5130",
+            "maxCount": "1"
+        },{
+            "path": "last12MonthsNewRevenueAmount",
+            "@id": "c766687c-5480-3e86-a217-b610e1e941d0",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "253b42ab-fb49-4383-b9f9-bc1e44825d40",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "766663be-8984-4bab-be3e-96459dd8c52d",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "6625176b-9c2f-4afa-9d1d-2d0a31acf90f",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "36111dbb-0e3e-379a-acef-a08c8f36974b",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "customerStatusId",
+            "@id": "83168c0f-8224-3814-a2a5-272529d7e8b1",
+            "node": "c9d6b8a3-8085-3867-91f5-ba2ff8f186ad",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "customerSatisfactionScore",
+            "@id": "edbdbdea-5b15-3168-bc7d-71fd0cf6c4b0",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "customerNumber",
+            "@id": "04ef63aa-7cb5-4faf-b4f4-662622172e38",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "2243fee8-f181-341e-985f-c1fa651e7998",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "churnScore",
+            "@id": "56359180-0200-3eb5-9915-c9685c7d4295",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "CustomerStatusHistories",
+            "node": "f38b14e3-ac6a-3717-9030-017758780119",
+            "minCount": "1"
         }
-      ]
-    },
-    {
-      "@type": "Shape",
-      "@id": "Seller",
-      "and": [
-        {
-          "@id": "PartyRole"
-        },
-        {
-          "properties": [
-            {
-              "path": "newCustomerAcquisitionCount",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "estimatedPartnerGrossMargin",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "opportunityWinRate",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "opportunityInvolvementCount",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "demonstrationsGivenCount",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "averageConvertedLeadAmount",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "leadGenerationCount",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "creditRating",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "majorPostSaleSupportNeeded",
-              "datatype": "xsd:boolean",
-              "maxCount": "1"
-            },
-            {
-              "path": "productReturnRate",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "inventoryValueAmount",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "marketingDevelopmentAmount",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "jointBusinessPlanExist",
-              "datatype": "xsd:boolean",
-              "maxCount": "1"
-            },
-            {
-              "path": "systemLoginCount",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "documentationDownloadCount",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "eventParticipationCount",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "trainingCertificationCount",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "trainingParticipationCount",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "trialParticipationCount",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "communityParticipationCount",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "successStoryCount",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "customerSatisfactionScore",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "satisfactionScore",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "salesAmount",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "sellerType",
-              "datatype": "xsd:string",
-              "maxCount": "1"
-            },
-            {
-              "path": "activeToDate",
-              "datatype": "xsd:date",
-              "maxCount": "1"
-            },
-            {
-              "path": "activeFromDate",
-              "datatype": "xsd:date",
-              "maxCount": "1",
-              "minCount": "1"
-            },
-            {
-              "path": "id",
-              "datatype": "cim:id",
-              "maxCount": "1",
-              "minCount": "1"
-            }
-          ]
+        ]
+    },{
+        "@id": "c9d6b8a3-8085-3867-91f5-ba2ff8f186ad",
+        "@type": "Shape",
+        "targetClass": "CustomerStatus",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "e60fcdba-c376-38c3-a247-61449cf43f8c",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "name",
+            "@id": "c37f5cc5-4839-300e-8847-772f7595c269",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "0947af34-fe33-3312-8115-448df5627bec",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "d059effe-7f84-4aaa-94d4-2f176a05346d",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "3621e62a-1234-3d71-a516-233f68fa8423",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "35d611a1-4af5-4d5d-ae2e-06ceb88c910e",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "704d20f3-5dcd-34ad-9ef6-d460eaa0c5c8",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "8eac80bd-7514-39cd-bfc3-c129241268fb",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
         }
-      ]
-    },
-    {
-      "@type": "Shape",
-      "@id": "Supplier",
-      "and": [
-        {
-          "@id": "PartyRole"
-        },
-        {
-          "properties": [
-            {
-              "path": "competitiveMarketingRank",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "competitiveWarrantyRank",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "competitiveCostAvoidanceRank",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "competitiveProductPriceRank",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "satisfactionEthicsRank",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "satisfactionTechnicalSupportRank",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "satisfactionCustomerServiceRank",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "contractInvoiceAccuracyRate",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "contractSLAIssueRate",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "contractBudgetCostRate",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "contractProductReturnRate",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "contractProductQualityRate",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "contractDeliveryCorrectnessRate",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "contractOnTimeDeliveryRate",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "contractSourcingCycleDays",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "competitiveWeightScore",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "competitiveWeightPercent",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "satisfactionWeightScore",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "satisfactionWeightPercent",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "contractWeightScore",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "contractWeightPercent",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "isCarrier",
-              "datatype": "xsd:boolean",
-              "maxCount": "1"
-            },
-            {
-              "path": "supplierScore",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "supplierSpend",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "supplierType",
-              "datatype": "xsd:string",
-              "maxCount": "1"
-            },
-            {
-              "path": "activeToDate",
-              "datatype": "xsd:date",
-              "maxCount": "1"
-            },
-            {
-              "path": "activeFromDate",
-              "datatype": "xsd:date",
-              "maxCount": "1",
-              "minCount": "1"
-            },
-            {
-              "path": "id",
-              "datatype": "cim:id",
-              "maxCount": "1",
-              "minCount": "1"
-            }
-          ]
+        ]
+    },{
+        "@id": "f38b14e3-ac6a-3717-9030-017758780119",
+        "@type": "Shape",
+        "targetClass": "CustomerStatusHistory",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "4c26c8d1-26df-3fce-934c-a44aa3ddea1a",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "startDateTime",
+            "@id": "faffe095-154d-3944-a4b8-dd0ca0ad665c",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "d37fa305-9a69-3894-b21d-4c8f621faf19",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "e7fcc159-621f-4545-8080-d78b01ac6e4e",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "c9bea7d0-0b15-337a-ab7b-274cb16907a4",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "dc3b1f9b-935a-4353-adad-af8c25f18b92",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "df38280e-5bb6-317c-afd6-71ddef502a79",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "endDateTIme",
+            "@id": "86c4d5b7-0559-30e2-87a2-6aaa5a728d61",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "customerStatusId",
+            "@id": "25eab04c-3dcf-45c5-b272-43ae4b04b9df",
+            "node": "c9d6b8a3-8085-3867-91f5-ba2ff8f186ad",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "customerId",
+            "@id": "d2e3b516-1496-4d1d-b434-de5e405aa275",
+            "node": "9c3da7a2-435b-395a-b031-328314727453",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "2be3d872-f979-3323-adf5-519c85161121",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
         }
-      ]
-    },
-    {
-      "@type": "Shape",
-      "@id": "Competitor",
-      "and": [
-        {
-          "@id": "PartyRole"
-        },
-        {
-          "properties": [
-            {
-              "path": "assetTurnoverRatio",
-              "datatype": "xsd:decimal",
-              "maxCount": "1"
-            },
-            {
-              "path": "assetReturnRatio",
-              "datatype": "xsd:decimal",
-              "maxCount": "1"
-            },
-            {
-              "path": "currentRatio",
-              "datatype": "xsd:decimal",
-              "maxCount": "1"
-            },
-            {
-              "path": "cashFlowGrowth",
-              "datatype": "xsd:decimal",
-              "maxCount": "1"
-            },
-            {
-              "path": "netProfitMargin",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "ptoENumber",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "adKeywords",
-              "datatype": "xsd:string",
-              "maxCount": "1"
-            },
-            {
-              "path": "pressMentionsRate",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "socialMediaPostRate",
-              "datatype": "xsd:integer",
-              "maxCount": "1"
-            },
-            {
-              "path": "adReachRate",
-              "datatype": "xsd:decimal",
-              "maxCount": "1"
-            },
-            {
-              "path": "competitorThreats",
-              "datatype": "xsd:string",
-              "maxCount": "1"
-            },
-            {
-              "path": "competitorLeverageOpportunities",
-              "datatype": "xsd:string",
-              "maxCount": "1"
-            },
-            {
-              "path": "competitorWeaknesses",
-              "datatype": "xsd:string",
-              "maxCount": "1"
-            },
-            {
-              "path": "competitorStrengths",
-              "datatype": "xsd:string",
-              "maxCount": "1"
-            },
-            {
-              "path": "competitorObjectives",
-              "datatype": "xsd:string",
-              "maxCount": "1"
-            },
-            {
-              "path": "competitorToDate",
-              "datatype": "xsd:date",
-              "maxCount": "1"
-            },
-            {
-              "path": "competitorFromDate",
-              "datatype": "xsd:date",
-              "maxCount": "1",
-              "minCount": "1"
-            },
-            {
-              "path": "id",
-              "datatype": "cim:id",
-              "maxCount": "1",
-              "minCount": "1"
-            }
-          ]
+        ]
+    },{
+        "@id": "26d02fe7-2f72-3838-8f9b-ff8471ce37ce",
+        "@type": "Shape",
+        "targetClass": "CustomerType",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "6fe4c5f0-dc32-3185-ac6b-d60be8fef244",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "e78d77b2-a59b-3eb7-a424-4363220b81e8",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "5744a8f8-db99-4a3a-9313-995234e9ebff",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "48c9ea96-a0e4-3f17-a0b4-08dbc3a68796",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "91c5e6bc-590a-4c8c-9a5a-b3a62c261be0",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "d3bed71a-42aa-32ab-b305-f2f856fc83ed",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "customerTypeName",
+            "@id": "59a388b6-95e6-36a7-ab35-f2d3c0a2a139",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "327b79f7-abbd-319c-b619-76440fc66480",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
         }
-      ]
-    },
-    {
-      "@type": "Shape",
-      "@id": "CustomerStatusHistory",
-      "properties": [
-        {
-          "path": "endDateTIme",
-          "datatype": "xsd:time",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "startDateTime",
-          "datatype": "xsd:time",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "partyRoleStatus",
-          "datatype": "xsd:string",
-          "maxCount": "1",
-          "minCount": "1"
-        },
-        {
-          "path": "partyRole",
-          "node": "PartyRole",
-          "minCount": "1"
-        },
-        {
-          "path": "id",
-          "datatype": "cim:id",
-          "maxCount": "1",
-          "minCount": "1"
+        ]
+    },{
+        "@id": "247da134-f1e6-3a7b-95d2-5c6ba3d373a2",
+        "@type": "Shape",
+        "targetClass": "Seller",
+        "properties": [
+{
+            "path": "trialParticipationCount",
+            "@id": "5ad571da-398f-3428-ae5f-a5ae81ed210b",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "trainingParticipationCount",
+            "@id": "dc0b198d-59c6-3a28-a816-7899334f522e",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "trainingCertificactionCount",
+            "@id": "24c7b88a-ddbd-4999-b474-ca9a9bb3d950",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "systemModstamp",
+            "@id": "100529ff-0ba4-3289-9f3c-6c5da3470e5e",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "systemLoginCount",
+            "@id": "2c41bd01-5e22-315c-8e2b-8c6bf46ad9f1",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "successStoryCount",
+            "@id": "4efc8a37-a146-394d-ab0d-45b030beb0eb",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "sellerTypeId",
+            "@id": "c99f9506-7020-3b9a-8a75-27f66819924b",
+            "node": "0034174d-0ca3-37f0-af3e-dea5f167c8d1",
+            "maxCount": "1"
+        },{
+            "path": "sellerTierId",
+            "@id": "a152951a-11fb-4d3d-9bdb-db087f327873",
+            "node": "118c5da0-6ca0-4707-aaea-8fa850a8c594",
+            "maxCount": "1"
+        },{
+            "path": "satisfactionScore",
+            "@id": "d638bc8f-dbe1-3b79-a112-79fb14697c1d",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "salesAmountCurrency",
+            "@id": "4a4ef740-7629-3cd8-9a6e-ff778dab375c",
+            "node": "6524a5c3-01b2-3a34-9a07-0d5f8faf5130",
+            "maxCount": "1"
+        },{
+            "path": "salesAmount",
+            "@id": "e5a60ddc-1b93-39b6-8e3f-ba990e3a6381",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "productReturnRate",
+            "@id": "50ae6ad9-2783-3ce6-80bb-7c4118748770",
+            "datatype": "cim:percentage",
+            "maxCount": "1"
+        },{
+            "path": "partyId",
+            "@id": "c474730a-7147-4d3d-a6a6-cebb2dfd271f",
+            "node": "665dd0a2-7dd8-3082-8350-3678847b8c52",
+            "maxCount": "1"
+        },{
+            "path": "opportunityWinRate",
+            "@id": "840351f7-f6ec-3bfc-b5e6-3e302a72a726",
+            "datatype": "cim:percentage",
+            "maxCount": "1"
+        },{
+            "path": "opportunityInvolvementCount",
+            "@id": "bcb856d4-3871-3b96-a928-3de3ce887be0",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "newCustomerAcquisitionCount",
+            "@id": "c8ca321c-4181-3a2a-b8da-2bbb4df675e0",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "marketingDevelopmentAmountCurrency",
+            "@id": "b6dec6f9-dae1-35e4-887d-026ae424b294",
+            "node": "6524a5c3-01b2-3a34-9a07-0d5f8faf5130",
+            "maxCount": "1"
+        },{
+            "path": "marketingDevelopmentAmount",
+            "@id": "c724957b-ca8a-3f6f-b4fa-59bc53c5c1c1",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "majorPostSaleSupportNeeded",
+            "@id": "76d02a3f-ab99-3de5-8c02-2e5629eef8cc",
+            "datatype": "xsd:boolean",
+            "maxCount": "1"
+        },{
+            "path": "leadGenerationCount",
+            "@id": "5aae7cc6-6f43-3c58-ba56-3710b837f787",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "985119cc-71fa-319e-a58c-7037e7a7ad1d",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "jointBusinessPlanExist",
+            "@id": "c1f888a6-e57a-3433-8bb0-099859a8dfbe",
+            "datatype": "xsd:boolean",
+            "maxCount": "1"
+        },{
+            "path": "inventoryValueAmountCurrency",
+            "@id": "4e54cc51-4e7e-3e16-9c3e-174fc5a7147f",
+            "node": "6524a5c3-01b2-3a34-9a07-0d5f8faf5130",
+            "maxCount": "1"
+        },{
+            "path": "inventoryValueAmount",
+            "@id": "d27c8254-8f7e-3f28-bb9a-d491363668db",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "c5064013-1cd2-4c5c-b4b4-22449d2b9a49",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "9c6b365c-3049-3882-b953-45dcb2c03ec1",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "e7c831e2-c485-4c9c-9c9c-cfa0ca492721",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "4f2c96aa-16fb-3f6f-aabf-48a99f76f975",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "eventParticipationCount",
+            "@id": "d30fb9a0-5f1a-31a7-9b33-393f76bbec1c",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "estimatedPartnerGrossMargin",
+            "@id": "9c8e1b2a-a5c3-35bd-adef-8917a1679acd",
+            "datatype": "cim:percentage",
+            "maxCount": "1"
+        },{
+            "path": "documentationDownloadCount",
+            "@id": "2aa2a222-bff9-3ad5-8d7d-e8ddb707db2a",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "demonstationsGivenCount",
+            "@id": "f2cbccdf-f32c-4d3d-afaf-36ce94de70ab",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "customerSatisfactionScore",
+            "@id": "adb22d11-4ec6-338c-b705-aef68dd0bfbe",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "creditRating",
+            "@id": "d59e0834-d04e-3e1b-9d01-e40c0610219a",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "38bc1b35-6f56-317e-a6ef-58246ea7c49d",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "communityParticipationCount",
+            "@id": "0eb0d180-ff7c-3cc1-baf0-7945fda721fd",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "averageConvertedLeadAmountCurrency",
+            "@id": "e7c9798a-d88e-3bbc-8268-bf499c630aa0",
+            "node": "6524a5c3-01b2-3a34-9a07-0d5f8faf5130",
+            "maxCount": "1"
+        },{
+            "path": "averageConvertedLeadAmount",
+            "@id": "555071e2-8c08-3097-bb25-89fe531c6055",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "activeToDate",
+            "@id": "a8cdec23-fe8f-36ba-91f1-db5cc6638d7a",
+            "datatype": "xsd:date",
+            "maxCount": "1"
+        },{
+            "path": "activeFromDate",
+            "@id": "72790078-cc4e-3932-9bd7-ef18d8aa9784",
+            "datatype": "xsd:date",
+            "maxCount": "1",
+            "minCount": "1"
         }
-      ]
+        ]
+    },{
+        "@id": "118c5da0-6ca0-4707-aaea-8fa850a8c594",
+        "@type": "Shape",
+        "targetClass": "SellerTier",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "e29007a5-6c34-4d2d-bc7c-997c59b35efc",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "name",
+            "@id": "dff749a6-493d-4484-a666-9156cc383778",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "3b69d419-9fa9-4e9e-b6f6-4c93994b5c80",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "7f9e2db2-a9e8-4e7e-8848-1c1c4df0e14e",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "id",
+            "@id": "3330c4f9-a033-42c2-b9f9-4f94a06a9150",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "caa2a6ef-b3ee-4f1f-b1b1-7ecb253a85a1",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "6c7d0f75-c3e7-4151-9595-bcbf64ce351e",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "40f99ba9-5612-4141-b1f1-78e14abdfed6",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        }
+        ]
+    },{
+        "@id": "0034174d-0ca3-37f0-af3e-dea5f167c8d1",
+        "@type": "Shape",
+        "targetClass": "SellerType",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "bb1497b6-2af1-355a-9e3b-fb5856552608",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "sellerTypeName",
+            "@id": "e786aace-169e-31f8-ae53-65c0483c5bb1",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "e0431a50-1cd1-3f58-8c72-0e38ba52a46f",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "514f0ca9-271d-43c3-a161-2add28fd2f63",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "c15ba3a4-9b88-37ff-b5c1-452cd1d117d9",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "590a30bf-b30d-4575-9696-21d8b096d066",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "24adf451-32cb-3298-ab86-22129e48684d",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "4279fbe9-7d62-309a-9176-4fbe149e4bd3",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        }
+        ]
+    },{
+        "@id": "b1ab0944-e7f5-399a-a951-5661f6196d28",
+        "@type": "Shape",
+        "targetClass": "Supplier",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "45a40aa6-224f-326c-82df-ebb7e6b60450",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "supplierType",
+            "@id": "ee71dfdc-3269-36f4-b000-c9b8d3efa385",
+            "node": "1cef3132-33c4-3939-bb68-a65e2a84acba",
+            "maxCount": "1"
+        },{
+            "path": "supplierSpend",
+            "@id": "ab4259f8-b4f3-3cf8-af4f-c5b47e820a6b",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "supplierScore",
+            "@id": "502bf506-7e75-3d6e-a217-0fc9dea3f32f",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "satisfactionWeightScore",
+            "@id": "535e347a-6422-30d8-bb9b-d78b37878555",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "satisfactionWeightPercent",
+            "@id": "faa05727-0d4e-35e7-a40a-be1cfdc65367",
+            "datatype": "cim:percentage",
+            "maxCount": "1"
+        },{
+            "path": "satisfactionTechnicalSupportRank",
+            "@id": "aee0b414-e563-317f-b188-0d66702429c1",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "satisfactionEthicsRank",
+            "@id": "f640ee62-6905-39a7-99f8-deb2e8f40836",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "satisfactionCustomerServiceRank",
+            "@id": "9070864e-128a-3b8c-a8cd-b755cb55480b",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "partyId",
+            "@id": "dc292355-29e0-4ada-82c2-427dc0794dbf",
+            "node": "665dd0a2-7dd8-3082-8350-3678847b8c52",
+            "maxCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "fb982898-cc65-3d94-950e-f102f0d7d238",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "isCarrier",
+            "@id": "769f8b64-94ce-3197-9915-df6eba5d6424",
+            "datatype": "xsd:boolean",
+            "maxCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "8d7571db-1e57-4818-a121-932ea40510d7",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "e711f256-2792-3f94-a762-9b340f6c6a44",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "8e1bf539-20ef-4f0f-b1b1-316c9f048828",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "4fdffd35-7e83-379f-b77f-3a3b807dccfc",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "65db64e9-d3b3-3d4e-a2e8-9fb56e8f72e9",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "contractWeightScore",
+            "@id": "85f500df-8962-379f-8f8b-bd77dda91cf0",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "contractWeightPercent",
+            "@id": "c709ff5b-e030-3b50-ae9e-67b1bb591481",
+            "datatype": "cim:percentage",
+            "maxCount": "1"
+        },{
+            "path": "contractSourcingCycleDays",
+            "@id": "2075d494-9247-3cc1-8b23-903a403a4ea4",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "contractSLAIssueRate",
+            "@id": "bc5a17a0-2f63-3165-9434-a061b9465ceb",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "contractProductReturnRate",
+            "@id": "6eae0b93-b9cc-30ba-9927-f649eb6a8248",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "contractProductQualityRate",
+            "@id": "c07a8743-7d01-3871-8fd4-208eb32fb689",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "contractOnTimeDeliveryRate",
+            "@id": "ba52e906-6579-3950-b39c-922f6a88e7ca",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "contractInvoiceAccuracyRate",
+            "@id": "43c7976e-a483-3770-88de-113a3ddc958b",
+            "datatype": "cim:percentage",
+            "maxCount": "1"
+        },{
+            "path": "contractDeliveryCorrectnessRate",
+            "@id": "3394b876-5eb7-3d9d-89be-9871776e0578",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "contractBudgetCostRate",
+            "@id": "bac45bb7-0d5e-3aba-9dc3-0bf1e84e12f7",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "competitiveWeightScore",
+            "@id": "0828b9a0-8d25-3b5f-b789-e328b35c5f24",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "competitiveWeightPercent",
+            "@id": "4302e819-0a90-3f65-8404-e0366b1cca55",
+            "datatype": "cim:percentage",
+            "maxCount": "1"
+        },{
+            "path": "competitiveWarrantyRank",
+            "@id": "55448a6c-d300-3b3d-9bef-b55eb8c07db8",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "competitiveProductPriceRank",
+            "@id": "6dea2150-5a43-399e-82cd-1580880539ea",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "competitiveMarketingRank",
+            "@id": "53925656-e333-3880-b78c-b9db082f1ecb",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "competitiveCostAvoidanceRank",
+            "@id": "a9672ac8-869d-3839-8271-38189ea40365",
+            "datatype": "xsd:integer",
+            "maxCount": "1"
+        },{
+            "path": "activeToDate",
+            "@id": "c9e4690d-a76c-34f5-9f94-6a5dfbce60ef",
+            "datatype": "xsd:date",
+            "maxCount": "1"
+        },{
+            "path": "activeFromDate",
+            "@id": "d46dd030-cc09-37bf-90ea-3b3eaacc8887",
+            "datatype": "xsd:date",
+            "maxCount": "1",
+            "minCount": "1"
+        }
+        ]
+    },{
+        "@id": "1cef3132-33c4-3939-bb68-a65e2a84acba",
+        "@type": "Shape",
+        "targetClass": "SupplierType",
+        "properties": [
+{
+            "path": "systemModstamp",
+            "@id": "7e33f4f1-97a8-3b97-949e-ce1a626f0aac",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "supplierTypeName",
+            "@id": "409a7760-6533-31d1-911a-68706402a138",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "lastModifiedDate",
+            "@id": "4d12bd01-b66a-39ff-8297-322f000be0bb",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "implementorType",
+            "@id": "d8d05060-2095-4000-ad6d-6477e796322b",
+            "datatype": "xsd:string",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "id",
+            "@id": "df3defaa-7e50-3f6f-bbba-71def0f4f702",
+            "datatype": "cim:id",
+            "maxCount": "1",
+            "minCount": "1"
+        },{
+            "path": "externalSourceId",
+            "@id": "58f85145-4650-4989-9d9d-03e7df421418",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "externalRecordId",
+            "@id": "0e233d67-6e5a-31f9-9e08-ca106be21e91",
+            "datatype": "xsd:string",
+            "maxCount": "1"
+        },{
+            "path": "createdDate",
+            "@id": "45fbdf5b-5db0-31c4-b13f-b68e02ed6a56",
+            "datatype": "xsd:time",
+            "maxCount": "1",
+            "minCount": "1"
+        }
+        ]
     }
-  ]
+    ]
 }

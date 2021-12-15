@@ -1,0 +1,99 @@
+{
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "PaymentMethodPropertyGroup",
+    "name": "Payment Method Property Group",
+    "@type": "PropertyGroup",
+    "propertyConcepts": [
+{
+        "@id": "couponDefinitionId",
+        "@type": "Property",
+        "description": "A model from which instances of coupons can be printed or sent electronically.",
+        "name": "Coupon Definition",
+        "range": "CouponDefinition"
+    },{
+        "@id": "couponCount",
+        "@type": "Property",
+        "description": "The number of coupons created from this definition",
+        "name": "Coupon Count",
+        "range": "DataType"
+    },{
+        "@id": "expirationDate",
+        "@type": "Property",
+        "description": "When coupons derived from this defintion will expire",
+        "name": "Expiration Date",
+        "range": "DataType"
+    },{
+        "@id": "hasCaseSensitiveCode",
+        "@type": "Property",
+        "description": "Indicates the Scan Code for the coupon has a value that is case specific e.g. 10OFF and 10off are two different codes.",
+        "name": "Has Case Sensitive Code",
+        "range": "DataType"
+    },{
+        "@id": "isCustomerSpecific",
+        "@type": "Property",
+        "description": "True if coupons derived from this campaign may only be used by the customer to whom they were given.",
+        "name": "Is Customer Specific",
+        "range": "DataType"
+    },{
+        "@id": "isProductSpecific",
+        "@type": "Property",
+        "description": "True if coupons derived from this campaign can only be used for specific product(s)",
+        "name": "Is Product Specific",
+        "range": "DataType"
+    },{
+        "@id": "maxRedmPerCodeCount",
+        "@type": "Property",
+        "description": "How many times can the same code be used before the coupon is no longer valid e.g. can only use code 1 (per week)",
+        "name": "Maximum Redemptions Per Code Count",
+        "range": "DataType"
+    },{
+        "@id": "maxRedmPerCustCount",
+        "@type": "Property",
+        "description": "The maximum number of coupon any individual customer is allowed to redeem.",
+        "name": "Maximum Redemptions Per Customer Count",
+        "range": "DataType"
+    },{
+        "@id": "maxRedmPerTimePeriodCount",
+        "@type": "Property",
+        "description": "The maximum number of coupon redemptions per customer, per time period",
+        "name": "Maximum Redemptions Per Time Period Count",
+        "range": "DataType"
+    },{
+        "@id": "partyId",
+        "@type": "Property",
+        "description": "What is intended to be sold e.g. goods, services, bundles, made to order products.",
+        "name": "Party",
+        "range": "Party"
+    },{
+        "@id": "productId",
+        "@type": "Property",
+        "description": "What is intended to be sold e.g. goods, services, bundles, made to order products.",
+        "name": "Product",
+        "range": "Product"
+    },{
+        "@id": "redmTimePeriodCount",
+        "@type": "Property",
+        "description": "The time period that recipients have to use the coupon",
+        "name": "Redemption Time Period Count",
+        "range": "DataType"
+    },{
+        "@id": "validFromDateTime",
+        "@type": "Property",
+        "description": "The first date that coupons derived from this definition are valid",
+        "name": "Valid From Datetime",
+        "range": "DataType"
+    },{
+        "@id": "validToDateTime",
+        "@type": "Property",
+        "description": "The last date that coupons derived from this definition are valid",
+        "name": "Valid To Datetime",
+        "range": "DataType"
+    },{
+        "@id": "name",
+        "@type": "Property",
+        "description": "Types of coupons include Single Code for many users; multiple codes on one coupon for one user; multiple codes on one coupon for multiple users.",
+        "name": "Name",
+        "range": "DataType"
+    }
+    ]
+}

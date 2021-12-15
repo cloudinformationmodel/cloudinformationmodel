@@ -1,16 +1,15 @@
 {
-  "@context": "http://cloudinformationmodel.org/context.jsonld",
-  "@id": "BusinessInteractionPropertyGroup",
-  "name": "Business Interaction Property Group",
-  "@type": "PropertyGroup",
-  "version": "0.1",
-  "propertyConcepts": [
-    {
-      "@id": "influencerRating",
-      "@type": "Property",
-      "description": "No matter how we do business with this person, how influential is the person",
-      "name": "Influencer Rating",
-      "range": "DataType"
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "BusinessInteractionPropertyGroup",
+    "name": "Business Interaction Property Group",
+    "@type": "PropertyGroup",
+    "propertyConcepts": [
+{
+        "@id": "influencerRating",
+        "@type": "Property",
+        "description": "No matter how we do business with this person, how influencial is the person",
+        "name": "Influencer Rating",
+        "range": "DataType"
     }
-  ]
+    ]
 }

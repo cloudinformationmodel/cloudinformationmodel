@@ -1,107 +1,93 @@
 {
-  "@context": "http://cloudinformationmodel.org/context.jsonld",
-  "@id": "ContactConsentPropertyGroup",
-  "name": "Contact Consent Property Group",
-  "@type": "PropertyGroup",
-  "version": "0.1",
-  "propertyConcepts": [
-    {
-      "@id": "residenceCountryName",
-      "@type": "Property",
-      "description": "Country the person mainly reside in and important to decide if subject to e.g. GDPR",
-      "name": "Residence Country Name",
-      "range": "DataType"
-    },
-    {
-      "@id": "residenceCaptureMethod",
-      "@type": "Property",
-      "description": "How was residence country captured i.e. user provided or derived based on IP address",
-      "name": "Residence Capture Method",
-      "range": "DataType"
-    },
-    {
-      "@id": "doNotTrackUpdateDate",
-      "@type": "Property",
-      "description": "Date when do not track browsing was last updated",
-      "name": "Do Not Track Update Date",
-      "range": "DataType"
-    },
-    {
-      "@id": "doNotTrackLocationUpdateDate",
-      "@type": "Property",
-      "description": "Date when do not track location was last updated",
-      "name": "Do Not Track Location Update Date",
-      "range": "DataType"
-    },
-    {
-      "@id": "doNotMarketFromUpdateDate",
-      "@type": "Property",
-      "description": "Date when do not market was last updated for this person",
-      "name": "Do Not Market Update Date",
-      "range": "DataType"
-    },
-    {
-      "@id": "doNotProfileFromUpdateDate",
-      "@type": "Property",
-      "description": "Date when request to not profile was last updated for this person",
-      "name": "Do Not Profile Update Date",
-      "range": "DataType"
-    },
-    {
-      "@id": "doNotProcessFromUpdateDate",
-      "@type": "Property",
-      "description": "Date when do not process was last updated",
-      "name": "Do Not Process Update Date",
-      "range": "DataType"
-    },
-    {
-      "@id": "doNotProcessReason",
-      "@type": "Property",
-      "description": "Why no processing allowed e.g Accuracy Questioned, Processing Unlawful, Legal Prohibit Delete, Data Subject Objection",
-      "name": "Do Not Process Reason",
-      "range": "DataType"
-    },
-    {
-      "@id": "shouldForget",
-      "@type": "Property",
-      "description": "Permanently deletes records and personal data related to this individual.",
-      "name": "Forget This Individual",
-      "range": "DataType"
-    },
-    {
-      "@id": "doForgetMeFromUpdateDate",
-      "@type": "Property",
-      "description": "Date person last requested to be forgotten",
-      "name": "Do Forget Me Update Date",
-      "range": "DataType"
-    },
-    {
-      "@id": "sendIndividualData",
-      "@type": "Property",
-      "description": "Packages personal data so that individuals can take ownership of it.",
-      "name": "Export Individual's Data",
-      "range": "DataType"
-    },
-    {
-      "@id": "doExtractMyDataUpdateDate",
-      "@type": "Property",
-      "description": "Date person requested data to be extracted",
-      "name": "Do Extract My Data Update Date",
-      "range": "DataType"
-    },
-    {
-      "@id": "birthDate",
-      "@type": "Property",
-      "description": "Date person was born in form of year, month, date",
-      "name": "Birth Date",
-      "range": "DataType"
-    },
-    {
-      "@id": "overAgeNumber",
-      "@type": "Property",
-      "description": "Is person over a certain age e.g. 13 or 16, used for compliance reasons",
-      "name": "Over Age",
-      "range": "DataType"
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "ContactConsentPropertyGroup",
+    "name": "Contact Consent Property Group",
+    "@type": "PropertyGroup",
+    "propertyConcepts": [
+{
+        "@id": "birthDate",
+        "@type": "Property",
+        "description": "Date person was born in form of year, month, date",
+        "name": "Birth Date",
+        "range": "DataType"
+    },{
+        "@id": "doExtractMyDataUpdateDate",
+        "@type": "Property",
+        "description": "Date person requested data to be extracted",
+        "name": "Do Extract My Data Update Date",
+        "range": "DataType"
+    },{
+        "@id": "doForgetMeFromUpdateDate",
+        "@type": "Property",
+        "description": "Date person last requested to be forgotten",
+        "name": "Do Forget Me Update Date",
+        "range": "DataType"
+    },{
+        "@id": "doNotMarketFromUpdateDate",
+        "@type": "Property",
+        "description": "Date when do not market was last updated for this person",
+        "name": "Do Not Market Update Date",
+        "range": "DataType"
+    },{
+        "@id": "doNotProcessFromUpdateDate",
+        "@type": "Property",
+        "description": "Date when do not process was last updated",
+        "name": "Do Not Process Update Date",
+        "range": "DataType"
+    },{
+        "@id": "doNotProcessReasonId",
+        "@type": "Property",
+        "description": "Why no processing allowed e.g Accuracy Questioned, Processing Unlawful, Legal Prohibit Delete, Data Subject Objection",
+        "name": "Do Not Process Reason",
+        "range": "DoNotProcessReason"
+    },{
+        "@id": "doNotProfileFromUpdateDate",
+        "@type": "Property",
+        "description": "Date when request to not profile was last updated for this person",
+        "name": "Do Not Profile Update Date",
+        "range": "DataType"
+    },{
+        "@id": "doNotTrackLocationUpdateDate",
+        "@type": "Property",
+        "description": "Date when do not track location was last updated",
+        "name": "Do Not Track Location Update Date",
+        "range": "DataType"
+    },{
+        "@id": "doNotTrackUpdateDate",
+        "@type": "Property",
+        "description": "Date when do not track browsing was last updated",
+        "name": "Do Not Track Update Date",
+        "range": "DataType"
+    },{
+        "@id": "overAgeNumber",
+        "@type": "Property",
+        "description": "Is person over a certain age e.g. 13 or 16, used for compliance reasons",
+        "name": "Over Age",
+        "range": "DataType"
+    },{
+        "@id": "residenceCaptureMethodId",
+        "@type": "Property",
+        "description": "How was residence country captured i.e. user provided or derived based on IP address",
+        "name": "Residence Capture Method",
+        "range": "ResidenceCaptureMethod"
+    },{
+        "@id": "residenceCountryName",
+        "@type": "Property",
+        "description": "Country the person mainly reside in and important to decide if subject to e.g. GDPR",
+        "name": "Residence Country Name",
+        "range": "DataType"
+    },{
+        "@id": "sendIndividualData",
+        "@type": "Property",
+        "description": "Packages personal data so that individuals can take ownership of it.",
+        "name": "Export Individual's Data",
+        "range": "DataType"
+    },{
+        "@id": "shouldForget",
+        "@type": "Property",
+        "description": "Permanently deletes records and personal data related to this individual.",
+        "name": "Forget This Individual",
+        "range": "DataType"
     }
-  ]
+    ]
 }

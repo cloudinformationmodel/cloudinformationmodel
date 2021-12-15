@@ -1,0 +1,675 @@
+{
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "058125c2-2412-3e5e-be1c-74c0fb72d50c",
+    "@type": "EntityGroup",
+    "name": "Account",
+    "version": "1.0.0",
+    "subjectArea": "a5b709eb-c627-4dad-8343-85efa0e06087",
+    "description": "Example Entities included: Account, Account Contact, Bill Frequency",
+    "classConcepts": [
+{
+        "@id": "Account",
+        "name": "Account",
+        "@type": "Class",
+        "description": "How the party want to interact with your enterprise e.g. have multiple billing or service accounts, can be hierarchical in nature and normally one particular business unit within the company owns the account."
+    },{
+        "@id": "AccountBrand",
+        "name": "Account Brand",
+        "@type": "Class",
+        "description": "The association of an Account to one Business Brand. Business Brand and Account have a many-to-many relationship."
+    },{
+        "@id": "AccountContact",
+        "name": "Account Contact",
+        "@type": "Class",
+        "description": "An individual who has a role specific to an Account."
+    },{
+        "@id": "AccountParticipant",
+        "name": "Account Participant",
+        "@type": "Class",
+        "description": "The relationship of a system user to an Account. For example employees that own or service a customer account"
+    },{
+        "@id": "AccountPartner",
+        "name": "Account Partner",
+        "@type": "Class",
+        "description": "State what partner (account) is related to/have access to another account"
+    },{
+        "@id": "AccountRelationship",
+        "name": "Account Relationship",
+        "@type": "Class",
+        "description": "The association of two Accounts. Reasons for account association include implementation partners, sales partners and linked customers."
+    },{
+        "@id": "AccountTerritory",
+        "name": "Account Territory",
+        "@type": "Class",
+        "description": "The membershisp of an Account in a Work Territory. Over time, accounts may be long to multiple Work Territories."
+    },{
+        "@id": "AffiliateGroup",
+        "name": "Affiliate Group",
+        "@type": "Class",
+        "subClassOf": "AccountRole",
+        "description": "A group of parties that are related via an ownership interest and that the company have a business relationship with."
+    },{
+        "@id": "BusinessAccount",
+        "name": "Business Account",
+        "@type": "Class",
+        "subClassOf": "Account",
+        "description": "Represents a business relationship with an organization and is a way of recording and aggregating transactions"
+    },{
+        "@id": "BusinessBrand",
+        "name": "Business Brand",
+        "@type": "Class",
+        "description": "A business unit, often associated with a name under which products are marketed. Business Brands may exist in a hierarchy, for Pottery Barn Kids is a child or brand Pottery Barn."
+    },{
+        "@id": "Contact",
+        "name": "Contact",
+        "@type": "Class",
+        "description": "Represents a person who is associated with an Account. Contacts may be associated with additional accounts besides the one with which they are primarily associated."
+    },{
+        "@id": "ContactAccountRelationship",
+        "name": "Contact Account Relationship",
+        "@type": "Class",
+        "description": "The association of a Contact to an Account. For example, the association of an Account Contact (person within a Business Account) to an additional Business Account."
+    },{
+        "@id": "ContactContactRelationship",
+        "name": "Contact Contact Relationship",
+        "@type": "Class",
+        "description": "The association of two Contacts. Examples could include associating two children that are defined beneath a parent's Personal Account, or associating two Account Contact employees of a Business Account as manager/managed."
+    },{
+        "@id": "Household",
+        "name": "Household",
+        "@type": "Class",
+        "subClassOf": "AccountRole",
+        "description": "A combination of people, normally recorded in the system for marketing or service purposes"
+    },{
+        "@id": "PersonalAccount",
+        "name": "Personal Account",
+        "@type": "Class",
+        "subClassOf": "Account",
+        "description": "Represents a business relationship with an individual person; a way of recording and aggregating transactions"
+    },{
+        "@id": "PersonalAccountOwner",
+        "name": "Personal Account Owner",
+        "@type": "Class",
+        "subClassOf": "Contact",
+        "description": "Attributes of a person that owns a Personal Account such as their name. Every Personal Account will have one record on this entity to describe the person."
+    },{
+        "@id": "PrivateContact",
+        "name": "Private Contact",
+        "@type": "Class",
+        "subClassOf": "Contact",
+        "description": "Contacts only available to the creator of the contact e.g., similar to a personal address book on the phone, only visible to the person using the phone."
+    },{
+        "@id": "ProspectRating",
+        "name": "Prospect Rating",
+        "@type": "Class",
+        "description": "The customers prospect rating, for example Hot, Warm, or Cold."
+    }
+    ],
+    "propertyConcepts": [
+{
+        "@id": "personalAccountId",
+        "@type": "Property",
+        "domain": [
+"PersonalAccountOwner"
+        ]
+    },{
+        "@id": "middleName",
+        "@type": "Property",
+        "domain": [
+"Contact"
+        ]
+    },{
+        "@id": "billContactAddressId",
+        "@type": "Property",
+        "domain": [
+"Account"
+        ]
+    },{
+        "@id": "contactPointLocation",
+        "@type": "Property",
+        "domain": [
+"Account"
+        ]
+    },{
+        "@id": "userPrincipalId",
+        "@type": "Property",
+        "domain": [
+"AccountParticipant"
+        ]
+    },{
+        "@id": "partyId",
+        "@type": "Property",
+        "domain": [
+"Account"
+        ]
+    },{
+        "@id": "personName",
+        "@type": "Property",
+        "domain": [
+"Contact"
+        ]
+    },{
+        "@id": "shippingEmailId",
+        "@type": "Property",
+        "domain": [
+"Account"
+        ]
+    },{
+        "@id": "paymentTermId",
+        "@type": "Property",
+        "domain": [
+"Account"
+        ]
+    },{
+        "@id": "autoPaymentAmount",
+        "@type": "Property",
+        "domain": [
+"Account"
+        ]
+    },{
+        "@id": "prospectRatingName",
+        "@type": "Property",
+        "domain": [
+"ProspectRating"
+        ]
+    },{
+        "@id": "generalLedgerAccountId",
+        "@type": "Property",
+        "domain": [
+"Account"
+        ]
+    },{
+        "@id": "otherContactAddressId",
+        "@type": "Property",
+        "domain": [
+"AccountContact"
+        ]
+    },{
+        "@id": "reportsToAccountContactId",
+        "@type": "Property",
+        "domain": [
+"AccountContact"
+        ]
+    },{
+        "@id": "contact1Id",
+        "@type": "Property",
+        "domain": [
+"ContactContactRelationship"
+        ]
+    },{
+        "@id": "useAsBillingAccount",
+        "@type": "Property",
+        "domain": [
+"Account"
+        ]
+    },{
+        "@id": "householdDissolvedDate",
+        "@type": "Property",
+        "domain": [
+"Household"
+        ]
+    },{
+        "@id": "account2Id",
+        "@type": "Property",
+        "domain": [
+"AccountRelationship"
+        ]
+    },{
+        "@id": "primaryMailingAddress",
+        "@type": "Property",
+        "domain": [
+"Contact"
+        ]
+    },{
+        "@id": "contactNote",
+        "@type": "Property",
+        "domain": [
+"AccountContact"
+        ]
+    },{
+        "@id": "title",
+        "@type": "Property",
+        "domain": [
+"AccountContact"
+        ]
+    },{
+        "@id": "primarySalesRepId",
+        "@type": "Property",
+        "domain": [
+"Account"
+        ]
+    },{
+        "@id": "balanceAmountLimit",
+        "@type": "Property",
+        "domain": [
+"Account"
+        ]
+    },{
+        "@id": "householdFormedDate",
+        "@type": "Property",
+        "domain": [
+"Household"
+        ]
+    },{
+        "@id": "balanceAmountCurrency",
+        "@type": "Property",
+        "domain": [
+"Account"
+        ]
+    },{
+        "@id": "departmentName",
+        "@type": "Property",
+        "domain": [
+"AccountContact"
+        ]
+    },{
+        "@id": "useAsSalesAccount",
+        "@type": "Property",
+        "domain": [
+"Account"
+        ]
+    },{
+        "@id": "operatingHoursId",
+        "@type": "Property",
+        "domain": [
+"Account"
+        ]
+    },{
+        "@id": "balanceUnitOfMeasureCurrencyId",
+        "@type": "Property",
+        "domain": [
+"Account"
+        ]
+    },{
+        "@id": "mailingAddressId",
+        "@type": "Property",
+        "domain": [
+"AccountContact"
+        ]
+    },{
+        "@id": "householdMemberCount",
+        "@type": "Property",
+        "domain": [
+"Household"
+        ]
+    },{
+        "@id": "orderDeliveryMethodId",
+        "@type": "Property",
+        "domain": [
+"Account"
+        ]
+    },{
+        "@id": "sixtyDayBalanceAmount",
+        "@type": "Property",
+        "domain": [
+"Account"
+        ]
+    },{
+        "@id": "businessPhoneId",
+        "@type": "Property",
+        "domain": [
+"AccountContact"
+        ]
+    },{
+        "@id": "holdStatusReasonId",
+        "@type": "Property",
+        "domain": [
+"Account"
+        ]
+    },{
+        "@id": "shippingAddressId",
+        "@type": "Property",
+        "domain": [
+"Account"
+        ]
+    },{
+        "@id": "balanceAmountLimitCurrency",
+        "@type": "Property",
+        "domain": [
+"Account"
+        ]
+    },{
+        "@id": "lastActivityDate",
+        "@type": "Property",
+        "domain": [
+"Account","AccountContact"
+        ]
+    },{
+        "@id": "thirtyDayBalanceAmountCurrency",
+        "@type": "Property",
+        "domain": [
+"Account"
+        ]
+    },{
+        "@id": "primaryMobilePhoneNumber",
+        "@type": "Property",
+        "domain": [
+"Contact"
+        ]
+    },{
+        "@id": "firstName",
+        "@type": "Property",
+        "domain": [
+"Contact"
+        ]
+    },{
+        "@id": "assistantName",
+        "@type": "Property",
+        "domain": [
+"AccountContact"
+        ]
+    },{
+        "@id": "accountRelationshipRole",
+        "@type": "Property",
+        "domain": [
+"AccountRelationship"
+        ]
+    },{
+        "@id": "autoPayEnabledFlag",
+        "@type": "Property",
+        "domain": [
+"Account"
+        ]
+    },{
+        "@id": "lastName",
+        "@type": "Property",
+        "domain": [
+"Contact"
+        ]
+    },{
+        "@id": "defaultFreightTermsId",
+        "@type": "Property",
+        "domain": [
+"Account"
+        ]
+    },{
+        "@id": "primaryFaxPhoneNumber",
+        "@type": "Property",
+        "domain": [
+"Contact"
+        ]
+    },{
+        "@id": "sixtyDayBalanceAmountCurrency",
+        "@type": "Property",
+        "domain": [
+"Account"
+        ]
+    },{
+        "@id": "accountId",
+        "@type": "Property",
+        "domain": [
+"AccountBrand","AccountPartner","AccountContact","ContactAccountRelationship","PrivateContact"
+        ]
+    },{
+        "@id": "otherMailingAddress",
+        "@type": "Property",
+        "domain": [
+"Contact"
+        ]
+    },{
+        "@id": "account1Id",
+        "@type": "Property",
+        "domain": [
+"AccountRelationship"
+        ]
+    },{
+        "@id": "firstEffectiveDate",
+        "@type": "Property",
+        "domain": [
+"AccountTerritory"
+        ]
+    },{
+        "@id": "description",
+        "@type": "Property",
+        "domain": [
+"Account","AccountTerritory"
+        ]
+    },{
+        "@id": "opportunityTerritoryId",
+        "@type": "Property",
+        "domain": [
+"AccountTerritory"
+        ]
+    },{
+        "@id": "partnerAccountId",
+        "@type": "Property",
+        "domain": [
+"AccountPartner"
+        ]
+    },{
+        "@id": "assignTerritoryFlag",
+        "@type": "Property",
+        "domain": [
+"Account"
+        ]
+    },{
+        "@id": "indirectRelationAccountContactId",
+        "@type": "Property",
+        "domain": [
+"AccountContact"
+        ]
+    },{
+        "@id": "assistantPhone",
+        "@type": "Property",
+        "domain": [
+"AccountContact"
+        ]
+    },{
+        "@id": "shippingPhoneid",
+        "@type": "Property",
+        "domain": [
+"Account"
+        ]
+    },{
+        "@id": "autoPaymentMethodId",
+        "@type": "Property",
+        "domain": [
+"Account"
+        ]
+    },{
+        "@id": "ninetyDayBalanceAmountCurrency",
+        "@type": "Property",
+        "domain": [
+"Account"
+        ]
+    },{
+        "@id": "billFrequencyId",
+        "@type": "Property",
+        "domain": [
+"Account"
+        ]
+    },{
+        "@id": "ninetyDayBalanceAmount",
+        "@type": "Property",
+        "domain": [
+"Account"
+        ]
+    },{
+        "@id": "defaultPriceBookId",
+        "@type": "Property",
+        "domain": [
+"Account"
+        ]
+    },{
+        "@id": "id",
+        "@type": "Property",
+        "domain": [
+"Account","AccountPartner","AccountContact","AccountTerritory","Household","ProspectRating"
+        ]
+    },{
+        "@id": "accountNumber",
+        "@type": "Property",
+        "domain": [
+"Account"
+        ]
+    },{
+        "@id": "accountBusinessTypeId",
+        "@type": "Property",
+        "domain": [
+"Account"
+        ]
+    },{
+        "@id": "useAsShippingAccount",
+        "@type": "Property",
+        "domain": [
+"Account"
+        ]
+    },{
+        "@id": "balanceUnitOfMeasureId",
+        "@type": "Property",
+        "domain": [
+"Account"
+        ]
+    },{
+        "@id": "name",
+        "@type": "Property",
+        "domain": [
+"Account","Household"
+        ]
+    },{
+        "@id": "endEffectiveDate",
+        "@type": "Property",
+        "domain": [
+"AccountTerritory"
+        ]
+    },{
+        "@id": "accountParticipantRoleId",
+        "@type": "Property",
+        "domain": [
+"AccountParticipant"
+        ]
+    },{
+        "@id": "billDeliveryMethodId",
+        "@type": "Property",
+        "domain": [
+"Account"
+        ]
+    },{
+        "@id": "sLATypeId",
+        "@type": "Property",
+        "domain": [
+"Account"
+        ]
+    },{
+        "@id": "businessAccountId",
+        "@type": "Property",
+        "domain": [
+"Household","AffiliateGroup"
+        ]
+    },{
+        "@id": "contactId",
+        "@type": "Property",
+        "domain": [
+"ContactAccountRelationship"
+        ]
+    },{
+        "@id": "salesPhoneId",
+        "@type": "Property",
+        "domain": [
+"Account"
+        ]
+    },{
+        "@id": "contactEmailId",
+        "@type": "Property",
+        "domain": [
+"AccountContact"
+        ]
+    },{
+        "@id": "individualId",
+        "@type": "Property",
+        "domain": [
+"AccountContact","Contact"
+        ]
+    },{
+        "@id": "primarySalesContactPointId",
+        "@type": "Property",
+        "domain": [
+"Account"
+        ]
+    },{
+        "@id": "balanceAmount",
+        "@type": "Property",
+        "domain": [
+"Account"
+        ]
+    },{
+        "@id": "contact2Id",
+        "@type": "Property",
+        "domain": [
+"ContactContactRelationship"
+        ]
+    },{
+        "@id": "useAsServiceAccount",
+        "@type": "Property",
+        "domain": [
+"Account"
+        ]
+    },{
+        "@id": "homePhoneId",
+        "@type": "Property",
+        "domain": [
+"AccountContact"
+        ]
+    },{
+        "@id": "parentAccountId",
+        "@type": "Property",
+        "domain": [
+"Account"
+        ]
+    },{
+        "@id": "partyRoleId",
+        "@type": "Property",
+        "domain": [
+"Account"
+        ]
+    },{
+        "@id": "businessBrandId",
+        "@type": "Property",
+        "domain": [
+"AccountBrand"
+        ]
+    },{
+        "@id": "thirtyDayBalanceAmount",
+        "@type": "Property",
+        "domain": [
+"Account"
+        ]
+    },{
+        "@id": "autoPaymentAmountCurrency",
+        "@type": "Property",
+        "domain": [
+"Account"
+        ]
+    },{
+        "@id": "sLAExpirationDate",
+        "@type": "Property",
+        "domain": [
+"Account"
+        ]
+    },{
+        "@id": "primaryHomePhone",
+        "@type": "Property",
+        "domain": [
+"Contact"
+        ]
+    },{
+        "@id": "mobilePhoneId",
+        "@type": "Property",
+        "domain": [
+"AccountContact"
+        ]
+    },{
+        "@id": "faxPhoneId",
+        "@type": "Property",
+        "domain": [
+"Account","AccountContact"
+        ]
+    },{
+        "@id": "primaryBusinessPhoneNumber",
+        "@type": "Property",
+        "domain": [
+"Contact"
+        ]
+    }
+    ]
+}

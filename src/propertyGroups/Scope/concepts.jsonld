@@ -1,0 +1,45 @@
+{
+    "@context": "http://cloudinformationmodel.org/",
+    "@id": "ScopePropertyGroup",
+    "name": "Scope Property Group",
+    "@type": "PropertyGroup",
+    "propertyConcepts": [
+{
+        "@id": "fromAgeNumber",
+        "@type": "Property",
+        "description": "Starting number of From Age",
+        "name": "From Age",
+        "range": "DataType"
+    },{
+        "@id": "toAgeNumber",
+        "@type": "Property",
+        "description": "Ending number of To Age",
+        "name": "To Age",
+        "range": "DataType"
+    },{
+        "@id": "createdDate",
+        "@type": "Property",
+        "description": "Date and time when this record was created",
+        "name": "Created Date",
+        "range": "DataType"
+    },{
+        "@id": "externalRecordId",
+        "@type": "Property",
+        "description": "Corresponding record Id from external data source system",
+        "name": "External Record Id",
+        "range": "DataType"
+    },{
+        "@id": "externalSourceId",
+        "@type": "Property",
+        "description": "The system in which the ExternalRecordId was assigned.",
+        "name": "External Source Id",
+        "range": "DataType"
+    },{
+        "@id": "implementerType",
+        "@type": "Property",
+        "description": "Entity Interfaces may have implementers other than the default implementation. Provides a way to specify which implementation, for example when an Insert operation should only be performed on one of several substrates that implement the EI.",
+        "name": "Implementer Type",
+        "range": "DataType"
+    }
+    ]
+}
