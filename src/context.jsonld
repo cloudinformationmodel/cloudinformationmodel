@@ -6,6 +6,8 @@
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "sh": "http://www.w3.org/ns/shacl#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "license": "cim:license",
+    "copyright": "cim:copyright",
     "version": "cim:version",
     "guid": "cim:guid",
     "classConcepts": "cim:classes",

@@ -1,5 +1,5 @@
 # Cloud Information Model
-This project is licensed under the terms of the Apache 2.0 license
+This project is licensed under the terms of the Apache 2.0 license. ![APM license](https://img.shields.io/badge/License-Apache_2.0-brightgreen)
 
 ## Structure
 

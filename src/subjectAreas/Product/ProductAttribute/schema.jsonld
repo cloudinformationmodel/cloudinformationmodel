@@ -2,6 +2,8 @@
     "@context": "http://cloudinformationmodel.org/",
     "@id": "2d9305b0-6e3e-3f6c-88f6-af0a04e51ab1",
     "@type": "EntityGroup",
+    "license": "# SPDX-License-Identifier: Apache-2.0",
+    "copyright": "# Copyright Contributors to the Cloud Information Model",
     "name": "ProductAttribute",
     "version": "1.0.0",
     "subjectArea": "fe440b10-667c-39ce-bace-1e463e65282e",
