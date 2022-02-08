@@ -2,6 +2,8 @@
     "@context": "http://cloudinformationmodel.org/",
     "@id": "fdad9085-44b6-3c40-83c7-826b3bc40609",
     "@type": "EntityGroup",
+    "license": "# SPDX-License-Identifier: Apache-2.0",
+    "copyright": "# Copyright Contributors to the Cloud Information Model",
     "name": "Currency",
     "version": "1.0.0",
     "subjectArea": "fe440b10-667c-39ce-bace-1e463e65282e",
